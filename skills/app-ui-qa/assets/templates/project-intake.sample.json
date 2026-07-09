@@ -1,0 +1,87 @@
+{
+  "projectName": "replace-with-app-name",
+  "platform": "android",
+  "language": "zh-CN",
+  "defaultTimeoutMs": 90000,
+  "build": {
+    "version": "",
+    "environment": "test",
+    "android": {
+      "packageName": "",
+      "mainActivity": "",
+      "apkPathOrInstallNote": "APK is preinstalled on device, or provide local path."
+    },
+    "ios": {
+      "bundleId": "",
+      "testFlightInstalled": false,
+      "installNote": "Install from TestFlight manually before running."
+    }
+  },
+  "devices": {
+    "android": {
+      "preferred": "real-device",
+      "automationRoute": "adb-only",
+      "deviceId": "",
+      "osVersion": ""
+    },
+    "ios": {
+      "preferred": "real-iphone",
+      "automationRoute": "iphone-mirroring-pyautogui",
+      "macCompatible": false,
+      "udid": "",
+      "osVersion": "",
+      "launcher": "iphone-mirroring"
+    }
+  },
+  "accounts": {
+    "qaAccount": {
+      "usernameEnv": "APP_QA_USERNAME",
+      "passwordEnv": "APP_QA_PASSWORD",
+      "loginNotes": ""
+    }
+  },
+  "smokeScope": {
+    "mustPassFlows": [
+      "login",
+      "home screen health",
+      "replace with the highest-value business flow"
+    ],
+    "knownRiskAreas": [
+      "Unity rendering",
+      "Flutter navigation",
+      "H5 WebView loading",
+      "native permissions"
+    ],
+    "outOfScopeOrManual": [
+      "voice recognition unless audio injection is configured"
+    ]
+  },
+  "voiceRecognition": {
+    "releaseBlocking": false,
+    "automationStrategy": "skip-by-default",
+    "audioFixturePath": "",
+    "manualVerificationOwner": ""
+  },
+  "reporting": {
+    "preferredFormat": "markdown+html",
+    "evidencePolicy": "Show the full operation path. Capture before/after screenshots for every key automated action/checkpoint, then additionally highlight failures, needs-review risks, skipped coverage, and key pass checkpoints.",
+    "reviewAudience": "test-manager"
+  },
+  "rawManualCases": [
+    {
+      "id": "smoke-001",
+      "title": "Replace with real manual test point",
+      "precondition": "",
+      "steps": [
+        "Open app",
+        "Perform the user-visible action"
+      ],
+      "expected": "Expected user-visible result",
+      "riskSignals": [
+        "Unexpected loading",
+        "Visual state does not match expected result"
+      ],
+      "severity": "blocker"
+    }
+  ]
+}

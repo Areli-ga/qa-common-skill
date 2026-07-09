@@ -1,0 +1,121 @@
+{
+  "version": "1.0",
+  "name": "app-smoke-sample",
+  "description": "Replace this sample with the project's release smoke test points.",
+  "platform": "android",
+  "app": {
+    "android": {
+      "packageName": "com.example.app",
+      "activityName": "",
+      "apkPath": "",
+      "launcher": "adb"
+    },
+    "ios": {
+      "bundleId": "com.example.app",
+      "launcher": "iphone-mirroring-pyautogui"
+    }
+  },
+  "runtime": {
+    "defaultTimeoutMs": 90000,
+    "language": "zh-CN",
+    "skipVoiceByDefault": true
+  },
+  "testData": {
+    "account": {
+      "usernameEnv": "APP_QA_USERNAME",
+      "passwordEnv": "APP_QA_PASSWORD"
+    }
+  },
+  "globalChecks": [
+    "No crash, frozen screen, infinite loading, obvious layout overlap, or blank WebView.",
+    "Important text is readable and controls respond within a reasonable time.",
+    "Unexpected permission, upgrade, login-expired, or network-error dialogs are reported."
+  ],
+  "steps": [
+    {
+      "id": "permissions-and-entry",
+      "type": "setup",
+      "title": "Launch app and handle entry blockers",
+      "objective": "Start the app from a clean foreground state and pass system/app permission prompts that block smoke testing.",
+      "action": "Launch the app. If permission dialogs, privacy agreements, update reminders, or onboarding overlays appear, choose the option that lets QA continue without granting unnecessary permissions.",
+      "expected": "The app reaches the login page or home page and is ready for smoke testing.",
+      "riskSignals": [
+        "Permission dialog loops",
+        "Forced update blocks the build",
+        "Blank screen after splash",
+        "Privacy agreement cannot be accepted"
+      ],
+      "severity": "blocker"
+    },
+    {
+      "id": "login-if-needed",
+      "type": "action",
+      "title": "Login when session is absent",
+      "objective": "Use the configured QA account if the app is not already logged in.",
+      "action": "If a login screen is visible, enter the QA username and password from the test data or environment notes, then submit. If already logged in, do not log out.",
+      "expected": "The app is authenticated and shows the main/home experience.",
+      "riskSignals": [
+        "Keyboard covers the submit button",
+        "Error toast after valid credentials",
+        "Login spinner does not finish",
+        "Third-party login page appears unexpectedly"
+      ],
+      "severity": "blocker"
+    },
+    {
+      "id": "home-health",
+      "type": "checkpoint",
+      "title": "Home screen basic health",
+      "objective": "Confirm the primary home screen is visually usable.",
+      "action": "Inspect the home screen. Close non-critical popups only when they cover the main workflow.",
+      "expected": "Primary navigation, core content, and account state are visible. No major visual corruption is present.",
+      "riskSignals": [
+        "Missing bottom navigation",
+        "Overlapping text",
+        "Empty content modules",
+        "Unity or Flutter surface renders black"
+      ],
+      "severity": "major"
+    },
+    {
+      "id": "core-flow-one",
+      "type": "action",
+      "title": "Run the highest-value business flow",
+      "objective": "Exercise the first business-critical flow from the smoke case list.",
+      "action": "Navigate from the home screen into the main smoke-test business flow. Complete the happy path without using voice input.",
+      "expected": "The flow reaches its success/complete state and returns to a stable screen.",
+      "riskSignals": [
+        "H5 page fails to load",
+        "Unity interaction misses taps",
+        "Unexpected loading longer than 15 seconds",
+        "Back navigation loses state"
+      ],
+      "severity": "blocker"
+    },
+    {
+      "id": "voice-recognition",
+      "type": "voice",
+      "title": "Voice recognition coverage gap",
+      "objective": "Document that this smoke area exists but is not automated by default.",
+      "action": "Do not execute unless an approved audio injection strategy is configured.",
+      "expected": "Skipped by automation and listed in the final report as manual/audio-fixture coverage.",
+      "riskSignals": [
+        "Manual-only release blocker if voice is a launch-critical feature"
+      ],
+      "severity": "major"
+    },
+    {
+      "id": "logout-or-cleanup",
+      "type": "teardown",
+      "title": "Return to stable state",
+      "objective": "Leave the device in a known state for the next run.",
+      "action": "Return to the home screen or a neutral screen. Do not log out unless the project requires fresh login on every smoke run.",
+      "expected": "The app remains responsive and ready for another test.",
+      "riskSignals": [
+        "Back button exits unexpectedly",
+        "App freezes during cleanup"
+      ],
+      "severity": "minor"
+    }
+  ]
+}

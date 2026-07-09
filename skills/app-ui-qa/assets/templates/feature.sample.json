@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "name": "feature-test-sample",
+  "description": "Template for daily internal feature validation.",
+  "platform": "ios",
+  "app": {
+    "android": {
+      "packageName": "com.example.app",
+      "launcher": "adb"
+    },
+    "ios": {
+      "bundleId": "com.example.app",
+      "launcher": "iphone-mirroring-pyautogui"
+    }
+  },
+  "runtime": {
+    "defaultTimeoutMs": 90000,
+    "language": "zh-CN"
+  },
+  "globalChecks": [
+    "Report unexpected navigation, visual glitches, stuck loading, and confusing UX copy.",
+    "Prefer evidence-backed observations over assumptions."
+  ],
+  "steps": [
+    {
+      "id": "enter-feature",
+      "type": "action",
+      "title": "Enter the feature under test",
+      "objective": "Navigate to the feature entry specified by the product/test case.",
+      "action": "From the current stable app state, find and open the target feature entry.",
+      "expected": "The feature landing screen is visible and ready for interaction.",
+      "severity": "major"
+    },
+    {
+      "id": "happy-path",
+      "type": "action",
+      "title": "Complete feature happy path",
+      "objective": "Validate the main expected behavior.",
+      "action": "Perform the core user actions for the feature using the provided test data.",
+      "expected": "The feature reaches the expected success state, confirmation, or saved result.",
+      "riskSignals": [
+        "Control is visible but not tappable",
+        "State does not persist",
+        "Result copy contradicts the action"
+      ],
+      "severity": "blocker"
+    },
+    {
+      "id": "negative-or-edge",
+      "type": "checkpoint",
+      "title": "Check one negative or edge state",
+      "objective": "Look for one high-risk edge from the test case.",
+      "action": "Trigger the edge state described by QA. If no edge state is supplied, inspect empty/error/slow-network affordances without destructive actions.",
+      "expected": "The app explains the state clearly and remains recoverable.",
+      "severity": "normal"
+    }
+  ]
+}

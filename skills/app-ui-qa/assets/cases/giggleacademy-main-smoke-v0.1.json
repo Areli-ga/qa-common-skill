@@ -1,0 +1,2304 @@
+{
+  "version": "1.0",
+  "name": "giggleacademy-main-smoke-v0.1",
+  "description": "Giggle Academy 主流程冒烟用例，从思维导图整理。执行范围包含启动、新用户、登录、语音识别跳过开关、指定学习路径课程、故事书模块、闪卡模块和搜索课程；安卓渠道包冒烟拆分为独立用例。",
+  "status": "updated_from_test_manager_2026-07-08_core-flow-extension",
+  "source": {
+    "type": "mindmap-image",
+    "path": "/Users/areli/Downloads/whiteboard_exported_image.png",
+    "extractedAt": "2026-07-06",
+    "rule": "Automation must follow this case file. Do not invent extra flows outside the listed steps.",
+    "additionalImages": [
+      "/var/folders/6k/9zyfm9cx50zdv42myr_j1p240000gn/T/codex-clipboard-420ccaf1-6e1f-4ff0-bb97-35a530066c59.png"
+    ]
+  },
+  "platform": "android",
+  "app": {
+    "android": {
+      "packageName": "com.giggleacademy.app",
+      "activityName": "",
+      "apkPath": ""
+    },
+    "ios": {
+      "bundleId": "com.giggleacademy.app",
+      "launcher": "iphone-mirroring-pyautogui",
+      "routeNotes": [
+        "Formal iOS route uses a real iPhone through macOS iPhone Mirroring plus the local PyAutoGUI service.",
+        "TestFlight is only used on the phone to install or update the beta build with user confirmation."
+      ]
+    }
+  },
+  "runtime": {
+    "defaultTimeoutMs": 180000,
+    "language": "zh-CN",
+    "skipVoiceByDefault": true,
+    "voiceAutoSkipWaitMs": 5000,
+    "nonVoiceAutoAdvanceWaitMs": 2000,
+    "evidencePolicy": "Capture screenshots for every key click, swipe, input, page entry, and completion checkpoint."
+  },
+  "executionPolicy": {
+    "allowClearAppDataBeforeRun": true,
+    "fixedPrerequisitePath": {
+      "level": "Lv2",
+      "path": "动作"
+    },
+    "storybookSampling": "random-visible-book-and-level",
+    "autoEnterNextCourseRecovery": {
+      "appliesTo": "any course completion, including beginner course",
+      "onlyAfterCourseCompletion": true,
+      "normalBehavior": "After completing a course, the app may automatically enter the next course or content before evidence capture.",
+      "postBeginnerAutoNextSignals": [
+        "A loading-like or course-opening transition appears after the beginner course has completed.",
+        "The visible course title or content changes to a new course such as 颜色飞溅, 颜色配对, or 颜色 1.",
+        "The screen no longer shows beginner-course content and does not show the main learning path."
+      ],
+      "doNotDo": "Do not continue exploring or operating out-of-scope content when the visible screen no longer matches the active case or course type. Do not use top-left back, exit, home, or pause as a way to advance while a course is still in progress, especially during the beginner course.",
+      "recovery": [
+        "Capture a screenshot of the auto-entered or off-path state.",
+        "Use the top-left back, exit, close, or pause control when visible.",
+        "Confirm exit if the app asks for confirmation.",
+        "Return to the main learning path.",
+        "If the path position is uncertain, run S05 to reset to Lv2 -> 动作 before continuing subsequent cases."
+      ],
+      "reporting": "Record this as auto-enter recovery or coverage context unless the app cannot exit, loops, crashes, or blocks later listed cases."
+    },
+    "leaderboardCompletionHandling": {
+      "appliesTo": "course completion pages such as 学习之星 or other leaderboard/ranking screens",
+      "normalBehavior": "A completed course may land on a leaderboard/ranking page before returning to the main learning path.",
+      "recovery": [
+        "Capture a screenshot of the leaderboard/ranking page.",
+        "Tap the visible continue or next button.",
+        "Confirm that the app returns to the main learning path before starting the next case."
+      ],
+      "reporting": "Record as normal completion handling unless continue/next is missing, unresponsive, or blocks later listed cases."
+    },
+    "stalePostCompletionClickGuard": {
+      "appliesTo": "post-completion continue, next, and right-arrow style controls",
+      "rule": "Before tapping, capture a fresh screenshot and confirm the target control is still visible on the intended page.",
+      "skipWhen": "If the app has already auto-returned to the main learning path, skip the stale coordinate click.",
+      "risk": "Delayed coordinate taps after auto-return can hit a home-path course entry or another feature."
+    },
+    "guideOverlayDismissal": {
+      "appliesTo": "in-app guide or coachmark overlays that are not the active case target",
+      "preferredMethod": "Tap a safe blank area outside highlighted regions, cards, course entries, and CTA buttons.",
+      "fallbackMethod": "If blank-area dismissal fails, use the visible close, back, or continue control.",
+      "evidence": "Capture the overlay before dismissal and record the dismissal method in the report.",
+      "doNotDo": "Do not tap highlighted course cards or CTA buttons merely to dismiss a guide unless the active case explicitly asks for that action."
+    },
+    "removedFromThisVersion": [
+      "领取扭蛋"
+    ]
+  },
+  "testData": {
+    "account": {
+      "usernameEnv": "GA_TEST_EMAIL",
+      "passwordEnv": "GA_TEST_PASSWORD",
+      "expectedChildNameEnv": "GA_EXPECTED_CHILD_NAME"
+    },
+    "newUser": {
+      "childNameEnv": "GA_NEW_CHILD_NAME",
+      "minChildNameLength": 2
+    }
+  },
+  "scope": {
+    "included": [
+      "启动",
+      "新用户流程",
+      "登录/注册",
+      "打开语音识别跳过开关",
+      "切换到指定路径",
+      "完成指定路径上的各类课程",
+      "故事书模块",
+      "闪卡模块",
+      "搜索课程"
+    ],
+    "excludedUntilUpdated": [
+      "H5流程",
+      "分享流程",
+      "奖励中心"
+    ],
+    "separatedCases": [
+      "安卓渠道包冒烟：outputs/cases/giggleacademy-android-channel-smoke-v0.1.md"
+    ]
+  },
+  "globalChecks": [
+    "App 不应崩溃、卡死、黑屏、白屏、花屏或长时间 loading。",
+    "关键入口、按钮、标题、学习路径、故事书页面应可见且可操作。",
+    "进入和退出 Unity / Flutter / H5 / 原生混合页面时要检查加载时长和画面异常。",
+    "任何系统权限、隐私弹窗、通知弹窗、登录失效、网络异常、强制升级都要截图并记录处理方式。",
+    "完课后如自动进入下一内容，先截图并回到主路径，不要追跑用例外内容；课程进行中不得把左上角退出当作推进手段。",
+    "完课后如进入排行榜 / 学习之星，点击继续 / 下一步回到主界面后再继续后续用例。",
+    "课程完成后的继续 / 下一步 / 右箭头点击前必须重新截图确认目标按钮仍可见；如果已经自动回到主页则跳过点击。",
+    "非当前用例目标的引导弹窗优先尝试点击安全空白区域关闭，并记录截图和处理方式。",
+    "日志只用于辅助判断，报告中不得暴露密码、token、完整 child_id、IP、音频 URL 等敏感字段。",
+    "每次冒烟前允许清除 App 数据，用于覆盖首次安装和新用户流程。"
+  ],
+  "steps": [
+    {
+      "id": "s01-01-launch-app",
+      "type": "setup",
+      "title": "App 正确启动",
+      "objective": "验证 App 可启动并进入 loading。",
+      "action": "启动 App；如果首次安装且非 Google Play 包弹出隐私弹窗，点击同意继续。",
+      "expected": "进入 loading 页面。",
+      "riskSignals": [
+        "App 无法启动",
+        "隐私弹窗无法继续",
+        "启动后黑屏或崩溃"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S01-01"
+      }
+    },
+    {
+      "id": "s01-02-splash-loading-visual",
+      "type": "checkpoint",
+      "title": "开屏图和 loading 图显示正常",
+      "objective": "确认启动视觉资源正常。",
+      "action": "观察启动开屏和 loading 页面。",
+      "expected": "图片显示正常，无明显错位、黑屏、白屏。",
+      "riskSignals": [
+        "开屏图缺失",
+        "loading 图错位",
+        "黑屏",
+        "白屏"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S01-02"
+      }
+    },
+    {
+      "id": "s01-03-loading-no-tap-through",
+      "type": "action",
+      "title": "loading 期间防点穿",
+      "objective": "验证 loading 遮罩不会把点击传到后续界面。",
+      "action": "loading 期间随机轻点页面。",
+      "expected": "不会点穿到后续界面，无异常内容显示。",
+      "riskSignals": [
+        "点击穿透",
+        "异常页面提前出现",
+        "loading 交互导致卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S01-03"
+      }
+    },
+    {
+      "id": "s01-04-entry-branch-after-loading",
+      "type": "checkpoint",
+      "title": "loading 结束后的分流",
+      "objective": "确认首次和非首次启动后的入口符合预期。",
+      "action": "等待 loading 结束，观察进入新用户欢迎页或主界面路径。",
+      "expected": "清数据后的首次流程进入新用户欢迎页；非首次安装直接进入主界面首页并可看到学习路径。",
+      "riskSignals": [
+        "loading 不结束",
+        "进入错误页面",
+        "学习路径不可见",
+        "新用户欢迎页缺失"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S01-04",
+        "allowClearAppDataBeforeRun": true
+      }
+    },
+    {
+      "id": "s02-01-new-user-welcome",
+      "type": "setup",
+      "title": "新用户欢迎页",
+      "objective": "验证首次安装新用户入口。",
+      "action": "清数据后首次启动并等待进入新用户欢迎页。",
+      "expected": "可见标题“一所开放给全世界孩子的免费英语启蒙学院”。",
+      "riskSignals": [
+        "欢迎页标题缺失",
+        "首次安装未进入新用户流程"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S02-01",
+        "requiresFreshInstall": true,
+        "allowClearAppDataBeforeRun": true
+      }
+    },
+    {
+      "id": "s02-02a-child-age-branch",
+      "type": "action",
+      "title": "A/B 分支 A：选择孩子年龄",
+      "objective": "验证年龄选择分支的必选校验和下一步。",
+      "action": "点击“免费开始学习”；如进入年龄选择页，未选年龄时尝试下一步，再选择任意年龄并下一步。",
+      "expected": "未选择年龄不可下一步；选择年龄后可进入初步总结。",
+      "riskSignals": [
+        "未选择年龄也可下一步",
+        "选择年龄后无法继续",
+        "初步总结页不出现"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "continueOnFailure": true,
+      "data": {
+        "caseId": "S02-02A",
+        "abBranch": "A"
+      }
+    },
+    {
+      "id": "s02-03a-start-beginner-course",
+      "type": "action",
+      "title": "A/B 分支 A：进入新手课程",
+      "objective": "验证初步总结页可进入新手课程。",
+      "action": "在初步总结页点击右上角“开始学习”。",
+      "expected": "进入新手课程。",
+      "riskSignals": [
+        "开始学习按钮缺失",
+        "点击后未进入课程"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "continueOnFailure": true,
+      "data": {
+        "caseId": "S02-03A",
+        "abBranch": "A"
+      }
+    },
+    {
+      "id": "s02-02b-create-child-branch",
+      "type": "action",
+      "title": "A/B 分支 B：创建学员",
+      "objective": "验证学员创建分支。",
+      "action": "点击“免费开始学习”；如进入学员创建页，选择头像、年龄，并输入环境变量 GA_NEW_CHILD_NAME 配置的孩子名字，然后继续下一步。",
+      "expected": "可继续下一步进入新手课程。",
+      "riskSignals": [
+        "头像或年龄不可选择",
+        "名字校验异常",
+        "下一步不可用",
+        "未进入新手课程"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "continueOnFailure": true,
+      "data": {
+        "caseId": "S02-02B",
+        "abBranch": "B",
+        "childNameEnv": "GA_NEW_CHILD_NAME",
+        "minChildNameLength": 2
+      }
+    },
+    {
+      "id": "s02-04-beginner-course-auto-flow",
+      "type": "action",
+      "title": "新手课程自动流程",
+      "objective": "验证进入新手课程后流程可自动推进到麦克风权限申请。",
+      "action": "进入新手课程后等待流程自动进行。",
+      "expected": "直到出现麦克风开启申请。",
+      "riskSignals": [
+        "新手课程不自动推进",
+        "流程卡住",
+        "麦克风权限申请未出现"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S02-04",
+        "executionGuard": "Wait only. Do not tap top-left back, exit, home, or pause while the beginner course is in progress."
+      }
+    },
+    {
+      "id": "s02-05-microphone-permission",
+      "type": "action",
+      "title": "麦克风权限授权",
+      "objective": "验证麦克风权限弹窗可授权并继续课程。",
+      "action": "在麦克风申请弹窗上完成授权同意。",
+      "expected": "新手课程继续进行。",
+      "riskSignals": [
+        "权限弹窗无法点击",
+        "授权后课程不继续",
+        "权限弹窗重复出现"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S02-05",
+        "permission": "microphone",
+        "executionGuard": "Only tap the app microphone confirmation and the system microphone allow button. Do not tap top-left back, exit, home, or pause."
+      }
+    },
+    {
+      "id": "s02-06-beginner-voice-does-not-block",
+      "type": "checkpoint",
+      "title": "新手课程语音环节不阻断",
+      "objective": "验证新手课程语音识别环节可自动完成或跳过。",
+      "action": "遇到新手课程中的语音识别环节时等待，不主动模拟语音。",
+      "expected": "语音识别环节可自动完成，不阻断课程；完成后可能回到主路径，也可能自动进入下一节课。",
+      "riskSignals": [
+        "语音环节无法跳过",
+        "语音环节阻断主流程",
+        "课程完成后无法进入可恢复状态"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S02-06",
+        "voiceAccuracyOutOfScope": true,
+        "executionGuard": "Wait for auto completion or skip. Do not exit the beginner course before completion. After beginner course completion, if a loading-like course opening appears or the app enters new content such as 颜色飞溅, 颜色配对, or 颜色 1, stop operating that content and leave recovery to S02-07."
+      }
+    },
+    {
+      "id": "s02-07-post-beginner-return-to-main-path",
+      "type": "action",
+      "title": "新手课后恢复主路径",
+      "objective": "处理新手课完成后自动进入下一节课的不可规避机制，确保 S03 登录前回到主界面路径。",
+      "action": "检查当前界面是否为主路径；如果找不到左上角头像 / 学习中心，或出现类似 loading / 课程开场的画面，或进入“颜色飞溅”“颜色配对”“颜色 1”等新课程内容，说明可能已自动进入下一课，截图后点击左上角返回 / 主页按钮；如出现“继续 / 退出”确认，点击“退出”。",
+      "expected": "回到主界面学习路径，可见左上角头像和学习中心。",
+      "riskSignals": [
+        "新手课后自动进入下一课且无法退出",
+        "退出确认无法点击",
+        "无法回到主路径",
+        "S03 前置入口头像不可见"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S02-07",
+        "postBeginnerAutoNextRecovery": true,
+        "autoNextSignals": [
+          "类似 loading / 课程开场的过渡画面",
+          "颜色飞溅",
+          "颜色配对",
+          "颜色 1"
+        ],
+        "executionGuard": "Do not continue operating auto-entered new-course content after beginner course completion. Capture evidence and return to the main path immediately.",
+        "mainPathSignals": [
+          "左上角头像",
+          "学习中心",
+          "课程路径节点"
+        ],
+        "recoveryGuard": "If the main path signals are visible, do not tap. If they are not visible, use the top-left back/home control and choose exit when the continue/exit confirmation appears."
+      }
+    },
+    {
+      "id": "s03-01-open-login-sidebar",
+      "type": "action",
+      "title": "打开登录入口",
+      "objective": "验证主界面头像入口可打开登录注册侧栏。",
+      "action": "在主界面路径点击左上角头像。",
+      "expected": "弹出左侧登录注册栏。",
+      "riskSignals": [
+        "头像入口不可见",
+        "侧栏未弹出"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-01"
+      }
+    },
+    {
+      "id": "s03-02-enter-login-page",
+      "type": "action",
+      "title": "进入登录界面",
+      "objective": "验证侧栏登录按钮可进入登录页。",
+      "action": "点击登录按钮。",
+      "expected": "进入登录界面。",
+      "riskSignals": [
+        "登录按钮不可见",
+        "登录页未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-02"
+      }
+    },
+    {
+      "id": "s03-03-login-agreement",
+      "type": "action",
+      "title": "登录注册协议提醒",
+      "objective": "验证登录前协议勾选提醒。",
+      "action": "在登录注册操作前观察协议提醒，并完成勾选。",
+      "expected": "出现勾选协议提醒，并可完成勾选。",
+      "riskSignals": [
+        "协议提醒缺失",
+        "协议无法勾选",
+        "勾选后仍无法继续"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-03"
+      }
+    },
+    {
+      "id": "s03-04-input-email",
+      "type": "action",
+      "title": "输入邮箱",
+      "objective": "验证邮箱账号输入和下一步。",
+      "action": "输入授权测试账号并点击下一步。",
+      "expected": "进入密码输入界面。",
+      "riskSignals": [
+        "邮箱输入框不可用",
+        "下一步无响应",
+        "邮箱校验异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-04",
+        "usernameEnv": "GA_TEST_EMAIL"
+      }
+    },
+    {
+      "id": "s03-05-input-password",
+      "type": "action",
+      "title": "输入密码",
+      "objective": "验证密码登录。",
+      "action": "输入密码并点击确定。",
+      "expected": "进入选择孩子档案界面。",
+      "riskSignals": [
+        "密码输入框不可用",
+        "确定按钮不可用",
+        " valid 账号登录失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-05",
+        "passwordEnv": "GA_TEST_PASSWORD"
+      }
+    },
+    {
+      "id": "s03-06-select-child-profile",
+      "type": "action",
+      "title": "选择孩子档案",
+      "objective": "验证登录后可选择指定孩子档案。",
+      "action": "选择环境变量 GA_EXPECTED_CHILD_NAME 配置的孩子档案。",
+      "expected": "进入主界面，并出现通知权限弹窗。",
+      "riskSignals": [
+        "孩子档案不存在",
+        "点击档案无响应",
+        "未进入主界面"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-06",
+        "expectedChildNameEnv": "GA_EXPECTED_CHILD_NAME"
+      }
+    },
+    {
+      "id": "s03-07-notification-permission-and-path",
+      "type": "action",
+      "title": "通知权限授权和主路径检查",
+      "objective": "验证通知权限处理后主学习路径完整。",
+      "action": "完成通知权限授权，检查主界面路径。",
+      "expected": "主界面学习路径显示完整。",
+      "riskSignals": [
+        "通知权限弹窗阻断",
+        "路径内容缺失",
+        "主界面异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-07",
+        "permission": "notification"
+      }
+    },
+    {
+      "id": "s03-08-post-login-sidebar",
+      "type": "checkpoint",
+      "title": "登录后侧栏检查",
+      "objective": "确认登录状态和侧栏内容正确。",
+      "action": "再次点击左上角头像。",
+      "expected": "左侧菜单显示账号下 kid 列表、轮播 banner、学习报告、设置按钮。",
+      "riskSignals": [
+        "登录态未保存",
+        "kid 列表缺失",
+        "学习报告或设置入口缺失"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S03-08"
+      }
+    },
+    {
+      "id": "s04-01-open-settings",
+      "type": "action",
+      "title": "进入设置入口",
+      "objective": "从登录后侧栏进入设置前置。",
+      "action": "在左侧菜单点击齿轮图标。",
+      "expected": "进入家长验证界面。",
+      "riskSignals": [
+        "齿轮图标缺失",
+        "家长验证页未出现"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S04-01"
+      }
+    },
+    {
+      "id": "s04-02-parent-verification",
+      "type": "action",
+      "title": "家长验证",
+      "objective": "验证设置页前的简单算术验证。",
+      "action": "完成简单算术题。",
+      "expected": "进入设置界面。",
+      "riskSignals": [
+        "题目不可读",
+        "答案无法输入",
+        "验证通过后未进入设置"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S04-02"
+      }
+    },
+    {
+      "id": "s04-03-game-control-tab",
+      "type": "action",
+      "title": "进入游戏控制",
+      "objective": "定位语音识别跳过开关所在页面。",
+      "action": "点击左边第二个标签。",
+      "expected": "进入“游戏控制”界面。",
+      "riskSignals": [
+        "游戏控制标签缺失",
+        "标签点击无响应"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S04-03"
+      }
+    },
+    {
+      "id": "s04-04-enable-skip-voice",
+      "type": "action",
+      "title": "打开跳过语音识别开关",
+      "objective": "确保后续主流程课程不会被语音识别阻断。",
+      "action": "如果跳过语音识别开关为关闭，打开它；如果已经开启则保持现状。",
+      "expected": "开关处于开启状态。",
+      "riskSignals": [
+        "开关缺失",
+        "开关无法切换",
+        "切换后状态未保存"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S04-04"
+      }
+    },
+    {
+      "id": "s04-05-close-settings",
+      "type": "action",
+      "title": "返回主界面",
+      "objective": "从设置页回到主界面，准备课程主路径。",
+      "action": "点击左上角关闭按钮。",
+      "expected": "返回主界面。",
+      "riskSignals": [
+        "关闭按钮无响应",
+        "返回后页面异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S04-05"
+      }
+    },
+    {
+      "id": "s05-01-open-learning-center",
+      "type": "action",
+      "title": "打开学习中心",
+      "objective": "进入学习中心作为课程路径重置起点。",
+      "action": "点击左上角头像右侧的学习中心按钮。",
+      "expected": "打开学习中心界面。",
+      "riskSignals": [
+        "学习中心按钮缺失",
+        "学习中心打不开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S05-01"
+      }
+    },
+    {
+      "id": "s05-02-open-level-switch",
+      "type": "action",
+      "title": "进入等级切换",
+      "objective": "打开等级切换界面。",
+      "action": "点击“切换等级”按钮。",
+      "expected": "进入等级切换界面。",
+      "riskSignals": [
+        "切换等级按钮缺失",
+        "等级切换界面未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S05-02"
+      }
+    },
+    {
+      "id": "s05-03-switch-to-lv2",
+      "type": "action",
+      "title": "切换到 Lv2",
+      "objective": "切换到思维导图指定的 Lv2 路径。",
+      "action": "点击 Lv2 卡片并点击“开始学习”。",
+      "expected": "跳转到 Lv2 路径；左上角头像右侧显示 Lv2。",
+      "riskSignals": [
+        "Lv2 卡片不可见",
+        "开始学习按钮缺失",
+        "切换后没有 Lv2 标识"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S05-03",
+        "targetLevel": "Lv2"
+      }
+    },
+    {
+      "id": "s05-04-open-actions-path",
+      "type": "action",
+      "title": "定位动作路径起点",
+      "objective": "进入思维导图指定的动作路径起点。",
+      "action": "再次点击学习中心按钮，确认弹出界面为 Lv2，点击“动作”卡片。",
+      "expected": "跳转到路径起点；屏幕中课程包含“字母体验”“记忆游戏”“动作”“早上好”。",
+      "riskSignals": [
+        "动作卡片缺失",
+        "路径起点课程不符合预期",
+        "点击后进入错误路径"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S05-04",
+        "targetPath": "动作"
+      }
+    },
+    {
+      "id": "s06-01-loading-duration-check",
+      "type": "checkpoint",
+      "title": "课程 loading 过长检查",
+      "objective": "所有课程进入和退出时记录加载耗时。",
+      "action": "后续所有课程进入和退出时观察 loading。",
+      "expected": "loading 大于等于 10 秒需记录。",
+      "riskSignals": [
+        "loading 超过 10 秒",
+        "loading 不结束"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S06-01",
+        "appliesToFollowingCourseSteps": true,
+        "thresholdMs": 10000
+      }
+    },
+    {
+      "id": "s06-02-loading-visual-check",
+      "type": "checkpoint",
+      "title": "课程 loading 画面异常检查",
+      "objective": "所有课程加载过程中检查画面异常。",
+      "action": "观察加载过程画面。",
+      "expected": "白屏、花屏、黑屏、内容缺失需记录。",
+      "riskSignals": [
+        "白屏",
+        "花屏",
+        "黑屏",
+        "内容缺失"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S06-02",
+        "appliesToFollowingCourseSteps": true
+      }
+    },
+    {
+      "id": "s06-03-course-completion-star",
+      "type": "checkpoint",
+      "title": "完课星级检查",
+      "objective": "课程完成后检查结算和星级表现。",
+      "action": "课程完成后观察结算或回主界面表现。",
+      "expected": "未获得过时应获得星级；已获得过则不会重复获得。",
+      "riskSignals": [
+        "星级表现异常",
+        "结算页缺失",
+        "完成状态不清晰"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S06-03",
+        "appliesToFollowingCourseSteps": true
+      }
+    },
+    {
+      "id": "s06-04-auto-next-course-handling",
+      "type": "checkpoint",
+      "title": "自动进入下一课处理",
+      "objective": "明确完课后自动进入下一课属于正常逻辑。",
+      "action": "完课回主界面后观察是否自动进入下一课程；如需停留可立即滑动屏幕阻止。",
+      "expected": "自动进入下一课属于正常逻辑；如已进入下一课，可点左上角返回并执行 S05 回到测试点。",
+      "riskSignals": [
+        "自动进入后无法返回",
+        "返回后路径丢失"
+      ],
+      "severity": "minor",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S06-04",
+        "appliesToFollowingCourseSteps": true
+      }
+    },
+    {
+      "id": "s07-01-enter-letter-experience-1",
+      "type": "action",
+      "title": "进入字母体验 1",
+      "objective": "进入普通课程字母体验 1。",
+      "action": "点击课程“字母体验1”。",
+      "expected": "进入 loading 界面。",
+      "riskSignals": [
+        "课程入口缺失",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S07-01"
+      }
+    },
+    {
+      "id": "s07-02-letter-course-loaded",
+      "type": "checkpoint",
+      "title": "字母体验 1 加载完成",
+      "objective": "验证课程正常进入。",
+      "action": "等待 loading 完成。",
+      "expected": "正常进入课程并开始课程流程。",
+      "riskSignals": [
+        "loading 超时",
+        "课程画面异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S07-02"
+      }
+    },
+    {
+      "id": "s07-03-tap-planet",
+      "type": "action",
+      "title": "点击星球进入游戏",
+      "objective": "正式进入字母体验游戏。",
+      "action": "点击画面中的星球。",
+      "expected": "正式进入游戏。",
+      "riskSignals": [
+        "星球不可见",
+        "点击后未进入游戏"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S07-03"
+      }
+    },
+    {
+      "id": "s07-04-tap-numbered-platforms",
+      "type": "action",
+      "title": "按数字顺序点击底座",
+      "objective": "完成字母体验游戏。",
+      "action": "按数字顺序逐一点击底座，让兔子跳跃。",
+      "expected": "完成课程并回到主页面。",
+      "riskSignals": [
+        "数字底座不可见",
+        "点击顺序后无反馈",
+        "完成后未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S07-04"
+      }
+    },
+    {
+      "id": "s08-01-enter-memory-game",
+      "type": "action",
+      "title": "进入记忆游戏",
+      "objective": "进入记忆游戏课程。",
+      "action": "点击课程“记忆游戏”。",
+      "expected": "进入 loading 界面。",
+      "riskSignals": [
+        "课程入口缺失",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S08-01"
+      }
+    },
+    {
+      "id": "s08-02-memory-game-loaded",
+      "type": "checkpoint",
+      "title": "记忆游戏加载完成",
+      "objective": "验证记忆游戏正常进入。",
+      "action": "等待 loading 完成。",
+      "expected": "正常进入课程并开始游戏流程。",
+      "riskSignals": [
+        "loading 超时",
+        "游戏画面异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S08-02"
+      }
+    },
+    {
+      "id": "s08-03-flip-cards",
+      "type": "action",
+      "title": "翻卡通关",
+      "objective": "按思维导图规则完成记忆游戏。",
+      "action": "优先按当前画面从左到右、从上到下循环遍历 8 张卡片，反复点击直到首张卡片完成配对并继续下一组。",
+      "expected": "记忆游戏通过。",
+      "riskSignals": [
+        "卡片点击无响应",
+        "卡片匹配逻辑异常",
+        "所有卡片翻正后不通过"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S08-03",
+        "doNotUseHardcodedCoordinates": true,
+        "executionGuard": "The memory game pins the first opened card until it is matched. Repeatedly cycle through all visible cards rather than spending time inferring pairs; continue cycling until all cards are face-up or the completion flow starts."
+      }
+    },
+    {
+      "id": "s08-04-memory-complete-return",
+      "type": "checkpoint",
+      "title": "记忆游戏完成并返回",
+      "objective": "验证游戏完成后能回到主页面。",
+      "action": "等待流程结束。",
+      "expected": "自动回到主页面。",
+      "riskSignals": [
+        "完成后卡住",
+        "未回主页面"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S08-04"
+      }
+    },
+    {
+      "id": "s09-01-enter-good-morning-story-course",
+      "type": "action",
+      "title": "进入“早上好”故事书课程",
+      "objective": "进入指定路径上的故事书阅读课程。",
+      "action": "点击“早上好”。",
+      "expected": "进入故事书界面。",
+      "riskSignals": [
+        "早上好入口缺失",
+        "故事书界面未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S09-01"
+      }
+    },
+    {
+      "id": "s09-02-story-course-auto-play",
+      "type": "checkpoint",
+      "title": "故事书阅读课程自动播放",
+      "objective": "验证路径内故事书课程可加载并播放。",
+      "action": "等待故事书加载完毕。",
+      "expected": "故事书自动播放。",
+      "riskSignals": [
+        "故事书加载超时",
+        "未自动播放",
+        "页面显示异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S09-02"
+      }
+    },
+    {
+      "id": "s09-03-story-course-return",
+      "type": "action",
+      "title": "故事书阅读课程播放完成返回",
+      "objective": "验证播放完成后能回到主页。",
+      "action": "等待自动播放完成，不做手动翻页或加速操作。",
+      "expected": "播放完成后自动回到主页。",
+      "riskSignals": [
+        "播放完成不返回",
+        "回到主页后路径异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S09-03",
+        "executionGuard": "Do not use manual page-turn or acceleration controls in this path-level story course. The story may complete and return home while the automation waits; a late manual action can land on a home-path course entry and accidentally open the next lesson."
+      }
+    },
+    {
+      "id": "s11-01-enter-coloring-game",
+      "type": "action",
+      "title": "进入涂色游戏",
+      "objective": "进入指定路径上的涂色游戏。",
+      "action": "点击“绿色游戏：j”；如果屏幕中没有则向右轻轻滑动寻找。",
+      "expected": "进入涂色游戏 loading 或游戏页。",
+      "riskSignals": [
+        "入口找不到",
+        "滑动后仍找不到",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S11-01"
+      }
+    },
+    {
+      "id": "s11-02-coloring-draw",
+      "type": "action",
+      "title": "完成绘画动作",
+      "objective": "完成涂色游戏的绘画交互。",
+      "action": "加载完成后完成任意绘画动作。",
+      "expected": "画面左下角出现相机按钮。",
+      "riskSignals": [
+        "绘画无反馈",
+        "相机按钮不出现"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S11-02"
+      }
+    },
+    {
+      "id": "s11-03-coloring-camera",
+      "type": "action",
+      "title": "进入涂色展示页",
+      "objective": "通过相机按钮进入展示页。",
+      "action": "点击相机按钮。",
+      "expected": "进入展示页面。",
+      "riskSignals": [
+        "相机按钮不可点击",
+        "展示页未打开"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S11-03"
+      }
+    },
+    {
+      "id": "s11-04-coloring-return-home",
+      "type": "action",
+      "title": "涂色展示页返回",
+      "objective": "验证展示页下一步能回到主页。",
+      "action": "等待展示页自动完成 / 返回；只有重新截图确认仍停留在展示页且“下一步”按钮可见时，才点击下一步。",
+      "expected": "自动回到主页。",
+      "riskSignals": [
+        "展示页不自动完成",
+        "下一步不可见且长时间不返回",
+        "点击后未回主页",
+        "自动返回后过期点击误触其他入口"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S11-04",
+        "executionGuard": "Do not send delayed next-button coordinate taps. The coloring showcase page may auto-complete and return home while automation is waiting; a stale next-button tap can land on another home feature or course entry."
+      }
+    },
+    {
+      "id": "s12-01-enter-letter-tracing",
+      "type": "action",
+      "title": "进入字母描红",
+      "objective": "进入字母描红游戏。",
+      "action": "点击“字母描红：j”。",
+      "expected": "进入游戏。",
+      "riskSignals": [
+        "入口缺失",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S12-01"
+      }
+    },
+    {
+      "id": "s12-02-trace-by-number-order",
+      "type": "action",
+      "title": "按数字顺序描红",
+      "objective": "完成字母描红游戏。",
+      "action": "加载完成后根据数字顺序进行屏幕滑动或拖拽完成字母描绘。",
+      "expected": "完成后自动回到主页。",
+      "riskSignals": [
+        "拖拽无响应",
+        "数字顺序提示缺失",
+        "完成后未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S12-02"
+      }
+    },
+    {
+      "id": "s13-01-enter-flashcard-course",
+      "type": "action",
+      "title": "进入闪卡课程",
+      "objective": "进入主流程路径上的闪卡课程。",
+      "action": "点击“闪卡”。",
+      "expected": "进入闪卡游戏。",
+      "riskSignals": [
+        "闪卡课程入口缺失",
+        "闪卡游戏未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-01",
+        "notTheExcludedFlashcardModule": true
+      }
+    },
+    {
+      "id": "s13-02-complete-first-two-flashcard-games",
+      "type": "action",
+      "title": "完成前两个闪卡小游戏",
+      "objective": "完成闪卡课程中非语音小游戏。",
+      "action": "通过点击、拖拽等操作完成前两个小游戏。",
+      "expected": "前两个小游戏完成。",
+      "riskSignals": [
+        "点击或拖拽无响应",
+        "小游戏无法完成"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-02",
+        "iosMacTestFlightRouteRisk": "Flashcard is WebView-heavy. On macOS TestFlight, manual clicks may pass while automation click/drag feedback or audio playback is unreliable; mark as route-specific risk and cross-check on real iOS device."
+      }
+    },
+    {
+      "id": "s13-03-flashcard-voice-auto-skip",
+      "type": "checkpoint",
+      "title": "第三个语音小游戏自动跳过",
+      "objective": "验证语音识别开关生效，不阻断闪卡课程。",
+      "action": "到第三个小游戏时观察语音识别流程，等待 5 秒检查是否自动跳过。",
+      "expected": "语音识别会自动跳过。",
+      "riskSignals": [
+        "语音小游戏未自动跳过",
+        "流程被语音识别阻断"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-03",
+        "voiceAccuracyOutOfScope": true,
+        "voiceAutoSkipWaitMs": 5000
+      }
+    },
+    {
+      "id": "s13-04-flashcard-course-return",
+      "type": "checkpoint",
+      "title": "闪卡课程完成返回",
+      "objective": "验证单词全部完成后回到主页。",
+      "action": "等待单词全部完成。",
+      "expected": "自动回到主页。",
+      "riskSignals": [
+        "单词完成后卡住",
+        "未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-04"
+      }
+    },
+    {
+      "id": "s14-01-enter-unit-review",
+      "type": "action",
+      "title": "进入单元复习",
+      "objective": "进入指定路径上的单元复习。",
+      "action": "持续向右滑动主界面，直到出现“单元复习”，点击进入。",
+      "expected": "进入单元复习。",
+      "riskSignals": [
+        "单元复习入口找不到",
+        "滑动后路径异常",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-01"
+      }
+    },
+    {
+      "id": "s14-02-complete-unit-review",
+      "type": "action",
+      "title": "完成单元复习流程",
+      "objective": "完成单元复习中的关卡、机关和问答题。",
+      "action": "加载完成后完成关卡、机关、问答题；可用点击、拖拽、滑动操作。",
+      "expected": "全部完成。",
+      "riskSignals": [
+        "关卡无响应",
+        "问答题无法选择",
+        "机关交互异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-02"
+      }
+    },
+    {
+      "id": "s14-03-unit-review-return",
+      "type": "checkpoint",
+      "title": "单元复习返回主页",
+      "objective": "验证单元复习完成后回到主页。",
+      "action": "完成后等待。",
+      "expected": "自动回到主页。",
+      "riskSignals": [
+        "完成后卡住",
+        "未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-03"
+      }
+    },
+    {
+      "id": "s15-01-open-level-switch-for-quiz",
+      "type": "action",
+      "title": "进入升级 Quiz 的等级切换",
+      "objective": "打开等级切换界面寻找可解锁卡片。",
+      "action": "点击左上角“学习中心”，点击“切换等级”。",
+      "expected": "进入等级切换界面。",
+      "riskSignals": [
+        "学习中心打不开",
+        "切换等级按钮缺失"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S15-01"
+      }
+    },
+    {
+      "id": "s15-02-find-unlockable-level-card",
+      "type": "action",
+      "title": "找到可解锁等级卡片",
+      "objective": "定位右上角为灰色图标的可解锁卡片。",
+      "action": "点击等级卡片上右上角为灰色图标的卡片；如果没有则向右滑动寻找。滑动横向等级列表时拖动卡片之间或上方 / 下方的非卡片空白区域，不拖动卡片本体。",
+      "expected": "卡片上出现“解锁”按钮。",
+      "riskSignals": [
+        "可解锁卡片找不到",
+        "解锁按钮不出现"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S15-02",
+        "dragPolicy": "Use non-card blank area for horizontal level-list drag. Do not drag card bodies because it may select a card or fail to scroll."
+      }
+    },
+    {
+      "id": "s15-03-enter-upgrade-quiz",
+      "type": "action",
+      "title": "进入升级挑战 Quiz",
+      "objective": "从可解锁等级卡片进入 quiz。",
+      "action": "点击“解锁”，再点击“开始”。",
+      "expected": "进入 quiz。",
+      "riskSignals": [
+        "解锁按钮无响应",
+        "开始按钮缺失",
+        "quiz 未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S15-03"
+      }
+    },
+    {
+      "id": "s15-04-complete-upgrade-quiz",
+      "type": "action",
+      "title": "完成升级 Quiz",
+      "objective": "完成 quiz 中所有题目并检查完成表现。",
+      "action": "完成 quiz 中所有题目；以流程完成为主，不验证音频题目准确率。遇到无可见题干 / 纯音频题时，可对三个稳定选项坐标从左到右循环点击 10 轮推进，跑完截图判断是否结算。",
+      "expected": "完成后的表现正常。",
+      "riskSignals": [
+        "题目无法作答",
+        "完成后无结算",
+        "完成表现异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S15-04",
+        "quizAnswerPolicy": "Flow-first. Do not validate audio-question accuracy. The three option coordinates are stable; for hidden-text or audio-only prompts, loop taps across the visible options from left to right for 10 rounds, then screenshot and judge whether the upgrade flow reached completion."
+      }
+    },
+    {
+      "id": "s16-01-open-aggregate-feature",
+      "type": "action",
+      "title": "打开聚合功能",
+      "objective": "从主页面进入故事书模块入口所在聚合功能。",
+      "action": "回到主页面后点击右上角第二个聚合功能按钮。",
+      "expected": "打开聚合功能界面。",
+      "riskSignals": [
+        "右上角第二个聚合功能按钮缺失",
+        "聚合功能界面未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-01"
+      }
+    },
+    {
+      "id": "s16-02-enter-picture-books",
+      "type": "action",
+      "title": "进入绘本故事",
+      "objective": "进入故事书模块主页。",
+      "action": "点击界面中的第一个按钮“绘本故事”。",
+      "expected": "进入绘本故事页面。",
+      "riskSignals": [
+        "绘本故事按钮缺失",
+        "绘本故事页面未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-02"
+      }
+    },
+    {
+      "id": "s17-01-open-any-book",
+      "type": "action",
+      "title": "进入任意故事播放",
+      "objective": "从绘本故事页面进入故事播放。",
+      "action": "在绘本故事页面点击任意一本故事书。",
+      "expected": "进入播放 loading，并在完成后进入封面页。",
+      "riskSignals": [
+        "故事书列表为空",
+        "点击故事无响应",
+        "播放 loading 超时",
+        "封面页未出现"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-01",
+        "bookSelection": "any-visible-book"
+      }
+    },
+    {
+      "id": "s17-02-book-auto-page-turn",
+      "type": "checkpoint",
+      "title": "故事书自动翻页播放",
+      "objective": "验证故事书播放自动翻页。",
+      "action": "观察故事书播放。",
+      "expected": "故事书播放过程中会自动翻页。",
+      "riskSignals": [
+        "未自动翻页",
+        "播放卡住",
+        "画面异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-02"
+      }
+    },
+    {
+      "id": "s17-05-open-book-side-menu",
+      "type": "action",
+      "title": "打开故事播放右侧菜单栏",
+      "objective": "验证播放页右上角菜单入口。",
+      "action": "点击右上角按钮。",
+      "expected": "弹出右侧菜单栏。",
+      "riskSignals": [
+        "右上角按钮缺失",
+        "菜单栏未弹出"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-05"
+      }
+    },
+    {
+      "id": "s17-06-reading-mode-switch",
+      "type": "action",
+      "title": "阅读模式切换",
+      "objective": "验证故事播放的阅读模式选项。",
+      "action": "在菜单栏检查阅读模式；分别点击“读给我听”“自己读”；如果有“跟我读”也点击切换。",
+      "expected": "阅读模式至少包含“读给我听”“自己读”，可能包含“跟我读”；模式可切换。",
+      "riskSignals": [
+        "必需阅读模式缺失",
+        "模式切换无响应",
+        "切换后播放异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-06",
+        "optionalMode": "跟我读"
+      }
+    },
+    {
+      "id": "s17-07-audio-mode",
+      "type": "action",
+      "title": "进入音频模式",
+      "objective": "验证菜单栏音频模式入口。",
+      "action": "点击“音频模式”按钮。",
+      "expected": "进入音频播放模式。",
+      "riskSignals": [
+        "音频模式按钮缺失",
+        "音频模式未打开"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-07"
+      }
+    },
+    {
+      "id": "s17-08-close-audio-mode",
+      "type": "action",
+      "title": "退出音频模式",
+      "objective": "验证音频模式可关闭返回。",
+      "action": "点击左上角关闭按钮。",
+      "expected": "返回故事播放。",
+      "riskSignals": [
+        "关闭按钮缺失",
+        "无法返回故事播放"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-08"
+      }
+    },
+    {
+      "id": "s17-09-favorite-book",
+      "type": "action",
+      "title": "收藏故事书",
+      "objective": "验证故事收藏入口。",
+      "action": "再次点击右上角按钮打开菜单栏，点击爱心按钮。",
+      "expected": "故事书被收藏。",
+      "riskSignals": [
+        "菜单无法再次打开",
+        "爱心按钮缺失",
+        "收藏无反馈"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-09"
+      }
+    },
+    {
+      "id": "s17-10-book-endpage",
+      "type": "checkpoint",
+      "title": "进入故事 endpage",
+      "objective": "验证故事播放完成后的 endpage。",
+      "action": "继续完成故事书播放。",
+      "expected": "自动进入 endpage 页面，可看到倒计时即将进入下一本故事书。",
+      "riskSignals": [
+        "endpage 不出现",
+        "倒计时缺失",
+        "播放结束卡住"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-10"
+      }
+    },
+    {
+      "id": "s17-11-book-continue-next",
+      "type": "checkpoint",
+      "title": "续播下一本故事",
+      "objective": "验证 endpage 倒计时后续播下一本故事。",
+      "action": "等待倒计时结束。",
+      "expected": "正确进入下一本故事书并完成播放。",
+      "riskSignals": [
+        "倒计时结束后未进入下一本",
+        "下一本故事加载失败",
+        "下一本故事播放异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-11"
+      }
+    },
+    {
+      "id": "s17-12-return-from-second-endpage",
+      "type": "action",
+      "title": "第二次 endpage 返回",
+      "objective": "验证续播后的返回能力。",
+      "action": "在下一次 endpage 页面点击左上角按钮。",
+      "expected": "返回上一层或绘本故事路径。",
+      "riskSignals": [
+        "返回按钮缺失",
+        "返回后页面异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S17-12"
+      }
+    },
+    {
+      "id": "s18-01-open-book-search",
+      "type": "action",
+      "title": "进入故事搜索界面",
+      "objective": "从绘本故事页面进入搜索。",
+      "action": "回到绘本故事页面，点击右上角放大镜图标。",
+      "expected": "进入搜索界面。",
+      "riskSignals": [
+        "放大镜图标缺失",
+        "搜索界面未打开"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-01"
+      }
+    },
+    {
+      "id": "s18-02-book-tag-search",
+      "type": "action",
+      "title": "tag 搜索",
+      "objective": "验证搜索页 tag 能筛出内容。",
+      "action": "点击 6 个 tag 中任意一个。",
+      "expected": "弹出相关搜索内容。",
+      "riskSignals": [
+        "tag 缺失",
+        "点击 tag 无结果",
+        "搜索结果为空"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-02",
+        "tagSelection": "any-visible-tag"
+      }
+    },
+    {
+      "id": "s18-03-open-book-from-search",
+      "type": "action",
+      "title": "从搜索结果进入播放",
+      "objective": "验证搜索结果故事可播放。",
+      "action": "点击任意一本故事书。",
+      "expected": "正常进入并播放。",
+      "riskSignals": [
+        "搜索结果不可点击",
+        "播放页未打开",
+        "播放异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-03",
+        "bookSelection": "any-visible-search-result"
+      }
+    },
+    {
+      "id": "s18-04-return-to-search",
+      "type": "action",
+      "title": "返回搜索页",
+      "objective": "验证播放页可退回搜索页。",
+      "action": "播放正常后点击左上角按钮。",
+      "expected": "退出至搜索页。",
+      "riskSignals": [
+        "返回按钮缺失",
+        "返回后不是搜索页"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-04"
+      }
+    },
+    {
+      "id": "s18-05-open-search-filter",
+      "type": "action",
+      "title": "打开筛选页",
+      "objective": "验证搜索筛选入口。",
+      "action": "在搜索页点击右上角筛选按钮。",
+      "expected": "弹出筛选页面。",
+      "riskSignals": [
+        "筛选按钮缺失",
+        "筛选页面未弹出"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-05"
+      }
+    },
+    {
+      "id": "s18-06-level-filter-check",
+      "type": "action",
+      "title": "分级筛选校验",
+      "objective": "验证分级筛选结果标签符合所选分级。",
+      "action": "点击任意分级。",
+      "expected": "搜索出来的故事书标签都符合所选分级。",
+      "riskSignals": [
+        "分级不可点击",
+        "筛选无结果",
+        "结果标签与分级不符"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-06",
+        "levelSelection": "any-visible-level"
+      }
+    },
+    {
+      "id": "s18-07-return-home-from-book-module",
+      "type": "teardown",
+      "title": "退出故事书模块回主页面",
+      "objective": "完成故事书模块后回到主页面。",
+      "action": "多次点击左上角按钮。",
+      "expected": "退出回到主页面。",
+      "riskSignals": [
+        "返回链路异常",
+        "无法回到主页面",
+        "返回后 App 卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S18-07"
+      }
+    },
+    {
+      "id": "s19-01-open-flashcard-module",
+      "type": "action",
+      "title": "进入闪卡模块",
+      "objective": "验证聚合功能中的闪卡模块入口可进入。",
+      "action": "在主界面点击右上角第二个聚合功能按钮打开聚合功能界面，点击“闪卡”。",
+      "expected": "正常进入闪卡主界面。",
+      "riskSignals": [
+        "聚合功能按钮无响应",
+        "闪卡入口缺失",
+        "进入后空白或卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-01",
+        "module": "flashcard-center"
+      }
+    },
+    {
+      "id": "s19-02-open-learned-words",
+      "type": "action",
+      "title": "进入已学单词",
+      "objective": "验证已学单词入口。",
+      "action": "在闪卡主界面点击“已学单词”。",
+      "expected": "进入已学单词界面。",
+      "riskSignals": [
+        "已学单词入口缺失",
+        "点击无响应",
+        "页面加载失败"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-02"
+      }
+    },
+    {
+      "id": "s19-03-learned-words-card-data",
+      "type": "checkpoint",
+      "title": "已学单词数据检查",
+      "objective": "检查已学单词卡片和数据展示。",
+      "action": "检查已学单词中的卡片列表。",
+      "expected": "卡片显示正常，数据展示正常；如果账号暂无数据，空态显示合理。",
+      "riskSignals": [
+        "卡片缺图",
+        "数据异常",
+        "空态无说明",
+        "列表错位"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-03",
+        "allowEmptyState": true
+      }
+    },
+    {
+      "id": "s19-04-learned-words-letter-tag",
+      "type": "action",
+      "title": "字母 tag 检查",
+      "objective": "验证字母 tag 筛选展示。",
+      "action": "点击“字母”tag；如果有数据则检查列表显示。",
+      "expected": "筛选后的卡片或空态显示正常。",
+      "riskSignals": [
+        "tag 无响应",
+        "筛选后卡片异常",
+        "空态异常"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-04",
+        "tag": "字母",
+        "allowEmptyState": true
+      }
+    },
+    {
+      "id": "s19-05-learned-words-cvc-tag",
+      "type": "action",
+      "title": "CVC tag 检查",
+      "objective": "验证 CVC tag 筛选展示。",
+      "action": "点击“CVC”tag；如果有数据则检查列表显示。",
+      "expected": "筛选后的卡片或空态显示正常。",
+      "riskSignals": [
+        "tag 无响应",
+        "筛选后卡片异常",
+        "空态异常"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-05",
+        "tag": "CVC",
+        "allowEmptyState": true
+      }
+    },
+    {
+      "id": "s19-06-learned-words-math-tag",
+      "type": "action",
+      "title": "数学 tag 检查",
+      "objective": "验证数学 tag 筛选展示。",
+      "action": "点击“数学”tag；如果有数据则检查列表显示。",
+      "expected": "筛选后的卡片或空态显示正常。",
+      "riskSignals": [
+        "tag 无响应",
+        "筛选后卡片异常",
+        "空态异常"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-06",
+        "tag": "数学",
+        "allowEmptyState": true
+      }
+    },
+    {
+      "id": "s19-07-return-flashcard-home",
+      "type": "action",
+      "title": "返回闪卡主页",
+      "objective": "从已学单词界面返回闪卡主界面。",
+      "action": "点击左上角返回按钮。",
+      "expected": "回到闪卡主界面。",
+      "riskSignals": [
+        "返回失败",
+        "返回后页面状态异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-07"
+      }
+    },
+    {
+      "id": "s19-08-open-max-recommendation",
+      "type": "action",
+      "title": "进入 max 推荐流程",
+      "objective": "验证 max 推荐闪卡流程入口。",
+      "action": "在闪卡首页点击“max推荐”。",
+      "expected": "进入闪卡练习流程。",
+      "riskSignals": [
+        "max推荐入口缺失",
+        "点击无响应",
+        "进入后卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-08"
+      }
+    },
+    {
+      "id": "s19-09-flashcard-flow-structure",
+      "type": "checkpoint",
+      "title": "闪卡流程结构检查",
+      "objective": "确认闪卡流程内容结构符合预期。",
+      "action": "观察本次闪卡流程内容。",
+      "expected": "一次流程有 5 个单词，单个单词有 3 个小游戏；如实际配置调整，记录实际数量并标注风险。",
+      "riskSignals": [
+        "单词数量异常",
+        "小游戏数量异常",
+        "流程结构不清晰"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-09",
+        "expectedWords": 5,
+        "expectedGamesPerWord": 3
+      }
+    },
+    {
+      "id": "s19-10-complete-first-two-flashcard-games",
+      "type": "action",
+      "title": "完成前两个小游戏",
+      "objective": "验证闪卡小游戏点击和拖拽交互可完成。",
+      "action": "通过点击、拖拽等操作完成前两个小游戏。",
+      "expected": "前两个小游戏可完成并进入下一环节。",
+      "riskSignals": [
+        "点击无响应",
+        "拖拽不生效",
+        "小游戏无法完成"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-10"
+      }
+    },
+    {
+      "id": "s19-11-flashcard-voice-game-skip",
+      "type": "voice",
+      "title": "第三个语音小游戏跳过",
+      "objective": "验证闪卡语音小游戏不会阻断流程。",
+      "action": "到第三个小游戏时等待 5 秒。",
+      "expected": "语音识别小游戏可自动跳过，流程不中断。",
+      "riskSignals": [
+        "语音环节无法跳过",
+        "流程卡住",
+        "跳过后状态异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "timeoutMs": 5000,
+      "data": {
+        "caseId": "S19-11",
+        "voiceAccuracyOutOfScope": true
+      }
+    },
+    {
+      "id": "s19-12-flashcard-settlement-data",
+      "type": "checkpoint",
+      "title": "结算页数据检查",
+      "objective": "验证闪卡流程结算页展示。",
+      "action": "全部完成后进入结算页，检查单词卡显示和数据统计。",
+      "expected": "结算页单词卡展示正常，数据统计正常。",
+      "riskSignals": [
+        "结算页未出现",
+        "单词卡缺失",
+        "数据统计异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-12"
+      }
+    },
+    {
+      "id": "s19-13-open-share-component",
+      "type": "action",
+      "title": "唤起分享组件",
+      "objective": "验证结算页分享入口可用。",
+      "action": "在结算页点击分享按钮并等待。",
+      "expected": "正确唤起分享组件。",
+      "riskSignals": [
+        "分享按钮无响应",
+        "分享组件未出现",
+        "组件遮挡异常"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-13"
+      }
+    },
+    {
+      "id": "s19-14-share-poster-visual",
+      "type": "checkpoint",
+      "title": "分享海报检查",
+      "objective": "验证分享海报展示正常。",
+      "action": "检查分享组件中的分享海报。",
+      "expected": "分享海报显示正常，无明显错位、空白、遮挡。",
+      "riskSignals": [
+        "海报空白",
+        "图片错位",
+        "二维码或关键内容被遮挡"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-14"
+      }
+    },
+    {
+      "id": "s19-15-exit-share-component",
+      "type": "action",
+      "title": "退出分享组件",
+      "objective": "验证可退出分享组件并恢复闪卡路径。",
+      "action": "退出分享组件。",
+      "expected": "回到闪卡主界面或结算页后可返回闪卡主界面。",
+      "riskSignals": [
+        "分享组件无法关闭",
+        "关闭后黑屏",
+        "返回链路异常"
+      ],
+      "severity": "normal",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-15"
+      }
+    },
+    {
+      "id": "s19-16-return-main-path-from-flashcard",
+      "type": "teardown",
+      "title": "返回路径主界面",
+      "objective": "完成闪卡模块后回到路径主界面。",
+      "action": "在闪卡首页点击左上角按钮。",
+      "expected": "回到路径主界面。",
+      "riskSignals": [
+        "无法返回主界面",
+        "返回后路径状态异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S19-16"
+      }
+    },
+    {
+      "id": "s20-01-open-course-search",
+      "type": "action",
+      "title": "进入搜索课程",
+      "objective": "验证聚合功能中的搜索入口可进入。",
+      "action": "在主界面点击右上角第二个聚合功能按钮打开聚合功能界面，点击“搜索”。",
+      "expected": "正常进入搜索课程界面。",
+      "riskSignals": [
+        "搜索入口缺失",
+        "点击无响应",
+        "搜索页加载失败"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S20-01"
+      }
+    },
+    {
+      "id": "s20-02-open-nature-series",
+      "type": "action",
+      "title": "进入大自然系列",
+      "objective": "验证搜索页系列卡片入口。",
+      "action": "点击“大自然”卡片。",
+      "expected": "进入对应系列列表。",
+      "riskSignals": [
+        "大自然卡片缺失",
+        "点击无响应",
+        "系列列表为空或异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S20-02",
+        "series": "大自然"
+      }
+    },
+    {
+      "id": "s20-03-open-any-course-from-search",
+      "type": "action",
+      "title": "任意课程进入检查",
+      "objective": "验证搜索结果中的课程可进入。",
+      "action": "点击任意一个课程。",
+      "expected": "正常进入课程。",
+      "riskSignals": [
+        "课程入口无响应",
+        "课程加载失败",
+        "进入错误页面"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S20-03",
+        "completeCourse": false
+      }
+    },
+    {
+      "id": "s20-04-return-search-page",
+      "type": "action",
+      "title": "返回搜索页",
+      "objective": "验证从课程可退回搜索页。",
+      "action": "进入课程后立即点击左上角返回；如弹出退出确认，选择退出或返回。",
+      "expected": "回到搜索页。",
+      "riskSignals": [
+        "返回按钮缺失",
+        "退出确认无响应",
+        "无法回到搜索页"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S20-04"
+      }
+    },
+    {
+      "id": "s20-05-return-main-path-from-search",
+      "type": "teardown",
+      "title": "返回路径主界面",
+      "objective": "完成搜索课程模块后回到路径主界面。",
+      "action": "从搜索页点击左上角返回。",
+      "expected": "回到路径主界面。",
+      "riskSignals": [
+        "无法返回主界面",
+        "返回后路径状态异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S20-05"
+      }
+    }
+  ],
+  "confirmedDecisions": [
+    "允许每次运行前清 App 数据，用于覆盖新用户流程。",
+    "账号、密码、孩子档案名、新建孩子名都做成环境配置项，使用的账号必须解锁 Lv2。",
+    "暂时固定前置路径为 Lv2 -> 动作路径。",
+    "故事书模块不固定故事样本，目标是随机抽样。",
+    "闪卡模块和搜索课程纳入核心主流程冒烟。",
+    "安卓渠道包冒烟拆分到独立文件，不并入核心主流程。"
+  ]
+}
