@@ -7,6 +7,8 @@ QA 内部 Codex skills 仓库。
 | Skill | 用途 |
 | --- | --- |
 | `app-ui-qa` | 复合技术栈移动 App 的双端 UI 冒烟自动化。Android 使用 adb-only；iOS 使用 iPhone Mirroring + PyAutoGUI；输出截图证据和 HTML 报告。 |
+| `qa-testcase-design` | 根据 PRD/提测范围设计中文测试用例、覆盖方案与 PlantUML 思维导图 ，一键发布到飞书文档 |
+| `qa-knowledge-base` | 飞书 PRD 录入 QA 知识库；写用例前检索历史需求、回归点、埋点，支持录入与检索 |
 
 ## Install
 
@@ -17,6 +19,7 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
   --repo Areli-ga/qa-common-skill \
   --path skills/app-ui-qa
 ```
+
 
 如果本机 `$CODEX_HOME` 不是默认路径，按实际 Codex skill-installer 路径执行。安装后重启 Codex。
 
