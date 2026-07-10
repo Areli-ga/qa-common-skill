@@ -1,0 +1,479 @@
+新单元奖励-Sunny
+基本信息
+
+
+产品文档
+
+
+
+新单元奖励
+
+
+
+产品Owner
+
+
+
+Sunny
+
+
+
+优先级
+
+高
+
+版本号
+
+V1.30.0
+
+需求背景
+
+V1.30，五月第一周，Level1第一单元4-5节课，暂时后面的单元还是5个section，后续可能会有调整。
+课程结构调整参考：未命名页面
+
+完成 1 节课后流失占比最大，完成 4-5 节课的用户仅约 30%。
+当前奖励中心入口点击率约 20%，沿途单课小奖励对行为驱动效果有限。
+D1 → D2 返场缺乏明确钩子
+头部用户（已完成首日多课的用户）在次日缺乏可预期的"回来理由"。
+
+核心问题：当前的奖励路径（沿途扭蛋 + 课程内小奖励）没有形成单一目标牵引，导致大部分孩子在完成 1-2 课后流失，且当日奖励与次日返场之间缺乏衔接机制。
+
+
+
+
+
+
+产品目标
+
+根据新的课程结构，设计奖励的节点，提升用户在学习路径中的体验。
+提升首日完课深度
+提升次日留存
+
+
+
+
+
+UI文件
+
+https://www.figma.com/design/RR0RcJ6g8c9fRny7IzArEz/1.30.0?node-id=30153-116787&t=oGW5oP07GHug724H-1
+
+
+
+
+
+修订记录
+
+-
+
+
+
+
+
+
+
+
+首日路径图
+[启动] → [地图今日任务末尾 : 看见宝箱]
+   ↓
+[第1节课：hello] → [打星星奖励]
+   ↓
+[第2-4节课] → [中途退出课程?]
+                ├─ 是 → [挽留动画: 回到地图，宝箱晃动]
+                └─ 否 → 继续
+   ↓
+[单元完成 ] → [开单元大宝箱] →【领取今日奖励】+ [明日奖励预告] +【单元作品】
+ ↓
+【引入顶部的菜单栏，以及奖励中心入口放大引导点击】
+ ↓
+[解锁第二单元]
+
+
+四、详细需求
+4.1 单元宝箱（核心目标锚点）
+功能描述
+每日学习路径终点放置一个大宝箱，孩子需完成当日 5 节课才能开启，作为单一日终目标。
+image.png
+
+功能拆解
+
+
+序号
+
+功能项
+
+描述
+
+F1.1
+
+新单元结构，不展示扭蛋，展示宝箱。
+老单元结构会展示扭蛋，如后流程图示意。
+
+单元末尾放宝箱奖励
+采用新课程结构的形式，路径各种扭蛋取消
+若第一个单元只有一个part，新手hello课程的扭蛋取消。
+
+F1.2
+
+宝箱视觉动画
+
+宝箱出现在地图远端（轻微发光）
+
+F1.3
+
+未完课点击宝箱
+
+未完成今日任务，点击宝箱，
+多语言语音“完成今日任务，领取奖励”
+
+
+F1.4
+
+开箱触发
+
+完成第 5 课瞬间，地图镜头推向宝箱，宝箱发出晃动动画吸引用户点击
+
+F1.5
+
+开箱动画
+
+1-1.5 秒开箱动画（光效+声效），强化峰值体验
+
+F1.6
+
+奖励内容展示+次日奖励hook
+
+
+【领取今日奖励单元套装】+ [明日勋章预告] +【单元作品】
+
+F1.7
+
+虚拟形象引入
+
+
+
+直接让默认的小人穿上【上衣+下装+鞋子】，站在小舞台上。
+明日可以获得一个【头饰】
+
+F1.8
+
+解锁第二单元
+
+领取单元奖励回到地图中，下一个单元解锁动画+音效
+
+F1.9
+
+点击未解锁课程
+
+植入明天获得的奖励内容，
+奖励视频录屏以及文案的修改。Sunny待提供文案和视频资源新用户奖励引导优化——Sunny
+👇以下内容暂时不改（这里的暂时不改）
+
+ScreenRecording_05-06-2026 17-24-13_1.mov
+
+
+首次打开通知权限文案优化
+主标题：让Max每天提醒孩子来学习吧
+副标题：开启提醒，孩子坚持学习的概率提升 3 倍
+主CTA：击掌，吊起消息通知弹窗
+
+二次提醒获取消息权限
+主标题：每天都有新内容等小朋友来解锁
+副标题：开启提醒，让 Max 第一时间告诉孩子
+主CTA：设置弹窗，逻辑不改动
+
+引导完课
+主标题：Max 今天还没等到你！
+副标题：一节课只要 1分钟，一起来打个招呼吧！
+主CTA：击掌关闭弹窗回到地图
+副CTA：稍后再来
+
+故事书引导
+主标题：学得有点累？听 Max 讲个故事吧
+副标题：1 分钟小故事，听完接着闯关
+主CTA：击掌后，进入故事书模块
+副CTA：关闭弹窗，回到地图
+
+明天见
+主标题：今天的任务完成了吗？
+ 副标题：每天都有新关卡等你来解锁哦！
+主CTA：击掌关闭弹窗回到地图
+First-Time Notification Permission
+
+Title:     Let Max remind your child every day!
+Subtitle:  Kids with daily reminders learn 3× more often.
+Primary CTA:    High-five Max!   (triggers high-five → 消息通知弹窗)
+Secondary CTA:  Not now
+
+Second-Time Notification Permission
+
+Title:     Something new to unlock every day!
+Subtitle:  Turn on reminders so Max can tell your child first.
+Primary CTA:    Yes, remind me
+Secondary CTA:  Maybe later
+
+Story Book Guide
+
+Title:     Feeling tired? Let Max tell you a story!
+Subtitle:  Just 1 minute, then back to the adventure.
+Primary CTA:    High-five Max!   (triggers high-five → story book)
+Secondary CTA:  Maybe later      (closes popup → back to map)
+
+Completion Nudge (Hasn't Started Today)
+
+Title:     Max is waiting for you!
+Subtitle:  Just 1 minute — come say hi!
+Primary CTA:    High-five Max!   (triggers high-five → back to map)
+Secondary CTA:  Later
+
+See You Tomorrow
+
+Title:     Did you finish today's mission?
+Subtitle:  New levels and stories unlock every day!
+Primary CTA:    High-five Max!   (triggers high-five → back to map)
+
+
+
+
+单元奖励发放
+image.png
+
+
+单元奖励类型：@Howard@Boris
+1、获得 衣服+裤子+鞋子，一整个单元套装
+2、仅获得头饰勋章。
+
+
+次日地图宝箱：勋章头饰
+
+4.5 次日奖励发放时机
+
+image.png
+
+
+
+
+触发时机
+
+引导动画描述
+
+语音引导
+
+英文
+
+启动 App，进入地图首屏
+
+
+Avatar 穿上昨天获得的奖励，并且获得今天的奖励。（配温馨的动画，增加亲密度和情感联系）
+第一天衣服【套装】，第二天来可以获得【头饰】
+
+
+"哇，你回来啦！"
+"今天的新装扮来啦！
+"穿好新衣服，继续去闯关吧！"
+
+
+"You're back!!"
+something new for today ! "
+"All dressed up! Let's go on today's adventure!"
+
+奖励动画完，回到地图
+
+引导完成今日的单元学习，回到地图上，宝箱出场并且移动到今天的单元结束的地方。
+
+
+"完成全部5节课，就能打开大宝箱！🎁"
+
+"Finish all 5 to unlock the BIG treasure chest! 🎁"
+
+4.6 单元奖励发放逻辑（后端奖励发放）
+奖励中心V2.0，
+根据单元下的配置结构判断，发放不同的奖励规则
+
+完成一个单元，宝箱开出得到【上衣&下装&鞋子】
+第二天再来，得到【头饰】
+
+五、数据埋点
+1、完成单元五节课的人数比例是否提升
+2、领取奖励的人数
+3、领取奖励第二天再来的比例 🆚 未领取奖励第二天再来的人数比例
+同样完成了五节课，领取奖励的人数和未领取的人数留存对比？
+
+image.png
+
+image.png
+
+
+以下事件 参数带上：pathway 属性
+
+
+
+事件名描述
+
+说明（事件 key）
+
+关键参数
+
+
+
+在路径中点击单元奖励宝箱
+
+app_unit_reward
+
+
+type:lock、unlock（未解锁、已解锁）
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+
+
+宝箱打开动画（UnitEndPage页面显示道具时机）
+
+
+app_unit_rewardopen
+
+
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+
+
+穿上动画（虚拟人物出现时机）
+之前是点击穿衣
+后变成自动穿衣
+
+
+app_unit_rewardequipped
+
+
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+
+
+UnitEndPage，点击分享
+
+
+app_unit_myworkshare
+
+
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+
+
+用户在H5页面完成分享（回调事件在 Unity可监听）
+
+
+app_unit_share_completed
+
+
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+原生
+
+
+点击关UnitEndPage
+
+
+app_unit_finish_leave
+
+
+用户基本信息公参Level_Number：课程所属级别序号Unit_Number：课程所属unitIndex
+pathway 属性
+
+
+
+
+daily_reward_grant
+
+
+次日启动App，补发奖励发放时
+
+当前领取奖励所属级别序号Unit_Number：课程所属单元序号unitIndex
+pathway 属性
+
+daily_reward_animation_complete
+
+
+次日奖励穿戴动画播放完毕（点击后奖励飞到奖励中心时）
+
+当前领取奖励所属级别序号Unit_Number：课程所属单元序号unitIndex
+pathway 属性
+
+
+
+触发端
+
+触发时机
+
+属性值
+
+unit_chest_expose
+
+进入地图首屏，宝箱进入可视区域
+
+unit_id（单元唯一ID）/ unit_name（单元名称）/ chest_state（宝箱状态：locked / unlocked / claimed）/ lesson_completed_count（已完成节数）/ lesson_total_count（单元总节数）/ reward_center_version（奖励中心版本：v1 / v2）/ is_new_unit_structure（是否新单元结构：true / false）
+
+unit_chest_click
+
+用户点击宝箱（无论是否解锁）
+
+
+unit_id（单元ID）/ chest_state（点击时宝箱状态：locked / unlocked）/ lesson_completed_count（已完成节数）/ lesson_total_count（总节数）/ is_retain_triggered（是否触发挽留：true / false）
+
+
+unit_chest_retain_show（更新：先不加）
+
+中途退出课程，挽留动画触发
+
+
+unit_id（单元ID）/ lesson_id（退出时课程ID）/ lesson_number（退出时第几节课）/ lesson_completed_count（已完成节数）/ exit_source（退出来源：back_button / home_button）
+
+
+unit_complete
+
+完成单元最后一节课瞬间
+
+unit_id（单元ID）/ unit_name（单元名称）/ level_id（Level ID）/ lesson_total_count（单元总节数）/ unit_duration_hours（完成单元总耗时小时）/ reward_center_version（奖励中心版本：v1 / v2）/ is_new_unit_structure（是否新单元结构：true / false）/ 
+
+unit_chest_open_start
+
+开箱动画开始播放
+
+
+
+unit_reward_page_view
+
+奖励内容展示页进入（含套装+明日预告）
+
+unit_id（单元ID）
+
+
+unit_reward_claim
+
+用户点击领取奖励按钮
+
+unit_id（单元ID）
+
+
+reward_center_guide_click
+
+奖励中心入口放大引导后，用户点击进入
+
+
+
+daily_reward_grant
+
+次日启动App，头饰发放时
+
+
+
+daily_reward_animation_complete
+
+次日奖励穿戴动画播放完毕
+
+unit_id（来源单元ID）
+
+
+

@@ -1,0 +1,516 @@
+[
+  {
+    "block_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "block_type": 1,
+    "children": [
+      "LvkDdw092oTAbkxWxIglzGeMg9c",
+      "H6qVd9fTlouuwqxqkBblsg6sgkg",
+      "J48JdAVPfoIm90xetnSlA82UgUh",
+      "ZLYGdEheVoDaqOxADXtlTiHHgGe",
+      "QZGod1oNNozrhPxQCjmlm3mkg3b",
+      "RR34dQHVAojEkyxD63Hli1KOgPb",
+      "KnLhdjS1voTWtLxrxOLl5w7oguc",
+      "XKb2dmrJxoXUmbxW6QJlJn2Ng8g",
+      "QrFudwqjqoDlgtxB89ol1SmQgrg",
+      "HwsKdCHq5o3dKzxqfi9lKZ2Kgxh",
+      "HxvYdYTEioHfhWxqmp7lhRnZgGb",
+      "A1Epd2EicoGuTWxt3vzlJ2f6gXc",
+      "T9RMd6TXBoEG61xKLYylDPPogFD",
+      "B55CdO2aso3yehxrj9NlpWl6gff",
+      "CDdNduIn3otWDPxeqiClvtqygzd"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "排行榜规则",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "LvkDdw092oTAbkxWxIglzGeMg9c",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "English",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb"
+  },
+  {
+    "block_id": "H6qVd9fTlouuwqxqkBblsg6sgkg",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "🏆 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "How the leaderboard works",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J48JdAVPfoIm90xetnSlA82UgUh",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "📅 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Weekly schedule",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " (UTC+8)",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZLYGdEheVoDaqOxADXtlTiHHgGe",
+    "block_type": 30,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "sheet": {
+      "token": "X4K8sJivZhQ0Xht0LWulXQZlg0g_EusVB2"
+    }
+  },
+  {
+    "block_id": "QZGod1oNNozrhPxQCjmlm3mkg3b",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "🎯 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "How to climb up?",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RR34dQHVAojEkyxD63Hli1KOgPb",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "· Finish more lessons to move up · ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KnLhdjS1voTWtLxrxOLl5w7oguc",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Each lesson only counts the first time",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " — replays don't add! ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XKb2dmrJxoXUmbxW6QJlJn2Ng8g",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "· More lessons this week = higher rank!",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QrFudwqjqoDlgtxB89ol1SmQgrg",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "🎁 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Top of the board wins Giggles",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HwsKdCHq5o3dKzxqfi9lKZ2Kgxh",
+    "block_type": 30,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "sheet": {
+      "token": "X4K8sJivZhQ0Xht0LWulXQZlg0g_ZJRUBz"
+    }
+  },
+  {
+    "block_id": "HxvYdYTEioHfhWxqmp7lhRnZgGb",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "👍 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Cheer your friends on",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "A1Epd2EicoGuTWxt3vzlJ2f6gXc",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Tap an avatar → open their card → tap ♥ to cheer! ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T9RMd6TXBoEG61xKLYylDPPogFD",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "· One cheer per friend per day ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B55CdO2aso3yehxrj9NlpWl6gff",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "· You can't cheer yourself",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CDdNduIn3otWDPxeqiClvtqygzd",
+    "block_type": 2,
+    "parent_id": "ARDzdYd4bogz0sxiQ29leuDLgrb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "💡 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Tip",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": ": A few lessons every day = fastest way up!",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

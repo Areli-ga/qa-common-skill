@@ -1,0 +1,96 @@
+课程预加载-Sunny
+
+基本信息
+
+
+产品文档
+
+
+
+课程预加载
+
+
+
+产品Owner
+
+
+
+Sunny
+
+
+
+优先级
+
+高
+
+版本号
+
+
+
+需求背景
+
+提升用户体验，减少课程等待时间
+
+
+
+
+
+产品目标
+
+根据用户学习体验
+提升课程进入成功率
+
+
+
+
+
+UI文件
+
+
+
+
+
+
+
+修订记录
+
+-
+
+
+
+
+
+
+
+预加载策略
+
+场景 A：Part 内连播（最关键）
+用户进入 Lesson N（Part 内）
+└─ 立即 P0 预加载 Lesson N+1
+  
+触发代码事件（对应埋点）：以下参课事件） → 启动下一节课，预加载
+InteractiveLessonStart,
+app_game_play,
+StoryBookStart,
+app_flashcard_start,
+ChallengeLessonStart,
+app_enter_quiz,
+app_music_start
+场景 B：Part 末课（即将跨 Part）
+用户开始 Lesson 3（每个 Section 的第 3 课）
+└─ P1 后台预加载下一 Part 的 Lesson 1
+场景 C：跨 Unit 处理
+用户完成 Unit 最后一个 Section 的 Lesson 3
+└─ P1 预加载下一 Unit 的 Section 1 Lesson 1 轻量资源
+
+场景 D：每日首次打开（App 启动）
+进入Hello这节课 触发（Hello是写在包里面的）
+└─ P2 后台预加载今日基础 Section 的 Lesson 1
+   └─ 目标：用户进地图后点击第一课 0 等待
+
+若用户手动删除预加载的课程，则Unity标记，并且不再重复预加载。
+未完成做预加载，已完成不做预加载。
+
+
+
+

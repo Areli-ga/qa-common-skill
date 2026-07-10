@@ -1,0 +1,1066 @@
+[
+  {
+    "block_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "block_type": 1,
+    "children": [
+      "ReimdUHMioZOQExcHESl7ZH6gFb",
+      "ElYCdV8cboU5m8xgek8lsYkSghG",
+      "SHkGd0jCzo7Qs6xTgbklCcbkgmd",
+      "Tb03deyc7or4nNxq1c7lNbGHgEh",
+      "KMUydtkQgoOPGrx4dZ5lrg0Bgrh",
+      "EAXBdMgr9ome1Rx8MbtlbA0OgLb",
+      "N9irdSLl9o0QG1xLZAyl8GDTgGt",
+      "P37ydUdGFoZOn0xO9qmlnP03ggg",
+      "NwrKdy3AfoyB7dxLfsulG2q4gld",
+      "Gnr0dFtEHoTQ8rxXYz1llIbPgm4",
+      "EVaLdmzoBo7uJUxnDYElHp4SgRg"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "网络异常时弹窗已预加载 — Leah",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "ReimdUHMioZOQExcHESl7ZH6gFb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf"
+  },
+  {
+    "block_id": "ElYCdV8cboU5m8xgek8lsYkSghG",
+    "block_type": 2,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "前置需求：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "课程预加载-Sunny",
+            "token": "ZYLzwGjYiidVzrkNNzblqaZbgSf",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/ZYLzwGjYiidVzrkNNzblqaZbgSf"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SHkGd0jCzo7Qs6xTgbklCcbkgmd",
+    "block_type": 2,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "虽然已经做了预加载，但是用户不太能感知已经预加载了可以学习，并且不知道具体是在哪里学习。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Tb03deyc7or4nNxq1c7lNbGHgEh",
+    "block_type": 2,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KMUydtkQgoOPGrx4dZ5lrg0Bgrh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf"
+  },
+  {
+    "block_id": "EAXBdMgr9ome1Rx8MbtlbA0OgLb",
+    "block_type": 2,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/Si6cThMuRKaCWB6MORBGDY/1.31.0?node-id=33003-85988&t=4y1kR6yzuiNqhOYw-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "N9irdSLl9o0QG1xLZAyl8GDTgGt",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求方案",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf"
+  },
+  {
+    "block_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "block_type": 31,
+    "children": [
+      "OFDIdZiV8o5mkpxXXSnly6Tkgse",
+      "NuJFdT3uloDtkixhNVmlRjirg3g",
+      "YpARd86ItozwY5xRH0pl5sYVgqM",
+      "YI1UdIuX4orZPYxgMD7lczG5gI9",
+      "OZnmdhXkdooxwTxLcivl8M1zgdh",
+      "CLswdS0q6oByjuxmcAjlVGEpgbe"
+    ],
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "table": {
+      "cells": [
+        "OFDIdZiV8o5mkpxXXSnly6Tkgse",
+        "NuJFdT3uloDtkixhNVmlRjirg3g",
+        "YpARd86ItozwY5xRH0pl5sYVgqM",
+        "YI1UdIuX4orZPYxgMD7lczG5gI9",
+        "OZnmdhXkdooxwTxLcivl8M1zgdh",
+        "CLswdS0q6oByjuxmcAjlVGEpgbe"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          340,
+          340
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 3
+      }
+    }
+  },
+  {
+    "block_id": "OFDIdZiV8o5mkpxXXSnly6Tkgse",
+    "block_type": 32,
+    "children": [
+      "MrJ9dV5dKoe028xhuaLl79zKgiL"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "MrJ9dV5dKoe028xhuaLl79zKgiL",
+    "block_type": 2,
+    "parent_id": "OFDIdZiV8o5mkpxXXSnly6Tkgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NuJFdT3uloDtkixhNVmlRjirg3g",
+    "block_type": 32,
+    "children": [
+      "Gd3GdDYZXoMyhgxuMTClkPlRgQc"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Gd3GdDYZXoMyhgxuMTClkPlRgQc",
+    "block_type": 2,
+    "parent_id": "NuJFdT3uloDtkixhNVmlRjirg3g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YpARd86ItozwY5xRH0pl5sYVgqM",
+    "block_type": 32,
+    "children": [
+      "KWFrdm7aYoBFQpxeNS3lTwU3gEe",
+      "ZJ56dl6ifoGXBrxgkWil0HOEgug",
+      "PJ4od1aqzoyobYxiIY7lvuiygVc"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KWFrdm7aYoBFQpxeNS3lTwU3gEe",
+    "block_type": 2,
+    "parent_id": "YpARd86ItozwY5xRH0pl5sYVgqM",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式：目前",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZJ56dl6ifoGXBrxgkWil0HOEgug",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1125,
+      "scale": 1,
+      "token": "XxMmbImhmoE9aIxJoEXlLbuZgrg",
+      "width": 2436
+    },
+    "parent_id": "YpARd86ItozwY5xRH0pl5sYVgqM"
+  },
+  {
+    "block_id": "PJ4od1aqzoyobYxiIY7lvuiygVc",
+    "block_type": 2,
+    "parent_id": "YpARd86ItozwY5xRH0pl5sYVgqM",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "block_type": 32,
+    "children": [
+      "Oi2Jdmjg8oRVtWxxEwAlm316gUg",
+      "ZxsWdTstnoK5MOx7ItplG2yqg7f",
+      "Fttbd4QXVopfkyxj1zpl2cb8gWg",
+      "N3d9dwdm2onukoxIqAGl8nzBgqC",
+      "CsUxd6wlmoe9EsxF7Qola8dogDc",
+      "PDuWdnBsqoXLxzxEStml0Cdrgrc",
+      "SabNdepcuops8Tx8IU3l6p9Ngfc",
+      "DSS7ddAOAoBOPexcZCDl2tIlgac",
+      "ZobRdK6xyoRO6SxjsHml7Nnjgmh"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Oi2Jdmjg8oRVtWxxEwAlm316gUg",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "网络异常弹窗修改",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZxsWdTstnoK5MOx7ItplG2yqg7f",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "触发条件：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Fttbd4QXVopfkyxj1zpl2cb8gWg",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "进入首页时，检测到设备处于离线状态。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "N3d9dwdm2onukoxIqAGl8nzBgqC",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "断网弹窗如果用户已有缓存好的内容\n修改为左侧内容，点击Okay后进入离线模式。\n\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "断网弹窗如果用户未缓存任何内容，使用原来弹窗。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CsUxd6wlmoe9EsxF7Qola8dogDc",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PDuWdnBsqoXLxzxEStml0Cdrgrc",
+    "block_type": 2,
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "交互逻辑：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SabNdepcuops8Tx8IU3l6p9Ngfc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户点击 \"Okay\" → 加载本地缓存的内容，进入离线模式。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9"
+  },
+  {
+    "block_id": "DSS7ddAOAoBOPexcZCDl2tIlgac",
+    "block_type": 13,
+    "comment_ids": [
+      "7640003653461364450"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "留在当前页，每 30s 重试一次网络",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7640003653461364450"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9"
+  },
+  {
+    "block_id": "ZobRdK6xyoRO6SxjsHml7Nnjgmh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "网络恢复 → 自动关闭弹窗，恢复正常流程",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "3"
+      }
+    },
+    "parent_id": "YI1UdIuX4orZPYxgMD7lczG5gI9"
+  },
+  {
+    "block_id": "OZnmdhXkdooxwTxLcivl8M1zgdh",
+    "block_type": 32,
+    "children": [
+      "X78wdfdujorJ2mxQNKnlwbB9g3b",
+      "SMumd1OGPo0kX7x6J0alPu8ogXe"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "X78wdfdujorJ2mxQNKnlwbB9g3b",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1125,
+      "scale": 1,
+      "token": "LpMtbX5qjoxIFaxDDa7lcE3QglZ",
+      "width": 2436
+    },
+    "parent_id": "OZnmdhXkdooxwTxLcivl8M1zgdh"
+  },
+  {
+    "block_id": "SMumd1OGPo0kX7x6J0alPu8ogXe",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1125,
+      "scale": 1,
+      "token": "XFPVb0IeCompMlxFPBWlJ8cIgQf",
+      "width": 2436
+    },
+    "parent_id": "OZnmdhXkdooxwTxLcivl8M1zgdh"
+  },
+  {
+    "block_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "block_type": 32,
+    "children": [
+      "G1LZd1pbfoMsB3xdIiJlhko8gmd",
+      "X6CDd7QuIokGIsxgvuUlLH6bgMb",
+      "O7KYd2BXsoGlGlxpooBlcaqNg3f",
+      "VtUsdrvKaoYxe5xQV3HlR4BmgAb",
+      "Id8Id5BPloOziaxVTBFllWDngIg",
+      "QRnVdAY7Oo2c89xoiBdleRXKgP2",
+      "ScIOd7hkUojCcOxESNPlolnggyb",
+      "YuaMdOppYo5ynHxydzVluqhogkb"
+    ],
+    "parent_id": "P37ydUdGFoZOn0xO9qmlnP03ggg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "G1LZd1pbfoMsB3xdIiJlhko8gmd",
+    "block_type": 2,
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "因为首页在做AB测，所以离线模式本期需要先做对照组和实验组两套UI",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "X6CDd7QuIokGIsxgvuUlLH6bgMb",
+    "block_type": 2,
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "实验组：如左图",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "O7KYd2BXsoGlGlxpooBlcaqNg3f",
+    "block_type": 2,
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对照组：现有首页调整，右上角注明offline，需联网的入口隐藏\n\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VtUsdrvKaoYxe5xQV3HlR4BmgAb",
+    "block_type": 2,
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Id8Id5BPloOziaxVTBFllWDngIg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需要网络的功能为不可点击状态，或者隐藏。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（需要隐藏的功能：单词库、AI tutor、搜索）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe"
+  },
+  {
+    "block_id": "QRnVdAY7Oo2c89xoiBdleRXKgP2",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "已缓存",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（在下载内容中有）",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "可以学的课程为高亮，其他课程不可点击；\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "playzone、绘本、闪卡、miniplan哪些可以缓存，需要联网的隐藏。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe"
+  },
+  {
+    "block_id": "ScIOd7hkUojCcOxESNPlolnggyb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在本页面，每 30s 重试一次网络，网络恢复，自动退出离线模式，回到正常模式。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "确认一下离线模式是否也有。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe"
+  },
+  {
+    "block_id": "YuaMdOppYo5ynHxydzVluqhogkb",
+    "block_type": 2,
+    "parent_id": "CLswdS0q6oByjuxmcAjlVGEpgbe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NwrKdy3AfoyB7dxLfsulG2q4gld",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据埋点",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf"
+  },
+  {
+    "block_id": "Gnr0dFtEHoTQ8rxXYz1llIbPgm4",
+    "block_type": 30,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "sheet": {
+      "token": "SjVLs7E5QhQDldtaqnhl6SRwgmb_8FNeS0"
+    }
+  },
+  {
+    "block_id": "EVaLdmzoBo7uJUxnDYElHp4SgRg",
+    "block_type": 2,
+    "parent_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "title": "网络异常时弹窗已预加载 — Leah",
+  "doc_id": "Fqn9da0kEooHz4x7qJWl64bAgKf",
+  "wiki_token": "SQ7SwQTlziBKpXkVekTlryeTgng",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/SQ7SwQTlziBKpXkVekTlryeTgng",
+  "fetched_at": "2026-06-30T17:39:30.284195+08:00",
+  "version": "V1.31.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 692,
+  "blocks": 42,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.png",
+      "bytes": 401853,
+      "dims": [
+        2436,
+        1125
+      ],
+      "read_file": "images/img-01.read.png"
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.png",
+      "bytes": 372879,
+      "dims": [
+        2436,
+        1125
+      ],
+      "read_file": "images/img-02.read.png"
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.png",
+      "bytes": 350686,
+      "dims": [
+        2436,
+        1125
+      ],
+      "read_file": "images/img-03.read.png"
+    }
+  ],
+  "image_count": 3,
+  "tables": 1
+}

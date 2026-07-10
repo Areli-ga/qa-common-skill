@@ -1,0 +1,470 @@
+<title>QA 测试用例知识库 · 项目总览</title>
+<style>
+  :root{
+    --paper:#F3F6F5; --surface:#FFFFFF; --surface-2:#F7FAF9;
+    --ink:#15201D; --muted:#5B6A64; --faint:#8B978F;
+    --line:#D9E1DE; --line-2:#E8EEEC;
+    --accent:#0E6E6E; --accent-deep:#0A5454; --accent-tint:#E2EFEE;
+    --done:#3C8C5A; --warn:#B07A21; --warn-tint:#F6EEDD;
+    --radius:10px; --maxw:1060px;
+    --mono:"SF Mono","JetBrains Mono","Cascadia Code",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",system-ui,"Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  .page{font-family:var(--sans);color:var(--ink);background:var(--paper);
+    line-height:1.68;-webkit-font-smoothing:antialiased;font-size:15px}
+  .page::selection{background:var(--accent-tint)}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  code{font-family:var(--mono);font-size:.86em;background:var(--accent-tint);
+    color:var(--accent-deep);padding:.08em .38em;border-radius:5px;
+    word-break:break-word}
+  h1,h2,h3{text-wrap:balance;line-height:1.25;margin:0}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* hero */
+  .hero{padding:64px 0 30px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:14px}
+  .hero h1{font-size:2.35rem;font-weight:700;letter-spacing:-.015em}
+  .hero .lede{margin-top:14px;font-size:1.06rem;color:var(--muted);max-width:60ch}
+  .stats{display:flex;flex-wrap:wrap;gap:0;margin-top:30px;
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .stat{flex:1 1 130px;padding:16px 18px;border-right:1px solid var(--line-2)}
+  .stat:last-child{border-right:0}
+  .stat .n{font-size:1.5rem;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .stat .l{font-size:12px;color:var(--faint);margin-top:3px}
+
+  /* layout */
+  .layout{display:grid;grid-template-columns:208px 1fr;gap:48px;
+    max-width:var(--maxw);margin:0 auto;padding:40px 24px 0;align-items:start}
+  .toc{position:sticky;top:20px;font-size:13.5px}
+  .toc .tl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);margin-bottom:12px;font-weight:600}
+  .toc ol{list-style:none;margin:0;padding:0;counter-reset:t}
+  .toc li{counter-increment:t;margin:2px 0}
+  .toc a{display:block;padding:5px 10px;border-radius:6px;color:var(--muted);
+    border-left:2px solid transparent}
+  .toc a:hover{background:var(--surface);color:var(--ink);text-decoration:none}
+  .toc a::before{content:counter(t,decimal-leading-zero);color:var(--faint);
+    font-family:var(--mono);font-size:11px;margin-right:9px}
+
+  /* sections */
+  main{min-width:0}
+  section{margin-bottom:54px;scroll-margin-top:20px}
+  section>.ey{font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:8px}
+  section>h2{font-size:1.5rem;font-weight:680;letter-spacing:-.01em}
+  section>.sub{color:var(--muted);margin-top:8px;max-width:64ch}
+  .prose{max-width:66ch}
+  .prose p{margin:12px 0}
+  h3.minor{font-size:1rem;font-weight:650;margin:26px 0 10px}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .grid{display:grid;gap:14px}
+  .scroll{overflow-x:auto;border-radius:var(--radius)}
+
+  /* callout / principle */
+  .principle{border-left:3px solid var(--accent);background:var(--surface);
+    padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;margin:20px 0}
+  .principle b{color:var(--accent-deep)}
+
+  /* timeline */
+  .tline{display:grid;gap:0;margin-top:20px;border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+  .tstep{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:16px 20px;
+    border-bottom:1px solid var(--line-2)}
+  .tstep:last-child{border-bottom:0}
+  .tstep .tn{font-family:var(--mono);font-size:13px;font-weight:600;color:#fff;
+    background:var(--accent);border-radius:7px;height:30px;width:42px;display:flex;
+    align-items:center;justify-content:center}
+  .tstep .tn.done2{background:var(--done)}
+  .tstep h4{margin:0 0 2px;font-size:.98rem;font-weight:650}
+  .tstep p{margin:0;font-size:13.5px;color:var(--muted)}
+
+  /* architecture flow */
+  .arch{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;min-width:720px}
+  .lane{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .lane>.lh{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+    color:var(--accent);margin-bottom:4px}
+  .lane>.ld{font-size:12px;color:var(--faint);margin-bottom:14px}
+  .node{background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;
+    padding:9px 11px;margin:8px 0;font-size:13px;position:relative}
+  .node .tag{font-family:var(--mono);font-size:10.5px;padding:1px 6px;border-radius:4px;
+    margin-right:7px;vertical-align:1px}
+  .tag.s{background:#e6eff6;color:#2a5a82}      /* 脚本 */
+  .tag.c{background:var(--accent-tint);color:var(--accent-deep)} /* Claude */
+  .node small{color:var(--muted)}
+  .lane.store .node{background:#fff}
+  .lane.store .node.ro{border-style:dashed}
+  .lane.store .node.v2{opacity:.6;border-style:dashed}
+  .archnote{margin-top:14px;font-size:13px;color:var(--muted);background:var(--surface);
+    border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px}
+  .archnote b{color:var(--ink)}
+
+  /* tables */
+  table{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface);min-width:560px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+    font-weight:600;background:var(--surface-2)}
+  td code{white-space:nowrap}
+  .tbl-wrap{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+
+  /* call flow */
+  .callflow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-top:18px}
+  .cf{flex:1 1 150px;background:var(--surface);border:1px solid var(--line);padding:15px 16px;
+    position:relative}
+  .cf:not(:last-child){border-right:0}
+  .cf:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+  .cf:last-child{border-radius:0 var(--radius) var(--radius) 0}
+  .cf .cfn{font-size:11px;color:var(--faint);font-family:var(--mono)}
+  .cf h4{margin:6px 0 4px;font-size:.92rem;font-weight:650}
+  .cf p{margin:0;font-size:12.5px;color:var(--muted)}
+
+  /* module map */
+  .domains{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .dom{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+  .dom>h4{margin:0 0 12px;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;display:flex;justify-content:space-between}
+  .dom>h4 span{color:var(--faint);font-weight:500}
+  .mod{padding:8px 0;border-top:1px solid var(--line-2)}
+  .mod:first-of-type{border-top:0}
+  .mod .mn{font-weight:600;font-size:14px}
+  .mod .ms{font-size:12px;color:var(--muted);margin-top:2px}
+
+  /* decisions */
+  .decs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .dec{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px}
+  .dec h4{margin:0 0 5px;font-size:.95rem;font-weight:650}
+  .dec h4 .d{font-family:var(--mono);font-size:11px;color:var(--accent);margin-right:8px}
+  .dec p{margin:0;font-size:13px;color:var(--muted)}
+
+  /* usage */
+  .cmd{background:#11201C;color:#cfe3dc;font-family:var(--mono);font-size:12.7px;
+    border-radius:var(--radius);padding:16px 18px;overflow-x:auto;line-height:1.85}
+  .cmd .c-com{color:#6f9c8c}
+  .cmd .c-key{color:#79c7b4}
+  .cmd b{color:#fff;font-weight:600}
+
+  /* status chips */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .chip{font-size:12.5px;padding:5px 11px;border-radius:20px;border:1px solid var(--line);
+    background:var(--surface)}
+  .chip.ok{border-color:#bfe0cb;background:#eef7f1;color:#226b41}
+  .chip.ok::before{content:"✓ ";color:var(--done)}
+  .chip.todo{border-color:#ecdcb9;background:var(--warn-tint);color:#7d5a14}
+  .chip.todo::before{content:"○ ";color:var(--warn)}
+
+  ul.tight{margin:10px 0;padding-left:20px}
+  ul.tight li{margin:6px 0;color:var(--muted)}
+  ul.tight li b{color:var(--ink);font-weight:600}
+
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:28px 0 60px;
+    color:var(--faint);font-size:12.5px}
+  footer code{background:none;color:var(--muted);padding:0}
+
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;gap:0;padding-top:28px}
+    .toc{position:static;margin-bottom:30px;border:1px solid var(--line);
+      border-radius:var(--radius);background:var(--surface);padding:14px 16px}
+    .toc ol{columns:2}
+    .domains,.decs{grid-template-columns:1fr}
+    .hero h1{font-size:1.9rem}
+  }
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="page">
+  <header class="hero">
+    <div class="wrap">
+      <div class="kicker">内部工具 · 项目总览</div>
+      <h1>QA 测试用例知识库</h1>
+      <p class="lede">把散落在飞书各版本里的产品需求文档,「编译」成结构化、可检索的本地笔记——让 QA 写测试用例之前,一把捞出相关往期功能、历史逻辑与该重点回归的点。</p>
+      <div class="stats">
+        <div class="stat"><div class="n">46</div><div class="l">已入库需求</div></div>
+        <div class="stat"><div class="n">24</div><div class="l">功能模块</div></div>
+        <div class="stat"><div class="n">V1.29–33</div><div class="l">版本覆盖</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">机械脚本</div></div>
+        <div class="stat"><div class="n">qa-knowledge-base</div><div class="l">全局 skill</div></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="目录">
+      <div class="tl">目录</div>
+      <ol>
+        <li><a href="#what">是什么 · 为什么</a></li>
+        <li><a href="#journey">设计历程</a></li>
+        <li><a href="#arch">架构:进 · 存 · 取</a></li>
+        <li><a href="#impl">实现:脚本与分工</a></li>
+        <li><a href="#call">调用逻辑</a></li>
+        <li><a href="#modules">模块地图</a></li>
+        <li><a href="#module-guide">模块功能手册</a></li>
+        <li><a href="#usage">使用方法</a></li>
+        <li><a href="#decisions">关键设计决策</a></li>
+        <li><a href="#status">现状与待办</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <!-- 1 -->
+      <section id="what">
+        <div class="ey">Why</div>
+        <h2>是什么 · 为什么</h2>
+        <div class="prose">
+          <p>QA 写新需求的测试用例时,有三个反复出现的痛点:往期相关需求<b>散在飞书几十个版本目录里、找不全</b>;老功能逻辑<b>时间一长就忘、容易漏测回归</b>;需求里的 UI 状态图、字段表<b>埋在图片/表格里,回翻成本高</b>。</p>
+          <p>这个项目解决 <code>读取产品文档 → 写测试用例</code> 的<b>前半段</b>:把飞书需求文档沉淀成知识库。写用例本身是下一阶段。</p>
+        </div>
+        <div class="principle">
+          <p style="margin:0">核心理念:<b>编译 &gt; 检索</b>。不在每次提问时现翻原始文档(RAG 式重复劳动),而是<b>一次性把需求编译成结构化笔记 + 索引</b>,之后直接读"炼好的成品"——又快又准,越用越厚。</p>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section id="journey">
+        <div class="ey">Process</div>
+        <h2>设计历程</h2>
+        <p class="sub">先想清楚再动手——前三步不写一行代码,只产出"给 AI 看的"设计文档;实现后持续养库,最终封装成可日常调用的 skill。</p>
+        <div class="tline">
+          <div class="tstep"><div class="tn done2">07</div><div><h4>产品思维 · 一页纸 MVP</h4><p>砍到只剩核心价值:终点定为「答得出/查得到」,对准写用例目的。产出 <code>docs/01-mvp.md</code>。</p></div></div>
+          <div class="tstep"><div class="tn done2">08</div><div><h4>架构思维 · 进存取</h4><p>倒推「取」→ 反推「存」与「进」,画出数据流。产出 <code>docs/02-architecture.md</code>。</p></div></div>
+          <div class="tstep"><div class="tn done2">09</div><div><h4>技术选型 · 轻量优先</h4><p>纯文件、Python 标准库、Claude 多模态、不上库。产出 <code>docs/03-tech-stack.md</code>。</p></div></div>
+          <div class="tstep"><div class="tn done2">10</div><div><h4>实现 · ingest + 检索</h4><p>探针验证飞书可读 → 4 个脚本 + SKILL 规则 → 真实文档跑通进/存/取。</p></div></div>
+          <div class="tstep"><div class="tn done2">+</div><div><h4>养库 · 46 篇 / 24 模块</h4><p>持续投喂真实需求,边用边加固:超大图、relate 误连、fetch 网络韧性。</p></div></div>
+          <div class="tstep"><div class="tn done2">★</div><div><h4>Skill 化 · 日常可调用</h4><p>装全局薄入口 <code>qa-knowledge-base</code>,新会话可从任意目录自然语言触发。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section id="arch">
+        <div class="ey">Architecture</div>
+        <h2>架构:进 · 存 · 取</h2>
+        <p class="sub"><span class="node" style="margin:0;padding:1px 7px"><span class="tag s">脚本</span></span> = 机械活(快、稳、省 token)　<span class="node" style="margin:0;padding:1px 7px"><span class="tag c">Claude</span></span> = 语义活(读懂、判断、读图)</p>
+        <div class="scroll">
+          <div class="arch">
+            <div class="lane">
+              <div class="lh">进 · Ingest</div>
+              <div class="ld">飞书链接 → 加工流水线</div>
+              <div class="node"><span class="tag s">脚本</span>抓取正文 + 表格 + 下全部图 <small>→ raw/</small></div>
+              <div class="node"><span class="tag c">Claude</span>读图转文字 <small>(UI 状态/流程/字段表)</small></div>
+              <div class="node"><span class="tag c">Claude</span>判断模块 + 提炼功能信息 <small>(逻辑/状态/边界/字段)</small></div>
+              <div class="node"><span class="tag s">脚本</span>落笔记 <small>notes/日期-模块-标题.md</small></div>
+              <div class="node"><span class="tag s">脚本</span>算关联 → 双向 related</div>
+              <div class="node"><span class="tag s">脚本</span>更新索引 INDEX.md</div>
+            </div>
+            <div class="lane store">
+              <div class="lh">存 · 四层</div>
+              <div class="ld">纯文件,生 → 熟</div>
+              <div class="node ro"><b>raw/</b> 原料层 <small>· 原文+表格+图,只读、永不改(事实来源)</small></div>
+              <div class="node"><b>notes/</b> 笔记层 <small>· 每篇一份 Markdown,frontmatter + 摘要 + 功能信息</small></div>
+              <div class="node"><b>index/</b> 索引层 <small>· INDEX.md,脚本生成、可一键重建</small></div>
+              <div class="node v2"><b>wiki/</b> 编译层 <small>· 模块主题页,v2 预留(空)</small></div>
+            </div>
+            <div class="lane">
+              <div class="lh">取 · 检索</div>
+              <div class="ld">写用例前,4 条流</div>
+              <div class="node"><span class="tag s">脚本</span>模块/关键词检索 <small>→ 相关往期需求列表</small></div>
+              <div class="node"><span class="tag c">Claude</span>模块历史问答 <small>→ 跨篇综合演进/边界/坑</small></div>
+              <div class="node"><span class="tag c">Claude</span>新需求关联 + 回归点 <small>→ 现算"新 ✕ 历史"交叉</small></div>
+              <div class="node"><span class="tag s">脚本</span>按版本列需求 <small>→ 本次迭代要测啥</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="archnote">
+          <b>两条隐线</b>　①<b>往回织</b>:每入一篇,旧笔记的 related 也回写指向它(关联级;编译级留 v2)。②<b>架构算两条</b>:能长大(分层留扩展口)+ 不会塌(原料只读、索引/笔记可由上层重建)。
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section id="impl">
+        <div class="ey">Implementation</div>
+        <h2>实现:脚本与分工</h2>
+        <p class="sub">机械活固化成 4 个 Python 脚本(标准库、零第三方依赖、带详细日志);语义活由 Claude 按 <code>SKILL.md</code> 规则当场做。</p>
+        <div class="tbl-wrap scroll">
+          <table>
+            <thead><tr><th>脚本</th><th>作用</th><th>关键点</th></tr></thead>
+            <tbody>
+              <tr><td><code>fetch.py</code></td><td>抓取飞书文档:正文 + 表格 + 下全部图 + 版本判定</td><td>超大图自动 <code>sips</code> 转 <code>.read</code> 副本(原图留底);原料层禁覆盖(<code>--force</code>);抓取/下图失败即非 0 退出;下图重试 3 次</td></tr>
+              <tr><td><code>relate.py</code></td><td>关联打分,双向写 <code>related</code></td><td>同模块 或 共享功能标识符;<b>排除</b>通用词、神策埋点公参、通用内容事件;<code>dry-run</code>/<code>--write</code>;幂等</td></tr>
+              <tr><td><code>build_index.py</code></td><td>扫 notes frontmatter → 重建 <code>INDEX.md</code></td><td>按 模块 → 版本 排序;derived、可一键重建</td></tr>
+              <tr><td><code>search.py</code></td><td>检索:关键词 / 模块 / 版本</td><td><code>关键词</code> · <code>--module</code> · <code>--version</code>,命中按相关度排序</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="minor">机械 vs 语义 的分工铁律</h3>
+        <ul class="tight">
+          <li><b>机械活归脚本</b>:抓取、下图、关联打分、生成索引、检索——快、稳、可复跑、省 token。</li>
+          <li><b>语义活归 Claude</b>:读图、判断模块归属、提炼功能信息、跨篇综合、现算回归点——只有"会理解"的模型干得了。</li>
+          <li>编排不写状态机:流程写在 <code>SKILL.md</code> 里当规则,Claude 读着执行。</li>
+        </ul>
+      </section>
+
+      <!-- 5 -->
+      <section id="call">
+        <div class="ey">Invocation</div>
+        <h2>调用逻辑</h2>
+        <p class="sub">全局薄入口让新会话能从任何目录找到并启动它;本体项目是流程与数据的唯一事实来源。</p>
+        <div class="scroll">
+          <div class="callflow">
+            <div class="cf"><div class="cfn">01</div><h4>新会话</h4><p>自然语言("把这篇飞书需求入库""写 X 用例前查往期")或 <code>Skill(qa-knowledge-base)</code></p></div>
+            <div class="cf"><div class="cfn">02</div><h4>全局入口</h4><p><code>~/.claude/skills/qa-knowledge-base/</code> / <code>~/.codex/skills/qa-knowledge-base/</code> 薄入口——只负责指路</p></div>
+            <div class="cf"><div class="cfn">03</div><h4>读本体</h4><p>跳到项目,读 <code>SKILL.md</code> / <code>RESUME.md</code> / <code>CLAUDE.md</code> / <code>AGENTS.md</code></p></div>
+            <div class="cf"><div class="cfn">04</div><h4>执行</h4><p>按本体规则跑 ingest 或检索;数据始终留在项目里</p></div>
+          </div>
+        </div>
+        <div class="archnote" style="margin-top:16px">
+          入口与本体职责分离:<b>入口</b>(全局、可发现、触发描述)只指路;<b>本体 SKILL.md</b>(项目内)是 ingest 5 步 + 检索 4 流的唯一事实来源;<b>CLAUDE.md / AGENTS.md</b> 带红线和项目规则;<b>RESUME.md</b> 记进度交接。
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section id="modules">
+        <div class="ey">Coverage</div>
+        <h2>模块地图 · 24 模块 / 46 篇</h2>
+        <p class="sub">taxonomy「边 ingest 边长」自然生长:新功能 → 新建一级模块,已有功能 → 归二级。下面按业务域归类。</p>
+        <div class="domains">
+          <div class="dom"><h4>学习核心 <span>7</span></h4>
+            <div class="mod"><div class="mn">挑战课与 Quiz</div><div class="ms">单元挑战课 · 每日 Quiz · Quiz 交互 · 题目后台管理</div></div>
+            <div class="mod"><div class="mn">课程加载</div><div class="ms">预加载 · 离线模式</div></div>
+            <div class="mod"><div class="mn">课程内容</div><div class="ms">Speaking 跟读课 · 课程图标与口语标记</div></div>
+            <div class="mod"><div class="mn">单词回顾</div><div class="ms">完课回顾弹窗</div></div>
+            <div class="mod"><div class="mn">Phonics</div><div class="ms">主菜单入口与推荐路径</div></div>
+            <div class="mod"><div class="mn">课程本地化</div><div class="ms">翻译开关引导</div></div>
+            <div class="mod"><div class="mn">游戏模板配置</div><div class="ms">单词资源字段</div></div>
+          </div>
+          <div class="dom"><h4>激励 · 留存 <span>4</span></h4>
+            <div class="mod"><div class="mn">奖励中心</div><div class="ms">虚拟形象装扮 · 商城购买 · 家园装扮 · 渗透率引导</div></div>
+            <div class="mod"><div class="mn">奖励系统</div><div class="ms">单元宝箱 · 次日返场 · Giggles 获取</div></div>
+            <div class="mod"><div class="mn">终身学员计划</div><div class="ms">试学认证 · AB 分流 · Push 通知</div></div>
+            <div class="mod"><div class="mn">排行榜</div><div class="ms">Top Learners 学习之星</div></div>
+          </div>
+          <div class="dom"><h4>用户引导 · 触达 <span>5</span></h4>
+            <div class="mod"><div class="mn">新用户引导</div><div class="ms">启动欢迎流程</div></div>
+            <div class="mod"><div class="mn">反馈与社区</div><div class="ms">反馈收集 · 社群引导 · 应用市场好评</div></div>
+            <div class="mod"><div class="mn">首页</div><div class="ms">布局结构 · 升级测试 · 弹窗优先级</div></div>
+            <div class="mod"><div class="mn">功能广场</div><div class="ms">入口矩阵与曝光 · Admin 配置 · 磨耳朵与睡前故事</div></div>
+            <div class="mod"><div class="mn">学习中心</div><div class="ms">课程介绍与级别进度</div></div>
+          </div>
+          <div class="dom"><h4>AI 能力 <span>2</span></h4>
+            <div class="mod"><div class="mn">AI Tutor</div><div class="ms">I spy 游戏 · Mai 主对话 · 单图对话多玩法</div></div>
+            <div class="mod"><div class="mn">语音识别</div><div class="ms">麦克风授权 · 降噪增益 · 录音组件模式 · 跟读组件改版</div></div>
+          </div>
+          <div class="dom"><h4>中台 · 基建 <span>4</span></h4>
+            <div class="mod"><div class="mn">数据埋点</div><div class="ms">神策全埋点 · 可视化圈选</div></div>
+            <div class="mod"><div class="mn">素材库</div><div class="ms">后台资源管理 · 课程配置选择器</div></div>
+            <div class="mod"><div class="mn">音频库</div><div class="ms">多语言音频中台 · 音色语气字典 · 游戏模板音频引用</div></div>
+            <div class="mod"><div class="mn">AB 实验平台</div><div class="ms">实验分流 · Layer 实验层 · 多分支与未命中</div></div>
+          </div>
+          <div class="dom"><h4>账号 · 官网 <span>2</span></h4>
+            <div class="mod"><div class="mn">账号与设置</div><div class="ms">孩子年龄 · 注册登录</div></div>
+            <div class="mod"><div class="mn">官网 SEO</div><div class="ms">SEO 页面与下载转化</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section id="module-guide">
+        <div class="ey">Module Guide</div>
+        <h2>模块功能手册</h2>
+        <p class="sub">这张表把 24 个一级模块压成"功能介绍 + 使用场景"。写用例前先看模块,再用 <code>search.py --module</code> 或关键词把相关笔记拉出来深读。</p>
+        <div class="tbl-wrap scroll">
+          <table style="min-width:980px">
+            <thead><tr><th>模块</th><th>已覆盖</th><th>功能介绍</th><th>写用例前怎么用</th></tr></thead>
+            <tbody>
+              <tr><td><b>奖励中心</b><br><code>5 篇</code></td><td>虚拟形象装扮、商城购买、家园装扮、渗透率引导</td><td>围绕新奖励中心 2.0 / 家园系统的用户资产展示、换装、商城消费、家园 H5 体验和二日引导。</td><td>查奖励中心、Avatar、家园、服装、Giggles 消耗、day2 引导时优先读;重点看资产发放、补发、入口、H5/APP 状态一致性。</td></tr>
+              <tr><td><b>奖励系统</b><br><code>2 篇</code></td><td>单元宝箱奖励、Giggles 获取</td><td>沉淀学习路径终点奖励、单元宝箱、Giggles 获取页和奖励入账逻辑。</td><td>查奖励金额、宝箱开启、奖励重复领取、Giggles 明细、奖励中心联动时使用。</td></tr>
+              <tr><td><b>终身学员计划</b><br><code>2 篇</code></td><td>试学认证流程、Push 通知</td><td>新用户 7 学习日转终身学员的留存增长方案,包含权益、AB、Push 触达和打卡节奏。</td><td>查首周留存、终身会员权益、Push 打卡、社区 banner、学习日统计时使用。</td></tr>
+              <tr><td><b>课程加载</b><br><code>2 篇</code></td><td>预加载、离线模式</td><td>解决课程进入速度和弱网/断网体验,定义下一课/下一 Part/每日首课资源预加载与离线弹窗。</td><td>查 loading、缓存、断网、预加载失败、离线可学内容时使用。</td></tr>
+              <tr><td><b>新用户引导</b><br><code>1 篇</code></td><td>启动欢迎流程</td><td>新人启动、欢迎、试玩和家长价值传递流程,解决家长陪伴场景下的产品理解问题。</td><td>查 onboarding、Hello 课入口、欢迎页、家长说明、首课引导时使用。</td></tr>
+              <tr><td><b>反馈与社区</b><br><code>2 篇</code></td><td>反馈收集、社群引导、应用市场好评</td><td>覆盖 App 内反馈/举报、后台处理、私域社群入口和应用市场好评引导。</td><td>查用户反馈链路、举报、社区入口、好评弹窗优先级与触发条件时使用。</td></tr>
+              <tr><td><b>挑战课与 Quiz</b><br><code>4 篇</code></td><td>单元挑战课、Quiz 交互、题目后台管理</td><td>沉淀 Quiz/挑战课从交互到后台题库的演进:沉浸式答题、点选即提交、手动出题、多技能标签。</td><td>查 Quiz 前后台、题型、技能标签、答题交互、挑战课回归时使用。</td></tr>
+              <tr><td><b>单词回顾</b><br><code>1 篇</code></td><td>完课回顾弹窗</td><td>课程/游戏完课后的单词集中回顾,包含图片、读音、跟读星级成就等。</td><td>查完课弹窗、单词复习、跟读后回顾、课程总结体验时使用。</td></tr>
+              <tr><td><b>数据埋点</b><br><code>1 篇</code></td><td>神策全埋点、可视化圈选</td><td>App 端自动采集页面浏览/停留/点击,并支持神策后台圈选埋点;Unity/H5 边界另有说明。</td><td>查埋点体系、自动采集范围、Unity 例外、圈选页面限制时使用。</td></tr>
+              <tr><td><b>素材库</b><br><code>1 篇</code></td><td>后台资源管理</td><td>后台 Material / Assets 模块,管理原画、动画、音频资源,支持文件夹、标签、路径和搜索。</td><td>查资源库、Spine、图片/音频素材、课程配置选择器、后台兼容时使用。</td></tr>
+              <tr><td><b>音频库</b><br><code>1 篇</code></td><td>多语言音频中台</td><td>Audio Library 中台,为单词/短句提供多语言音频,支持音色 × 语气变体和标准音。</td><td>查单词读音、多语言音频、音色语气字典、游戏模板音频引用时使用。</td></tr>
+              <tr><td><b>AB 实验平台</b><br><code>1 篇</code></td><td>实验分流机制、Layer、多分支、未命中处理</td><td>后台 AB/Feature Flag 体系本身的改造,从事件级标签转用户级公共属性,支持 Layer 和多分支。</td><td>查实验组稳定性、control/test 污染、not_in_experiment、运行中改规则时使用。</td></tr>
+              <tr><td><b>语音识别</b><br><code>4 篇</code></td><td>麦克风授权、降噪增益、录音模式、跟读组件</td><td>覆盖跟读链路:授权前提示、ASR 失败反馈、NS/AGC/VAD、卡片/场景模式和新跟读组件光波交互。</td><td>查麦克风权限、识别失败、噪声环境、跟读打星、录音组件复用时使用。</td></tr>
+              <tr><td><b>首页</b><br><code>2 篇</code></td><td>布局结构、弹窗优先级</td><td>首页布局 AB、右上聚合入口、地图信息展示、升级测试入口和多弹窗排队仲裁。</td><td>查首页入口冲突、弹窗优先级、功能广场入口、排行榜/奖励中心弹窗共存时使用。</td></tr>
+              <tr><td><b>学习中心</b><br><code>2 篇</code></td><td>课程介绍与级别进度</td><td>从"切换等级"升级为学习中心,承载课程介绍、级别/Unit 进度、奖励、给家长的话和欢迎邮件。</td><td>查级别切换、升级测试、课程介绍、家长价值传递、Level 奖励时使用。</td></tr>
+              <tr><td><b>课程内容</b><br><code>2 篇</code></td><td>Speaking 跟读课、课程图标与口语标记</td><td>课程侧具体内容规则:Colors Speaking 破冰课、课程图标容器裁剪、口语课程标记。</td><td>查具体课型、课程卡片展示、口语标签、Speaking 与语音识别差异时使用。</td></tr>
+              <tr><td><b>AI Tutor</b><br><code>3 篇</code></td><td>I spy、Mai 主对话、单图多玩法</td><td>AI 对话学习能力线:Live 对话、Mai 主界面、I Spy、多玩法单图对话、Memory 与单词记忆。</td><td>查 AI 场景、Prompt 切换、Memory、语音打断、游戏入口、单词本埋点时使用。</td></tr>
+              <tr><td><b>账号与设置</b><br><code>2 篇</code></td><td>孩子年龄、注册登录</td><td>处理孩子年龄脏数据、设置页修改年龄、游客/登录数据保持、上次登录方式和 token 续期。</td><td>查选课年龄、游客转登录、账号数据丢失、孩子档案与登录态时使用。</td></tr>
+              <tr><td><b>Phonics</b><br><code>1 篇</code></td><td>主菜单入口与推荐路径</td><td>Miniplan 改 Phonics AB,把 Lv5-Lv10 自然拼读课程抽成独立模块,含导航、推荐、状态和埋点。</td><td>查 Phonics 入口、Stage/Theme/Step、自由跳学、推荐卡、scene=phonics 时使用。</td></tr>
+              <tr><td><b>排行榜</b><br><code>2 篇</code></td><td>Top Learners 学习之星</td><td>周榜玩法:AB 分组、完课入榜、机器人、排名、点赞、结算奖励和规则说明文案。</td><td>查排行榜入口、周榜结算、机器人、Giggles 奖励、点赞、跨周边界时使用。</td></tr>
+              <tr><td><b>功能广场</b><br><code>2 篇</code></td><td>入口矩阵与曝光、Admin 配置、磨耳朵与睡前故事</td><td>首页右上聚合入口升级为 12 入口功能广场,包含真实模块、Soon 假门、曝光机制和 Admin 配置。</td><td>查 unionhub、Songs/Art/Worksheets、假门需求度量、聚合入口曝光时使用。</td></tr>
+              <tr><td><b>课程本地化</b><br><code>1 篇</code></td><td>翻译开关引导</td><td>课程内翻译开关的引导、状态持久化、按钮收起/展开与文案逻辑。</td><td>查翻译按钮、课程内本地化、弹窗冲突和状态记忆时使用。</td></tr>
+              <tr><td><b>游戏模板配置</b><br><code>1 篇</code></td><td>单词资源字段</td><td>课程游戏模板单词卡新增默认读音、特殊读音、音效等字段,自动从词库带出资源快照。</td><td>查 Target/Starting/Distractor Words、默认资源、特殊读音清空、存量课程兼容时使用。</td></tr>
+              <tr><td><b>官网 SEO</b><br><code>1 篇</code></td><td>SEO 页面与下载转化</td><td>Web 侧 SEO 2 期:故事书页加内容、专题聚合页、下载转化、富文本、闪卡/Worksheet 批量页。</td><td>查 Web SEO、Adjust 渠道、专题页 TDK、H5/PC 下载转化、PDF 水印时使用。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 8 -->
+      <section id="usage">
+        <div class="ey">Usage</div>
+        <h2>使用方法</h2>
+        <h3 class="minor">日常调用(新会话)</h3>
+        <p class="prose" style="margin-top:0;color:var(--muted)">用自然语言即可触发 <code>qa-knowledge-base</code>;它会自动跳到项目、按本体规则执行。已打开的旧会话不一定会刷新新装 skill,必要时开新会话。</p>
+        <div class="cmd"><span class="c-com"># 录入一篇(给「版本 + 飞书链接」)</span><br>把这篇飞书需求入库:<b>V1.31.0 https://…/wiki/&lt;token&gt;</b><br><br><span class="c-com"># 写用例前调研</span><br>写「奖励中心」用例前,帮我查往期相关需求 + 该重点回归的点</div>
+        <h3 class="minor">脚本命令(在项目目录内)</h3>
+        <div class="cmd"><span class="c-com"># ① 录入:抓取 → (读图/提炼) → 关联 → 索引</span><br><span class="c-key">python3</span> scripts/fetch.py <b>"&lt;飞书链接&gt;" &lt;版本&gt;</b><br><span class="c-key">python3</span> scripts/relate.py --write<br><span class="c-key">python3</span> scripts/build_index.py<br><br><span class="c-com"># ② 检索三式</span><br><span class="c-key">python3</span> scripts/search.py <b>宝箱</b><br><span class="c-key">python3</span> scripts/search.py <b>--module</b> 奖励<br><span class="c-key">python3</span> scripts/search.py <b>--version</b> V1.31</div>
+        <ul class="tight">
+          <li><b>版本来源</b>:你给「版本 + 链接」时用你的(权威);没给才从文档提取,冲突标"待确认"。</li>
+          <li><b>读图智能读</b>:≤6 张全读;&gt;6 张只读关键图;超大图读 <code>.read</code> 缩放副本。</li>
+          <li><b>fetch 调用纪律</b>:输出大时不要接 <code>| tail</code> / <code>| grep</code>;重定向到文件再看。图多文档单独跑并给足 timeout。</li>
+          <li><b>凭证</b>:脚本自动从公司 config 拉取(需 VPN)。</li>
+        </ul>
+      </section>
+
+      <!-- 9 -->
+      <section id="decisions">
+        <div class="ey">Decisions</div>
+        <h2>关键设计决策</h2>
+        <div class="decs">
+          <div class="dec"><h4><span class="d">01</span>编译 &gt; 检索</h4><p>一次性编译成结构化笔记 + 索引,永久复用;不做 RAG 式每次现翻。</p></div>
+          <div class="dec"><h4><span class="d">02</span>纯文件化</h4><p>状态全在磁盘,不依赖对话记忆——换会话零损失,这是文件化的回报。</p></div>
+          <div class="dec"><h4><span class="d">03</span>不上库</h4><p>不上数据库 / 向量库 / RAG / 服务器。Markdown + 几个脚本,简单即稳定。</p></div>
+          <div class="dec"><h4><span class="d">04</span>分类只靠模块</h4><p>taxonomy 边长(新功能新建一级、已有归二级);不设通用类型标签(通用词无区分度)。</p></div>
+          <div class="dec"><h4><span class="d">05</span>关联防误连</h4><p>related 只看 同模块 或 共享功能标识符;排除通用词 + 埋点公参(<code>level_number</code> 等)。</p></div>
+          <div class="dec"><h4><span class="d">06</span>原料只读</h4><p>raw 永不覆盖(事实来源);笔记/索引可由上层一键重建,错了能回退。</p></div>
+          <div class="dec"><h4><span class="d">07</span>边界克制</h4><p>只收飞书需求文档;<b>不直接生成测试用例</b>——那是知识库建好后的下一阶段。</p></div>
+          <div class="dec"><h4><span class="d">08</span>关键词检索兜底</h4><p>关联偶有漏连,但取③ 实测确认:关键词检索能把漏连的也拉出来,兜底成立。</p></div>
+        </div>
+      </section>
+
+      <!-- 10 -->
+      <section id="status">
+        <div class="ey">Status</div>
+        <h2>现状与待办</h2>
+        <h3 class="minor" style="margin-top:6px">已完成并验证</h3>
+        <div class="chips">
+          <span class="chip ok">设计三件套(MVP/架构/选型)</span>
+          <span class="chip ok">ingest 全流程</span>
+          <span class="chip ok">检索 4 条流</span>
+          <span class="chip ok">46 篇 / 24 模块养库</span>
+          <span class="chip ok">取③ 新需求→回归点 实测</span>
+          <span class="chip ok">批量 ingest</span>
+          <span class="chip ok">版本冲突确认(0 待确认)</span>
+          <span class="chip ok">fetch 加固(超大图/禁覆盖/重试)</span>
+          <span class="chip ok">relate 防误连(公参/平台词)</span>
+          <span class="chip ok">全局 skill qa-knowledge-base</span>
+        </div>
+        <h3 class="minor">待办 backlog</h3>
+        <div class="chips">
+          <span class="chip todo">relate 漏连优化(低优,关键词已兜底)</span>
+          <span class="chip todo">飞书 wiki 空间授权(为批量 ingest)</span>
+          <span class="chip todo">下一阶段:用库辅助"写测试用例"</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      项目根 <code>/Users/dong/.codex/skills/qa-knowledge-base/</code> · 全局入口 <code>~/.claude/skills/qa-knowledge-base/</code> / <code>~/.codex/skills/qa-knowledge-base/</code><br>
+      本页为阶段性总览(截至 2026-07-01)。规则细节见项目 <code>SKILL.md</code>,进度见 <code>RESUME.md</code>,设计追溯见 <code>docs/</code>。
+    </div>
+  </footer>
+</div>

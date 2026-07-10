@@ -1,0 +1,988 @@
+SEO2期需求：提高故事书页质量，批量打造闪卡页面、专题聚合页和下载转化设计
+需求背景
+1、SEO1期需求上线2-3个月后，目前Giggle官网数据和情况，流量（目前日均UV在6000左右）主要是Blog详情页拿的长尾词，而且已经有很多详情页，故需要打造专题聚合页，去拿优质的大词流量，同时故事书页面有收录，但是质量太低，需要再次加内容提高页面质量。同时也会再扩充Worksheets（练习册）等关键词和内容。
+2、Giggle网站转化太少，每天只有7-8个下载安装，转化率也太低，目前只有0.1%；手机移动端流量占比70%，而且很容易从手机浏览器引导到APP（比PC更容易引导）
+
+
+类型
+
+结果说明
+
+相关结果数据截图
+
+索引量
+
+
+
+image.png
+
+
+image.png
+
+截止5.12日网站收录索引量从3月份的896，提升到约19.3万，增长215倍。
+数据来源：谷歌站长平台
+
+
+image.png
+
+
+关键词
+
+
+
+image.png
+
+
+image.png
+
+截止5.12日：关键词总数从3月的3600多提升到6万，增长16.7倍；
+Top3的关键词从3月的103个提升到681，增长6倍。
+数据来源：SEMrush
+
+
+image.png
+
+
+
+流量UV
+
+
+
+image.png
+
+
+image.png
+
+截止5.12日 Giggle官网每日UV（独立访客）从3月份的约180提升到6023，提升约33倍。
+数据来源：网站谷歌分析
+
+
+image.png
+
+
+
+下载转化
+
+下载之前未埋点归因不知道，接入Adjust后
+每天新增约7个下载，转化率0.1%。
+数据来源：神策看板（Adjsut数据已导入到神策）
+
+
+image.png
+
+
+
+带来流量的页面
+
+拉取最近1个月URL，可以看出单页面流量多的类型页面为：
+
+首页 > Blog儿童故事类>Blog及子栏目页>Blog闪卡内容>Blog家长教育类>Blog儿歌类>Blog英语语法学习>其他页面
+（数据来源：网站谷歌分析）
+
+
+image.png
+
+
+闪卡页面之前爬取后或APP的80多个闪卡导出后，再AI扩写再发布新增300篇，对应结果闪卡关键词和流量都增加了，故需要批量增加闪卡内容。
+
+
+闪卡内容
+
+相关描述
+
+相关截图1
+
+相关截图2
+
+5月中旬新增300个闪卡内容
+
+
+Semrush上闪卡相关的关键词都有正向增长
+
+
+image.png
+
+
+
+image.png
+
+
+
+
+
+GA分析上url包含闪卡的内容都比之前有5-6倍的增长。
+1、截图1，5.24-5.31，闪卡页面uv为2674。
+2、截图2，5.3-5.10，闪卡页面uv为440。
+
+
+image.png
+
+
+
+image.png
+
+
+
+3、预期目标：
+2期需求上线后3-4个月后，每日的UV流量从6000增长到20000+，下载转化率从0.1%提升到1%（网站转化下载每日带来200+）
+需求List
+
+
+序列
+
+需求概述
+
+目的或原因
+
+优先级
+
+1
+
+提高故事书页面质量，页面加内容
+
+
+故事书页面很多被收录，但是质量差关键词没有排名，故需要提高质量
+
+1
+
+2
+
+批量打造专题聚合页生成（前端页面+后台支持批量上传）
+
+去拿更多中大词，行业词的流量；对现有页面再次利用，增加海量内链；提高用户访问深度
+
+1
+
+3
+
+网站转化下载设计和引导（重点H5，PC少量）
+
+提高网站到APP下载的转化率
+
+1
+
+4
+
+后台单篇上传支持富文本编辑（支持加内链加图片，支持视频上传或Youtube链接等音视频）
+
+重点文章手动处理；图文+视频+音频 文章测试和生产
+
+
+2
+
+5
+
+批量生成1万+英语各类型闪卡页面（有PDF支持下载）
+
+去拿各类闪卡和各类应用单词下载，PDF等 的关键词流量
+
+2
+
+6
+
+批量爬取 Worksheet（练习册）PDF-去除logo换成Giggle
+Blog学习资源子栏目新增1个目录/worksheets
+
+去拿各类Worksheet等下载，PDF等的关键词流量
+
+
+2
+
+具体需求
+
+对应设计图：https://www.figma.com/design/JVQk31yFpzPZQOcLDLLRAs/1.33.0?node-id=39382-5001&t=BlRUwt6BIkkSZse4-4
+
+1、提高故事书页面质量，页面加内容
+
+故事书案例页面：https://giggleacademy.com/story/detail/800272044377925
+
+
+页面板块
+
+需求说明
+
+示意图
+
+备注说明
+
+首屏-故事详情-上方
+
+加一个板块，直接放故事的图片，可以翻页（如果无法实现，可以只放第一页包含多少页码，用户点击去播放页）
+最开始只加载第一张图，用户翻下一页再加载
+用户只能看前5页，第6页 提示去APP看完整版故事。
+
+
+image.png
+
+
+
+
+
+首屏-故事详情
+
+
+Pc和h5只显示前4行，多余隐藏，提示:完整版去APP观看，
+
+
+image.png
+
+
+
+
+
+中间-故事详情下方
+
+新加 一个板块，故事解读
+内容拿标题和故事详情，取AI批量扩写，
+对应AI话术：
+如果你是儿童故事网站的SEO，请根据这个故事的名“xxx”和故事详情“xxxx”，再写约1000字的英文的故事解读，内容包括，故事大概意思，孩子或学生能学习到哪些知识或常识，以及读后感。再给一些针对性的阅读理解考题或练习题，并给出对应答案。如果故事详情为空或没有，请先给一个符合该故事名“xxx”的故事。
+其他语言直接英语去翻译。
+
+image.png
+
+
+
+
+
+底部--猜你喜欢 下方
+
+再新加一个板块：相关Blog
+数据取 该“故事名” 再Blog系统（包含学习资料和Blog文章）里面的搜索结果，取前12个（3排，每一排4个，可轮播，设计定），如果没有匹配的取最新的学习资源-故事书内容。
+相关定义：Blog系统（包含学习资料和Blog文章）中标题、关键词、简介前300字 包含匹配。
+单个数据元素：封面，标题，简介。（标题加a标签跳转，封面加alt标签，简介为正文前200字，多余...）
+
+image.png
+
+
+
+
+
+2、批量打造专题聚合页生成（前端页面+后台支持批量上传）
+
+
+
+类型
+
+需求说明
+
+原型或示意图或案例
+
+URL
+
+
+1、列表页：/topic
+2、专题详情页：/topic/专题英文小写字母，空格和符号用-
+
+
+url案例：
+https://giggleacademy.com/topic
+Bedtime Stories 的专题页URL
+https://giggleacademy.com/topic/bedtime-stories
+
+TDK标签
+
+1、专题列表页
+<title>Children's Stories, Nursery Rhymes, Flashcards, Blog special pages - Giggle Academy Topic</title>
+<meta name="keywords" content="Giggle Academy Topic,Children's Stories, Nursery Rhymes, Flashcards, Blog special pages"/>
+<meta name="description" content="Welcome to the Giggle Academy's topic pages! Here you'll find many topic pages that children and students love, including children's stories, nursery rhymes, poems, English flashcards, literary works, blog articles, and knowledge, making it easy for you to find the learning materials and high-quality content you want."/>
+2、专题详情页
+<title>对应topic专题名称 - Giggle Academy Topic</title>
+<meta name="description" content="This is a special page for "对应topic专题名称", which brings together children's stories, nursery rhymes, poems, English flashcards, blog posts, literary works and other content related to "对应topic专题名称".再取该专题描述前300个字结尾用..."/>
+<meta name="keywords" content="对应topic专题名称"/>
+
+* 对应多语言标签同其他内容页面。
+
+image.png
+
+
+
+前端页面-列表页
+
+专题名称：Explore All Topics
+简单说明：以设计图为准。
+搜索框：支持用户在搜索专题
+搜索热词：不埋点单独计算，只是快捷入口，目前写死。先放这几个：
+Grimm's Fairy Tales, 
+Andersen's Fairy Tales, 
+One Thousand and One Nights, 
+Bedtime Stories, 
+Stories of Famous People, 
+Relative Clauses
+
+列表展示，同/blog 列表页
+单个元素：封面，专题名称，专题简介
+入口：所有页面底部 左侧“博客，搜索”，下方增加 Topic入口。点击后a链接跳转到对应列表页。
+
+image.png
+
+
+
+image.png
+
+
+
+前端页面-专题详情页
+
+
+从上到下，从左到右板块说明：
+面包屑： Topic > 具体专题名称 ，点击后支持a链接跳转
+专题封面：尺寸设计定，代码加alt，内容为具体专题名称。数据AI根据专题名称自动生成图。
+专题名称：具体专题名称，加h1标签
+专题一句话简介：数据取运营表格导入数据。
+6个元素说明：具体元素和内容，数据取运营表格导入数据给到。不足有几个显示几个（包含类型，作者，语言等等）。
+里面的类型就是 设计图的 category
+简介说明：pc最多展示6行，h5最多展示3行，多余 需要点击“查看全部”折叠，折叠后 后“收起”按钮。
+广告位：一张图，点击后取下载APP
+相关故事书：数据取“该专题名称”在故事书（story）搜索结果前30个结果，pc每排5个，h5左图右字一行一个，10个一轮播设计定（源代码DIV+CSS展示出来），后续用户点击 刷新（最多拉取3次，共120条数据，源代码里面DIV+CSS显示）。单个元素包括：封面，标题，简介，作者。
+相关学习资源：默认tab是学习资源（资源内容多）数据取“该专题名称”在学习资料（storybooks，songs，grammar，flashcards）搜索结果前30个结果，pc每排5个，h5左图右字一行一个，可轮播设计定（源代码DIV+CSS展示出来），后续用户下拉加载（最多拉取3次，共120条数据）。单个元素包括：封面，标题，简介，作者。
+相关Blog文章：数据取“该专题名称”在Blog文章（blog）搜索结果前30个结果，pc每排5个，h5左图右字一行一个，可轮播设计定（源代码DIV+CSS展示出来），后续用户点击 刷新（最多拉取3次，共120条数据）。单个元素包括：封面，标题，简介，作者。
+“专题名称”相关的其他专题：数据取“该专题名称”在专题的搜索结果前10个结果或同类型的其他专题（源代码DIV+CSS展示出来），或取6个元素中类型的其他专题名称。单个元素包括：封面，标题，简介说明，类型。
+通用底部。
+【注意】
+seo关于相关性内容检索，用的多的是Elasticsearch，现在ai的推荐方案是Elasticsearch + Vector或者OpenSearch + Vecto。需要技术看下能实现哪个。
+
+
+image.png
+
+
+后台
+
+支持后台上传，支持批量表格上传，
+同Blog文章批量上传。
+对应字段与前端展示一致。
+
+
+b3265fdbf4926e1276a25b3e2feb6a5d_720.png
+
+
+
+
+3、网站转化下载设计和引导（重点H5，因为H5流量是PC端2-3倍）
+3.1 H5页面的转化下载
+
+以下下载需要技术埋点（页面浏览量，点击埋点，下载取有adjust的二级下载渠道标识，下方对应分别给出来，需技术一一对应替换下载链接和二维码，方便后续归因分析和优化）
+下载的文案 以实际设计图里面的为准（因为排版等精简过）。
+
+
+页面
+
+板块位置及转化引导设计说明
+
+原型或示意图
+
+案例URL
+
+所有页面
+✅
+
+1、导航移到左侧，右侧增加 转化按钮，
+按钮文案中文：打开APP
+英文：Open APP
+点击按钮时加Deeplink，如果APP有对应页面，下载后直接跳转到对应页面，如果没有跳到首页。
+2、悬浮按钮，增加呼吸状态
+点击按钮时加Deeplink，如果APP有对应页面，下载后直接跳转到对应页面，如果没有跳到首页。
+3、对应Adjust下载链接分别是：
+（1）所有页面-顶部-打开app
+adjust渠道名称：h5_ all_page_top
+渠道下载地址：https://app.adjust.com/211jfke3
+（http://localhost:3000/blog/zh-Hans/123321
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+所有页面
+✅
+
+单个用户当日24小时内，再首个页面停留或访问时长超过10S，则弹窗提示去下载APP。有关闭按钮，点击可以关闭。（下载的文案 以实际设计图里面的为准，因为排版等精简过。下同）
+首页 对应文案：快去和CZ一起在咯咯学院学习英语吧！去APP免费领终身会员。
+其他页面对应文案：快去和50万全球孩子们一起学习英语吧！去APP免费领终身会员
+点击按钮时加Deeplink，如果APP有对应页面直接跳转到对应页面，如果没有跳到首页。
+网站过去的用户，都有能看到终身会员的领取入口。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_h5_ all_page_10-second_pop-up_window
+（2）渠道下载地址：
+https://app.adjust.com/21diguoz
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+
+所有页面
+✅
+
+所有页面公共底部上方加一个 学习英语目标和期望 版本，用户点击后弹窗提示：Giggle APP都可以满足你的目标和期望，立即和全球50万儿童一起体验！
+对应文案：
+在孩子的英文学习方面，您有什么期望或目标吗？（可多选）
+开拓升学/职业前景
+了解欧美文化
+全面提升听读写能力
+培养英语学习的兴趣爱好
+能用英文与他人日常简单交流
+备考小学外语学习考试
+简单看懂英语电视或会唱英语歌
+下一步
+快去和50万全球孩子们一起学习英语吧!去APP免费领终身会员吧!
+Giggle APP可以满足您孩子学习英语的所有目标和期望，快来体验吧！
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_h5_ all_page_expectations_and _goals
+（2）渠道下载地址：https://app.adjust.com/21r1qa2f
+
+
+image.png
+
+
+点击下一步有弹窗提示下载APP：
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+所有详情页（Blog详情页，学习资料页）
+✅
+
+横幅广告 广告语更换：
+中文：去Giggle 学院 APP免费领限量终身学英语会员！
+英文：Claim your free, limited-time lifetime English learning membership on the Giggle Academy APP!
+其他语言用英语为底版做自动翻译。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_h5_ blog_article_banner
+（2）渠道下载地址：
+https://app.adjust.com/215pp045
+
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+
+所有详情页（Blog详情页，学习资料页）
+✅
+
+文章结尾的下载文案更换：
+中文：快来和全球超过50万孩子一起在Giggle免费学英语吧！
+英文：Join over 500,000 kids worldwide to learn English for free on Giggle!
+其他语言用英语为底版做自动翻译。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_h5_ blog_end_of_article
+（2）渠道下载地址：
+https://app.adjust.com/21qbk48u
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+故事书详情页
+✅
+
+1、顶部增加悬浮按钮，
+文案英文：Open APP
+中文：手机版，其他语言拿英文自动翻译。 
+点击按钮时加Deeplink，如果APP有对应页面，下载后直接跳转到对应页面，如果没有跳到首页。
+2、图片和标题 整体向上移动，标题下增加3个功能转化按钮（不是功能，只是下载APP的转化钩子）
+中文文案：高清播放，跟读，收藏
+点击后，有弹窗转化弹窗
+弹窗上方文案中文：快来和全球超过50万孩子一起在Giggle免费学英语吧！
+弹窗上方文案英文：Join over 500,000 kids worldwide to learn English for free on Giggle!
+弹窗下方文案中文：高清播放等高级功能请去APP体验！
+弹窗下方文案英文：For advanced features such as HD playback, please visit the app!
+3、按钮“Play On APP”增加呼吸状态
+4、对应Adjust下载链接
+（1）顶部 打开app
+渠道名称：Giggle Official Website_h5_ story_open_app
+下载地址：https://app.adjust.com/21y5fm24
+
+（2）高级功能--对应弹窗
+渠道名称：Giggle Official Website_h5_ story_Advanced Features Pop-up
+下载地址：
+https://app.adjust.com/21e88wbm
+（3）在APP上播放
+渠道名称：Giggle Official Website_h5_ story_Play on APP
+下载地址：https://app.adjust.com/21slwj3s
+
+
+
+image.png
+
+点击“高清播放，下载，手机听”弹除弹窗：
+image.png
+
+
+
+https://giggleacademy.com/zh-Hans/story/detail/792485756965894?language=en
+
+
+故事书播放页
+
+故事书打开后，播放器在加载中，出现弹窗
+弹窗文案中文：网站速度慢，请去APP快速极致体验！全球50万儿童正在免费学英语中！
+文案英文：If the website is slow, please use the app for a faster and smoother experience! 500,000 children worldwide are learning English for free!
+其他语言拿英文自动翻译。
+用户扫码和点击商店链接自动去应用商店下载APP。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_h5_ story_Play loading
+（2）渠道下载地址：
+https://app.adjust.com/219myi7u
+
+image.png
+
+
+
+https://creator.giggleacademy.com/read/792485756965894?isAuto=false&isBlankWindow=true&language=en
+
+备注说明：技术评估，这个是故事书那个项目了，而且很难实现，会影响故事书Creator平台，故先拿掉。
+
+3.2 PC页面的转化下载
+（下载的文案 以实际设计图里面的为准，因为排版等精简过。下同）
+
+
+页面
+
+板块位置及转化引导设计说明
+
+原型或示意图
+
+案例URL
+
+所有页面
+✅
+
+1、单个用户当日24小时内，再首个页面停留或访问时长超过10S，则弹窗提示扫码去下载APP。有关闭按钮，点击可以关闭。
+首页 对应文案：快去和CZ一起在咯咯学院学习英语吧！去APP免费领终身会员
+其他页面对应文案：快去和50万全球孩子们一起学习英语吧！去APP免费领终身会员
+点击按钮时加Deeplink，如果APP有对应页面直接跳转到对应页面，如果没有跳到首页。
+网站过去的用户，都有能看到终身会员的领取入口。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_pc_ all_page_10-second_pop-up_window
+（2）渠道下载地址：https://app.adjust.com/21ddgjar
+（3）对应下载二维码
+10-second_pop-up_window.png
+
+2、所有页面公共底部也加一下下载二维码,具体样式设计定，渠道下载地址也换掉。
+* 对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_pc_ all_page_download_at_the_bottom
+（2）渠道下载地址：https://app.adjust.com/21ikcoxd
+（3）对应下载二维码
+
+download_at_the_bottom.png
+
+
+
+image.png
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+
+所有页面
+✅
+
+所有页面公共底部上方加一个 学习英语目标和期望 版本，用户点击后弹窗提示：Giggle APP都可以满足你的目标和期望，立即和全球50万儿童一起体验！
+对应文案：
+在孩子的英文学习方面，您有什么期望或目标吗？（可多选）
+开拓升学/职业前景
+了解欧美文化
+全面提升听读写能力
+培养英语学习的兴趣爱好
+能用英文与他人日常简单交流
+备考小学外语学习考试
+简单看懂英语电视或会唱英语歌
+下一步
+快去和50万全球孩子们一起学习英语吧!去APP免费领终身会员吧!
+Giggle APP可以满足您孩子学习英语的所有目标和期望，快来体验吧！
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_pc_ all_page_expectations_and _goals
+（2）渠道下载地址：https://app.adjust.com/21ymly3w
+（3）对应二维码下载：
+expectations_and _goals.png
+
+
+
+image.png
+
+点击下一步有弹窗提示下载APP：
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+
+
+所有详情页
+✅
+
+右侧上方增加 二维码下载，扫码后直接去商店下载（Adjust归因，下同）
+转化文案更换：
+中文：快来和全球超过50万孩子一起在Giggle免费学英语吧！
+英文：Join over 500,000 kids worldwide to learn English for free on Giggle!
+其他语言用英语为底版做自动翻译。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_pc_ blog_Download on the upper right
+（2）渠道下载地址：https://app.adjust.com/218s1wdl
+（3）对应下载二维码
+Download on the upper right.png
+
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+所有详情页（Blog详情页，学习资料页）
+✅
+
+正文广告横幅，增加 二维码下载。
+横幅广告 广告语更换：
+中文：去Giggle 学院 APP免费领限量终身学英语会员！
+英文：Claim your free, limited-time lifetime English learning membership on the Giggle Academy APP!
+其他语言用英语为底版做自动翻译。
+对应Adjust下载链接
+（1）渠道名称：Giggle Official Website_pc_ blog_article_banner
+（2）渠道下载地址：https://app.adjust.com/216rx4a2
+（3）对应下载二维码
+article_banner.png
+
+
+
+image.png
+
+
+
+https://giggleacademy.com/blog/learning/flashcards/vegetables-flashcards-for-kids-free-printable-pdf
+
+所有详情页
+✅
+
+1、右上增加悬浮按钮，文案：手机版，点击后出现 样式5的 弹窗。
+2-4、新增转化按钮（不是功能，只是下载APP的转化钩子）
+分别为：高清播放，跟读，收藏
+点击后出现5弹窗。
+
+5、点击转化后弹窗按钮，
+上方文案中文：快来和全球超过50万孩子一起在Giggle免费学英语吧！
+上方文案英文：Join over 500,000 kids worldwide to learn English for free on Giggle!
+下方文案中文：高清播放等高级功能请去APP体验！
+下方文案英文：For advanced features such as HD playback, please visit the app!
+扫码和点击下载 直接下载或取对应应用商
+店。
+6、对应Adjust下载链接
+（1）顶部 打开app
+渠道名称：Giggle Official Website_pc_ story_mobile_version
+下载地址：https://app.adjust.com/21v9h6kk
+对应二维码：
+
+mobile_version.png
+
+（2）高级功能--对应弹窗
+渠道名称：pc_ story_Advanced Features Pop-up
+下载地址：https://app.adjust.com/21bi848o
+对应二维码：
+
+Advanced Features Pop-up.png
+
+
+
+image.png
+
+
+
+https://giggleacademy.com/zh-Hans/story/detail/792485756965894?language=en
+
+
+故事书播放页
+
+故事书打开后，播放器在加载中，出现弹窗
+弹窗文案中文：网站速度慢，请去APP快速极致体验！全球50万儿童正在免费学英语中！
+文案英文：If the website is slow, please use the app for a faster and smoother experience! 500,000 children worldwide are learning English for free!
+其他语言拿英文自动翻译。
+点击商店链接自动去应用商店下载APP。
+对应Adjust下载链接
+（1）渠道名称：pc_ story_Play loading
+（2）渠道下载地址：https://app.adjust.com/216kzbzi
+  (3)下载二维码：
+
+Play loading.png
+
+
+
+image.png
+
+
+
+https://creator.giggleacademy.com/read/792485756965894?isAuto=false&isBlankWindow=true&language=en
+
+备注说明：技术评估，这个是故事书那个项目了，而且很难实现，会影响故事书Creator平台，故先拿掉。
+
+4、后台单篇上传支持富文本编辑（支持加内链加图片，支持视频上传或Youtube链接等音视频）
+
+后台单篇文章加个富文本编辑器，具体看技术方便咋实现。
+
+5、批量生成英语各类型闪卡页面（有PDF支持下载）
+
+5.1 需要技术借助AI给出至少10000+类型的单词闪卡归类的PDF，并把 表格给出
+表格的包含 对应PDF的下载地址，和对应的关键词清单，以及对应的一段文字说明。
+
+image.png
+
+案例表格CSV如：
+ 
+flashcards自己的闪卡内容修改后.csv
+5.2 具体至少10000+类型的单词闪卡归类
+可以让AI给出来，如7大洲国家闪卡（亚洲国家名闪卡，非洲国家名闪卡。。。）；各类型动物、植物、微生物、水果、食物的闪卡；各天文地理数学化学生物的闪卡；各英语语法知识点；各球类各体育项目等闪卡；衣食住行的物品或用具等闪卡；各学科相关闪卡；各个环境和场所类单词闪卡等等...
+原则是：把小朋友1-15岁的要学习的英语单词，按照可以理解的类型给分类，给排列组合 方便孩子们学习和理解。
+我这边列举了其中一部分（约700个） 可做参考：
+英语单词闪卡类型汇总0601
+image.png
+
+闪卡生成PDF后右上角新增二维码渠道下载
+
+
+类型
+
+说明或文案
+
+对应截图或图片
+
+二维码渠道下载
+
+渠道名称：Giggle Official Website_pdf_download_flashcards_pdf
+
+
+
+二维码图片：
+
+flashcards_pdf.png
+
+
+
+二维码文字说明
+
+具体字体和样式问 Darren
+对应文案(换了一批领会员的文案)：
+Scan the QR code to download the Giggle APP and receive a limited-edition lifetime membership to English learning!
+
+
+对应样式截图
+image.png
+
+
+
+6、批量爬取 Worksheet（练习册）PDF-去除logo换成Giggle
+Blog学习资源子栏目新增1个目录/worksheets
+6.1 Blog学习资源子栏目新增1个目录/worksheets
+
+
+类型
+
+需求说明
+
+相关截图
+
+前后端
+
+Blog学习资源子栏目新增1个目录/worksheets
+对应列表页url：https://giggleacademy.com/blog/learning/worksheets
+列表页页面面直接复用Blog列表页现有模版
+参考url：https://giggleacademy.com/blog/learning/flashcards
+对应详情页url：
+https://giggleacademy.com/blog/learning/worksheets/xxxxxxx
+详情页页面直接复用Blog详情页现有模版
+参考url:https://giggleacademy.com/blog/learning/flashcards/english-word-flashcards-starting-with-z-for-kids-free-printable-pdf
+后端后台批量上传，分类字段新增Worksheets
+
+image.png
+
+
+
+学习资源列表页加入口
+
+学习资源列表页 底部新增 worksheets 文章，样式同上
+对应url:https://giggleacademy.com/blog/learning
+
+
+image.png
+
+
+
+所有页面底部新增入口
+
+所有页面底部，Flashcards 下方新增 Worksheets，点击后a链接跳转到对应列表页。
+
+
+image.png
+
+
+6.2 批量爬取 Worksheet（练习册）PDF-去除logo换成Giggle
+（1）对应爬取的网站（https://www.k5learning.com/free-worksheets-for-kids）详见：
+批量爬取网站及字段清单0225
+image.png
+
+（2）爬取后 需要对pdf跟之前爬闪卡内容一样进行处理
+原logo去除，换成 Giggle的
+右上角新增 下载Giggle app的二维码和说明。
+
+
+类型说明
+
+说明
+
+相关截图
+
+具体爬取内容
+
+对应案例url：
+https://www.k5learning.com/free-preschool-kindergarten-worksheets/numbers/numbers-1-10
+需要爬取：
+1、面包屑
+2、标题
+3、简介
+4、PDF（需要换logo和加二维码）
+
+
+image.png
+
+
+对应二维码
+
+Adjust渠道名：Giggle Official Website_pdf_download_worksheets_pdf
+对应渠道下载：https://app.adjust.com/21r2d7pe
+
+对应二维码：
+worksheets_pdf.png
+
+
+
+排名样式
+
+具体字体和样式问 Darren
+对应文案(换了一批领会员的文案)：
+Scan the QR code to download the Giggle APP and receive a limited-edition lifetime membership to English learning!
+
+image.png
+
+
+
+附注：专题topic 固定分类24个
+
+
+
+分类名称 英文
+
+分类名称 中文
+
+Classic Fairy Tales
+
+经典童话故事
+
+Animal Stories
+
+动物故事
+
+Science for Kids
+
+少儿科学
+
+Holidays & Festivals
+
+节日与庆典
+
+Nature & Outdoors
+
+自然与户外
+
+Children's Stories
+
+儿童故事
+
+English Reading
+
+英语阅读
+
+English Grammar
+
+英语语法
+
+English Vocabulary
+
+英语词汇
+
+Nursery Rhymes & Songs
+
+儿歌与童谣
+
+Science Knowledge
+
+科学知识
+
+Classic Literature
+
+经典文学
+
+Chinese Culture & Poetry
+
+中国文化与诗词
+
+Fables & Moral Tales
+
+寓言与哲理故事
+
+Mythology & Legends
+
+神话与传说
+
+Geography & World Cultures
+
+地理与世界文化
+
+History & Famous People
+
+历史与名人故事
+
+Space & Astronomy
+
+太空与天文
+
+Movies, Anime & Cartoons
+
+影视动漫作品
+
+Math & Logic Games
+
+数学与逻辑思维
+
+Art, Music & Creativity
+
+艺术音乐与创造力
+
+Health, Safety & Sports
+
+健康运动与安全
+
+Exam Prep & Worksheets
+
+考试备考与练习卷
+
+Fun Facts & Trivia
+
+趣味冷知识

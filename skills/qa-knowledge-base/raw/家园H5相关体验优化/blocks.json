@@ -1,0 +1,327 @@
+[
+  {
+    "block_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "block_type": 1,
+    "children": [
+      "AqptdvBcWoEccJxqPjMlQMjsgyb",
+      "IP19dFAFOoB10axI4r3l5F2Kgrj",
+      "W9AJdBOgEoMqwsxxI9llnJEYgsd",
+      "OAoHdFNIcoCxVRxuGs6llGK3ghg",
+      "Qr6hd9zjcoEJ7ExI3iqlD8angSe",
+      "AqAGdLGXEoZUfnx46RWl50QNgRe",
+      "XK03ddDLFogeErxVtwxlElRcgnc",
+      "NkjFd6TN2oLqB2xg7CllPl8hgic",
+      "SkrjdDl0ToiTX9xswF3lgQfCg0e",
+      "JHaud8apsoohQJxgcBslWyTMg8e",
+      "Jjumd7ZLSodBsbxpeHelziZXg9b",
+      "AiABde3e1oI3jkxaosYlmG3Jg0b"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "家园H5相关体验优化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "AqptdvBcWoEccJxqPjMlQMjsgyb",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IP19dFAFOoB10axI4r3l5F2Kgrj",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W9AJdBOgEoMqwsxxI9llnJEYgsd",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OAoHdFNIcoCxVRxuGs6llGK3ghg",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1546,
+      "scale": 1,
+      "token": "K6ePbQJQHoa5lgxT1Irl0zixgyb",
+      "width": 2578
+    },
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc"
+  },
+  {
+    "block_id": "Qr6hd9zjcoEJ7ExI3iqlD8angSe",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、新增默认4件物品，放在家具收藏夹中。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AqAGdLGXEoZUfnx46RWl50QNgRe",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "茶几、柜子、 床头柜、镜子",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XK03ddDLFogeErxVtwxlElRcgnc",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "table、cabinet、bedside table、mirror",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NkjFd6TN2oLqB2xg7CllPl8hgic",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SkrjdDl0ToiTX9xswF3lgQfCg0e",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、点击物品播放单词的时候，移除点击音效，保留放置音效。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JHaud8apsoohQJxgcBslWyTMg8e",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3、图片不清晰的问题，可以用SVG",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Jjumd7ZLSodBsbxpeHelziZXg9b",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "4、支持移动人物",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AiABde3e1oI3jkxaosYlmG3Jg0b",
+    "block_type": 2,
+    "parent_id": "Lry4dsRP5o3QgcxZq8mlOK1sggc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "5、贴纸模块为空，没有任何贴纸的时候，隐藏该模块。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]
