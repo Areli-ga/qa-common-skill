@@ -1,0 +1,199 @@
+学习中心-课程介绍优化
+需求背景
+目前课程体系的价值传递
+新课程体系
+现有家长、学习体系等功能，主要分布在以下三个功能中。
+
+
+切换级别
+
+级别和单元介绍、切换级别、升级测试（1.31版上线）、关卡体系介绍
+
+单词库
+
+level查看单词
+
+个人设置
+
+
+头像+打卡（终身学员进度）、管理孩子、banner、学习报告、设置（下载内容、游戏控制、屏幕时间管理、通知、语言、语言模型、账号、反馈、关于我们）
+考虑过合并，但是功能过多反而影响真正的学习价值传递。
+因此考虑先只优化学习中心，同时增加新人流程的价值传递。
+
+AB 测
+进入首页后进行分流，实验组看到新流程和新学习中心
+对照组按照线上流程
+
+新人流程
+image.png
+
+
+
+原型
+
+说明
+
+image.png
+
+
+
+切换等级入口修改为：学习中心，点击后出现学习中心弹窗。
+单元介绍卡片可以再优化缩小一些。
+在单词库旁边增加家长的信。
+
+image.png
+
+
+触发方式：
+学完第三节课后（含hello课）自动触发：家长的话图标移动到中间打开信封，出现此弹窗。
+用户进入课程介绍后，家长的话图标消失。直接关闭弹窗，信封依然保留，保持3天。
+家长在第三节课前手动点击【给家长的话】，家长的话图标移动到中间打开信封，出现此弹窗。
+用户进入课程介绍后，家长的话图标消失。直接关闭弹窗，信封依然保留，保持3天。
+手动触发后，第三节课结束不再自动触发。
+点击弹窗内任意位置和【了解一下】，进入课程介绍。点击弹窗外任意位置，关闭弹窗。
+
+image.png
+
+
+
+从了解弹窗进入此页面，可以左右滑动查看课程介绍
+原型出了2版，和UI讨论后可以最终定一版
+
+IMG_8641.mp4
+点击【关闭】按钮，返回首页，待学习的那节课晃动，播放语音：继续学习吧。（3s无反应自动进入下一节课）
+点击级别切换，切换到级别tab。
+中国：中文版
+印度尼西亚：印尼语
+其他国家：英文版
+学习中心修改
+image.png
+
+
+
+原型
+
+说明
+
+image.png
+
+
+切换等级入口修改为：学习中心，点击后出现学习中心弹窗。
+
+
+image.png
+
+
+切换级别：点击后，进入切换级别界面，选中切换级别tab，选择级别后再返回到此弹窗
+课程介绍：点击后，进入课程介绍tab，展示课程介绍
+级别奖励：展示当前Level完成后的奖杯，和固定Giggles 200的奖励
+需要后端增加完成当前level最后一个关卡后下发200奖励的接口。
+进度：根据当前的level的unit关卡数量，生成进度条，每次完成一个关卡后，百分比往前走。（兔子的进度）
+unit的进度：展示用户已经完成的unit。
+（这里的unit最多是13个，应该是可以展示完的）
+unit的名称：取后台unit name字段
+
+image.png
+
+image.png
+
+
+级别介绍和tag从后台取
+下面的X单元，X词以实际上线的课程数量为准。
+
+
+image.png
+
+
+
+同上
+
+level增加goal brief + tag，admin后台增加
+支持本地化@Ben
+image.png
+
+
+新人邮件修改
+目前线上版本是1.23更新的版：
+修改后：国内注册用户下发中文版，海外用户使用英文版
+
+
+线上原文
+
+修改后英文版
+
+修改后中文版
+
+Dear [User’s Nickname],
+
+Hooray! You’re officially part of Giggle Academy’s family! 🎉
+
+Giggle Academy is already helping XX children in XX countries explore, learn, and grow—and all our services are completely free.
+
+Learning shouldn’t feel like a chore. It should be fun, stress-free, and full of surprises. That’s why free access is our promise and engagement is our core principle.
+
+To make your journey exciting, we’ve created three awesome tools:
+Gamified Learning: Lessons become puzzles, levels, and missions to explore.
+Immersive Speaking: Speak confidently with real-time feedback from our smart system.
+Reward System: Complete tasks and unlock gashapon rewards for every win.
+
+Your learning journey is ready! Take the first step, log in now, and let the fun begin!
+
+Sincerely,
+The Giggle Academy Team
+
+Welcome to Giggle Academy — your child's free English starter
+
+Dear [User's Nickname],
+The moment you tapped "Join," your child became part of something we've quietly built for years — a complete English starter program that's structured, engaging, and free for every child in the world.
+Giggle Academy is used by over 300,000+children in 150+ countries, all at no cost. "Free" isn't a trial or a tier — it's our position: foundational education should belong to every child, no matter where they're born.
+Here's what makes the journey different:
+A real curriculum, not a pile of lessons.
+ Mapped to the Cambridge Pre-A1 framework: 8 levels, 64 themed units, 512 spoken words. Levels 1–4 build a speaking foundation; Level 5 starts phonics; Levels 6–8 unlock early reading. Your child always knows where they are and what's next.
+Three rounds, one theme — that's how kids really learn.
+ Every unit follows our three-round spiral: each theme meets your child three times, each round demanding more output. First recognize, then respond, then create. That's why our kids actually start speaking.
+Six lesson types, all in game form.
+ Intro, Repeat, Practice, Speaking, Conversation, Story — each with a clear job. Variety keeps kids engaged. Structure makes it stick. Themed scene unlocks reward every breakthrough.
+What to realistically expect:
+30 days — "Apple! Red apple!"
+3 months — "What color? It's blue!"
+6 months — "Look! The dog is running!"
+1 year — descriptive sentences and the first steps of phonics.
+No "fluent in 30 days" promises — just real outputs from real kids on a real path.
+
+Tap below to start the first lesson together.
+Sincerely,
+ The Giggle Academy Team
+
+
+主题： 欢迎加入 Giggle Academy
+
+亲爱的 [用户昵称]：
+谢谢你按下"加入"。从今天起，孩子就是 Giggle Academy 的一员了。
+我们的课程对全世界每一个孩子免费开放。目前已有150+个国家、300,000+名孩子在这里学习。
+免费不是促销，不是低配，也不是为了拉新——
+好的启蒙教育，本就不该有门槛。
+
+这里和你以前见过的英语启蒙，可能不太一样：
+一套完整的体系，不是一堆零散的小游戏
+ 对标剑桥少儿英语 Pre-A1：8 个级别、64 个主题单元、512 个口语词。Lv1–4 打口语底子，Lv5 进入自然拼读，Lv6–8 通向独立阅读。孩子始终知道自己在哪、下一步学什么。
+同一个主题，让孩子见三次
+ 我们的"三轮螺旋"——同一组词、同一个场景，孩子会经历三轮：第一轮认识，第二轮回应，第三轮自己说。这就是"听过"和"说得出来"的区别。
+6 种课型，全部是游戏
+ 新课导入、跟读复现、互动练习、开口说、情景对话、故事听读——每一种都有它的任务。形式不重样，结构不松散。沿途还有主题场景解锁，陪孩子庆祝每一次小突破。
+
+学完会是什么样？
+我们不说"30 天流利英语"——这从来不是孩子学语言的真实节奏。
+但我们能告诉你：
+第 30 天——看到苹果，娃会说："Apple! Red apple!"
+第 3 个月——你问 What color，娃会答："It's blue!"
+第 6 个月——看到画面里的狗，娃说："The dog is running!"
+第 1 年——能用完整句子描述画面，并迈出自然拼读的第一步
+这些不是承诺，是规律学习的孩子，真实走到的位置。
+
+路我们已经修好了。孩子是那个探索的人，你陪在旁边就好。
+我们在这里等你们。
+Giggle Academy 团队
+
+数据埋点
+
+
