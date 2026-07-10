@@ -1,0 +1,370 @@
+功能广场 — 模块扩充与曝光机制
+基本信息
+
+
+产品文档
+
+
+
+功能广场 — 模块扩充与曝光机制
+
+
+
+产品Owner
+
+
+
+Cloud
+
+
+
+优先级
+
+高
+
+版本号
+
+v1.32.0
+
+需求背景
+
+聚合入口（主页右上角按钮 + 展开）已于当前版本上线，作为其他模块统一收口
+本期在其基础上：
+调整广场内模块（移除 Playzone，新增/改名一批模块）
+新功能做 A/B 分桶测试
+新增磨耳朵、Songs、Art、Worksheets入口与模块页面
+补齐 新手引导 + 闲置吸引 曝光机制
+为未上线功能引入 Soon 标记 + 假门落地页，以触发广场的人群为分母，量化新功能真实需求度指导排期。
+
+
+
+
+
+产品目标
+
+业务：提升广场内模块曝光与使用；用"点击想要/曝光"量化各新功能需求度，输出"做不做 / 先做谁"的排期依据。
+体验：封面直出、信息极简；新功能用假门承接（不欺骗、可采集意向）
+
+
+
+
+
+主要特性
+
+
+
+
+
+
+
+修订记录
+
+2026-mm-dd:
+
+
+
+
+
+资源列表
+
+
+UI设计稿
+
+https://www.figma.com/design/JVQk31yFpzPZQOcLDLLRAs/1.33.0?node-id=39191-30497&t=SNXiYkpNa3Euw1q7-1
+
+
+
+
+
+动画文件
+
+（Google网盘）
+
+
+
+
+
+声音文件
+
+（Google网盘）
+
+
+
+
+
+其他资源
+
+
+
+
+
+
+需求范围
+
+
+序号
+
+需求模块
+
+具体说明
+
+状态
+
+1
+
+App端
+
+模块调整 + 入口收敛：
+移除 Playzone；新增 磨耳朵、Songs、Art、Worksheets
+保留 Phonics/miniplan、搜索、Flashcards、故事书
+广场恒展示 12 个入口（4个现有功能+8个新功能/测试入口）
+新功能分桶测试
+2 个测试桶：桶A=2新功能+2测试入口（每桶 4 个）；不同桶看到不同的新功能/测试页
+各模块详情设计
+真实模块页：磨耳朵 / Songs / Art / Worksheets / Bedtime 
+3 个假门页： Speak / Daily Science / Family Games
+标记：
+"new"标、"Soon"标 
+曝光机制：
+老用户进主页气泡引导（仅一次）
+聚合按钮小动效
+闲置吸引小动效 （广场内、可无限）
+
+本期需求
+
+
+
+
+
+
+
+
+需求详情
+
+入口与分桶
+image.png
+
+广场展示 12 个入口 = 4 个固定（已上线） + 8 个新功能/测试页，不分组、统一大图标 + 标题。
+4个已有功能页面：
+
+
+入口
+
+类型
+
+点击
+
+Storybook
+
+已上线
+
+进故事书
+
+Flashcards
+
+已上线
+
+进闪卡
+
+Phonics/miniplan
+
+已上线
+
+进自然拼读/miniplan
+
+搜索
+
+已上线
+
+进搜索
+8 个新功能/测试页：
+新功能 = new标的真实模块（磨耳朵 / Songs / Art / Worksheets/ Bedtime ）；测试页 = Soon标+假门落地页（Speak / Daily Science / Family Games）
+各模块设计
+StoryBook/Flashcards / Phonics / 搜索：现有功能，仅收口进广场，页面不改。
+Bedtime Stories：磨耳朵和睡前故事着陆页（已有，直接链接过来）
+磨耳朵（GiggleCast）：使用以前做好的功能页面（GiggleCast）
+Songs（新）：类目 Nursery Rhymes、Giggle Songs；卡片放视频封面+播放键；看过的标「✓ 已看」+进度条。
+后端记录时间戳
+后续再进入歌曲直接读取时间戳进入对应节点，若时间戳剩余时间小于等于5s或者上次完整看完，则再次进入时从头开始播放
+Art（新）：类目（动物/植物/水果/陆海空载具/爬虫）；卡片放线稿封面，涂过的展示彩色成品+✓已完成。
+再次进入已涂过的作品不恢复之前的图像
+优先用后端储存内容，若无则用本地对应文件
+Worksheets（新）：封面做成多张纸叠起来的预览（一卡=一个练习包）；点开下载PDF。
+pdf需要自动加一下水印，浅色用灰色水印，深色用白色水印
+水印文件：
+
+Giggle logo 水印 白色.png
+
+
+Giggle logo 水印 灰色.png
+Speak / Daily Science / Family Games（Soon · 假门）：见Figma设计
+家门落地页内【Which one do you want?】选项支持多选，后端保存所有选择的项目供用户再次进入时展示。单个kid对单个假门落地页只记1次，即每个kids点击任意一个项目上方kid数量+1，一个kids点击多个也只+1。
+标记规范
+new：新功能、真实可用，仅1.33.0版本生效，之后移除
+Soon：未上线，点击进假门页。
+曝光机制
+
+
+对象
+
+形式
+
+触发
+
+频率
+
+老用户
+
+聚合入口气泡引导（聚光灯 + 气泡指向入口）
+
+功能上线后进入主页即触发
+
+仅一次
+
+所有用户
+
+聚合按钮小动效（轻微脉冲呼吸 ，无遮罩/无聚光灯）已改成聚合图标内icon轮换动画
+
+在主页
+
+打开广场一次后不再提醒
+
+全部
+
+闲置吸引：功能广场展开后10s未操作 → 图标挨个播放小动画（旋转扭动）；任意操作重新计时
+
+广场内
+
+可无限重复
+新模块Admin 配置页
+
+Admin 交互原型： https://giggle-feature-hub.pages.dev/admin.html 
+App 端 Songs / Art / Worksheets 的分类、列表内容全部来自 Admin 配置（不写死客户端）
+在 Admin 侧边栏 Lesson Series 下新增 3 个菜单（Giggle Cast下方）：
+Songs Management 
+Art Management
+Worksheets Management
+
+统一信息结构：分类 → 分类下内容（两级，3 个模块结构一致）
+分类管理：新建/管理内容/编辑/删除/排序；
+
+
+image.png
+
+
+image.png
+
+
+image.png
+
+字段 = 模块分类名称（EN 源文，多语言入口在编辑表单名称输入框旁）+ 分类图标（仅支持自行上传、无预设，App 端 tab 显示用）+ 排序 + 状态（启用/停用）。
+
+
+image.png
+
+
+image.png
+
+
+image.png
+
+分类下内容管理：
+
+
+image.png
+
+
+image.png
+
+
+image.png
+
+增删、排序（即 App 端展示顺序）、启用/停用
+管理内容页提供保存 / 返回按钮，保存即生效（Art 保存校验：存在未匹配词库【course word】的行不可保存）
+仅"启用"的分类与内容对 App 可见。
+各模块内容管理配置差异
+
+
+页面
+
+分类下内容 =
+
+字段与交互
+
+Songs
+
+playzone已发布的儿歌视频
+
+
+经选择组件选入
+展示名默认 = 原名称，可改并接多语言
+封面取视频封面；排序 / 移除
+
+Art
+
+course word（涂色内容随词自动带出）
+
+不需要命名
+按行添加，文本框输入单词 → 失焦自动匹配词库（带出词 ID + 线稿缩略图）
+未匹配标红、不可保存
+词已匹配但未关联线稿资源时标"缺线稿"并阻止上架
+行支持排序 / 删除
+
+Worksheets
+
+练习包 PDF
+
+image.png
+
+标题（EN + 多语言，入口在编辑表单标题旁）
+PDF 上传（页数自动读取）
+封面缩略图由 PDF 第 1 页自动生成（无需上传，更换 PDF 自动更新）
+排序 / 上下架 / 移除
+复用现有组件：
+Songs选择组件：
+image.png
+
+复用路径配置中Songs的选择组件
+三个模块的分类名称、Songs 内容展示名、Worksheets 标题的多语言组件：
+
+
+image.png
+
+
+image.png
+
+复用路径配置中多语言组件
+
+客户端接口：按模块返回「分类（名称多语言 + 图标 + 排序）+ 内容列表（资源/封面 URL + 排序）」
+
+
+数据埋点需求
+
+
+事件名称
+
+触发时机
+
+参数
+
+unionhub_intent_want_click
+
+
+假门落地页点击某选项 ♡ 点亮时，客户端上报
+
+
+公参
+page_title（STRING，必填，新增值：unionhub）
+page_name（STRING，必填，取值：speak、daily_science、family_games）
+unionhub_option（玩法/子方向，STRING，必填，取值：speak_1/2/3/4、daily_science_1/2/3/4、family_games_1/2/3/4）例如用户在daily_science假门页点击【Animals】就会触发daily_science_3
+
+app_page_view
+
+
+新模块曝光、假门页曝光
+
+
+原有字段 + 新增：
+page_title（STRING，必填，取值：giggle_cast、songs、art、worksheets、bedtime、speak、daily_science、family_games）
+page_name（STRING，必填，取值：模块内分类名（根据admin配置来，admin会正常配置名称，埋点需要转化成小写+下划线格式，如songs模块后台admin配置Nursery Rhymes、Giggle Song两个分类，埋点上报则为nursery_rhymes、giggle_song））
+
