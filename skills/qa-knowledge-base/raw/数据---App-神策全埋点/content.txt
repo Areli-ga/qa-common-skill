@@ -1,0 +1,139 @@
+数据 - App 神策全埋点
+基本信息
+
+
+产品文档
+
+
+
+数据 - App 神策全埋点
+
+
+
+产品Owner
+
+
+
+Aaron
+
+
+
+优先级
+
+中
+
+版本号
+
+v1.30.0
+
+需求背景
+
+
+当前数据采集主要依赖代码埋点，新增或调整埋点需通过发版完成，导致数据获取周期较长。在实际分析中，一旦发现关键行为路径缺少埋点，无法及时补充数据，影响产品与增长团队的分析效率。
+因此，需要引入神策全埋点能力，实现用户基础行为的自动采集。
+
+
+
+
+
+产品目标
+
+减少对发版的依赖，提升数据分析的灵活性与响应速度
+
+
+
+
+
+主要特性
+
+全量用户行为自动采集
+
+
+
+
+
+修订记录
+
+
+
+
+
+
+资源列表
+
+
+Flutter全埋点
+
+https://manual.sensorsdata.cn/sa/docs/tech_sdk_client_flutter_auto_track/v0300?search=1
+
+
+
+
+
+全埋点和点击图(Web)
+
+https://manual.sensorsdata.cn/sa/docs/tech_sdk_client_web_all_use/v0300?search=1
+
+
+
+
+
+App 可视化全埋点
+
+https://manual.sensorsdata.cn/sa/docs/app_visual_auto_track/v0300
+
+
+
+
+详细需求描述
+接入范围
+本次需求需在 App（iOS + Android）端接入神策全埋点能力，用于自动采集用户基础行为数据，包括但不限于：
+页面浏览（Page View）
+页面停留
+用户点击（Button / 卡片 / 列表项等）
+接入后，需确保全埋点能力覆盖以下核心模块：
+学习地图（课程路径）
+Storybook（故事书）
+Flashcard（闪卡）
+Quiz（测验）
+Play / 互动模块
+Unity开发无法使用全埋点，仍需要使用自定义事件埋点
+自动采集行为类型
+全埋点需自动采集以下基础事件：
+页面浏览事件（AppViewScreen）
+触发时机：
+用户进入任意页面
+需采集字段：
+页面名称（page_name）
+页面路径（page_path）
+停留时长（duration，需支持计算）
+点击事件（AppClick）
+触发时机：
+用户点击页面中的可交互元素
+需支持采集对象：
+按钮（如 Play / Submit / Next）
+卡片（如 Storybook 卡片）
+列表项
+Tab 切换
+需采集字段：
+元素名称（element_name）
+元素类型（button / card / list_item 等）
+所在页面（page_name）
+元素位置（position，可选）
+页面停留时间
+自动计算用户在页面的停留时长
+支持用于分析用户沉浸度与流失节点
+可视化埋点能力
+需支持神策后台的可视化圈选埋点功能：
+功能要求：
+支持通过神策后台连接测试设备
+支持直接点击 App 页面元素进行圈选
+支持配置：
+自定义事件名称
+自定义事件属性
+配置完成后无需发版，立即生效
+仅限app原生页面和h5页面
+App 页面名称
+
+App神策全埋点-页面清单.xlsx
+

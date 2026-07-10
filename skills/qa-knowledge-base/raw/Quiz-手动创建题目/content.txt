@@ -1,0 +1,686 @@
+Quiz 手动创建题目
+基本信息
+
+
+产品文档
+
+
+
+Quiz 手动创建题目
+
+
+
+产品Owner
+
+
+
+Aaron
+
+
+
+优先级
+
+中
+
+版本号
+
+1.32.0
+
+需求背景
+
+随着单词库（Word Bank）已搭建完成，每一个单词都已配套对应的图片与标准发音，出题所需的核心素材已可由词库直接复用，无需通过 AI 推理从教学文档中再生成。教研老师只需根据自己的教学文档，手动挑选单词、组合题型即可快速产出高质量题目。
+
+
+
+
+
+产品目标
+
+提供独立、可控的手动出题流程，让教研可基于教学文档直接出题
+通过词库（单词 + 图片 + 标准发音）填充题目素材，提升手动出题效率
+
+
+
+
+
+主要特性
+
+手动创建表单：题型 + 知识点 + Skills（多选）+ Difficulty（L1-L10）
+题目配置：题干模板（22 个英文模板，下拉单选）+ 线索提示格式（6 种）+ 3 个图片选项
+知识点：支持手动输入单词/词组，或点击「Word Bank」按钮从单词库选取
+线索：选择非「无」格式时必须从 Word Bank 选 1 个单词作为素材来源（音频/图片/文本均取自该单词）
+选项：固定 3 个图片；若 KP 来自词库则按类别自动填充（1 正解 + 2 干扰项），KP 手动输入则人工从词库挑选
+本期题型范围：仅支持单选题（choice）
+
+
+
+
+
+修订记录
+
+2026-05-19：创建任务文档
+
+
+
+
+参考文档
+新体系课程结构：https://docs.google.com/document/d/1QRvor-FTiPzc2DWenL9c4ONmJGgnlAD9AvSWr8EU6II/edit?tab=t.0
+需求范围
+
+
+序号
+
+事项
+
+说明
+
+1
+
+手动创建测验题
+
+Question Type 题型：单选下拉，本期仅可选 choice（单选题）
+Knowledge Point 知识点：搜索 + 选择（来源于词库知识点维度，如 red）
+Skills 技能标签：多选标签
+Difficulty 难度：单选下拉，L1 / L2 / L3 …
+
+2
+
+题目配置（本期仅单选题）
+
+(1) 题干：选择题干模板
+(2) 线索提示：6 种格式可选 —— 语音 / 语音+文本 / 文本 / 图片 / 图片+语音 / 无
+(3) 选项：固定 3 个；本期选项为图片格式；优先从词库自动填充，可人工覆盖
+线索与选项的素材均优先从单词库中获取
+
+3
+
+单词库联动
+
+选中知识点 / 单词后，系统自动从 Word Bank 拉取对应的图片、文本与标准发音
+
+4
+
+预览与提交（Step 3）
+
+预览：与 Quiz app侧一致的题目卡片（含题干、线索、3 图片选项）
+Question Summary：右侧展示元数据（题型 / KP / Skills / 难度 / 题干 / 线索格式 / 线索单词 / Options / 正解 / Source = manual）
+需求详情
+原型图
+https://stunning-stardust-b5d46e.netlify.app/
+手动创建流程
+
+
+序号
+
+流程
+
+说明
+
+1
+
+进入手动创建
+
+在题库管理页面点击「Manual Create Question」
+打开手动创建表单
+
+2
+
+填写表单
+
+选择测验题目类型（本期仅可选 choice / 单选题）
+选择测验的知识点（直接从单词库里选择单词）
+添加 Skills（多选）
+选择 Difficulty（难度）
+
+3
+
+题目配置（本期仅单选题）
+
+(1) 选择要使用的题干：从题干模板列表中选择（如「Tap the picture.」）
+(2) 配置线索提示格式：从「语音 / 语音+文本 / 文本 / 图片 / 图片+语音 / 无」中选择 1 种；从单词库中选择提示（无须线索配置的话，可以不选）
+(3) 配置选项：3 个图片选项；从单词库中获取（1 个正解 + 2 个干扰项），并标记正确答案
+线索与选项的素材均从单词库配置
+
+4
+
+预览与提交
+
+提供预览：与 Quiz 学生侧一致的题目卡片（含题干、线索、3 图片选项）
+确认无误后点击 Submit 落库
+表单字段定义
+
+
+字段
+
+控件
+
+是否必填
+
+说明
+
+Question Type 题型
+
+单选下拉
+
+是
+
+本期仅 choice（单选题）
+
+Difficulty 难度
+
+单选下拉
+
+是
+
+L1 / L2 / L3 / L4 / L5 / L6 / L7 / L8 / L9 / L10
+
+Knowledge Point 知识点
+
+文本输入 + Word Bank 按钮
+
+是
+
+可直接在输入框中手动输入一个单词或词组（如 red、red flower、Hello、good morning）
+可点击「Word Bank」按钮，内联弹出词库列表（按类别分组），点击单词即自动填入输入框；同时记录 wordRef 用于 Step 2 选项自动填充
+手动改写输入框内容会自动解除 Word Bank 引用（后续选项需手动挑选）
+
+Skills 技能标签
+
+多选标签 + 搜索
+
+是（≥1）
+
+可输入搜索 Skill 库；点击候选项加入；每个标签可单独删除
+
+Stem 题干
+
+单选下拉
+
+是
+
+下拉选项来自题干模板列表（22 个英文标题），见下方「题干模板」表
+
+Clue Format 线索格式
+
+单选 6 项
+
+是
+
+Audio / Audio+Text / Text / Image / Image+Audio / None
+
+Clue Word 线索单词
+
+Word Bank picker
+
+当 Clue ≠ None 时必填
+
+在线索格式 ≠ None 时启用；从 Word Bank 单选 1 个单词，作为音频/图片/文本素材来源
+
+Options 选项
+
+3 个图片选项
+
+是
+
+固定 3 个；KP 词库来源时自动填充，KP 手动输入时人工挑选；图片均来自 Word Bank
+
+Correct Answer 正解
+
+单选
+
+是
+
+在 3 个选项中标记 1 个为正确答案；首个被选中的选项默认作为正解，可切换
+题干模板
+
+
+教学技能
+
+多语言Key
+命名规则：quiz_<question_type>_<teaching_skill>
+
+题干文本（英文）
+
+题干文本（中文）
+
+题干文本（印尼语）
+
+线索语音
+
+图例
+
+
+Letter Recognition
+
+
+quiz_single_choice_letter_recognition
+
+Find the letter.
+
+找到这个字母。
+
+Temukan hurufnya.
+
+字母音:"mmm"
+
+image.png
+
+
+Letter–Sound Awareness
+
+quiz_single_choice_letter_sound_awareness
+
+Tap the letter that makes the sound.
+
+点击发出这个声音的字母。
+
+Ketuk huruf yang menghasilkan bunyi ini.
+
+音素：/m/
+
+image.png
+
+
+Beginning Sounds
+
+
+quiz_single_choice_beginning_sounds
+
+Tap the picture that starts with the sound.
+
+点击以这个声音开头的图片。
+
+Ketuk gambar yang dimulai dengan bunyi ini.
+
+音素：/m/
+
+image.png
+
+
+
+
+quiz_true_false_beginning_sounds
+
+
+Do they start with the same sound?
+
+它们是以相同的声音开头吗？
+
+Apakah mereka dimulai dengan bunyi yang sama?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Word–Picture Association
+
+quiz_single_choice_word_picture_association
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频
+
+image.png
+
+
+Matching & Sorting Skills
+
+quiz_sorting_matching_and_sorting_skills
+
+Sort the pictures.
+
+给图片分类。
+
+Kelompokkan gambar-gambar tersebut.
+
+无
+
+image.png
+
+
+Color Recognition
+
+quiz_single_choice_color_recognition
+
+Tap the color.
+
+点击这个颜色。
+
+Ketuk warnanya.
+
+目标单词音频
+
+image.png
+
+
+Rhyming and Word Families
+
+quiz_single_choice_rhyming_and_word_families
+
+What word rhymes with this word?
+
+哪个选项和这个单词押韵？
+
+Kata apa yang berima dengan kata ini?
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_true_false_rhyming_and_word_families
+
+Do they rhyme？
+
+它们押韵吗？
+
+Apakah kata-kata ini berima?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Syllables and Aural Patterns
+
+quiz_single_choice_syllables_and_aural_patterns
+
+
+How many syllables？
+
+数一数，有多少个音节？
+
+Ada berapa suku kata?
+
+目标单词音频
+
+image.png
+
+
+Upper and Lower Case letters
+
+
+quiz_single_choice_lowercase_letters
+
+Tap the lowercase letter.
+
+点击小写字母。
+
+Ketuk huruf kecil.
+
+音素：/m/
+
+image.png
+
+
+
+
+quiz_single_choice_capital_letters
+
+Tap the capital letter.
+
+点击大写字母。
+
+Ketuk huruf besar.
+
+音素：/m/
+
+image.png
+
+
+Initial and Ending Sounds
+
+
+quiz_single_choice_initial_sounds
+
+
+Tap the sound you hear first.
+
+点击你听到的第一个声音。
+
+Ketuk bunyi pertama yang kamu dengar.
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_single_choice_ending_sounds
+
+Tap the sound you hear last.
+
+
+点击你听到的最后一个声音。
+
+Ketuk bunyi terakhir yang kamu dengar.
+
+目标单词音频
+
+image.png
+
+
+Blending and Segmenting of CVC words
+
+
+quiz_single_choice_cvc_blending_and_segmenting
+
+
+Listen and tap the word.
+
+听一听，然后点击这个单词。
+
+Dengarkan dan ketuk kata yang benar.
+
+/s/ … /a/ … /t/
+
+image.png
+
+
+
+
+quiz_single_choice_cvc_blending
+
+Tap the missing letter.
+
+点击单词中缺失的字母。
+
+Ketuk huruf yang hilang.
+
+目标单词音频
+提示文本：__at（缺少字母的单词）
+
+image.png
+
+
+Reading and Spelling of CVC words
+
+quiz_single_choice_cvc_reading_and_spelling
+
+Tap the word you hear.
+
+点击你听到的单词。
+
+Ketuk kata yang kamu dengar.
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_repeat_cvc_reading_and_spelling
+
+Repeat this word.
+
+跟读这个单词。
+
+Ulangi kata ini.
+
+目标单词音频
+
+image.png
+
+
+Visual Discrimination
+
+
+quiz_single_choice_visual_discrimination
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频
+
+image.png
+
+
+Auditory Discrimination
+
+
+quiz_single_choice_auditory_discrimination
+
+Tap the picture you hear.
+
+听一听，点击对应的图片。
+
+Dengarkan dan ketuk kata yang kamu dengar.
+
+ 目标单词音频
+
+image.png
+
+
+
+
+quiz_true_false_auditory_discrimination
+
+Do these words rhyme?
+
+
+这些单词押韵吗？
+
+Apakah kata-kata ini berima?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Letter Formation
+
+quiz_single_choice_letter_formation
+
+Choose the correct letter shape.
+
+选择正确的字母形状。
+
+Pilih bentuk huruf yang benar.
+
+音素：/m/
+
+暂时没有该题型模板
+
+Concepts of Print
+
+quiz_matching_concepts_of_print
+
+Match the capital and lowercase letters.
+
+匹配大写字母和小写字母。
+
+Cocokkan huruf besar dan huruf kecil.
+
+无
+
+image.png
+
+
+Prepositional Language
+
+quiz_single_choice_prepositional_language
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频（例如：under）
+
+image.png
+
+线索提示格式（6 选 1）
+线索（Clue / Hint）用于在题目中给予学生提示。本期支持 6 种格式，对应素材默认取自单词库。
+
+
+线索格式
+
+呈现内容
+
+默认素材来源（单词库）
+
+语音
+
+播放单词标准发音
+
+单词库中该单词的标准发音音频
+
+语音 + 文本
+
+同时呈现标准发音与文本
+
+音频 + 文本均来自单词库
+
+文本
+
+仅呈现单词文本
+
+单词文本来自单词库
+
+图片
+
+仅呈现单词对应图片
+
+单词图片来自单词库
+
+图片 + 语音
+
+同时呈现图片与标准发音
+
+图片 + 音频均来自单词库
+
+无
+
+不提供线索
+
+—
+选项配置
+本期固定为 3 个选项，且选项格式为图片
+人工选择：从单词库中选择单词添加到选项未知
+必须标记 1 个正解
+交互细节
+校验：所有必填字段未填或未标记正确答案时，Submit 按钮置灰；点击时提示具体缺失项
+验收标准
+题库管理页可见「Manual Create Question」与「AI Generate Questions」两个入口，互不影响
+Manual 表单支持选择题型（本期仅 choice）、知识点、Skills（多选）、Difficulty
+可从题干模板中选择题干
+线索提示格式可在「语音 / 语音+文本 / 文本 / 图片 / 图片+语音 / 无」6 种中切换；对应素材按所选格式自动呈现
+线索素材默认从单词库拉取
+选项固定为 3 个，且为图片格式；人工从单词库中选择选项
+正确答案标记为必填；提交前未标记时给出明确报错
+预览态与学生侧渲染一致（题干、线索、3 图片选项）
+提交后题目入库，所有必填字段（题型、知识点、skills、difficulty、stem、clue、options、correct_answer）非空
+AI 流程的功能与现有体验保持完全一致，不被本次改造影响

@@ -1,0 +1,510 @@
+单词/短句多语言音频库（延后）
+基本信息
+
+
+产品文档
+
+
+
+单词回顾页面
+
+
+
+产品Owner
+
+
+
+Cloud
+
+
+
+优先级
+
+高
+
+版本号
+
+v1.30.0
+
+需求背景
+
+在 Lv10 课程游戏模板内引用的单词直接取自词库的 word_id 并使用其默认读音。词库目前只存英文默认读音，没有多语种读音，导致课程无法为这些引用词播放对应语种的本地化发音。
+游戏模板对单词发音有更丰富的表现诉求：同一单词希望在课程中能随机播放不同音色/语气的读音，同时在需要"标准发音示范"的场景（如书写前范读、音素示范）保留一份可被指定调用的标准音。
+原有课程语音本地化模块仅服务于课程句子级音频，不覆盖"单词/短句"粒度，且单条只对应一份音频，无法支持游戏内多音色/多语气的丰富表现。
+词库是"教学知识源"（lemma、释义），不适合承担多语种、多音色音频的管理职能；需要一个独立的、服务于所有课程产品的"音频库"中台。
+
+
+
+
+
+产品目标
+
+多语种音频覆盖：为游戏模板所引用的单词/短句提供与课程Voice Localization 一致的多语种音频能力，解决本地化单词无法发音的问题。
+多音色/多语气表现：同一条目在同一语言下支持配置多条音色 × 语气变体，标注其中一条为"标准音"，游戏内可按场景选择"标准音"或"变体音"。
+管理闭环：单词、短句的多语种文案与音频生产全流程与课程的Voice Localization 翻译流保持一致。
+与词库解耦：音频库独立于词库，通过 word_id 建立双向映射；词库变更不破坏音频库数据资产。
+
+
+
+
+
+主要特性
+
+三层数据结构：条目→ 多语言文案→ 音频变体，支持"一条内容、多语言、多音色/语气"。
+统一的翻译工作流：复用课程的Voice Localization流程——英文 → AI 中文→ 人工审校中文 → AI 多语种。
+音色/语气字典：可配置、可扩展的音色与语气字典表，所有变体组合由这两个字典叉乘而来。
+词库联动：词库 lemma 自动在音频库创建对应 Entry；游戏模板配置时可直接选取 Entry 下的变体组合。
+游戏模板引用升级：游戏模板配置中的单词音频"从词库引用"改为"标准音 + 附加变体池"的选择面板。
+
+
+
+
+
+修订记录
+
+2026-mm-dd:
+
+
+
+
+
+资源列表
+
+
+UI设计稿
+
+
+
+
+
+
+
+动画文件
+
+（Google网盘）
+
+
+
+
+
+声音文件
+
+（Google网盘）
+
+
+
+
+
+其他资源
+
+
+
+
+
+
+需求范围
+
+
+序号
+
+需求模块
+
+具体说明
+
+状态
+
+1
+
+Admin - 音频库主功能
+
+新增 Audio Library模块，支持音频条目、多语言文案管理、音频变体管理
+
+本期范围
+
+2
+
+Admin - 音色/语气字典
+
+新增音色、语气字典管理页，供变体生成引用
+
+本期范围
+
+3
+
+翻译与生成流程
+
+复用课程本地化音频翻译流程；音频生成默认生成标准音变体，其他变体按需生成
+
+本期范围
+
+4
+
+词库联动
+
+词库 lemma 与音频库 Entry 一对一映射；历史词库默认读音迁移到音频库
+
+本期范围
+
+5
+
+游戏模板配置改造
+
+课程游戏模板配置中的单词/干扰词/起始词/全量词库字段，接入音频变体选择面板
+
+本期范围
+
+6
+
+Unity 端适配
+
+Unity 实现标准音/随机池播放逻辑
+
+本期范围
+
+
+
+
+
+
+
+
+需求详情
+1. 核心数据模型
+音频库采用"音频条目 - 多语言文案 - 音频"三层结构
+1.1 音频条目
+一个可独立发音的单元，如一个单词 "apple" 或一句短句 "Good job!"
+
+
+字段
+
+说明
+
+entry_id
+
+全局唯一 ID
+
+source_text
+
+英文原文
+
+linked_word_id
+
+关联词库的 word_id，可为空
+
+created_by
+
+来源：word_bank_sync（词库同步）/ manual_create（手动新建）
+
+created_at / updated_at
+
+时间戳
+不区分 word 与 phrase 类型：统一视为 Entry
+1.2 多语言文案
+同一 Entry 在某一语言下的文案。每个 Entry × 每种语言最多 1 条
+
+
+字段
+
+说明
+
+entry_id
+
+关联音频条目
+
+lang
+
+语言代码，如 en / zh-CN / ja / es / kr
+
+text
+
+当前语言文案
+
+text_status
+
+Pending / Generated / Admin-Edited
+
+updated_at
+
+最近更新时间
+1.3 音频变体
+同一 Entry、Language，按"音色 × 语气"组合生成的音频
+
+
+字段
+
+说明
+
+entry_id + lang
+
+关联音频条目+多语言
+
+voice_id
+
+音色 ID，引用音色字典
+
+tone_id
+
+语气 ID，引用语气字典
+
+is_standard
+
+是否标准音
+
+audio_status
+
+Pending / Generated / Manual Upload
+
+duration_ms
+
+时长
+约束：
+同一 (entry, lang, voice, tone) 组合唯一，不允许重复创建相同变体。
+每条 Localization 下必须存在一条 is_standard=true 的标准音；若删除当前标准音，系统要求用户从剩余变体中指定一条为新标准音。
+
+2. 音色字典 与 语气字典
+新增两个全局字典表，由产品/教研与音频组共同维护。
+2.1 音色字典
+每条音色对应一个可调用的 TTS 发音角色，举例：
+
+
+voice_id
+
+显示名
+
+关联TTS模型
+
+状态
+
+试听样本
+
+Vo_001
+
+Max
+
+
+
+Active
+
+
+
+Vo_002
+
+Tom
+
+...
+
+Active
+
+
+
+Vo_003
+
+Lily
+
+...
+
+Active
+
+
+
+
+
+
+
+
+
+
+
+
+2.2 语气字典
+每条语气对应传给 TTS 的情绪参数，举例：
+
+
+tone_id
+
+显示名
+
+TTS 情绪参数
+
+状态
+
+试听样本
+
+standard
+
+标准朗读
+
+neutral
+
+Active
+
+
+
+excited
+
+兴奋
+
+excited
+
+Active
+
+
+
+slow_demo
+
+慢速示范
+
+slow
+
+Active
+
+
+
+questioning
+
+疑问
+
+questioning
+
+Active
+
+
+字段：tone_id、display_name、tts_style_param、sample_audio_url、status、备注。
+2.3 管理权限
+产品/教研：可新增、编辑、停用音色/语气字典项。
+音频组/研发：可新增、编辑、停用音色/语气字典项，可关联TTS模型，生成/上传试听样本。
+停用（Inactive）后，字典项不再出现在新建音频的选择下拉中，但已有音频不受影响。
+2.4 菜单入口
+Audio Library（新增模块）
+All Audios（条目主列表）
+Voice Dictionary（音色字典）
+Tone Dictionary（语气字典）
+
+3. Admin 音频库主列表
+3.1 列表字段
+
+
+列
+
+说明
+
+Entry ID
+
+条目唯一 ID
+
+Source Text
+
+英文原文
+
+Linked Word
+
+关联的词库 lemma，可点击跳转词库
+
+Languages
+
+已配置的语言数，如 6/27 languages（分母为APP支持的所有语言数）
+
+Voice Variants
+
+已配置的音频变体总数，如 4 Voice Variants
+
+Standard Preview
+
+英文标准音的播放按钮
+
+Updated
+
+最近更新时间
+
+Actions
+
+Edit / Translate / Regenerate / Delete
+3.2 筛选器
+是否关联 word_id（Linked to Word Bank / Standalone Phrase / All）
+语言（多选）
+Text Status（多选）
+Audio Status（多选）
+音色 / 语气（多选）
+搜索框（按 entry_id、Source Text、lemma 搜索）
+3.3 列表级操作
+新建 Entry：弹窗选择创建方式 
+关联词库：搜索并选择 word_id，English 文案自动带入 lemma，不可修改（修改需到词库）
+独立短句：手动输入英文文案
+翻译：批量生成当前Entry的其他语种文案 +标准音音频
+若中文文案为空：先对中文进行重翻译+标准音音频，需用户确认中文文案后再次触发翻译生成其他语种文案 +标准音音频
+若中文文案不为空：直接读取现有的中文框内容，结合“英文+中文译文”语境翻译生成其他语种文案 +标准音音频
+批量翻译：对已选中的Entry批量执行翻译
+重生成：支持二档粒度 
+当前条目的所有变体
+当前条目的标准音
+批量重生成：对已选中的Entry批量执行重生成
+导出：导出条目清单与变体清单（CSV）
+3.4 删除规则
+删除 Entry 前进行引用检查：若被任何课程游戏模板配置引用，删除按钮禁用并提示被哪些课程引用。
+无引用时才允许删除，删除会级联移除所有 Localization 与 Variant（不可逆，需弹窗确认）。
+
+4. Admin 音频库条目详情页
+进入某 Entry 后展开嵌套管理界面：
+4.1 顶部基础信息区
+Entry ID、Source Text、Linked Word、创建来源、时间戳。
+独立短句可编辑 Source Text ；词库关联类型的 Entry，Source Text 只读。
+4.2 语言区（按语言分块）
+每种已配置的语言展开为一个折叠块，结构如下：
+文案行： 
+Text、Text Status、Edit 按钮
+变体列表： 
+每行展示一个音色 × 语气组合：音色名、语气名、标准音标识（⭐）、audio_status、播放、Regenerate、Manual Upload、Set as Standard、Delete
++ Add Variant 按钮：弹窗选择 voice × tone 创建新变体
+新建成功变体时将生成当前Entry所有已配置的语言的此变体版本音频
+4.3 英文文案编辑与级联更新
+级联更新机制：当用户编辑 English Text 并保存时，触发检查——若该 Entry 下已存在中文等翻译文案，若有则弹窗确认：
+继续保存将会更新本Entry 中文译文，请检查中文译文后再翻译生成其他语言译文与重生成音频！
+确认保存将更新English Text ，强制触发对应 Entry 中文的重新翻译以及生成对应标准音，其他语言译文与音频不做处理
+
+5. 翻译流程
+5.1 英文入库
+三种途径生成 Entry 的 English 文案：
+词库同步：词库新增 lemma 时，系统自动在音频库创建对应 Entry，English 文案 = lemma，created_by = word_bank_sync
+手动创建：运营在音频库新建 Entry（独立短句），手动输入英文文案
+5.2 AI 中文预翻译
+英文入库后自动触发，调用豆包模型生成中文，Text Status = Generated。
+特殊规则（与路径多语言保持一致）：
+Max 及其家人名字不做翻译
+句子中的音素记号（如 'auh'）保留原样，音频生成阶段由已校验的音素文件替换
+5.3 人工审校中文
+产品/音频组审查 AI 生成的中文文案，再手动触发翻译生成其他语言文案
+5.4 多语种衍生翻译
+触发 Translate（单条）或 Batch Translate（批量）：
+输入 = Source English + Reviewed Chinese + Target Language
+同时生成其他语种的文案 + 标准音音频
+语种范围与 v1.25.1 Voice Localization 保持一致
+
+6. 词库联动
+6.1 一对一映射
+每个词库 lemma 对应一条 linked_word_id != null 的 Entry
+Entry 与 word_id 双向绑定，词库页面展示"已关联音频库"状态链接可跳转
+6.2 同步规则
+
+6.3 历史数据迁移
+词库现有默认读音一次性迁移为每个 Entry 在英文下的"标准音色 × 标准语气 × 是否标准音=true"变体：
+将当前用于生成课程语音的模型作为音色/语气字典中的"标准音色 × 标准语气"
+中文及其他语种文案与音频：通过批量翻译任务在上线后分批生成
+
+7. 游戏模板配置的引用改造
+对应 v1.28.0 课程游戏模板配置（第 6 节）中从词库选词的字段——Target Words / Distractor Words / Starting Word / Word List——配置面板中新增"Audio Variants"区域。
+7.1 新交互：变体选择面板
+每个选中的词展开后，在"原画图片 / Spine 动画"之外新增 Audio Variants 区：
+image.png
+
+交互规则：
+标准音自动包含，不可取消；列表展示当前 Entry 标记为 is_standard=true 的那一条
+附加变体：运营从该 Entry 下已存在的其他变体中勾选；勾选项形成"随机播放池"
+列表仅展示当前课程语言下、已生成（Generated / Manual Upload）的变体；Pending 变体不可勾选
+对 Distractor Words / Starting Word / Word List：通常不需要丰富变体，默认只引用标准音，面板折叠；如需配变体，手动展开即可
+7.2 Unity 播放逻辑
+非标准音场景（默认）：每次触发该词发音时，从 Additional Variants 中随机抽一条播放；若 Additional Variants 为空则回退到 standard
+标准音场景（特定情况）：由游戏逻辑在需要范读、示范、音素讲解等场景显式调用 standard 字段 
+"非标准音场景"的抽取粒度为：每次触发独立随机（即同一关卡内多次触发可能听到不同变体，便于增强游戏趣味性）
+7.3 课程包生成
+后端组装课程离线包时，根据游戏模板配置中勾选的变体清单，从音频库拉取对应的 audio_url 并打包
+未勾选的变体不打包，避免包体膨胀

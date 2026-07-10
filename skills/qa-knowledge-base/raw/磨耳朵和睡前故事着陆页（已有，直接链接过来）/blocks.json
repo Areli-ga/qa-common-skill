@@ -1,0 +1,620 @@
+[
+  {
+    "block_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "block_type": 1,
+    "children": [
+      "D4FAdeXiaoNgQix9fcxlg1xYgnc",
+      "KiivdhZ69osoWVxR1VXlmcK8grh",
+      "XxZsdz7dToLfGBxV9RZlwZjng3c",
+      "Vy6KdPemGoRHJkx3rbClEUBigHd",
+      "ThLpdk8LqoJfc2xKuU1lc18zglb",
+      "EAczdsmwSoSrc7xg050lh1LTgJd",
+      "SeWbdx23ToCiEFxe4aXlfXvzgTd",
+      "MVRFdb9QHo9TkUxWyU4lNa00gsb",
+      "YaOodDoCCoXBuAxicq8ln6jFgtg",
+      "Eupbd3GDsogeX2xxmNTltggCgnf",
+      "PO8CdqOxDoEAgQx4nUalh1vwgub"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "磨耳朵和睡前故事着陆页（已有，直接链接过来）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "D4FAdeXiaoNgQix9fcxlg1xYgnc",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "背景：配合首页版本需求做一轮用户测试（见需求：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "功能广场 — 模块扩充与曝光机制",
+            "token": "EWWTwt2HCiRLbWkhuCql6WWqgos",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/EWWTwt2HCiRLbWkhuCql6WWqgos"
+          }
+        },
+        {
+          "text_run": {
+            "content": "），将过去故事书里面的部分内容和功能包装外显的场景。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KiivdhZ69osoWVxR1VXlmcK8grh",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XxZsdz7dToLfGBxV9RZlwZjng3c",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本期涉及的两个场景：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Vy6KdPemGoRHJkx3rbClEUBigHd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "睡前故事场景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c"
+  },
+  {
+    "block_id": "ThLpdk8LqoJfc2xKuU1lc18zglb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Giggle Cast磨耳朵。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c"
+  },
+  {
+    "block_id": "EAczdsmwSoSrc7xg050lh1LTgJd",
+    "block_type": 43,
+    "board": {
+      "token": "MlNUwz072hRrCIb3yQGlVF31gNh"
+    },
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c"
+  },
+  {
+    "block_id": "SeWbdx23ToCiEFxe4aXlfXvzgTd",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/JVQk31yFpzPZQOcLDLLRAs/1.33.0?node-id=39234-16252&t=g7GBdfYmxh9Idtpd-4",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MVRFdb9QHo9TkUxWyU4lNa00gsb",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YaOodDoCCoXBuAxicq8ln6jFgtg",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "提供配置如下：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "block_type": 31,
+    "children": [
+      "JZH1dRQcwoFHIcx7AZglNQQugrc",
+      "ERczd26y6oEramxRspllLT3cgVd",
+      "VuiBdovlfoYXDzxHM8slJhPAgpd",
+      "Bpjfdpd51o2c25xEFl4lYrcCgah",
+      "Pt3sd33Q8ow9AdxL5Jll6x1Ighf",
+      "K2cuddWw0o8N5VxdtcPlJUXOgTf"
+    ],
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "table": {
+      "cells": [
+        "JZH1dRQcwoFHIcx7AZglNQQugrc",
+        "ERczd26y6oEramxRspllLT3cgVd",
+        "VuiBdovlfoYXDzxHM8slJhPAgpd",
+        "Bpjfdpd51o2c25xEFl4lYrcCgah",
+        "Pt3sd33Q8ow9AdxL5Jll6x1Ighf",
+        "K2cuddWw0o8N5VxdtcPlJUXOgTf"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          100,
+          520
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 3
+      }
+    }
+  },
+  {
+    "block_id": "JZH1dRQcwoFHIcx7AZglNQQugrc",
+    "block_type": 32,
+    "children": [
+      "NpQPdHQDtoS39dxZFfalz86AgDz"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NpQPdHQDtoS39dxZFfalz86AgDz",
+    "block_type": 2,
+    "parent_id": "JZH1dRQcwoFHIcx7AZglNQQugrc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "场景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ERczd26y6oEramxRspllLT3cgVd",
+    "block_type": 32,
+    "children": [
+      "Ltq0d8fESoHzXqxsri0lNM5Agjd"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Ltq0d8fESoHzXqxsri0lNM5Agjd",
+    "block_type": 2,
+    "parent_id": "ERczd26y6oEramxRspllLT3cgVd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "详细参数说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VuiBdovlfoYXDzxHM8slJhPAgpd",
+    "block_type": 32,
+    "children": [
+      "GTWKdYhAfoZZtVxiherlHkemg2e"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "GTWKdYhAfoZZtVxiherlHkemg2e",
+    "block_type": 2,
+    "parent_id": "VuiBdovlfoYXDzxHM8slJhPAgpd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "睡前故事",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Bpjfdpd51o2c25xEFl4lYrcCgah",
+    "block_type": 32,
+    "children": [
+      "NY2edWa2oo5dd5xRiLVlt4VTgch"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NY2edWa2oo5dd5xRiLVlt4VTgch",
+    "block_type": 2,
+    "parent_id": "Bpjfdpd51o2c25xEFl4lYrcCgah",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "直接打开已经有的系列详情页，系列 ID：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "814427422988357",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Pt3sd33Q8ow9AdxL5Jll6x1Ighf",
+    "block_type": 32,
+    "children": [
+      "K3qwd6b4roE8EZx2EjWlf6WWgJg"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "K3qwd6b4roE8EZx2EjWlf6WWgJg",
+    "block_type": 2,
+    "parent_id": "Pt3sd33Q8ow9AdxL5Jll6x1Ighf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Giggle Cast",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "K2cuddWw0o8N5VxdtcPlJUXOgTf",
+    "block_type": 32,
+    "children": [
+      "ZUC2ds6ZaoZnXmxgKetlm0hagcd",
+      "BjEGdXX4eomxh6xgKDSlaF4rg6g"
+    ],
+    "parent_id": "Eupbd3GDsogeX2xxmNTltggCgnf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ZUC2ds6ZaoZnXmxgKetlm0hagcd",
+    "block_type": 2,
+    "comment_ids": [
+      "7651493808156233436"
+    ],
+    "parent_id": "K2cuddWw0o8N5VxdtcPlJUXOgTf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "打开 Giggle Cast 的首页; ",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7651493808156233436"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BjEGdXX4eomxh6xgKDSlaF4rg6g",
+    "block_type": 2,
+    "parent_id": "K2cuddWw0o8N5VxdtcPlJUXOgTf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Admin 配置:  ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "https://admin-ga.toolsapple.net/course/giggle-cast",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PO8CdqOxDoEAgQx4nUalh1vwgub",
+    "block_type": 2,
+    "parent_id": "VVuGd6loDoBEnkxokdFla46lg0c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

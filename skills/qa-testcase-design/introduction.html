@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>测试用例自动化流水线 · 团队介绍</title>
+<style>
+  :root{
+    --brand:#3370ff; --brand-d:#1d4ed8; --ink:#1f2329; --sub:#646a73;
+    --line:#e5e6eb; --bg:#f7f8fa; --card:#ffffff;
+    --green:#00b42a; --green-bg:#e8f9ee; --orange:#ff7d00; --orange-bg:#fff3e8;
+    --purple:#7c3aed; --purple-bg:#f3ecff; --blue-bg:#eaf1ff;
+    --shadow:0 2px 8px rgba(31,35,41,.06),0 8px 24px rgba(31,35,41,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,-apple-system,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:52px 0}
+  h2{font-size:26px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
+  h2 .em{color:var(--brand)}
+  .lead{color:var(--sub);font-size:15px;margin-bottom:28px}
+  .kicker{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);
+    background:var(--blue-bg);padding:4px 12px;border-radius:20px;margin-bottom:14px;letter-spacing:.5px}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#3370ff 0%,#5b8cff 55%,#7c3aed 130%);color:#fff;
+    padding:64px 0 72px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;
+    background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);border-radius:50%}
+  .hero h1{font-size:40px;font-weight:900;letter-spacing:-1px;line-height:1.2;margin-bottom:14px;position:relative}
+  .hero p{font-size:18px;opacity:.95;max-width:680px;position:relative}
+  .hero .tagbar{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;position:relative}
+  .hero .tagbar span{background:rgba(255,255,255,.18);backdrop-filter:blur(4px);
+    padding:8px 16px;border-radius:10px;font-size:14px;font-weight:600;border:1px solid rgba(255,255,255,.25)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;position:relative}
+  .stats .s{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+    border-radius:14px;padding:18px;text-align:center}
+  .stats .s b{display:block;font-size:30px;font-weight:900;line-height:1}
+  .stats .s small{font-size:13px;opacity:.9;display:block;margin-top:8px}
+
+  /* 大白话痛点 */
+  .plain{background:var(--card);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+  .plain .before,.plain .after{padding:18px 20px;border-radius:12px}
+  .plain .before{background:#fff4f0;border:1px solid #ffd9c9}
+  .plain .after{background:var(--green-bg);border:1px solid #b7ebc8}
+  .plain h4{font-size:14px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .plain .before h4{color:#d4380d}.plain .after h4{color:#009a1e}
+  .plain ul{list-style:none;font-size:14px;color:#4a4f56}
+  .plain li{padding:3px 0 3px 20px;position:relative}
+  .plain li::before{content:"·";position:absolute;left:6px;font-weight:900}
+
+  /* 流程图 */
+  .flow{background:var(--card);border-radius:18px;padding:30px 28px 36px;box-shadow:var(--shadow)}
+  .step{display:flex;gap:18px;align-items:stretch}
+  .step .num{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;
+    font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(51,112,255,.3)}
+  .step .body{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin-bottom:0}
+  .step .body h5{font-size:16px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .step .body .say{font-size:14px;color:#3f444b}
+  .step .body .files{margin-top:9px;font-size:12px;color:var(--sub);font-family:"SF Mono",ui-monospace,Menlo,monospace}
+  .step .body .files b{color:var(--brand-d);font-weight:600}
+  .tag{font-size:11px;font-weight:700;padding:2px 9px;border-radius:6px}
+  .tag.read{background:var(--blue-bg);color:var(--brand-d)}
+  .tag.write{background:var(--purple-bg);color:var(--purple)}
+  .tag.check{background:var(--green-bg);color:#009a1e}
+  .arrow{display:flex;justify-content:flex-start;padding-left:20px}
+  .arrow div{width:4px;height:22px;background:linear-gradient(var(--brand),#b9ccff);margin:2px 0;border-radius:2px;position:relative}
+  .arrow div::after{content:"▼";position:absolute;left:-6px;bottom:-11px;color:#b9ccff;font-size:12px}
+
+  /* 并行段 */
+  .par{border:2px dashed var(--orange);border-radius:14px;padding:16px 16px 20px;margin:6px 0;background:var(--orange-bg)}
+  .par .plabel{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;
+    font-size:12.5px;font-weight:800;padding:5px 14px;border-radius:8px;margin-bottom:14px}
+  .lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .lane{background:#fff;border:1px solid #ffd9b3;border-radius:11px;padding:14px 14px}
+  .lane h6{font-size:14px;font-weight:800;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+  .lane p{font-size:12.7px;color:#4a4f56}
+  .lane .out{margin-top:8px;font-size:11.5px;color:var(--orange);font-weight:700}
+  .merge{margin-top:14px;background:#fff;border:1px solid #ffd9b3;border-radius:10px;padding:11px 15px;
+    font-size:13px;color:#4a4f56;display:flex;align-items:center;gap:9px}
+  .merge b{color:#d46b00}
+
+  /* 为什么又快又稳 */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .panel{background:var(--card);border-radius:16px;padding:26px 26px;box-shadow:var(--shadow)}
+  .panel .ph{font-size:18px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+  .pillar{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .pillar:last-child{border-bottom:none}
+  .pillar .ic{flex:0 0 34px;width:34px;height:34px;border-radius:9px;background:var(--green-bg);
+    display:flex;align-items:center;justify-content:center;font-size:17px}
+  .pillar .pt b{font-size:14px;display:block}
+  .pillar .pt span{font-size:12.7px;color:var(--sub)}
+  .speed .row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .speed .lbl{flex:0 0 62px;font-size:13px;color:var(--sub)}
+  .speed .bar{height:30px;border-radius:8px;display:flex;align-items:center;padding:0 12px;color:#fff;font-weight:800;font-size:13px}
+  .speed .old{width:100%;background:#c9cdd4}
+  .speed .new{width:60%;background:linear-gradient(90deg,var(--orange),#ffa04d)}
+  .speed .note{font-size:12.7px;color:var(--sub);background:var(--orange-bg);border-radius:9px;padding:10px 13px}
+
+  /* skill 分工 */
+  .skills{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+  .sk{border-radius:16px;padding:24px;box-shadow:var(--shadow);background:var(--card)}
+  .sk.main{border-top:4px solid var(--brand)}
+  .sk.kb{border-top:4px solid var(--green)}
+  .sk h3{font-size:18px;font-weight:800;margin-bottom:3px}
+  .sk .role{font-size:12.5px;color:var(--sub);margin-bottom:14px}
+  .tree{font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:12.3px;line-height:1.9;color:#4a4f56}
+  .tree .f{color:var(--brand-d);font-weight:600}
+  .tree .c{color:#8a9099}
+  .tree .lv{display:inline-block;padding:0 6px;border-radius:4px;font-size:10.5px;font-weight:700;margin-right:4px}
+  .lv0{background:#1f2329;color:#fff}.lv1{background:var(--blue-bg);color:var(--brand-d)}
+  .lv2{background:var(--orange-bg);color:#d46b00}.lv3{background:#eee;color:#666}
+  .note-box{background:var(--blue-bg);border-radius:10px;padding:12px 15px;font-size:13px;color:#33415c;margin-top:14px}
+
+  /* 飞书对接 */
+  .lark{background:var(--card);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow)}
+  .lark .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+  .lark .t{border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+  .lark .t .big{font-size:26px}
+  .lark .t b{display:block;font-size:14px;margin:8px 0 4px}
+  .lark .t small{font-size:12px;color:var(--sub)}
+  .warn{background:#fffbe6;border:1px solid #ffe58f;border-radius:10px;padding:12px 15px;font-size:13px;color:#874d00}
+  .guard{background:var(--card);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow)}
+  .guard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+  .guard-card{border:1px solid var(--line);border-radius:13px;padding:18px;background:#fff}
+  .guard-card h3{font-size:17px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .guard-card ul{list-style:none;font-size:13.5px;color:#4a4f56}
+  .guard-card li{padding:6px 0 6px 22px;position:relative;border-bottom:1px dashed var(--line)}
+  .guard-card li:last-child{border-bottom:none}
+  .guard-card li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+  .guard-card.boundary li::before{content:"•";color:var(--orange)}
+
+  /* 用法 */
+  .use{background:var(--card);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+  .cmd{background:#1f2329;color:#e6f0ff;border-radius:11px;padding:16px 20px;font-family:"SF Mono",ui-monospace,Menlo,monospace;
+    font-size:14px;margin:6px 0 18px;overflow-x:auto}
+  .cmd .cy{color:#7cd3ff}.cmd .gy{color:#8a9099}
+  .out-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
+  .out-grid .o{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 10px;text-align:center}
+  .out-grid .o .big{font-size:22px}
+  .out-grid .o b{display:block;font-size:12.5px;margin-top:6px;font-family:"SF Mono",monospace;color:var(--brand-d)}
+  .out-grid .o small{font-size:11px;color:var(--sub);display:block;margin-top:2px}
+  table.opt{width:100%;border-collapse:collapse;margin-top:18px;font-size:13.5px}
+  table.opt td{padding:9px 12px;border-bottom:1px solid var(--line)}
+  table.opt tr td:first-child{color:var(--sub);width:42%}
+  table.opt code{background:var(--bg);padding:2px 7px;border-radius:5px;font-size:12.5px;color:var(--brand-d)}
+
+  footer{background:#1f2329;color:#c9cdd4;padding:30px 0;font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer b{color:#fff}
+  footer code{color:#7cd3ff}
+
+  @media(max-width:820px){
+    .stats{grid-template-columns:repeat(2,1fr)} .plain,.two,.skills{grid-template-columns:1fr}
+    .lanes,.lark .three,.guard-grid{grid-template-columns:1fr} .out-grid{grid-template-columns:repeat(2,1fr)}
+    .hero h1{font-size:30px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>测试用例自动化流水线</h1>
+    <p>丢一条飞书 PRD 链接进去，自动读文档、翻历史、写用例、出思维导图，最后在飞书里生成一篇排好版的测试用例文档。QA 不用再从零手搓。</p>
+    <div class="tagbar">
+      <span>📥 输入：1 条飞书链接</span>
+      <span>📤 产出：5 类交付物</span>
+      <span>⏱️ 常规约 15–20 分钟</span>
+      <span>🤖 自动生成 · 人做关键复核</span>
+    </div>
+    <div class="stats">
+      <div class="s"><b>8</b><small>标准工作流步骤</small></div>
+      <div class="s"><b>3</b><small>并行代理同时开工</small></div>
+      <div class="s"><b>4</b><small>不可关闭的质量支柱</small></div>
+      <div class="s"><b>2</b><small>协同的 Skill</small></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">这是什么 · 大白话</span>
+    <h2>它替你干掉了写用例里<span class="em">最耗时、最容易漏</span>的那部分</h2>
+    <p class="lead">写一篇测试用例，真正动脑的"设计"只占一小部分，大量时间耗在读文档、看图、翻往期需求、排版发布上。这条流水线把这些机械活自动化，让人只专注在"验收把关"。</p>
+    <div class="plain">
+      <div class="before">
+        <h4>😮‍💨 以前：纯手工，一篇 30 分钟+</h4>
+        <ul>
+          <li>逐页读 PRD、一张张看设计图</li>
+          <li>凭记忆想"这块以前有没有踩过坑"</li>
+          <li>担心漏测维度，反复对照检查表</li>
+          <li>手写用例、手动排版、手动发飞书</li>
+        </ul>
+      </div>
+      <div class="after">
+        <h4>✅ 现在：一条链接，常规约 15–20 分钟</h4>
+        <ul>
+          <li>文档 / 表格 / 图片自动原样抓取</li>
+          <li>自动翻历史知识库，接上回归点</li>
+          <li>几十个维度机器逐个过闸，漏了就报错</li>
+          <li>用例、思维导图、飞书文档一键产出</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:8px">
+  <div class="wrap">
+    <span class="kicker">核心流程 · 从链接到飞书文档</span>
+    <h2>一条链接进来，<span class="em">这样一步步变成测试用例</span></h2>
+    <p class="lead">下面每一步都标了"大白话在干嘛"和"背后调用了哪个文件"。<span style="color:var(--brand-d);font-weight:600">📘蓝=读飞书</span> · <span style="color:var(--purple);font-weight:600">🟣紫=写飞书</span> · <span style="color:#009a1e;font-weight:600">🟢绿=质量校验</span>。</p>
+
+    <div class="flow">
+
+      <div class="step">
+        <div class="num">1</div>
+        <div class="body">
+          <h5>📂 开工准备</h5>
+          <div class="say">接到需求，建一个专属交付目录，避免多次生成互相覆盖。</div>
+          <div class="files">总控 <b>SKILL.md</b> · 目录规范 <b>references/output-files.md</b></div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">2</div>
+        <div class="body">
+          <h5>📥 保真读取 <span class="tag read">读飞书</span></h5>
+          <div class="say">把飞书文档里的每一段文字、每张表格、每一张图都原样抓下来存到本地，一个字都不漏；连<b>文档内嵌的电子表格（Sheet）</b>（埋点表、字段表常放这里，平铺看根本看不见）也自动读进来。<b>中断了不用重来</b>：加 <b>--resume</b> 续跑只补缺（图片原子落盘防半截文件，网络抖动自动重试 3 次）。</div>
+          <div class="files">脚本 <b>read_doc.py</b>（凭证/网络/重试由 <b>lark_common.py</b> 提供）→ 产出 source/ 原料</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="par">
+        <div class="plabel">⚡ 步 2.5 · 三件事同时开工，不排队等（这是提速的关键）</div>
+        <div class="lanes">
+          <div class="lane">
+            <h6>🖼️ 看图代理</h6>
+            <p>专人盯着所有设计图，把图里的文案、字段、数值、状态、流程一张张转录成文字。图多就拆几个人分头看。</p>
+            <div class="out">→ images-notes.md</div>
+          </div>
+          <div class="lane">
+            <h6>📚 翻历史代理</h6>
+            <p>去历史知识库检索"这个模块以前做过啥、埋过啥坑、有哪些回归点"，深读往期笔记。</p>
+            <div class="out">→ history-hits.md</div>
+          </div>
+          <div class="lane">
+            <h6>✍️ 主线自己</h6>
+            <p>同时读正文和表格，用自己的话把需求复述一遍，列出 PRD 没写清、需要产品确认的点。</p>
+            <div class="out">→ 需求理解草稿</div>
+          </div>
+        </div>
+        <div class="merge">🤝 <b>合流验收：</b>三边完成后汇总——图有没有看全、关键主流程图主线亲自再核一遍、历史检索够不够。任何一边不达标，主线自己补做，绝不带着缺口往下走。</div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">3</div>
+        <div class="body">
+          <h5>🧭 需求对齐</h5>
+          <div class="say">把 PRD 翻译成测试语言：目标是什么、入口在哪里、影响哪些端、配置/AB/接口/埋点有没有写清，没写清的先进入待确认。</div>
+          <div class="files">读取 <b>source/content.txt</b> + <b>source/tables.md</b> + 图片转录结果 → 形成风险与待确认基础</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">4</div>
+        <div class="body">
+          <h5>🎯 定风险重点</h5>
+          <div class="say">先判断"这次改动最该测什么、最容易崩在哪"，定下优先级，不搞一碗水端平。</div>
+          <div class="files">出例核心手册 <b>authoring-core.md</b>（一次读入，管到第 7 步）</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">5</div>
+        <div class="body">
+          <h5>🔍 逐维度防漏</h5>
+          <div class="say">拿出几十个测试维度的检查清单，一个个打勾：这维度测了 / 不涉及 / 待确认，不允许默默跳过。</div>
+          <div class="files">§A 覆盖维度清单 · 涉及哪端才读对应的 <b>code-risk-*.md</b> 风险库</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">6</div>
+        <div class="body">
+          <h5>🧩 先树后例、原子出例</h5>
+          <div class="say"><b>先把需求拆成多级分解树</b>（数值逐项、分支逐行、结局逐个成节点——思维导图就由这棵树长出来），再给每个功能点挑测试方法（边界值 / 判定表 / 状态迁移…），最后写成一条条<b>"一例一断言"</b>的原子用例，禁止把多个数值/链路打包进一行期望。</div>
+          <div class="files">§C 先树后例+原子用例硬规则 · §B 特征→方法决策表 → 产出 <b>testcases.md</b></div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">7</div>
+        <div class="body">
+          <h5>✅ 机器自检 <span class="tag check">质量校验</span></h5>
+          <div class="say">脚本自动检查用例结构、编号、必测维度是否齐全，还卡<b>结构粒度</b>：分组没细分、期望打包多断言、PRD 表格数值没落进用例（数值对账），都会被拦下打回重修。顺带把用例转成思维导图——树有多深图就有多深，无占位废层。</div>
+          <div class="files">结构+粒度校验 <b>validate_output.py</b>（--tables 数值对账）· 转导图 <b>md_to_mindmap.py</b> → mindmap.puml</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num">8</div>
+        <div class="body">
+          <h5>🚀 发布飞书 <span class="tag write">写飞书</span></h5>
+          <div class="say">自动在飞书新建一篇文档，排好版：需求理解 → 风险判断 → 思维导图 → 待确认 → 覆盖自检表。</div>
+          <div class="files">发布规则 <b>references/lark-output.md</b> · 脚本 <b>publish_to_lark_doc.py</b> · 三块用例正文由思维导图承载，<b>没有思维导图会拒绝发布</b>（不发出不含用例的空文档）· 风险表「影响」列发布时自动改写为<b>维度名</b>（用例编号在文档里是死引用）· 中断可 <b>--resume</b> 断点续传不重复建档（直接重发会被护栏拦截），失败时保留本地交付与半成品 document_id</div>
+        </div>
+      </div>
+      <div class="arrow"><div></div></div>
+
+      <div class="step">
+        <div class="num" style="background:var(--green)">🎉</div>
+        <div class="body" style="background:var(--green-bg);border-color:#b7ebc8">
+          <h5>交付到手</h5>
+          <div class="say">拿到一个本地交付目录 + 一篇飞书文档。文档里的思维导图代码块，复制粘进飞书画板就是一张完整脑图。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">为什么又快又不掉质量</span>
+    <h2>快靠<span class="em">并行</span>，稳靠<span style="color:var(--green)">四道闸</span></h2>
+    <p class="lead">提速不是靠偷工减料，而是把没有先后依赖的活儿改成同时干；质量则由四条硬规则和机器校验兜底。</p>
+    <div class="two">
+      <div class="panel speed">
+        <div class="ph">⚡ 快在哪</div>
+        <div class="row"><div class="lbl">优化前</div><div class="bar old">约 25–30 分钟</div></div>
+        <div class="row"><div class="lbl">优化后</div><div class="bar new">常规 15–20 分钟</div></div>
+        <div class="note">看图、翻历史、读正文本来要排队一个个来，现在三线同时开工；大图也不再堆进主流程拖慢写作。图特别多、附件复杂或飞书网络抖动时会更久，但换来的是逐图转录级的信息保真。</div>
+      </div>
+      <div class="panel">
+        <div class="ph">🛡️ 稳在哪 · 质量四支柱</div>
+        <div class="pillar"><div class="ic">📥</div><div class="pt"><b>保真读取</b><span>文档/表格/图片全量抓取，<b>内嵌电子表格（Sheet）实时读入</b>；其余未解析块（多维表格/附件等）登记成"待确认"，不静默丢</span></div></div>
+        <div class="pillar"><div class="ic">📚</div><div class="pt"><b>历史编译</b><span>翻遍往期同类需求，踩过的坑、回归点必须接上并留检索证据</span></div></div>
+        <div class="pillar"><div class="ic">🔍</div><div class="pt"><b>逐维过闸 + 粒度闸</b><span>几十个维度逐个打勾；分组必须多级细分、期望必须原子断言、PRD 表格数值逐个对账——不合格机器校验直接报错</span></div></div>
+        <div class="pillar"><div class="ic">🧩</div><div class="pt"><b>先树后例</b><span>先落多级分解树（数值逐项/分支逐行/结局逐个）再定方法再写原子用例，导图由树长出；不写"验证功能正常"这种空话</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">背后的两个 Skill · 各管一摊</span>
+    <h2>一个<span class="em">干活</span>，一个<span style="color:var(--green)">供历史</span></h2>
+    <p class="lead">整条流水线只用两个 skill。下面按目录列出每个文件干什么，方便同事查阅。标签含义：<span class="lv lv0">L0 自动加载</span><span class="lv lv1">L1 每次必读</span><span class="lv lv2">L2 命中才读</span><span class="lv lv3">L3 平时不读</span></p>
+    <div class="skills">
+      <div class="sk main">
+        <h3>qa-testcase-design</h3>
+        <div class="role">主流水线 · 流程、规则、脚本、发布全在这</div>
+        <div class="tree">
+<span class="lv lv0">L0</span><span class="f">SKILL.md</span> — 总控：8 步流程 + 边界红线<br>
+<span class="c">├ </span><span class="f">PIPELINE.md</span> — 给同事的文字版链路说明<br>
+<span class="c">├ </span><span class="f">DESIGN.md</span> — 设计决策记录，改流程前先读<br>
+<span class="c">├ references/</span><br>
+<span class="c">│ </span><span class="lv lv1">L1</span><span class="f">authoring-core.md</span> — 出例核心手册（维度+方法+先树后例/原子用例硬规则，一次读全）<br>
+<span class="c">│ </span><span class="lv lv1">L1</span><span class="f">output-files.md</span> — 交付目录/文件/校验规范<br>
+<span class="c">│ </span><span class="lv lv1">L1</span><span class="f">history-kb-contract.md</span> — 查历史的只读契约<br>
+<span class="c">│ </span><span class="lv lv1">L1</span><span class="f">lark-output.md</span> — 飞书发布规则<br>
+<span class="c">│ </span><span class="lv lv2">L2</span><span class="f">code-risk-backend.md</span> — 后端风险库，涉及才读<br>
+<span class="c">│ </span><span class="lv lv2">L2</span><span class="f">code-risk-unity.md</span> — Unity 风险库，涉及才读<br>
+<span class="c">│ </span><span class="lv lv2">L2</span><span class="f">code-risk-native.md</span> — 原生端风险库，涉及才读<br>
+<span class="c">│ </span><span class="lv lv2">L2</span><span class="f">code-risk-h5.md</span> — H5/WebView 风险库，涉及才读<br>
+<span class="c">│ </span><span class="lv lv2">L2</span><span class="f">mindmap-plantuml.md</span> — 思维导图转换规则<br>
+<span class="c">│ </span><span class="lv lv3">L3</span><span class="f">coverage-dimensions / case-schema / test-design-methods.md</span> — 手册的原始出处，冲突以它们为准<br>
+<span class="c">│ </span><span class="lv lv3">L3</span><span class="f">example-testcases.md</span> 等 — 样例，排查时才看<br>
+<span class="c">└ scripts/</span><br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">read_doc.py</span> — 读飞书 PRD（正文+表格+图；--resume 断点续跑）<br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">publish_to_lark_doc.py</span> — 建飞书文档+排版（--resume 断点续传）<br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">lark_common.py</span> — 飞书凭证/网络共享库（自动重试）<br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">validate_output.py</span> — 结构+粒度硬校验（质量闸；--tables 数值对账）<br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">md_to_mindmap.py</span> — 分解树转思维导图（任意深度，无占位层）<br>
+<span class="c">&nbsp;&nbsp;</span><span class="f">kb.py</span> — 历史检索转发器（定位 qa-knowledge-base 本体，找不到则降级"未读历史"）
+        </div>
+      </div>
+      <div class="sk kb">
+        <h3>qa-knowledge-base</h3>
+        <div class="role">历史需求知识库 · 本链路<b style="color:var(--green)">只读检索</b>，绝不写入</div>
+        <div class="tree">
+<span class="f">SKILL.md</span> — 知识库入口<br>
+<span class="c">├ </span><span class="f">CLAUDE.md / taxonomy.md</span> — 目录约定与模块分类<br>
+<span class="c">├ scripts/</span><br>
+<span class="c">│ ★</span><span class="f">search.py</span> — 关键词/模块检索<br>
+<span class="c">│ &nbsp;</span><span style="color:#8a9099">（★本链路历史代理调用的就是它）</span><br>
+<span class="c">│ </span><span class="f">fetch.py</span> — 录入飞书需求（知识库自己维护用，本链路不碰）<br>
+<span class="c">│ </span><span class="f">build_index.py</span> — 重建全库索引<br>
+<span class="c">│ </span><span class="f">relate.py</span> — 算笔记间关联<br>
+<span class="c">├ </span><span class="f">notes/</span> — 47 篇历史笔记（人读+被检索的主体）<br>
+<span class="c">├ </span><span class="f">raw/</span> — 47 个需求的飞书原料，供溯源回看<br>
+<span class="c">├ </span><span class="f">index/INDEX.md</span> — 全库索引<br>
+<span class="c">└ </span><span class="f">docs/</span> — 知识库自身项目文档
+        </div>
+        <div class="note-box">🔒 <b>边界：</b>流水线只通过 <code>search.py</code> 检索 + 读 <code>notes/</code>，必要时看 <code>raw/</code>，<b>从不写入</b> qa-knowledge-base。录入是知识库自己的活，两边分开。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">飞书对接 · 常见误区</span>
+    <h2>对接飞书靠<span class="em">自带脚本直连</span>，不依赖外部 skill</h2>
+    <p class="lead">同事常问"是不是用了那个飞书 skill？"——不是。读飞书、写飞书都是本流水线自己的 3 个脚本直连飞书接口完成的。</p>
+    <div class="lark">
+      <div class="three">
+        <div class="t"><div class="big">📥</div><b>read_doc.py</b><small>读飞书：拉正文、表格、下载全部图片</small></div>
+        <div class="t"><div class="big">📤</div><b>publish_to_lark_doc.py</b><small>写飞书：新建文档、自动排版、回写记录</small></div>
+        <div class="t"><div class="big">🔑</div><b>lark_common.py</b><small>凭证与网络共享库，供上面两个调用</small></div>
+      </div>
+      <div class="warn">⚠️ <b>给同事的辨析：</b>系统里那个 <code style="background:#fff;padding:1px 6px;border-radius:4px">giggle:lark-docs</code> 是通用飞书文档 skill，<b>本链路没有用它</b>。当前读写都由自带脚本直连，凭证链路更独立，减少 gateway/CF 登录状态对发布的影响。另一个 <code style="background:#fff;padding:1px 6px;border-radius:4px">writing-lark-test-mindmaps</code> 已<b>完全弃用</b>，不在链路内。看到它们别以为是本流水线的一部分。</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">投产前置与边界</span>
+    <h2>能放心用，但<span class="em">边界要讲清楚</span></h2>
+    <p class="lead">这条流水线已经能进入日常使用，但它不是黑盒发布系统。该人工复核的地方保留人工，该失败兜底的地方保留本地交付。</p>
+    <div class="guard">
+      <div class="guard-grid">
+        <div class="guard-card">
+          <h3>✅ 投产前置条件</h3>
+          <ul>
+            <li>Lark Developer 应用权限已开通并发布版本。</li>
+            <li>默认 Drive 文件夹已给应用写入权限。</li>
+            <li>本机或 VPN 能访问 config 服务与 Lark OpenAPI。</li>
+            <li><code>validate_output.py</code> 校验通过后才允许发布飞书。</li>
+          </ul>
+        </div>
+        <div class="guard-card boundary">
+          <h3>⚠️ 明确边界</h3>
+          <ul>
+            <li>不自动回写 qa-knowledge-base，避免未验证信息污染知识库。</li>
+            <li>不修改原 PRD，不覆盖历史飞书文档。</li>
+            <li>不直接生成飞书原生画板，只提供 PlantUML 代码块。</li>
+            <li>飞书发布失败时，本地文件仍是有效交付物；已建 docx 会返回 document_id 供排查。</li>
+            <li><b>内嵌电子表格（Sheet）已能实时抓取</b>（埋点表等）；多维表格（Bitable）、视频、附件仍需明确处理策略，用户要求跳过时登记风险并跳过。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">怎么用 · 精准调用</span>
+    <h2>其实<span class="em">只需要一句话</span></h2>
+    <div class="use">
+      <p style="font-size:14px;color:var(--sub);margin-bottom:6px">① 日常自然语言调用：</p>
+      <div class="cmd">设计测试用例：<span class="cy">&lt;飞书 PRD 链接&gt;</span></div>
+      <p style="font-size:14px;color:var(--sub);margin-bottom:6px">② 团队内推荐的精准调用：显式指定 skill 名称。</p>
+      <div class="cmd">使用 <span class="cy">qa-testcase-design</span> skill 设计测试用例：<span class="cy">&lt;飞书 PRD 链接&gt;</span></div>
+      <p style="font-size:14px;color:var(--sub);margin-bottom:6px">③ 想让风险判断更准，可以补一句提测范围（可选）：</p>
+      <div class="cmd">设计测试用例：<span class="cy">&lt;链接&gt;</span>。<span class="gy"># 本次只改原生+后端，重点关注反馈回复推送链路</span></div>
+
+      <p style="font-size:15px;font-weight:800;margin:22px 0 10px">④ 会拿到这些产出 👇</p>
+      <div class="out-grid">
+        <div class="o"><div class="big">📋</div><b>testcases.md</b><small>结构化用例正文</small></div>
+        <div class="o"><div class="big">📚</div><b>history-hits.md</b><small>历史检索证据</small></div>
+        <div class="o"><div class="big">🖼️</div><b>images-notes.md</b><small>逐图转录</small></div>
+        <div class="o"><div class="big">🧠</div><b>mindmap.puml</b><small>思维导图源码</small></div>
+        <div class="o"><div class="big">🔗</div><b>飞书 docx</b><small>排好版可评审</small></div>
+      </div>
+
+      <table class="opt">
+        <tr><td>只要本地文件、不发飞书</td><td>说一句「<b>只本地输出</b>」</td></tr>
+        <tr><td>发到别的飞书目录</td><td>把目标目录链接给它（当次生效）</td></tr>
+        <tr><td>图片下载失败还想继续</td><td>确认后加 <code>--allow-partial</code></td></tr>
+        <tr><td>读取中断后续跑</td><td>同一输出目录加 <code>--resume</code>（只补缺，不重来）</td></tr>
+        <tr><td>发布中断后续传</td><td><code>publish_to_lark_doc.py &lt;目录&gt; --resume</code>（不重复建档；放弃半成品用 <code>--fresh</code>）</td></tr>
+        <tr><td>手动重发一份旧交付</td><td><code>python3 scripts/publish_to_lark_doc.py &lt;旧目录&gt;</code></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>📄 <b>测试用例自动化流水线</b> · 团队介绍 · 2026-07-09</div>
+    <div>想看更细的文字版：<code>qa-testcase-design/PIPELINE.md</code> · 规则源头：<code>SKILL.md</code></div>
+  </div>
+</footer>
+
+</body>
+</html>
