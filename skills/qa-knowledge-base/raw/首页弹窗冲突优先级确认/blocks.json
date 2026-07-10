@@ -1,0 +1,292 @@
+[
+  {
+    "block_id": "EEXgdGeCzone2JxsMO8l7hLNgKg",
+    "block_type": 1,
+    "children": [
+      "GdzodaXhsoYTLzx3Q7hlIAwEgsb",
+      "RmMXdsfEAohQhPxBmiQlsebbggg",
+      "UWcRdVn2YoSduyxevvOlnoCsgCf",
+      "Co45dNg29oi2YAxnaIpl32HJgJb",
+      "HkIHdiV0Eo1HaZxmjF8lOHM3gkJ",
+      "SEuddbrDqo8fxvxe53Rl6tUOg2b",
+      "C3gFdLTsMonsSaxa0U2l5603gYf",
+      "HzR8dWokZooTpUx2f6xlXZbwgOh",
+      "TKfbdQRdRo1UjQx6mM3lyMoDgBb",
+      "DQY2d1FJnoPUnOxnUA3l17l4gwb",
+      "NIyodUcX3oiIPhxBXGJlJ6K7grr",
+      "QzSrdU3Wiol1wWxMkRHl6ZsZgcd"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首页弹窗冲突优先级确认",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "GdzodaXhsoYTLzx3Q7hlIAwEgsb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Top learners上周战报 优先级最高",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "RmMXdsfEAohQhPxBmiQlsebbggg",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 840,
+      "scale": 0.18218085106382978,
+      "token": "B3tFbtHBoodEk1xCmtGl0hHJg0c",
+      "width": 1504
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "UWcRdVn2YoSduyxevvOlnoCsgCf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "家园开启弹窗 优先级第二",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "Co45dNg29oi2YAxnaIpl32HJgJb",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 916,
+      "scale": 0.15264187866927592,
+      "token": "ZLzwbKztAowsMUx5RfElfExqggc",
+      "width": 2044
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "HkIHdiV0Eo1HaZxmjF8lOHM3gkJ",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "功能广场引导浮窗 优先级第三",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "SEuddbrDqo8fxvxe53Rl6tUOg2b",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "去掉家长的信弹窗",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "C3gFdLTsMonsSaxa0U2l5603gYf",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 686,
+      "scale": 0.41544117647058826,
+      "token": "PR3BbiLZgobEH3xZgfQlJXFlgHJ",
+      "width": 1088
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "HzR8dWokZooTpUx2f6xlXZbwgOh",
+    "block_type": 2,
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "（1）去掉底部新的图标",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TKfbdQRdRo1UjQx6mM3lyMoDgBb",
+    "block_type": 2,
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "（2）去掉第三节课完课弹出的动画",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DQY2d1FJnoPUnOxnUA3l17l4gwb",
+    "block_type": 2,
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "（3）学习中心保持新的样式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NIyodUcX3oiIPhxBXGJlJ6K7grr",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 512,
+      "scale": 0.23975409836065573,
+      "token": "DMHRboE8FoFGH8xaH9glqLPwg1S",
+      "width": 976
+    },
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg"
+  },
+  {
+    "block_id": "QzSrdU3Wiol1wWxMkRHl6ZsZgcd",
+    "block_type": 2,
+    "parent_id": "EEXgdGeCzone2JxsMO8l7hLNgKg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]
