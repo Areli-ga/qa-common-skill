@@ -1,0 +1,492 @@
+Mai - 加入主对话界面，提供点击互动
+基本信息
+
+
+产品文档
+
+
+
+Mai — 新增主对话界面（AI Tutor 对话页），支持点击互动与形象升级
+
+
+
+产品Owner
+
+
+
+Libin
+
+
+
+优先级
+
+🟡 高
+
+版本号
+
+v1.32.0
+
+需求背景
+
+当前 AI 仅作为 I Spy 游戏内的陪伴角色出现（实际由 Max 形象承载），缺少一个统一、独立的智能体入口与对话界面，无法支撑未来更多的需求
+本次需求升级Mai为一个更好玩的，由 AI 驱动、拥有情绪、可变形/变色、可点击互动的独立英语启蒙陪伴智能体，并为其搭建专属的「AI Tutor 对话页面」作为主入口，承载语音对话、形象反馈与游戏入口。
+现在的对话缺少 onboarding 环节，用户着陆感过硬。
+
+
+
+
+
+产品目标
+
+主对话界面上线后，进入对话页并完成 ≥3 轮语音对话（有效 onboarding）的用户占比超过 50%。
+用户与 Mai 的平均互动时长 / 单次对话轮次较仅 I spy 游戏 提升 100%。
+点击互动（抖动 / 眩晕彩蛋 / 眼球跟随）触发率达到一定比例，验证形象升级对互动意愿的提升。
+
+
+
+
+
+主要特性
+
+新增「AI Tutor 主对话界面」，支持白天 / 黑夜主题，并提供 I Spy 游戏入口。
+Mai 形象升级v2 - 极简兔子：
+支持变形、变色、情绪表达；
+区分 reaction（系统触发反馈）与 interaction（用户触摸反馈）；
+支持 SVG Morph；
+包含彩蛋（连续点击眩晕、眼球跟随）。
+Mai 由 AI 驱动：提供主 Prompt 与子 Prompt，并定义主、子 Prompt 的交互切换方式。
+I Spy 游戏内的 Mai 形象替换掉现有的 Max。
+Admin 后台升级：支持主 Prompt 配置、单词卡支持单词矢量图形的配置（非必填）、支持加载动画与欢迎策略配置。
+
+
+
+
+
+修订记录
+
+
+
+
+
+
+资源列表
+
+
+资源
+
+链接
+
+UI 设计稿（Figma）
+
+
+https://www.figma.com/design/W5UfpEasDpJtSjxjgFkpaV/1.32.0?node-id=35349-112386
+
+Demo（对话功能）
+
+https://maimai-companion.pages.dev/
+
+Demo（形象变形）
+
+https://mai-morph-test.pages.dev/
+
+Prompt 配置（主 Agent）
+
+小麦 Main Agent Prompt V5
+
+动画参数
+
+小麦 - 基础参数文件
+
+Svg 单词卡
+
+//待定 
+
+更多面向未来的规划
+
+Backlog 需求清单 - 对话课
+需求范围
+范围内
+
+
+序号
+
+说明
+
+1
+
+新增 Mai 入口（右下角，banner 配置静态图，点击进入 AI Tutor 对话页面）
+
+2
+
+新增 AI Tutor 主对话界面（左侧 Mai 展示区 / 右侧用户区 / 底部游戏入口），支持白天黑夜主题
+
+3
+
+Mai 形象升级至 v2 极简兔子：reaction / interaction / 变形 / 变色 / 情绪 / SVG Morph
+
+4
+
+全局互动彩蛋：单击抖动、快速连续点击眩晕、眼球跟随
+
+5
+
+接入 AI 主 / 子 Prompt 驱动，支持语音输入、流式输出、打断、Memory 学习进度存储
+
+6
+
+游戏入口：I Spy with My Little Eye（点击切换 Prompt 并加载 at home 关卡）
+
+7
+
+I Spy 游戏内 Mai 形象替换 Max
+
+8
+
+Admin 后台升级：
+拆分I spy 游戏的prompt为 main prompt 和 游戏内 prompt；
+拆分 Memory 为：用户基本信息，游戏进度，单轮次对话报告总结；
+单词矢量图形变形配置。
+范围外（排除项）
+本期仅支持 一个 游戏入口（I Spy with My Little Eye — at home），更多内容正在设计中，在现在的置灰入口出现
+流程图
+
+进入 App
+  → (右下角 banner 静态图) 点击 Mai 入口
+  → 进入 AI Tutor 对话页面（Mai 处于 sleep，资源加载中）
+       ├─ 加载中点击 Mai → 抖动 / 连续点击 → 眩晕彩蛋
+       └─ 资源加载完成（若动画在播则播完再进）
+  → 展示 Greeting（按 Admin 配置，区分新 / 老用户，参考现在的 I Spy With My Little Eye 的 Greeting设计）
+  → 进入对话：
+       ├─ 自动激活麦克风 → 语音输入 →（自动结束或点击）提交 → 打断 / 中止 AI 当前 speech
+       ├─ Mai 流式输出语音 + 气泡展示最新一句话
+       ├─ 支持 SVG Morph，play word game.
+       └─ Memory 记录学习进度
+  → (底部) 点击 I Spy 入口 → 切换 Prompt → 加载并运行 I Spy at home 游戏
+  → 离开 I Spy → 切换 Prompt → 加载并运行主对话 Prompt
+  → 离开 主对话 → 离别语（动态总结今日学习情况，参考现在的 I Spy With My Little Eye 的 bye-bye 的设计）
+流程说明
+
+
+序号
+
+流程
+
+说明
+
+1
+
+进入入口
+
+App 右下角通过 banner 配置静态图展示 Mai；用户点击后打开「AI Tutor 对话页面」
+
+2
+
+加载页
+
+
+Mai 以 sleep 状态展示；
+加载过程中支持点击触发 interaction（单击抖动、连续多次点击触发眩晕彩蛋，详见 v2 极简兔子）；
+资源加载完成后进入对话页；
+若抖动 / 眩晕彩蛋正在播放，则待动画播完后再进入
+
+3
+
+欢迎（Greeting）
+
+
+按 Admin 后台配置的欢迎方式展示；
+配置层区分新用户与老用户的欢迎策略；
+Prompt 配置参见「小麦 Main Agent Prompt V3」
+
+4
+
+对话交互
+
+
+左侧展示 Mai 并触发 reaction / interaction / 变形；
+支持 SVG Morph，play word game；
+气泡展示最新一句话；
+右侧用户区，麦克风支持：自动激活与点击激活，自动提交与用户手动提交；
+用户提交新语音可打断当前 AI speech；
+Mai 输出按 Admin Prompt 配置执行，并将学习进度写入 Memory。
+
+5
+
+进入游戏
+
+点击底部「I Spy with My Little Eye」入口，切换 Prompt 并加载运行 I Spy — at home 游戏，游戏内 Mai 形象替换原 Max
+
+6
+
+退出游戏
+
+退出游戏后，返回主对话界面；
+切换 prompts，主prompt 对游戏结果进行评价。
+
+7
+
+退出对话
+
+主prompt 对今日的学习成果进行总结，给出简短的离别感言；
+关闭对话。
+功能描述
+
+规则 / 逻辑详述
+
+
+序号
+
+元素
+
+规则 / 逻辑说明
+
+1
+
+Mai 入口
+
+位于屏幕右下角；仍通过 banner 配置静态图展示；点击后打开 AI Tutor 对话页面
+
+2
+
+加载状态
+
+Mai 以 sleep 状态展示；加载中可点击触发 interaction（单击抖动 / 连续点击眩晕彩蛋）；加载完成进入对话页；动画播放期间完成加载的，待动画播完再进入
+
+3
+
+Greeting
+
+按 Admin 配置的欢迎方式；区分新 / 老用户欢迎策略
+
+
+
+左侧 — Mai 展示
+
+行为遵循 v2 极简兔子（reaction / interaction / 高阶变形）；气泡展示 Mai 最新讲的一句话
+
+
+
+气泡溢出规则
+
+最多显示 4 行，超过 4 行支持手指滑动查看
+
+
+
+气泡过滤规则
+
+只显示需要被读出的内容；系统指令需被过滤，不应显示
+
+
+
+气泡加载方式
+
+流式加载
+
+
+
+右侧 — 用户区
+
+显示 user 子账号头像；用户语音不显示为文本，文本框内为麦克风启用按钮；
+麦克风 支持在 AI 讲完话之后，自动激活；
+点击可手动启用语音输入，再次点击完成并提交；
+手动语音输入过程中中止 AI 当前语音播放。
+
+
+
+底部 — 游戏入口
+
+本期仅支持一个游戏 I Spy with My Little Eye；点击进入后切换 Prompt，加载并运行 I Spy — at home
+
+
+
+对话输出
+
+Mai 的对话输出执行 Admin Prompt 配置；按既定 Prompt 配置在 Memory 中存储学习进度；支持唤起 Sidecar 的朗读功能与变形能力
+
+
+
+打断逻辑
+
+用户提交新语音可打断 / 中止当前 AI 的 speech
+
+
+
+彩蛋（全局）
+
+单击抖动；连续点击触发眩晕；眼球跟随
+
+
+
+主题
+
+支持白天 / 黑夜主题 🟡（切换方式：自动 / 手动？请补充）
+
+4
+
+I spy - at home 游戏
+
+修改 greeting 引导语，自然的承接住 对话界面的上一句对话；
+Max 的形象升级为 Mai，支持全局彩蛋：单击抖动；连续点击触发眩晕；眼球跟随。
+
+5
+
+退出游戏
+
+退出游戏后，返回主对话界面；
+切换 prompts，主prompt 对游戏结果进行评价。
+
+6
+
+退出对话
+
+主prompt 对今日的学习成果进行总结，给出简短的离别感言；
+关闭对话。
+
+验收标准 
+点击右下角 Mai 入口可正常进入 AI Tutor 对话页面，加载态、抖动、眩晕彩蛋、眼球跟随均符合 v2 极简兔子设计。
+语音输入可启用 / 提交 / 打断，AI 流式语音输出与气泡同步，气泡过滤 / 溢出 / 滑动规则生效。
+新 / 老用户 Greeting 按 Admin 配置正确区分。
+I Spy 入口可切换 Prompt 并进入 at home 关卡，游戏内 Mai 已替换 Max。
+学习进度正确写入并可从 Memory 读取。
+白天 / 黑夜主题、Admin 端 Prompt / 动画 / 欢迎策略配置均生效。
+
+数据埋点需求
+埋点背景：
+在之前数据埋点基础（之前只有一种对话类型，就是 iSpy 游戏；这一次相当于是增加了一种主类型）上，统计：
+Mai 主对话界面的基础PV UV数据、留存、进入率
+I spy 游戏的学习深度
+互动彩蛋触发情况（count pv, uv），用于评估形象升级与对话体验对用户互动的提升效果.
+神策上，历史数据看板：giggle-pro.cloud.sensorsjourney.com
+埋点需求：
+修正历史的埋点 bug：06/02 异常数据分析
+新增埋点已经在 Admin 平台提了需求
+新增埋点
+
+[
+  {
+    "event_name": "mai_interaction",
+    "display_name": "Mai 互动彩蛋触发",
+    "pm": "Libin",
+    "platform": ["iOS", "Android"],
+    "trigger_timing": "用户触摸 Mai 触发互动彩蛋(单击抖动 / 连续点击眩晕)且客户端成功执行该效果时上报,每次触发上报一次",
+    "business_intent": "统计互动彩蛋触发 PV / UV;评估 Mai 形象升级与对话体验对用户互动率的提升效果",
+    "event_tags": ["点击", "学习行为"],
+    "target_version": "v1.32.0",
+    "spec_url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8",
+    "properties": [
+      {
+        "name": "session_id",
+        "display_name": "会话ID",
+        "type": "String",
+        "required": true,
+        "description": "本次会话ID,与 StartTalkScene 一致"
+      },
+      {
+        "name": "conversation_type",
+        "display_name": "对话类型",
+        "type": "String",
+        "required": true,
+        "enum": ["main_chat", "game"],
+        "description": "main_chat=Mai 主对话, game=游戏(具体游戏见 scene_id)"
+      },
+      {
+        "name": "interaction_type",
+        "display_name": "彩蛋类型",
+        "type": "String",
+        "required": true,
+        "enum": ["single_tap_shake", "multi_tap_dizzy"],
+        "description": "single_tap_shake=单击抖动, multi_tap_dizzy=连续点击眩晕。"
+      },
+      {
+        "name": "page_state",
+        "display_name": "运行状态",
+        "type": "String",
+        "required": true,
+        "enum": ["loading", "running"],
+        "description": "loading=资源加载中, running=正常运行中。两类对话均有此两种状态"
+      }
+    ]
+  }
+]
+历史埋点的修改，请参见下面的 JSON：
+修改点主要是新增了一种聊天类型，区分了主聊天和游戏聊天。不太确定是否需要加一个独立的 游戏 scene ID 标识，如果加上，方便未来的拓展。
+ 埋点修改
+[
+  {
+    "event_name": "StartTalkScene",
+    "_action": "extend_properties",
+    "display_name": "进入对话场景",
+    "pm": "Libin",
+    "platform": ["iOS", "Android"],
+    "trigger_timing": "复用现有事件,本期仅新增属性。沿用原触发时机:用户进入 Talk Scene 页面时上报",
+    "business_intent": "支撑 Mai 主对话与游戏两类对话的 PV / UV、进入率、留存分析",
+    "target_version": "v1.32.0",
+    "spec_url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8",
+    "properties": [
+      {
+        "name": "conversation_type",
+        "display_name": "对话类型",
+        "type": "String",
+        "required": true,
+        "enum": ["main_chat", "game"],
+        "description": "main_chat=Mai 主对话, game=游戏(具体游戏见 scene_id)"
+      }
+    ]
+  },
+  {
+    "event_name": "EndTalkScene",
+    "_action": "extend_properties",
+    "display_name": "退出对话场景",
+    "pm": "Libin",
+    "platform": ["iOS", "Android"],
+    "trigger_timing": "复用现有事件,本期仅新增属性。沿用原触发时机:用户退出 Talk Scene 页面时上报",
+    "business_intent": "支撑两类对话的有效时长、对话轮次、退出方式分析;学习深度明细存于 memory 字段",
+    "target_version": "v1.32.0",
+    "spec_url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8",
+    "properties": [
+      {
+        "name": "conversation_type",
+        "display_name": "对话类型",
+        "type": "String",
+        "required": true,
+        "enum": ["main_chat", "game"],
+        "description": "main_chat=Mai 主对话, game=游戏(具体游戏见 scene_id)"
+      }
+    ]
+  },
+  {
+    "event_name": "TalkSceneAction",
+    "_action": "extend_properties",
+    "display_name": "对话场景内 AI 动作",
+    "pm": "Libin",
+    "platform": ["iOS", "Android"],
+    "trigger_timing": "复用现有事件,本期仅新增属性。沿用原触发时机:AI 产生一次 action 且客户端成功执行时上报",
+    "business_intent": "支撑两类对话下 AI 多模态动作的触发与执行分析",
+    "target_version": "v1.32.0",
+    "spec_url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8",
+    "properties": [
+      {
+        "name": "conversation_type",
+        "display_name": "对话类型",
+        "type": "String",
+        "required": true,
+        "enum": ["main_chat", "game"],
+        "description": "main_chat=Mai 主对话, game=游戏(具体游戏见 scene_id)"
+      }
+    ]
+  }
+]
+其他功能需求
+
+
+项
+
+说明
+
+多语言
+
+需支持多语言（界面文案 / Greeting）
+
+数据兼容
+
+新老数据兼容；I Spy 游戏内 Max → Mai 替换需保证存量的已学习数据与进度不受影响
