@@ -1,0 +1,214 @@
+I spy - at home 游戏模型升级
+Figma:  https://www.figma.com/design/Si6cThMuRKaCWB6MORBGDY/1.31.0?node-id=33006-28338&p=f&t=PfT1y4rP2nKjXcd8-0
+
+Demo:
+Mai： https://mai-cpm.pages.dev/
+Svg morph 动画：https://app.giggle-ai.org/svg-morph
+Prompt：https://mai-prompt-lab.pages.dev/
+应用demo：https://maimai-companion.pages.dev/
+Dev demo: https://ai-webui.giggletools.com/voice-tutor
+
+需求清单：
+
+
+优先级
+
+清单
+
+dod
+
+1
+
+I spy - at home 游戏迁移。
+新技术，保留Max形象，AI tutor 技术方案切换：
+准确识图（建议）；
+高效执行游戏控制，Memory 升级 - 更准确记住累计学过单词，可以记住用户喜好，可以输出学习报告。
+Admin 配置。
+对应的交互优化，全开麦改为点击发送。
+
+按照既定的规则玩游戏，过程中不存在AI 和幻觉 bug；
+离别感言；
+多次进入的时候，记忆完备，按照线性的学习顺序继续学，已经学过的词汇不重复学
+
+
+2
+
+Mai - 主对话界面
+
+二期需求
+节奏：按照技术的估时，按照优先级进行开发，每周一次发版窗口进行发版。
+更多规划，参见：V1.31.0 需求清单
+需求详情
+I spy - at home 游戏迁移：
+
+
+模块
+
+说明
+
+截图
+
+I Spy with My Little Eye - at home 升级
+
+
+技术方案升级：
+修改技术方案：从 Live 对话修改为流式输出
+Sidecar 的朗读功能、高亮、放大缩小等功能，与之前保持一致
+Admin 后台配置，遵循新的配置方式，支持图片直接作为LLM的输入，降低运营成本。详见 Admin 配置模块。
+用户玩法升级（关于玩法已经在Prompt层调试完毕：prompt）：
+告诉AI故事情节，AI理解故事情节并可以作为 rounds 转场使用；
+设定按照等级划分的词汇表（L1，L2，L3），并约束在词汇表内进行工作；猜测单词的顺序遵从当前等级下单词表的顺序；
+执行“等级升级和降级”策略：
+升级策略，满足以下任一条触发升1级，最高到L3：
+用户主动反馈太简单；
+当用户连续3轮，在首次就猜对时，进行升级（对应的提示语可以是：“哇，你好棒呀！一下就猜到了，那我们现在提高一点点难度。I spy with my little eye...”。提示语不需要过于张扬，因为在界面里面没有用户等级的概念，这个用户等级相当于只是我们系统内的一个标记）
+降级，满足以下任一条触发降1级，最低到L1：
+用户主动反馈太难；
+用户连续2轮，均在3次提示内无法猜对时，进行降级（对应的输出可以是：“没关系，这个单词是不是对你来讲有点难？不过，你勇敢尝试了就已经是最棒的了。我们现在换一个简单一点的看一下好不好。I spy with my little eye...”。提示语不需要过于张扬，因为在界面里面没有用户等级的概念，这个用户等级相当于只是我们系统内的一个标记）
+提供3次猜测机会：
+先所在空间和首字母，
+再颜色描述，
+再详细的关于物品的其他参数描述；
+在第二层对第三层提示的时候，需要将之前的线索一并带上，相当于线索提示是不断强化的，在一句话里面逐渐变多，有规律有逻辑的增强，详情可参见右边案例补充。
+聚焦和高亮：
+揭晓到第3层线索的时候，进行聚焦；
+揭晓单词的答案之后，执行聚焦和高亮；
+用户朗读完毕之后，用一句俏皮的故事情节，作为该轮次的收尾，并直接开启下一轮的问题。不同等级，朗读的句子可以不同，比如：
+低等级：非常简单的单句子，比如：I can see a bird. 或者 There is ...
+中等级：加上更多的修饰词，比如：I spied a red bird on the roof. 
+高等级：可以加入故事情节，比如：The bird was standing on the roof, while a cat was staring at it.
+memory：记录用户姓名、语言喜好、当前等级：
+
+
+交互优化
+点击左上角退出时，遵从现在“用户口述：我要离开”的设计。
+按照以下步骤，先执行一个有仪式感的、由大模型驱动的离别感言，再执行退出：
+有仪式感的离别感言：
+向 GPT 发送：我想离开，就这样吧。
+播放Max的离别动画，同时播放 GPT 返回的文案；
+离别感言播放完毕之后，关闭游戏，回到入口处。
+提供一个跳过按钮，在 GPT 的离别感言播放完毕之前，立即终止 Mai 的音频播放，并直接退出游戏。
+切换应用，应用置于后台，
+暂停音频播放
+重新切换到应用前台后：
+点击Mai，让Mai重新生成最近一轮次对话；
+智能体需要给到用户点击反馈，但是不要给出过于激烈的反馈。
+需要通过LLM，回到主对话上去。
+用户点击麦克风图标，也可以主动发起对话。
+
+
+
+image.png
+
+
+
+其他：
+
+
+模块
+
+说明
+
+截图
+
+其他
+
+因为我们修改了技术方案，从 Live对话修改为点击后发送消息，对应执行以下：
+总结memory：
+离开对话或游戏，静默总结 memory
+当用户在总结过程中再次点击入口的时候，需要先执行完上一次对话的 memory 总结，然后再加载 memory 并应用到下个对话。不可以跳过 Mai 的总结，直接进入游戏。
+即提供一个严谨的 memory 总结流程：
+先总结上一次的 memory
+再初始化下一次的对话
+忽略用户异常关闭应用导致 Memory 丢失。
+memory参考见右侧结构
+
+
+
+{
+  "user_profile": {
+    "name": "伊布",
+    "addressing_preference": "叫我大 Mai 或 小 Mai"
+  },
+  "learning_memory": {
+    "heard_words": [],
+    "successfully_repeated_words": [
+      "ball",
+      "i play with a ball",
+      "dog"
+    ],
+    "attempted_words": [],
+    "not_repeated_words": []
+  },
+  "play_preference": {
+    "likes": [
+      "狗狗",
+      "追球"
+    ],
+    "dislikes": [],
+    "preferred_gameplay": "roleplay and repetition games with Mai",
+    "interaction_style": "laughing and playful",
+    "speaking_confidence": "high",
+    "next_strategy": "use short imitation phrases and counting games"
+  },
+  "freeform_facts": [
+    "有一只狗叫牛牛",
+    "牛牛 10 岁",
+    "牛牛喜欢追球"
+  ],
+  "word_state": {
+    "ball": {
+      "word": "ball",
+      "source": "curriculum",
+      "introduced_at": 1778741971704,
+      "last_seen_at": 1778741971704,
+      "mastery": 0,
+      "due_at": 1778745571704,
+      "success_count": 1,
+      "attempt_count": 1,
+      "today_seen_count": 1,
+      "today_success_count": 1,
+      "last_seen_day": "2026-05-14",
+      "recent_session_days": [
+        "2026-05-14"
+      ]
+    },
+    "dog": {
+      "word": "dog",
+      "source": "curriculum",
+      "introduced_at": 1778741971704,
+      "last_seen_at": 1778741971704,
+      "mastery": 0,
+      "due_at": 1778745571704,
+      "success_count": 1,
+      "attempt_count": 1,
+      "today_seen_count": 1,
+      "today_success_count": 1,
+      "last_seen_day": "2026-05-14",
+      "recent_session_days": [
+        "2026-05-14"
+      ]
+    },
+    "play": {
+      "word": "play",
+      "source": "ad_hoc",
+      "introduced_at": 1778741971704,
+      "last_seen_at": 1778741971704,
+      "mastery": 0,
+      "due_at": 1778741971704,
+      "success_count": 1,
+      "attempt_count": 1,
+      "today_seen_count": 1,
+      "today_success_count": 1,
+      "last_seen_day": "2026-05-14",
+      "recent_session_days": [
+        "2026-05-14"
+      ],
+      "promotion_candidate": false
+    }
+  }
+}
+Admin
+Prompt 配置
+Mai prompt
+I spy 游戏 prompt
