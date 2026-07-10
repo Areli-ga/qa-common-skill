@@ -1,0 +1,358 @@
+[
+  {
+    "block_id": "FPSPdi7reoD33Ix0kwflk1e0gPe",
+    "block_type": 1,
+    "children": [
+      "A6kQdziXtonC8KxVLQAldL3tgYg",
+      "QQS9dgJbsoWLTvxAlQTluqsLgne",
+      "Ryv9duxBno8aCBxgPrSlUYyTgOd",
+      "ZCiWdL9H3oS7Qbxrky1lMyUqg3c",
+      "CML7dAhU1oYErKxE7T4lGxzkgeI",
+      "SSEVdi8wmoSsA5x1BM8lCk0ygag",
+      "DGUud5H8PownvmxNcjtlehdPgwh",
+      "EMWpdzyZZoNnMix3NhAl4NkVgXf",
+      "TVw0dpjFwoRIqKxgoMdlqWgCg6e",
+      "LqaDd6rSkob6Texv42Rl32SUgQd",
+      "RZwidfKQeoxZ4BxxNUYlZ9T6gWd",
+      "Xy2dd26NPo5kQ0xNMiJlR3g4gIb"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "切换等级细节优化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "A6kQdziXtonC8KxVLQAldL3tgYg",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "走查细节",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "QQS9dgJbsoWLTvxAlQTluqsLgne",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 760,
+      "scale": 1,
+      "token": "W2UPb97F4o7DpbxhxJUl00uTgcg",
+      "width": 1532
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "Ryv9duxBno8aCBxgPrSlUYyTgOd",
+    "block_type": 2,
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZCiWdL9H3oS7Qbxrky1lMyUqg3c",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "切换等级点击解锁进入升级测试，点击【开始测试】，关闭后面的页面，后续测试中途点击左上角关闭，返回首页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（已验证）",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "CML7dAhU1oYErKxE7T4lGxzkgeI",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "升级测试结束后，点击【探索lv 6】，去到首页。失败状态也是回到首页（我不确定是什么按钮，测试验证一下）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（已验证）",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "SSEVdi8wmoSsA5x1BM8lCk0ygag",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "进入切换等级，选中当前等级",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（已验证）",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "3"
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "DGUud5H8PownvmxNcjtlehdPgwh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "多语言适配",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "EMWpdzyZZoNnMix3NhAl4NkVgXf",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1602,
+      "scale": 1,
+      "token": "PoVWb31g8ox7ArxzrK0lNMgSgSe",
+      "width": 2152
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "TVw0dpjFwoRIqKxgoMdlqWgCg6e",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1652,
+      "scale": 1,
+      "token": "LCatb2JKWo62W7xGZfFluHmEgWh",
+      "width": 2196
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "LqaDd6rSkob6Texv42Rl32SUgQd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不知道是不是网络问题，会出现一些英文，一些中文",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "RZwidfKQeoxZ4BxxNUYlZ9T6gWd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "多语言后字体展示不出来",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（已验证，选中该卡片后可以进行上下滑动）",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe"
+  },
+  {
+    "block_id": "Xy2dd26NPo5kQ0xNMiJlR3g4gIb",
+    "block_type": 2,
+    "parent_id": "FPSPdi7reoD33Ix0kwflk1e0gPe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]
