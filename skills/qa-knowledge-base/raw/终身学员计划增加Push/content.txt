@@ -1,0 +1,236 @@
+终身学员计划增加Push
+需求背景
+在【需求复盘】数据通知弹窗曝光中，我们发现：从push开启弹窗到用户点击允许的授权率是73%，用户对开启push的接受度较高。
+因此：需要在流程中引导授权，并建立完整的 Push 触达体系。
+目前触发弹窗时机
+
+
+1 - 登录选择小孩后 
+（仅剩此引导）
+
+
+2 - 第二天打开课程触发通知页面
+（1.30取消课程限制，所以不会再引导）
+
+img_v3_0211u_49dfeac4-8ac9-4915-bd8d-ee4dd06d6d5g.jpg
+
+
+
+image.png
+
+不同机型的push展示规则
+image.png
+
+总的来说
+
+
+项
+
+安全标准
+
+说明
+
+标题
+
+≤ 15 中文 / ≤ 30 英文
+
+满足所有机型折叠态可见
+
+正文
+
+≤ 25 中文 / ≤ 50 英文
+
+OPPO/vivo 折叠态可见
+
+核心钩子前置
+
+塞到前 15 字符
+
+OPPO/Dynamic Island 截断阈值
+
+emoji
+
+≤ 2 个，不放标题开头
+
+vivo 拒绝纯 emoji
+
+变量长度
+
+${child_name} 按 8 字算
+
+预留变量替换空间
+
+需求一:引导开启push弹窗
+image.png
+
+触发逻辑：
+仅对未开启提醒的用户弹出
+引导开启弹窗（下图文案） ➡️ 系统授权弹窗 
+终身学员用户不弹通用引导弹窗
+
+
+时机
+
+弹窗文案
+
+按钮
+
+参考
+
+通用引导：
+完成第 4 节课后
+约触达50%用户
+
+
+ZH：完成4节课学习！
+开启学习提醒，max明天提醒你打卡吧～
+
+EN：4 lessons completed! 🎉
+Turn on reminders, and Max will remind you tomorrow! 
+
+ZH：立即开启
+EN：稍后再说
+
+
+EN：Turn On Reminders 
+Not Now
+
+
+image.png
+
+
+
+终身学员引导：
+完成首日挑战弹窗后
+
+
+ZH：7天拿下终身学员认证
+开启学习提醒，轻松搞定认证～
+
+EN：
+Lifetime Member in 7 days! 🏆
+ Turn on reminders to make it easy!
+
+
+ZH：立即开启
+EN：稍后再说
+
+EN：Turn On Reminders 
+Not Now
+
+
+
+
+
+需求二：Giggle终身学员 Push 发送策略
+前置需求：「Giggle终身学员」计划PRD
+仅针对参加终身学员的推送
+image.png
+
+
+
+
+
+场景描述
+
+主标题（中文）
+
+副标题（中文）
+
+主标题（印尼语）
+
+副标题（印尼语）
+
+第2天未打卡
+
+距离认证还有5天！🎓
+
+今天回来吧——{child_name} 正在成为认证 Giggle 学习者的路上！
+
+5 hari lagi menuju sertifikasi! 🎓
+
+Kembali hari ini — {child_name} sedang dalam jalur untuk menjadi pelajar Giggle bersertifikat!
+
+第3天未打卡
+
+距离认证还有4天 🎓
+
+{child_name} 已经走了这么远！继续加油——证书越来越近了。
+
+4 hari lagi menuju sertifikasi 🎓
+
+{child_name} sudah sejauh ini! Terus semangat — sertifikatnya semakin dekat.
+
+第4天未打卡
+
+已完成一半！还剩3天 🔥
+
+别停下来——{child_name} 距离正式认证只剩一半了！
+
+Sudah setengah jalan! 3 hari lagi 🔥
+
+Jangan berhenti sekarang — {child_name} sudah setengah jalan menuju sertifikasi resmi!
+
+第5天未打卡
+
+距离认证还有2天！⚡
+
+
+快到了！再打卡2次，{child_name} 就能成为认证 Giggle 学习者。
+
+2 hari lagi menuju sertifikasi! ⚡
+
+Hampir sampai! 2 kali check-in lagi dan {child_name} akan menjadi pelajar Giggle bersertifikat.
+
+第6天未打卡
+
+明天就是认证日！🎓
+
+
+再坚持一天——明天打开 App，{child_name} 就能获得证书。
+
+Besok adalah Hari Sertifikasi! 🎓
+
+Satu hari lagi — buka aplikasinya besok dan {child_name} akan menerima sertifikatnya.
+
+第7天未认证
+
+今天是认证日，{child_name}！🎉
+
+打开 Giggle Academy，完成认证，领取学习者证书！
+
+Hari ini adalah Hari Sertifikasi, {child_name}! 🎉
+
+Buka Giggle Academy untuk menyelesaikan sertifikasi dan klaim sertifikat pelajarmu!
+
+前一天未打卡推送
+
+你的进度已保存 🐰
+
+
+昨天没打卡？你还有一次补打机会——回来继续保持认证进度！
+
+Progresmu tersimpan 🐰
+
+Kemarin terlewat? Kamu masih punya satu kesempatan susulan — kembali untuk menjaga sertifikasi tetap on track!
+
+
+主路径按照 Day 1～Day7 的顺序去推送，如果某一天打卡中断，在次日早上 10:00 去推送未打卡推送。
+未打卡推送推 3 天挽回通知，未回归不再推送。
+用户中途回来停止推送，回到正常打卡推送。
+
+
+需求三：Push数据追踪打通- 通用
+线上的push也需要支持
+目前push梳理Push 梳理表格，需要开发检查是否全部push都在
+支持从后台查询每条push的触达人数、打开人数
+push范围：后端下发 、 人工配置
+查询情况：圈中人数、实际触达人数、打开人数
+能识别到用户从哪条push点开的app
+image.png
+
+z
+
+数据埋点
+
+
