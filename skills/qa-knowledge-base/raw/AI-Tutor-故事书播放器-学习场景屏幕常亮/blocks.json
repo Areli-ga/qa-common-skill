@@ -1,0 +1,682 @@
+[
+  {
+    "block_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "block_type": 1,
+    "children": [
+      "QhgIdRbRToJZ5pxowFMljCS2gHd",
+      "Ct6Kd9W9xo5qPuxLyf3lV7kVggf",
+      "JglFdO7KnonmMSx1LF8lW7q7gEd",
+      "HDM8dXlOcoOkE8xnGJal8pRJg5T",
+      "R1HWdqTOAoMjvNx3OljlhMn6gxd",
+      "A1nNdI4IroAoiGxXSM9lkgJ2gjN",
+      "SVNndXLTqoV7uKxgFVzlGEJmgke",
+      "OoRcdeLERojmmqxBfDtljGvmgMb",
+      "XOPnd1RRIoqxGDxgPi4lbOZygld",
+      "LeHZdNSnUoW6aQxfSH7llGOpgId",
+      "TIQedFf59o1gaHxczYClJQdhg3b",
+      "C6zDdWFVMoK5NTxa0rMlKK3ngUd",
+      "Vew4dgZano69qUxo9iMlOPDFgeb",
+      "Z2FKdfRhuoVeGCxIbeNlKr6ognd",
+      "Ugp0dcdhuoMRRDxTshclc9IwgBh",
+      "NhR4dfaAOoSXs1xtpGslRKskgYy",
+      "G2vddBittoyPEmxGuHhlAFPSgoe",
+      "HcmUdIhgtoMXbHxAA6sllkrBgVe",
+      "XbHMdGZADoQlVtxQze1lMbpQgEg",
+      "IhT3d5lVnoi8uXxL7HRljXGCgRg",
+      "D5KSdsZbJopY63x5lcUlVi7uged",
+      "PeHpd7liHoJh8DxAZDGlMpk8gLf",
+      "F9DTd4AzaoBz5bxCN8kl5eU3gbc",
+      "MxhmdcG1zodJxexTwWpl7Yd9gQe",
+      "Q9fDd3tw1oqXV6xaITKlHIUCg1d",
+      "U43ldAXasop3cwxkNmJlh6kLgFf",
+      "W001djMEzoZkZvxr4ssl0SJ7geg"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "AI Tutor / 故事书播放器 学习场景屏幕常亮",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "QhgIdRbRToJZ5pxowFMljCS2gHd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "Ct6Kd9W9xo5qPuxLyf3lV7kVggf",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在学习过程中，设备会在用户长时间未操作后自动降低屏幕亮度或关闭屏幕。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JglFdO7KnonmMSx1LF8lW7q7gEd",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "虽然用户没有产生触摸行为，但学习过程仍在持续进行，见于：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HDM8dXlOcoOkE8xnGJal8pRJg5T",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "故事书播放器，自动播放故事；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "R1HWdqTOAoMjvNx3OljlhMn6gxd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "AI tutor 对话课。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "A1nNdI4IroAoiGxXSM9lkgJ2gjN",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "熄屏会导致：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SVNndXLTqoV7uKxgFVzlGEJmgke",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "学习过程被打断",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "OoRcdeLERojmmqxBfDtljGvmgMb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户需要额外操作唤醒设备，增加误触风险",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "XOPnd1RRIoqxGDxgPi4lbOZygld",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "降低学习体验连续性",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "LeHZdNSnUoW6aQxfSH7llGOpgId",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对于儿童用户而言，上述问题更加明显，容易造成困惑和挫败感。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TIQedFf59o1gaHxczYClJQdhg3b",
+    "block_type": 22,
+    "divider": {},
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "C6zDdWFVMoK5NTxa0rMlKK3ngUd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求目标",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "Vew4dgZano69qUxo9iMlOPDFgeb",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在学习过程中保持屏幕处于可见状态。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Z2FKdfRhuoVeGCxIbeNlKr6ognd",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "避免设备自动变暗或关闭屏幕。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ugp0dcdhuoMRRDxTshclc9IwgBh",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "确保用户能够连续完成学习任务，不被设备节能策略打断。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NhR4dfaAOoSXs1xtpGslRKskgYy",
+    "block_type": 22,
+    "divider": {},
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "G2vddBittoyPEmxGuHhlAFPSgoe",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "功能说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "HcmUdIhgtoMXbHxAA6sllkrBgVe",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "开启屏幕控制的时机",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "XbHMdGZADoQlVtxQze1lMbpQgEg",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "进入学习场景时自动开启屏幕常亮。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IhT3d5lVnoi8uXxL7HRljXGCgRg",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "包括：",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "D5KSdsZbJopY63x5lcUlVi7uged",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "故事书图文播放器；",
+            "text_element_style": {
+              "background_color": 10,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "PeHpd7liHoJh8DxAZDGlMpk8gLf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "AI tutor 对话课的所有界面。",
+            "text_element_style": {
+              "background_color": 10,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "F9DTd4AzaoBz5bxCN8kl5eU3gbc",
+    "block_type": 22,
+    "divider": {},
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "MxhmdcG1zodJxexTwWpl7Yd9gQe",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "关闭屏幕控制的时机",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "Q9fDd3tw1oqXV6xaITKlHIUCg1d",
+    "block_type": 2,
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离开学习场景时，设备恢复默认系统行为，或其他业务项约定的控制行为。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "U43ldAXasop3cwxkNmJlh6kLgFf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "比如从故事书播放器退出，回到故事书主页。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  },
+  {
+    "block_id": "W001djMEzoZkZvxr4ssl0SJ7geg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "从 AI Tutor 的 H5 页面退回到 Unity 页面。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MksGdYQQloLXhyxWkDhloltjgse"
+  }
+]

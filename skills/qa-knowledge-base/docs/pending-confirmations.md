@@ -4,7 +4,9 @@
 
 ## 当前待确认
 
-无。
+| 日期 | 笔记 | 待确认内容 |
+|---|---|---|
+| 2026-07-13 | [语音识别-自适应跟读计时与会话统计](../notes/2026-07-13-语音识别-自适应跟读计时与会话统计.md) | `lesson_speech_recognition_end` 新增字段命名文档内不一致:产品目标段写 `word_session_id`/`speech_word_result`,需求详情表写 `speech_session_id`/`speech_session_result`。以实际埋点上报为准,需向产品/研发确认最终字段名。 |
 
 ## 已确认记录
 

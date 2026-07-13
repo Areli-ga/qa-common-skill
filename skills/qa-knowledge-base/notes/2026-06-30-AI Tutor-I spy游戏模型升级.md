@@ -2,7 +2,7 @@
 标题: I spy - at home 游戏模型升级
 模块: AI Tutor / I spy游戏
 版本: V1.31.0
-related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-07-13-AI Tutor-学习场景屏幕常亮.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/UFbtwfVfgiGBmwkNaUvliKqagBh
 日期: 2026-06-30
 ---

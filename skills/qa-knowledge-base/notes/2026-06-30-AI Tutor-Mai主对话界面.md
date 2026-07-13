@@ -2,7 +2,7 @@
 标题: Mai - 加入主对话界面，提供点击互动
 模块: AI Tutor / Mai主对话
 版本: V1.32.0
-related: [2026-06-30-AI Tutor-I spy游戏模型升级.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md]
+related: [2026-06-30-AI Tutor-I spy游戏模型升级.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-07-13-AI Tutor-学习场景屏幕常亮.md, 2026-07-13-语音识别-自适应跟读计时与会话统计.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8
 日期: 2026-06-30
 ---
