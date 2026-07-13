@@ -1,0 +1,64 @@
+{
+  "title": "路径奖励AB测试",
+  "doc_id": "H71PdfNMxoOVc0xossdlRlqLgzd",
+  "wiki_token": "HxFWwKHJxi7MyzkuPdGliToQgif",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HxFWwKHJxi7MyzkuPdGliToQgif",
+  "fetched_at": "2026-07-13T11:43:40.739150+08:00",
+  "version": "V1.34.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 2982,
+  "blocks": 303,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.png",
+      "bytes": 191303,
+      "dims": [
+        2272,
+        862
+      ],
+      "read_file": "images/img-01.read.png"
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.png",
+      "bytes": 443595,
+      "dims": [
+        2804,
+        1192
+      ],
+      "read_file": "images/img-02.read.png"
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.png",
+      "bytes": 268167,
+      "dims": [
+        1280,
+        732
+      ]
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.png",
+      "bytes": 238844,
+      "dims": [
+        1790,
+        598
+      ]
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.png",
+      "bytes": 454494,
+      "dims": [
+        2664,
+        1500
+      ],
+      "read_file": "images/img-05.read.png"
+    }
+  ],
+  "image_count": 5,
+  "tables": 5
+}
