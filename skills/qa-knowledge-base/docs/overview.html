@@ -181,7 +181,7 @@
       <h1>QA 测试用例知识库</h1>
       <p class="lede">把散落在飞书各版本里的产品需求文档,「编译」成结构化、可检索的本地笔记——让 QA 写测试用例之前,一把捞出相关往期功能、历史逻辑与该重点回归的点。</p>
       <div class="stats">
-        <div class="stat"><div class="n">46</div><div class="l">已入库需求</div></div>
+        <div class="stat"><div class="n">47</div><div class="l">已入库需求</div></div>
         <div class="stat"><div class="n">24</div><div class="l">功能模块</div></div>
         <div class="stat"><div class="n">V1.29–33</div><div class="l">版本覆盖</div></div>
         <div class="stat"><div class="n">4</div><div class="l">机械脚本</div></div>
@@ -199,6 +199,7 @@
         <li><a href="#arch">架构:进 · 存 · 取</a></li>
         <li><a href="#impl">实现:脚本与分工</a></li>
         <li><a href="#call">调用逻辑</a></li>
+        <li><a href="#files">目录与文件详解</a></li>
         <li><a href="#modules">模块地图</a></li>
         <li><a href="#module-guide">模块功能手册</a></li>
         <li><a href="#usage">使用方法</a></li>
@@ -231,8 +232,8 @@
           <div class="tstep"><div class="tn done2">08</div><div><h4>架构思维 · 进存取</h4><p>倒推「取」→ 反推「存」与「进」,画出数据流。产出 <code>docs/02-architecture.md</code>。</p></div></div>
           <div class="tstep"><div class="tn done2">09</div><div><h4>技术选型 · 轻量优先</h4><p>纯文件、Python 标准库、Claude 多模态、不上库。产出 <code>docs/03-tech-stack.md</code>。</p></div></div>
           <div class="tstep"><div class="tn done2">10</div><div><h4>实现 · ingest + 检索</h4><p>探针验证飞书可读 → 4 个脚本 + SKILL 规则 → 真实文档跑通进/存/取。</p></div></div>
-          <div class="tstep"><div class="tn done2">+</div><div><h4>养库 · 46 篇 / 24 模块</h4><p>持续投喂真实需求,边用边加固:超大图、relate 误连、fetch 网络韧性。</p></div></div>
-          <div class="tstep"><div class="tn done2">★</div><div><h4>Skill 化 · 日常可调用</h4><p>装全局薄入口 <code>qa-knowledge-base</code>,新会话可从任意目录自然语言触发。</p></div></div>
+          <div class="tstep"><div class="tn done2">+</div><div><h4>养库 · 47 篇 / 24 模块</h4><p>持续投喂真实需求,边用边加固:超大图、relate 误连、fetch 网络韧性。</p></div></div>
+          <div class="tstep"><div class="tn done2">★</div><div><h4>Skill 化 · 合并为单一 skill</h4><p>早期是「薄入口 qa-kb + 本体」两段;2026-07 已<b>合并为单一 <code>qa-knowledge-base</code></b>(装 <code>~/.codex/skills/</code>,<code>~/.claude/skills/</code> 软链同一份),新会话从任意目录自然语言触发。</p></div></div>
         </div>
       </section>
 
@@ -304,24 +305,94 @@
       <section id="call">
         <div class="ey">Invocation</div>
         <h2>调用逻辑</h2>
-        <p class="sub">全局薄入口让新会话能从任何目录找到并启动它;本体项目是流程与数据的唯一事实来源。</p>
+        <p class="sub">现在是<b>单一 skill</b>(早期的"薄入口 qa-kb"已并入):<code>qa-knowledge-base/</code> 本身就是完整本体,装在 <code>~/.codex/skills/</code>、<code>~/.claude/skills/</code> 软链同一份。两条进入路径:<b>A</b> 人直接唤起、<b>B</b> 被主流水线 <code>qa-testcase-design</code> 调用。</p>
         <div class="scroll">
           <div class="callflow">
-            <div class="cf"><div class="cfn">01</div><h4>新会话</h4><p>自然语言("把这篇飞书需求入库""写 X 用例前查往期")或 <code>Skill(qa-knowledge-base)</code></p></div>
-            <div class="cf"><div class="cfn">02</div><h4>全局入口</h4><p><code>~/.claude/skills/qa-knowledge-base/</code> / <code>~/.codex/skills/qa-knowledge-base/</code> 薄入口——只负责指路</p></div>
-            <div class="cf"><div class="cfn">03</div><h4>读本体</h4><p>跳到项目,读 <code>SKILL.md</code> / <code>RESUME.md</code> / <code>CLAUDE.md</code> / <code>AGENTS.md</code></p></div>
-            <div class="cf"><div class="cfn">04</div><h4>执行</h4><p>按本体规则跑 ingest 或检索;数据始终留在项目里</p></div>
+            <div class="cf"><div class="cfn">A1</div><h4>人 · 新会话</h4><p>自然语言("把这篇飞书需求入库""写 X 用例前查往期")或 <code>Skill(qa-knowledge-base)</code></p></div>
+            <div class="cf"><div class="cfn">A2</div><h4>读本体规则</h4><p>读 <code>SKILL.md</code>(进存取唯一事实来源)/ <code>RESUME.md</code> / <code>CLAUDE.md</code> / <code>AGENTS.md</code></p></div>
+            <div class="cf"><div class="cfn">A3</div><h4>执行</h4><p>按规则跑 ingest(进)或检索(取);数据始终留在本项目</p></div>
+            <div class="cf"><div class="cfn">B</div><h4>被流水线调用</h4><p><code>qa-testcase-design</code> 出例前,经其 <code>scripts/kb.py</code> 定位本库、转发调 <code>search.py</code> <b>只读</b>检索历史(找不到则降级"未读")</p></div>
           </div>
         </div>
         <div class="archnote" style="margin-top:16px">
-          入口与本体职责分离:<b>入口</b>(全局、可发现、触发描述)只指路;<b>本体 SKILL.md</b>(项目内)是 ingest 5 步 + 检索 4 流的唯一事实来源;<b>CLAUDE.md / AGENTS.md</b> 带红线和项目规则;<b>RESUME.md</b> 记进度交接。
+          <b>单一 skill、本体即入口</b>:<code>SKILL.md</code> 是 ingest 6 步 + 检索 3+1 流的唯一事实来源;<code>CLAUDE.md / AGENTS.md</code> 带红线与项目规则(Claude 读前者、codex 读后者,保持同步);<code>RESUME.md</code> 记进度交接。<b>对外只读</b>:qa-testcase-design 只经 <code>kb.py → search.py</code> 读本库,<b>绝不写入</b>。
         </div>
+      </section>
+
+      <!-- 5.5 目录与文件详解 -->
+      <section id="files">
+        <div class="ey">Files</div>
+        <h2>目录与文件详解</h2>
+        <p class="sub">项目根 <code>~/.codex/skills/qa-knowledge-base/</code>(<code>~/.claude/skills/</code> 软链同一份)。下面把每个文件夹、每个子文件的角色、内容和「谁在什么时候调用它」逐项讲清。</p>
+
+        <h3 class="minor">① 规则与交接 · 根目录 Markdown</h3>
+        <div class="tbl-wrap scroll">
+          <table style="min-width:820px">
+            <thead><tr><th>文件</th><th>角色</th><th>内容 / 谁何时调用</th></tr></thead>
+            <tbody>
+              <tr><td><code>SKILL.md</code></td><td>唯一事实来源</td><td>ingest 6 步 + 检索 3+1 流的完整规则。每次进/取前 Claude 必读——既是入口也是流程说明书。</td></tr>
+              <tr><td><code>RESUME.md</code></td><td>进度交接</td><td>已入库清单、当前进度、待办、踩过的坑。新会话接手先读它一眼即可续上。</td></tr>
+              <tr><td><code>CLAUDE.md</code></td><td>红线约束(Claude)</td><td>目录约定、命名、只读边界、「不直接生成用例」等红线。Claude 运行时读。</td></tr>
+              <tr><td><code>AGENTS.md</code></td><td>红线约束(Codex)</td><td>与 CLAUDE.md 同内容的 codex 运行时版本,两者保持同步(哪个运行时可见就读哪个)。</td></tr>
+              <tr><td><code>taxonomy.md</code></td><td>模块分类体系</td><td>功能模块清单 + 标签,「边 ingest 边长」:新功能→新建一级、已有→归二级。判断模块归属时查它、有新模块写回它。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="minor">② 数据四层 · 生 → 熟(怎么存)</h3>
+        <div class="tbl-wrap scroll">
+          <table style="min-width:820px">
+            <thead><tr><th>文件夹</th><th>层</th><th>内容 / 读写规则</th></tr></thead>
+            <tbody>
+              <tr><td><code>raw/</code><br><small>48 目录 / 593 文件</small></td><td>原料层(只读)</td><td>每篇需求一个目录:飞书原文 + 表格(保行列) + 图片原图 + <code>meta.json</code>(链接/抓取时间/版本)。<b>只读、永不改</b>——事实来源,判错能翻回核对;重抓需 <code>--force</code>。</td></tr>
+              <tr><td><code>notes/</code><br><small>47 篇</small></td><td>笔记层(成品)</td><td>每篇一份 <code>日期-模块-标题.md</code>:frontmatter(标题/模块/版本/related/原链接/日期)+ 摘要 + 功能信息(逻辑/状态/边界/字段)+ 图转文字。<b>人读 + 被检索的主体</b>。</td></tr>
+              <tr><td><code>index/</code><br><small>INDEX.md</small></td><td>索引层(导航)</td><td>脚本从 notes 全量重建:全库目录(模块｜版本｜标题｜链接｜摘要)+ 模块视图。<b>derived、可一键重建</b>,坏了不慌。</td></tr>
+              <tr><td><code>wiki/</code><br><small>空</small></td><td>编译层(v2 预留)</td><td>v2 才填:同模块多篇合成一页「当前完整逻辑」的模块主题页。v1 只留空位、前三层不动。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="minor">③ 机械脚本 scripts/ · 标准库、零依赖、带详细日志</h3>
+        <div class="tbl-wrap scroll">
+          <table style="min-width:820px">
+            <thead><tr><th>脚本</th><th>属于</th><th>作用 / 谁何时调用</th></tr></thead>
+            <tbody>
+              <tr><td><code>fetch.py</code></td><td>进 ①(怎么进)</td><td>抓一篇飞书文档(正文+表格+全部图+版本判定)存进 <code>raw/</code>;超大图 <code>sips</code> 转 <code>.read</code> 副本;下图失败即非 0 退出、重试 3 次。ingest 第一步跑。</td></tr>
+              <tr><td><code>relate.py</code></td><td>进 ④(索引怎么连)</td><td>给 notes 算关联、<b>双向</b>写 <code>related</code>:<code>score = 3·同模块 + 2·共享功能标识符</code>,≥2 即互连;排除通用词/埋点公参(<code>level_number</code> 等)防误连。<code>--write</code> 落盘、幂等。每次 ingest 后跑。</td></tr>
+              <tr><td><code>build_index.py</code></td><td>进 ⑥</td><td>扫 notes frontmatter + 摘要,全量重建 <code>index/INDEX.md</code>(模块→版本排序)。每次 ingest 后跑;index 坏了随时重跑。</td></tr>
+              <tr><td><code>search.py</code> ★</td><td>取 ①(怎么出)</td><td>检索:<code>关键词</code>(模块/标题/摘要/正文 OR 匹配)· <code>--module</code> · <code>--version</code>,按相关度排序(标题/模块+3、摘要+2、正文+1)。<b>★ 就是 qa-testcase-design 经 kb.py 转发调用的那个</b>;人写用例前也直接用。</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="minor">④ 设计文档 docs/ · 追溯 + 本页</h3>
+        <ul class="tight">
+          <li><code>01-mvp.md</code> — 一页纸 MVP:砍到只剩核心价值(答得出/查得到)。</li>
+          <li><code>02-architecture.md</code> — 进存取数据流 + v1/v2 边界(本页架构一节的源头)。</li>
+          <li><code>03-tech-stack.md</code> — 技术选型:纯文件 / Python 标准库 / 不上库。</li>
+          <li><code>overview.html</code> — <b>本页</b>,项目总览。</li>
+          <li><code>pending-confirmations.md</code> — 待确认项集中维护(版本冲突 / 口径缺口)。</li>
+          <li><code>qa-testcase-design-production-report-20260707.md</code> — ⚠️ 是 qa-testcase-design 的投产报告,<b>暂放这里、逻辑上属主流水线</b>(待归位)。</li>
+        </ul>
+
+        <h3 class="minor">⑤ v1 / v2 边界 · 升级怎么预留的</h3>
+        <div class="tbl-wrap scroll">
+          <table style="min-width:560px">
+            <thead><tr><th>维度</th><th>v1(现在)</th><th>v2(以后)</th></tr></thead>
+            <tbody>
+              <tr><td>存</td><td>原料 / 笔记 / 索引 三层</td><td>+ 编译层 <code>wiki/</code>(模块主题页)</td></tr>
+              <tr><td>往回织</td><td><b>关联级</b>:新入一篇,旧笔记 <code>related</code> 双向回写指向它</td><td><b>编译级</b>:回头重写模块主题页、标出新旧逻辑冲突</td></tr>
+              <tr><td>输入</td><td>仅飞书需求文档</td><td>可扩展(Figma / 往期用例…)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="archnote" style="margin-top:14px"><b>怎么预留的</b>:分层时就给编译层留了空目录 <code>wiki/</code>;笔记 frontmatter 留 <code>related</code> / 来源字段;taxonomy 可扩展。<b>v2 往上长、前三层一动不动</b>——原料只读、笔记/索引可由上层重建,升级不推翻既有数据。</div>
       </section>
 
       <!-- 6 -->
       <section id="modules">
         <div class="ey">Coverage</div>
-        <h2>模块地图 · 24 模块 / 46 篇</h2>
+        <h2>模块地图 · 24 模块 / 47 篇</h2>
         <p class="sub">taxonomy「边 ingest 边长」自然生长:新功能 → 新建一级模块,已有功能 → 归二级。下面按业务域归类。</p>
         <div class="domains">
           <div class="dom"><h4>学习核心 <span>7</span></h4>
@@ -443,13 +514,15 @@
           <span class="chip ok">设计三件套(MVP/架构/选型)</span>
           <span class="chip ok">ingest 全流程</span>
           <span class="chip ok">检索 4 条流</span>
-          <span class="chip ok">46 篇 / 24 模块养库</span>
+          <span class="chip ok">47 篇 / 24 模块养库</span>
           <span class="chip ok">取③ 新需求→回归点 实测</span>
           <span class="chip ok">批量 ingest</span>
           <span class="chip ok">版本冲突确认(0 待确认)</span>
           <span class="chip ok">fetch 加固(超大图/禁覆盖/重试)</span>
           <span class="chip ok">relate 防误连(公参/平台词)</span>
           <span class="chip ok">全局 skill qa-knowledge-base</span>
+          <span class="chip ok">合并为单一 skill(薄入口并入)</span>
+          <span class="chip ok">被 qa-testcase-design 经 kb.py 只读调用</span>
         </div>
         <h3 class="minor">待办 backlog</h3>
         <div class="chips">
@@ -463,8 +536,8 @@
 
   <footer>
     <div class="wrap">
-      项目根 <code>/Users/dong/.codex/skills/qa-knowledge-base/</code> · 全局入口 <code>~/.claude/skills/qa-knowledge-base/</code> / <code>~/.codex/skills/qa-knowledge-base/</code><br>
-      本页为阶段性总览(截至 2026-07-01)。规则细节见项目 <code>SKILL.md</code>,进度见 <code>RESUME.md</code>,设计追溯见 <code>docs/</code>。
+      项目根 <code>/Users/dong/.codex/skills/qa-knowledge-base/</code>(<code>~/.claude/skills/</code> 软链同一份,合并后无独立薄入口)。<br>
+      本页总览更新至 2026-07-08(合并为单一 skill、被 qa-testcase-design 经 kb.py 只读调用)。规则细节见 <code>SKILL.md</code>,进度见 <code>RESUME.md</code>,设计追溯见 <code>docs/</code>。
     </div>
   </footer>
 </div>
