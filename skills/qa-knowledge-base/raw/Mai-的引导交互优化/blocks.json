@@ -1,0 +1,1155 @@
+[
+  {
+    "block_id": "FDUud2LTioeGdexffxLlmO1Ngw1",
+    "block_type": 1,
+    "children": [
+      "RyRfdr0udoImu1xb1nllM5Umg6d",
+      "VlzZdp0aQoc2QwxduH2lyCgOgJc",
+      "CwnXdzW4woT6PdxaRZWlfbqbgNd",
+      "VUQ9d5ed3oUvqqxgFJ8lUgp8gHc",
+      "RH4HdnAqvonhNRxJziKlDIhggqf",
+      "JN3LdkyAmoLa98xQx9JlzruPgcl",
+      "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+      "BzSMdBhsAokWQfxpro9lzfi5g2f"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Mai 的引导交互优化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "RyRfdr0udoImu1xb1nllM5Umg6d",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "背景：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1"
+  },
+  {
+    "block_id": "VlzZdp0aQoc2QwxduH2lyCgOgJc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "现在的用户在 0 轮跟 1 轮的打开成功率很低，怀疑大部分人都没有等到加载完成就直接退出了。按照目前的数据推断，主动探索型用户，在加载页面点击活跃，证明用户点击 Mai 可以有效缓解焦虑。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1"
+  },
+  {
+    "block_id": "CwnXdzW4woT6PdxaRZWlfbqbgNd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首轮的通过率还是很低，怀疑用户不知道麦克风在哪里，找不到麦克风的位置。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1"
+  },
+  {
+    "block_id": "VUQ9d5ed3oUvqqxgFJ8lUgp8gHc",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 1190,
+      "scale": 0.20656525220176142,
+      "token": "JFKAbTNcPoeL6FxwddhlToCGgwd",
+      "width": 2498
+    },
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1"
+  },
+  {
+    "block_id": "RH4HdnAqvonhNRxJziKlDIhggqf",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1"
+  },
+  {
+    "block_id": "JN3LdkyAmoLa98xQx9JlzruPgcl",
+    "block_type": 2,
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "我们现在有两个地方需要优化：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "block_type": 31,
+    "children": [
+      "DicLd3dCroDReExI6XJlP69ag1g",
+      "JOhdd8QTLoPfZgxa0i0l7qsDgiX",
+      "HtqLdM7xRoZuJGxtFohlOJeqgWe",
+      "NPMcdR0rWow2Rex3qCil4LcDgGd",
+      "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+      "VpSxdb6FBooDNExbY0Nlqkdxggb",
+      "EfMsdIzjWoB8Uaxqx5Hl0Vjrgec",
+      "Wi33dK74wowyuSxNF9Mlprktgfe",
+      "VdHcdc9PDoY6WdxVErClDeXHgKh",
+      "IQdGdhk2oo7hcNxkZjll8FG2gzh",
+      "GrKPdQ4QdoUMdkxGOG0lHmyHgxe",
+      "SC2DdY1MyodLttxU2JplYGsJghQ",
+      "AHH6dXTIwo3bJNxzO7BlBu2xgFf",
+      "S2jydxPFZoneWExRt7slVKBXgdg",
+      "AW3lddsT4oWCpixpCdclcP6NgYb"
+    ],
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1",
+    "table": {
+      "cells": [
+        "DicLd3dCroDReExI6XJlP69ag1g",
+        "JOhdd8QTLoPfZgxa0i0l7qsDgiX",
+        "HtqLdM7xRoZuJGxtFohlOJeqgWe",
+        "NPMcdR0rWow2Rex3qCil4LcDgGd",
+        "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+        "VpSxdb6FBooDNExbY0Nlqkdxggb",
+        "EfMsdIzjWoB8Uaxqx5Hl0Vjrgec",
+        "Wi33dK74wowyuSxNF9Mlprktgfe",
+        "VdHcdc9PDoY6WdxVErClDeXHgKh",
+        "IQdGdhk2oo7hcNxkZjll8FG2gzh",
+        "GrKPdQ4QdoUMdkxGOG0lHmyHgxe",
+        "SC2DdY1MyodLttxU2JplYGsJghQ",
+        "AHH6dXTIwo3bJNxzO7BlBu2xgFf",
+        "S2jydxPFZoneWExRt7slVKBXgdg",
+        "AW3lddsT4oWCpixpCdclcP6NgYb"
+      ],
+      "property": {
+        "column_size": 3,
+        "column_width": [
+          100,
+          453,
+          412
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 2
+          },
+          {
+            "col_span": 1,
+            "row_span": 2
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 5
+      }
+    }
+  },
+  {
+    "block_id": "DicLd3dCroDReExI6XJlP69ag1g",
+    "block_type": 32,
+    "children": [
+      "QDnUdyXdmo7kjcxLVGIl0taZg3f"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "QDnUdyXdmo7kjcxLVGIl0taZg3f",
+    "block_type": 2,
+    "parent_id": "DicLd3dCroDReExI6XJlP69ag1g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "模块",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JOhdd8QTLoPfZgxa0i0l7qsDgiX",
+    "block_type": 32,
+    "children": [
+      "WO46dXBZfoyginxC1jblRhj4gFb"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "WO46dXBZfoyginxC1jblRhj4gFb",
+    "block_type": 2,
+    "parent_id": "JOhdd8QTLoPfZgxa0i0l7qsDgiX",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "内容",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HtqLdM7xRoZuJGxtFohlOJeqgWe",
+    "block_type": 32,
+    "children": [
+      "LIbVdsyBhoRg3vxdwWNl8sX2gCd"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LIbVdsyBhoRg3vxdwWNl8sX2gCd",
+    "block_type": 2,
+    "parent_id": "HtqLdM7xRoZuJGxtFohlOJeqgWe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "截图",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NPMcdR0rWow2Rex3qCil4LcDgGd",
+    "block_type": 32,
+    "children": [
+      "No40dugwUoyJQkx1LqAlZgA9gKd"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "No40dugwUoyJQkx1LqAlZgA9gKd",
+    "block_type": 2,
+    "parent_id": "NPMcdR0rWow2Rex3qCil4LcDgGd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "加载页面",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "block_type": 32,
+    "children": [
+      "YIwhdh0JmozkfpxKtHNlmdIMggc",
+      "KSB4dfJk8oiKFfxETWWlbe7dgsd",
+      "UOZ3dIqC1oY86axIxVblCNqLggd",
+      "MXSGdyQBEoK0MlxZqWxlWenhgRc",
+      "NoYwdrx1ToFLZWxmRzNlgAzsgdd"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "YIwhdh0JmozkfpxKtHNlmdIMggc",
+    "block_type": 2,
+    "parent_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "(a) 需要增加一个动画，让 Mai 跳动起来。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KSB4dfJk8oiKFfxETWWlbe7dgsd",
+    "block_type": 2,
+    "parent_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "(b) 通过跳动吸引用户点击，让用户知道这个东西是可玩的。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UOZ3dIqC1oY86axIxVblCNqLggd",
+    "block_type": 2,
+    "parent_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "规则：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MXSGdyQBEoK0MlxZqWxlWenhgRc",
+    "block_type": 2,
+    "parent_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "加载页面，设计一个 Mai 的上下跳动动画",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NoYwdrx1ToFLZWxmRzNlgAzsgdd",
+    "block_type": 2,
+    "parent_id": "IjG6dUptDoTJ0txrIgTlyXdhgLg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VpSxdb6FBooDNExbY0Nlqkdxggb",
+    "block_type": 32,
+    "children": [
+      "N6k4doG5EontEYxRC7Ul2jEvgZx"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "N6k4doG5EontEYxRC7Ul2jEvgZx",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 1206,
+      "scale": 0.06674294431731502,
+      "token": "PKlabryReo7xJnxJFvoltVMYgXc",
+      "width": 2622
+    },
+    "parent_id": "VpSxdb6FBooDNExbY0Nlqkdxggb"
+  },
+  {
+    "block_id": "EfMsdIzjWoB8Uaxqx5Hl0Vjrgec",
+    "block_type": 32,
+    "children": [
+      "AdNOdRj3roZKffxDYUOlNQSzgZv",
+      "AJKXdkxEToNRjTxWzj8lTfOVgXe"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "AdNOdRj3roZKffxDYUOlNQSzgZv",
+    "block_type": 2,
+    "parent_id": "EfMsdIzjWoB8Uaxqx5Hl0Vjrgec",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "麦克风强化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AJKXdkxEToNRjTxWzj8lTfOVgXe",
+    "block_type": 2,
+    "parent_id": "EfMsdIzjWoB8Uaxqx5Hl0Vjrgec",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Wi33dK74wowyuSxNF9Mlprktgfe",
+    "block_type": 32,
+    "children": [
+      "Sxk2dj9ysooms6xcNHDlnOwTglh",
+      "LIqhdkoffovqBnxPN3Sl16NQgwe",
+      "NqbpdLy36osmScxS2ltlZqvZgfh",
+      "FEhWdfa8boBuYcxt5HglDh9OgQd"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Sxk2dj9ysooms6xcNHDlnOwTglh",
+    "block_type": 2,
+    "parent_id": "Wi33dK74wowyuSxNF9Mlprktgfe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "新用户主对话；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LIqhdkoffovqBnxPN3Sl16NQgwe",
+    "block_type": 2,
+    "parent_id": "Wi33dK74wowyuSxNF9Mlprktgfe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "老用户主对话和子对话：遵从",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "Mai 场景内口语对话课",
+            "token": "Ssm8wItQTi69rhkC2dAlxZUBgd6",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Ssm8wItQTi69rhkC2dAlxZUBgd6"
+          }
+        },
+        {
+          "text_run": {
+            "content": " 的设计方案，给出一个麦克风的设计引导。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NqbpdLy36osmScxS2ltlZqvZgfh",
+    "block_type": 2,
+    "parent_id": "Wi33dK74wowyuSxNF9Mlprktgfe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "应用在主对话以及当前子对话的所有子对话中。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FEhWdfa8boBuYcxt5HglDh9OgQd",
+    "block_type": 2,
+    "parent_id": "Wi33dK74wowyuSxNF9Mlprktgfe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VdHcdc9PDoY6WdxVErClDeXHgKh",
+    "block_type": 32,
+    "children": [
+      "GuFMdeCqpoYfPRxthfClMsPagHd"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "GuFMdeCqpoYfPRxthfClMsPagHd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 510,
+      "scale": 1,
+      "token": "X6z9bcTleoarG9xATbilxK22gtd",
+      "width": 1024
+    },
+    "parent_id": "VdHcdc9PDoY6WdxVErClDeXHgKh"
+  },
+  {
+    "block_id": "IQdGdhk2oo7hcNxkZjll8FG2gzh",
+    "block_type": 32,
+    "children": [
+      "Cgvndr3Tfo7NVGx16qYlcF2Lgjh"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Cgvndr3Tfo7NVGx16qYlcF2Lgjh",
+    "block_type": 2,
+    "parent_id": "IQdGdhk2oo7hcNxkZjll8FG2gzh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GrKPdQ4QdoUMdkxGOG0lHmyHgxe",
+    "block_type": 32,
+    "children": [
+      "Y7SSdaFOcoai7exXs25l9DMfgjh"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Y7SSdaFOcoai7exXs25l9DMfgjh",
+    "block_type": 2,
+    "parent_id": "GrKPdQ4QdoUMdkxGOG0lHmyHgxe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SC2DdY1MyodLttxU2JplYGsJghQ",
+    "block_type": 32,
+    "children": [
+      "Fa9ndUSAZocW0GxCUojlQFqRgfh"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Fa9ndUSAZocW0GxCUojlQFqRgfh",
+    "block_type": 27,
+    "image": {
+      "height": 594,
+      "scale": 1,
+      "token": "TC8SbWukhoswdNxPrRulYfJcgRy",
+      "width": 874
+    },
+    "parent_id": "SC2DdY1MyodLttxU2JplYGsJghQ"
+  },
+  {
+    "block_id": "AHH6dXTIwo3bJNxzO7BlBu2xgFf",
+    "block_type": 32,
+    "children": [
+      "HvCGdPb5EoUzR1xD8l1lztqmguc"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "HvCGdPb5EoUzR1xD8l1lztqmguc",
+    "block_type": 2,
+    "parent_id": "AHH6dXTIwo3bJNxzO7BlBu2xgFf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "录音组件",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S2jydxPFZoneWExRt7slVKBXgdg",
+    "block_type": 32,
+    "children": [
+      "DzCidccoYoiDpLxaW0PlhqlYgyg",
+      "RF6Sd2WgNoYB6SxrXt7lwicfgVf",
+      "WnK6dnPy2oRpF7xUkIQlJznbgAh",
+      "FeO8dwDTDou4KmxQbmCl3yrZg1e"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "DzCidccoYoiDpLxaW0PlhqlYgyg",
+    "block_type": 2,
+    "parent_id": "S2jydxPFZoneWExRt7slVKBXgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "遵从",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "Mai 场景内对话",
+            "token": "Ssm8wItQTi69rhkC2dAlxZUBgd6",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Ssm8wItQTi69rhkC2dAlxZUBgd6"
+          }
+        },
+        {
+          "text_run": {
+            "content": " 的设计方案，录音组件提供重复试听功能。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RF6Sd2WgNoYB6SxrXt7lwicfgVf",
+    "block_type": 2,
+    "parent_id": "S2jydxPFZoneWExRt7slVKBXgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每次点击蓝色喇叭，都可以重新播放试听音频 - 如果此时有已有试听音频在播放，就中断当前播放，从头开始播放试听音频。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WnK6dnPy2oRpF7xUkIQlJznbgAh",
+    "block_type": 2,
+    "parent_id": "S2jydxPFZoneWExRt7slVKBXgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "应用在主对话以及当前子对话的所有子对话中。",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FeO8dwDTDou4KmxQbmCl3yrZg1e",
+    "block_type": 2,
+    "parent_id": "S2jydxPFZoneWExRt7slVKBXgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AW3lddsT4oWCpixpCdclcP6NgYb",
+    "block_type": 32,
+    "children": [
+      "Bs8edkQCrohSdExt0iJlOrbbgIU",
+      "OqoKdgqVKoHycBx7PLTldEIEgNh",
+      "Wm0SdocnVoaoftxHFjKliV2gg2c"
+    ],
+    "parent_id": "WxCYdvS9foQKDVxVkYqlj5QEgbd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Bs8edkQCrohSdExt0iJlOrbbgIU",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 840,
+      "scale": 0.3329571106094808,
+      "token": "Uvhwbl3vio6wvWxa3thlehbYg8c",
+      "width": 886
+    },
+    "parent_id": "AW3lddsT4oWCpixpCdclcP6NgYb"
+  },
+  {
+    "block_id": "OqoKdgqVKoHycBx7PLTldEIEgNh",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 622,
+      "scale": 1,
+      "token": "LpOHbhpD9oV095xDSeDl4cN3gte",
+      "width": 1304
+    },
+    "parent_id": "AW3lddsT4oWCpixpCdclcP6NgYb"
+  },
+  {
+    "block_id": "Wm0SdocnVoaoftxHFjKliV2gg2c",
+    "block_type": 2,
+    "parent_id": "AW3lddsT4oWCpixpCdclcP6NgYb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BzSMdBhsAokWQfxpro9lzfi5g2f",
+    "block_type": 2,
+    "parent_id": "FDUud2LTioeGdexffxLlmO1Ngw1",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]
