@@ -28,6 +28,13 @@ node scripts/render-manual-report.mjs runs/smoke/report.md runs/smoke/report.htm
 - If password entry causes a black/hidden projection screen only while the password field or input bar is active, classify it as secure-input/projection protection. Report the handling path: enter password, hide keyboard/input bar, capture the masked-password state, and continue.
 - If a precision control such as handwriting/tracing blocks automation, report it as `自动化阻塞 / 需人工复核` unless there is independent evidence that the app itself is broken.
 - If the app auto-enters the next course/content after completing a listed course, include the auto-entered screenshot and the recovery path. Classify it as normal auto-advance/recovery unless the app cannot exit, loops, crashes, or blocks later cases.
+- If a case is blocked, include the original blocked state and every attempted recovery checkpoint. Update the HTML report while continuing the run so evidence is not lost.
+- A blocked case does not automatically mean the package is defective. Separate confirmed product failures, recoverable App-state risks, account/data prerequisites, network issues, and automation-route limitations.
+- After a safe App restart or other recovery, continue every later case that remains reachable. Mark only cases whose prerequisites remain unavailable as blocked.
+- If main-smoke S02 requires restart, show why: the pre-restart screen, attempted in-page actions, elapsed wait, expected/actual state, restart evidence, and post-restart state. If the one-time onboarding entry disappears, mark S02 incomplete/blocked for that run but continue downstream coverage; reinstall or clear data again only for a dedicated S02 retest.
+- For iOS scope that includes S02, record whether the user prepared a fresh, not-yet-launched TestFlight installation before automation. If it was not ready, record that automation was deferred rather than treating S02 as an App failure.
+- When iOS S02 is supplemented after downstream coverage, show the ordering explicitly: S03 and later reachable cases on the original installation, user-confirmed uninstall/TestFlight reinstall, download/build verification, then the separate S02 retest and linked evidence.
+- For iPhone Mirroring text input, record that the Mac input source was English/ABC when diagnosing transformed or duplicated characters. Never submit a value that has not been visually verified in a fresh screenshot.
 
 ## Final Report Structure
 

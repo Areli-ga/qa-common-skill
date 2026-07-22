@@ -1,4 +1,4 @@
 interface:
   display_name: "App UI QA"
-  short_description: "Case-first app smoke testing via Android adb-only and iPhone Mirroring"
-  default_prompt: "Use $app-ui-qa to run or prepare a case-first mobile app smoke test through Android adb-only or iPhone Mirroring plus PyAutoGUI, then produce an HTML report with screenshots."
+  short_description: "Case-first Android and iOS smoke testing with visual evidence"
+  default_prompt: "Use $app-ui-qa to read the active case in full, run its Android adb-only or iPhone Mirroring smoke path, recover reachable coverage, and produce a screenshot-backed HTML report."

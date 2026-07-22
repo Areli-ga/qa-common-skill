@@ -75,6 +75,8 @@ check_android() {
 
 check_ios() {
   say "== iOS iPhone Mirroring + PyAutoGUI =="
+  say "[required] If S02 is in scope, have the user manually prepare the target TestFlight build as a fresh, not-yet-launched installation before automation; reinstall/download may take significant time."
+  say "[required] Switch the macOS input source to English/ABC before every iPhone Mirroring text-input step; Chinese input sources can transform or duplicate PyAutoGUI keystrokes."
   if ! has_cmd osascript; then
     missing "osascript not found; macOS automation is required for iPhone Mirroring window detection"
   else

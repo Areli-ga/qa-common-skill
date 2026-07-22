@@ -2,6 +2,15 @@
 
 Use the case as the source of truth. The automation route should not invent scope from the visible app.
 
+## Contents
+
+- Source conversion and bundled Giggle Academy cases
+- Top-level JSON and step shapes
+- Conversion guidance and secrets
+- Example requests
+
+Read the selected Markdown case in full before using its JSON companion. Scope boundaries, general prerequisites, recovery rules, exclusions, and per-step notes are mandatory operating context; do not rely on `SKILL.md` or step JSON alone.
+
 When the source is Excel, Markdown, TestRail, TAPD, Jira, a mind map, or a Chinese manual test document, first convert it into a readable checklist, then optionally into JSON.
 
 For image-only mind maps, record:
@@ -116,5 +125,5 @@ Do not write raw secrets into reports, prompts, screenshots, or shared case file
 
 - "Convert this smoke checklist into app-ui-qa JSON for Android and iOS."
 - "整理这个思维导图，只保留故事书模块及以上的冒烟范围。"
-- "Run S13-S18 through Android adb-only and produce an HTML report."
+- "Run S12-S17 through Android adb-only and produce an HTML report."
 - "Run the iOS iPhone Mirroring PyAutoGUI route for this case and flag route-specific risks."

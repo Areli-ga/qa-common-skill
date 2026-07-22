@@ -2,6 +2,14 @@
 
 This is the formal execution mechanism for the skill. It must not decide smoke scope. Always load the active case first, state the next case id, and operate only that step.
 
+## Contents
+
+- Android adb-only and known pitfalls
+- iOS iPhone Mirroring plus PyAutoGUI and route boundaries
+- Course auto-advance and guide overlay recovery
+- Precision drag controls and sensitive data
+- Reporting during operation and unexpected block recovery
+
 ## Android: adb-only
 
 Operate Android through one explicit ADB serial. The visual loop is: take an ADB screenshot, inspect it, perform one ADB input action, then take the next screenshot.
@@ -60,13 +68,17 @@ Use `adb shell pm clear <package>` only when the case or test manager explicitly
 
 Operate the real iPhone through the iPhone Mirroring Mac window using the local PyAutoGUI service.
 
-1. Open iPhone Mirroring and keep the phone unlocked/connected.
-2. Use TestFlight on the phone only to install, update, or select a build.
-3. Ask for action-time confirmation before install/update/stop-testing/feedback actions.
-4. Launch the app on the mirrored phone.
-5. Start `scripts/ios-mirror-pyautogui-service.py`.
-6. Use service screenshots before and after every key operation.
-7. Use service `tap`, `drag`, `type`, and `key` actions for operation.
+1. If S02 is in scope, require the user to manually prepare the target TestFlight build as a fresh, not-yet-launched installation before automation begins.
+2. If it is not ready at initial intake, stop before all automation, including S01 and S03, and explain that uninstall/reinstall plus TestFlight download may take significant time.
+3. Ask for action-time confirmation before uninstall/install/update/stop-testing/feedback actions.
+4. Open iPhone Mirroring and keep the phone unlocked/connected.
+5. Use TestFlight on the phone only to install, update, or select a build.
+6. Launch the App on the mirrored phone after fresh-install readiness is confirmed.
+7. On first launch, capture and allow every presented system permission prompt required by the case, including advertising tracking and network/local-network access.
+8. Start `scripts/ios-mirror-pyautogui-service.py`.
+9. Use service screenshots before and after every key operation.
+10. Use service `tap`, `drag`, `type`, and `key` actions for operation.
+11. Before any text input, switch the Mac input source to English/ABC and keep it there until the value has been visually verified. A Chinese input source can transform or duplicate PyAutoGUI keystrokes.
 
 Service startup:
 
@@ -96,6 +108,16 @@ curl -s -X POST http://127.0.0.1:17650/drag \
 - If audio, secure password entry, system privacy prompts, or mirror transport behavior cannot be captured faithfully, record it as a route limitation.
 - If a WebView course passes only with manual click assistance, record the path as continued but mark that WebView input needs follow-up.
 - PyAutoGUI screenshots are fast region screenshots. Keep iPhone Mirroring frontmost and uncovered, otherwise the evidence image can include covering Mac windows.
+
+## iOS Fresh Install and S02 Ordering
+
+Creating a fresh iOS state requires uninstalling the App and reinstalling it through TestFlight; there is no Android-style convenient clear-data command.
+
+- Before an iOS run that includes S02, require the user to manually prepare the target build as a fresh installation and leave it unopened until automation starts.
+- If the user has not prepared it at initial intake, stop before S01, S03, and all other automation, and explain the expected uninstall, reinstall, and download delay.
+- Apply the S03-first ordering only when a valid fresh-install run already started and S02 later became blocked; never use it to bypass a missing initial prerequisite.
+- If S02 becomes a supplemental retest during an active run, keep the current installation and finish S03 plus every later reachable case first.
+- After downstream coverage finishes, ask for action-time confirmation, uninstall and reinstall through TestFlight, then run S02 separately and link the evidence to the original report.
 
 ## Course Auto-Advance Rule
 
@@ -147,12 +169,35 @@ Before typing a test account or password into the app, confirm the user has auth
 
 Never store raw passwords. If password entry causes a black/hidden projection surface only while the input field or keyboard is active, classify it as secure input behavior, hide the keyboard/input bar, capture the masked-password state, and continue.
 
+For iPhone Mirroring text input:
+
+1. Switch the Mac input source to English/ABC before typing or pasting.
+2. Capture a fresh screenshot and verify the complete visible email, account name, or other identifier before submitting.
+3. If characters are transformed, duplicated, or cannot be cleared, do not submit. Confirm the input source, leave the page to reset the form, and prefer clipboard paste into a confirmed empty field.
+4. Keep passwords masked and clear sensitive clipboard content immediately after use.
+
 ## Reporting During Operation
 
 Save screenshots before and after every key operation. Use names like:
 
 - `01-home-before-open-login.png`
 - `01-home-after-open-login.png`
-- `12-s15-non-card-drag-result.png`
+- `12-s14-non-card-drag-result.png`
 
 When stopped by a limitation, report the actual state; do not invent success. Try the case-defined recovery path before deciding whether downstream cases are blocked.
+
+## Unexpected Block Recovery
+
+When the visible state blocks the active case:
+
+1. Capture the current screen before any recovery action.
+2. Record the active case id, expected state, actual state, elapsed time, attempted in-page actions, and whether the issue looks like an App state, data/account state, network state, or automation-route limitation.
+3. Try the recovery path already defined by the active case, such as closing a guide, completing both layers of a permission flow, returning to the main path, or re-entering through the learning center.
+4. If the case remains blocked and restart is safe, force-close and relaunch the App once. Capture the close, relaunch, and recovered/final states.
+5. During the main-smoke one-time S02 path, do not restart merely to bypass the beginner course. A genuine blocked state may still use restart after the required evidence has been captured. If restart removes the one-time entry, mark S02 incomplete/blocked for that run; do not infer completion and do not terminate the whole smoke run.
+6. Re-establish the nearest known prerequisite and continue every later case that remains reachable. Mark only cases that depend on an unresolved prerequisite as `阻塞`.
+7. Reinstall or clear data again only when specifically retesting S02. On iOS, finish S03 and every later reachable case on the current installation first; then, with action-time confirmation, uninstall/reinstall through TestFlight and run S02 as supplemental coverage. Do not replay S02 at the expense of downstream coverage.
+8. For Android channel package smoke, follow the channel case's explicit exit/restart skip steps; the main-smoke S02 completion rule does not apply.
+9. Generate or update `report.html` even if the run remains partially blocked.
+
+Do not label the package defective from one transient blocked state alone. Require a reproducible/persistent expected-path failure, crash, or corroborating diagnostic evidence.
