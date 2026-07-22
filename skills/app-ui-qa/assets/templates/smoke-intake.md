@@ -10,6 +10,8 @@
 - Android 主 Activity：
 - iOS Bundle ID：
 - iOS TestFlight 是否已在手机端完成安装/更新：
+- iOS 若包含首次启动 / S02，是否已手动卸载旧 App、通过 TestFlight 重装目标包并保持未启动：
+- iOS 若尚未准备新安装包，是否接受先等待 TestFlight 下载完成再启动自动化：
 - iOS 是否还需要真机复核：
 - Android 设备/模拟器：
 - iOS 真实 iPhone / iPhone Mirroring 状态：

@@ -24,7 +24,8 @@
       "launcher": "iphone-mirroring-pyautogui",
       "routeNotes": [
         "Formal iOS route uses a real iPhone through macOS iPhone Mirroring plus the local PyAutoGUI service.",
-        "TestFlight is only used on the phone to install or update the beta build with user confirmation."
+        "TestFlight is only used on the phone to install or update the beta build with user confirmation.",
+        "If S02 is in scope, require the user to manually prepare the target build as a fresh, not-yet-launched TestFlight installation before automation starts."
       ]
     }
   },
@@ -34,10 +35,12 @@
     "skipVoiceByDefault": true,
     "voiceAutoSkipWaitMs": 5000,
     "nonVoiceAutoAdvanceWaitMs": 2000,
-    "evidencePolicy": "Capture screenshots for every key click, swipe, input, page entry, and completion checkpoint."
+    "evidencePolicy": "Capture screenshots for every key click, swipe, input, page entry, and completion checkpoint.",
+    "iosTextInputPolicy": "Before PyAutoGUI text input through iPhone Mirroring, switch the current Mac input source to English/ABC. A Chinese input source can transform or duplicate characters. Verify the complete visible value in a fresh screenshot before submission."
   },
   "executionPolicy": {
-    "allowClearAppDataBeforeRun": true,
+    "androidAllowClearAppDataBeforeRun": true,
+    "iosFreshStateMethod": "Uninstall the old App, reinstall the target build through TestFlight, and keep it unopened until automation starts.",
     "fixedPrerequisitePath": {
       "level": "Lv2",
       "path": "动作"
@@ -85,6 +88,26 @@
       "evidence": "Capture the overlay before dismissal and record the dismissal method in the report.",
       "doNotDo": "Do not tap highlighted course cards or CTA buttons merely to dismiss a guide unless the active case explicitly asks for that action."
     },
+    "s02OneTimeEntryRecovery": {
+      "normalPath": "After install, reinstall, or cleared data reaches the new-user welcome page, complete S02 without restarting merely to bypass the beginner course.",
+      "restartAllowedWhenBlocked": true,
+      "requiredEvidenceBeforeRestart": [
+        "Current screen and elapsed wait",
+        "Expected state and actual state",
+        "Visible in-page actions already attempted",
+        "Evidence that the UI has no actionable path, a confirmed control remains unresponsive, or the App is frozen/black with no input feedback"
+      ],
+      "afterRestart": "If the one-time entry disappears, do not infer S02 completion. Mark S02 incomplete/blocked for this run and continue every later case that remains reachable.",
+      "retest": "On iOS, finish S03 and every later reachable case on the current installation before uninstalling and reinstalling through TestFlight for a supplemental S02 retest. Require user confirmation for uninstall/install actions.",
+      "channelCaseException": "Android channel package smoke is an independent scope. Follow its explicit exit/restart skip steps instead of the main-smoke S02 completion requirement."
+    },
+    "iosFreshInstallPreparation": {
+      "requiredWhen": "The iOS main-smoke scope includes S02.",
+      "beforeAutomation": "Require the user to manually uninstall the old App and prepare the target TestFlight build as a fresh installation that has not been launched.",
+      "ifNotPrepared": "Stop before all automation, including S01 and S03, and explain that TestFlight reinstall/download may take significant time. Do not use supplemental-S02 ordering to bypass this initial prerequisite.",
+      "confirmation": "Ask for action-time confirmation before uninstalling or installing.",
+      "supplementalS02Order": "If S02 needs a fresh-install retest after the run starts, finish S03 and all later reachable coverage on the current installation first, then uninstall/reinstall and run S02 separately with linked evidence."
+    },
     "removedFromThisVersion": [
       "领取扭蛋"
     ]
@@ -114,11 +137,11 @@
     ],
     "excludedUntilUpdated": [
       "H5流程",
-      "分享流程",
+      "真实分享发送/发布流程（仅验证分享组件唤起、海报显示和安全退出）",
       "奖励中心"
     ],
     "separatedCases": [
-      "安卓渠道包冒烟：outputs/cases/giggleacademy-android-channel-smoke-v0.1.md"
+      "安卓渠道包冒烟：assets/cases/giggleacademy-android-channel-smoke-v0.1.md"
     ]
   },
   "globalChecks": [
@@ -126,25 +149,33 @@
     "关键入口、按钮、标题、学习路径、故事书页面应可见且可操作。",
     "进入和退出 Unity / Flutter / H5 / 原生混合页面时要检查加载时长和画面异常。",
     "任何系统权限、隐私弹窗、通知弹窗、登录失效、网络异常、强制升级都要截图并记录处理方式。",
+    "iOS 首次安装启动时，广告追踪、网络 / 本地网络访问等系统授权弹窗统一选择允许，并为每层弹窗保存处理前后截图。",
+    "iOS 路线包含 S02 时，自动化开始前必须确认用户已手动卸载旧 App，并通过 TestFlight 准备好尚未启动的目标新安装包；若未准备好，停止自动化并说明重装下载可能耗时较久。",
+    "iOS iPhone Mirroring 文本输入前必须确认 Mac 输入法为英文 / ABC，并在提交前截图核对完整可见值；中文输入法造成的字符异常不得提交。",
+    "UI 自动化所需权限默认全部允许。遇到应用内确定、好的、同意或继续等权限说明页时，先截图并点击确认以触发系统权限弹窗，再在系统弹窗中选择允许；不得把尚未完成授权的页面误判为课程阻塞。",
+    "主流程命中一次性新用户入口后应正常完整执行 S02，不得为了提前登录而主动重启或退出跳过新手课程。",
+    "S02 发生真正阻断时，先记录现场、尝试动作、等待时间、预期和实际结果，再允许重启一次。重启后入口消失时不得推断 S02 完成，但必须继续执行所有仍可到达的后续模块。",
     "完课后如自动进入下一内容，先截图并回到主路径，不要追跑用例外内容；课程进行中不得把左上角退出当作推进手段。",
     "完课后如进入排行榜 / 学习之星，点击继续 / 下一步回到主界面后再继续后续用例。",
     "课程完成后的继续 / 下一步 / 右箭头点击前必须重新截图确认目标按钮仍可见；如果已经自动回到主页则跳过点击。",
     "非当前用例目标的引导弹窗优先尝试点击安全空白区域关闭，并记录截图和处理方式。",
     "日志只用于辅助判断，报告中不得暴露密码、token、完整 child_id、IP、音频 URL 等敏感字段。",
-    "每次冒烟前允许清除 App 数据，用于覆盖首次安装和新用户流程。"
+    "Android 冒烟前允许清除 App 数据覆盖首次安装和新用户流程；iOS 必须通过卸载旧 App、TestFlight 重装并保持未启动来获得首次状态。"
   ],
   "steps": [
     {
       "id": "s01-01-launch-app",
       "type": "setup",
-      "title": "App 正确启动",
-      "objective": "验证 App 可启动并进入 loading。",
-      "action": "启动 App；如果首次安装且非 Google Play 包弹出隐私弹窗，点击同意继续。",
-      "expected": "进入 loading 页面。",
+      "title": "App 正确启动和首次系统授权",
+      "objective": "验证 App 可启动、首次系统授权可通过并进入 loading。",
+      "action": "启动 App；如果首次安装且非 Google Play 包弹出隐私弹窗，点击同意继续；iOS 首次安装如出现广告追踪、网络 / 本地网络访问等系统弹窗，逐层截图并全部选择允许。",
+      "expected": "所有首次启动弹窗可正常允许，并进入 loading 页面。",
       "riskSignals": [
         "App 无法启动",
         "隐私弹窗无法继续",
-        "启动后黑屏或崩溃"
+        "启动后黑屏或崩溃",
+        "iOS 广告追踪或网络授权弹窗无法允许",
+        "系统授权弹窗循环出现或授权后无法继续"
       ],
       "severity": "blocker",
       "platforms": [
@@ -152,7 +183,8 @@
         "ios"
       ],
       "data": {
-        "caseId": "S01-01"
+        "caseId": "S01-01",
+        "iosFirstLaunchSystemPermissionPolicy": "Allow every presented first-launch system prompt required by the case, including advertising tracking and network/local-network access. Capture before and after each prompt."
       }
     },
     {
@@ -178,33 +210,12 @@
       }
     },
     {
-      "id": "s01-03-loading-no-tap-through",
-      "type": "action",
-      "title": "loading 期间防点穿",
-      "objective": "验证 loading 遮罩不会把点击传到后续界面。",
-      "action": "loading 期间随机轻点页面。",
-      "expected": "不会点穿到后续界面，无异常内容显示。",
-      "riskSignals": [
-        "点击穿透",
-        "异常页面提前出现",
-        "loading 交互导致卡死"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S01-03"
-      }
-    },
-    {
-      "id": "s01-04-entry-branch-after-loading",
+      "id": "s01-03-entry-branch-after-loading",
       "type": "checkpoint",
       "title": "loading 结束后的分流",
       "objective": "确认首次和非首次启动后的入口符合预期。",
       "action": "等待 loading 结束，观察进入新用户欢迎页或主界面路径。",
-      "expected": "清数据后的首次流程进入新用户欢迎页；非首次安装直接进入主界面首页并可看到学习路径。",
+      "expected": "Android 清数据后或 iOS TestFlight 新安装后的首次流程进入新用户欢迎页；非首次安装直接进入主界面首页并可看到学习路径。",
       "riskSignals": [
         "loading 不结束",
         "进入错误页面",
@@ -217,8 +228,9 @@
         "ios"
       ],
       "data": {
-        "caseId": "S01-04",
-        "allowClearAppDataBeforeRun": true
+        "caseId": "S01-03",
+        "androidAllowClearAppDataBeforeRun": true,
+        "iosFreshStateMethod": "testflight-fresh-install-not-launched"
       }
     },
     {
@@ -226,7 +238,7 @@
       "type": "setup",
       "title": "新用户欢迎页",
       "objective": "验证首次安装新用户入口。",
-      "action": "清数据后首次启动并等待进入新用户欢迎页。",
+      "action": "Android 清数据后或 iOS TestFlight 新安装后首次启动，等待进入新用户欢迎页。",
       "expected": "可见标题“一所开放给全世界孩子的免费英语启蒙学院”。",
       "riskSignals": [
         "欢迎页标题缺失",
@@ -240,7 +252,8 @@
       "data": {
         "caseId": "S02-01",
         "requiresFreshInstall": true,
-        "allowClearAppDataBeforeRun": true
+        "androidAllowClearAppDataBeforeRun": true,
+        "iosFreshStateMethod": "testflight-fresh-install-not-launched"
       }
     },
     {
@@ -362,10 +375,10 @@
     {
       "id": "s02-06-beginner-voice-does-not-block",
       "type": "checkpoint",
-      "title": "新手课程语音环节不阻断",
-      "objective": "验证新手课程语音识别环节可自动完成或跳过。",
+      "title": "新手课程内语音环节自动跳过且课程继续",
+      "objective": "验证仅课程内语音识别环节可自动完成或跳过，新手课程本身继续执行直至完成。",
       "action": "遇到新手课程中的语音识别环节时等待，不主动模拟语音。",
-      "expected": "语音识别环节可自动完成，不阻断课程；完成后可能回到主路径，也可能自动进入下一节课。",
+      "expected": "仅语音识别环节可自动完成或跳过，不阻断新手课程继续执行；新手课完成后可能回到主路径，也可能自动进入下一节课。",
       "riskSignals": [
         "语音环节无法跳过",
         "语音环节阻断主流程",
@@ -863,11 +876,11 @@
       }
     },
     {
-      "id": "s07-01-enter-letter-experience-1",
+      "id": "s07-01-enter-letter-gymnastics-1",
       "type": "action",
-      "title": "进入字母体验 1",
-      "objective": "进入普通课程字母体验 1。",
-      "action": "点击课程“字母体验1”。",
+      "title": "进入字母体操 1",
+      "objective": "进入普通课程字母体操 1。",
+      "action": "点击课程“字母体操1”。",
       "expected": "进入 loading 界面。",
       "riskSignals": [
         "课程入口缺失",
@@ -885,7 +898,7 @@
     {
       "id": "s07-02-letter-course-loaded",
       "type": "checkpoint",
-      "title": "字母体验 1 加载完成",
+      "title": "字母体操 1 加载完成",
       "objective": "验证课程正常进入。",
       "action": "等待 loading 完成。",
       "expected": "正常进入课程并开始课程流程。",
@@ -906,7 +919,7 @@
       "id": "s07-03-tap-planet",
       "type": "action",
       "title": "点击星球进入游戏",
-      "objective": "正式进入字母体验游戏。",
+      "objective": "正式进入字母体操游戏。",
       "action": "点击画面中的星球。",
       "expected": "正式进入游戏。",
       "riskSignals": [
@@ -926,7 +939,7 @@
       "id": "s07-04-tap-numbered-platforms",
       "type": "action",
       "title": "按数字顺序点击底座",
-      "objective": "完成字母体验游戏。",
+      "objective": "完成字母体操游戏。",
       "action": "按数字顺序逐一点击底座，让兔子跳跃。",
       "expected": "完成课程并回到主页面。",
       "riskSignals": [
@@ -1089,11 +1102,11 @@
       }
     },
     {
-      "id": "s11-01-enter-coloring-game",
+      "id": "s10-01-enter-coloring-game",
       "type": "action",
       "title": "进入涂色游戏",
       "objective": "进入指定路径上的涂色游戏。",
-      "action": "点击“绿色游戏：j”；如果屏幕中没有则向右轻轻滑动寻找。",
+      "action": "点击“涂色游戏：j”；如果屏幕中没有则向右轻轻滑动寻找。",
       "expected": "进入涂色游戏 loading 或游戏页。",
       "riskSignals": [
         "入口找不到",
@@ -1106,11 +1119,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S11-01"
+        "caseId": "S10-01"
       }
     },
     {
-      "id": "s11-02-coloring-draw",
+      "id": "s10-02-coloring-draw",
       "type": "action",
       "title": "完成绘画动作",
       "objective": "完成涂色游戏的绘画交互。",
@@ -1126,11 +1139,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S11-02"
+        "caseId": "S10-02"
       }
     },
     {
-      "id": "s11-03-coloring-camera",
+      "id": "s10-03-coloring-camera",
       "type": "action",
       "title": "进入涂色展示页",
       "objective": "通过相机按钮进入展示页。",
@@ -1146,11 +1159,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S11-03"
+        "caseId": "S10-03"
       }
     },
     {
-      "id": "s11-04-coloring-return-home",
+      "id": "s10-04-coloring-return-home",
       "type": "action",
       "title": "涂色展示页返回",
       "objective": "验证展示页下一步能回到主页。",
@@ -1168,12 +1181,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S11-04",
+        "caseId": "S10-04",
         "executionGuard": "Do not send delayed next-button coordinate taps. The coloring showcase page may auto-complete and return home while automation is waiting; a stale next-button tap can land on another home feature or course entry."
       }
     },
     {
-      "id": "s12-01-enter-letter-tracing",
+      "id": "s11-01-enter-letter-tracing",
       "type": "action",
       "title": "进入字母描红",
       "objective": "进入字母描红游戏。",
@@ -1189,11 +1202,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S12-01"
+        "caseId": "S11-01"
       }
     },
     {
-      "id": "s12-02-trace-by-number-order",
+      "id": "s11-02-trace-by-number-order",
       "type": "action",
       "title": "按数字顺序描红",
       "objective": "完成字母描红游戏。",
@@ -1210,11 +1223,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S12-02"
+        "caseId": "S11-02"
       }
     },
     {
-      "id": "s13-01-enter-flashcard-course",
+      "id": "s12-01-enter-flashcard-course",
       "type": "action",
       "title": "进入闪卡课程",
       "objective": "进入主流程路径上的闪卡课程。",
@@ -1230,12 +1243,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-01",
+        "caseId": "S12-01",
         "notTheExcludedFlashcardModule": true
       }
     },
     {
-      "id": "s13-02-complete-first-two-flashcard-games",
+      "id": "s12-02-complete-first-two-flashcard-games",
       "type": "action",
       "title": "完成前两个闪卡小游戏",
       "objective": "完成闪卡课程中非语音小游戏。",
@@ -1251,12 +1264,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-02",
-        "iosMacTestFlightRouteRisk": "Flashcard is WebView-heavy. On macOS TestFlight, manual clicks may pass while automation click/drag feedback or audio playback is unreliable; mark as route-specific risk and cross-check on real iOS device."
+        "caseId": "S12-02",
+        "iosIPhoneMirroringRouteRisk": "Flashcard is WebView-heavy. Through iPhone Mirroring, automation click/drag feedback or mirrored audio may be unreliable; mark this as a route-specific observation and cross-check directly on the real iPhone when needed."
       }
     },
     {
-      "id": "s13-03-flashcard-voice-auto-skip",
+      "id": "s12-03-flashcard-voice-auto-skip",
       "type": "checkpoint",
       "title": "第三个语音小游戏自动跳过",
       "objective": "验证语音识别开关生效，不阻断闪卡课程。",
@@ -1272,13 +1285,13 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-03",
+        "caseId": "S12-03",
         "voiceAccuracyOutOfScope": true,
         "voiceAutoSkipWaitMs": 5000
       }
     },
     {
-      "id": "s13-04-flashcard-course-return",
+      "id": "s12-04-flashcard-course-return",
       "type": "checkpoint",
       "title": "闪卡课程完成返回",
       "objective": "验证单词全部完成后回到主页。",
@@ -1294,11 +1307,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-04"
+        "caseId": "S12-04"
       }
     },
     {
-      "id": "s14-01-enter-unit-review",
+      "id": "s13-01-enter-unit-review",
       "type": "action",
       "title": "进入单元复习",
       "objective": "进入指定路径上的单元复习。",
@@ -1315,11 +1328,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-01"
+        "caseId": "S13-01"
       }
     },
     {
-      "id": "s14-02-complete-unit-review",
+      "id": "s13-02-complete-unit-review",
       "type": "action",
       "title": "完成单元复习流程",
       "objective": "完成单元复习中的关卡、机关和问答题。",
@@ -1336,11 +1349,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-02"
+        "caseId": "S13-02"
       }
     },
     {
-      "id": "s14-03-unit-review-return",
+      "id": "s13-03-unit-review-return",
       "type": "checkpoint",
       "title": "单元复习返回主页",
       "objective": "验证单元复习完成后回到主页。",
@@ -1356,11 +1369,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-03"
+        "caseId": "S13-03"
       }
     },
     {
-      "id": "s15-01-open-level-switch-for-quiz",
+      "id": "s14-01-open-level-switch-for-quiz",
       "type": "action",
       "title": "进入升级 Quiz 的等级切换",
       "objective": "打开等级切换界面寻找可解锁卡片。",
@@ -1376,11 +1389,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S15-01"
+        "caseId": "S14-01"
       }
     },
     {
-      "id": "s15-02-find-unlockable-level-card",
+      "id": "s14-02-find-unlockable-level-card",
       "type": "action",
       "title": "找到可解锁等级卡片",
       "objective": "定位右上角为灰色图标的可解锁卡片。",
@@ -1396,12 +1409,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S15-02",
+        "caseId": "S14-02",
         "dragPolicy": "Use non-card blank area for horizontal level-list drag. Do not drag card bodies because it may select a card or fail to scroll."
       }
     },
     {
-      "id": "s15-03-enter-upgrade-quiz",
+      "id": "s14-03-enter-upgrade-quiz",
       "type": "action",
       "title": "进入升级挑战 Quiz",
       "objective": "从可解锁等级卡片进入 quiz。",
@@ -1418,11 +1431,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S15-03"
+        "caseId": "S14-03"
       }
     },
     {
-      "id": "s15-04-complete-upgrade-quiz",
+      "id": "s14-04-complete-upgrade-quiz",
       "type": "action",
       "title": "完成升级 Quiz",
       "objective": "完成 quiz 中所有题目并检查完成表现。",
@@ -1439,12 +1452,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S15-04",
+        "caseId": "S14-04",
         "quizAnswerPolicy": "Flow-first. Do not validate audio-question accuracy. The three option coordinates are stable; for hidden-text or audio-only prompts, loop taps across the visible options from left to right for 10 rounds, then screenshot and judge whether the upgrade flow reached completion."
       }
     },
     {
-      "id": "s16-01-open-aggregate-feature",
+      "id": "s15-01-open-aggregate-feature",
       "type": "action",
       "title": "打开聚合功能",
       "objective": "从主页面进入故事书模块入口所在聚合功能。",
@@ -1460,11 +1473,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S16-01"
+        "caseId": "S15-01"
       }
     },
     {
-      "id": "s16-02-enter-picture-books",
+      "id": "s15-02-enter-picture-books",
       "type": "action",
       "title": "进入绘本故事",
       "objective": "进入故事书模块主页。",
@@ -1480,11 +1493,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S16-02"
+        "caseId": "S15-02"
       }
     },
     {
-      "id": "s17-01-open-any-book",
+      "id": "s16-01-open-any-book",
       "type": "action",
       "title": "进入任意故事播放",
       "objective": "从绘本故事页面进入故事播放。",
@@ -1502,12 +1515,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-01",
+        "caseId": "S16-01",
         "bookSelection": "any-visible-book"
       }
     },
     {
-      "id": "s17-02-book-auto-page-turn",
+      "id": "s16-02-book-auto-page-turn",
       "type": "checkpoint",
       "title": "故事书自动翻页播放",
       "objective": "验证故事书播放自动翻页。",
@@ -1524,11 +1537,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-02"
+        "caseId": "S16-02"
       }
     },
     {
-      "id": "s17-05-open-book-side-menu",
+      "id": "s16-03-open-book-side-menu",
       "type": "action",
       "title": "打开故事播放右侧菜单栏",
       "objective": "验证播放页右上角菜单入口。",
@@ -1544,11 +1557,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-05"
+        "caseId": "S16-03"
       }
     },
     {
-      "id": "s17-06-reading-mode-switch",
+      "id": "s16-04-reading-mode-switch",
       "type": "action",
       "title": "阅读模式切换",
       "objective": "验证故事播放的阅读模式选项。",
@@ -1565,12 +1578,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-06",
+        "caseId": "S16-04",
         "optionalMode": "跟我读"
       }
     },
     {
-      "id": "s17-07-audio-mode",
+      "id": "s16-05-audio-mode",
       "type": "action",
       "title": "进入音频模式",
       "objective": "验证菜单栏音频模式入口。",
@@ -1586,11 +1599,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-07"
+        "caseId": "S16-05"
       }
     },
     {
-      "id": "s17-08-close-audio-mode",
+      "id": "s16-06-close-audio-mode",
       "type": "action",
       "title": "退出音频模式",
       "objective": "验证音频模式可关闭返回。",
@@ -1606,11 +1619,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-08"
+        "caseId": "S16-06"
       }
     },
     {
-      "id": "s17-09-favorite-book",
+      "id": "s16-07-favorite-book",
       "type": "action",
       "title": "收藏故事书",
       "objective": "验证故事收藏入口。",
@@ -1627,11 +1640,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-09"
+        "caseId": "S16-07"
       }
     },
     {
-      "id": "s17-10-book-endpage",
+      "id": "s16-08-book-endpage",
       "type": "checkpoint",
       "title": "进入故事 endpage",
       "objective": "验证故事播放完成后的 endpage。",
@@ -1648,11 +1661,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-10"
+        "caseId": "S16-08"
       }
     },
     {
-      "id": "s17-11-book-continue-next",
+      "id": "s16-09-book-continue-next",
       "type": "checkpoint",
       "title": "续播下一本故事",
       "objective": "验证 endpage 倒计时后续播下一本故事。",
@@ -1669,11 +1682,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-11"
+        "caseId": "S16-09"
       }
     },
     {
-      "id": "s17-12-return-from-second-endpage",
+      "id": "s16-10-return-from-second-endpage",
       "type": "action",
       "title": "第二次 endpage 返回",
       "objective": "验证续播后的返回能力。",
@@ -1689,11 +1702,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S17-12"
+        "caseId": "S16-10"
       }
     },
     {
-      "id": "s18-01-open-book-search",
+      "id": "s17-01-open-book-search",
       "type": "action",
       "title": "进入故事搜索界面",
       "objective": "从绘本故事页面进入搜索。",
@@ -1709,11 +1722,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-01"
+        "caseId": "S17-01"
       }
     },
     {
-      "id": "s18-02-book-tag-search",
+      "id": "s17-02-book-tag-search",
       "type": "action",
       "title": "tag 搜索",
       "objective": "验证搜索页 tag 能筛出内容。",
@@ -1730,12 +1743,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-02",
+        "caseId": "S17-02",
         "tagSelection": "any-visible-tag"
       }
     },
     {
-      "id": "s18-03-open-book-from-search",
+      "id": "s17-03-open-book-from-search",
       "type": "action",
       "title": "从搜索结果进入播放",
       "objective": "验证搜索结果故事可播放。",
@@ -1752,12 +1765,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-03",
+        "caseId": "S17-03",
         "bookSelection": "any-visible-search-result"
       }
     },
     {
-      "id": "s18-04-return-to-search",
+      "id": "s17-04-return-to-search",
       "type": "action",
       "title": "返回搜索页",
       "objective": "验证播放页可退回搜索页。",
@@ -1773,11 +1786,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-04"
+        "caseId": "S17-04"
       }
     },
     {
-      "id": "s18-05-open-search-filter",
+      "id": "s17-05-open-search-filter",
       "type": "action",
       "title": "打开筛选页",
       "objective": "验证搜索筛选入口。",
@@ -1793,11 +1806,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-05"
+        "caseId": "S17-05"
       }
     },
     {
-      "id": "s18-06-level-filter-check",
+      "id": "s17-06-level-filter-check",
       "type": "action",
       "title": "分级筛选校验",
       "objective": "验证分级筛选结果标签符合所选分级。",
@@ -1814,12 +1827,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-06",
+        "caseId": "S17-06",
         "levelSelection": "any-visible-level"
       }
     },
     {
-      "id": "s18-07-return-home-from-book-module",
+      "id": "s17-07-return-home-from-book-module",
       "type": "teardown",
       "title": "退出故事书模块回主页面",
       "objective": "完成故事书模块后回到主页面。",
@@ -1836,11 +1849,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S18-07"
+        "caseId": "S17-07"
       }
     },
     {
-      "id": "s19-01-open-flashcard-module",
+      "id": "s18-01-open-flashcard-module",
       "type": "action",
       "title": "进入闪卡模块",
       "objective": "验证聚合功能中的闪卡模块入口可进入。",
@@ -1857,12 +1870,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-01",
+        "caseId": "S18-01",
         "module": "flashcard-center"
       }
     },
     {
-      "id": "s19-02-open-learned-words",
+      "id": "s18-02-open-learned-words",
       "type": "action",
       "title": "进入已学单词",
       "objective": "验证已学单词入口。",
@@ -1879,11 +1892,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-02"
+        "caseId": "S18-02"
       }
     },
     {
-      "id": "s19-03-learned-words-card-data",
+      "id": "s18-03-learned-words-card-data",
       "type": "checkpoint",
       "title": "已学单词数据检查",
       "objective": "检查已学单词卡片和数据展示。",
@@ -1901,12 +1914,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-03",
+        "caseId": "S18-03",
         "allowEmptyState": true
       }
     },
     {
-      "id": "s19-04-learned-words-letter-tag",
+      "id": "s18-04-learned-words-letter-tag",
       "type": "action",
       "title": "字母 tag 检查",
       "objective": "验证字母 tag 筛选展示。",
@@ -1923,13 +1936,13 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-04",
+        "caseId": "S18-04",
         "tag": "字母",
         "allowEmptyState": true
       }
     },
     {
-      "id": "s19-05-learned-words-cvc-tag",
+      "id": "s18-05-learned-words-cvc-tag",
       "type": "action",
       "title": "CVC tag 检查",
       "objective": "验证 CVC tag 筛选展示。",
@@ -1946,13 +1959,13 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-05",
+        "caseId": "S18-05",
         "tag": "CVC",
         "allowEmptyState": true
       }
     },
     {
-      "id": "s19-06-learned-words-math-tag",
+      "id": "s18-06-learned-words-math-tag",
       "type": "action",
       "title": "数学 tag 检查",
       "objective": "验证数学 tag 筛选展示。",
@@ -1969,13 +1982,13 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-06",
+        "caseId": "S18-06",
         "tag": "数学",
         "allowEmptyState": true
       }
     },
     {
-      "id": "s19-07-return-flashcard-home",
+      "id": "s18-07-return-flashcard-home",
       "type": "action",
       "title": "返回闪卡主页",
       "objective": "从已学单词界面返回闪卡主界面。",
@@ -1991,11 +2004,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-07"
+        "caseId": "S18-07"
       }
     },
     {
-      "id": "s19-08-open-max-recommendation",
+      "id": "s18-08-open-max-recommendation",
       "type": "action",
       "title": "进入 max 推荐流程",
       "objective": "验证 max 推荐闪卡流程入口。",
@@ -2012,11 +2025,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-08"
+        "caseId": "S18-08"
       }
     },
     {
-      "id": "s19-09-flashcard-flow-structure",
+      "id": "s18-09-flashcard-flow-structure",
       "type": "checkpoint",
       "title": "闪卡流程结构检查",
       "objective": "确认闪卡流程内容结构符合预期。",
@@ -2033,13 +2046,13 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-09",
+        "caseId": "S18-09",
         "expectedWords": 5,
         "expectedGamesPerWord": 3
       }
     },
     {
-      "id": "s19-10-complete-first-two-flashcard-games",
+      "id": "s18-10-complete-first-two-flashcard-games",
       "type": "action",
       "title": "完成前两个小游戏",
       "objective": "验证闪卡小游戏点击和拖拽交互可完成。",
@@ -2056,11 +2069,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-10"
+        "caseId": "S18-10"
       }
     },
     {
-      "id": "s19-11-flashcard-voice-game-skip",
+      "id": "s18-11-flashcard-voice-game-skip",
       "type": "voice",
       "title": "第三个语音小游戏跳过",
       "objective": "验证闪卡语音小游戏不会阻断流程。",
@@ -2078,12 +2091,12 @@
       ],
       "timeoutMs": 5000,
       "data": {
-        "caseId": "S19-11",
+        "caseId": "S18-11",
         "voiceAccuracyOutOfScope": true
       }
     },
     {
-      "id": "s19-12-flashcard-settlement-data",
+      "id": "s18-12-flashcard-settlement-data",
       "type": "checkpoint",
       "title": "结算页数据检查",
       "objective": "验证闪卡流程结算页展示。",
@@ -2100,15 +2113,15 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-12"
+        "caseId": "S18-12"
       }
     },
     {
-      "id": "s19-13-open-share-component",
+      "id": "s18-13-open-share-component",
       "type": "action",
       "title": "唤起分享组件",
       "objective": "验证结算页分享入口可用。",
-      "action": "在结算页点击分享按钮并等待。",
+      "action": "在结算页点击分享按钮并等待；不选择联系人、分享平台或发送目标。",
       "expected": "正确唤起分享组件。",
       "riskSignals": [
         "分享按钮无响应",
@@ -2121,15 +2134,16 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-13"
+        "caseId": "S18-13",
+        "realShareOutOfScope": true
       }
     },
     {
-      "id": "s19-14-share-poster-visual",
+      "id": "s18-14-share-poster-visual",
       "type": "checkpoint",
       "title": "分享海报检查",
       "objective": "验证分享海报展示正常。",
-      "action": "检查分享组件中的分享海报。",
+      "action": "检查分享组件中的分享海报，不进入任何真实发送流程。",
       "expected": "分享海报显示正常，无明显错位、空白、遮挡。",
       "riskSignals": [
         "海报空白",
@@ -2142,15 +2156,15 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-14"
+        "caseId": "S18-14"
       }
     },
     {
-      "id": "s19-15-exit-share-component",
+      "id": "s18-15-exit-share-component",
       "type": "action",
       "title": "退出分享组件",
       "objective": "验证可退出分享组件并恢复闪卡路径。",
-      "action": "退出分享组件。",
+      "action": "不执行发送或发布，直接安全退出分享组件。",
       "expected": "回到闪卡主界面或结算页后可返回闪卡主界面。",
       "riskSignals": [
         "分享组件无法关闭",
@@ -2163,11 +2177,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-15"
+        "caseId": "S18-15"
       }
     },
     {
-      "id": "s19-16-return-main-path-from-flashcard",
+      "id": "s18-16-return-main-path-from-flashcard",
       "type": "teardown",
       "title": "返回路径主界面",
       "objective": "完成闪卡模块后回到路径主界面。",
@@ -2183,11 +2197,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S19-16"
+        "caseId": "S18-16"
       }
     },
     {
-      "id": "s20-01-open-course-search",
+      "id": "s19-01-open-course-search",
       "type": "action",
       "title": "进入搜索课程",
       "objective": "验证聚合功能中的搜索入口可进入。",
@@ -2204,11 +2218,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S20-01"
+        "caseId": "S19-01"
       }
     },
     {
-      "id": "s20-02-open-nature-series",
+      "id": "s19-02-open-nature-series",
       "type": "action",
       "title": "进入大自然系列",
       "objective": "验证搜索页系列卡片入口。",
@@ -2225,12 +2239,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S20-02",
+        "caseId": "S19-02",
         "series": "大自然"
       }
     },
     {
-      "id": "s20-03-open-any-course-from-search",
+      "id": "s19-03-open-any-course-from-search",
       "type": "action",
       "title": "任意课程进入检查",
       "objective": "验证搜索结果中的课程可进入。",
@@ -2247,12 +2261,12 @@
         "ios"
       ],
       "data": {
-        "caseId": "S20-03",
+        "caseId": "S19-03",
         "completeCourse": false
       }
     },
     {
-      "id": "s20-04-return-search-page",
+      "id": "s19-04-return-search-page",
       "type": "action",
       "title": "返回搜索页",
       "objective": "验证从课程可退回搜索页。",
@@ -2269,11 +2283,11 @@
         "ios"
       ],
       "data": {
-        "caseId": "S20-04"
+        "caseId": "S19-04"
       }
     },
     {
-      "id": "s20-05-return-main-path-from-search",
+      "id": "s19-05-return-main-path-from-search",
       "type": "teardown",
       "title": "返回路径主界面",
       "objective": "完成搜索课程模块后回到路径主界面。",
@@ -2289,16 +2303,19 @@
         "ios"
       ],
       "data": {
-        "caseId": "S20-05"
+        "caseId": "S19-05"
       }
     }
   ],
   "confirmedDecisions": [
-    "允许每次运行前清 App 数据，用于覆盖新用户流程。",
+    "Android 允许运行前清 App 数据覆盖新用户流程；iOS 使用卸载旧 App、TestFlight 重装并保持未启动的方式覆盖首次流程。",
     "账号、密码、孩子档案名、新建孩子名都做成环境配置项，使用的账号必须解锁 Lv2。",
     "暂时固定前置路径为 Lv2 -> 动作路径。",
     "故事书模块不固定故事样本，目标是随机抽样。",
     "闪卡模块和搜索课程纳入核心主流程冒烟。",
-    "安卓渠道包冒烟拆分到独立文件，不并入核心主流程。"
+    "安卓渠道包冒烟拆分到独立文件，不并入核心主流程；渠道包用例可按自身步骤退出或重启跳过新用户流程。",
+    "分享只验证组件唤起、海报显示和安全退出，不选择联系人或平台，不执行发送或发布。",
+    "主流程 S02 发生真实阻断时允许证据化重启；重启后入口消失不得推断完成，但必须继续所有仍可到达的后续模块。",
+    "iOS 路线包含 S02 时，用户应在自动化前手动准备 TestFlight 新安装包；如需补测 S02，先完成当前包上的 S03 及后续可达内容，再卸载重装并单独补跑 S02。"
   ]
 }

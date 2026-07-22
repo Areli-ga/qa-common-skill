@@ -7,6 +7,13 @@ This skill has only two formal execution routes:
 
 External device-automation frameworks and desktop mirroring experiments are intentionally out of scope for this skill.
 
+## Contents
+
+- Mac requirements and environment check
+- Android adb-only setup and notes
+- iOS fresh-install preparation, iPhone Mirroring, and PyAutoGUI service setup
+- Test data, installation, and troubleshooting
+
 ## Mac Requirements
 
 - Codex desktop for visual inspection and report generation.
@@ -14,8 +21,10 @@ External device-automation frameworks and desktop mirroring experiments are inte
 - An Android device or emulator with USB debugging enabled, visible in `adb devices`, and the target app installed or an APK path available.
 - A Mac/iPhone pair that supports iPhone Mirroring when running iOS.
 - TestFlight on the iPhone when installing or updating beta builds.
+- For iOS scope that includes S02, the target TestFlight build manually prepared by the user as a fresh installation that has not been launched.
 - Python 3 with `pyautogui`, `pillow`, and `flask` for the iOS route.
 - macOS Accessibility and Screen Recording permissions granted for Codex, Terminal, and the app running the PyAutoGUI service.
+- macOS English/ABC input source available for every iPhone Mirroring text-input step. Do not use a Chinese input source with PyAutoGUI typing.
 - Browser or Finder access for opening the final HTML report.
 
 ## Environment Check
@@ -84,15 +93,37 @@ Use `adb shell pm clear <package>` only when the case or test manager explicitly
 
 This route uses the real iPhone shown in macOS iPhone Mirroring. TestFlight is only the install/update channel. PyAutoGUI is used as a fast local input and screenshot service.
 
-1. Open iPhone Mirroring and keep the phone unlocked/connected.
-2. Open TestFlight on the mirrored phone only when installing or updating the beta build.
-3. Ask for action-time confirmation before clicking `安装`, `更新`, `停止测试`, notification toggles, or feedback submission.
-4. Launch the app on the mirrored phone.
-5. Start the PyAutoGUI service.
-6. Use the service for screenshots, taps, drags, typing, and key presses.
-7. Keep the iPhone Mirroring window visible, frontmost, and uncovered.
+1. If S02 is in scope, confirm before automation that the user manually uninstalled the old App, installed the target build through TestFlight, and has not launched it yet.
+2. If the fresh installation is not prepared at initial intake, stop before all automation, including S01 and S03. Explain that iOS has no Android-style convenient clear-data route and that uninstalling, reinstalling, and downloading through TestFlight may take significant time.
+3. Ask for action-time confirmation before any uninstall or before clicking `安装`, `更新`, `停止测试`, notification toggles, or feedback submission.
+4. Open iPhone Mirroring and keep the phone unlocked/connected.
+5. Open TestFlight on the mirrored phone only when installing or updating the beta build.
+6. Launch the App on the mirrored phone only after fresh-install readiness has been confirmed.
+7. Start the PyAutoGUI service.
+8. Use the service for screenshots, taps, drags, typing, and key presses.
+9. Keep the iPhone Mirroring window visible, frontmost, and uncovered.
+10. Before any App text input, switch the Mac input source to English/ABC. Keep it selected until the complete visible value has been verified in a fresh screenshot.
 
 Known boundary: the app is running on a real iPhone, but evidence and input are mediated by the Mac mirror. If audio, secure input, or system privacy behavior cannot be observed through the mirror, mark the route limitation separately from product defects.
+
+## iOS Fresh Install and S02 Supplemental Retest
+
+iOS does not provide an Android-style convenient clear-App-data command. Use uninstall plus TestFlight reinstall to create a fresh state for S02.
+
+Before an iOS run that includes S02:
+
+1. Tell the user to manually uninstall the old App and install the target build through TestFlight before automation begins.
+2. Require the newly installed App to remain unopened so the first-launch path is preserved.
+3. Confirm the build/version and readiness before starting S01.
+
+Do not use the later supplemental-S02 ordering rule to bypass this initial prerequisite. Running S03 first is allowed only after an automation run already started with a valid fresh installation and S02 later became blocked.
+
+If S02 needs a fresh-install retest after the run has started:
+
+1. Keep the current installation and finish S03 plus every later reachable case first.
+2. Record S02 as pending supplemental retest; do not sacrifice downstream coverage by uninstalling immediately.
+3. After downstream coverage is complete, ask for action-time confirmation, uninstall the App, and reinstall the target build through TestFlight.
+4. Account for TestFlight download time, then run S02 as a separate supplemental segment and link its evidence to the original report.
 
 ## iPhone Mirroring PyAutoGUI Service
 
@@ -176,6 +207,8 @@ Restart Codex so it discovers the skill. Do not copy exploration folders into th
 - Android screenshots/logs look like the wrong device: re-run `adb devices`, pick one serial, and use `adb -s <serial>` everywhere.
 - TestFlight install button absent: confirm Apple ID beta access, build validity, and build availability.
 - TestFlight install/update needs confirmation: ask immediately before clicking the install/update UI.
+- iOS S02 is requested but no fresh TestFlight installation is ready: stop before automation, ask the user to prepare it, and explain that uninstall/reinstall plus download may take significant time.
 - iPhone Mirroring cannot find the phone: unlock the iPhone, keep Bluetooth/Wi-Fi on, bring it near the Mac, then retry the mirror connection.
 - iPhone Mirroring screenshot captures Codex or another app: bring iPhone Mirroring to the front, move covering windows away, then retake the PyAutoGUI screenshot.
+- iPhone Mirroring text is transformed, duplicated, or otherwise abnormal: stop before submitting, switch the Mac input source to English/ABC, reset the field/page, and type or paste again into a confirmed empty field.
 - Password screen appears black only while typing: treat as secure input, hide keyboard/input bar, then screenshot the masked state.

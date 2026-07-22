@@ -14,7 +14,10 @@
     "ios": {
       "bundleId": "",
       "testFlightInstalled": false,
-      "installNote": "Install from TestFlight manually before running."
+      "freshInstallRequiredForFirstLaunchSmoke": false,
+      "freshInstallPrepared": false,
+      "appNotLaunchedSinceFreshInstall": false,
+      "installNote": "If first-launch/S02 coverage is in scope, manually uninstall the old App, reinstall the target build from TestFlight, and leave it unopened before automation."
     }
   },
   "devices": {
