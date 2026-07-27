@@ -70,6 +70,21 @@
     "evidencePolicy": "Show the full operation path. Capture before/after screenshots for every key automated action/checkpoint, then additionally highlight failures, needs-review risks, skipped coverage, and key pass checkpoints.",
     "reviewAudience": "test-manager"
   },
+  "featureExploratory": {
+    "enabled": false,
+    "featureName": "",
+    "testCaseSourceRequired": "",
+    "requirementSourceOptional": "",
+    "sourceNeedsAuthentication": false,
+    "serverEnvironment": "qa",
+    "userPreparedFirstCaseScene": "",
+    "specialEntry": "",
+    "restartReentryPath": "",
+    "featureFlagsOrWhitelist": "",
+    "explorationBoundary": "",
+    "convertedDocumentPath": "assets/feature-executions/<date>-<feature>-v0.1.md",
+    "commitConvertedDocumentToGit": true
+  },
   "rawManualCases": [
     {
       "id": "smoke-001",

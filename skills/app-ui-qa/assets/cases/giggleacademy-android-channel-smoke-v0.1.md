@@ -4,7 +4,7 @@
 
 整理时间：2026-07-08
 
-状态：安卓渠道包独立冒烟用例。此文件与核心主流程冒烟 `giggleacademy-main-smoke-v0.1.md` 分开执行，不合并统计。
+状态：安卓渠道包独立冒烟用例。此文件与核心主流程冒烟 `giggleacademy-main-smoke-v0.1.md`、新功能探索性测试 `giggleacademy-feature-exploratory-v0.1.md` 分开执行，不合并统计。
 
 ## 背景介绍
 

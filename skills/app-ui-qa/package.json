@@ -1,0 +1,8 @@
+{
+  "name": "app-ui-qa-report-tools",
+  "private": true,
+  "type": "module",
+  "optionalDependencies": {
+    "sharp": "^0.35.3"
+  }
+}

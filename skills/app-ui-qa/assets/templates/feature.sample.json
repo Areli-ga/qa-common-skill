@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "feature-test-sample",
-  "description": "Template for daily internal feature validation.",
+  "description": "Optional structured companion for a converted new-feature Markdown execution document. The user-supplied source cases remain mandatory.",
   "platform": "ios",
   "app": {
     "android": {
@@ -19,11 +19,12 @@
   },
   "globalChecks": [
     "Report unexpected navigation, visual glitches, stuck loading, and confusing UX copy.",
-    "Prefer evidence-backed observations over assumptions."
+    "Prefer evidence-backed observations over assumptions.",
+    "Keep formal F cases separate from exploratory E cases."
   ],
   "steps": [
     {
-      "id": "enter-feature",
+      "id": "F01-01",
       "type": "action",
       "title": "Enter the feature under test",
       "objective": "Navigate to the feature entry specified by the product/test case.",
@@ -32,7 +33,7 @@
       "severity": "major"
     },
     {
-      "id": "happy-path",
+      "id": "F01-02",
       "type": "action",
       "title": "Complete feature happy path",
       "objective": "Validate the main expected behavior.",
@@ -46,13 +47,22 @@
       "severity": "blocker"
     },
     {
-      "id": "negative-or-edge",
+      "id": "E01-01",
       "type": "checkpoint",
       "title": "Check one negative or edge state",
       "objective": "Look for one high-risk edge from the test case.",
       "action": "Trigger the edge state described by QA. If no edge state is supplied, inspect empty/error/slow-network affordances without destructive actions.",
       "expected": "The app explains the state clearly and remains recoverable.",
-      "severity": "normal"
+      "severity": "normal",
+      "data": {
+        "coverageKind": "exploratory",
+        "sourceTrace": "Agent-added from requirement, screenshots, or a documented risk."
+      }
     }
-  ]
+  ],
+  "source": {
+    "testCaseSourceRequired": "",
+    "requirementSourceOptional": "",
+    "convertedMarkdown": "assets/feature-executions/<date>-<feature>-v0.1.md"
+  }
 }

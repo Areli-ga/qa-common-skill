@@ -4,7 +4,8 @@ Use the case as the source of truth. The automation route should not invent scop
 
 ## Contents
 
-- Source conversion and bundled Giggle Academy cases
+- Source conversion and three bundled Giggle Academy execution types
+- New-feature Markdown conversion and traceability
 - Top-level JSON and step shapes
 - Conversion guidance and secrets
 - Example requests
@@ -29,6 +30,44 @@ For Giggle Academy, the current main smoke draft is:
 For Giggle Academy Android channel package smoke:
 
 - Checklist: `assets/cases/giggleacademy-android-channel-smoke-v0.1.md`
+
+For Giggle Academy new-feature exploratory testing:
+
+- Fixed execution rules: `assets/cases/giggleacademy-feature-exploratory-v0.1.md`
+- Converted feature documents: `assets/feature-executions/`
+- Conversion template: `assets/feature-executions/feature-execution-template.md`
+- Asset registry: `assets/feature-executions/INDEX.md`
+
+Feature test cases are mandatory; requirements are optional. Read the supplied XMind, Excel, Markdown, image, test-management page, or authenticated URL completely before conversion. Use the user's signed-in Chrome session for authenticated URLs and Computer Use for desktop-only UI when needed. Keep source access read-only.
+
+## New-Feature Markdown Shape
+
+Create the converted document before operating the App. Save it as:
+
+```text
+assets/feature-executions/<YYYY-MM-DD>-<feature-slug>-v<major>.<minor>.md
+```
+
+Use the same executable table shape as main smoke:
+
+```markdown
+| ID | 用例点 | 操作 | 预期 | 备注 |
+| --- | --- | --- | --- | --- |
+| F01-01 | ... | ... | ... | 原始编号 / 节点路径：... |
+```
+
+Required source cases use module-continuous `F` ids such as `F01-01`, `F01-02`, and `F02-01`. Agent-added exploratory checks use separate `E` ids such as `E01-01`. Do not include `E` rows in required-case pass-rate calculations.
+
+The document must include:
+
+- Source and optional requirement links/files.
+- Build, platform, server environment, scope, and exclusions.
+- User-prepared first-case scene, account/data/flags, special entry, and post-restart re-entry path.
+- Formal `F` cases, bounded exploratory `E` checks, and global checkpoints.
+- A traceability table from every original id/node path to one or more converted ids.
+- Ambiguities, manual steps, destructive-action boundaries, and report focus.
+
+Preserve original intent and expected results. Do not silently omit or merge source cases. Mark unknown expected values `待使用者确认` instead of inventing them.
 
 ## Top-Level JSON Shape
 
@@ -127,3 +166,4 @@ Do not write raw secrets into reports, prompts, screenshots, or shared case file
 - "整理这个思维导图，只保留故事书模块及以上的冒烟范围。"
 - "Run S12-S17 through Android adb-only and produce an HTML report."
 - "Run the iOS iPhone Mirroring PyAutoGUI route for this case and flag route-specific risks."
+- "读取我已登录 Chrome 中的新功能用例页面，转成 F/E 编号执行文档；我准备好 QA 环境入口后再开始验证。"

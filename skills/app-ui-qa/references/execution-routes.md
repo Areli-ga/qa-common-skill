@@ -4,11 +4,27 @@ This is the formal execution mechanism for the skill. It must not decide smoke s
 
 ## Contents
 
+- Authenticated source-document reading for new-feature cases
 - Android adb-only and known pitfalls
 - iOS iPhone Mirroring plus PyAutoGUI and route boundaries
 - Course auto-advance and guide overlay recovery
 - Precision drag controls and sensitive data
 - Reporting during operation and unexpected block recovery
+
+## New-Feature Source Reading
+
+Source-document reading happens before Android or iOS App operation. It does not create a third device-control mechanism.
+
+- Public URLs: use the ordinary browser route.
+- Authenticated URLs: prefer the user's existing signed-in Chrome session through Chrome control. Preserve the current session and keep the work read-only.
+- Desktop-only pages, downloads, file pickers, or application windows: use Computer Use when browser controls cannot expose the needed content.
+- XMind, Excel, images, and local files: use the corresponding file-reading capability and inspect the complete relevant hierarchy, sheets, notes, and attachments.
+
+Do not bypass authentication, expose cookies/tokens, edit online cases, submit forms, or publish comments while collecting source material. If access has expired, ask the user to sign in in the original window and continue from that authenticated state.
+
+After reading, convert the material into `assets/feature-executions/<date>-<feature>-v<version>.md` using the bundled template. Source reading and conversion must finish before App automation starts.
+
+Chrome control and Computer Use are allowed here only for source acquisition. Formal App UI execution remains Android adb-only or iOS iPhone Mirroring plus PyAutoGUI.
 
 ## Android: adb-only
 
@@ -201,3 +217,11 @@ When the visible state blocks the active case:
 9. Generate or update `report.html` even if the run remains partially blocked.
 
 Do not label the package defective from one transient blocked state alone. Require a reproducible/persistent expected-path failure, crash, or corroborating diagnostic evidence.
+
+For new-feature exploratory testing, follow the feature document's restart entry instead of guessing how to find a hidden or configured feature:
+
+1. Make 2–3 safe page-level attempts, each based on a fresh screenshot.
+2. Record the current `F` or `E` case, expected/actual state, attempts, and evidence.
+3. Restart once only when it is safe and the converted feature document defines how to re-enter.
+4. If the entry is complex and no restart path was supplied, ask the user before restarting.
+5. Continue independent and later reachable cases after recovery; do not terminate the whole feature run because one case is blocked.
