@@ -3,6 +3,7 @@ set -u
 
 target="${1:-all}"
 fail=0
+skill_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 say() {
   printf '%s\n' "$*"
@@ -29,6 +30,19 @@ check_common() {
   say "== Common =="
   if has_cmd node; then
     ok "node: $(node -v)"
+    if (
+      cd "$skill_root" &&
+      node -e 'import("sharp").then(() => process.exit(0)).catch(() => process.exit(1))'
+    ); then
+      ok "report WebP converter: sharp"
+    elif has_cmd cwebp; then
+      ok "report WebP converter: cwebp"
+    elif has_cmd ffmpeg && ffmpeg -hide_banner -encoders 2>/dev/null | grep -q 'libwebp'; then
+      ok "report WebP converter: ffmpeg/libwebp"
+    else
+      warn "No WebP converter is available; report.html will still be self-contained but may embed larger original images"
+      warn "For compact WebP reports: npm install --prefix \"$skill_root\" --omit=dev"
+    fi
   else
     missing "node is required to render report.html with scripts/render-manual-report.mjs"
   fi

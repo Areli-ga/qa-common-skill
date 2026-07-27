@@ -1,6 +1,12 @@
 # Environment Guide
 
-This skill has only two formal execution routes:
+This skill has three execution types:
+
+- Giggle Academy main smoke.
+- Android channel package smoke.
+- New-feature exploratory testing based on mandatory user-supplied cases and optional requirements.
+
+All three types use one of two formal device execution routes:
 
 - Android: adb-only on a connected Android device or emulator.
 - iOS: PyAutoGUI service on a real iPhone through macOS iPhone Mirroring.
@@ -10,6 +16,7 @@ External device-automation frameworks and desktop mirroring experiments are inte
 ## Contents
 
 - Mac requirements and environment check
+- New-feature source access and App starting-scene preparation
 - Android adb-only setup and notes
 - iOS fresh-install preparation, iPhone Mirroring, and PyAutoGUI service setup
 - Test data, installation, and troubleshooting
@@ -26,6 +33,8 @@ External device-automation frameworks and desktop mirroring experiments are inte
 - macOS Accessibility and Screen Recording permissions granted for Codex, Terminal, and the app running the PyAutoGUI service.
 - macOS English/ABC input source available for every iPhone Mirroring text-input step. Do not use a Chinese input source with PyAutoGUI typing.
 - Browser or Finder access for opening the final HTML report.
+- Node.js for report rendering. Install the skill's optional `sharp` package on QA runners to guarantee compact WebP image embedding; without it, the renderer still produces one HTML file with original image bytes.
+- For authenticated new-feature cases or requirements, access to the user's signed-in Chrome session. Use Computer Use only for desktop-only pages, downloads, or system dialogs.
 
 ## Environment Check
 
@@ -38,6 +47,25 @@ scripts/check-environment.sh ios
 ```
 
 The script reports missing commands/packages and prints the install command to run. It does not click app UI or modify app data.
+
+For compact standalone reports, install the optional report dependency once:
+
+```bash
+npm install --prefix /path/to/app-ui-qa --omit=dev
+```
+
+## New-Feature Intake and Starting Scene
+
+Before device automation:
+
+1. Obtain the mandatory feature test cases and optional requirements.
+2. Read XMind/Excel/local files completely, or use the user's signed-in Chrome session for authenticated URLs. Keep the source read-only.
+3. Convert the cases into a versioned Markdown document under `assets/feature-executions/`.
+4. Confirm the build, platform, QA/server environment, account, test data, feature flags, whitelist, special entry, and destructive-action boundaries.
+5. Require the user to prepare the App at a state where `F01-01` can begin.
+6. If the feature entry is complex, record the exact path from an App restart back to the feature before execution.
+
+Do not start from an unrelated App page and hunt for a hidden feature. If the first-case scene or mandatory cases are missing, explain the missing prerequisite and wait before device operation.
 
 ## Android Route
 
@@ -212,3 +240,4 @@ Restart Codex so it discovers the skill. Do not copy exploration folders into th
 - iPhone Mirroring screenshot captures Codex or another app: bring iPhone Mirroring to the front, move covering windows away, then retake the PyAutoGUI screenshot.
 - iPhone Mirroring text is transformed, duplicated, or otherwise abnormal: stop before submitting, switch the Mac input source to English/ABC, reset the field/page, and type or paste again into a confirmed empty field.
 - Password screen appears black only while typing: treat as secure input, hide keyboard/input bar, then screenshot the masked state.
+- Report renders as one large HTML but reports `0 WebP`: run `npm install --prefix /path/to/app-ui-qa --omit=dev`, then render again. The original-format fallback is still self-contained but usually larger.

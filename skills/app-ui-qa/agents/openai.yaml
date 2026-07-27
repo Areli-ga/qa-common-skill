@@ -1,4 +1,4 @@
 interface:
   display_name: "App UI QA"
-  short_description: "Case-first Android and iOS smoke testing with visual evidence"
-  default_prompt: "Use $app-ui-qa to read the active case in full, run its Android adb-only or iPhone Mirroring smoke path, recover reachable coverage, and produce a screenshot-backed HTML report."
+  short_description: "Case-first mobile smoke and new-feature exploratory QA"
+  default_prompt: "Use $app-ui-qa to read the active smoke or feature rules, convert supplied feature cases when needed, run the Android adb-only or iPhone Mirroring path, and produce a screenshot-backed self-contained HTML report."

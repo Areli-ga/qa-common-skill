@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "giggleacademy-main-smoke-v0.1",
-  "description": "Giggle Academy 主流程冒烟用例，从思维导图整理。执行范围包含启动、新用户、登录、语音识别跳过开关、指定学习路径课程、故事书模块、闪卡模块和搜索课程；安卓渠道包冒烟拆分为独立用例。",
+  "description": "Giggle Academy 主流程冒烟用例，从思维导图整理。执行范围包含启动、新用户、登录、语音识别跳过开关、指定学习路径课程、故事书模块、闪卡模块和搜索课程；安卓渠道包冒烟和新功能探索性测试拆分为独立执行文档。",
   "status": "updated_from_test_manager_2026-07-08_core-flow-extension",
   "source": {
     "type": "mindmap-image",
@@ -141,7 +141,8 @@
       "奖励中心"
     ],
     "separatedCases": [
-      "安卓渠道包冒烟：assets/cases/giggleacademy-android-channel-smoke-v0.1.md"
+      "安卓渠道包冒烟：assets/cases/giggleacademy-android-channel-smoke-v0.1.md",
+      "新功能探索性测试：assets/cases/giggleacademy-feature-exploratory-v0.1.md"
     ]
   },
   "globalChecks": [
@@ -2314,6 +2315,7 @@
     "故事书模块不固定故事样本，目标是随机抽样。",
     "闪卡模块和搜索课程纳入核心主流程冒烟。",
     "安卓渠道包冒烟拆分到独立文件，不并入核心主流程；渠道包用例可按自身步骤退出或重启跳过新用户流程。",
+    "新功能探索性测试使用独立固定规范和每个功能的转化执行文档，不并入核心主流程统计。",
     "分享只验证组件唤起、海报显示和安全退出，不选择联系人或平台，不执行发送或发布。",
     "主流程 S02 发生真实阻断时允许证据化重启；重启后入口消失不得推断完成，但必须继续所有仍可到达的后续模块。",
     "iOS 路线包含 S02 时，用户应在自动化前手动准备 TestFlight 新安装包；如需补测 S02，先完成当前包上的 S03 及后续可达内容，再卸载重装并单独补跑 S02。"
