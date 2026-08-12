@@ -7,6 +7,7 @@ QA 内部 Codex skills 仓库。
 | Skill | 用途 |
 | --- | --- |
 | `app-ui-qa` | 复合技术栈移动 App 的双端 UI 冒烟与新功能探索性测试。支持主流程、Android 渠道包，以及从 XMind、Excel、图片或鉴权网址转化的新功能执行文档；Android 使用 adb-only，iOS 使用 iPhone Mirroring + PyAutoGUI；输出截图证据和可独立上传的单文件 HTML 报告。 |
+| `ga-har-sync` | 分析 Giggle Academy 的 Charles HAR，和 GA API Flight Deck 现有场景做脱敏去重，将有业务价值的新请求按动态 ID、风险控制和验证规则安全增量合并。 |
 | `qa-testcase-design` | 根据 PRD/提测范围设计中文测试用例、覆盖方案与 PlantUML 思维导图 ，一键发布到飞书文档 |
 | `qa-knowledge-base` | 飞书 PRD 录入 QA 知识库；写用例前检索历史需求、回归点、埋点，支持录入与检索 |
 
@@ -18,6 +19,14 @@ QA 内部 Codex skills 仓库。
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo Areli-ga/qa-common-skill \
   --path skills/app-ui-qa
+```
+
+安装 HAR 增量接入 Skill：
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo Areli-ga/qa-common-skill \
+  --path skills/ga-har-sync
 ```
 
 为保证 `app-ui-qa` 的单文件报告使用 WebP 压缩，安装 skill 后执行一次：

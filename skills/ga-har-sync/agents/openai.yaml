@@ -1,0 +1,4 @@
+interface:
+  display_name: "GA HAR Increment Sync"
+  short_description: "Analyze new Charles HAR files and safely extend GA API journeys"
+  default_prompt: "Use $ga-har-sync to analyze this new Charles HAR and merge safe new requests into the existing GA API journey project."
