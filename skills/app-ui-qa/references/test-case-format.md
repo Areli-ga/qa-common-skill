@@ -137,7 +137,7 @@ Supported `type` values:
 - Split steps at risk boundaries: login, entering Unity, opening H5/WebView, permissions, payment/destructive actions, and completion recovery.
 - Use visual language: labels, colors, icons, position, screen region, and expected copy.
 - Use `riskSignals` for known historical issues and UX concerns.
-- Use environment variable names for secrets instead of raw passwords.
+- Use environment variable names for secrets instead of raw passwords. A fixed disposable QA credential may appear in an active case only when the test manager explicitly requires it because test data is bound to that exact account; do not copy its password into reports, screenshots, prompts, or unrelated templates.
 - Mark voice, payment, destructive account changes, and production-side effects as `manual` or guarded steps unless the test environment is safe.
 - For lesson flows, prefer one step per visible interaction such as entering a lesson, tapping a target object, dragging/swiping, confirming completion, and returning home.
 
@@ -158,12 +158,12 @@ Example:
 }
 ```
 
-Do not write raw secrets into reports, prompts, screenshots, or shared case files.
+Do not write raw secrets into reports, prompts, screenshots, or shared case files. The fixed Giggle Academy main-smoke credential explicitly defined by its active case is the only current case-file exception; keep it scoped to that case and never reproduce the password in run artifacts.
 
 ## Example Requests
 
 - "Convert this smoke checklist into app-ui-qa JSON for Android and iOS."
 - "整理这个思维导图，只保留故事书模块及以上的冒烟范围。"
-- "Run S12-S17 through Android adb-only and produce an HTML report."
+- "Run S13-S19 in document order through Android adb-only and produce an HTML report."
 - "Run the iOS iPhone Mirroring PyAutoGUI route for this case and flag route-specific risks."
 - "读取我已登录 Chrome 中的新功能用例页面，转成 F/E 编号执行文档；我准备好 QA 环境入口后再开始验证。"

@@ -200,14 +200,15 @@ PyAutoGUI screenshots are region screenshots. They are fast, but they capture th
 
 ## Test Data
 
-Use local environment variables or untracked notes for credentials:
+Giggle Academy main smoke uses the fixed S03 account and kid written in the active case because the dedicated path is bound to that data. Do not override them with local variables, and do not reproduce the fixed password in reports.
+
+Use local environment variables or untracked notes for the separate S14 upgrade-Quiz account and other test data:
 
 ```bash
 APP_QA_USERNAME=""
 APP_QA_PASSWORD=""
 GA_TEST_EMAIL=""
 GA_TEST_PASSWORD=""
-GA_EXPECTED_CHILD_NAME=""
 GA_NEW_CHILD_NAME=""
 ANDROID_SERIAL=""
 ANDROID_PACKAGE="com.giggleacademy.app"
@@ -215,7 +216,7 @@ ANDROID_APK_PATH=""
 IOS_BUNDLE_ID="com.giggleacademy.app"
 ```
 
-Do not commit real account passwords or API keys.
+Do not commit real account passwords or API keys. The test-manager-approved disposable credential in the active main-smoke case is a narrow exception and must not be copied into any other file or report.
 
 ## Skill Installation for Teammates
 

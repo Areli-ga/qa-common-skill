@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "name": "giggleacademy-main-smoke-v0.1",
-  "description": "Giggle Academy 主流程冒烟用例，从思维导图整理。执行范围包含启动、新用户、登录、语音识别跳过开关、指定学习路径课程、故事书模块、闪卡模块和搜索课程；安卓渠道包冒烟和新功能探索性测试拆分为独立执行文档。",
-  "status": "updated_from_test_manager_2026-07-08_core-flow-extension",
+  "description": "Giggle Academy 主流程冒烟用例。主流程使用固定账号与 Lv1 -> unit5-当前全类型专用路径；范围包含启动、新用户、登录、设置、指定课程、四套单元复习、故事书入口、闪卡模块、搜索课程，以及最后切换旧测试账号完成升级 Quiz。",
+  "status": "updated_from_test_manager_2026-08-19_fixed-account-and-path",
   "source": {
     "type": "mindmap-image",
     "path": "/Users/areli/Downloads/whiteboard_exported_image.png",
@@ -42,8 +42,11 @@
     "androidAllowClearAppDataBeforeRun": true,
     "iosFreshStateMethod": "Uninstall the old App, reinstall the target build through TestFlight, and keep it unopened until automation starts.",
     "fixedPrerequisitePath": {
-      "level": "Lv2",
-      "path": "动作"
+      "level": "Lv1",
+      "unit": "unit5",
+      "card": "当前全类型",
+      "label": "unit5-当前全类型",
+      "resetRule": "Whenever a listed course cannot be found, rerun all of S05 before searching again."
     },
     "storybookSampling": "random-visible-book-and-level",
     "autoEnterNextCourseRecovery": {
@@ -61,7 +64,7 @@
         "Use the top-left back, exit, close, or pause control when visible.",
         "Confirm exit if the app asks for confirmation.",
         "Return to the main learning path.",
-        "If the path position is uncertain, run S05 to reset to Lv2 -> 动作 before continuing subsequent cases."
+        "If the path position is uncertain or a listed course cannot be found, run S05 to reset to Lv1 -> unit5-当前全类型 before continuing."
       ],
       "reporting": "Record this as auto-enter recovery or coverage context unless the app cannot exit, loops, crashes, or blocks later listed cases."
     },
@@ -110,17 +113,31 @@
     },
     "removedFromThisVersion": [
       "领取扭蛋"
-    ]
+    ],
+    "executionOrder": {
+      "source": "steps-array-and-Markdown-document-order",
+      "doNotSortByModuleNumber": true,
+      "finalModule": "S14",
+      "finalModuleRunsAfter": "S19"
+    }
   },
   "testData": {
     "account": {
-      "usernameEnv": "GA_TEST_EMAIL",
-      "passwordEnv": "GA_TEST_PASSWORD",
-      "expectedChildNameEnv": "GA_EXPECTED_CHILD_NAME"
+      "username": "523714113@qq.com",
+      "password": "111111",
+      "expectedChildName": "Areli-On",
+      "fixedForMainSmoke": true,
+      "doNotOverrideFromEnvironment": true,
+      "doNotExposePasswordInReport": true
     },
     "newUser": {
       "childNameEnv": "GA_NEW_CHILD_NAME",
       "minChildNameLength": 2
+    },
+    "upgradeQuizAccount": {
+      "usernameEnv": "GA_TEST_EMAIL",
+      "passwordEnv": "GA_TEST_PASSWORD",
+      "usage": "S14 only; switch to the previous test account after S19."
     }
   },
   "scope": {
@@ -138,7 +155,10 @@
     "excludedUntilUpdated": [
       "H5流程",
       "真实分享发送/发布流程（仅验证分享组件唤起、海报显示和安全退出）",
-      "奖励中心"
+      "奖励中心",
+      "S07 字母体操 1",
+      "S12 路径闪卡课程",
+      "S16 Read / Guide / Quiz 自动化（故事书改版期间跳过，人工已覆盖）"
     ],
     "separatedCases": [
       "安卓渠道包冒烟：assets/cases/giggleacademy-android-channel-smoke-v0.1.md",
@@ -153,6 +173,8 @@
     "iOS 首次安装启动时，广告追踪、网络 / 本地网络访问等系统授权弹窗统一选择允许，并为每层弹窗保存处理前后截图。",
     "iOS 路线包含 S02 时，自动化开始前必须确认用户已手动卸载旧 App，并通过 TestFlight 准备好尚未启动的目标新安装包；若未准备好，停止自动化并说明重装下载可能耗时较久。",
     "iOS iPhone Mirroring 文本输入前必须确认 Mac 输入法为英文 / ABC，并在提交前截图核对完整可见值；中文输入法造成的字符异常不得提交。",
+    "S03 必须使用固定账号 523714113@qq.com、固定密码和 kid Areli-On；不得被环境变量或其它账号覆盖，密码不得写入报告。",
+    "找不到指定课程时必须完整执行 S05，将路径重置为 Lv1 -> unit5-当前全类型；不得在错误等级或单元中盲目寻找。",
     "UI 自动化所需权限默认全部允许。遇到应用内确定、好的、同意或继续等权限说明页时，先截图并点击确认以触发系统权限弹窗，再在系统弹窗中选择允许；不得把尚未完成授权的页面误判为课程阻塞。",
     "主流程命中一次性新用户入口后应正常完整执行 S02，不得为了提前登录而主动重启或退出跳过新手课程。",
     "S02 发生真正阻断时，先记录现场、尝试动作、等待时间、预期和实际结果，再允许重启一次。重启后入口消失时不得推断 S02 完成，但必须继续执行所有仍可到达的后续模块。",
@@ -494,16 +516,16 @@
       }
     },
     {
-      "id": "s03-04-input-email",
+      "id": "s03-04-input-fixed-email",
       "type": "action",
-      "title": "输入邮箱",
-      "objective": "验证邮箱账号输入和下一步。",
-      "action": "输入授权测试账号并点击下一步。",
+      "title": "输入固定邮箱",
+      "objective": "使用与专用冒烟路径绑定的固定账号进入密码页。",
+      "action": "输入主冒烟固定账号 523714113@qq.com 并点击下一步。",
       "expected": "进入密码输入界面。",
       "riskSignals": [
-        "邮箱输入框不可用",
+        "固定邮箱输入框不可用",
         "下一步无响应",
-        "邮箱校验异常"
+        "账号被其它配置覆盖"
       ],
       "severity": "blocker",
       "platforms": [
@@ -512,20 +534,21 @@
       ],
       "data": {
         "caseId": "S03-04",
-        "usernameEnv": "GA_TEST_EMAIL"
+        "fixedUsername": "523714113@qq.com",
+        "doNotOverride": true
       }
     },
     {
-      "id": "s03-05-input-password",
+      "id": "s03-05-input-fixed-password",
       "type": "action",
-      "title": "输入密码",
-      "objective": "验证密码登录。",
-      "action": "输入密码并点击确定。",
+      "title": "输入固定密码",
+      "objective": "使用固定冒烟账号密码完成登录。",
+      "action": "输入主冒烟固定密码 111111 并点击确定。",
       "expected": "进入选择孩子档案界面。",
       "riskSignals": [
         "密码输入框不可用",
         "确定按钮不可用",
-        " valid 账号登录失败"
+        "固定账号登录失败"
       ],
       "severity": "blocker",
       "platforms": [
@@ -534,18 +557,19 @@
       ],
       "data": {
         "caseId": "S03-05",
-        "passwordEnv": "GA_TEST_PASSWORD"
+        "fixedPassword": "111111",
+        "doNotExposeInReport": true
       }
     },
     {
-      "id": "s03-06-select-child-profile",
+      "id": "s03-06-select-fixed-child-profile",
       "type": "action",
-      "title": "选择孩子档案",
-      "objective": "验证登录后可选择指定孩子档案。",
-      "action": "选择环境变量 GA_EXPECTED_CHILD_NAME 配置的孩子档案。",
+      "title": "选择固定 kid",
+      "objective": "选择与专用冒烟路径绑定的孩子档案。",
+      "action": "选择孩子档案 Areli-On。",
       "expected": "进入主界面，并出现通知权限弹窗。",
       "riskSignals": [
-        "孩子档案不存在",
+        "Areli-On 档案不存在",
         "点击档案无响应",
         "未进入主界面"
       ],
@@ -556,7 +580,8 @@
       ],
       "data": {
         "caseId": "S03-06",
-        "expectedChildNameEnv": "GA_EXPECTED_CHILD_NAME"
+        "fixedChildName": "Areli-On",
+        "doNotOverride": true
       }
     },
     {
@@ -745,16 +770,16 @@
       }
     },
     {
-      "id": "s05-03-switch-to-lv2",
+      "id": "s05-03-switch-to-lv1",
       "type": "action",
-      "title": "切换到 Lv2",
-      "objective": "切换到思维导图指定的 Lv2 路径。",
-      "action": "点击 Lv2 卡片并点击“开始学习”。",
-      "expected": "跳转到 Lv2 路径；左上角头像右侧显示 Lv2。",
+      "title": "切换到 Lv1",
+      "objective": "切换到固定主冒烟等级 Lv1。",
+      "action": "点击 Lv1 卡片并点击“开始学习”。",
+      "expected": "跳转到 Lv1 路径；左上角头像右侧显示 Lv1。",
       "riskSignals": [
-        "Lv2 卡片不可见",
+        "Lv1 卡片不可见",
         "开始学习按钮缺失",
-        "切换后没有 Lv2 标识"
+        "切换后没有 Lv1 标识"
       ],
       "severity": "blocker",
       "platforms": [
@@ -763,20 +788,20 @@
       ],
       "data": {
         "caseId": "S05-03",
-        "targetLevel": "Lv2"
+        "targetLevel": "Lv1"
       }
     },
     {
-      "id": "s05-04-open-actions-path",
+      "id": "s05-04-open-unit5-current-all-types",
       "type": "action",
-      "title": "定位动作路径起点",
-      "objective": "进入思维导图指定的动作路径起点。",
-      "action": "再次点击学习中心按钮，确认弹出界面为 Lv2，点击“动作”卡片。",
-      "expected": "跳转到路径起点；屏幕中课程包含“字母体验”“记忆游戏”“动作”“早上好”。",
+      "title": "定位 unit5-当前全类型",
+      "objective": "进入与固定冒烟账号绑定的专用课程路径。",
+      "action": "再次点击学习中心按钮，确认弹出界面为 Lv1，点击 unit5-当前全类型 卡片。",
+      "expected": "跳转到固定专用冒烟路径，可继续定位本文件指定的课程。",
       "riskSignals": [
-        "动作卡片缺失",
-        "路径起点课程不符合预期",
-        "点击后进入错误路径"
+        "unit5-当前全类型 卡片缺失",
+        "点击后进入错误路径",
+        "指定课程仍无法定位"
       ],
       "severity": "blocker",
       "platforms": [
@@ -785,7 +810,10 @@
       ],
       "data": {
         "caseId": "S05-04",
-        "targetPath": "动作"
+        "targetLevel": "Lv1",
+        "targetUnit": "unit5",
+        "targetCard": "当前全类型",
+        "resetWhenCourseMissing": true
       }
     },
     {
@@ -877,87 +905,6 @@
       }
     },
     {
-      "id": "s07-01-enter-letter-gymnastics-1",
-      "type": "action",
-      "title": "进入字母体操 1",
-      "objective": "进入普通课程字母体操 1。",
-      "action": "点击课程“字母体操1”。",
-      "expected": "进入 loading 界面。",
-      "riskSignals": [
-        "课程入口缺失",
-        "点击无响应"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S07-01"
-      }
-    },
-    {
-      "id": "s07-02-letter-course-loaded",
-      "type": "checkpoint",
-      "title": "字母体操 1 加载完成",
-      "objective": "验证课程正常进入。",
-      "action": "等待 loading 完成。",
-      "expected": "正常进入课程并开始课程流程。",
-      "riskSignals": [
-        "loading 超时",
-        "课程画面异常"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S07-02"
-      }
-    },
-    {
-      "id": "s07-03-tap-planet",
-      "type": "action",
-      "title": "点击星球进入游戏",
-      "objective": "正式进入字母体操游戏。",
-      "action": "点击画面中的星球。",
-      "expected": "正式进入游戏。",
-      "riskSignals": [
-        "星球不可见",
-        "点击后未进入游戏"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S07-03"
-      }
-    },
-    {
-      "id": "s07-04-tap-numbered-platforms",
-      "type": "action",
-      "title": "按数字顺序点击底座",
-      "objective": "完成字母体操游戏。",
-      "action": "按数字顺序逐一点击底座，让兔子跳跃。",
-      "expected": "完成课程并回到主页面。",
-      "riskSignals": [
-        "数字底座不可见",
-        "点击顺序后无反馈",
-        "完成后未回主页"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S07-04"
-      }
-    },
-    {
       "id": "s08-01-enter-memory-game",
       "type": "action",
       "title": "进入记忆游戏",
@@ -1041,15 +988,16 @@
       }
     },
     {
-      "id": "s09-01-enter-good-morning-story-course",
+      "id": "s09-01-enter-normal-storybook-course",
       "type": "action",
-      "title": "进入“早上好”故事书课程",
-      "objective": "进入指定路径上的故事书阅读课程。",
-      "action": "点击“早上好”。",
-      "expected": "进入故事书界面。",
+      "title": "进入《正常故事书》",
+      "objective": "进入固定路径上的指定故事书阅读课程。",
+      "action": "点击课程《正常故事书》；如当前路径找不到，先完整执行 S05 重置。",
+      "expected": "进入《正常故事书》课程界面。",
       "riskSignals": [
-        "早上好入口缺失",
-        "故事书界面未打开"
+        "《正常故事书》入口缺失",
+        "故事书界面未打开",
+        "路径重置后仍找不到"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1057,7 +1005,8 @@
         "ios"
       ],
       "data": {
-        "caseId": "S09-01"
+        "caseId": "S09-01",
+        "fixedBookTitle": "正常故事书"
       }
     },
     {
@@ -1107,11 +1056,11 @@
       "type": "action",
       "title": "进入涂色游戏",
       "objective": "进入指定路径上的涂色游戏。",
-      "action": "点击“涂色游戏：j”；如果屏幕中没有则向右轻轻滑动寻找。",
+      "action": "点击“涂色游戏: a”；如当前路径找不到，先完整执行 S05 重置。",
       "expected": "进入涂色游戏 loading 或游戏页。",
       "riskSignals": [
-        "入口找不到",
-        "滑动后仍找不到",
+        "涂色游戏: a 入口找不到",
+        "路径重置后仍找不到",
         "点击无响应"
       ],
       "severity": "blocker",
@@ -1120,7 +1069,8 @@
         "ios"
       ],
       "data": {
-        "caseId": "S10-01"
+        "caseId": "S10-01",
+        "fixedCourseTitle": "涂色游戏: a"
       }
     },
     {
@@ -1191,10 +1141,11 @@
       "type": "action",
       "title": "进入字母描红",
       "objective": "进入字母描红游戏。",
-      "action": "点击“字母描红：j”。",
+      "action": "点击“字母描红：l”；如当前路径找不到，先完整执行 S05 重置。",
       "expected": "进入游戏。",
       "riskSignals": [
-        "入口缺失",
+        "字母描红：l 入口缺失",
+        "路径重置后仍找不到",
         "点击无响应"
       ],
       "severity": "blocker",
@@ -1203,7 +1154,8 @@
         "ios"
       ],
       "data": {
-        "caseId": "S11-01"
+        "caseId": "S11-01",
+        "fixedCourseTitle": "字母描红：l"
       }
     },
     {
@@ -1228,99 +1180,15 @@
       }
     },
     {
-      "id": "s12-01-enter-flashcard-course",
+      "id": "s13-01-enter-unit-review-1",
       "type": "action",
-      "title": "进入闪卡课程",
-      "objective": "进入主流程路径上的闪卡课程。",
-      "action": "点击“闪卡”。",
-      "expected": "进入闪卡游戏。",
+      "title": "进入单元复习 1",
+      "objective": "进入第 1 个单元复习模板。",
+      "action": "在固定路径中点击“单元复习1”；如找不到则完整执行 S05 重置。",
+      "expected": "进入载具选择页。",
       "riskSignals": [
-        "闪卡课程入口缺失",
-        "闪卡游戏未打开"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S12-01",
-        "notTheExcludedFlashcardModule": true
-      }
-    },
-    {
-      "id": "s12-02-complete-first-two-flashcard-games",
-      "type": "action",
-      "title": "完成前两个闪卡小游戏",
-      "objective": "完成闪卡课程中非语音小游戏。",
-      "action": "通过点击、拖拽等操作完成前两个小游戏。",
-      "expected": "前两个小游戏完成。",
-      "riskSignals": [
-        "点击或拖拽无响应",
-        "小游戏无法完成"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S12-02",
-        "iosIPhoneMirroringRouteRisk": "Flashcard is WebView-heavy. Through iPhone Mirroring, automation click/drag feedback or mirrored audio may be unreliable; mark this as a route-specific observation and cross-check directly on the real iPhone when needed."
-      }
-    },
-    {
-      "id": "s12-03-flashcard-voice-auto-skip",
-      "type": "checkpoint",
-      "title": "第三个语音小游戏自动跳过",
-      "objective": "验证语音识别开关生效，不阻断闪卡课程。",
-      "action": "到第三个小游戏时观察语音识别流程，等待 5 秒检查是否自动跳过。",
-      "expected": "语音识别会自动跳过。",
-      "riskSignals": [
-        "语音小游戏未自动跳过",
-        "流程被语音识别阻断"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S12-03",
-        "voiceAccuracyOutOfScope": true,
-        "voiceAutoSkipWaitMs": 5000
-      }
-    },
-    {
-      "id": "s12-04-flashcard-course-return",
-      "type": "checkpoint",
-      "title": "闪卡课程完成返回",
-      "objective": "验证单词全部完成后回到主页。",
-      "action": "等待单词全部完成。",
-      "expected": "自动回到主页。",
-      "riskSignals": [
-        "单词完成后卡住",
-        "未回主页"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S12-04"
-      }
-    },
-    {
-      "id": "s13-01-enter-unit-review",
-      "type": "action",
-      "title": "进入单元复习",
-      "objective": "进入指定路径上的单元复习。",
-      "action": "持续向右滑动主界面，直到出现“单元复习”，点击进入。",
-      "expected": "进入单元复习。",
-      "riskSignals": [
-        "单元复习入口找不到",
-        "滑动后路径异常",
+        "单元复习1 入口找不到",
+        "路径重置后仍找不到",
         "点击无响应"
       ],
       "severity": "blocker",
@@ -1329,20 +1197,46 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-01"
+        "caseId": "S13-01",
+        "reviewTemplate": 1,
+        "sequence": 1
       }
     },
     {
-      "id": "s13-02-complete-unit-review",
+      "id": "s13-02-select-random-vehicle-1",
       "type": "action",
-      "title": "完成单元复习流程",
-      "objective": "完成单元复习中的关卡、机关和问答题。",
-      "action": "加载完成后完成关卡、机关、问答题；可用点击、拖拽、滑动操作。",
-      "expected": "全部完成。",
+      "title": "单元复习 1 选择载具",
+      "objective": "为单元复习 1 随机选择载具。",
+      "action": "在当前可见载具中随机选择一个并截图记录。",
+      "expected": "成功进入单元复习 1。",
+      "riskSignals": [
+        "载具选择页未出现",
+        "载具不可选择",
+        "选择后未进入复习"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-02",
+        "reviewTemplate": 1,
+        "vehicleSelection": "random-visible"
+      }
+    },
+    {
+      "id": "s13-03-complete-unit-review-1",
+      "type": "action",
+      "title": "完成单元复习 1",
+      "objective": "完成第 1 个单元复习模板。",
+      "action": "完成该模板的关卡、机关和问答题，结算后回到主页。",
+      "expected": "单元复习 1 完成并回到主页。",
       "riskSignals": [
         "关卡无响应",
         "问答题无法选择",
-        "机关交互异常"
+        "机关交互异常",
+        "结算后未回主页"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1350,39 +1244,22 @@
         "ios"
       ],
       "data": {
-        "caseId": "S13-02"
+        "caseId": "S13-03",
+        "reviewTemplate": 1,
+        "requireCompletionEvidence": true
       }
     },
     {
-      "id": "s13-03-unit-review-return",
-      "type": "checkpoint",
-      "title": "单元复习返回主页",
-      "objective": "验证单元复习完成后回到主页。",
-      "action": "完成后等待。",
-      "expected": "自动回到主页。",
-      "riskSignals": [
-        "完成后卡住",
-        "未回主页"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S13-03"
-      }
-    },
-    {
-      "id": "s14-01-open-level-switch-for-quiz",
+      "id": "s13-04-enter-unit-review-2",
       "type": "action",
-      "title": "进入升级 Quiz 的等级切换",
-      "objective": "打开等级切换界面寻找可解锁卡片。",
-      "action": "点击左上角“学习中心”，点击“切换等级”。",
-      "expected": "进入等级切换界面。",
+      "title": "进入单元复习 2",
+      "objective": "进入第 2 个单元复习模板。",
+      "action": "在固定路径中点击“单元复习2”；如找不到则完整执行 S05 重置。",
+      "expected": "进入载具选择页。",
       "riskSignals": [
-        "学习中心打不开",
-        "切换等级按钮缺失"
+        "单元复习2 入口找不到",
+        "路径重置后仍找不到",
+        "点击无响应"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1390,19 +1267,22 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-01"
+        "caseId": "S13-04",
+        "reviewTemplate": 2,
+        "sequence": 2
       }
     },
     {
-      "id": "s14-02-find-unlockable-level-card",
+      "id": "s13-05-select-random-vehicle-2",
       "type": "action",
-      "title": "找到可解锁等级卡片",
-      "objective": "定位右上角为灰色图标的可解锁卡片。",
-      "action": "点击等级卡片上右上角为灰色图标的卡片；如果没有则向右滑动寻找。滑动横向等级列表时拖动卡片之间或上方 / 下方的非卡片空白区域，不拖动卡片本体。",
-      "expected": "卡片上出现“解锁”按钮。",
+      "title": "单元复习 2 选择载具",
+      "objective": "为单元复习 2 随机选择载具。",
+      "action": "在当前可见载具中随机选择一个并截图记录。",
+      "expected": "成功进入单元复习 2。",
       "riskSignals": [
-        "可解锁卡片找不到",
-        "解锁按钮不出现"
+        "载具选择页未出现",
+        "载具不可选择",
+        "选择后未进入复习"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1410,21 +1290,23 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-02",
-        "dragPolicy": "Use non-card blank area for horizontal level-list drag. Do not drag card bodies because it may select a card or fail to scroll."
+        "caseId": "S13-05",
+        "reviewTemplate": 2,
+        "vehicleSelection": "random-visible"
       }
     },
     {
-      "id": "s14-03-enter-upgrade-quiz",
+      "id": "s13-06-complete-unit-review-2",
       "type": "action",
-      "title": "进入升级挑战 Quiz",
-      "objective": "从可解锁等级卡片进入 quiz。",
-      "action": "点击“解锁”，再点击“开始”。",
-      "expected": "进入 quiz。",
+      "title": "完成单元复习 2",
+      "objective": "完成第 2 个单元复习模板。",
+      "action": "完成该模板的关卡、机关和问答题，结算后回到主页。",
+      "expected": "单元复习 2 完成并回到主页。",
       "riskSignals": [
-        "解锁按钮无响应",
-        "开始按钮缺失",
-        "quiz 未打开"
+        "关卡无响应",
+        "问答题无法选择",
+        "机关交互异常",
+        "结算后未回主页"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1432,20 +1314,22 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-03"
+        "caseId": "S13-06",
+        "reviewTemplate": 2,
+        "requireCompletionEvidence": true
       }
     },
     {
-      "id": "s14-04-complete-upgrade-quiz",
+      "id": "s13-07-enter-unit-review-3",
       "type": "action",
-      "title": "完成升级 Quiz",
-      "objective": "完成 quiz 中所有题目并检查完成表现。",
-      "action": "完成 quiz 中所有题目；以流程完成为主，不验证音频题目准确率。遇到无可见题干 / 纯音频题时，可对三个稳定选项坐标从左到右循环点击 10 轮推进，跑完截图判断是否结算。",
-      "expected": "完成后的表现正常。",
+      "title": "进入单元复习 3",
+      "objective": "进入第 3 个单元复习模板。",
+      "action": "在固定路径中点击“单元复习3”；如找不到则完整执行 S05 重置。",
+      "expected": "进入载具选择页。",
       "riskSignals": [
-        "题目无法作答",
-        "完成后无结算",
-        "完成表现异常"
+        "单元复习3 入口找不到",
+        "路径重置后仍找不到",
+        "点击无响应"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1453,8 +1337,126 @@
         "ios"
       ],
       "data": {
-        "caseId": "S14-04",
-        "quizAnswerPolicy": "Flow-first. Do not validate audio-question accuracy. The three option coordinates are stable; for hidden-text or audio-only prompts, loop taps across the visible options from left to right for 10 rounds, then screenshot and judge whether the upgrade flow reached completion."
+        "caseId": "S13-07",
+        "reviewTemplate": 3,
+        "sequence": 3
+      }
+    },
+    {
+      "id": "s13-08-select-random-vehicle-3",
+      "type": "action",
+      "title": "单元复习 3 选择载具",
+      "objective": "为单元复习 3 随机选择载具。",
+      "action": "在当前可见载具中随机选择一个并截图记录。",
+      "expected": "成功进入单元复习 3。",
+      "riskSignals": [
+        "载具选择页未出现",
+        "载具不可选择",
+        "选择后未进入复习"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-08",
+        "reviewTemplate": 3,
+        "vehicleSelection": "random-visible"
+      }
+    },
+    {
+      "id": "s13-09-complete-unit-review-3",
+      "type": "action",
+      "title": "完成单元复习 3",
+      "objective": "完成第 3 个单元复习模板。",
+      "action": "完成该模板的关卡、机关和问答题，结算后回到主页。",
+      "expected": "单元复习 3 完成并回到主页。",
+      "riskSignals": [
+        "关卡无响应",
+        "问答题无法选择",
+        "机关交互异常",
+        "结算后未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-09",
+        "reviewTemplate": 3,
+        "requireCompletionEvidence": true
+      }
+    },
+    {
+      "id": "s13-10-enter-unit-review-4",
+      "type": "action",
+      "title": "进入单元复习 4",
+      "objective": "进入第 4 个单元复习模板。",
+      "action": "在固定路径中点击“单元复习4”；如找不到则完整执行 S05 重置。",
+      "expected": "进入载具选择页。",
+      "riskSignals": [
+        "单元复习4 入口找不到",
+        "路径重置后仍找不到",
+        "点击无响应"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-10",
+        "reviewTemplate": 4,
+        "sequence": 4
+      }
+    },
+    {
+      "id": "s13-11-select-random-vehicle-4",
+      "type": "action",
+      "title": "单元复习 4 选择载具",
+      "objective": "为单元复习 4 随机选择载具。",
+      "action": "在当前可见载具中随机选择一个并截图记录。",
+      "expected": "成功进入单元复习 4。",
+      "riskSignals": [
+        "载具选择页未出现",
+        "载具不可选择",
+        "选择后未进入复习"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-11",
+        "reviewTemplate": 4,
+        "vehicleSelection": "random-visible"
+      }
+    },
+    {
+      "id": "s13-12-complete-unit-review-4",
+      "type": "action",
+      "title": "完成单元复习 4",
+      "objective": "完成第 4 个单元复习模板。",
+      "action": "完成该模板的关卡、机关和问答题，结算后回到主页。",
+      "expected": "单元复习 4 完成并回到主页。",
+      "riskSignals": [
+        "关卡无响应",
+        "问答题无法选择",
+        "机关交互异常",
+        "结算后未回主页"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S13-12",
+        "reviewTemplate": 4,
+        "requireCompletionEvidence": true
       }
     },
     {
@@ -1498,212 +1500,30 @@
       }
     },
     {
-      "id": "s16-01-open-any-book",
-      "type": "action",
-      "title": "进入任意故事播放",
-      "objective": "从绘本故事页面进入故事播放。",
-      "action": "在绘本故事页面点击任意一本故事书。",
-      "expected": "进入播放 loading，并在完成后进入封面页。",
+      "id": "s16-01-skip-redesigned-story-modes",
+      "type": "manual",
+      "title": "故事书三种模式改版期间跳过",
+      "objective": "记录 Read、Guide、Quiz 三种模式在改版期间由人工覆盖、自动化暂时跳过。",
+      "action": "不进入故事书或点击 Read / Guide / Quiz；在报告中标记“跳过 / 人工已覆盖”。",
+      "expected": "本用例不计为失败或阻塞，待功能稳定后重新补充自动化。",
       "riskSignals": [
-        "故事书列表为空",
-        "点击故事无响应",
-        "播放 loading 超时",
-        "封面页未出现"
+        "报告未标记跳过原因",
+        "误进入模式造成用例外操作"
       ],
-      "severity": "blocker",
+      "severity": "normal",
       "platforms": [
         "android",
         "ios"
       ],
       "data": {
         "caseId": "S16-01",
-        "bookSelection": "any-visible-book"
-      }
-    },
-    {
-      "id": "s16-02-book-auto-page-turn",
-      "type": "checkpoint",
-      "title": "故事书自动翻页播放",
-      "objective": "验证故事书播放自动翻页。",
-      "action": "观察故事书播放。",
-      "expected": "故事书播放过程中会自动翻页。",
-      "riskSignals": [
-        "未自动翻页",
-        "播放卡住",
-        "画面异常"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-02"
-      }
-    },
-    {
-      "id": "s16-03-open-book-side-menu",
-      "type": "action",
-      "title": "打开故事播放右侧菜单栏",
-      "objective": "验证播放页右上角菜单入口。",
-      "action": "点击右上角按钮。",
-      "expected": "弹出右侧菜单栏。",
-      "riskSignals": [
-        "右上角按钮缺失",
-        "菜单栏未弹出"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-03"
-      }
-    },
-    {
-      "id": "s16-04-reading-mode-switch",
-      "type": "action",
-      "title": "阅读模式切换",
-      "objective": "验证故事播放的阅读模式选项。",
-      "action": "在菜单栏检查阅读模式；分别点击“读给我听”“自己读”；如果有“跟我读”也点击切换。",
-      "expected": "阅读模式至少包含“读给我听”“自己读”，可能包含“跟我读”；模式可切换。",
-      "riskSignals": [
-        "必需阅读模式缺失",
-        "模式切换无响应",
-        "切换后播放异常"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-04",
-        "optionalMode": "跟我读"
-      }
-    },
-    {
-      "id": "s16-05-audio-mode",
-      "type": "action",
-      "title": "进入音频模式",
-      "objective": "验证菜单栏音频模式入口。",
-      "action": "点击“音频模式”按钮。",
-      "expected": "进入音频播放模式。",
-      "riskSignals": [
-        "音频模式按钮缺失",
-        "音频模式未打开"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-05"
-      }
-    },
-    {
-      "id": "s16-06-close-audio-mode",
-      "type": "action",
-      "title": "退出音频模式",
-      "objective": "验证音频模式可关闭返回。",
-      "action": "点击左上角关闭按钮。",
-      "expected": "返回故事播放。",
-      "riskSignals": [
-        "关闭按钮缺失",
-        "无法返回故事播放"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-06"
-      }
-    },
-    {
-      "id": "s16-07-favorite-book",
-      "type": "action",
-      "title": "收藏故事书",
-      "objective": "验证故事收藏入口。",
-      "action": "再次点击右上角按钮打开菜单栏，点击爱心按钮。",
-      "expected": "故事书被收藏。",
-      "riskSignals": [
-        "菜单无法再次打开",
-        "爱心按钮缺失",
-        "收藏无反馈"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-07"
-      }
-    },
-    {
-      "id": "s16-08-book-endpage",
-      "type": "checkpoint",
-      "title": "进入故事 endpage",
-      "objective": "验证故事播放完成后的 endpage。",
-      "action": "继续完成故事书播放。",
-      "expected": "自动进入 endpage 页面，可看到倒计时即将进入下一本故事书。",
-      "riskSignals": [
-        "endpage 不出现",
-        "倒计时缺失",
-        "播放结束卡住"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-08"
-      }
-    },
-    {
-      "id": "s16-09-book-continue-next",
-      "type": "checkpoint",
-      "title": "续播下一本故事",
-      "objective": "验证 endpage 倒计时后续播下一本故事。",
-      "action": "等待倒计时结束。",
-      "expected": "正确进入下一本故事书并完成播放。",
-      "riskSignals": [
-        "倒计时结束后未进入下一本",
-        "下一本故事加载失败",
-        "下一本故事播放异常"
-      ],
-      "severity": "blocker",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-09"
-      }
-    },
-    {
-      "id": "s16-10-return-from-second-endpage",
-      "type": "action",
-      "title": "第二次 endpage 返回",
-      "objective": "验证续播后的返回能力。",
-      "action": "在下一次 endpage 页面点击左上角按钮。",
-      "expected": "返回上一层或绘本故事路径。",
-      "riskSignals": [
-        "返回按钮缺失",
-        "返回后页面异常"
-      ],
-      "severity": "major",
-      "platforms": [
-        "android",
-        "ios"
-      ],
-      "data": {
-        "caseId": "S16-10"
+        "executionStatus": "skipped-manual-covered",
+        "temporary": true,
+        "futureCoverage": {
+          "read": "any book",
+          "guide": "fixed book through search",
+          "quiz": "fixed book through search"
+        }
       }
     },
     {
@@ -1749,33 +1569,34 @@
       }
     },
     {
-      "id": "s17-03-open-book-from-search",
+      "id": "s17-03-open-book-mode-selection-from-search",
       "type": "action",
-      "title": "从搜索结果进入播放",
-      "objective": "验证搜索结果故事可播放。",
-      "action": "点击任意一本故事书。",
-      "expected": "正常进入并播放。",
+      "title": "从搜索结果进入书籍",
+      "objective": "验证搜索结果可进入改版后的书籍详情或模式选择页。",
+      "action": "点击任意一本故事书，只观察书籍详情或 Read / Guide / Quiz 模式选择页。",
+      "expected": "正常进入书籍详情或模式选择页。",
       "riskSignals": [
         "搜索结果不可点击",
-        "播放页未打开",
-        "播放异常"
+        "书籍详情未打开",
+        "模式选择页显示异常"
       ],
-      "severity": "blocker",
+      "severity": "major",
       "platforms": [
         "android",
         "ios"
       ],
       "data": {
         "caseId": "S17-03",
-        "bookSelection": "any-visible-search-result"
+        "doNotSelectReadingMode": true,
+        "s16AutomationSkipped": true
       }
     },
     {
-      "id": "s17-04-return-to-search",
+      "id": "s17-04-return-to-search-from-mode-selection",
       "type": "action",
       "title": "返回搜索页",
-      "objective": "验证播放页可退回搜索页。",
-      "action": "播放正常后点击左上角按钮。",
+      "objective": "从书籍详情或模式选择页返回搜索页。",
+      "action": "在书籍详情或模式选择页点击左上角按钮。",
       "expected": "退出至搜索页。",
       "riskSignals": [
         "返回按钮缺失",
@@ -1872,7 +1693,8 @@
       ],
       "data": {
         "caseId": "S18-01",
-        "module": "flashcard-center"
+        "module": "flashcard-center",
+        "removedPathFlashcardCourse": true
       }
     },
     {
@@ -2306,17 +2128,218 @@
       "data": {
         "caseId": "S19-05"
       }
+    },
+    {
+      "id": "s14-01-open-logged-in-sidebar",
+      "type": "action",
+      "title": "打开已登录侧栏",
+      "objective": "在全部其它冒烟模块完成后打开主账号侧栏。",
+      "action": "点击左上角头像。",
+      "expected": "弹出左侧菜单栏，可见设置按钮。",
+      "riskSignals": [
+        "头像入口不可见",
+        "侧栏未弹出",
+        "设置按钮缺失"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-01",
+        "executeLast": true
+      }
+    },
+    {
+      "id": "s14-02-enter-settings-before-account-switch",
+      "type": "action",
+      "title": "进入设置",
+      "objective": "进入主冒烟账号的设置界面。",
+      "action": "点击侧栏设置按钮；如出现家长验证则完成算术题。",
+      "expected": "进入设置界面。",
+      "riskSignals": [
+        "设置入口无响应",
+        "家长验证无法完成",
+        "设置界面未打开"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-02"
+      }
+    },
+    {
+      "id": "s14-03-logout-fixed-main-smoke-account",
+      "type": "action",
+      "title": "退出主冒烟账号",
+      "objective": "从账号设置退出已经完成主流程的固定账号。",
+      "action": "进入设置的“账号”页，点击右上角“退出登录”并确认。",
+      "expected": "固定账号退出，回到未登录状态。",
+      "riskSignals": [
+        "账号页缺失",
+        "退出登录无响应",
+        "退出后状态异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-03",
+        "fixedUsername": "523714113@qq.com",
+        "noLaterSmokeModules": true
+      }
+    },
+    {
+      "id": "s14-04-login-previous-upgrade-quiz-account",
+      "type": "action",
+      "title": "登录之前的测试账号",
+      "objective": "登录可用于升级 Quiz 的旧测试账号。",
+      "action": "使用 GA_TEST_EMAIL 和 GA_TEST_PASSWORD 完成登录。",
+      "expected": "登录成功并进入 kid 选择或主界面。",
+      "riskSignals": [
+        "旧测试账号变量缺失",
+        "登录失败",
+        "未进入 kid 选择或主界面"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-04",
+        "usernameEnv": "GA_TEST_EMAIL",
+        "passwordEnv": "GA_TEST_PASSWORD",
+        "blockOnlyThisModuleWhenMissing": true
+      }
+    },
+    {
+      "id": "s14-05-switch-to-upgradeable-child",
+      "type": "action",
+      "title": "切换可升级 kid",
+      "objective": "选择仍可执行升级 Quiz 的 kid。",
+      "action": "进入主界面后点击左上角头像，在左侧菜单栏左上角切换 kid，选择任意一个仍可执行升级 Quiz 的 kid。",
+      "expected": "切换后回到该 kid 的主学习路径。",
+      "riskSignals": [
+        "kid 切换入口缺失",
+        "其它 kid 不可选择",
+        "切换后路径异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-05",
+        "childSelection": "any-child-with-available-upgrade-quiz",
+        "reason": "Areli-On already completed L9 upgrade"
+      }
+    },
+    {
+      "id": "s14-06-open-level-switch-for-quiz",
+      "type": "action",
+      "title": "进入等级切换",
+      "objective": "打开等级切换界面寻找可解锁卡片。",
+      "action": "点击左上角“学习中心”，点击“切换等级”。",
+      "expected": "进入等级切换界面。",
+      "riskSignals": [
+        "学习中心打不开",
+        "切换等级按钮缺失"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-06"
+      }
+    },
+    {
+      "id": "s14-07-find-unlockable-level-card",
+      "type": "action",
+      "title": "找到可解锁等级卡片",
+      "objective": "定位可执行升级 Quiz 的等级卡片。",
+      "action": "点击右上角为灰色图标的等级卡片；如未出现“解锁”，在卡片之间或上下空白区域水平拖动并逐一寻找。",
+      "expected": "卡片上出现“解锁”按钮。",
+      "riskSignals": [
+        "可解锁卡片找不到",
+        "解锁按钮不出现",
+        "拖动时误触卡片"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-07",
+        "dragOnlyBlankAreas": true
+      }
+    },
+    {
+      "id": "s14-08-start-upgrade-quiz",
+      "type": "action",
+      "title": "进入升级挑战",
+      "objective": "从可解锁等级卡片进入升级 Quiz。",
+      "action": "点击“解锁”，再点击“开始”。",
+      "expected": "进入升级 Quiz。",
+      "riskSignals": [
+        "解锁按钮无响应",
+        "开始按钮缺失",
+        "未进入 Quiz"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-08"
+      }
+    },
+    {
+      "id": "s14-09-complete-upgrade-quiz",
+      "type": "action",
+      "title": "完成升级 Quiz",
+      "objective": "完成升级 Quiz 并观察结算或升级完成状态。",
+      "action": "完成 Quiz 中所有题目。无可见题干或纯音频题可对三个选项从左到右循环点击最多 10 轮，每轮后用新截图确认状态。",
+      "expected": "正常进入结算或升级完成状态。",
+      "riskSignals": [
+        "题目无法推进",
+        "超过重试上限仍无结算",
+        "完成后状态异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S14-09",
+        "audioAccuracyOutOfScope": true,
+        "maxFallbackOptionCycles": 10
+      }
     }
   ],
   "confirmedDecisions": [
     "Android 允许运行前清 App 数据覆盖新用户流程；iOS 使用卸载旧 App、TestFlight 重装并保持未启动的方式覆盖首次流程。",
-    "账号、密码、孩子档案名、新建孩子名都做成环境配置项，使用的账号必须解锁 Lv2。",
-    "暂时固定前置路径为 Lv2 -> 动作路径。",
-    "故事书模块不固定故事样本，目标是随机抽样。",
-    "闪卡模块和搜索课程纳入核心主流程冒烟。",
-    "安卓渠道包冒烟拆分到独立文件，不并入核心主流程；渠道包用例可按自身步骤退出或重启跳过新用户流程。",
-    "新功能探索性测试使用独立固定规范和每个功能的转化执行文档，不并入核心主流程统计。",
+    "主冒烟固定使用账号 523714113@qq.com、密码 111111 和 kid Areli-On，不允许环境配置覆盖；密码不写入报告。",
+    "固定前置路径为 Lv1 -> unit5-当前全类型；任一指定课程找不到时完整重跑 S05。",
+    "S07 字母体操 1 和 S12 路径闪卡课程已从本版移除。",
+    "S09 固定进入《正常故事书》，S10 固定进入涂色游戏: a，S11 固定进入字母描红：l。",
+    "S13 必须完成单元复习 1 至 4 四个模板，每次进入时随机选择一个可见载具。",
+    "S16 在故事书改版期间标记为跳过 / 人工已覆盖；功能稳定后重新补充 Read、Guide、Quiz 三种模式用例。",
+    "闪卡模块和搜索课程纳入核心主流程冒烟；安卓渠道包与新功能探索性测试不并入核心主流程。",
     "分享只验证组件唤起、海报显示和安全退出，不选择联系人或平台，不执行发送或发布。",
+    "S14 保留原编号但在 S19 后最后执行；切换之前的测试账号和任意可升级 kid 后完成升级 Quiz。",
     "主流程 S02 发生真实阻断时允许证据化重启；重启后入口消失不得推断完成，但必须继续所有仍可到达的后续模块。",
     "iOS 路线包含 S02 时，用户应在自动化前手动准备 TestFlight 新安装包；如需补测 S02，先完成当前包上的 S03 及后续可达内容，再卸载重装并单独补跑 S02。"
   ]

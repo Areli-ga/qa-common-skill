@@ -17,6 +17,8 @@
 - Android 设备/模拟器：
 - iOS 真实 iPhone / iPhone Mirroring 状态：
 - 测试账号提供方式：
+- Giggle Academy 主流程冒烟是否确认使用 active case 内固定账号与 kid：
+- S14 升级 Quiz 所需的之前测试账号是否已通过 `GA_TEST_EMAIL` / `GA_TEST_PASSWORD` 准备：
 - 语音识别是否发布阻塞：
 - 本轮必须通过的主链路：
 
