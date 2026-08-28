@@ -14,3 +14,7 @@ logs/
 screenshots/
 report.html
 report.md
+
+# 知识库读图缩放副本:derived,可由原图用 sips -Z 1900 字节级精确重建
+# (scripts/read_cache.py),不入库、不占仓库体积
+skills/qa-knowledge-base/raw/*/images/*.read.*

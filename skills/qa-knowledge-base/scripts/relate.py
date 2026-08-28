@@ -3,15 +3,25 @@
 """
 relate.py — ingest 第④步:给 notes/ 里的笔记算关联,双向写 related。
 
-打分(对应 SKILL.md 修正:只看模块 + 功能标识,通用词/通用埋点公参都不参与):
-    score(A,B) = 3·(同一级模块) + 2·|共享功能标识符|
+打分(对应 SKILL.md;通用词/通用参数字段都不参与):
+    score(A,B) = 2·(二级模块完全相同) + 2·|共享功能标识符|
     共享功能标识符 = 两篇都出现的功能专属 token(snake_case 含 `_` 或真驼峰,如 app_unit_reward、app_enter_quiz);
-                   排除 Hello/Sunny/App 这类通用词,以及 level_number/unit_number 等通用埋点公参(见 STOP_IDS)。
+                   排除通用词、通用埋点公参,以及**参数字段命名模式**(见 identifiers)。
     score ≥ THRESHOLD(=2)→ 互相 related(双向)。
-    含义:**同模块(3)** 或 **≥1 个共享功能标识符(2)** 即关联(doc1↔doc3 靠 app_unit_reward 连;公参排除后不再误连无关文档)。
+    含义:**同一个二级模块(2,= 同一功能的历次迭代)** 或 **≥1 个共享功能标识符(2)** 即关联。
+
+⚠️ 2026-08-28 修正一:**一级模块不再作为关联信号**。实测 102 篇时,426 对关联里 251 对(59%)
+   纯粹来自"同属一个一级模块"——AI Tutor 17 篇彼此全连,13 篇顶着 16 条 related,`related` 退化成
+   "模块花名册"。而模块视图本就由 `INDEX.md`(按模块排序)和 `search.py --module` 覆盖,不需要 related 重复一遍。
+   改用**二级模块**(如 `AI Tutor / Mai主对话`):102 篇里只有 18 对命中,且全部是同一功能的历次迭代——
+   正是写用例时要的功能演进线。
+
+⚠️ 2026-08-28 修正二:**不能用 df(文档频率)上限来剔除通用词**。清掉参数字段后实测 df 最高的是
+   `lesson_speech_recognition_end`(7 篇)、`app_enter_quiz`(6 篇)—— df 高恰恰说明这个埋点被反复改动,
+   是回归最该盯的信号。按 df 砍会砍掉最有价值的关联。
 
 为什么不用中文散文相似度:标准库无可靠中文分词,bigram 重叠在"篇篇都是产品需求"时噪声极大
-(实测会把所有文档连成一团)。故只用 模块 + 强标识符——宁可少连(漏的由模块视图/关键词检索兜底),不乱连。
+(实测会把所有文档连成一团)。故只用 二级模块 + 强标识符——宁可少连(漏的由模块视图/关键词检索兜底),不乱连。
 
 幂等:每次从所有笔记重算,可反复跑。
 用法:
@@ -45,9 +55,12 @@ def parse_note(path):
             mm = re.match(r"^(\w+):\s*(.*)$", line)
             if mm:
                 fm[mm.group(1)] = mm.group(2).strip()
-    l1 = re.split(r"[/／]", fm.get("模块", ""))[0].strip()
+    parts = [p.strip() for p in re.split(r"[/／]", fm.get("模块", "")) if p.strip()]
+    # l2 = 完整「一级/二级」;只有一级(没写二级)时留空,不参与关联
+    l2 = "/".join(parts[:2]) if len(parts) >= 2 else ""
     return {"path": path, "file": os.path.basename(path),
-            "l1": l1, "title": fm.get("标题", ""), "text": text, "body": body}
+            "l1": parts[0] if parts else "", "l2": l2,
+            "title": fm.get("标题", ""), "text": text, "body": body}
 
 
 # 通用埋点公参:几乎篇篇埋点都带,无功能区分度,不计入关联(否则会把无关文档连一起)
@@ -69,17 +82,33 @@ STOP_IDS = {
     "app_game_play", "app_game_quit", "app_game_complete",
     "app_music_start", "app_flashcard_start", "app_page_view",
     "appviewscreen", "appclick",
+    # 产品名词的驼峰写法(WhatsApp / TikTok / FlashCard / GiggleCast)会被驼峰规则收进来,
+    # 但它们只说明"这篇提到了某产品",不指向具体功能,实测各自连起 6–8 篇。
+    # 命名规则识别不了(它们不是字段),只能列名单;好在产品名词是有限集,不会像字段名那样无限增长。
+    "whatsapp", "tiktok", "flashcard", "gigglecast", "paramvalue",
 }
+
+
+# 参数字段命名模式:`*_id / *_name / *_type / *_count …` 是"字段",不是"功能实体"。
+# 用命名规则剔除,而不是往 STOP_IDS 里一个个手加 —— 手工黑名单已经失守三次
+# (level_number → image_count → block_type,每次都是新文档带进来的新字段名)。
+# 实测:102 篇里被这条规则剔掉的 df≥2 标识符共 19 个,人工复核**全部**是通用参数字段,零误伤。
+PARAM_FIELD = re.compile(r"_(id|name|type|count|number|code|key|token|url|time|date|status|index|version)$")
+BOOL_FIELD = re.compile(r"^(is|has|need|can)_")
 
 
 def identifiers(note):
     """有区分度的功能标识符:snake_case(含 _)或真驼峰([a-z][A-Z]);
-    丢掉 Hello/Sunny/App 这类通用词,以及 level_number/unit_number 等通用埋点公参(STOP_IDS)。"""
+    丢掉通用词与通用埋点公参(STOP_IDS),再按命名模式丢掉参数字段(PARAM_FIELD / BOOL_FIELD)。
+    保留的是埋点事件名(app_enter_quiz)与 AB key(homepage_learning_order)这类功能实体。"""
     src = note["title"] + "\n" + note["body"]
     out = set()
     for t in re.findall(r"[A-Za-z][A-Za-z0-9_]{2,}", src):
+        t = t.strip("_")  # 正文里写 "mai_ 前缀" 会截出 "mai_" 这种碎片
         tl = t.lower()
-        if tl in STOP_IDS:
+        if not tl or tl in STOP_IDS:
+            continue
+        if PARAM_FIELD.search(tl) or BOOL_FIELD.match(tl):
             continue
         if "_" in t or re.search(r"[a-z][A-Z]", t):
             out.add(tl)
@@ -90,15 +119,15 @@ def main():
     write = "--write" in sys.argv
     notes = [parse_note(p) for p in sorted(glob.glob(os.path.join(NOTES_DIR, "*.md")))]
     ids = {n["file"]: identifiers(n) for n in notes}
-    log(f"共 {len(notes)} 篇笔记;THRESHOLD={THRESHOLD}(同模块=3 / 每个共享标识符=2)")
+    log(f"共 {len(notes)} 篇笔记;THRESHOLD={THRESHOLD}(同二级模块=2 / 每个共享标识符=2;一级模块不计分)")
 
     related = defaultdict(set)
     for a, b in itertools.combinations(notes, 2):
-        same = 3 if (a["l1"] and a["l1"] == b["l1"]) else 0
+        same = 2 if (a["l2"] and a["l2"] == b["l2"]) else 0
         shared = ids[a["file"]] & ids[b["file"]]
         score = same + 2 * len(shared)
         mark = "✅" if score >= THRESHOLD else "  "
-        log(f"{mark}[{score:>2}] {a['file'][:20]:20}✕{b['file'][:20]:20} 同模块={bool(same)} 共享标识符={sorted(shared)[:8]}")
+        log(f"{mark}[{score:>2}] {a['file'][:20]:20}✕{b['file'][:20]:20} 同二级模块={bool(same)} 共享标识符={sorted(shared)[:8]}")
         if score >= THRESHOLD:
             related[a["file"]].add(b["file"])
             related[b["file"]].add(a["file"])

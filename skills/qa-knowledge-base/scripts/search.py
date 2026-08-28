@@ -8,10 +8,19 @@ search.py — 取①:在 notes/ 里按关键词或模块检索,列出命中笔�
     python3 scripts/search.py --module 奖励            # 列出模块名含"奖励"的所有笔记(供"模块历史问答")
     python3 scripts/search.py --version V1.30          # 列出某版本的所有需求(本次迭代要测啥;V1.30 也匹配 V1.30.0)
 
-注:关键词为 OR 子串匹配;每个参数会再按空格拆词,所以 `search.py Quiz 答题`、`search.py "Quiz 答题"`
+注:每个参数会再按空格拆词,所以 `search.py Quiz 答题`、`search.py "Quiz 答题"`
    以及 zsh 下传变量串都等价——不会因引号/未分词而静默 0 命中。
 
-打分:命中 标题/模块 +3、摘要 +2、正文 +1(每个关键词取最高位一次)。机械活;跨篇综合交给 Claude。
+匹配:**英文/数字关键词按词边界匹配**(前后不是 [A-Za-z0-9_]),中文照常子串。
+   —— 否则 `id` 会命中 video/width,`AB` 会命中 Bahasa;中文相邻不算边界,所以 `AB` 仍能命中「AB测试」。
+
+打分:命中 标题/模块 +3、摘要 +2、正文 +按区分度加权(每个关键词取最高位一次)。
+   **正文权重按该词的库内覆盖率衰减**:≤10% 记 1.0、≤30% 记 0.6、≤60% 记 0.3、>60% 记 0.1(低区分度)。
+   —— 实测改前 `search.py AB` 命中 63/102 篇、`id` 命中 68/102 篇,等于没筛;高覆盖词降权后自然沉底。
+排序:先看**命中了几个关键词**(多词全中的排前),再看分数。
+输出:默认只列前 15 条,`--all` 列全部(避免低分噪音刷屏、稀释注意力)。
+
+机械活;跨篇综合交给 Claude。
 """
 import os
 import re
@@ -59,11 +68,34 @@ def ver_tuple(v):
     return tuple(int(x) for x in re.findall(r"\d+", v or ""))
 
 
+def matcher(kw):
+    """英文/数字关键词按词边界匹配,中文(或含中文)照常子串。
+    词边界用 [A-Za-z0-9_] 的前后视断言,不用 \\b —— \\b 把中文也算词字符,
+    会让 `AB` 匹配不上「AB测试」(B 与 测 之间没有 \\b)。"""
+    k = kw.lower()
+    if re.fullmatch(r"[a-z0-9_]+", k):
+        pat = re.compile(r"(?<![a-z0-9_])" + re.escape(k) + r"(?![a-z0-9_])")
+        return lambda text: bool(pat.search(text))
+    return lambda text: k in text
+
+
+def body_weight(coverage):
+    """正文命中的权重按该词的库内覆盖率衰减:覆盖越广越没区分度。"""
+    if coverage <= 0.10:
+        return 1.0
+    if coverage <= 0.30:
+        return 0.6
+    if coverage <= 0.60:
+        return 0.3
+    return 0.1
+
+
 def main():
-    args = sys.argv[1:]
+    show_all = "--all" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--all"]
     notes = [parse_note(p) for p in sorted(glob.glob(os.path.join(NOTES_DIR, "*.md")))]
     if not args:
-        print("用法: search.py 关键词... | search.py --module 模块名 | search.py --version V1.30")
+        print("用法: search.py 关键词... [--all] | search.py --module 模块名 | search.py --version V1.30")
         return
 
     if args[0] == "--version":
@@ -90,26 +122,43 @@ def main():
     # 容错:每个参数再按空格拆词,避免「引号包成一串」或「zsh 下未分词的变量串」导致静默 0 命中
     #   search.py Quiz 答题  /  search.py "Quiz 答题"  /  for q in ...; search.py $q  → 都等价
     kws = [w for a in args for w in a.split()]
+    fields = [((n["title"] + " " + n["module"]).lower(), n["summary"].lower(), n["body"].lower())
+              for n in notes]
+
+    # 先算每个词的库内覆盖率(命中多少篇),用来给正文命中定权重
+    hit_fns, weights = {}, {}
+    for kw in kws:
+        fn = matcher(kw)
+        hit_fns[kw] = fn
+        cov = sum(1 for tm, sm, bd in fields if fn(tm) or fn(sm) or fn(bd)) / max(len(notes), 1)
+        weights[kw] = (cov, body_weight(cov))
+    print("[search] 关键词区分度:" + " · ".join(
+        f"{kw} 覆盖 {weights[kw][0]:.0%}→正文权重 {weights[kw][1]}"
+        + ("(低区分度)" if weights[kw][1] <= 0.1 else "") for kw in kws))
+
     scored = []
-    for n in notes:
-        title_mod = (n["title"] + " " + n["module"]).lower()
-        summ = n["summary"].lower()
-        body = n["body"].lower()
-        score, where = 0, []
+    for n, (title_mod, summ, body) in zip(notes, fields):
+        fn_score, where, matched = 0.0, [], 0
         for kw in kws:
-            k = kw.lower()
-            if k in title_mod:
-                score += 3; where.append(f"{kw}@标题/模块")
-            elif k in summ:
-                score += 2; where.append(f"{kw}@摘要")
-            elif k in body:
-                score += 1; where.append(f"{kw}@正文")
-        if score > 0:
-            scored.append((score, n, where))
-    scored.sort(key=lambda x: -x[0])
-    print(f"[search] 关键词 {kws} → 命中 {len(scored)} 篇(按相关度):")
-    for score, n, where in scored:
-        show(n, extra=f"   (score={score} 命中:{', '.join(where)})")
+            fn = hit_fns[kw]
+            if fn(title_mod):
+                fn_score += 3; where.append(f"{kw}@标题/模块"); matched += 1
+            elif fn(summ):
+                fn_score += 2; where.append(f"{kw}@摘要"); matched += 1
+            elif fn(body):
+                w = weights[kw][1]
+                fn_score += w; where.append(f"{kw}@正文×{w}"); matched += 1
+        if fn_score > 0:
+            scored.append((matched, round(fn_score, 2), n, where))
+    # 多词全中的优先,再按分数
+    scored.sort(key=lambda x: (-x[0], -x[1]))
+
+    limit = len(scored) if show_all else 15
+    print(f"[search] 关键词 {kws} → 命中 {len(scored)} 篇(先按命中词数、再按相关度):")
+    for matched, score, n, where in scored[:limit]:
+        show(n, extra=f"   (命中{matched}/{len(kws)}词 score={score} — {', '.join(where)})")
+    if len(scored) > limit:
+        print(f"  … 另有 {len(scored) - limit} 篇低分命中未列出,需要全量加 --all")
     if not scored:
         print("  无命中。")
 
