@@ -12,12 +12,22 @@
   "images": [
     {
       "index": 1,
-      "file": "images/img-01.png",
-      "bytes": 317773,
+      "file": "images/img-01.webp",
+      "bytes": 73188,
       "dims": [
         1381,
         1547
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 317773,
+        "md5": "623d8942cdc6a5920873a62ec5be747b",
+        "dims": [
+          1381,
+          1547
+        ]
+      }
     }
   ],
   "image_count": 1,

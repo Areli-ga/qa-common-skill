@@ -1,0 +1,54 @@
+{
+  "title": "Mai 基于全局单词本生成 Quiz",
+  "doc_id": "Q6YkdEYVwoS6RqxEKgglKZ2jg2b",
+  "wiki_token": "B26AwVnwxiq215koZtHlzQc3ghd",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/B26AwVnwxiq215koZtHlzQc3ghd",
+  "fetched_at": "2026-08-11T11:00:27.953879+08:00",
+  "version": "V1.35.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 3968,
+  "blocks": 343,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 27614,
+      "dims": [
+        952,
+        588
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 227738,
+        "md5": "b4c12bd986a8f1b9467fe33ecf3fa364",
+        "dims": [
+          952,
+          588
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 17582,
+      "dims": [
+        1190,
+        402
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 97450,
+        "md5": "af49d69d285f4e6f66b671bdc9278b52",
+        "dims": [
+          1190,
+          402
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 8
+}

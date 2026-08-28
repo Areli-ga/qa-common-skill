@@ -1,0 +1,927 @@
+[
+  {
+    "block_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "block_type": 1,
+    "children": [
+      "ImpFd36oqoaF1txrLvel7PzTgdf",
+      "Hl9PdJ4QPoKha4xogCBlmnMpgw3",
+      "CCjidmX0Po6TOIxTLw2lMIxTg8r",
+      "XhF1d6gvyo7vMSxnkhAl9WU1g2e",
+      "Y0h8dNdcuoRLJ4xlAZslwW54gbe",
+      "SDFidZ8sdoLXNsxoDPzlimyYglf",
+      "C1wvdS4U7oJOsrxFgWtlksYWgUb",
+      "QoG9djeFoorqbRxKhJZlLLHOgie",
+      "T4W9d8bqNoR62NxLbGIlVUM3gte",
+      "LbYLd20b5oNAIixjfAtluon2gfg",
+      "HJBhdTHAEoVhjyxzPMSlQd2lg7d",
+      "ZbVYdfUhqofEgbxC2fxlMlf2gyc",
+      "LjdydhLV4o0w8fx5hc4liQ3dgYg",
+      "TgMHdLg17o3WCQx9qyGlLFNKgOd",
+      "TXRUdYxgAoMxMUxJS1Kl2vwdgqe",
+      "TIE3dtYpNoc2joxkNpWlNSfdgKE",
+      "PHNBdv9RwohWbxxkpwil6vkxghd",
+      "NUh7dqVOloGnzbxdchxlP6qLgpv",
+      "J8WDdkmlIoh3JexRxzzl73jmgsc"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "小Mai AI Tutor 模型切换配置",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "ImpFd36oqoaF1txrLvel7PzTgdf",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "我们后续会对选用不同的模型供应商，一方面是为了降低成本，一方面是为了去定义容错机制。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Hl9PdJ4QPoKha4xogCBlmnMpgw3",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CCjidmX0Po6TOIxTLw2lMIxTg8r",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "后续迭代预计会:",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XhF1d6gvyo7vMSxnkhAl9WU1g2e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "TTS：同时上线豆包模型跟千问模型。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "Y0h8dNdcuoRLJ4xlAZslwW54gbe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LLM：同时上线 Claude、GPT、小米模型等。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "SDFidZ8sdoLXNsxoDPzlimyYglf",
+    "block_type": 13,
+    "children": [
+      "FQArdqkEtoGCXBxn8wTlnaFIgPg",
+      "Cd3JdjEaYovYRoxG5YEl1Ddwgeg"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "ASR",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "FQArdqkEtoGCXBxn8wTlnaFIgPg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "自由识别：微软模型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "SDFidZ8sdoLXNsxoDPzlimyYglf"
+  },
+  {
+    "block_id": "Cd3JdjEaYovYRoxG5YEl1Ddwgeg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "录音打分：拥有微软模型，自研模型两种方案",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "SDFidZ8sdoLXNsxoDPzlimyYglf"
+  },
+  {
+    "block_id": "C1wvdS4U7oJOsrxFgWtlksYWgUb",
+    "block_type": 13,
+    "children": [
+      "MSAid8IFMotN4wx5dRilqrMpgFf",
+      "EDf7dcYhUoR8zgx1vTml68DSgnF"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "【下一期 v1.36.0】语音识别模型：微软模型和自己的模型，并且单词和句子的识别已经支持到了音素的级别，比如",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "MSAid8IFMotN4wx5dRilqrMpgFf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "ye",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "w和he",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "C1wvdS4U7oJOsrxFgWtlksYWgUb"
+  },
+  {
+    "block_id": "EDf7dcYhUoR8zgx1vTml68DSgnF",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "I love",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " ye",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "w和",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "I love",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " he",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "C1wvdS4U7oJOsrxFgWtlksYWgUb"
+  },
+  {
+    "block_id": "QoG9djeFoorqbRxKhJZlLLHOgie",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "所以需要我们提供一个配置能力，能够对用户进行分桶，对既定的用户群配置模型。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T4W9d8bqNoR62NxLbGIlVUM3gte",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LbYLd20b5oNAIixjfAtluon2gfg",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本期需求目标：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HJBhdTHAEoVhjyxzPMSlQd2lg7d",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "支持TTS模型切换配置；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "ZbVYdfUhqofEgbxC2fxlMlf2gyc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "ASR 录音打分切换自研模型；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "LjdydhLV4o0w8fx5hc4liQ3dgYg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对印尼语进行分桶；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "TgMHdLg17o3WCQx9qyGlLFNKgOd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "回收用户分桶的用户使用数据；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "TXRUdYxgAoMxMUxJS1Kl2vwdgqe",
+    "block_type": 13,
+    "children": [
+      "XV2YdsgQdoCmsXx2LnTlSSJVgHf",
+      "PvSZdSCgjoXtSJxl4cQl4X4MgEb"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "【下一期 v1.36.0】支持跟读卡片单词和句子的音素级别正误判断：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg"
+  },
+  {
+    "block_id": "XV2YdsgQdoCmsXx2LnTlSSJVgHf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "ye",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "w和he",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "TXRUdYxgAoMxMUxJS1Kl2vwdgqe"
+  },
+  {
+    "block_id": "PvSZdSCgjoXtSJxl4cQl4X4MgEb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "I love",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " ye",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "w和",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "I love",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " he",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "llo",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "TXRUdYxgAoMxMUxJS1Kl2vwdgqe"
+  },
+  {
+    "block_id": "TIE3dtYpNoc2joxkNpWlNSfdgKE",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PHNBdv9RwohWbxxkpwil6vkxghd",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "埋点：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NUh7dqVOloGnzbxdchxlP6qLgpv",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " StartTalkScene、EndTalkScene时候，加tts_provider: doubao | qwen 参数，区分是豆包还是千问",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J8WDdkmlIoh3JexRxzzl73jmgsc",
+    "block_type": 2,
+    "parent_id": "FUBCdpqMroP60gxdzISl9KQygwg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

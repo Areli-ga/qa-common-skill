@@ -1,0 +1,75 @@
+{
+  "title": "onboarding 流程去掉选择语言",
+  "doc_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+  "wiki_token": "WOZHwKZyKi80A4kVZRKlcn4kgbh",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/WOZHwKZyKi80A4kVZRKlcn4kgbh",
+  "fetched_at": "2026-08-24T23:44:07.470168+08:00",
+  "version": "V1.37.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 223,
+  "blocks": 17,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 19654,
+      "dims": [
+        1900,
+        138
+      ],
+      "archived_as": "webp-placeholder-1900px",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 1430214,
+        "md5": "8358c3940a27b4f203d63f325093d531",
+        "dims": [
+          16604,
+          1210
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 164114,
+      "dims": [
+        5272,
+        1700
+      ],
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 616262,
+        "md5": "2743779bab11d9dd15e417c625a235d8",
+        "dims": [
+          5272,
+          1700
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 60882,
+      "dims": [
+        2664,
+        1500
+      ],
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 308355,
+        "md5": "a5caf284d64a854d5d0a7051d887decd",
+        "dims": [
+          2664,
+          1500
+        ]
+      }
+    }
+  ],
+  "image_count": 3,
+  "tables": 0
+}

@@ -12,51 +12,101 @@
   "images": [
     {
       "index": 1,
-      "file": "images/img-01.png",
-      "bytes": 191303,
+      "file": "images/img-01.webp",
+      "bytes": 58114,
       "dims": [
         2272,
         862
       ],
-      "read_file": "images/img-01.read.png"
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 191303,
+        "md5": "e738b0e84c7f2c646fb0fe641efbfb19",
+        "dims": [
+          2272,
+          862
+        ]
+      }
     },
     {
       "index": 2,
-      "file": "images/img-02.png",
-      "bytes": 443595,
+      "file": "images/img-02.webp",
+      "bytes": 109242,
       "dims": [
         2804,
         1192
       ],
-      "read_file": "images/img-02.read.png"
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 443595,
+        "md5": "ddc49555124217fdc8234891a1a19a77",
+        "dims": [
+          2804,
+          1192
+        ]
+      }
     },
     {
       "index": 3,
-      "file": "images/img-03.png",
-      "bytes": 268167,
+      "file": "images/img-03.webp",
+      "bytes": 31576,
       "dims": [
         1280,
         732
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 268167,
+        "md5": "51a50862bdacf39f1ff6a9947f6cb625",
+        "dims": [
+          1280,
+          732
+        ]
+      }
     },
     {
       "index": 4,
-      "file": "images/img-04.png",
-      "bytes": 238844,
+      "file": "images/img-04.webp",
+      "bytes": 48642,
       "dims": [
         1790,
         598
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 238844,
+        "md5": "4345a7cdd441e7f201fdc62b3e884e1a",
+        "dims": [
+          1790,
+          598
+        ]
+      }
     },
     {
       "index": 5,
-      "file": "images/img-05.png",
-      "bytes": 454494,
+      "file": "images/img-05.webp",
+      "bytes": 66198,
       "dims": [
         2664,
         1500
       ],
-      "read_file": "images/img-05.read.png"
+      "read_file": "images/img-05.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 454494,
+        "md5": "e7e6af6606fd92f53ae943ed10ec607f",
+        "dims": [
+          2664,
+          1500
+        ]
+      }
     }
   ],
   "image_count": 5,

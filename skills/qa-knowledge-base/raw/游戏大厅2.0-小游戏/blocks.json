@@ -1,0 +1,7176 @@
+[
+  {
+    "block_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "block_type": 1,
+    "children": [
+      "QLSqda6Kxo77cMxXtuflZkhbgce",
+      "WHlwdMwb0oXINqxEKEWli783gPb",
+      "LSozdZwYNoJr1xxFenAlZDQ7goe",
+      "S4rqdEhOgoWg3LxdRfDlqGt5gag",
+      "PEj9dbYRboZ3RCxdXKZls4FOg2e",
+      "IPuMdkzWWo6nQuxqyPKlqw9Wg2b",
+      "QCWJd2QKFoziaVxl2jxl0jIFgid",
+      "RdFldtVwPodpxhxAjGkllYmAgeg",
+      "KXjsdStZwozpfzxvoSAlQnc3gWd",
+      "ViaEdyB5Ro4a67xUDq6l439tg1s",
+      "W7J4dRbDno56iKxaw0pl1hpYgYc",
+      "DR46doIBho1EQaxx6OvlNnU5gZf",
+      "IqtAdnY46oTh5gxCR1VlHLz0gle",
+      "WNoTdLDwWo00ewxU4i1lp2kYgbb",
+      "HmeddgJ3xoSXBHxaAjKlkPt1gKf",
+      "MWihd2aifoxF4xxRGYxl7xmigCH",
+      "IG9WdzdyMoAU1ixVBqNlvrRLgig",
+      "S5fddpCOqoORjfx2LU3ltf1Qgqd",
+      "INM3dVwVnoKFUQx8euBlX6BQgwH",
+      "JwrDdR1RcoGFD8xHxrvlsurNgYb",
+      "NLXNdtiwEoJA51xLZSVlJTh2gpd",
+      "T2IIdpnQLo4ZO2xOR7xlYEFsgUg",
+      "NNzJdGtpXorXltxYuiUlG59Ug7c",
+      "VqTHde0RQoUZuDxBOJTljb2Bg8g",
+      "J2DZdO3Aeo6dpVxPqYulYbYGgUt",
+      "PZKddoliQoLdHZx6lM5l8gPxgMI",
+      "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+      "UMrhdjpmroxBNbxn3Y8ltY8bghc",
+      "X9updQiZioyI2txoKEQl70iegWd",
+      "JnuVdLzuioVuCUxTxH9lSAsKgIe",
+      "AxEzd9DykotZUmxBkGolQ8z6gIe",
+      "J7czd11mnoZa6rxMZOZlLNAhgoe",
+      "NntldBNHKokW4gxTbKOlA3AIgfg",
+      "VpCfduFiToKCSnx2mU4lFKeogdd",
+      "LKTmd5vbWoh4yZxHLPolqs0Ygnd",
+      "QErDdzXISo6ehgx4Rf0luPoEglb",
+      "F0SRdY1QXo0sYCxa6heln0mUgyg",
+      "GarUdI24hotmAdxf4nalnNG5ghb",
+      "JubhdtmBHo67zkxtejql7sBsgic",
+      "BiU2dMBEDofnbIxWAq5l5NoQg5b",
+      "F26sd005TogzZJxHNY1lU93Agkg",
+      "KmROdOsWEoYL28xZWcllLHKxg0d",
+      "QiLTdPD0OoW3ILxjMqPlX67Tg4b",
+      "A5ibdbMDeoQZkgxtZB6lASJsgBf",
+      "DPMFdxS03ozPzMxy7PGlBthsgqB",
+      "IHoDdjp8FoyOLUxlIjzlL9Xrgph",
+      "WnZSdA2G7oiPCxxIg1QlIIHwgGb",
+      "Jwtkd3jyzox1WoxFn3HleERBgEJ",
+      "ZXmqdI0MtoqRttx2Q2blzAmwgBh"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏大厅2.0 小游戏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "QLSqda6Kxo77cMxXtuflZkhbgce",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "WHlwdMwb0oXINqxEKEWli783gPb",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "PK 上线数据复盘",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "【需求复盘】竞技场 PK",
+            "token": "GGSCwcfUtiYYiuk0o4zlyOSrgOb",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/GGSCwcfUtiYYiuk0o4zlyOSrgOb"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LSozdZwYNoJr1xxFenAlZDQ7goe",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "新用户：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "首日就去 PK，没有提升，数据有波动。后续还是以课程学习为主",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S4rqdEhOgoWg3LxdRfDlqGt5gag",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "非新用户（大盘数据）：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PEj9dbYRboZ3RCxdXKZls4FOg2e",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 754,
+      "scale": 0.23797139141742524,
+      "token": "HBXZbUSIiogSqrx5K8ql5fDhgjb",
+      "width": 1538
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "IPuMdkzWWo6nQuxqyPKlqw9Wg2b",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " PK 功能实验组的留存明显好于对照组。（目前已到万人级别，趋势稳定，比较可信）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QCWJd2QKFoziaVxl2jxl0jIFgid",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "有一定产品使用基础后才接触PK的用户 → 更容易形成多次使用习惯（人均3.7次）→ 留存表现明显更好。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RdFldtVwPodpxhxAjGkllYmAgeg",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KXjsdStZwozpfzxvoSAlQnc3gWd",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "竞技场升级成App内的社交游戏化模块，核心目的：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ViaEdyB5Ro4a67xUDq6l439tg1s",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "给孩子提供轻量、可重复玩的小游戏，消耗课程环节产出的Giggles，形成\"参课→获得Giggles→竞技场消耗\"的正向循环",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "W7J4dRbDno56iKxaw0pl1hpYgYc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "通过Study Buddy（同桌）机制提升结伴学习留存",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（单开需求）",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "邀请同桌 1.2 支持游戏挑战",
+            "token": "L5BjwT32Ci3klBkWXmhlFoClgWg",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/L5BjwT32Ci3klBkWXmhlFoClgWg"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "DR46doIBho1EQaxx6OvlNnU5gZf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "通过排行榜和分享机制驱动传播与回访",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "3"
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "IqtAdnY46oTh5gxCR1VlHLz0gle",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WNoTdLDwWo00ewxU4i1lp2kYgbb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI 链接：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "HmeddgJ3xoSXBHxaAjKlkPt1gKf",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "通用模块",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MWihd2aifoxF4xxRGYxl7xmigCH",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/nbT8G98mRl5Up6OTuCbQWP/1.37.0?node-id=49495-85063&t=Y6HqFWg7YROC2do3-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IG9WdzdyMoAU1ixVBqNlvrRLgig",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "小游戏 UI",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S5fddpCOqoORjfx2LU3ltf1Qgqd",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=0-1&t=6LxOmHxV0dWjNHJe-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "INM3dVwVnoKFUQx8euBlX6BQgwH",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JwrDdR1RcoGFD8xHxrvlsurNgYb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求流程",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "NLXNdtiwEoJA51xLZSVlJTh2gpd",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "布局原型：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "https://giggle-arena-board.pages.dev",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T2IIdpnQLo4ZO2xOR7xlYEFsgUg",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏 demo：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "https://apps.giggletools.com/quiz-games-pack/",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NNzJdGtpXorXltxYuiUlG59Ug7c",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏大厅入口",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "VqTHde0RQoUZuDxBOJTljb2Bg8g",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "前置需求：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J2DZdO3Aeo6dpVxPqYulYbYGgUt",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "homepage_toplearners AB 实验实验组全量。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "PZKddoliQoLdHZx6lM5l8gPxgMI",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "实验组全量后修改入口：Deskmate 放回聚合入口第一排最后一个；排行榜放首页右上角第二个位置；新增游戏大厅入口，替换掉家庭游戏入口。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+    "block_type": 31,
+    "children": [
+      "XTSDdZDm9ov2vCx3TW9lWj0hg8e",
+      "IIp3dyRdjo6TH5x69ySlnATpgSc",
+      "Q7AZdJ6B9oXFnsxAtlnlTuWLgqh",
+      "Vu1odv71YoR5ikxfjdjlcowEgnb"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "table": {
+      "cells": [
+        "XTSDdZDm9ov2vCx3TW9lWj0hg8e",
+        "IIp3dyRdjo6TH5x69ySlnATpgSc",
+        "Q7AZdJ6B9oXFnsxAtlnlTuWLgqh",
+        "Vu1odv71YoR5ikxfjdjlcowEgnb"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          407,
+          407
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 2
+      }
+    }
+  },
+  {
+    "block_id": "XTSDdZDm9ov2vCx3TW9lWj0hg8e",
+    "block_type": 32,
+    "children": [
+      "AZESd43OGoBuD9xqlJ7lOYcAgCf"
+    ],
+    "parent_id": "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+    "table_cell": {}
+  },
+  {
+    "block_id": "AZESd43OGoBuD9xqlJ7lOYcAgCf",
+    "block_type": 2,
+    "parent_id": "XTSDdZDm9ov2vCx3TW9lWj0hg8e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IIp3dyRdjo6TH5x69ySlnATpgSc",
+    "block_type": 32,
+    "children": [
+      "ZEyedKjz0obh2LxjxjVl72I4g9b"
+    ],
+    "parent_id": "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ZEyedKjz0obh2LxjxjVl72I4g9b",
+    "block_type": 2,
+    "parent_id": "IIp3dyRdjo6TH5x69ySlnATpgSc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Q7AZdJ6B9oXFnsxAtlnlTuWLgqh",
+    "block_type": 32,
+    "children": [
+      "XHg9dWUcuoj5J1xLiChlRIl1gde"
+    ],
+    "parent_id": "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+    "table_cell": {}
+  },
+  {
+    "block_id": "XHg9dWUcuoj5J1xLiChlRIl1gde",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1000,
+      "scale": 1,
+      "token": "VmXkbH4dLozjGdxxOkbl8zEagnd",
+      "width": 1776
+    },
+    "parent_id": "Q7AZdJ6B9oXFnsxAtlnlTuWLgqh"
+  },
+  {
+    "block_id": "Vu1odv71YoR5ikxfjdjlcowEgnb",
+    "block_type": 32,
+    "children": [
+      "Iy2Md1GgroVPxYxANK2lDHVUgqd",
+      "S5J9dW9JAogCs9x1RxclKid5gDh",
+      "KZ6idqiEnotJj9xHOpAlvL00gne"
+    ],
+    "parent_id": "BrzGd6qeFof0jKx5DQSlfIrVgpc",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Iy2Md1GgroVPxYxANK2lDHVUgqd",
+    "block_type": 2,
+    "parent_id": "Vu1odv71YoR5ikxfjdjlcowEgnb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "打开H5",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S5J9dW9JAogCs9x1RxclKid5gDh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "聚合入口中，增加 Game Arcade 入口。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Vu1odv71YoR5ikxfjdjlcowEgnb"
+  },
+  {
+    "block_id": "KZ6idqiEnotJj9xHOpAlvL00gne",
+    "block_type": 2,
+    "parent_id": "Vu1odv71YoR5ikxfjdjlcowEgnb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UMrhdjpmroxBNbxn3Y8ltY8bghc",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "X9updQiZioyI2txoKEQl70iegWd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " 游戏大厅公共交互",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "JnuVdLzuioVuCUxTxH9lSAsKgIe",
+    "block_type": 43,
+    "board": {
+      "token": "Quj1wNBqPhBRqgbNhBil8Cl1gFf"
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "AxEzd9DykotZUmxBkGolQ8z6gIe",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "block_type": 31,
+    "children": [
+      "LjWZdv1o4oXuRFxthKflh9aOg6g",
+      "WPUKdQWsRo6fnOxf8E4lIziTg5b",
+      "Z2QXdXz0zoYgIxxb2ZRlkWbkglh",
+      "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+      "TX9Zd2AYSohGxRxhA7alN3tEgxg",
+      "TWpydaPgGoNZ7axD1tQlczFSg6d",
+      "EADmdUBvQo4xbuxhtahlsni4gHb",
+      "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "table": {
+      "cells": [
+        "LjWZdv1o4oXuRFxthKflh9aOg6g",
+        "WPUKdQWsRo6fnOxf8E4lIziTg5b",
+        "Z2QXdXz0zoYgIxxb2ZRlkWbkglh",
+        "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+        "TX9Zd2AYSohGxRxhA7alN3tEgxg",
+        "TWpydaPgGoNZ7axD1tQlczFSg6d",
+        "EADmdUBvQo4xbuxhtahlsni4gHb",
+        "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          407,
+          407
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 4
+      }
+    }
+  },
+  {
+    "block_id": "LjWZdv1o4oXuRFxthKflh9aOg6g",
+    "block_type": 32,
+    "children": [
+      "CCyzdFjAcoiM2SxMpMElDwc7gpg"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CCyzdFjAcoiM2SxMpMElDwc7gpg",
+    "block_type": 2,
+    "parent_id": "LjWZdv1o4oXuRFxthKflh9aOg6g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WPUKdQWsRo6fnOxf8E4lIziTg5b",
+    "block_type": 32,
+    "children": [
+      "Cn14dTAgqoT4jdxGusMlWT8Egwg"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Cn14dTAgqoT4jdxGusMlWT8Egwg",
+    "block_type": 2,
+    "parent_id": "WPUKdQWsRo6fnOxf8E4lIziTg5b",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Z2QXdXz0zoYgIxxb2ZRlkWbkglh",
+    "block_type": 32,
+    "children": [
+      "GgqqdfI2SoSrmIxoPYqlzPBqg9e"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "GgqqdfI2SoSrmIxoPYqlzPBqg9e",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "BPK6bfpngo4KCwxFeu0lca0ngBd",
+      "width": 2664
+    },
+    "parent_id": "Z2QXdXz0zoYgIxxb2ZRlkWbkglh"
+  },
+  {
+    "block_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+    "block_type": 32,
+    "children": [
+      "JpNsdwsXboZakDxSMh5l29KCgJd",
+      "VuTJd9aXNotyfrxd1lRlk1mfgab",
+      "PVG7dSu9EoOpHixTArNlOhz0gyd",
+      "LwBNd7L8JokQm6xJ34Rl4jZxgId",
+      "CCtIdNxM3o7GRPx59ColbKicg6c",
+      "PMaxd5ym4o1JbxxABhMlh10oggh"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JpNsdwsXboZakDxSMh5l29KCgJd",
+    "block_type": 2,
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏大厅首页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VuTJd9aXNotyfrxd1lRlk1mfgab",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏列表",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb"
+  },
+  {
+    "block_id": "PVG7dSu9EoOpHixTArNlOhz0gyd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单人游戏分类\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "按顺序展示：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "单词 PK",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672593516542873307"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "、单词PK 无尽模式、点名连连看、托盘打包台、钓鱼钩卡、听音跑酷",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672593516542873307"
+    ],
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb"
+  },
+  {
+    "block_id": "LwBNd7L8JokQm6xJ34Rl4jZxgId",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "多人游戏\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "按顺序展示：单词飞船、抢答游戏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb"
+  },
+  {
+    "block_id": "CCtIdNxM3o7GRPx59ColbKicg6c",
+    "block_type": 2,
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " 2. Giggles",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PMaxd5ym4o1JbxxABhMlh10oggh",
+    "block_type": 2,
+    "parent_id": "Jbo7dMYFFoiW3tx8xlQlEYc4gXb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "展示用户当前的 Giggles",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TX9Zd2AYSohGxRxhA7alN3tEgxg",
+    "block_type": 32,
+    "children": [
+      "KWPidCz65oz4k8xZ6iklDSHUgob",
+      "ZLswdlK75o6DpxxziZHlJ9NcgO2",
+      "OU88d16t2o9BM4xmGKflpP6YgMe",
+      "DuB5dRh48o1ZEaxfdPflWPV0geb"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KWPidCz65oz4k8xZ6iklDSHUgob",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "ZHnQbnaygoFP27x85xtl5LrOg5b",
+      "width": 2664
+    },
+    "parent_id": "TX9Zd2AYSohGxRxhA7alN3tEgxg"
+  },
+  {
+    "block_id": "ZLswdlK75o6DpxxziZHlJ9NcgO2",
+    "block_type": 2,
+    "parent_id": "TX9Zd2AYSohGxRxhA7alN3tEgxg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OU88d16t2o9BM4xmGKflpP6YgMe",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "Gx0sb4omPolQ1PxkvEjlQZ76gNg",
+      "width": 2664
+    },
+    "parent_id": "TX9Zd2AYSohGxRxhA7alN3tEgxg"
+  },
+  {
+    "block_id": "DuB5dRh48o1ZEaxfdPflWPV0geb",
+    "block_type": 2,
+    "parent_id": "TX9Zd2AYSohGxRxhA7alN3tEgxg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TWpydaPgGoNZ7axD1tQlczFSg6d",
+    "block_type": 32,
+    "children": [
+      "JhvmdGEzfotXasxNdr4lD6FUgmh",
+      "Ej9JdDBhkoQChexcMgBlFbHxg9e",
+      "S4m7dOoJCol169xDQ4tlqNDMgJh",
+      "Bb0pdg6oSo8cPFxpbXllpz4dgeb"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JhvmdGEzfotXasxNdr4lD6FUgmh",
+    "block_type": 2,
+    "parent_id": "TWpydaPgGoNZ7axD1tQlczFSg6d",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏介绍页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ej9JdDBhkoQChexcMgBlFbHxg9e",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "左侧：封面卡（图标+游戏名，卡片配色跟随游戏区分）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "TWpydaPgGoNZ7axD1tQlczFSg6d"
+  },
+  {
+    "block_id": "S4m7dOoJCol169xDQ4tlqNDMgJh",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "右侧：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "children": [
+      "HXbdd3wqDo2kYWx014glq4TXgBb",
+      "BDnodEGAAofRpexh1zVlqua8gol",
+      "TqwudJTIOovXDix0WujllbwZgNd",
+      "StJ4dzKOyoTmz6xmMRklh438gSg",
+      "RQIVdBXkaoxrmIx8AsNlQvpMgqb",
+      "JUTKdHkmZooelUxhbnwlF27Cg2c",
+      "LwNRdcMiGo0ronxUXx8ldVTAgwh",
+      "RC4tdKsULoXI9dxWk5dlHudIgQe"
+    ],
+    "parent_id": "TWpydaPgGoNZ7axD1tQlczFSg6d"
+  },
+  {
+    "block_id": "HXbdd3wqDo2kYWx014glq4TXgBb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏名",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "BDnodEGAAofRpexh1zVlqua8gol",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单人游戏/多人游戏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "TqwudJTIOovXDix0WujllbwZgNd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "一句话玩法简介",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "StJ4dzKOyoTmz6xmMRklh438gSg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏标签",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "RQIVdBXkaoxrmIx8AsNlQvpMgqb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "🪙 消耗 20 Giggles / 次（",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672594823194365673"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "所有9个游戏统一20 Giggles/次",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7672594823194365673"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "，含多人游戏）",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672594823194365673"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672594823194365673"
+    ],
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "JUTKdHkmZooelUxhbnwlF27Cg2c",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "🏆 查看排行榜按钮：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "仅单人游戏展示，多人游戏隐藏",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "LwNRdcMiGo0ronxUXx8ldVTAgwh",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "选择难度：部分游戏支持选择难度：easy、Medium 和 Hard\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "单词 pk 和单词谁记得多不支持选择难度，其他单人游戏都支持。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "RC4tdKsULoXI9dxWk5dlHudIgQe",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "抢答游戏专属：抢答内容",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "S4m7dOoJCol169xDQ4tlqNDMgJh"
+  },
+  {
+    "block_id": "Bb0pdg6oSo8cPFxpbXllpz4dgeb",
+    "block_type": 2,
+    "parent_id": "TWpydaPgGoNZ7axD1tQlczFSg6d",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EADmdUBvQo4xbuxhtahlsni4gHb",
+    "block_type": 32,
+    "children": [
+      "ZACydGe6poapXOxox95l0ZqQgOf",
+      "UYigdxoiooMDtrxdZDLlA4p8gsg",
+      "KimhdX8peoTSMMxHTpKl4AdOgDe",
+      "OYjHdnqroouomwx7r5nlUlKugeU",
+      "DRXWdLMQjopPwkxplbnlqxwOg5f"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ZACydGe6poapXOxox95l0ZqQgOf",
+    "block_type": 2,
+    "parent_id": "EADmdUBvQo4xbuxhtahlsni4gHb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "全国榜",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UYigdxoiooMDtrxdZDLlA4p8gsg",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 572,
+      "scale": 1,
+      "token": "XYeKbE3OboLXXnxTQGjl5BUUgZb",
+      "width": 1008
+    },
+    "parent_id": "EADmdUBvQo4xbuxhtahlsni4gHb"
+  },
+  {
+    "block_id": "KimhdX8peoTSMMxHTpKl4AdOgDe",
+    "block_type": 2,
+    "parent_id": "EADmdUBvQo4xbuxhtahlsni4gHb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "全球榜",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OYjHdnqroouomwx7r5nlUlKugeU",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 626,
+      "scale": 1,
+      "token": "CpRDbuYc4oOethxn4YElAtQkgbb",
+      "width": 1108
+    },
+    "parent_id": "EADmdUBvQo4xbuxhtahlsni4gHb"
+  },
+  {
+    "block_id": "DRXWdLMQjopPwkxplbnlqxwOg5f",
+    "block_type": 2,
+    "parent_id": "EADmdUBvQo4xbuxhtahlsni4gHb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1",
+    "block_type": 32,
+    "children": [
+      "QlArdaS0ooRkOsxFchlluXE4gDf",
+      "Jtthd2kc5o6VFQx9LV9lvHovgfd",
+      "FmP8d8uXFoJotBxeGh1lpWY4gSf",
+      "BZaYdm6B5oHRVmxaiFflnDxqg1b",
+      "WRlqdzNopoXRjoxLJFwlZfsugKe",
+      "F0e5dga65okRDFxR0BLlrB94gAe",
+      "S7q1d4FkzohUwUxfIu8lGzS6gQb",
+      "IkX1dUEbOo8N8vx1rFplQRN9g9e",
+      "XoT4dEUKxokaYAxwwcyltEerg9T",
+      "NaPRdyNWIoYfFtxmzOvl4ZFRg7Q"
+    ],
+    "parent_id": "J7czd11mnoZa6rxMZOZlLNAhgoe",
+    "table_cell": {}
+  },
+  {
+    "block_id": "QlArdaS0ooRkOsxFchlluXE4gDf",
+    "block_type": 2,
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "从单人游戏详情页\"🏆查看排行榜\"进入，页面结构：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Jtthd2kc5o6VFQx9LV9lvHovgfd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "顶部：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "{游戏名} 排行榜",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "FmP8d8uXFoJotBxeGh1lpWY4gSf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Tab切换：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "全国榜 / 全球榜",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "（二选一，默认全国榜）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "BZaYdm6B5oHRVmxaiFflnDxqg1b",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "全国列表：\n榜单名称：国旗图标 + 国家名称\n展示排名 + 头像/国旗 + 昵称\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "展示分数（单位随游戏变化，见第4节表格）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "WRlqdzNopoXRjoxLJFwlZfsugKe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "全球列表：\n榜单名称：Global\n展示排名 + 头像/国旗 + 昵称\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "展示分数（单位随游戏变化，见第4节表格）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "F0e5dga65okRDFxR0BLlrB94gAe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "展示前 100 名，如果用户上榜，高亮定位到用户的排名；\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "如果用户没有上榜，用户排名放在最后。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "S7q1d4FkzohUwUxfIu8lGzS6gQb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每个游戏的排行榜数据互相独立，不共用同一套榜单",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "IkX1dUEbOo8N8vx1rFplQRN9g9e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不同游戏的排行依据",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "XoT4dEUKxokaYAxwwcyltEerg9T",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 504,
+      "scale": 1,
+      "token": "J6ntbSz6Uo4VR5xTHoUlecpVgGa",
+      "width": 1582
+    },
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1"
+  },
+  {
+    "block_id": "NaPRdyNWIoYfFtxmzOvl4ZFRg7Q",
+    "block_type": 2,
+    "parent_id": "DNRCd2AEuoV2dRxw2NIloYoKgJ1",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NntldBNHKokW4gxTbKOlA3AIgfg",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单人游戏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "block_type": 31,
+    "children": [
+      "PHNJd74nRoE9uEx9kZ0lQFPygPf",
+      "OVkndAX4boZMPmxNIpolJuLqgEg",
+      "MAK3diO70oYYaExYGfMlrQvygaf",
+      "EY9zdZGGDoKsETxr2vol1cp7gIh",
+      "UQxadu9WJoHjEsxMlCSl112Bg4b",
+      "Rzytd18NxoLKk8xQkwAluFXQgOd",
+      "FSJydukFZokbItxvP5klT491gCb",
+      "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+      "NnjTdNhiXoffewxiseTly4jNgQe",
+      "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+      "Gn4Ld41W1oHL3PxB62Flr49Dggb",
+      "BhsWdjZAto1FvUx5E57lWAbWgGh",
+      "LT73ddkLnomfUnxaarLlyhyvgLf",
+      "YX57dhwBioERUVx1ifYlLEdSgpg"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "table": {
+      "cells": [
+        "PHNJd74nRoE9uEx9kZ0lQFPygPf",
+        "OVkndAX4boZMPmxNIpolJuLqgEg",
+        "MAK3diO70oYYaExYGfMlrQvygaf",
+        "EY9zdZGGDoKsETxr2vol1cp7gIh",
+        "UQxadu9WJoHjEsxMlCSl112Bg4b",
+        "Rzytd18NxoLKk8xQkwAluFXQgOd",
+        "FSJydukFZokbItxvP5klT491gCb",
+        "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+        "NnjTdNhiXoffewxiseTly4jNgQe",
+        "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+        "Gn4Ld41W1oHL3PxB62Flr49Dggb",
+        "BhsWdjZAto1FvUx5E57lWAbWgGh",
+        "LT73ddkLnomfUnxaarLlyhyvgLf",
+        "YX57dhwBioERUVx1ifYlLEdSgpg"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          407,
+          407
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 7
+      }
+    }
+  },
+  {
+    "block_id": "PHNJd74nRoE9uEx9kZ0lQFPygPf",
+    "block_type": 32,
+    "children": [
+      "CqVedcnO0oGViexhyKrlNdf4gcd"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CqVedcnO0oGViexhyKrlNdf4gcd",
+    "block_type": 2,
+    "parent_id": "PHNJd74nRoE9uEx9kZ0lQFPygPf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OVkndAX4boZMPmxNIpolJuLqgEg",
+    "block_type": 32,
+    "children": [
+      "Tlskdpm3nodWizxQ7HXlF8RAg9c"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Tlskdpm3nodWizxQ7HXlF8RAg9c",
+    "block_type": 2,
+    "parent_id": "OVkndAX4boZMPmxNIpolJuLqgEg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MAK3diO70oYYaExYGfMlrQvygaf",
+    "block_type": 32,
+    "children": [
+      "JlXMdXeQxovlX4xJhV5lr0k7gde",
+      "WMI3ddbmDohP31xaadFlCT60gpg"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JlXMdXeQxovlX4xJhV5lr0k7gde",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 360,
+      "scale": 1,
+      "token": "GK15bqDHiopjD4xTTiGlHXBygGc",
+      "width": 2760
+    },
+    "parent_id": "MAK3diO70oYYaExYGfMlrQvygaf"
+  },
+  {
+    "block_id": "WMI3ddbmDohP31xaadFlCT60gpg",
+    "block_type": 2,
+    "parent_id": "MAK3diO70oYYaExYGfMlrQvygaf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EY9zdZGGDoKsETxr2vol1cp7gIh",
+    "block_type": 32,
+    "children": [
+      "RcWMdPWELodU5wxYAIVlIW04gBf",
+      "R4uEdlVHHoTnsZxVnTvlt7WEglc",
+      "QETWd7ib8oeDfpxAsjNlMIw3gcf",
+      "Bm3IdW7YWopY9cxicbylbAJ1gmc",
+      "WLewduDf9oLm3uxPNhMlRTVagJy",
+      "Qd4cdu7MDoEUnqxl0HQlEs5Zgdg",
+      "FZZddQiLzoB1XoxVj5zlvqsUgyb"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "RcWMdPWELodU5wxYAIVlIW04gBf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本期暂定上线 6 个单人游戏：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "R4uEdlVHHoTnsZxVnTvlt7WEglc",
+    "block_type": 13,
+    "comment_ids": [
+      "7672641104650456805"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词 PK（已有）",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672641104650456805"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "玩法：匹配机器人和历史真人数据，进行对战",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672641104650456805"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "QETWd7ib8oeDfpxAsjNlMIw3gcf",
+    "block_type": 13,
+    "comment_ids": [
+      "7672597157321985755"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词 PK 无尽模式（修改）\n玩法：基于目前的单词 PK，一直出题目，错 3 次结束\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "开扭蛋的功能下掉。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672597157321985755"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "Bm3IdW7YWopY9cxicbylbAJ1gmc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点名连连看（新增）\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "玩法：听 Max 播音频，连线两块牌，得分越多",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "WLewduDf9oLm3uxPNhMlRTVagJy",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "托盘打包（新增）\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "玩法：听 Max 播音频，选择 quiz 图片，三消玩法",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "Qd4cdu7MDoEUnqxl0HQlEs5Zgdg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "钓鱼钩卡（新增）\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "玩法：听 Max 播音频，选择 quiz 图片，从海里勾起正确的卡，一轮答对后，可以延长鱼钩长度，进入下一组。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "FZZddQiLzoB1XoxVj5zlvqsUgyb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "听音跑酷（新增）\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "玩法：玩家在并排的门中选择读音对应的正确门跑过去。答对时角色所带人群数量×2，答错时×0.7，沿途设有留有缺口的障碍（对手/敌对角色躲不掉），终点有\"巨人天降\"结算演出。按胜利次数排名（单位：胜）。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EY9zdZGGDoKsETxr2vol1cp7gIh"
+  },
+  {
+    "block_id": "UQxadu9WJoHjEsxMlCSl112Bg4b",
+    "block_type": 32,
+    "children": [
+      "LKCedXKBHoUAT9xtjKtlwnGEgtb",
+      "Dt4RdMDApoFni5xBzA2lGV3Agqb"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LKCedXKBHoUAT9xtjKtlwnGEgtb",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 3750,
+      "scale": 1,
+      "token": "YxGSb1bmzoBCzHxH5wzlwRPEgZg",
+      "width": 8120
+    },
+    "parent_id": "UQxadu9WJoHjEsxMlCSl112Bg4b"
+  },
+  {
+    "block_id": "Dt4RdMDApoFni5xBzA2lGV3Agqb",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "RaxAbK77koybqsxMD2IlFuHUgXb",
+      "width": 2664
+    },
+    "parent_id": "UQxadu9WJoHjEsxMlCSl112Bg4b"
+  },
+  {
+    "block_id": "Rzytd18NxoLKk8xQkwAluFXQgOd",
+    "block_type": 32,
+    "children": [
+      "QncVd94wko57fox5xyPlFJzEgrd",
+      "MEh8dcPYqozMJrxtd8klFj9ug3e",
+      "WGAldxqCcolZobxpgUIliBQIgkc",
+      "IvA7d0Kdmo4IIHxVYKJlyGh3giH",
+      "SZ4QdWoEroY3ZcxCC7OlTys9gLd",
+      "HfR8di0r1oFvejx3cRmlcuaEgHe",
+      "D5Q7dapdco5tDlxaTndl7Ziugaf",
+      "NuNqdbFC7oI2i8xFlHsls1DSgNe",
+      "FoWjdsmDboPTnmxOVSVlg60UgmU",
+      "PQdjdmJMyo59UFxhQA6l98fWgwU"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "QncVd94wko57fox5xyPlFJzEgrd",
+    "block_type": 2,
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词 PK 无尽模式",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MEh8dcPYqozMJrxtd8klFj9ug3e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "复用目前的单词 PK，出题规则保持，不限制题目数量，3 分钟内，只要用户没有错 3 次。就可以一直答。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "WGAldxqCcolZobxpgUIliBQIgkc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "只有 3 次错误机会，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "IvA7d0Kdmo4IIHxVYKJlyGh3giH",
+    "block_type": 13,
+    "comment_ids": [
+      "7672597914421563113"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "结束答题，展示根据分数，学习单词数量，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "最大 combo",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672597914421563113"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "，本局单词卡。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "SZ4QdWoEroY3ZcxCC7OlTys9gLd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出题规则：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "HfR8di0r1oFvejx3cRmlcuaEgHe",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基于用户所在 level及 level 以下，随机出单词库的题目。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "D5Q7dapdco5tDlxaTndl7Ziugaf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "NuNqdbFC7oI2i8xFlHsls1DSgNe",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "干扰项从同级别单词中随机出。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd"
+  },
+  {
+    "block_id": "FoWjdsmDboPTnmxOVSVlg60UgmU",
+    "block_type": 2,
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "限时 3 分钟，得分越多排名越高。",
+            "text_element_style": {
+              "background_color": 9,
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PQdjdmJMyo59UFxhQA6l98fWgwU",
+    "block_type": 2,
+    "parent_id": "Rzytd18NxoLKk8xQkwAluFXQgOd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FSJydukFZokbItxvP5klT491gCb",
+    "block_type": 32,
+    "children": [
+      "L63jdsLSVomPFZxERcflfXDmgKg",
+      "GMShdTGtVo1eI6xUHRll4Td1gGe"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "L63jdsLSVomPFZxERcflfXDmgKg",
+    "block_type": 2,
+    "parent_id": "FSJydukFZokbItxvP5klT491gCb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=0-1&t=8U4M4TwYoU70OPMz-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GMShdTGtVo1eI6xUHRll4Td1gGe",
+    "block_type": 2,
+    "parent_id": "FSJydukFZokbItxvP5klT491gCb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+    "block_type": 32,
+    "children": [
+      "FGeUdAyT7o8j0BxhLDdlapZWgih",
+      "YaKIdRCWUoK4XOxaINMljVjxgfe",
+      "FMcQdmemsokhtfx2FvelqftWgbb",
+      "LfAmdeYrEoDr9vx3rsPlGlIfg2g",
+      "TWaHdDnTyo8YcUx481LlyS0sgah",
+      "BpiudMD8TozKkZxizP3lTjvwg4c",
+      "Tq7JdVrHYoyAQKxSDwvlVlH8gqc",
+      "GXrrdwjgpo5pNNxd2XilYQSwg3C",
+      "IbvgdpbyOohO48xZRTxljTZbgFh"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "FGeUdAyT7o8j0BxhLDdlapZWgih",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点名连连看",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YaKIdRCWUoK4XOxaINMljVjxgfe",
+    "block_type": 2,
+    "children": [
+      "HqWkdDeAKohvT9xtrsulc9YBgMf"
+    ],
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "HqWkdDeAKohvT9xtrsulc9YBgMf",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "核心玩法参考 Cloud 文档",
+            "text_element_style": {
+              "background_color": 9,
+              "bold": true,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HqWkdDeAKohvT9xtrsulc9YBgMf",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_点名连连看.md",
+      "token": "SAIEbytp0oMLXYxwdJylinlTgCd"
+    },
+    "parent_id": "YaKIdRCWUoK4XOxaINMljVjxgfe"
+  },
+  {
+    "block_id": "FMcQdmemsokhtfx2FvelqftWgbb",
+    "block_type": 13,
+    "comment_ids": [
+      "7672652184995008224",
+      "7672390873241374432"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "难度选择：",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672390873241374432",
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe"
+  },
+  {
+    "block_id": "LfAmdeYrEoDr9vx3rsPlGlIfg2g",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224",
+      "7672390873241374432"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "简单：4 个单词 （1 板）",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672390873241374432",
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "中等：8 个单词（2板）",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672390873241374432",
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TWaHdDnTyo8YcUx481LlyS0sgah",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224",
+      "7672390873241374432"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "困难：16 个单词（3 板）",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672390873241374432",
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BpiudMD8TozKkZxizP3lTjvwg4c",
+    "block_type": 13,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出词规则：",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "【同单词 PK的规则】",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 6,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe"
+  },
+  {
+    "block_id": "Tq7JdVrHYoyAQKxSDwvlVlH8gqc",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基于用户所在 level及 level 以下，随机出单词库的题目。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe"
+  },
+  {
+    "block_id": "GXrrdwjgpo5pNNxd2XilYQSwg3C",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "优先出学过的单词，再出未学过的单词；若学过的不足 ，以未学过的补足。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe"
+  },
+  {
+    "block_id": "IbvgdpbyOohO48xZRTxljTZbgFh",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词的出题判定单独基于游戏记录。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "OpQQdHYp8onRWCxeTmYlSJ2NgTe"
+  },
+  {
+    "block_id": "NnjTdNhiXoffewxiseTly4jNgQe",
+    "block_type": 32,
+    "children": [
+      "PwO5dg39oosU4RxUaRplTcKugfg"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "PwO5dg39oosU4RxUaRplTcKugfg",
+    "block_type": 2,
+    "parent_id": "NnjTdNhiXoffewxiseTly4jNgQe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+    "block_type": 32,
+    "children": [
+      "YxkMdWeExoy73ZxVG1UlqoqVgmc",
+      "AXJhdiJq3oeE5xxAK6llZQu9gKf",
+      "HWIadaZSoolQgkxoS56l4ToEgLg",
+      "Y8jYd1CHAoyFRIxpjW8lmmaugHc"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "YxkMdWeExoy73ZxVG1UlqoqVgmc",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "托盘打包台",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AXJhdiJq3oeE5xxAK6llZQu9gKf",
+    "block_type": 2,
+    "children": [
+      "BXSTdGCFJozl9OxNLewl2cd2grC"
+    ],
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "BXSTdGCFJozl9OxNLewl2cd2grC",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BXSTdGCFJozl9OxNLewl2cd2grC",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_托盘打包台.md",
+      "token": "FIa1b3mTIoq9QuxfhcmlaOisgBS"
+    },
+    "parent_id": "AXJhdiJq3oeE5xxAK6llZQu9gKf"
+  },
+  {
+    "block_id": "HWIadaZSoolQgkxoS56l4ToEgLg",
+    "block_type": 13,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出词规则：同点名连连看",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "J4bmdRmbmo1CrMxotsVl6x2lgPc"
+  },
+  {
+    "block_id": "Y8jYd1CHAoyFRIxpjW8lmmaugHc",
+    "block_type": 2,
+    "parent_id": "J4bmdRmbmo1CrMxotsVl6x2lgPc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Gn4Ld41W1oHL3PxB62Flr49Dggb",
+    "block_type": 32,
+    "children": [
+      "OwY8dcnNJoSNasxCIANlDpdDgFc"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "OwY8dcnNJoSNasxCIANlDpdDgFc",
+    "block_type": 2,
+    "parent_id": "Gn4Ld41W1oHL3PxB62Flr49Dggb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BhsWdjZAto1FvUx5E57lWAbWgGh",
+    "block_type": 32,
+    "children": [
+      "XDqAdha2moSoOSxm7Hnl4xDBgkB",
+      "CVORdQqJBob4jHxJV0slyPWKgaf",
+      "EUFadYPjaoP1njxtKM6lqar5gzh",
+      "GI4idwI50ol5jbxRhielCHBxgBc",
+      "TzYqd50qYobum8xuMS9lf1sRgbb",
+      "VLoydQiIRogISJx0FmAlfxf3gjb"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "XDqAdha2moSoOSxm7Hnl4xDBgkB",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "钓鱼钩卡",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CVORdQqJBob4jHxJV0slyPWKgaf",
+    "block_type": 2,
+    "children": [
+      "Lqf4duO3CoWaJtxHHGxlHRedgge"
+    ],
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "Lqf4duO3CoWaJtxHHGxlHRedgge",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Lqf4duO3CoWaJtxHHGxlHRedgge",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_钓鱼钩卡.md",
+      "token": "NSlhbiacho5umex8NVOlZIxgghd"
+    },
+    "parent_id": "CVORdQqJBob4jHxJV0slyPWKgaf"
+  },
+  {
+    "block_id": "EUFadYPjaoP1njxtKM6lqar5gzh",
+    "block_type": 13,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出词规则：",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh"
+  },
+  {
+    "block_id": "GI4idwI50ol5jbxRhielCHBxgBc",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基于用户所在 level及 level 以下，随机出单词库的题目。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh"
+  },
+  {
+    "block_id": "TzYqd50qYobum8xuMS9lf1sRgbb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh"
+  },
+  {
+    "block_id": "VLoydQiIRogISJx0FmAlfxf3gjb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "干扰项从同级别单词中随机出。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "BhsWdjZAto1FvUx5E57lWAbWgGh"
+  },
+  {
+    "block_id": "LT73ddkLnomfUnxaarLlyhyvgLf",
+    "block_type": 32,
+    "children": [
+      "CzkXddFtqo8UU5xAWNol82iwgRh"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CzkXddFtqo8UU5xAWNol82iwgRh",
+    "block_type": 2,
+    "parent_id": "LT73ddkLnomfUnxaarLlyhyvgLf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YX57dhwBioERUVx1ifYlLEdSgpg",
+    "block_type": 32,
+    "children": [
+      "LvXldX7ifoOqT8x9m4YldtBZgFt",
+      "KAgkd10GRoIGNwxqwOblV5n0gwS",
+      "ZsxQdz9s5obRnzx0EbElNEwJgBh",
+      "L3FfdFaDkoJL6xxxkuhlCGXqg3b",
+      "TgGmdRcEBoJRrcx0WgIlZmAug5f",
+      "O4HldUiWCoNk6DxEFEYlXrMMgfJ"
+    ],
+    "parent_id": "VpCfduFiToKCSnx2mU4lFKeogdd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LvXldX7ifoOqT8x9m4YldtBZgFt",
+    "block_type": 2,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "听音跑酷",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KAgkd10GRoIGNwxqwOblV5n0gwS",
+    "block_type": 2,
+    "children": [
+      "ROHFd5ztPoHhg4xtGbslxQpCgog"
+    ],
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "ROHFd5ztPoHhg4xtGbslxQpCgog",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ROHFd5ztPoHhg4xtGbslxQpCgog",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_听音选门跑酷.md",
+      "token": "QwncbXLjjoGfvSx6RrBlegHpgGc"
+    },
+    "parent_id": "KAgkd10GRoIGNwxqwOblV5n0gwS"
+  },
+  {
+    "block_id": "ZsxQdz9s5obRnzx0EbElNEwJgBh",
+    "block_type": 13,
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出词规则：",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg"
+  },
+  {
+    "block_id": "L3FfdFaDkoJL6xxxkuhlCGXqg3b",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基于用户所在 level及 level 以下，随机出单词库的题目。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg"
+  },
+  {
+    "block_id": "TgGmdRcEBoJRrcx0WgIlZmAug5f",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg"
+  },
+  {
+    "block_id": "O4HldUiWCoNk6DxEFEYlXrMMgfJ",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "干扰项从同级别单词中随机出。",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7672652184995008224"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "comment_ids": [
+      "7672652184995008224"
+    ],
+    "parent_id": "YX57dhwBioERUVx1ifYlLEdSgpg"
+  },
+  {
+    "block_id": "LKTmd5vbWoh4yZxHLPolqs0Ygnd",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QErDdzXISo6ehgx4Rf0luPoEglb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "线下多人游戏区",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "block_type": 31,
+    "children": [
+      "PlmmdpLqioswppxIX01lI4J4gKc",
+      "HqQTdE5iSow1KBx0sJ5lD0Hqgqf",
+      "WIqBd7aiwozindxPjQ3lu6LTgQe",
+      "K2aAdarlyoo4Dux5mC7lpcOtgkc",
+      "MQiEdCtd0oPYTIxmOv1l2bUigFg",
+      "EhANd8QmpoppKBxIxMIlrvypgRd",
+      "QY5BdIXceoeUGyxkPkLlWjiSgnd",
+      "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "table": {
+      "cells": [
+        "PlmmdpLqioswppxIX01lI4J4gKc",
+        "HqQTdE5iSow1KBx0sJ5lD0Hqgqf",
+        "WIqBd7aiwozindxPjQ3lu6LTgQe",
+        "K2aAdarlyoo4Dux5mC7lpcOtgkc",
+        "MQiEdCtd0oPYTIxmOv1l2bUigFg",
+        "EhANd8QmpoppKBxIxMIlrvypgRd",
+        "QY5BdIXceoeUGyxkPkLlWjiSgnd",
+        "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          410,
+          410
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 4
+      }
+    }
+  },
+  {
+    "block_id": "PlmmdpLqioswppxIX01lI4J4gKc",
+    "block_type": 32,
+    "children": [
+      "Jk3edftgzoYbgWx5ol7l0Qncgje"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Jk3edftgzoYbgWx5ol7l0Qncgje",
+    "block_type": 2,
+    "parent_id": "PlmmdpLqioswppxIX01lI4J4gKc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HqQTdE5iSow1KBx0sJ5lD0Hqgqf",
+    "block_type": 32,
+    "children": [
+      "AvN0do5Khowe3JxN5mHlRjPZgwc"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "AvN0do5Khowe3JxN5mHlRjPZgwc",
+    "block_type": 2,
+    "parent_id": "HqQTdE5iSow1KBx0sJ5lD0Hqgqf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WIqBd7aiwozindxPjQ3lu6LTgQe",
+    "block_type": 32,
+    "children": [
+      "NN9UdUVnCoPDuzxwB0KlmEtNgYg"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NN9UdUVnCoPDuzxwB0KlmEtNgYg",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "Hjk8bf34roJjOSxN1CmlVedZglc",
+      "width": 2664
+    },
+    "parent_id": "WIqBd7aiwozindxPjQ3lu6LTgQe"
+  },
+  {
+    "block_id": "K2aAdarlyoo4Dux5mC7lpcOtgkc",
+    "block_type": 32,
+    "children": [
+      "SfZGdqwYCobISVxJolAluMGAgvc"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "SfZGdqwYCobISVxJolAluMGAgvc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本地多人游戏，本期支持 2 个小游戏\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "单词飞船、抢答游戏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "K2aAdarlyoo4Dux5mC7lpcOtgkc"
+  },
+  {
+    "block_id": "MQiEdCtd0oPYTIxmOv1l2bUigFg",
+    "block_type": 32,
+    "children": [
+      "T8bIdayV3oSJjEx5camlJxcmgiT",
+      "X7SFdUhVroHHjNxK8d4lQ1cjg6d"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "T8bIdayV3oSJjEx5camlJxcmgiT",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 7550,
+      "scale": 1,
+      "token": "B7m5bgpDQoOVNfxrUi4lZYENgZc",
+      "width": 15890
+    },
+    "parent_id": "MQiEdCtd0oPYTIxmOv1l2bUigFg"
+  },
+  {
+    "block_id": "X7SFdUhVroHHjNxK8d4lQ1cjg6d",
+    "block_type": 2,
+    "parent_id": "MQiEdCtd0oPYTIxmOv1l2bUigFg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=21-10415&t=8U4M4TwYoU70OPMz-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EhANd8QmpoppKBxIxMIlrvypgRd",
+    "block_type": 32,
+    "children": [
+      "R9YwdPd8Co1TlvxqErdlS2pFg0c",
+      "IcpmdSDnVoknrRxrcNzlzUeUgbh",
+      "YqbwdTViSom39txJQZelaa0KgGc",
+      "S0wqd0j8qoUmUjxFCeilt6P0gyh",
+      "YAy1dNtLOogWzCxdA1dlFR5rgHf"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "R9YwdPd8Co1TlvxqErdlS2pFg0c",
+    "block_type": 2,
+    "parent_id": "EhANd8QmpoppKBxIxMIlrvypgRd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词飞船",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IcpmdSDnVoknrRxrcNzlzUeUgbh",
+    "block_type": 2,
+    "children": [
+      "Z23DdLaAPoyGyHxva88lCjMDgBb"
+    ],
+    "parent_id": "EhANd8QmpoppKBxIxMIlrvypgRd",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "Z23DdLaAPoyGyHxva88lCjMDgBb",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Z23DdLaAPoyGyHxva88lCjMDgBb",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_单词飞船.md",
+      "token": "Mq77b1B33o8LLOx777ilq2bJgWe"
+    },
+    "parent_id": "IcpmdSDnVoknrRxrcNzlzUeUgbh"
+  },
+  {
+    "block_id": "YqbwdTViSom39txJQZelaa0KgGc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出题规则：\n基于用户所在 level及 level 以下，随机出单词库的题目。\n优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "干扰项从同级别单词中随机出。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "EhANd8QmpoppKBxIxMIlrvypgRd"
+  },
+  {
+    "block_id": "S0wqd0j8qoUmUjxFCeilt6P0gyh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "干扰项",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "EhANd8QmpoppKBxIxMIlrvypgRd"
+  },
+  {
+    "block_id": "YAy1dNtLOogWzCxdA1dlFR5rgHf",
+    "block_type": 2,
+    "parent_id": "EhANd8QmpoppKBxIxMIlrvypgRd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QY5BdIXceoeUGyxkPkLlWjiSgnd",
+    "block_type": 32,
+    "children": [
+      "B3ezd9bc5oWA3sxEsYrlcEn2gfg",
+      "CLqSdyn8fof3n6xuGhAl7rj6gMw"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "B3ezd9bc5oWA3sxEsYrlcEn2gfg",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 6691,
+      "scale": 1,
+      "token": "O9T1bKh02orldhxF7TXlXYplgUf",
+      "width": 10237
+    },
+    "parent_id": "QY5BdIXceoeUGyxkPkLlWjiSgnd"
+  },
+  {
+    "block_id": "CLqSdyn8fof3n6xuGhAl7rj6gMw",
+    "block_type": 2,
+    "parent_id": "QY5BdIXceoeUGyxkPkLlWjiSgnd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh",
+    "block_type": 32,
+    "children": [
+      "KpZldV7vNo2Ywdx3d6cla4X6gIe",
+      "XyZodozYgoiVetxf7E3lx0YPgPb",
+      "Wn5idmNpOo2cvcxwStklfhvmghd",
+      "Q2ZBdUPLooPoGBx1qdtlFLB7gYf",
+      "HCnrdvUNXo0gOTxb2Ual51KwgFe",
+      "L5D3dMm4To2losxV1xZlOjG9g3f",
+      "Hngsd2CTbofPRSxA26Clkcyng5e",
+      "KtSbd7urZo16W6xhxb4lEn4lgXb",
+      "SvcldLMvsoY9PixxjZOlpC2Sgyb",
+      "W6AGdEV0wokiuFxovcDlwUvAgsc",
+      "EW7zd62osoZDb8xThsNl6h4cgpB",
+      "WNj4d3RUboq60zxGHixloD9Hgjc",
+      "DxgAdgsuqoZCuQxtrkolKHGPgdd",
+      "QPq8dAvg1oJabqxPMzJlt9DfgYg",
+      "BrucdfvnmoIcgMxx8mFlWADVg2g",
+      "YnL0dmdwfozeW4xTAb6lWys8gQc"
+    ],
+    "parent_id": "F0SRdY1QXo0sYCxa6heln0mUgyg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KpZldV7vNo2Ywdx3d6cla4X6gIe",
+    "block_type": 2,
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "抢答游戏",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XyZodozYgoiVetxf7E3lx0YPgPb",
+    "block_type": 2,
+    "children": [
+      "WtGrdJAUZoqqJGxUt24lcKrLgPa"
+    ],
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "WtGrdJAUZoqqJGxUt24lcKrLgPa",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WtGrdJAUZoqqJGxUt24lcKrLgPa",
+    "block_type": 23,
+    "file": {
+      "name": "PRD_抢答游戏.md",
+      "token": "ZEsKb4sn6oLDu4xMLqXlDpKhgeh"
+    },
+    "parent_id": "XyZodozYgoiVetxf7E3lx0YPgPb"
+  },
+  {
+    "block_id": "Wn5idmNpOo2cvcxwStklfhvmghd",
+    "block_type": 2,
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不同类型出题规则：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Q2ZBdUPLooPoGBx1qdtlFLB7gYf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "HCnrdvUNXo0gOTxb2Ual51KwgFe",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本次仅支持",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "听音看文字选文字，听音看图选文字",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "两个题型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "L5D3dMm4To2losxV1xZlOjG9g3f",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "出词规则：\n基于用户所在 level及 level 以下，随机出单词库的题目。\n优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "干扰项从同级别单词中随机出。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "Hngsd2CTbofPRSxA26Clkcyng5e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "百科常识",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "KtSbd7urZo16W6xhxb4lEn4lgXb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "题目需本地化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "SvcldLMvsoY9PixxjZOlpC2Sgyb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "提供1000 题 excel、表结构：题干、正确答案、干扰项。\n选项随机展示，不固定排序。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "题干自动 tts 播放。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "W6AGdEV0wokiuFxovcDlwUvAgsc",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本期题目都是纯文本。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "EW7zd62osoZDb8xThsNl6h4cgpB",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户答完 1000 题以前，不重复出题。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "WNj4d3RUboq60zxGHixloD9Hgjc",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Admin 可能需要配置",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "DxgAdgsuqoZCuQxtrkolKHGPgdd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "口算",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "QPq8dAvg1oJabqxPMzJlt9DfgYg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "随机出题，100 以内的加减法，本期不支持乘除法。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "随机出现两个数加减，三个数加减",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "BrucdfvnmoIcgMxx8mFlWADVg2g",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "选项：正确答案（系统计算）、2 个干扰项（随机生成）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh"
+  },
+  {
+    "block_id": "YnL0dmdwfozeW4xTAb6lWys8gQc",
+    "block_type": 2,
+    "parent_id": "GReHdM0fwojeO1xQ2HJlgHLtgjh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "结束时，赢的用户头像放大， 并展示 Victory",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GarUdI24hotmAdxf4nalnNG5ghb",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JubhdtmBHo67zkxtejql7sBsgic",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "5. 分享链路",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "BiU2dMBEDofnbIxWAq5l5NoQg5b",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F26sd005TogzZJxHNY1lU93Agkg",
+    "block_type": 43,
+    "board": {
+      "token": "RKxNwBGh9hH68Zb4VK9l0un8gad"
+    },
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG"
+  },
+  {
+    "block_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "block_type": 31,
+    "children": [
+      "Ja6RdgrwiorZEZxEiVGlqPR1gab",
+      "DHiAdLEm1oEwvZxsGixlpwCLglC",
+      "U59EdiGiDo5rCvx2k84lkxP3geb",
+      "TvSnd7C1QoFZ6pxEetYlLXn9g6d",
+      "EIIYdtZcvoCtkmxDWdklPVrTgGh",
+      "Xnz5d9U1Uo09tixgQB7lK2uzgkd",
+      "HZdXdFUQboNdfaxQs9rlq8iggdb",
+      "NwmSdoPpeoPPCDxJb9olnii1gUe",
+      "FPz3dyg1jozTymxkoFElw8GKgSd",
+      "UJLDdA8PZoGiTHxzEmflz6dEgoc",
+      "FlQtd9OGJoVDuQx37Lglo646gub",
+      "SjGnddJzrojSrlxwRkilOkmNgeS"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "table": {
+      "cells": [
+        "Ja6RdgrwiorZEZxEiVGlqPR1gab",
+        "DHiAdLEm1oEwvZxsGixlpwCLglC",
+        "U59EdiGiDo5rCvx2k84lkxP3geb",
+        "TvSnd7C1QoFZ6pxEetYlLXn9g6d",
+        "EIIYdtZcvoCtkmxDWdklPVrTgGh",
+        "Xnz5d9U1Uo09tixgQB7lK2uzgkd",
+        "HZdXdFUQboNdfaxQs9rlq8iggdb",
+        "NwmSdoPpeoPPCDxJb9olnii1gUe",
+        "FPz3dyg1jozTymxkoFElw8GKgSd",
+        "UJLDdA8PZoGiTHxzEmflz6dEgoc",
+        "FlQtd9OGJoVDuQx37Lglo646gub",
+        "SjGnddJzrojSrlxwRkilOkmNgeS"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          410,
+          410
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 6
+      }
+    }
+  },
+  {
+    "block_id": "Ja6RdgrwiorZEZxEiVGlqPR1gab",
+    "block_type": 32,
+    "children": [
+      "RtS9dqhihosj2bx1kuXlZbmrgGe"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "RtS9dqhihosj2bx1kuXlZbmrgGe",
+    "block_type": 2,
+    "parent_id": "Ja6RdgrwiorZEZxEiVGlqPR1gab",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DHiAdLEm1oEwvZxsGixlpwCLglC",
+    "block_type": 32,
+    "children": [
+      "NviYd7KG6oNVG3xwzBdlxi5cgwc"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NviYd7KG6oNVG3xwzBdlxi5cgwc",
+    "block_type": 2,
+    "parent_id": "DHiAdLEm1oEwvZxsGixlpwCLglC",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "U59EdiGiDo5rCvx2k84lkxP3geb",
+    "block_type": 32,
+    "children": [
+      "I0r0dbtvwo0sWqx1V73lYCAIgSf",
+      "PZTmd4FURo6MGDx6B9HlH1Frg4e",
+      "QwrOdns2moWvvyxI5onl9hVGgYd"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "I0r0dbtvwo0sWqx1V73lYCAIgSf",
+    "block_type": 2,
+    "parent_id": "U59EdiGiDo5rCvx2k84lkxP3geb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PZTmd4FURo6MGDx6B9HlH1Frg4e",
+    "block_type": 27,
+    "image": {
+      "height": 1500,
+      "scale": 1,
+      "token": "Ko3YbX28yoNtoOx3DEGlkn25gab",
+      "width": 2664
+    },
+    "parent_id": "U59EdiGiDo5rCvx2k84lkxP3geb"
+  },
+  {
+    "block_id": "QwrOdns2moWvvyxI5onl9hVGgYd",
+    "block_type": 2,
+    "parent_id": "U59EdiGiDo5rCvx2k84lkxP3geb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d",
+    "block_type": 32,
+    "children": [
+      "KXNjdiQFNoxox2xazdkljyLAgXc",
+      "Nh6SdLD7BojeXrx422IlexVBgOc",
+      "Ot4tdSv1koFqvkxBSXJlzboLgkb",
+      "N5gadTm9ZopWx6xmO6nl4Kglg2c",
+      "NQ1hdGCRkoscm5xS3JQloi5lgJf",
+      "AM1TdujxGo1Uhuxiv5Wlny0bgmh",
+      "UCSkdOVBCoCQwMxg4HYl8G72gyf",
+      "F7CIdFKRboJal8xQILIlhAoDgeb"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KXNjdiQFNoxox2xazdkljyLAgXc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击单人游戏的右上角，可以生成分享链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "Nh6SdLD7BojeXrx422IlexVBgOc",
+    "block_type": 2,
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1）展示文案：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ot4tdSv1koFqvkxBSXJlzboLgkb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Share this link with your friend.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "N5gadTm9ZopWx6xmO6nl4Kglg2c",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Your friend can tap it to start playing right away.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "NQ1hdGCRkoscm5xS3JQloi5lgJf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "分享渠道：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "AM1TdujxGo1Uhuxiv5Wlny0bgmh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Whatsapp",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "UCSkdOVBCoCQwMxg4HYl8G72gyf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "微信",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "F7CIdFKRboJal8xQILIlhAoDgeb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "复制链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "TvSnd7C1QoFZ6pxEetYlLXn9g6d"
+  },
+  {
+    "block_id": "EIIYdtZcvoCtkmxDWdklPVrTgGh",
+    "block_type": 32,
+    "children": [
+      "LYicdhPtlopnYFxKH2il6H06gEd",
+      "YECldptFQod8MTx5Hhwl5GJegTc",
+      "ESbXdRsPcoafTYxwCr1lkdi7gNe"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LYicdhPtlopnYFxKH2il6H06gEd",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 562,
+      "scale": 0.24664429530201343,
+      "token": "Ul6MbKS1EoVZU9xkBcDlMPTeghg",
+      "width": 596
+    },
+    "parent_id": "EIIYdtZcvoCtkmxDWdklPVrTgGh"
+  },
+  {
+    "block_id": "YECldptFQod8MTx5Hhwl5GJegTc",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 222,
+      "scale": 1,
+      "token": "SVLNbuxjboQkfgxBX8KlenMUgOg",
+      "width": 532
+    },
+    "parent_id": "EIIYdtZcvoCtkmxDWdklPVrTgGh"
+  },
+  {
+    "block_id": "ESbXdRsPcoafTYxwCr1lkdi7gNe",
+    "block_type": 2,
+    "parent_id": "EIIYdtZcvoCtkmxDWdklPVrTgGh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd",
+    "block_type": 32,
+    "children": [
+      "Y40YdREP0oczQyxujSllVCIVgKd",
+      "NAvmdvSN5oORWBxxPZxl7x9ZgBe",
+      "Ib1tdJCa5oqNKsxUITll7Bmbg6e",
+      "UbssdACnaogHSOxIOnVl1ih4gnd",
+      "FpxgdlziOozyLVxvH7ulA1RMgsg",
+      "HapMdElI4oWx2HxdkHplEiqQgBg",
+      "EGhtdE7jwoAhdfxCQOXlHyX1gXf",
+      "L8IIdSuzdoyCMNxI0GwlXmz9gjg"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Y40YdREP0oczQyxujSllVCIVgKd",
+    "block_type": 2,
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "WhatsApp 的链接预览是读取网页的 Open Graph 元标签（og:title/og:description/og:image），跟 Facebook/Messenger 用的是同一套机制。只要分享出去的落地页正确写好这几个 meta 标签、页面是公开可访问的（不能有登录墙），预览卡片就会自动生成，没有任何审批流程。唯一要注意的是 og:image 建议尺寸 1200×630，图片链接要能被外部抓取。",
+            "text_element_style": {
+              "background_color": 14,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NAvmdvSN5oORWBxxPZxl7x9ZgBe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "title 和description，从以下任选一条",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "Ib1tdJCa5oqNKsxUITll7Bmbg6e",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Title:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Listen & Match · A Challenge from Giggle \n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Description:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " A quick listening game — tap and play, no login needed.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "UbssdACnaogHSOxIOnVl1ih4gnd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Title:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Beat My Score in Listen & Match \n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Description:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Can you top my score? Play now, no sign-up required.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "FpxgdlziOozyLVxvH7ulA1RMgsg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Title:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Listen & Match · Surprisingly Addictive \n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Description:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Listen, match, repeat — harder to put down than it looks.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "HapMdElI4oWx2HxdkHplEiqQgBg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Title:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " ",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "A 3-Minute Brain Break ",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Description: One quick round of Listen & Match. Just tap and play.",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "EGhtdE7jwoAhdfxCQOXlHyX1gXf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Title:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " Listen & Match · Free to Play \n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Description:",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " No login needed — download Giggle Academy for more games.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "L8IIdSuzdoyCMNxI0GwlXmz9gjg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "image：直接用游戏的封面",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Xnz5d9U1Uo09tixgQB7lK2uzgkd"
+  },
+  {
+    "block_id": "HZdXdFUQboNdfaxQs9rlq8iggdb",
+    "block_type": 32,
+    "children": [
+      "NikUdwSipo3TBcxnejTlLcOsg0e",
+      "YGQMduqSkok3wTxhQuClE470gJe"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NikUdwSipo3TBcxnejTlLcOsg0e",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 3304,
+      "scale": 0.06785034876347495,
+      "token": "KZi7b12n1o0YpOxm7vqlPsBtgTf",
+      "width": 1577
+    },
+    "parent_id": "HZdXdFUQboNdfaxQs9rlq8iggdb"
+  },
+  {
+    "block_id": "YGQMduqSkok3wTxhQuClE470gJe",
+    "block_type": 2,
+    "parent_id": "HZdXdFUQboNdfaxQs9rlq8iggdb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NwmSdoPpeoPPCDxJb9olnii1gUe",
+    "block_type": 32,
+    "children": [
+      "BizudZXeUoYDgkxY6gyltMR8g7g",
+      "MwUMd2AxYo3q8mxMeMNlOKKRgrb",
+      "OrFVdl5Auo0msdxchAOl9TNDg6g",
+      "IfRKdovqzom1vLxioLrly3YwgOh",
+      "IUHFd8bLVoGnNcx3ffPlviPQgZb"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BizudZXeUoYDgkxY6gyltMR8g7g",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "从 Whatsapp 点击链接，打开竖版游戏介绍页\n游戏封面\n游戏名称\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "游戏一句话介绍",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "NwmSdoPpeoPPCDxJb9olnii1gUe"
+  },
+  {
+    "block_id": "MwUMd2AxYo3q8mxMeMNlOKKRgrb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击开始游戏，直接开始",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "NwmSdoPpeoPPCDxJb9olnii1gUe"
+  },
+  {
+    "block_id": "OrFVdl5Auo0msdxchAOl9TNDg6g",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "下载Giggle Academy固定吸底，点击后\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "安卓手机：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n点击【下载Giggle Academy】，跳转至Google Play，\n若无Goggle Play，跳转至本机应用市场，\n若无应用市场，直接下载官网安装包\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "苹果手机：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n跳转至app store的Giggle Academy详情页。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "按钮可以复用现在的邀请下载逻辑，如果用户已经安装，直接打开app。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "NwmSdoPpeoPPCDxJb9olnii1gUe"
+  },
+  {
+    "block_id": "IfRKdovqzom1vLxioLrly3YwgOh",
+    "block_type": 2,
+    "parent_id": "NwmSdoPpeoPPCDxJb9olnii1gUe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://app.adjust.com/21pj288c",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " 跳转的adjust链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IUHFd8bLVoGnNcx3ffPlviPQgZb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "About us点击后跳转至Giggle Academy官网。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "NwmSdoPpeoPPCDxJb9olnii1gUe"
+  },
+  {
+    "block_id": "FPz3dyg1jozTymxkoFElw8GKgSd",
+    "block_type": 32,
+    "children": [
+      "PBpydhQAXo5SCoxT6wVlx5tigub"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "PBpydhQAXo5SCoxT6wVlx5tigub",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 290,
+      "scale": 1,
+      "token": "C2FFbOdXToc4m8x3jwGlhmqHgDd",
+      "width": 518
+    },
+    "parent_id": "FPz3dyg1jozTymxkoFElw8GKgSd"
+  },
+  {
+    "block_id": "UJLDdA8PZoGiTHxzEmflz6dEgoc",
+    "block_type": 32,
+    "children": [
+      "TP1SdUq7ZokyIBxv2sjlcS4lg64",
+      "IaxDdR17godrWdx5tdclUNThgRV",
+      "VAzMdzO9AowTo6xaQRnlM1f5ghg"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "TP1SdUq7ZokyIBxv2sjlcS4lg64",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "复用目前端内的 H5 游戏页面",
+            "text_element_style": {
+              "background_color": 14,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "text_color": 1,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "UJLDdA8PZoGiTHxzEmflz6dEgoc"
+  },
+  {
+    "block_id": "IaxDdR17godrWdx5tdclUNThgRV",
+    "block_type": 2,
+    "parent_id": "UJLDdA8PZoGiTHxzEmflz6dEgoc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "待定：等 bolin 设计完第一个再敲定",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VAzMdzO9AowTo6xaQRnlM1f5ghg",
+    "block_type": 2,
+    "parent_id": "UJLDdA8PZoGiTHxzEmflz6dEgoc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "\n1. 在浏览器外需要提示用户横屏\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "2. 分享出去小游戏用户",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FlQtd9OGJoVDuQx37Lglo646gub",
+    "block_type": 32,
+    "children": [
+      "ELDJdxtTRowJy0x4CFhlaBLOgmh"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ELDJdxtTRowJy0x4CFhlaBLOgmh",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 1122,
+      "scale": 0.25892857142857145,
+      "token": "LP7gbo0Sooh0jcxATLIldaxpgme",
+      "width": 560
+    },
+    "parent_id": "FlQtd9OGJoVDuQx37Lglo646gub"
+  },
+  {
+    "block_id": "SjGnddJzrojSrlxwRkilOkmNgeS",
+    "block_type": 32,
+    "children": [
+      "EzIed61bEoYkfSxkrO9lpMZeg9e",
+      "PYN2dgzdso9ziQxYk8qlOYVhgme",
+      "H3yYdl1zRoE3fkxW9xIlyygfgTh",
+      "XoIDd5IBMoW7SExOF1ulHEZzgyc",
+      "IuD1dq1uqoFj1PxLMCBl3717g6g"
+    ],
+    "parent_id": "KmROdOsWEoYL28xZWcllLHKxg0d",
+    "table_cell": {}
+  },
+  {
+    "block_id": "EzIed61bEoYkfSxkrO9lpMZeg9e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游戏结束，展示结束页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "SjGnddJzrojSrlxwRkilOkmNgeS"
+  },
+  {
+    "block_id": "PYN2dgzdso9ziQxYk8qlOYVhgme",
+    "block_type": 2,
+    "parent_id": "SjGnddJzrojSrlxwRkilOkmNgeS",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "待定：等 bolin 设计完第一个再敲定",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "H3yYdl1zRoE3fkxW9xIlyygfgTh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "引导下载文案：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "SjGnddJzrojSrlxwRkilOkmNgeS"
+  },
+  {
+    "block_id": "XoIDd5IBMoW7SExOF1ulHEZzgyc",
+    "block_type": 2,
+    "parent_id": "SjGnddJzrojSrlxwRkilOkmNgeS",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Download Giggle Academy for more fun games to play",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IuD1dq1uqoFj1PxLMCBl3717g6g",
+    "block_type": 2,
+    "parent_id": "SjGnddJzrojSrlxwRkilOkmNgeS",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "按钮：Download Giggle Academy",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QiLTdPD0OoW3ILxjMqPlX67Tg4b",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "A5ibdbMDeoQZkgxtZB6lASJsgBf",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "埋点疑问-开发",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DPMFdxS03ozPzMxy7PGlBthsgqB",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、分享事件那些按钮没埋点吗",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IHoDdjp8FoyOLUxlIjzlL9Xrgph",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、单机游戏其实有3个入口：课程路径进，大厅进，分享外部链接进，没区分吗？",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WnZSdA2G7oiPCxxIg1QlIIHwgGb",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3、部分埋点感觉特别冗余 会造成大量数据，请评估过部分埋点字段 是否有意义，是否必要？",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Jwtkd3jyzox1WoxFn3HleERBgEJ",
+    "block_type": 2,
+    "children": [
+      "HViadGj9Woze18x7UKzli255gFh"
+    ],
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "inline_block": {
+            "block_id": "HViadGj9Woze18x7UKzli255gFh",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HViadGj9Woze18x7UKzli255gFh",
+    "block_type": 23,
+    "file": {
+      "name": "mini-game-tracking-review.md",
+      "token": "MgcGbIuuzoCpV5xyu1llpw1Ag9g"
+    },
+    "parent_id": "Jwtkd3jyzox1WoxFn3HleERBgEJ"
+  },
+  {
+    "block_id": "ZXmqdI0MtoqRttx2Q2blzAmwgBh",
+    "block_type": 2,
+    "parent_id": "HY3RdCHdAou67VxQEe4lZaIUgHG",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

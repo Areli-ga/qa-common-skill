@@ -2,7 +2,7 @@
 标题: Mai 场景内口语对话课-Libin
 模块: AI Tutor / 场景内口语对话课
 版本: V1.34.0
-related: [2026-06-30-AI Tutor-I spy游戏模型升级.md, 2026-06-30-AI Tutor-Mai主对话界面.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-07-13-AI Tutor-学习场景屏幕常亮.md, 2026-07-13-语音识别-自适应跟读计时与会话统计.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-08-11-AI Tutor-Mai电量系统成本控制.md, 2026-08-11-AI Tutor-MtownTalk支持bbox点击.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-08-11-AI Tutor-小Mai新内容更新引导.md, 2026-08-11-AI Tutor-小Mai模型切换配置.md, 2026-08-11-语音识别-变声器与朗读录音卡片升级.md, 2026-08-24-AI Tutor-MtownTalk小麦多轮指导与镜头切换预研.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Ssm8wItQTi69rhkC2dAlxZUBgd6
 日期: 2026-07-13
 ---

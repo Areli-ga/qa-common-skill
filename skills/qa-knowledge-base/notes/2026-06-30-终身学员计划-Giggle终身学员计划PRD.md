@@ -2,7 +2,7 @@
 标题: 「Giggle终身学员」计划PRD
 模块: 终身学员计划 / 试学认证流程
 版本: V1.30.0
-related: [2026-06-30-终身学员计划-增加Push.md]
+related: []
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/ZAVawti3fiORAik4elvl01yTgne
 日期: 2026-06-30
 ---
@@ -50,6 +50,6 @@ V1.30.0 留存增长功能:新用户累计学习 7 个学习日,经"试学学员
 
 ## 图说明(21 张,多为原型截图)
 > 全部存于 `raw/「Giggle终身学员」计划PRD/images/`,按需点开。本篇图基本是各页/各 Day 弹窗的**原型截图**,规则正文已详述;抽样确认无正文之外的独有规则。
-- [img-01](../raw/「Giggle终身学员」计划PRD/images/img-01.png):整体主流程(欢迎→Hello→地图→课程→邀请函)。
-- [img-13](../raw/「Giggle终身学员」计划PRD/images/img-13.png):Day7 完成弹窗 + 学员证书 + 分享面板。
+- [img-01](../raw/「Giggle终身学员」计划PRD/images/img-01.webp):整体主流程(欢迎→Hello→地图→课程→邀请函)。
+- [img-13](../raw/「Giggle终身学员」计划PRD/images/img-13.webp):Day7 完成弹窗 + 学员证书 + 分享面板。
 - img-02~21:各页/各 Day 弹窗原型(含 img-18 社群部分=本期不做)。

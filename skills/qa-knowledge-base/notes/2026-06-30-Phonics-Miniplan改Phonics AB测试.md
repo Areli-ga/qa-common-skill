@@ -95,7 +95,7 @@ V1.31.0 做 Phonics 一级模块 AB 测试:实验组把主菜单原 Miniplan 入
 > 存于 `../raw/Miniplan改Phonics-AB测试/images/`(超大已转 `.read`)。5 张图按规则已全读。
 
 - **img-01**(`images/img-01.read.png`):Alphabet 主屏示意。顶部进度链含返回按钮、`a-z Alphabet` 当前高亮、5 个 Sound Group 节点与 Syllable Practice 节点;正文为 Aa/Bb/Cc/Dd 字母网格,每字母下 3 张课程卡,卡片下方显示 Lesson name。
-- **img-02**(`images/img-02.png`):顶部进度链局部。`satph` Sound Group 节点被黄色描边高亮,下方黄色标签显示 `Sound group`;左右分别连接 `a-z` 和后续字母组节点。
-- **img-03**(`images/img-03.png`):Alphabet 屏另一版布局示意。顶部 `a-z Alphabet` 高亮,每行展示两个字母组(Aa/Bb、Cc/Dd),每个字母 3 张课程卡,用于确认每屏 4 字母可见。
+- **img-02**(`images/img-02.webp`):顶部进度链局部。`satph` Sound Group 节点被黄色描边高亮,下方黄色标签显示 `Sound group`;左右分别连接 `a-z` 和后续字母组节点。
+- **img-03**(`images/img-03.webp`):Alphabet 屏另一版布局示意。顶部 `a-z Alphabet` 高亮,每行展示两个字母组(Aa/Bb、Cc/Dd),每个字母 3 张课程卡,用于确认每屏 4 字母可见。
 - **img-04**(`images/img-04.read.png`):Sound Group 屏。顶部 Sound Group 节点高亮;正文按行展示 Learn the Letters / Trace the Letters 等步骤,每行内课程卡横向滚动,右侧可见下一张半露出的卡片。
 - **img-05**(`images/img-05.read.png`):Syllable Practice 屏。顶部粉色拍手节点高亮并标注 `Syllable Practice`;正文按 Animals / Food 等主题分行,每行横向滚动展示活动卡。

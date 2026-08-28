@@ -1,0 +1,54 @@
+{
+  "title": "新增游戏模板单词展示模式字段配置",
+  "doc_id": "N0BvdiZjGoKxAWx2e6Hl8hDqg2b",
+  "wiki_token": "PyLxwsopqiTxWOkgfwBltEpcggd",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/PyLxwsopqiTxWOkgfwBltEpcggd",
+  "fetched_at": "2026-08-24T23:24:03.830819+08:00",
+  "version": "V1.37.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1742,
+  "blocks": 186,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 60550,
+      "dims": [
+        1242,
+        1373
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 200521,
+        "md5": "ab678071fed575d44b79579d6e555a7e",
+        "dims": [
+          1242,
+          1373
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 59270,
+      "dims": [
+        1782,
+        1301
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 221596,
+        "md5": "60bb4a190d753d44599f01eb36d12538",
+        "dims": [
+          1782,
+          1301
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 4
+}

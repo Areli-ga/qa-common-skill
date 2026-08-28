@@ -1,0 +1,96 @@
+埋点：APP 新用户流程使用动机采集 
+需求
+
+
+事件名称
+
+触发时机
+
+参数
+
+完成情况
+
+测试情况
+
+$AppViewScreen
+
+进入【动机填写】页面
+
+$title = app_motivation_show
+
+ 
+
+ 
+
+app_motivation_submit_success
+
+点「下一步」提交
+
+motivations（用户提交的动机选项）：
+Speak English confidently
+Learn English step by step
+Get ready for primary school
+Make screen time count
+Boost school grades
+Prepare for future work
+Play games & clear levels
+Read picture books
+Sing along to songs
+Watch cartoons
+Chat with an AI buddy
+
+ 
+
+ 
+
+app_usage_mode_select
+
+点击提交【学习方式】选项
+
+usage_mode（用户提交【学习方式】选项）
+accompanied（家长陪孩子一起学）
+solo（孩子单独使用）
+
+
+
+
+用户属性（神策 profile_set）
+
+
+属性名
+
+说明
+
+motivation_list
+
+所选动机
+
+补充上报内容:
+家长陪伴 userRole = "1"
+
+孩子独立 userRole = "2"
+
+
+埋点测试
+app_page_view
+app_motivation_show
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838916217222341']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838916217222341']不满足数量限制","code":400,"record":{"time":1786950177403,"type":"track","distinct_id":"838916217222341","anonymous_id":"a82a23af9380a465","identities":{"$identity_android_id":"a82a23af9380a465","$identity_login_id":"838916217222341","$identity_anonymous_id":"a82a23af9380a465"},"event":"app_page_view","login_id":"838916217222341","lib":{"$lib_method":"code","$lib":"Android","$lib_version":"6.9.3","$app_version":"1.37.0","$lib_detail":"com.sensorsdata.analytics.android.sdk.core.event.imp.TrackEventAssemble##appendLibProperty##null##233"},"properties":{"CurrentAppPackageVersion":"1.37.0_20260816193818","Language":"zh","abtest":"newmap","previous_page":"WelcomePage","abtestnewuser128":"old128","CurrentAppResVersion":"1.37.0","child_age":"4","isQA":"true","time_zone":"UTC+8","timestamp":"1786950177","motivation_group":"experiment","channel":"website","learning_language":"en","page_name":"app_motivation_show","child_name":"新增孩子","onboarding_group":"experiment","page_title":"app_motivation_show","child_id":"838916217251013","userId":"838916217222341","kidId":"838916217251013","kidName":"新增孩子","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$is_channel_callback_event":false,"$channel_device_info":"1","$lib_method":"code","$is_first_day":false,"$os":"HarmonyOS","$os_version":"4.0.0","$lib":"Android","$lib_version":"6.9.3","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.37.0","$screen_width":1080,"$screen_height":2376,"$timezone_offset":-480,"$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.37.0","app_build":1800,"platform":"Android","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","$referrer_title":"Giggle Academy","$device_id":"a82a23af9380a465"},"_flush_time":1786950178108}}
+
+app_usage_mode_select
+家长陪伴
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制","code":400,"record":{"time":1786949573253,"type":"track","distinct_id":"838914162656453","anonymous_id":"a82a23af9380a465","identities":{"$identity_android_id":"a82a23af9380a465","$identity_login_id":"838914162656453","$identity_anonymous_id":"a82a23af9380a465"},"event":"app_usage_mode_select","login_id":"838914162656453","lib":{"$lib_method":"code","$lib":"Android","$lib_version":"6.9.3","$app_version":"1.37.0","$lib_detail":"com.sensorsdata.analytics.android.sdk.core.event.imp.TrackEventAssemble##appendLibProperty##null##233"},"properties":{"CurrentAppPackageVersion":"1.37.0_20260816193818","usage_mode":"accompanied","Language":"zh","abtestnewuser128":"old128","CurrentAppResVersion":"1.37.0","child_age":"0","isQA":"true","time_zone":"UTC+8","channel":"website","child_name":"新增孩子","child_id":"838914162676933","userId":"838914162656453","kidId":"838914162676933","kidName":"新增孩子","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$is_channel_callback_event":false,"$channel_device_info":"1","$lib_method":"code","$is_first_day":false,"$os":"HarmonyOS","$os_version":"4.0.0","$lib":"Android","$lib_version":"6.9.3","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.37.0","$screen_width":1080,"$screen_height":2376,"$timezone_offset":-480,"$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.37.0","app_build":1800,"platform":"Android","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","$referrer_title":"Giggle Academy","$device_id":"a82a23af9380a465"},"_flush_time":1786949573266}}
+独立学习
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制","code":400,"record":{"time":1786949701174,"type":"track","distinct_id":"838914162656453","anonymous_id":"a82a23af9380a465","identities":{"$identity_android_id":"a82a23af9380a465","$identity_login_id":"838914162656453","$identity_anonymous_id":"a82a23af9380a465"},"event":"app_usage_mode_select","login_id":"838914162656453","lib":{"$lib_method":"code","$lib":"Android","$lib_version":"6.9.3","$app_version":"1.37.0","$lib_detail":"com.sensorsdata.analytics.android.sdk.core.event.imp.TrackEventAssemble##appendLibProperty##null##233"},"properties":{"CurrentAppPackageVersion":"1.37.0_20260816193818","usage_mode":"solo","Language":"zh","abtestnewuser128":"old128","CurrentAppResVersion":"1.37.0","child_age":"0","isQA":"true","time_zone":"UTC+8","channel":"website","child_name":"新增孩子","child_id":"838914162676933","userId":"838914162656453","kidId":"838914162676933","kidName":"新增孩子","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$is_channel_callback_event":false,"$channel_device_info":"1","$lib_method":"code","$is_first_day":false,"$os":"HarmonyOS","$os_version":"4.0.0","$lib":"Android","$lib_version":"6.9.3","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.37.0","$screen_width":1080,"$screen_height":2376,"$timezone_offset":-480,"$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.37.0","app_build":1800,"platform":"Android","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","$referrer_title":"Giggle Academy","$device_id":"a82a23af9380a465"},"_flush_time":1786949701185}}
+
+app_motivation_submit_success
+家长陪伴
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838916217222341']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838916217222341']不满足数量限制","code":400,"record":{"time":1786950572928,"type":"track","distinct_id":"838916217222341","anonymous_id":"a82a23af9380a465","identities":{"$identity_android_id":"a82a23af9380a465","$identity_login_id":"838916217222341","$identity_anonymous_id":"a82a23af9380a465"},"event":"app_motivation_submit_success","login_id":"838916217222341","lib":{"$lib_method":"code","$lib":"Android","$lib_version":"6.9.3","$app_version":"1.37.0","$lib_detail":"com.sensorsdata.analytics.android.sdk.core.event.imp.TrackEventAssemble##appendLibProperty##null##233"},"properties":{"CurrentAppPackageVersion":"1.37.0_20260816193818","Language":"zh","abtestnewuser128":"old128","CurrentAppResVersion":"1.37.0","child_age":"3","isQA":"true","time_zone":"UTC+8","motivation_group":"experiment","motivations":"option_step_by_step,option_future_work","channel":"website","learning_language":"en","child_name":"新增孩子","onboarding_group":"experiment","child_id":"838916217251013","userId":"838916217222341","kidId":"838916217251013","kidName":"新增孩子","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$is_channel_callback_event":false,"$channel_device_info":"1","$lib_method":"code","$is_first_day":false,"$os":"HarmonyOS","$os_version":"4.0.0","$lib":"Android","$lib_version":"6.9.3","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.37.0","$screen_width":1080,"$screen_height":2376,"$timezone_offset":-480,"$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.37.0","app_build":1800,"platform":"Android","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","$referrer_title":"Giggle Academy","$device_id":"a82a23af9380a465"},"_flush_time":1786950573015}}
+
+
+独立学习
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+838914162656453']不满足数量限制","code":400,"record":{"time":1786949750745,"type":"track","distinct_id":"838914162656453","anonymous_id":"a82a23af9380a465","identities":{"$identity_android_id":"a82a23af9380a465","$identity_login_id":"838914162656453","$identity_anonymous_id":"a82a23af9380a465"},"event":"app_motivation_submit_success","login_id":"838914162656453","lib":{"$lib_method":"code","$lib":"Android","$lib_version":"6.9.3","$app_version":"1.37.0","$lib_detail":"com.sensorsdata.analytics.android.sdk.core.event.imp.TrackEventAssemble##appendLibProperty##null##233"},"properties":{"CurrentAppPackageVersion":"1.37.0_20260816193818","Language":"zh","abtestnewuser128":"old128","CurrentAppResVersion":"1.37.0","child_age":"0","isQA":"true","time_zone":"UTC+8","motivation_group":"experiment","motivations":"option_sing_songs","channel":"website","learning_language":"en","child_name":"新增孩子","onboarding_group":"experiment","child_id":"838914162676933","userId":"838914162656453","kidId":"838914162676933","kidName":"新增孩子","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$is_channel_callback_event":false,"$channel_device_info":"1","$lib_method":"code","$is_first_day":false,"$os":"HarmonyOS","$os_version":"4.0.0","$lib":"Android","$lib_version":"6.9.3","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.37.0","$screen_width":1080,"$screen_height":2376,"$timezone_offset":-480,"$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.37.0","app_build":1800,"platform":"Android","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","$referrer_title":"Giggle Academy","$device_id":"a82a23af9380a465"},"_flush_time":1786949750905}}

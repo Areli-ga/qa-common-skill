@@ -1,0 +1,75 @@
+{
+  "title": "排行榜细节优化",
+  "doc_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+  "wiki_token": "Z66xwGue4izv1FkcNJdl3lnag66",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Z66xwGue4izv1FkcNJdl3lnag66",
+  "fetched_at": "2026-08-11T10:19:57.276239+08:00",
+  "version": "V1.35.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1688,
+  "blocks": 87,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 41300,
+      "dims": [
+        1776,
+        1000
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 692945,
+        "md5": "c4303bfe1ca65eb6ec7b501e6b40c315",
+        "dims": [
+          1776,
+          1000
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 42578,
+      "dims": [
+        2168,
+        998
+      ],
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 310231,
+        "md5": "26c4d8bba9c245b9a9164ea758f80b83",
+        "dims": [
+          2168,
+          998
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 85444,
+      "dims": [
+        2664,
+        1500
+      ],
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 1426164,
+        "md5": "52719da9d6922732c51ba6e575b7d85d",
+        "dims": [
+          2664,
+          1500
+        ]
+      }
+    }
+  ],
+  "image_count": 3,
+  "tables": 1
+}

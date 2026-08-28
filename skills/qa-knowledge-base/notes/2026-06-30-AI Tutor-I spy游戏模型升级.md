@@ -2,7 +2,7 @@
 标题: I spy - at home 游戏模型升级
 模块: AI Tutor / I spy游戏
 版本: V1.31.0
-related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-07-13-AI Tutor-学习场景屏幕常亮.md]
+related: []
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/UFbtwfVfgiGBmwkNaUvliKqagBh
 日期: 2026-06-30
 ---
@@ -42,4 +42,4 @@ V1.31.0 把「I spy - at home」AI 找物游戏迁移到新 AI tutor 技术方�
 
 > 存于 `../raw/I-spy---at-home-游戏模型升级/images/`。Figma + 多个 Demo(Mai/svg-morph/voice-tutor)见原文档。
 
-- **img-01**(`images/img-01.png`):**I spy at home 游戏场景**。房子剖面(多房间:卧室/厨房/客厅/浴室等,藏有可找物品),底部 Max 角色,左上返回、右上退出 X、右下绿色麦克风/发送按钮。
+- **img-01**(`images/img-01.webp`):**I spy at home 游戏场景**。房子剖面(多房间:卧室/厨房/客厅/浴室等,藏有可找物品),底部 Max 角色,左上返回、右上退出 X、右下绿色麦克风/发送按钮。

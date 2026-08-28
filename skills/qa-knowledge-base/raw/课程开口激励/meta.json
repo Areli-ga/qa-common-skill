@@ -1,0 +1,55 @@
+{
+  "title": "课程开口激励 ",
+  "doc_id": "XBJndeOQYos0i1xVOQ8loBV0g4c",
+  "wiki_token": "A9wTwcldni2xaGkZO6ul8GNJgrf",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/A9wTwcldni2xaGkZO6ul8GNJgrf",
+  "fetched_at": "2026-08-11T16:27:33.878335+08:00",
+  "version": "V1.36.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 914,
+  "blocks": 50,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 14998,
+      "dims": [
+        550,
+        404
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 47015,
+        "md5": "46305f5f3e0060d6a8d6a039159c923c",
+        "dims": [
+          550,
+          404
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 93224,
+      "dims": [
+        5375,
+        846
+      ],
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 774261,
+        "md5": "543e92c5420eacf7c45fcf82468c70fd",
+        "dims": [
+          5375,
+          846
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 2
+}

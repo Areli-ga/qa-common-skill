@@ -1,0 +1,114 @@
+{
+  "title": "App 内新增「调研问卷」功能",
+  "doc_id": "CTbfdie2qos9iNxJtn5lmcHYgHh",
+  "wiki_token": "SeYDw4cCGiOYKJkSjuwlt2xPgmh",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/SeYDw4cCGiOYKJkSjuwlt2xPgmh",
+  "fetched_at": "2026-08-24T22:11:51.028266+08:00",
+  "version": "V1.37.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 4173,
+  "blocks": 260,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 58122,
+      "dims": [
+        2622,
+        1206
+      ],
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 470147,
+        "md5": "459aacc99a06d61e2792bc190dc6e9c9",
+        "dims": [
+          2622,
+          1206
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 44492,
+      "dims": [
+        2622,
+        1206
+      ],
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 347567,
+        "md5": "a1b1021363172858a8fb3ac725c9dac9",
+        "dims": [
+          2622,
+          1206
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 23406,
+      "dims": [
+        840,
+        658
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 1661581,
+        "md5": "7048de8345361f10992ab7cd29403fb0",
+        "dims": [
+          840,
+          658
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 22868,
+      "dims": [
+        660,
+        648
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 1285839,
+        "md5": "1995d4a1176d31f79d7dd22acef0a9de",
+        "dims": [
+          660,
+          648
+        ]
+      }
+    }
+  ],
+  "image_count": 4,
+  "tables": 6,
+  "embedded_sheets": [
+    {
+      "block_token": "S5KcszXVyhhNELtfqvqlNrcvgzb_zDssx5",
+      "rows_non_empty": 6
+    },
+    {
+      "block_token": "S5KcszXVyhhNELtfqvqlNrcvgzb_obTn8P",
+      "rows_non_empty": 4
+    },
+    {
+      "block_token": "S5KcszXVyhhNELtfqvqlNrcvgzb_TjtgtL",
+      "rows_non_empty": 5
+    },
+    {
+      "block_token": "S5KcszXVyhhNELtfqvqlNrcvgzb_d7baHz",
+      "rows_non_empty": 6
+    }
+  ],
+  "embedded_sheets_file": "sheets.json",
+  "note": "tables 仅统计正文表格(block_type=31);内嵌 Sheet(block_type=30) 见 sheets.json"
+}

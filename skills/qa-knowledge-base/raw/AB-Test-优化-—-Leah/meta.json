@@ -12,42 +12,82 @@
   "images": [
     {
       "index": 1,
-      "file": "images/img-01.png",
-      "bytes": 609017,
+      "file": "images/img-01.webp",
+      "bytes": 96480,
       "dims": [
         2940,
         1604
       ],
-      "read_file": "images/img-01.read.png"
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 609017,
+        "md5": "531782c841e34bb10f488c6dd9e9b869",
+        "dims": [
+          2940,
+          1604
+        ]
+      }
     },
     {
       "index": 2,
-      "file": "images/img-02.png",
-      "bytes": 425378,
+      "file": "images/img-02.webp",
+      "bytes": 123832,
       "dims": [
         2074,
         1510
       ],
-      "read_file": "images/img-02.read.png"
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 425378,
+        "md5": "a214b05c0cfcbbce5fc684149d5bc0c4",
+        "dims": [
+          2074,
+          1510
+        ]
+      }
     },
     {
       "index": 3,
-      "file": "images/img-03.png",
-      "bytes": 334126,
+      "file": "images/img-03.webp",
+      "bytes": 76316,
       "dims": [
         2928,
         1594
       ],
-      "read_file": "images/img-03.read.png"
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 334126,
+        "md5": "ba414388a3a1524c0e9f6301511d539c",
+        "dims": [
+          2928,
+          1594
+        ]
+      }
     },
     {
       "index": 4,
-      "file": "images/img-04.png",
-      "bytes": 285461,
+      "file": "images/img-04.webp",
+      "bytes": 90454,
       "dims": [
         1512,
         1540
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 285461,
+        "md5": "ab6390aaa384ba60432eee8599cba8f9",
+        "dims": [
+          1512,
+          1540
+        ]
+      }
     }
   ],
   "image_count": 4,

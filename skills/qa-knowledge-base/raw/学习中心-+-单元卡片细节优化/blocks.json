@@ -1,0 +1,801 @@
+[
+  {
+    "block_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "block_type": 1,
+    "children": [
+      "PVt9dTO4nogMBhxoRPjlEMK9gKc",
+      "SJB9dyVido2Bhjx2Jh7luHlXg5b",
+      "V1fFd1SMGoovU9xPfmGlNYqqgge",
+      "ZQxydqDkDo8D8rx5Y1yleSG5gLe",
+      "T19edFHTQoC6bAxQK7blU4dkgld",
+      "VyOndeSrxo6scMxB5HQllij0gBg",
+      "NUehdlVk4oN2CYxOkuOlwEnpgzf",
+      "B1ySdJ1luocPCrx1HOjlRutjgyP",
+      "IFZMdTAiFoUo5Ux8F6FlWFndghb",
+      "Wqzad561moUob1xU7EVljBp8gcf",
+      "J4EudbrVoo8rS6xAbKyltSZbgGd",
+      "JnFcdyJKMojZUAxsFB4lnEMlgxb",
+      "O4Xhd5xgxoSVnJxCxD3llGMqgse",
+      "E9GqdP9oTo11QOxzjOilsmoGgCf",
+      "YcmWdMkMfoxj9AxO6EDlvkCWg3b",
+      "OnNjdCnaZoyrjjxVFnbloGqJgFN",
+      "P3jGdX0EXoKKgaxXzyQlSuNbg1g",
+      "KGVFdFp2PoDR8xx0y1UlRkzvgRm"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "学习中心 + 单元卡片细节优化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "PVt9dTO4nogMBhxoRPjlEMK9gKc",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "SJB9dyVido2Bhjx2Jh7luHlXg5b",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户留存提升后，更多人学到更高的级别，发现单元卡片点击后无反应，因此需要增加。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "V1fFd1SMGoovU9xPfmGlNYqqgge",
+    "block_type": 43,
+    "board": {
+      "token": "XMMswWuCVhLlW9bq91Blan53gTe"
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "ZQxydqDkDo8D8rx5Y1yleSG5gLe",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求详情",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "T19edFHTQoC6bAxQK7blU4dkgld",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Unit 卡片L2～L9支持",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "VyOndeSrxo6scMxB5HQllij0gBg",
+    "block_type": 31,
+    "children": [
+      "GQ4WdXi7UovkMixlVuwlmiMrgdg",
+      "O25CdKLpjoZLjaxYL69lAr08g8g"
+    ],
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "table": {
+      "cells": [
+        "GQ4WdXi7UovkMixlVuwlmiMrgdg",
+        "O25CdKLpjoZLjaxYL69lAr08g8g"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          350,
+          350
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 1
+      }
+    }
+  },
+  {
+    "block_id": "GQ4WdXi7UovkMixlVuwlmiMrgdg",
+    "block_type": 32,
+    "children": [
+      "F8AQdqAkbonEsWxhOPJlJA0UgOe",
+      "McWudj5i2oQEzAxE2vZlcNY4gbg",
+      "OwxPdondYomsnFxcEOPl7DcxgVh"
+    ],
+    "parent_id": "VyOndeSrxo6scMxB5HQllij0gBg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "F8AQdqAkbonEsWxhOPJlJA0UgOe",
+    "block_type": 2,
+    "parent_id": "GQ4WdXi7UovkMixlVuwlmiMrgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击单元卡片",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "McWudj5i2oQEzAxE2vZlcNY4gbg",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 513,
+      "scale": 1,
+      "token": "YYs9b3irVolNgqx3YnblarbzgIe",
+      "width": 1056
+    },
+    "parent_id": "GQ4WdXi7UovkMixlVuwlmiMrgdg"
+  },
+  {
+    "block_id": "OwxPdondYomsnFxcEOPl7DcxgVh",
+    "block_type": 2,
+    "parent_id": "GQ4WdXi7UovkMixlVuwlmiMrgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "O25CdKLpjoZLjaxYL69lAr08g8g",
+    "block_type": 32,
+    "children": [
+      "AmYfdkY0eoMCmyx0ELHlTpjdgZb",
+      "ZJDcd64rEowNdRxazGOlzxYigre",
+      "DPR9d00A7oQ5iCxAHsaltRFxgwd",
+      "Kex9dpbMCoo6SVxfSPZlj4UvgNb",
+      "Q8Vwdkh55oSoElxoa82lggyRgbd",
+      "U0lfd69tSoWOlMxyJ1OliT82gAF",
+      "D4WpdhcEiouwJnxwpVxlt2vHgBd",
+      "Wm5RdmCJfoIzCtxRFBolt7ZCgAf",
+      "OAVHdTAmXo72QYxd7rPlxPfsgWg"
+    ],
+    "parent_id": "VyOndeSrxo6scMxB5HQllij0gBg",
+    "table_cell": {}
+  },
+  {
+    "block_id": "AmYfdkY0eoMCmyx0ELHlTpjdgZb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "线上Lv2 起单元 的 Unit 卡片增加介绍卡。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "ZJDcd64rEowNdRxazGOlzxYigre",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "展示信息：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "DPR9d00A7oQ5iCxAHsaltRFxgwd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Unit名称：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "后台配置",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "Kex9dpbMCoo6SVxfSPZlj4UvgNb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "标签：原本线上是写死，本期修改为可配置，在 unit 配置下增加一个标签：unit tags",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "Q8Vwdkh55oSoElxoa82lggyRgbd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1556,
+      "scale": 1,
+      "token": "W1LlblYzqo5IINxKIq4lvNoGgrE",
+      "width": 1798
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "U0lfd69tSoWOlMxyJ1OliT82gAF",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "介绍：目前在后台配置",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "D4WpdhcEiouwJnxwpVxlt2vHgBd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1602,
+      "scale": 1,
+      "token": "IIBtb07Fzol2KVxCRYWlV2y7ghT",
+      "width": 2940
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "Wm5RdmCJfoIzCtxRFBolt7ZCgAf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "核心单词：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "取本 Unit 的核心单词，点击播放按钮可播放音频",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "OAVHdTAmXo72QYxd7rPlxPfsgWg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "关闭按钮：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "点击后，回到首页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "O25CdKLpjoZLjaxYL69lAr08g8g"
+  },
+  {
+    "block_id": "NUehdlVk4oN2CYxOkuOlwEnpgzf",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "标签不同级别",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B1ySdJ1luocPCrx1HOjlRutjgyP",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV1        颜色·五官·玩具·家庭        Pre A1, Listening, Speaking",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IFZMdTAiFoUo5Ux8F6FlWFndghb",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV2        宠物·家庭成员·交通工具        Pre A1, Speaking, Vocabulary",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Wqzad561moUob1xU7EVljBp8gcf",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV3        天气·海洋生物·交通工具        Pre A1, Speaking, Storytelling",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J4EudbrVoo8rS6xAbKyltSZbgGd",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV4        动物·食物·职业        Pre A1, Speaking, Free Talk",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JnFcdyJKMojZUAxsFB4lnEMlgxb",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV5        词汇巩固+核心句型整合        Pre A1, Speaking, Sentence Patterns",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "O4Xhd5xgxoSVnJxCxD3llGMqgse",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV6        字母音形第一组(s·a·t·p·h)        Pre A1, Phonics",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "E9GqdP9oTo11QOxzjOilsmoGgCf",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV7        字母音形第二组(c·r·i·m·n)        Pre A1, Phonics, Reading",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YcmWdMkMfoxj9AxO6EDlvkCWg3b",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "LV8        字母音形第三组(d·e·l·k·f)        Pre A1, Phonics, Reading",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OnNjdCnaZoyrjjxVFnbloGqJgFN",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "学习中心的单词卡下掉旧学习路径入口",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "P3jGdX0EXoKKgaxXzyQlSuNbg1g",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1206,
+      "scale": 1,
+      "token": "KYwfbJEBfoucr1xMsEEl2UaWgdg",
+      "width": 2622
+    },
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc"
+  },
+  {
+    "block_id": "KGVFdFp2PoDR8xx0y1UlRkzvgRm",
+    "block_type": 2,
+    "parent_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

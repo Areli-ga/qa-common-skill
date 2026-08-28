@@ -1,0 +1,535 @@
+[
+  {
+    "block_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "block_type": 1,
+    "children": [
+      "W7Ctd6rFFo1fXlx70j5l6jbngmD",
+      "KRS2dut3VoLKF4xpHStlZ9WdgCh",
+      "H3E8d9NQkoDZhpxDotol9N79gWd",
+      "J5pPdV014ogIqrxK6a8lIPfzgEd",
+      "PbLndj8iWoA9lOxlHnDlWLBZgIb",
+      "NKigdq5dCobydKxt1rplrvkFgKh",
+      "S05vdWhoSoiwcexkN9FlZDFlgbf",
+      "MZCfdx6IHo7hC5x88LwlHZx2gAe",
+      "MdaAdy4DWozF10xx6WGlmbcQgrh",
+      "OTvrdUXPuoUA1yxZCoqlbCezgAf",
+      "JaObdvpyPoxAFux2rfWlptlwgLd",
+      "Cm5BdWeQtoWlDzxVhojlsbC5gMc",
+      "CgiWdo0Asoh2uPxYHOLlpb7Cgqf",
+      "IIZfddL8Vo9m2GxFpf7lytjhgFf",
+      "H4KldN5cRoVHuzxD6SuljGutgDc",
+      "VJIdd1EJRoArVbxy1PflrvDDgxc",
+      "EGIadsqSOoWo0ixpNl0lqGBrgog",
+      "Uj26dahf1oe6y4xtzROlaAa6g4d",
+      "YCVxdbpD5ocjaFxwMm7lk32Ngbf",
+      "OcyLdBcmxoU4rvxxasMl1AYQgog"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "竞技场 1.1 PK接真人数据—Leah",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "W7Ctd6rFFo1fXlx70j5l6jbngmD",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "KRS2dut3VoLKF4xpHStlZ9WdgCh",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.35版本上线了真人 PK 机器人，能保证用户匹配到对手，同时记录了用户的答题数据，能实现真人 PK 另一真人的历史数据。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "H3E8d9NQkoDZhpxDotol9N79gWd",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "真人 PK 可以带来更多的真实互动感，甚至可以再互访，点赞等，鼓励用户长期留下。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "J5pPdV014ogIqrxK6a8lIPfzgEd",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PbLndj8iWoA9lOxlHnDlWLBZgIb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "一、真人历史数据处理",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "NKigdq5dCobydKxt1rplrvkFgKh",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S05vdWhoSoiwcexkN9FlZDFlgbf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.35版收集到真人数据，在此版本，把真人得分分成 4 档，具体档位和对应关系如下：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "MZCfdx6IHo7hC5x88LwlHZx2gAe",
+    "block_type": 30,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "sheet": {
+      "token": "KmyBsRWTPhb13ItlO1wlyc7Hgrb_yygIW0"
+    }
+  },
+  {
+    "block_id": "MdaAdy4DWozF10xx6WGlmbcQgrh",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "比例可以不实时计算，基于 1.35 的真人数据划定一个初步分数线，后续用。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OTvrdUXPuoUA1yxZCoqlbCezgAf",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "历史数据使用只用：答对答错，答题时间",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JaObdvpyPoxAFux2rfWlptlwgLd",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Cm5BdWeQtoWlDzxVhojlsbC5gMc",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CgiWdo0Asoh2uPxYHOLlpb7Cgqf",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "二、机器人和真人匹配时规则",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "IIZfddL8Vo9m2GxFpf7lytjhgFf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.36 上线后，用户匹配时，如果分到对手的档位真人记录总数大于 100，随机选择真人 PK；如果对手的档位真人记录总数小于等于 100，匹配机器人。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "H4KldN5cRoVHuzxD6SuljGutgDc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不取本人的历史学习记录！！！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "VJIdd1EJRoArVbxy1PflrvDDgxc",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EGIadsqSOoWo0ixpNl0lqGBrgog",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "三、前端处理配合",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "Uj26dahf1oe6y4xtzROlaAa6g4d",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "中途暂停，要开始计时",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg"
+  },
+  {
+    "block_id": "YCVxdbpD5ocjaFxwMm7lk32Ngbf",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OcyLdBcmxoU4rvxxasMl1AYQgog",
+    "block_type": 2,
+    "parent_id": "NsIWdvIuQoQpFAxHyXRlSCcsgSg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

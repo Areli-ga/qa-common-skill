@@ -1,0 +1,2200 @@
+[
+  {
+    "block_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "block_type": 1,
+    "children": [
+      "S04XdrG7AorVd1xyYhGlm7hbgkd",
+      "FXeTd2nGDo0JyXxEh4hle4HLgkc",
+      "DLQndnLSVo3cFFxKwmwldVUpgEc",
+      "Q599dukiFoJpkFxRHBhlRPmOggd",
+      "OSMVdx4xno4G8sxVTTDl1Z1cgkd",
+      "FuzQdbcxooN2NaxDx4nlv8BQglg",
+      "HZPYdjxCZoTZZ5x7TeslrNIWgSd",
+      "ACtedw8joogGxtx7wHqleMmvgUg",
+      "YXa0d9qSwotHPfxT1eRlVtFzgub",
+      "VpuudNPtAo3giQxddLTlynUjgg7",
+      "Ekr5dzo1coJosxx9a2ilkNQGgof",
+      "KboOdUWpVoebzxxinvdlXHemgQc",
+      "LSfpdlLB1o0zU2xno3vlvVc2gKd"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "排行榜细节优化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "S04XdrG7AorVd1xyYhGlm7hbgkd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "FXeTd2nGDo0JyXxEh4hle4HLgkc",
+    "block_type": 2,
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "感觉如何让用户玩起来有更强的互动感，还要再迭代细节",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DLQndnLSVo3cFFxKwmwldVUpgEc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户达到第一名后，要在主路径触发动效，现在到了第一名，后面又无法连续多次超越，会导致用户无法感知",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "Q599dukiFoJpkFxRHBhlRPmOggd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Push开启引导增加，每日push\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "前10名被超越push",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "OSMVdx4xno4G8sxVTTDl1Z1cgkd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "奖品的强化，跌出奖品分段的强化",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "FuzQdbcxooN2NaxDx4nlv8BQglg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "名字的审核机制？",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "HZPYdjxCZoTZZ5x7TeslrNIWgSd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI 链接：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "ACtedw8joogGxtx7wHqleMmvgUg",
+    "block_type": 2,
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/T06dVs8HNb2LXlkVYovafA/1.35.0?node-id=39064-1932&t=IQvWCnXZFcaKdOz8-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YXa0d9qSwotHPfxT1eRlVtFzgub",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求详情",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "block_type": 31,
+    "children": [
+      "Qdyvdzngeo8iQPx4SOnlyiCQgcb",
+      "TeC3drZaSoNn3gxy028ltcOhgte",
+      "ULjgdu8jhoInY7xYaEvluMDxgCg",
+      "HRtid5ZXFocpbwxwKRXlg3bZgFg",
+      "SWy0dgPvJoZ6ZjxWlXOlGkA9gKb",
+      "GxE1dGPcxoPLhnxIj7dlaEWzgzg",
+      "XMptd7nRPobkW4xI68glWyQ2gkc",
+      "GSVddClCeoDrDnx1Owll078AgJg",
+      "U7andEq1SojZWIxlR3DlYPiugnh",
+      "FGNldODeOoHYzjxBYxYlbFHwgD5",
+      "Ck3bdMFcGo7c70x5dNtlhR6PgBI",
+      "P6Y7dz3UBoJn0px6FXzl8PQCgUh",
+      "ICoqd9t77oahkfxzsk8l9iRog6e",
+      "S0p7d2ZSnozXdoxDtj8l0ViMgTg"
+    ],
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "table": {
+      "cells": [
+        "Qdyvdzngeo8iQPx4SOnlyiCQgcb",
+        "TeC3drZaSoNn3gxy028ltcOhgte",
+        "ULjgdu8jhoInY7xYaEvluMDxgCg",
+        "HRtid5ZXFocpbwxwKRXlg3bZgFg",
+        "SWy0dgPvJoZ6ZjxWlXOlGkA9gKb",
+        "GxE1dGPcxoPLhnxIj7dlaEWzgzg",
+        "XMptd7nRPobkW4xI68glWyQ2gkc",
+        "GSVddClCeoDrDnx1Owll078AgJg",
+        "U7andEq1SojZWIxlR3DlYPiugnh",
+        "FGNldODeOoHYzjxBYxYlbFHwgD5",
+        "Ck3bdMFcGo7c70x5dNtlhR6PgBI",
+        "P6Y7dz3UBoJn0px6FXzl8PQCgUh",
+        "ICoqd9t77oahkfxzsk8l9iRog6e",
+        "S0p7d2ZSnozXdoxDtj8l0ViMgTg"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          351,
+          351
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 7
+      }
+    }
+  },
+  {
+    "block_id": "Qdyvdzngeo8iQPx4SOnlyiCQgcb",
+    "block_type": 32,
+    "children": [
+      "KfSideW6ioFVThxEpRXlCZCfgXf"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KfSideW6ioFVThxEpRXlCZCfgXf",
+    "block_type": 2,
+    "parent_id": "Qdyvdzngeo8iQPx4SOnlyiCQgcb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原型",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TeC3drZaSoNn3gxy028ltcOhgte",
+    "block_type": 32,
+    "children": [
+      "RgindbLUkoCc9jxGscallyMNgGe"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "RgindbLUkoCc9jxGscallyMNgGe",
+    "block_type": 2,
+    "parent_id": "TeC3drZaSoNn3gxy028ltcOhgte",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "block_type": 32,
+    "children": [
+      "DWZFdIW5qotJdvx4omclsjsXgwb",
+      "O498d4VuRoOtXJxrLGslhKNbg6d",
+      "HieYdjgpNo7KCExxJK2lpDJvgFf",
+      "Bj1kdTvxtoK8Y1xSWX8lGNgwgcb",
+      "ZRwwdJgvno2I8hxGG1tlenuTgpf",
+      "WZfddjWisoVhEqxbh5rlDWESgYb",
+      "YyiqdxRnYoWe83xvySalmEC4gqb",
+      "W3rxd1GtPoigXsxPwotlrzKxgih",
+      "HNW0dlHT4oq6sjx9PK4lpKHjgOd",
+      "B3O9dNDK7oj59xxxG1alWHSEgMe"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "DWZFdIW5qotJdvx4omclsjsXgwb",
+    "block_type": 2,
+    "comment_ids": [
+      "7659774990446776040"
+    ],
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "触发逻辑修改",
+            "text_element_style": {
+              "bold": true,
+              "comment_ids": [
+                "7659774990446776040"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "O498d4VuRoOtXJxrLGslhKNbg6d",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "新用户首日",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HieYdjgpNo7KCExxJK2lpDJvgFf",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每次完成主路径关卡后，判断当前排名——",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Bj1kdTvxtoK8Y1xSWX8lGNgwgcb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户排名在前 5 名 → 触发排行榜曝光（含动效 ）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg"
+  },
+  {
+    "block_id": "ZRwwdJgvno2I8hxGG1tlenuTgpf",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "排名在 5 名以后→ 不触发",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg"
+  },
+  {
+    "block_id": "WZfddjWisoVhEqxbh5rlDWESgYb",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首日无论完课多少次，只要一次都没进 Top 5，就整天不主动曝光\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "首次触发后，再次触发，还是按照原有的间隔 1 次超越，2 次超越逐次递增规则。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YyiqdxRnYoWe83xvySalmEC4gqb",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首次触发后掉下前 5 名，再次超越其他人，无论是否进到前 5，都曝光。、",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W3rxd1GtPoigXsxPwotlrzKxgih",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首日定义：UTC + 8 的自然日",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HNW0dlHT4oq6sjx9PK4lpKHjgOd",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册次日起（含所有老用户）",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B3O9dNDK7oj59xxxG1alWHSEgMe",
+    "block_type": 2,
+    "parent_id": "ULjgdu8jhoInY7xYaEvluMDxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "完全按现有通用规则触发。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HRtid5ZXFocpbwxwKRXlg3bZgFg",
+    "block_type": 32,
+    "children": [
+      "IsxDd8WQ9o4WuwxdEBzlbrWjgvc"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IsxDd8WQ9o4WuwxdEBzlbrWjgvc",
+    "block_type": 2,
+    "parent_id": "HRtid5ZXFocpbwxwKRXlg3bZgFg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SWy0dgPvJoZ6ZjxWlXOlGkA9gKb",
+    "block_type": 32,
+    "children": [
+      "ZOqBduWq2oncC6x84XblNvWLgsb"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ZOqBduWq2oncC6x84XblNvWLgsb",
+    "block_type": 2,
+    "parent_id": "SWy0dgPvJoZ6ZjxWlXOlGkA9gKb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GxE1dGPcxoPLhnxIj7dlaEWzgzg",
+    "block_type": 32,
+    "children": [
+      "EmCPdtO2doVaOxxg8h9liw6GgEQ",
+      "L4v3do3L2of91gxzNdWl8rQogYQ"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "EmCPdtO2doVaOxxg8h9liw6GgEQ",
+    "block_type": 2,
+    "parent_id": "GxE1dGPcxoPLhnxIj7dlaEWzgzg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "背景修改",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "L4v3do3L2of91gxzNdWl8rQogYQ",
+    "block_type": 2,
+    "parent_id": "GxE1dGPcxoPLhnxIj7dlaEWzgzg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XMptd7nRPobkW4xI68glWyQ2gkc",
+    "block_type": 32,
+    "children": [
+      "GEC1dVbn2oGyPexrHuLlHMWVgmf",
+      "Ma0BdILtNowYv0x9PEblRPVMgze"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "GEC1dVbn2oGyPexrHuLlHMWVgmf",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1000,
+      "scale": 1,
+      "token": "NfipbNAaFojVwQxB0MCls4omg9F",
+      "width": 1776
+    },
+    "parent_id": "XMptd7nRPobkW4xI68glWyQ2gkc"
+  },
+  {
+    "block_id": "Ma0BdILtNowYv0x9PEblRPVMgze",
+    "block_type": 2,
+    "parent_id": "XMptd7nRPobkW4xI68glWyQ2gkc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "block_type": 32,
+    "children": [
+      "DUURdgwmxofiUxxlksilgwYlgac",
+      "SEJjd4JRyoQoq4xP1qIlOvYrgVh",
+      "SyUhd3PdhoTJwCxU21MlUONqg2g",
+      "KVObdwubGo1T3gxkNdOl9PEQgVh",
+      "ZUjxdtCP5or8PBxFILelvg7Dgtb",
+      "TtobdSSBuo2IXuxnzv3l2Tq7g4b",
+      "THvUdKgO2oIHccxx2EilxYFwgIQ",
+      "ZvQFd6ZuvoDRKtxQ4yzlTAxygWc",
+      "IeEfdK0JBoENiHxnZSrl5PHogzh",
+      "HGFRdOWRpop2YfxDfbelkemCgTh",
+      "ZtdEd7ScEo7OspxP8CIlxgRvgd0",
+      "RLQOd7EAuohS7YxDZjklYip7gLd"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "DUURdgwmxofiUxxlksilgwYlgac",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "第一名动效优化",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SEJjd4JRyoQoq4xP1qIlOvYrgVh",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "因为现在主路径触发动效间隔越来越久，有时候在达到第一名时是无感的，骄傲自豪感被大幅降低！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SyUhd3PdhoTJwCxU21MlUONqg2g",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KVObdwubGo1T3gxkNdOl9PEQgVh",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "触发逻辑：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "1. 完课后判断用户当前名次：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZUjxdtCP5or8PBxFILelvg7Dgtb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "是第 1 名 → 触发本动效（有排名变动，从其他名次上升到第1名，展示动效；一直在第一名，不展示）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "TtobdSSBuo2IXuxnzv3l2Tq7g4b",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不是第 1 名但本次完课触发了超越 → 走原超越动效",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "THvUdKgO2oIHccxx2EilxYFwgIQ",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "都不是 → 无动效",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "ZvQFd6ZuvoDRKtxQ4yzlTAxygWc",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "动效内容：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IeEfdK0JBoENiHxnZSrl5PHogzh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原顶部文案Top learners修改为：You're on top!",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "HGFRdOWRpop2YfxDfbelkemCgTh",
+    "block_type": 2,
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "历史规则兼容",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZtdEd7ScEo7OspxP8CIlxgRvgd0",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户当次完课同时满足\"超越他人\"和\"成为第 1 名\" → 只播第 1 名动效，不播超越动效（优先级：第 1 名 > 超越 > 无）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "RLQOd7EAuohS7YxDZjklYip7gLd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户跌出第 1 名后被他人超越，又重新冲到第 1 名 → 重新触发本动效",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GSVddClCeoDrDnx1Owll078AgJg"
+  },
+  {
+    "block_id": "U7andEq1SojZWIxlR3DlYPiugnh",
+    "block_type": 32,
+    "children": [
+      "Qa9Td6smsoPzbDxTM9glPHQkgge",
+      "ZxQsd8eiyoD7KNx6wUSlWIaLgEe"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Qa9Td6smsoPzbDxTM9glPHQkgge",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 998,
+      "scale": 1,
+      "token": "DnfMbwxxvoAdtlxC16plxayogXg",
+      "width": 2168
+    },
+    "parent_id": "U7andEq1SojZWIxlR3DlYPiugnh"
+  },
+  {
+    "block_id": "ZxQsd8eiyoD7KNx6wUSlWIaLgEe",
+    "block_type": 2,
+    "parent_id": "U7andEq1SojZWIxlR3DlYPiugnh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "block_type": 32,
+    "children": [
+      "FTDodgeBVovjjVxqFvYl6xPggYd",
+      "Dp2eduLVQoschqxJkmLlJSjUgAd",
+      "RKtBdzuhUoCVrUxnpgrlYXOMg0b",
+      "W0ODdPvqHoKeRIxw1zNlUWJ2g5d",
+      "VqqldrbeboBwM5xXsbOlRkymgzb",
+      "JvHrdL4TBoQ8Wqx8Dhql9Q5Cgze",
+      "HKhFdvNHWoOClxxEv3Vl222Lgeh",
+      "FdIgdDVlXo0o4IxcsKflgdO6gDf",
+      "MgI2dPjHGoOjlNxQ0OGls5fugvh",
+      "H1TCd6orbolfZlxDpgNlnDmOg3b",
+      "IXr2dFokqowUYUx3Us4ld2dHgIg",
+      "ONS4d1DLQo9d0Xxp20pl9FJrglg",
+      "IFAxdXpvcoNZRJxQFmFlo03KgFc",
+      "JZEJdppE7ooPgqxr0krlrryTgle"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "FTDodgeBVovjjVxqFvYl6xPggYd",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Push 开启引导弹窗",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Dp2eduLVQoschqxJkmLlJSjUgAd",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "用户离开app后可能对排行榜的感知变弱，希望能吸引用户注意。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RKtBdzuhUoCVrUxnpgrlYXOMg0b",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W0ODdPvqHoKeRIxw1zNlUWJ2g5d",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "触发逻辑：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VqqldrbeboBwM5xXsbOlRkymgzb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户在排行榜页面点「退出 」按钮时拦截，弹本弹窗，已开 push 的用户跳过（不弹）。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5"
+  },
+  {
+    "block_id": "JvHrdL4TBoQ8Wqx8Dhql9Q5Cgze",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户每自然周最多弹 1 次（避免反复打扰）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5"
+  },
+  {
+    "block_id": "HKhFdvNHWoOClxxEv3Vl222Lgeh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "弹窗文案：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5"
+  },
+  {
+    "block_id": "FdIgdDVlXo0o4IxcsKflgdO6gDf",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "标题：Get notified about rank changes \n副标题：We'll alert you when you're passed — protect your rewards \n主按钮：Allow notifications \n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "次按钮：Not now",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MgI2dPjHGoOjlNxQ0OGls5fugvh",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "H1TCd6orbolfZlxDpgNlnDmOg3b",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Push 文案",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IXr2dFokqowUYUx3Us4ld2dHgIg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "被超越场景触发，每天发1次：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "title：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5"
+  },
+  {
+    "block_id": "ONS4d1DLQo9d0Xxp20pl9FJrglg",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "刚才，咯咯学员超过了你 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IFAxdXpvcoNZRJxQFmFlo03KgFc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每周日中午14:00发送",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\ntitle：\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "最后一天！周日晚上结算，现在第 X 名（周日下午定时触发，X 实时取值）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5"
+  },
+  {
+    "block_id": "JZEJdppE7ooPgqxr0krlrryTgle",
+    "block_type": 2,
+    "parent_id": "FGNldODeOoHYzjxBYxYlbFHwgD5",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击 push，进入 APP 首页。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ck3bdMFcGo7c70x5dNtlhR6PgBI",
+    "block_type": 32,
+    "children": [
+      "MHS1dh7TBoU2VfxrOQslkrcagqc",
+      "EO73d9HL6o2ZVWx9grOlrIJlgUd"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "MHS1dh7TBoU2VfxrOQslkrcagqc",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1500,
+      "scale": 1,
+      "token": "DHdZbgboioAeGZxktqqlV5CRgQe",
+      "width": 2664
+    },
+    "parent_id": "Ck3bdMFcGo7c70x5dNtlhR6PgBI"
+  },
+  {
+    "block_id": "EO73d9HL6o2ZVWx9grOlrIJlgUd",
+    "block_type": 2,
+    "parent_id": "Ck3bdMFcGo7c70x5dNtlhR6PgBI",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "P6Y7dz3UBoJn0px6FXzl8PQCgUh",
+    "block_type": 32,
+    "children": [
+      "SmgEdxAqTodtrix94tTlxcYag0d",
+      "L9rKd0Qvzo64a6xm7CNlD7fPgmf",
+      "I6etdCpn2oqeTXxNV3MlKTngg6f"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "SmgEdxAqTodtrix94tTlxcYag0d",
+    "block_type": 2,
+    "parent_id": "P6Y7dz3UBoJn0px6FXzl8PQCgUh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题：中下游用户冲劲不足，增加档位变化提醒。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "L9rKd0Qvzo64a6xm7CNlD7fPgmf",
+    "block_type": 2,
+    "parent_id": "P6Y7dz3UBoJn0px6FXzl8PQCgUh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "I6etdCpn2oqeTXxNV3MlKTngg6f",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "第11到第30名到用户名次下增加一行小气泡：\n（1）当用户名次在第11到第15名→ 小气泡：再 X关冲回前 10，拿回 100 Giggles！\nX = 第10名的lessons数量 - 用户的lessons数量+1\n（2）当用户名次在第21到第25名→ 小气泡：再 Y关冲回前 20，拿回 50 Giggles！\nY = 第20名的lessons数量 - 用户的lessons数量+1\n（3）其他用户（16～20；26～30）气泡展示：再Z关，超越上一名\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "Z = 前一名用户lessons数量- 用户的lessons数量+1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "P6Y7dz3UBoJn0px6FXzl8PQCgUh"
+  },
+  {
+    "block_id": "ICoqd9t77oahkfxzsk8l9iRog6e",
+    "block_type": 32,
+    "children": [
+      "R88gdWEYmocRyCxb7nrlcOcJgEd"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "R88gdWEYmocRyCxb7nrlcOcJgEd",
+    "block_type": 2,
+    "parent_id": "ICoqd9t77oahkfxzsk8l9iRog6e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "block_type": 32,
+    "children": [
+      "TzWmd8UHRoHQc7xyatXl5aVXgpg",
+      "LNZwdSD9IogZxrxHJnxl2ZuCgVh",
+      "Q3B9davgvoSgwnxKEhUlas26gKe",
+      "Mq8ldsPnSouuDkxpdltllTAdgjc",
+      "And5dMXXHorP7ZxhQxxlvtyHgzg",
+      "BOJIdQTs3o4SFgxPrkFlaoyKgVg",
+      "DgUzdv6C4okkSBxl13Ol3h2ogOc"
+    ],
+    "parent_id": "VpuudNPtAo3giQxddLTlynUjgg7",
+    "table_cell": {}
+  },
+  {
+    "block_id": "TzWmd8UHRoHQc7xyatXl5aVXgpg",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "昵称审核机制",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LNZwdSD9IogZxrxHJnxl2ZuCgVh",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题：昵称在排行榜公开展示，可能包含脏话 / 敏感词。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Q3B9davgvoSgwnxKEhUlas26gKe",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Mq8ldsPnSouuDkxpdltllTAdgjc",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "方案：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "And5dMXXHorP7ZxhQxxlvtyHgzg",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册 / 改昵称时同步审核（中英印多语敏感词库）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BOJIdQTs3o4SFgxPrkFlaoyKgVg",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "命中拒绝保存，提示「昵称包含不允许的字符，请修改」",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DgUzdv6C4okkSBxl13Ol3h2ogOc",
+    "block_type": 2,
+    "parent_id": "S0p7d2ZSnozXdoxDtj8l0ViMgTg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "存量批量清洗，命中的强制修改 + 临时显示为【默认昵称：咯咯学员】",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ekr5dzo1coJosxx9a2ilkNQGgof",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据埋点",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd"
+  },
+  {
+    "block_id": "KboOdUWpVoebzxxinvdlXHemgQc",
+    "block_type": 30,
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "sheet": {
+      "token": "KfGnsLEDFhxWnQtTYAhl1X4agnb_aCqVoa"
+    }
+  },
+  {
+    "block_id": "LSfpdlLB1o0zU2xno3vlvVc2gKd",
+    "block_type": 2,
+    "parent_id": "Rha1dMFznogB2cxG6hNlSokxgNd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2 条 push 的点击数据要接到极光",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

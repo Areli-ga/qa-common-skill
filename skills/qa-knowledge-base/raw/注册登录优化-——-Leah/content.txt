@@ -1,0 +1,150 @@
+注册登录优化 —— Leah
+需求背景
+参考竞品的注册流程，提升目前登录注册成功率。
+重点：
+全新邮箱 + 密码即可注册成功，不需要等验证码
+其他登录方式重点展示Google 账号和微信登录，减少干扰
+安卓手机取消苹果账号登录
+
+现有注册登录流程复盘
+UI链接
+https://www.figma.com/design/pmwCeG2HcNaEBnUmt5kK46/1.36.0?node-id=47001-33746&t=gI72Q1tNZDPPsGEf-1
+需求目的
+提升目前登录注册成功率。
+
+需求主流程
+首页入口调整
+
+
+原型
+
+说明
+
+游客模式
+image.png
+
+已登录
+image.png
+
+
+
+左上角家长中心的位置，如果用户未登录，展示一个图标：sign in；如果已登录则不展示；
+展示呼吸动画。
+注册登录修改点
+
+
+
+原型
+
+说明
+
+非中国大陆 IP
+image.png
+
+中国大陆 IP
+image.png
+
+
+ 登录注册页调整：
+下一步按钮展示出来，在用户输入信息前为不可点击状态，有信息后可点击；
+第三方登录形式展示调整：
+1）非中国大陆 IP，谷歌账号登录展示放大；
+2）中国大陆 微信登录放大。
+安卓手机取消苹果账号登录。
+学校入口点击后增加引导。
+
+人机验证技术侧增加
+如果设置邮箱错误，后续如何联系处理
+如何处理修改的方案确认。
+学校的入口不下掉，可以做告知引导
+
+
+
+image.png
+
+image.png
+
+
+
+邮箱注册流程调整：
+判断用户输入的邮箱为新邮箱，进入设置密码界面。
+设置密码界面
+（1）展示文案：An account will be created for leah@gmail.com. Verification email to follow
+（2）设置密码+确认密码：
+（1）密码的要求和目前一致，
+设置密码和确认密码需一样，如果文案不一致，toast 提示：请输入一样的密码
+（2）密码符合要求且确认密码成功，点击 confirm，toast 提示：Account created successfully
+注册后流程与目前线上一致。
+
+image.png
+
+
+文案修改为：QR login for partner schools only. Other users, please sign up.
+
+账号设置修改
+
+
+原型
+
+说明
+
+image.png
+
+
+设置 - 账号页面UI 调整，邮箱和手机号修改为一整排。
+用户邮箱未验证时，右侧展示按钮【Verify Email】，点击后，可以向用户的邮箱下发认证邮件，和注册时使用同一封。
+点击【修改】按钮，无需验证码，直接进入修改页面。
+image.png
+
+
+
+
+邮件确认
+
+
+原型
+
+说明
+
+image.png
+
+
+用户输入邮箱和密码注册成功后，向用户邮箱下发确认邮件
+邮件内容：
+Sender name: Giggle Academy
+Sender address: 现在的邮箱
+Subject: Confirm your email — Giggle Academy
+Body:
+Confirm your email
+You just created a Giggle Academy account with this email address.
+Tap the button below to confirm — your child's weekly learning report will start arriving here once confirmed.
+[ Confirm my email ]
+Didn't create this account? Unbind this email — you won't receive any more messages from us.
+
+不需要解绑邮箱，用户忽略即可
+
+image.png
+
+
+
+邮箱确认
+Email confirmed 🎉 — You're all set. Your child's weekly learning report will be sent here.
+落地页过期
+This link has expired. Open the Giggle Academy app and tap "Resend email" to get a new one.
+解绑
+Email unbound. This address is no longer linked to any Giggle Academy account, and you won't receive any more emails from us.
+解绑后，不删除用户账号，只是不给此邮箱发周报等其他信息。
+
+数据埋点
+
+
+注册登录全流程
+除上述两处外，无其他改动，用于确认沟通和测试验证。
+
+
+
+
+
+竞品：
+
+

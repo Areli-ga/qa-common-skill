@@ -25,28 +25,98 @@
   "images": [
     {
       "index": 1,
-      "file": "images/img-01.png",
-      "bytes": 378151
+      "file": "images/img-01.webp",
+      "bytes": 73236,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 378151,
+        "md5": "647f15699220f1c9265364e1f3c4c38c",
+        "dims": [
+          2386,
+          1126
+        ]
+      },
+      "dims": [
+        2386,
+        1126
+      ]
     },
     {
       "index": 2,
-      "file": "images/img-02.png",
-      "bytes": 417125
+      "file": "images/img-02.webp",
+      "bytes": 54876,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 417125,
+        "md5": "ff589e404b8f13d080c434a7c71d6028",
+        "dims": [
+          2348,
+          646
+        ]
+      },
+      "dims": [
+        2348,
+        646
+      ]
     },
     {
       "index": 3,
-      "file": "images/img-03.png",
-      "bytes": 268225
+      "file": "images/img-03.webp",
+      "bytes": 40190,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 268225,
+        "md5": "7a2933604bdf634e08b080b61fbceec0",
+        "dims": [
+          2682,
+          534
+        ]
+      },
+      "dims": [
+        2682,
+        534
+      ]
     },
     {
       "index": 4,
-      "file": "images/img-04.png",
-      "bytes": 151267
+      "file": "images/img-04.webp",
+      "bytes": 52690,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 151267,
+        "md5": "ae95a642dcad22b629656ba610716cd8",
+        "dims": [
+          2646,
+          590
+        ]
+      },
+      "dims": [
+        2646,
+        590
+      ]
     },
     {
       "index": 5,
-      "file": "images/img-05.png",
-      "bytes": 135353
+      "file": "images/img-05.webp",
+      "bytes": 51096,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 135353,
+        "md5": "bb61783bc6f8177c4a771738010bd293",
+        "dims": [
+          2462,
+          606
+        ]
+      },
+      "dims": [
+        2462,
+        606
+      ]
     }
   ],
   "image_count": 5,

@@ -1,0 +1,37 @@
+学习中心 + 单元卡片细节优化
+需求背景
+用户留存提升后，更多人学到更高的级别，发现单元卡片点击后无反应，因此需要增加。
+
+需求详情
+Unit 卡片L2～L9支持
+
+
+点击单元卡片
+image.png
+
+
+
+线上Lv2 起单元 的 Unit 卡片增加介绍卡。
+展示信息：
+Unit名称：后台配置
+标签：原本线上是写死，本期修改为可配置，在 unit 配置下增加一个标签：unit tags
+image.png
+
+介绍：目前在后台配置
+image.png
+
+核心单词：取本 Unit 的核心单词，点击播放按钮可播放音频
+关闭按钮：点击后，回到首页
+标签不同级别
+LV1        颜色·五官·玩具·家庭        Pre A1, Listening, Speaking
+LV2        宠物·家庭成员·交通工具        Pre A1, Speaking, Vocabulary
+LV3        天气·海洋生物·交通工具        Pre A1, Speaking, Storytelling
+LV4        动物·食物·职业        Pre A1, Speaking, Free Talk
+LV5        词汇巩固+核心句型整合        Pre A1, Speaking, Sentence Patterns
+LV6        字母音形第一组(s·a·t·p·h)        Pre A1, Phonics
+LV7        字母音形第二组(c·r·i·m·n)        Pre A1, Phonics, Reading
+LV8        字母音形第三组(d·e·l·k·f)        Pre A1, Phonics, Reading
+学习中心的单词卡下掉旧学习路径入口
+IMG_0602.PNG
+
+

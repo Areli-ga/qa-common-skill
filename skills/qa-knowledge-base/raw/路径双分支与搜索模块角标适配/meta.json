@@ -1,0 +1,74 @@
+{
+  "title": "路径双分支与搜索模块角标适配",
+  "doc_id": "HW0sd3jqxo2yEsxxOhJlloUlgfg",
+  "wiki_token": "Ql6Wwqwlxi72CtkE6s1lSj3Bghh",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Ql6Wwqwlxi72CtkE6s1lSj3Bghh",
+  "fetched_at": "2026-08-24T23:44:59.620864+08:00",
+  "version": "V1.37.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 12659,
+  "blocks": 1123,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 79926,
+      "dims": [
+        1586,
+        1273
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 203714,
+        "md5": "112c9a0cbef8c6ad38c616c482d8c70b",
+        "dims": [
+          1586,
+          1273
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 28814,
+      "dims": [
+        850,
+        1052
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 109742,
+        "md5": "fa8d1d3b7242778bcc09f42c9a53f5aa",
+        "dims": [
+          850,
+          1052
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 40382,
+      "dims": [
+        2560,
+        1152
+      ],
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 431053,
+        "md5": "4a3b81a990772972d2e95c29be751647",
+        "dims": [
+          2560,
+          1152
+        ]
+      }
+    }
+  ],
+  "image_count": 3,
+  "tables": 7
+}

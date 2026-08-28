@@ -135,9 +135,9 @@ V1.33.0 新增 **Top Learners / 学习之星周榜**:进入课程学习用户按
 > 存于 `../raw/Top-Learners排行榜玩法/images/`。超大图已转 `.read`;图较多,以下记录关键流程 / 状态图,重复或低信息图仅存档。
 
 - **img-01**(`images/img-01.read.png`):整体流程长图:首页主路径完课 → Top Learners 超越动效 → 排名上升动画 → Continue 回首页 → 首页出现新排行榜入口提示。
-- **img-02**(`images/img-02.png`):完课触发流程图:完成主路径任意一课 → 本周通关数 +1 → 首课入榜分组;新人首周首课不触发超越,非首课若超越他人则展示本周第 X 次超越弹窗,最后 Continue 回首页。
-- **img-03**(`images/img-03.png`):超越动效界面:榜单中用户本人高亮为 `Lily(me)` 第 5 名,左下兔子吹喇叭和彩带,右侧显示 Top Learners 列表和 Lessons 数。
-- **img-05**(`images/img-05.png`):首页新增排行榜入口:右上功能区出现排行榜图标,图标被红框标注。
+- **img-02**(`images/img-02.webp`):完课触发流程图:完成主路径任意一课 → 本周通关数 +1 → 首课入榜分组;新人首周首课不触发超越,非首课若超越他人则展示本周第 X 次超越弹窗,最后 Continue 回首页。
+- **img-03**(`images/img-03.webp`):超越动效界面:榜单中用户本人高亮为 `Lily(me)` 第 5 名,左下兔子吹喇叭和彩带,右侧显示 Top Learners 列表和 Lessons 数。
+- **img-05**(`images/img-05.webp`):首页新增排行榜入口:右上功能区出现排行榜图标,图标被红框标注。
 - **img-06**(`images/img-06.read.png`):用户已学习的排行榜页:左侧前三名领奖台,右侧榜单列表,用户本人高亮,顶部提示 `还剩 2 天 · 周一结算奖励`。
 - **img-07**(`images/img-07.read.png`):未学习空态:兔子提示 `Top 10 can win 100 Giggles!`;右侧文案 `No learning stats for this week yet. Leaderboard is temporarily unavailable.`;按钮 `Let's Go!`。
 - **img-08**(`images/img-08.read.png`):周日下午缺省页:文案「本周排行榜进入最后冲刺! 暂时不添加新人,明天开启新的榜单」,按钮「知道了」。

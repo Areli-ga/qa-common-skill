@@ -1,0 +1,1251 @@
+[
+  {
+    "block_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "block_type": 1,
+    "children": [
+      "JPXZdhScIof9LdxaLY1laEszg6c",
+      "UNoodpDg8ooIY4xXUKAlGG7ogih",
+      "VsskdIrZ5oV83TxRquFl6C4wgib",
+      "HFCddxhXqo36Lxx8LFTllPTogwh",
+      "B4u3dmH19o2WSfxccrelnPCag8E",
+      "FvEcdQKaaoUnWLxaKJklHKtQg7e",
+      "GisOdV9psoGUlHxWw8Ulq8fIgme",
+      "KrlUdbPAboN4otxhEkqlLqskgle",
+      "SygCdebPyoQuYpxWD1JluIdygRg",
+      "AuTIdxam2oDZs4xVaovlC5U8gDd",
+      "DfxtdDe5foDE8xxvNqSlcoLCg1b",
+      "VMXodeqHjo4Oh1xhvPKllNuggTb",
+      "Lg47dkLvmoplXKx6SzvlKU5qgDg",
+      "AwKhdIM1BoKRmcxtPC7lAfVygCc",
+      "IHFrdcv0KotSnUxB7fslIqnTgye",
+      "Cvo7dQvMaoCNQ5xl4hWl1JrHgfh",
+      "TUyldpG8oovjuXxlnG4l0co4g1f",
+      "Ll77dP1VlopbMLxcQQCl8KJ8glb"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "M Town Talk 支持bbox点击",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "JPXZdhScIof9LdxaLY1laEszg6c",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "背景：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "UNoodpDg8ooIY4xXUKAlGG7ogih",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户在对话课里面手指会乱点，哪怕他听不懂也会乱点。我们想把这种点击事件输入给 NPC，让 NPC 知道在当前场景里面用户想表达的意图。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VsskdIrZ5oV83TxRquFl6C4wgib",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HFCddxhXqo36Lxx8LFTllPTogwh",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "比如说：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B4u3dmH19o2WSfxccrelnPCag8E",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在超市购物场景：点击就是要去买这个东西",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "FvEcdQKaaoUnWLxaKJklHKtQg7e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在餐厅场景：点击就是要去点菜",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "GisOdV9psoGUlHxWw8Ulq8fIgme",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在身体不舒服的时候：点击就代表说这里痛",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "3"
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "KrlUdbPAboN4otxhEkqlLqskgle",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SygCdebPyoQuYpxWD1JluIdygRg",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "大概的想法就是，将点击事件输入给AI，让 AI 承接住用户的点击，猜测用户的意图，并且给出适当回复。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AuTIdxam2oDZs4xVaovlC5U8gDd",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DfxtdDe5foDE8xxvNqSlcoLCg1b",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "VMXodeqHjo4Oh1xhvPKllNuggTb",
+    "block_type": 13,
+    "children": [
+      "GSgYdC2HOoEVccxhSW6lCql0gMg",
+      "IwZ9dqFU7oQ6vTxrZuil5GYugVb",
+      "Wtv5dlXRloaAtNxKCZclmx6EgtL",
+      "SDzGdArJnoQncZxTKD6lueLxgQh"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "激活NPC，",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "让NPC在场景下承接用户的点击。",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "让小麦在场景承接用户的点击：",
+            "text_element_style": {
+              "background_color": 11,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "GSgYdC2HOoEVccxhSW6lCql0gMg",
+    "block_type": 13,
+    "children": [
+      "FeZada7szoo61vxaZiqlbeuJgrc",
+      "EZIydfnfbo8N4LxfQLclIHyhgCc",
+      "IXi7d6E0FoWjQjxjtRalBOwEg7d",
+      "JdMXdyb3ro6khmxcpB4lJ5L7gYd"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "原则：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "VMXodeqHjo4Oh1xhvPKllNuggTb"
+  },
+  {
+    "block_id": "FeZada7szoo61vxaZiqlbeuJgrc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "默认 小麦 的引导语都是用户的界面语言，关键词都是用户的学习语言（兼容中文对话学习）。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GSgYdC2HOoEVccxhSW6lCql0gMg"
+  },
+  {
+    "block_id": "EZIydfnfbo8N4LxfQLclIHyhgCc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需要去识别用户点击的到底是剧情推进的主对象（水果、蔬菜，菜单里面的菜品，看病里面的身体部位），还是一些附属的道具（比如说，秤砣、椅子）。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GSgYdC2HOoEVccxhSW6lCql0gMg"
+  },
+  {
+    "block_id": "IXi7d6E0FoWjQjxjtRalBOwEg7d",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "文案内容自由发挥，只要贴合剧情就行。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GSgYdC2HOoEVccxhSW6lCql0gMg"
+  },
+  {
+    "block_id": "JdMXdyb3ro6khmxcpB4lJ5L7gYd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "排除点击NPC，点击NPC始终触发NPC现在的动画及音效。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GSgYdC2HOoEVccxhSW6lCql0gMg"
+  },
+  {
+    "block_id": "IwZ9dqFU7oQ6vTxrZuil5GYugVb",
+    "block_type": 13,
+    "children": [
+      "FIFVdsQgvoRdYFxun4flDJnKglf",
+      "X5qmdAD5hof57XxOpBMlJGsbgLd"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "商店：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "VMXodeqHjo4Oh1xhvPKllNuggTb"
+  },
+  {
+    "block_id": "FIFVdsQgvoRdYFxun4flDJnKglf",
+    "block_type": 13,
+    "children": [
+      "OouIdFpIBozSqDxUhuqlkYLYg5c",
+      "RxiddxVRDoZhXbxw6AtldMeZgdd"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户买东西：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "IwZ9dqFU7oQ6vTxrZuil5GYugVb"
+  },
+  {
+    "block_id": "OouIdFpIBozSqDxUhuqlkYLYg5c",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "看起来你对***感兴趣，你可以这么说：I want some {点击对象}.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FIFVdsQgvoRdYFxun4flDJnKglf"
+  },
+  {
+    "block_id": "RxiddxVRDoZhXbxw6AtldMeZgdd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，这里是商店，被你买走了，老板就没法开展生意了，你点点其他东西试试看！（比如用户点击了一个秤）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FIFVdsQgvoRdYFxun4flDJnKglf"
+  },
+  {
+    "block_id": "X5qmdAD5hof57XxOpBMlJGsbgLd",
+    "block_type": 13,
+    "children": [
+      "ApXNdudkgoTqBfxtpuylq0agg1f",
+      "HJEGdqnrBoe37kxhNEtloHDNgpd"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户卖东西：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "IwZ9dqFU7oQ6vTxrZuil5GYugVb"
+  },
+  {
+    "block_id": "ApXNdudkgoTqBfxtpuylq0agg1f",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "你在尝试推销这个东西吗？你可以这么说：“Would you like some {点击对象}？”",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "X5qmdAD5hof57XxOpBMlJGsbgLd"
+  },
+  {
+    "block_id": "HJEGdqnrBoe37kxhNEtloHDNgpd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，顾客是来买你的东西的，不是来买你的家产的啦，你点点其他位置试试看！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "X5qmdAD5hof57XxOpBMlJGsbgLd"
+  },
+  {
+    "block_id": "Wtv5dlXRloaAtNxKCZclmx6EgtL",
+    "block_type": 13,
+    "children": [
+      "NkObdEPcJodKrXxnYrWl3weHgOh",
+      "E4IIdR016oX8bExx3Ycl8IFjgwg"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "餐厅：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "VMXodeqHjo4Oh1xhvPKllNuggTb"
+  },
+  {
+    "block_id": "NkObdEPcJodKrXxnYrWl3weHgOh",
+    "block_type": 13,
+    "children": [
+      "Hvvzdr6uDoLLC0xM9VYlIy3MgTb",
+      "GT6sdyc3GonoXqxDQE6lPL3qgEh"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户点餐：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Wtv5dlXRloaAtNxKCZclmx6EgtL"
+  },
+  {
+    "block_id": "Hvvzdr6uDoLLC0xM9VYlIy3MgTb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "你想要点这个吗？你可以这么说：Can I have  {点击对象}, please?",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "NkObdEPcJodKrXxnYrWl3weHgOh"
+  },
+  {
+    "block_id": "GT6sdyc3GonoXqxDQE6lPL3qgEh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，这里是商店，被你买走了，老板就没法开展生意了，你点点其他东西试试看！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "NkObdEPcJodKrXxnYrWl3weHgOh"
+  },
+  {
+    "block_id": "E4IIdR016oX8bExx3Ycl8IFjgwg",
+    "block_type": 13,
+    "children": [
+      "YV9ed9gKqos1GNxWfAhle1eIg9b",
+      "KZ8zdtQQuo7EfHxLmVylMpJQgCh"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户服侍：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Wtv5dlXRloaAtNxKCZclmx6EgtL"
+  },
+  {
+    "block_id": "YV9ed9gKqos1GNxWfAhle1eIg9b",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "你在尝试推销这个东西吗？你可以这么说：“Would you like some {点击对象}？”",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "E4IIdR016oX8bExx3Ycl8IFjgwg"
+  },
+  {
+    "block_id": "KZ8zdtQQuo7EfHxLmVylMpJQgCh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，顾客是来买你的东西的，不是来买你的家产的啦，你点点其他位置试试看！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "E4IIdR016oX8bExx3Ycl8IFjgwg"
+  },
+  {
+    "block_id": "SDzGdArJnoQncZxTKD6lueLxgQh",
+    "block_type": 13,
+    "children": [
+      "FQR3dmsYaon6DfxIZ0Il3JPrgBb",
+      "AEwWdBI5fo7Yv2xAXsMlZGhbgRe"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "看病：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "VMXodeqHjo4Oh1xhvPKllNuggTb"
+  },
+  {
+    "block_id": "FQR3dmsYaon6DfxIZ0Il3JPrgBb",
+    "block_type": 13,
+    "children": [
+      "GM9XdFVLsoP1t1x6iSLldjNXg0c",
+      "Y0g5dgZXzosFnAxeN8mltcQQgRh"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户看病：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "SDzGdArJnoQncZxTKD6lueLxgQh"
+  },
+  {
+    "block_id": "GM9XdFVLsoP1t1x6iSLldjNXg0c",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "你是 {点击对象.(母语)} 痛吗？你可以这么说：My {点击对象} hurt.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FQR3dmsYaon6DfxIZ0Il3JPrgBb"
+  },
+  {
+    "block_id": "Y0g5dgZXzosFnAxeN8mltcQQgRh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，不是这里啦，你点点其他位置试试看！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FQR3dmsYaon6DfxIZ0Il3JPrgBb"
+  },
+  {
+    "block_id": "AEwWdBI5fo7Yv2xAXsMlZGhbgRe",
+    "block_type": 13,
+    "children": [
+      "Z1oFdpojIoEW9AxfRy7lIyvJgBe",
+      "DyeCdWWbco3loKxwgBul21MygAg"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用户扮演医生：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "SDzGdArJnoQncZxTKD6lueLxgQh"
+  },
+  {
+    "block_id": "Z1oFdpojIoEW9AxfRy7lIyvJgBe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "你在尝试问用户这个地方是否痛吗？你可以这么说：Are you hurting on/in your  {点击对象}？",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "AEwWdBI5fo7Yv2xAXsMlZGhbgRe"
+  },
+  {
+    "block_id": "DyeCdWWbco3loKxwgBul21MygAg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "哎呀，不是这里啦，你点点其他位置试试看！",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AEwWdBI5fo7Yv2xAXsMlZGhbgRe"
+  },
+  {
+    "block_id": "Lg47dkLvmoplXKx6SzvlKU5qgDg",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AwKhdIM1BoKRmcxtPC7lAfVygCc",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不在需求范围内：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IHFrdcv0KotSnUxB7fslIqnTgye",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击时候仅触发动画，不添加到Collection；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "Cvo7dQvMaoCNQ5xl4hWl1JrHgfh",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不修改业务流程；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "TUyldpG8oovjuXxlnG4l0co4g1f",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不判断对错。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf"
+  },
+  {
+    "block_id": "Ll77dP1VlopbMLxcQQCl8KJ8glb",
+    "block_type": 2,
+    "parent_id": "GGMsd8w6to0lo2xi2pSlwxVVgrf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

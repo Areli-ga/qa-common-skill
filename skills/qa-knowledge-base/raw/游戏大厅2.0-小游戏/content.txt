@@ -1,0 +1,340 @@
+游戏大厅2.0 小游戏
+需求背景
+PK 上线数据复盘【需求复盘】竞技场 PK
+新用户：首日就去 PK，没有提升，数据有波动。后续还是以课程学习为主
+非新用户（大盘数据）：
+image.png
+
+ PK 功能实验组的留存明显好于对照组。（目前已到万人级别，趋势稳定，比较可信）
+有一定产品使用基础后才接触PK的用户 → 更容易形成多次使用习惯（人均3.7次）→ 留存表现明显更好。
+
+竞技场升级成App内的社交游戏化模块，核心目的：
+给孩子提供轻量、可重复玩的小游戏，消耗课程环节产出的Giggles，形成"参课→获得Giggles→竞技场消耗"的正向循环
+通过Study Buddy（同桌）机制提升结伴学习留存（单开需求）
+邀请同桌 1.2 支持游戏挑战
+通过排行榜和分享机制驱动传播与回访
+
+UI 链接：
+通用模块
+https://www.figma.com/design/nbT8G98mRl5Up6OTuCbQWP/1.37.0?node-id=49495-85063&t=Y6HqFWg7YROC2do3-1
+小游戏 UI
+https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=0-1&t=6LxOmHxV0dWjNHJe-1
+
+需求流程
+布局原型：https://giggle-arena-board.pages.dev
+游戏 demo：https://apps.giggletools.com/quiz-games-pack/
+游戏大厅入口
+前置需求：
+homepage_toplearners AB 实验实验组全量。
+实验组全量后修改入口：Deskmate 放回聚合入口第一排最后一个；排行榜放首页右上角第二个位置；新增游戏大厅入口，替换掉家庭游戏入口。
+
+
+原型
+
+说明
+
+image.png
+
+
+打开H5
+聚合入口中，增加 Game Arcade 入口。
+
+
+ 游戏大厅公共交互
+
+
+
+
+原型
+
+说明
+
+image.png
+
+
+游戏大厅首页
+游戏列表
+单人游戏分类
+按顺序展示：单词 PK、单词PK 无尽模式、点名连连看、托盘打包台、钓鱼钩卡、听音跑酷
+多人游戏
+按顺序展示：单词飞船、抢答游戏
+ 2. Giggles
+展示用户当前的 Giggles
+
+image.png
+
+
+image.png
+
+
+
+游戏介绍页
+左侧：封面卡（图标+游戏名，卡片配色跟随游戏区分）
+右侧：
+游戏名
+单人游戏/多人游戏
+一句话玩法简介
+游戏标签
+🪙 消耗 20 Giggles / 次（所有9个游戏统一20 Giggles/次，含多人游戏）
+🏆 查看排行榜按钮：仅单人游戏展示，多人游戏隐藏
+选择难度：部分游戏支持选择难度：easy、Medium 和 Hard
+单词 pk 和单词谁记得多不支持选择难度，其他单人游戏都支持。
+抢答游戏专属：抢答内容
+
+
+全国榜
+image.png
+
+全球榜
+image.png
+
+
+
+从单人游戏详情页"🏆查看排行榜"进入，页面结构：
+顶部：{游戏名} 排行榜
+Tab切换：全国榜 / 全球榜（二选一，默认全国榜）
+全国列表：
+榜单名称：国旗图标 + 国家名称
+展示排名 + 头像/国旗 + 昵称
+展示分数（单位随游戏变化，见第4节表格）
+全球列表：
+榜单名称：Global
+展示排名 + 头像/国旗 + 昵称
+展示分数（单位随游戏变化，见第4节表格）
+展示前 100 名，如果用户上榜，高亮定位到用户的排名；
+如果用户没有上榜，用户排名放在最后。
+每个游戏的排行榜数据互相独立，不共用同一套榜单
+不同游戏的排行依据
+image.png
+
+
+单人游戏
+
+
+原型
+
+说明
+
+image.png
+
+
+
+本期暂定上线 6 个单人游戏：
+单词 PK（已有）
+玩法：匹配机器人和历史真人数据，进行对战
+单词 PK 无尽模式（修改）
+玩法：基于目前的单词 PK，一直出题目，错 3 次结束
+开扭蛋的功能下掉。
+点名连连看（新增）
+玩法：听 Max 播音频，连线两块牌，得分越多
+托盘打包（新增）
+玩法：听 Max 播音频，选择 quiz 图片，三消玩法
+钓鱼钩卡（新增）
+玩法：听 Max 播音频，选择 quiz 图片，从海里勾起正确的卡，一轮答对后，可以延长鱼钩长度，进入下一组。
+听音跑酷（新增）
+玩法：玩家在并排的门中选择读音对应的正确门跑过去。答对时角色所带人群数量×2，答错时×0.7，沿途设有留有缺口的障碍（对手/敌对角色躲不掉），终点有"巨人天降"结算演出。按胜利次数排名（单位：胜）。
+
+image.png
+
+image.png
+
+
+单词 PK 无尽模式
+复用目前的单词 PK，出题规则保持，不限制题目数量，3 分钟内，只要用户没有错 3 次。就可以一直答。
+只有 3 次错误机会，
+结束答题，展示根据分数，学习单词数量，最大 combo，本局单词卡。
+出题规则：
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。
+干扰项从同级别单词中随机出。
+限时 3 分钟，得分越多排名越高。
+
+
+https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=0-1&t=8U4M4TwYoU70OPMz-1
+
+
+点名连连看
+ 
+
+核心玩法参考 Cloud 文档
+PRD_点名连连看.md
+难度选择：
+简单：4 个单词 （1 板）
+中等：8 个单词（2板）
+困难：16 个单词（3 板）
+出词规则：【同单词 PK的规则】
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足 ，以未学过的补足。
+单词的出题判定单独基于游戏记录。
+
+
+
+托盘打包台
+ 
+PRD_托盘打包台.md
+出词规则：同点名连连看
+
+
+
+
+钓鱼钩卡
+ 
+PRD_钓鱼钩卡.md
+出词规则：
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。
+干扰项从同级别单词中随机出。
+
+
+
+听音跑酷
+ 
+PRD_听音选门跑酷.md
+出词规则：
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。
+干扰项从同级别单词中随机出。
+
+线下多人游戏区
+
+
+原型
+
+说明
+
+image.png
+
+
+本地多人游戏，本期支持 2 个小游戏
+单词飞船、抢答游戏
+
+image.png
+
+https://www.figma.com/design/ZYfaX8mf6kmJbxomO4vaTO/%E6%B8%B8%E6%88%8F%E5%A4%A7%E5%8E%85-%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%90%88%E9%9B%86?node-id=21-10415&t=8U4M4TwYoU70OPMz-1
+
+单词飞船
+ 
+PRD_单词飞船.md
+出题规则：
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。
+干扰项从同级别单词中随机出。
+干扰项
+
+
+image.png
+
+
+
+抢答游戏
+ 
+PRD_抢答游戏.md
+不同类型出题规则：
+单词
+本次仅支持听音看文字选文字，听音看图选文字两个题型
+出词规则：
+基于用户所在 level及 level 以下，随机出单词库的题目。
+优先出学过的单词，再出未学过的单词；若学过的不足，以未学过的补足。
+干扰项从同级别单词中随机出。
+百科常识
+题目需本地化
+提供1000 题 excel、表结构：题干、正确答案、干扰项。
+选项随机展示，不固定排序。
+题干自动 tts 播放。
+本期题目都是纯文本。
+用户答完 1000 题以前，不重复出题。
+Admin 可能需要配置
+口算
+随机出题，100 以内的加减法，本期不支持乘除法。
+随机出现两个数加减，三个数加减
+选项：正确答案（系统计算）、2 个干扰项（随机生成）
+结束时，赢的用户头像放大， 并展示 Victory
+
+5. 分享链路
+
+
+
+
+原型
+
+说明
+
+
+filename.png
+
+
+
+点击单人游戏的右上角，可以生成分享链接
+1）展示文案：
+Share this link with your friend.
+Your friend can tap it to start playing right away.
+分享渠道：
+Whatsapp
+微信
+复制链接
+
+image.png
+
+image.png
+
+
+
+WhatsApp 的链接预览是读取网页的 Open Graph 元标签（og:title/og:description/og:image），跟 Facebook/Messenger 用的是同一套机制。只要分享出去的落地页正确写好这几个 meta 标签、页面是公开可访问的（不能有登录墙），预览卡片就会自动生成，没有任何审批流程。唯一要注意的是 og:image 建议尺寸 1200×630，图片链接要能被外部抓取。
+title 和description，从以下任选一条
+Title: Listen & Match · A Challenge from Giggle 
+Description: A quick listening game — tap and play, no login needed.
+Title: Beat My Score in Listen & Match 
+Description: Can you top my score? Play now, no sign-up required.
+Title: Listen & Match · Surprisingly Addictive 
+Description: Listen, match, repeat — harder to put down than it looks.
+Title: A 3-Minute Brain Break 
+Description: One quick round of Listen & Match. Just tap and play.
+Title: Listen & Match · Free to Play 
+Description: No login needed — download Giggle Academy for more games.
+image：直接用游戏的封面
+
+image.png
+
+
+
+从 Whatsapp 点击链接，打开竖版游戏介绍页
+游戏封面
+游戏名称
+游戏一句话介绍
+点击开始游戏，直接开始
+下载Giggle Academy固定吸底，点击后
+安卓手机：
+点击【下载Giggle Academy】，跳转至Google Play，
+若无Goggle Play，跳转至本机应用市场，
+若无应用市场，直接下载官网安装包
+苹果手机：
+跳转至app store的Giggle Academy详情页。
+按钮可以复用现在的邀请下载逻辑，如果用户已经安装，直接打开app。
+https://app.adjust.com/21pj288c 跳转的adjust链接
+About us点击后跳转至Giggle Academy官网。
+
+image.png
+
+
+复用目前端内的 H5 游戏页面
+待定：等 bolin 设计完第一个再敲定
+
+1. 在浏览器外需要提示用户横屏
+2. 分享出去小游戏用户
+
+image.png
+
+
+游戏结束，展示结束页
+待定：等 bolin 设计完第一个再敲定
+引导下载文案：
+Download Giggle Academy for more fun games to play
+按钮：Download Giggle Academy
+
+埋点疑问-开发
+1、分享事件那些按钮没埋点吗
+2、单机游戏其实有3个入口：课程路径进，大厅进，分享外部链接进，没区分吗？
+3、部分埋点感觉特别冗余 会造成大量数据，请评估过部分埋点字段 是否有意义，是否必要？
+ 
+mini-game-tracking-review.md
+

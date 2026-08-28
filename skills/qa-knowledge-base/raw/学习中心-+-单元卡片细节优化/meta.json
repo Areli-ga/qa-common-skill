@@ -1,0 +1,94 @@
+{
+  "title": "学习中心 + 单元卡片细节优化",
+  "doc_id": "U0Mud6W0QoN2HxxIfZtl0xpxgVc",
+  "wiki_token": "L3blwYbjkihLuhkySv2l0V5RgFb",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/L3blwYbjkihLuhkySv2l0V5RgFb",
+  "fetched_at": "2026-08-24T22:11:15.897297+08:00",
+  "version": "V1.37.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 791,
+  "blocks": 33,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 28650,
+      "dims": [
+        1056,
+        513
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 132637,
+        "md5": "7c362cace09473601f514ee92f474d25",
+        "dims": [
+          1056,
+          513
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 61150,
+      "dims": [
+        1798,
+        1556
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 258025,
+        "md5": "5ad7faded56ff3a5d1e69bef8d3e9768",
+        "dims": [
+          1798,
+          1556
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 89496,
+      "dims": [
+        2940,
+        1602
+      ],
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 449667,
+        "md5": "a1bd45113ba75df9fc2d6b716168f75e",
+        "dims": [
+          2940,
+          1602
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 57670,
+      "dims": [
+        2622,
+        1206
+      ],
+      "read_file": "images/img-04.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 399972,
+        "md5": "465580559c508f0737b51fb9ec9bd8a6",
+        "dims": [
+          2622,
+          1206
+        ]
+      }
+    }
+  ],
+  "image_count": 4,
+  "tables": 1
+}

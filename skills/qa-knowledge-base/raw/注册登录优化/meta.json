@@ -12,60 +12,120 @@
   "images": [
     {
       "index": 1,
-      "file": "images/img-01.png",
-      "bytes": 147103,
+      "file": "images/img-01.webp",
+      "bytes": 20014,
       "dims": [
         1678,
         772
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 147103,
+        "md5": "5cc08b0a466fe709566f5dfe2bda39de",
+        "dims": [
+          1678,
+          772
+        ]
+      }
     },
     {
       "index": 2,
-      "file": "images/img-02.png",
-      "bytes": 212586,
+      "file": "images/img-02.webp",
+      "bytes": 21994,
       "dims": [
         1682,
         774
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 212586,
+        "md5": "536416c933217c38b6f9eb29ec798ac6",
+        "dims": [
+          1682,
+          774
+        ]
+      }
     },
     {
       "index": 3,
-      "file": "images/img-03.png",
-      "bytes": 440014,
+      "file": "images/img-03.webp",
+      "bytes": 79408,
       "dims": [
         5530,
         772
       ],
-      "read_file": "images/img-03.read.png"
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 440014,
+        "md5": "734ad1afb852b8b9c7d819a7c75cec4f",
+        "dims": [
+          5530,
+          772
+        ]
+      }
     },
     {
       "index": 4,
-      "file": "images/img-04.png",
-      "bytes": 245945,
+      "file": "images/img-04.webp",
+      "bytes": 39660,
       "dims": [
         2436,
         1125
       ],
-      "read_file": "images/img-04.read.png"
+      "read_file": "images/img-04.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 245945,
+        "md5": "9bfefc343edadc29101d4e06e04c44d1",
+        "dims": [
+          2436,
+          1125
+        ]
+      }
     },
     {
       "index": 5,
-      "file": "images/img-05.png",
-      "bytes": 280884,
+      "file": "images/img-05.webp",
+      "bytes": 52440,
       "dims": [
         3698,
         772
       ],
-      "read_file": "images/img-05.read.png"
+      "read_file": "images/img-05.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 280884,
+        "md5": "7742771423f87a18e32913b5d3ab8752",
+        "dims": [
+          3698,
+          772
+        ]
+      }
     },
     {
       "index": 6,
-      "file": "images/img-06.png",
-      "bytes": 118796,
+      "file": "images/img-06.webp",
+      "bytes": 22358,
       "dims": [
         1218,
         562
-      ]
+      ],
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-06.png",
+        "bytes": 118796,
+        "md5": "1b52c6e7aea2468a153ac97397df6068",
+        "dims": [
+          1218,
+          562
+        ]
+      }
     }
   ],
   "image_count": 6,

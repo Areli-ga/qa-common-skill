@@ -2,7 +2,7 @@
 标题: 新课程-Colors1-2 Speaking
 模块: 课程内容 / Speaking跟读课
 版本: V1.31.0
-related: [2026-06-30-课程内容-课程图标容器裁剪与口语标记.md]
+related: []
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/SQ7SwQTlziBKpXkVekTlryeTgng
 日期: 2026-06-30
 ---
@@ -34,7 +34,7 @@ V1.31.0 新增 Colors1-2 Speaking 跟读游戏课(主题 **Ice Breaker 破冰**:
 
 > 存于 `../raw/新课程-Colors1-2-Speaking/images/`。Figma: Ice-Breaker。
 
-- **img-01**(`images/img-01.png`):**Ice Breaker 标题页**,卡片冰封 + 冰渣坠落特效。
-- **img-02**(`images/img-02.png`):**半解封状态**,单词卡(frog)半透冰封。
-- **img-03**(`images/img-03.png`):**录音/标准音示范**,frog 卡片清晰 + Max 出现 + 底部录音按钮。
-- **img-04**(`images/img-04.png`):**识别成功**,frog 卡片 + 绿色 ✅ 勾 + Max 欢呼。
+- **img-01**(`images/img-01.webp`):**Ice Breaker 标题页**,卡片冰封 + 冰渣坠落特效。
+- **img-02**(`images/img-02.webp`):**半解封状态**,单词卡(frog)半透冰封。
+- **img-03**(`images/img-03.webp`):**录音/标准音示范**,frog 卡片清晰 + Max 出现 + 底部录音按钮。
+- **img-04**(`images/img-04.webp`):**识别成功**,frog 卡片 + 绿色 ✅ 勾 + Max 欢呼。

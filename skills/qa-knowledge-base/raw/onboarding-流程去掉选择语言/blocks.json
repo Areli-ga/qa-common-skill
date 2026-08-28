@@ -1,0 +1,459 @@
+[
+  {
+    "block_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "block_type": 1,
+    "children": [
+      "G8aRdOcWmoSgDixNIjJltMY7gic",
+      "UuHidYqzHo3z23xfYzllOZlfg9e",
+      "JbeBdh7HToTnpcxPUw6lqPPhgUb",
+      "B1FfdDP4bobYPNxCuJPlBxkbgFb",
+      "JFVxdHEvso0o8VxKOJflMo63gJe",
+      "H32bdXS4to7UzKxPXHBlXhSHgwf",
+      "XuBOdleNXogzHWxL8AllujTggty",
+      "B6FJdVvO6o0SfhxBkgzl5rOkgBb",
+      "XYc6dTSVDohCbsx27aElGkFog2Z",
+      "YtfndtgZOom8DvxicW9l2yBkgfc",
+      "DAd6dXdNcoIT64xvj3YlIxgMgib",
+      "JcO1dXs6koxwegxp6LSlChq3gOh",
+      "FJqbd92QSoR1TBxdU4pltDZhgQd",
+      "Nk6AdswtvoLhJ6xwh9qlF7kVgNb",
+      "O4Zkd65aFo1YfgxRKwmlhV3qgQh",
+      "Q4OcdRKcmoWyKpxORE1l5molgeM"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "onboarding 流程去掉选择语言",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "G8aRdOcWmoSgDixNIjJltMY7gic",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "下架：AB实验 key：onboarding_chinesecourse",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UuHidYqzHo3z23xfYzllOZlfg9e",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JbeBdh7HToTnpcxPUw6lqPPhgUb",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据参考：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B1FfdDP4bobYPNxCuJPlBxkbgFb",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "Onboarding 增加中文流程数据",
+            "token": "DrkTwxEtbiHuLFkY3HJl0vYjgbg",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/DrkTwxEtbiHuLFkY3HJl0vYjgbg?from=from_copylink"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JFVxdHEvso0o8VxKOJflMo63gJe",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "H32bdXS4to7UzKxPXHBlXhSHgwf",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "调整点：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XuBOdleNXogzHWxL8AllujTggty",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "选择年龄的页面修改回历史版本",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "B6FJdVvO6o0SfhxBkgzl5rOkgBb",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "实验组：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XYc6dTSVDohCbsx27aElGkFog2Z",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1210,
+      "scale": 1,
+      "token": "WmvcbP3AQoal5QxtylHlAu9fgFf",
+      "width": 16604
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "YtfndtgZOom8DvxicW9l2yBkgfc",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对照组：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DAd6dXdNcoIT64xvj3YlIxgMgib",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JcO1dXs6koxwegxp6LSlChq3gOh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " 菜单切换语言入口：\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "1. 针对",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "印尼语，中文和英文",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "，菜单页面保持支持切换语言进入中文小麦。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "语言是基于设置中的语言。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "FJqbd92QSoR1TBxdU4pltDZhgQd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1700,
+      "scale": 1,
+      "token": "Nis9by0o7oU39Jxya6JlkEerg9f",
+      "width": 5272
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "Nk6AdswtvoLhJ6xwh9qlF7kVgNb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "新增孩子去掉选择语言流程。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "O4Zkd65aFo1YfgxRKwmlhV3qgQh",
+    "block_type": 27,
+    "image": {
+      "align": 1,
+      "height": 1500,
+      "scale": 0.09647147147147148,
+      "token": "HsrrbutE6oNJb7xOOYulbanQggb",
+      "width": 2664
+    },
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd"
+  },
+  {
+    "block_id": "Q4OcdRKcmoWyKpxORE1l5molgeM",
+    "block_type": 2,
+    "parent_id": "LMWTdu0UOo1wExxUKjtlGPYJgWd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

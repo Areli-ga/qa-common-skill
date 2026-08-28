@@ -2,7 +2,7 @@
 标题: Mai 的引导交互优化
 模块: AI Tutor / Mai主对话
 版本: V1.34.0
-related: [2026-06-30-AI Tutor-I spy游戏模型升级.md, 2026-06-30-AI Tutor-Mai主对话界面.md, 2026-06-30-AI Tutor-单图对话多玩法与单词记忆系统.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-学习场景屏幕常亮.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/KiNvwgdvwinfvukocmBlEJ2LgKg
 日期: 2026-07-13
 ---
@@ -40,7 +40,7 @@ V1.34.0 针对 Mai 对话「加载页流失高、首轮通过率低」做交互�
 ## 图说明
 > 原图存于 `raw/Mai-的引导交互优化/images/`(共 6 图:img-01…img-06,其中 01/02/06 有 `.read.png` 副本)。
 > ⚠️ **本次未逐张读图**:含中文的原始路径 Read 因编码失败,为避免编造,图仅存链接、不描述内容。正文已含三条需求的完整文字说明。
-- [图1](../raw/Mai-的引导交互优化/images/img-01.png)（背景数据图,未读）
-- [图2](../raw/Mai-的引导交互优化/images/img-02.png)、[图3](../raw/Mai-的引导交互优化/images/img-03.png)（加载页 Mai 跳动,未读）
-- [图4](../raw/Mai-的引导交互优化/images/img-04.png)、[图5](../raw/Mai-的引导交互优化/images/img-05.png)（麦克风强化,未读）
-- [图6](../raw/Mai-的引导交互优化/images/img-06.png)（录音组件试听,未读）
+- [图1](../raw/Mai-的引导交互优化/images/img-01.webp)（背景数据图,未读）
+- [图2](../raw/Mai-的引导交互优化/images/img-02.webp)、[图3](../raw/Mai-的引导交互优化/images/img-03.webp)（加载页 Mai 跳动,未读）
+- [图4](../raw/Mai-的引导交互优化/images/img-04.webp)、[图5](../raw/Mai-的引导交互优化/images/img-05.webp)（麦克风强化,未读）
+- [图6](../raw/Mai-的引导交互优化/images/img-06.webp)（录音组件试听,未读）

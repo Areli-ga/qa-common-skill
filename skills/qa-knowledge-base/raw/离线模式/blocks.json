@@ -1,0 +1,4826 @@
+[
+  {
+    "block_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "block_type": 1,
+    "children": [
+      "UazmdFokjovBz1xee63lz5E9gkf",
+      "EgOydQcUUo0sNlxuT0TlsnMcgkc",
+      "IpoMdEWmwoLVZKxKTBcllzgZgzd",
+      "YvcDdDDIwo7Exyx0evdleCdZg18",
+      "PmeHdje0MoRv95x66ENlB13Sgkf",
+      "FrYmdjkQZoC2EVxjQw9lmOxrgpd",
+      "WssLdioHIojAzzxKWZKlranogyh",
+      "TrYkdCjbYolaVnxHgZnlYWgHgQg",
+      "HMbAd9gfioS2rPxSf6vl5sWTgQb",
+      "AmFVdfDENozYUMxjCemlJFFrgjd",
+      "XL5YdLNiTobLmqxaXLjlO6jBg6f",
+      "HWkGdFXtLopNLTxTGRYlzRzGg9b",
+      "GEiJddLUfoFcNnx69QFlz6u8gwh",
+      "HRpidoXiJoXSDcxCZKtlpztOgCd",
+      "Th0Ld1GmvotdYWxkUsJleryZg3d",
+      "KpCXdW4neoXui1xuB2AlLr20gMc",
+      "Wr8ddOpt2oElMdxhU3plnXONgfd",
+      "QYnhdYDo2o6P6SxEUumlsFY1gDe",
+      "CQdidbasyo3uNBx0MlAlPWmrgEh",
+      "VsL3dnFRYoFIdXxVLjHloMWPgxb",
+      "AD8Edi2rEo5fR5xT1G3lrmVPgib",
+      "HzH4dpkkAoy4mQxsT0AlBSPCgad",
+      "F80bdQzDYoFZSSxYLFllbO0YgFh",
+      "M2oNdHMIcoyJNxxJPqblcFMeg2Q",
+      "Gr1KdvCRvoV6O9xqHkzlILEygQc",
+      "Tw0PdHmQMoWaE9xZbksljshZgbf",
+      "T9m7dWQRroLg4yxq444l624ygxh",
+      "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+      "QWK8dpaL6oOiewxSyGelOo1qgIf",
+      "E8hldpYItojP63xpN41lX6MZgAh",
+      "Dhz5dxAIKoUriHxMIABldrvxgJf",
+      "EiVudbyZhoUUT8xT9kqlY2Roglh",
+      "QhlxdP450o3ecxxtDcmlFUYPgpl",
+      "LEPEdGqXloWl3IxsUPjlk4sUgfc",
+      "Gg67dumLPon5nExVTBYlQvbBgEe",
+      "OYtFdymEuoUkoqxDIT3lwxcbgVg",
+      "MxqYd1rdzoul7VxNrRzl1WBqgkS",
+      "Qf7Hdd67do0eKkxYsk7lQdYbgLe",
+      "BocDdefcDoAyTqxYp0glmucNggj",
+      "IHtNdTx9CoMF78xi38KlSl5Zgdg",
+      "G0nydQHIToON3QxKFuYlmnlwgCb",
+      "XXaZdlinLoA4KjxEiUmlutn2gPf",
+      "Lkhido3lto2m4lxtjAVlLsM2gpM",
+      "CETmdkNwQo8jzqxSYvklCFttgEc",
+      "GkrEdfa8UoehXfx0YiblDFmZgvf",
+      "DN92dWeCboF4CCx3Am7lWvsfg8e",
+      "C4nzdl7AZoZ8YWxN6Q0lba0cgBc",
+      "Je9vdANTnoSam3xPi61lZwetgVb",
+      "WbaZdPboWorDzvx2miVl8kRggOh",
+      "LnHzdSRjKoTvM5x6PgHlAOwVgPc",
+      "JFEwdJqwAoUbdUxWkCNlHyF3g7f",
+      "Jpi7dvBL6o0ahYxCMn0lJX91gud",
+      "QIs2dDIw5oERQXxcAXTlj88Jg4c",
+      "S9oEdyzjooCmyTxtWNrl51YPgdb",
+      "F2p0dCSzxorn9mx8FbRlAcCEgfe",
+      "YoYldyo1loARa0x8ODWlEqFLgub",
+      "Yq24dPLdUoapl7xkGNxlQZougcf",
+      "QxEodpPRYodsY7xdmrkl77Wjghc",
+      "OvxYdjLTdoeTEexKvEvlZbLYg0g",
+      "VHMJd43vZoBGEJxDoPElrvySgwd",
+      "Rhybdm5hcoAQvNx67igl11kYgvd",
+      "FgBKdIwUqoiZNXxy4KVlKys4guf",
+      "Rf7jdmizGocmEzxnSy4l25MhgTf",
+      "CtwTdgYXDor7IDxMZgYlrbSUgBh",
+      "NspkdDVjAoL2Y7x2icXlt3x7gic",
+      "QSiKdhrHHog0LxxSa58lKmVDgZe",
+      "SgGSdt5Cmoqi2QxQhVOlksHygXb",
+      "MsOkdnPV9o3Y0exN73jlYloEgLh",
+      "Kyd3dp829omrC7x4XuqlQ5YogQg",
+      "JDERdgOT3o2A54xQYJZlJ5RQgAd",
+      "QBqVdM5WPoivtrxOQLKljrK5gMY",
+      "DGrbdCBmNoC1mTxsJP2l9WfFg6f",
+      "RRoXdQ9yxoi38zxu17Ul6uxtg4n",
+      "MmOadfuZioHLZMxi6JclcQRHgdh",
+      "SfSidf7rMoY0uVxnHO9lFFE2gWb",
+      "LpFKdr8BioPB43xd5qPllJwCgTb",
+      "FxGBdD0l8oNjFBxf0SRliJTbgvb",
+      "GPBZdTBGzoA2Eoxx4yElBWqSgfe",
+      "BvN8dAJKdoZsynx0HSOlu5pKgVd",
+      "Mrt5dFa5Oo7q5QxPm5NlcH2pgct",
+      "F9TmdDKK0omEu9xqchVlqsRYgzd",
+      "GPsTdvTA6ozsQPxZvuqlIyM6g2W",
+      "K4GXdgkKho7zn3xfFqblR4oqg6c",
+      "A3GodR534oHIjJxPnIglTU37gUb",
+      "YUZqdsU0Co6Kr2xJ6I5lGskcgRf",
+      "HA0Ndv25ToqfgPxwl61lvYDAgxc",
+      "BdNTdzCE6o9PGxxaOM0lJ7dfgOb",
+      "XO4adY3r0oM4Ppx4QFiliiLVg1e",
+      "WixhdahrwoLYd1xpEUEldZKngob",
+      "F75FdBp7eoGCplx82E7ls6Spg9f",
+      "FZcJdG9x1oRdESxhBbml0kmWgRg",
+      "Lk2ZdAfpFouXVdxPgvWlTwYyghQ",
+      "D2pTd5gt8oIC4FxswoMlw9QTgRf",
+      "W1OUd40n1onyKNx0qxElphqKgGg",
+      "Tccsd3wiyocIyJxa69llkOFJgjg",
+      "Lvm4dvpLVoSqWIxx8Qsl7H8ygsg",
+      "P0Zpdtgb2o2z6dxAVQZlkKjFgfd",
+      "Vz3nd5LjFotHvdx9vJhlZaXbgmX",
+      "YBN6dCveJoQtgzx2StJl2Kn5gad",
+      "Fwyvd7tUXoOdidxdqqyl7o3fgOd",
+      "GPFwd4QkzofwAex5oFil4U56gsh",
+      "HOq4dTWxGomPYqxlTLplM85fgDh",
+      "Ki1ydd02kodAp1xG7a2laSQagZu",
+      "RM8ZdDJJyovbOVx9ZrqlTQhAgff",
+      "L4IxdGzTgovskNxbnOUlbVONgab",
+      "NJgTds7GFoYDnHxY6HGl0dLOgZg",
+      "PWNhdZeJNomB35xDboKlKxVygJf",
+      "WPLOdibxioRO6lx0gqgl2QuLgOh",
+      "ZbcEdxT8OofuHmxinC8lVvwuguc",
+      "Oja7dCi2VoCkHFxoTrFlo9Vygus",
+      "B1BodN86goVzklxeh7alCvohggg",
+      "SfTUdtdVwociLfxVAWElv62Pgcf",
+      "OxubdzVhAog8Atx3v7YlldN9gAc",
+      "Z6YNdXqJtozHpQxotPRlXmteg1b",
+      "IhQqdo3F9oFN2wxecjTlDjuqgI9"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "UazmdFokjovBz1xee63lz5E9gkf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "后续可优化：loading动画做得比较有趣",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EgOydQcUUo0sNlxuT0TlsnMcgkc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IpoMdEWmwoLVZKxKTBcllzgZgzd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YvcDdDDIwo7Exyx0evdleCdZg18",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "评审后讨论：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PmeHdje0MoRv95x66ENlB13Sgkf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、故事书离线模式下，屏蔽结算页面以及屏幕跟读结算页面。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FrYmdjkQZoC2EVxjQw9lmOxrgpd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、用户一开始界面语言是英语，后面切换成了印尼语，若在切换成功之后再断网，则离线模式展示印尼语。若在切换成功之前断网，则离线模式展示英语。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WssLdioHIojAzzxKWZKlranogyh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3、在【多】等子页面中无网络，点击下一本，无网络，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TrYkdCjbYolaVnxHgZnlYWgHgQg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "4、在故事书（flutter）、Gigglecast（flutter）、歌曲（Unity）、闪卡（Unity），自然拼读（Unity）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HMbAd9gfioS2rPxSf6vl5sWTgQb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AmFVdfDENozYUMxjCemlJFFrgjd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "故事书的来源：绘本故事看完了，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XL5YdLNiTobLmqxaXLjlO6jBg6f",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HWkGdFXtLopNLTxTGRYlzRzGg9b",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GEiJddLUfoFcNnx69QFlz6u8gwh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线tab和资源管理的内容：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HRpidoXiJoXSDcxCZKtlpztOgCd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "绘本故事、闪卡、歌曲、Gigglecast",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Th0Ld1GmvotdYWxkUsJleryZg3d",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KpCXdW4neoXui1xuB2AlLr20gMc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Wr8ddOpt2oElMdxhU3plnXONgfd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "儿歌空状态文案",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QYnhdYDo2o6P6SxEUumlsFY1gDe",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Download nursery songs to listen offline.（注：Figma 原文为 Download songs to sing along offline.）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CQdidbasyo3uNBx0MlAlPWmrgEh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VsL3dnFRYoFIdXxVLjHloMWPgxb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Delete All 弹窗标题",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AD8Edi2rEo5fR5xT1G3lrmVPgib",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Delete all offline stories? / Delete all offline nursery songs?",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HzH4dpkkAoy4mQxsT0AlBSPCgad",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F80bdQzDYoFZSSxYLFllbO0YgFh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "儿歌空状态文案和Delete All 弹窗标题 ，用这两个可以吧",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "M2oNdHMIcoyJNxxJPqblcFMeg2Q",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Gr1KdvCRvoV6O9xqHkzlILEygQc",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基本信息",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "block_type": 31,
+    "children": [
+      "R4aud3BLFo7GzyxfW2Il70Vigng",
+      "ERNzdtm7zo4yKyx2XvDlbc5bgvu",
+      "UnTgdJh8moL89pxlJknlwOwMgWe",
+      "Yi20dtNtRoKTANxqYONle6gag3b",
+      "FFipdUYpNooJKNxLX4rluC1ighd",
+      "VpM2dWe2Jo4r3Gxx3vulLK7Jg9g",
+      "FkOJdijWqosDUvxHqwelG63tgdg",
+      "HKwid5whToiBqhxjQWSldbRbg4g",
+      "OATkdSY1go4lNXxEBi5lQoaTgPb",
+      "PEGWdUkGYolS0pxvrx9lhXefgod",
+      "HnLwdgEkmoaa0axvfPTlLWUqg4f",
+      "XFxddwm3KoJ0Fgx4OXilZ3Ocgdg",
+      "UYoCddYFko8IEHxHQQJls4YSg4f",
+      "ZBS3drNykoH2nfxmDsBlhvxpgyh",
+      "V3NFdWst4oFM4dxJxCplNUKbgQc",
+      "TX6xdWyoIoqRKEx1ehull019gKf",
+      "DAuad8xExoNyl2xfVB8lwwAXgcb",
+      "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+      "NImcdtdK1oJzavx2h6XlUmY4g1c",
+      "Gw68d7DEPowhVwxQpW9lgqhwgYf",
+      "KOJLdNq17oZQr3xRzIYl0mPHgWb",
+      "FAEQdtLnnokE2jxAiL9lIJuvgdc",
+      "YbHkdDpRtoZ9iRxdO6SlU4S0gid",
+      "W0Ardj4h5okKIcxVqt6l8wGZglc",
+      "PkJ3ddXKJosQupxZLk5l4TxWgMg",
+      "Sjr3dxEVZo8Ocix3aMtloeSKgzf",
+      "M2CodJ0LSoUI7ZxUlZ3lbILLg1x",
+      "RgeAd9nq8oUMpSxeHRXltO6Mggg"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "table": {
+      "cells": [
+        "R4aud3BLFo7GzyxfW2Il70Vigng",
+        "ERNzdtm7zo4yKyx2XvDlbc5bgvu",
+        "UnTgdJh8moL89pxlJknlwOwMgWe",
+        "Yi20dtNtRoKTANxqYONle6gag3b",
+        "FFipdUYpNooJKNxLX4rluC1ighd",
+        "VpM2dWe2Jo4r3Gxx3vulLK7Jg9g",
+        "FkOJdijWqosDUvxHqwelG63tgdg",
+        "HKwid5whToiBqhxjQWSldbRbg4g",
+        "OATkdSY1go4lNXxEBi5lQoaTgPb",
+        "PEGWdUkGYolS0pxvrx9lhXefgod",
+        "HnLwdgEkmoaa0axvfPTlLWUqg4f",
+        "XFxddwm3KoJ0Fgx4OXilZ3Ocgdg",
+        "UYoCddYFko8IEHxHQQJls4YSg4f",
+        "ZBS3drNykoH2nfxmDsBlhvxpgyh",
+        "V3NFdWst4oFM4dxJxCplNUKbgQc",
+        "TX6xdWyoIoqRKEx1ehull019gKf",
+        "DAuad8xExoNyl2xfVB8lwwAXgcb",
+        "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+        "NImcdtdK1oJzavx2h6XlUmY4g1c",
+        "Gw68d7DEPowhVwxQpW9lgqhwgYf",
+        "KOJLdNq17oZQr3xRzIYl0mPHgWb",
+        "FAEQdtLnnokE2jxAiL9lIJuvgdc",
+        "YbHkdDpRtoZ9iRxdO6SlU4S0gid",
+        "W0Ardj4h5okKIcxVqt6l8wGZglc",
+        "PkJ3ddXKJosQupxZLk5l4TxWgMg",
+        "Sjr3dxEVZo8Ocix3aMtloeSKgzf",
+        "M2CodJ0LSoUI7ZxUlZ3lbILLg1x",
+        "RgeAd9nq8oUMpSxeHRXltO6Mggg"
+      ],
+      "property": {
+        "column_size": 4,
+        "column_width": [
+          168,
+          168,
+          168,
+          168
+        ],
+        "merge_info": [
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 2,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 3,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 3,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 3,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 3,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 7
+      }
+    }
+  },
+  {
+    "block_id": "R4aud3BLFo7GzyxfW2Il70Vigng",
+    "block_type": 32,
+    "children": [
+      "MqJRdx1vfoNAaPxadKnl7CfAgFe"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "MqJRdx1vfoNAaPxadKnl7CfAgFe",
+    "block_type": 2,
+    "parent_id": "R4aud3BLFo7GzyxfW2Il70Vigng",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "产品文档",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ERNzdtm7zo4yKyx2XvDlbc5bgvu",
+    "block_type": 32,
+    "children": [
+      "JnTWdtzceoz9dfxgMTilMgDMgYf"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JnTWdtzceoz9dfxgMTilMgDMgYf",
+    "block_type": 2,
+    "parent_id": "ERNzdtm7zo4yKyx2XvDlbc5bgvu",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UnTgdJh8moL89pxlJknlwOwMgWe",
+    "block_type": 32,
+    "children": [
+      "YnasdbxrQoPz9gx0BaelEYWEg1f"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "YnasdbxrQoPz9gx0BaelEYWEg1f",
+    "block_type": 2,
+    "parent_id": "UnTgdJh8moL89pxlJknlwOwMgWe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Yi20dtNtRoKTANxqYONle6gag3b",
+    "block_type": 32,
+    "children": [
+      "BhwidNSJDoKkSfxEMI0lUKSjgrc"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BhwidNSJDoKkSfxEMI0lUKSjgrc",
+    "block_type": 2,
+    "parent_id": "Yi20dtNtRoKTANxqYONle6gag3b",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FFipdUYpNooJKNxLX4rluC1ighd",
+    "block_type": 32,
+    "children": [
+      "CF6XdtGNVoFCH7xRjCOl7JeVgte"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CF6XdtGNVoFCH7xRjCOl7JeVgte",
+    "block_type": 2,
+    "parent_id": "FFipdUYpNooJKNxLX4rluC1ighd",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "产品Owner",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VpM2dWe2Jo4r3Gxx3vulLK7Jg9g",
+    "block_type": 32,
+    "children": [
+      "DrfpddD1Ao2RQtxYKxklR2s9gEd"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "DrfpddD1Ao2RQtxYKxklR2s9gEd",
+    "block_type": 2,
+    "parent_id": "VpM2dWe2Jo4r3Gxx3vulLK7Jg9g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FkOJdijWqosDUvxHqwelG63tgdg",
+    "block_type": 32,
+    "children": [
+      "HomTdMcfGopS9exmrp0l5Uthg9e"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "HomTdMcfGopS9exmrp0l5Uthg9e",
+    "block_type": 2,
+    "parent_id": "FkOJdijWqosDUvxHqwelG63tgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Sunny",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HKwid5whToiBqhxjQWSldbRbg4g",
+    "block_type": 32,
+    "children": [
+      "L775dPkSSoelnnxn2gdlJlNGgfb"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "L775dPkSSoelnnxn2gdlJlNGgfb",
+    "block_type": 2,
+    "parent_id": "HKwid5whToiBqhxjQWSldbRbg4g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OATkdSY1go4lNXxEBi5lQoaTgPb",
+    "block_type": 32,
+    "children": [
+      "GhQEdb82roh11sxXCwUldua0gMe"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "GhQEdb82roh11sxXCwUldua0gMe",
+    "block_type": 2,
+    "parent_id": "OATkdSY1go4lNXxEBi5lQoaTgPb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "优先级",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PEGWdUkGYolS0pxvrx9lhXefgod",
+    "block_type": 32,
+    "children": [
+      "U4LTdZCwMoj2xoxHeDAlGgpig1d"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "U4LTdZCwMoj2xoxHeDAlGgpig1d",
+    "block_type": 2,
+    "parent_id": "PEGWdUkGYolS0pxvrx9lhXefgod",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "高",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HnLwdgEkmoaa0axvfPTlLWUqg4f",
+    "block_type": 32,
+    "children": [
+      "ErOodVIjNoWnn0xWRgelPMuhgFe"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "ErOodVIjNoWnn0xWRgelPMuhgFe",
+    "block_type": 2,
+    "parent_id": "HnLwdgEkmoaa0axvfPTlLWUqg4f",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "版本号",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XFxddwm3KoJ0Fgx4OXilZ3Ocgdg",
+    "block_type": 32,
+    "children": [
+      "A9Z4deeazoc11Xxe0Htlmr6zgHg"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "A9Z4deeazoc11Xxe0Htlmr6zgHg",
+    "block_type": 2,
+    "parent_id": "XFxddwm3KoJ0Fgx4OXilZ3Ocgdg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "V1.0",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UYoCddYFko8IEHxHQQJls4YSg4f",
+    "block_type": 32,
+    "children": [
+      "CWc7d7WYCoJfEUx5IL8lulSNgTg"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CWc7d7WYCoJfEUx5IL8lulSNgTg",
+    "block_type": 2,
+    "parent_id": "UYoCddYFko8IEHxHQQJls4YSg4f",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZBS3drNykoH2nfxmDsBlhvxpgyh",
+    "block_type": 32,
+    "children": [
+      "HkUkdugvLop3dwxUNiBlhEpYgs3",
+      "TOByddukPowqGPxBin2lXqoHgah"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "HkUkdugvLop3dwxUNiBlhEpYgs3",
+    "block_type": 2,
+    "parent_id": "ZBS3drNykoH2nfxmDsBlhvxpgyh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、让更多网络不发达地区的孩子也可以正常学习",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TOByddukPowqGPxBin2lXqoHgah",
+    "block_type": 2,
+    "parent_id": "ZBS3drNykoH2nfxmDsBlhvxpgyh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、满足更多碎片化学习场景，比如说 坐车、在外吃饭等待等。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "V3NFdWst4oFM4dxJxCplNUKbgQc",
+    "block_type": 32,
+    "children": [
+      "Mff9dGJ76oZYRBx8KqCl0PujgCc"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Mff9dGJ76oZYRBx8KqCl0PujgCc",
+    "block_type": 2,
+    "parent_id": "V3NFdWst4oFM4dxJxCplNUKbgQc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TX6xdWyoIoqRKEx1ehull019gKf",
+    "block_type": 32,
+    "children": [
+      "Eyvlddl7Eo0NCzxuO0vlAvHLg6g"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Eyvlddl7Eo0NCzxuO0vlAvHLg6g",
+    "block_type": 2,
+    "parent_id": "TX6xdWyoIoqRKEx1ehull019gKf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DAuad8xExoNyl2xfVB8lwwAXgcb",
+    "block_type": 32,
+    "children": [
+      "CsFDdNVQjoZoWAxim5tlQFNqgmc",
+      "BS3sdEuXooY6QIxFehklCs8Ygdg"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CsFDdNVQjoZoWAxim5tlQFNqgmc",
+    "block_type": 2,
+    "parent_id": "DAuad8xExoNyl2xfVB8lwwAXgcb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "产品目标",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BS3sdEuXooY6QIxFehklCs8Ygdg",
+    "block_type": 2,
+    "parent_id": "DAuad8xExoNyl2xfVB8lwwAXgcb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+    "block_type": 32,
+    "children": [
+      "OB9OdbUGUoQUoHxEl6llX0HhghE",
+      "BMnLdLs7Zo935yx98LMlWz4Rg7J",
+      "Geh0dcUcTo1GWtxqAOBlumKwgTf"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "OB9OdbUGUoQUoHxEl6llX0HhghE",
+    "block_type": 2,
+    "parent_id": "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、在磨耳朵和歌曲场景，有多少用户愿意主动使用离线下载功能",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BMnLdLs7Zo935yx98LMlWz4Rg7J",
+    "block_type": 2,
+    "parent_id": "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、在离线功能下，用户的学习时长和完课数量，业务活跃占比",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Geh0dcUcTo1GWtxqAOBlumKwgTf",
+    "block_type": 2,
+    "parent_id": "F6fHdZYS0oF1jVxrcWjljfoQg3c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3、用户离线管理资源的使用习惯",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NImcdtdK1oJzavx2h6XlUmY4g1c",
+    "block_type": 32,
+    "children": [
+      "CUocdudsHoEOaLxfjL1lEg2Lgab"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CUocdudsHoEOaLxfjL1lEg2Lgab",
+    "block_type": 2,
+    "parent_id": "NImcdtdK1oJzavx2h6XlUmY4g1c",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Gw68d7DEPowhVwxQpW9lgqhwgYf",
+    "block_type": 32,
+    "children": [
+      "G6YHdY4SHoP7mZxgBEylPoe5gng"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "G6YHdY4SHoP7mZxgBEylPoe5gng",
+    "block_type": 2,
+    "parent_id": "Gw68d7DEPowhVwxQpW9lgqhwgYf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KOJLdNq17oZQr3xRzIYl0mPHgWb",
+    "block_type": 32,
+    "children": [
+      "U6Mqd2H1roYXGTxaZwAlEqigghd"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "U6Mqd2H1roYXGTxaZwAlEqigghd",
+    "block_type": 2,
+    "parent_id": "KOJLdNq17oZQr3xRzIYl0mPHgWb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "主要特性",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FAEQdtLnnokE2jxAiL9lIJuvgdc",
+    "block_type": 32,
+    "children": [
+      "OqiYdxlTvoIfMTxxinvlUMPYgeJ"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "OqiYdxlTvoIfMTxxinvlUMPYgeJ",
+    "block_type": 2,
+    "parent_id": "FAEQdtLnnokE2jxAiL9lIJuvgdc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YbHkdDpRtoZ9iRxdO6SlU4S0gid",
+    "block_type": 32,
+    "children": [
+      "LUlod5GBjon2hcx0VJ1lo9A8gxb"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LUlod5GBjon2hcx0VJ1lo9A8gxb",
+    "block_type": 2,
+    "parent_id": "YbHkdDpRtoZ9iRxdO6SlU4S0gid",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W0Ardj4h5okKIcxVqt6l8wGZglc",
+    "block_type": 32,
+    "children": [
+      "CrECdcLeGo2H6rxBYV9lA57fg51"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CrECdcLeGo2H6rxBYV9lA57fg51",
+    "block_type": 2,
+    "parent_id": "W0Ardj4h5okKIcxVqt6l8wGZglc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PkJ3ddXKJosQupxZLk5l4TxWgMg",
+    "block_type": 32,
+    "children": [
+      "F8bVdNMaCoNDiMxhlS2lisZZgJQ"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "F8bVdNMaCoNDiMxhlS2lisZZgJQ",
+    "block_type": 2,
+    "parent_id": "PkJ3ddXKJosQupxZLk5l4TxWgMg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "修订记录",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Sjr3dxEVZo8Ocix3aMtloeSKgzf",
+    "block_type": 32,
+    "children": [
+      "Q9MqdSgi4o7Uf5xBSs5lUSxWgbg"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Q9MqdSgi4o7Uf5xBSs5lUSxWgbg",
+    "block_type": 2,
+    "parent_id": "Sjr3dxEVZo8Ocix3aMtloeSKgzf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "-",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "M2CodJ0LSoUI7ZxUlZ3lbILLg1x",
+    "block_type": 32,
+    "children": [
+      "AEchdMwksotiAFx9Cenlmzm7g9c"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "AEchdMwksotiAFx9Cenlmzm7g9c",
+    "block_type": 2,
+    "parent_id": "M2CodJ0LSoUI7ZxUlZ3lbILLg1x",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RgeAd9nq8oUMpSxeHRXltO6Mggg",
+    "block_type": 32,
+    "children": [
+      "JrxCd4KCHoNSdWxkEu3lmH9fgIg"
+    ],
+    "parent_id": "Tw0PdHmQMoWaE9xZbksljshZgbf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JrxCd4KCHoNSdWxkEu3lmH9fgIg",
+    "block_type": 2,
+    "parent_id": "RgeAd9nq8oUMpSxeHRXltO6Mggg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T9m7dWQRroLg4yxq444l624ygxh",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "资源列表",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+    "block_type": 31,
+    "children": [
+      "K4s1dv3UQoXOPhxOEiwlIDb1glb",
+      "Bc2WdgZJTofgx2xYnRllU6V1grh",
+      "RcKlddLwyoBcbFxn9sMlbMMTgAx",
+      "Yz8nd3CUDobHTnxgqMklGlnTgye"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "table": {
+      "cells": [
+        "K4s1dv3UQoXOPhxOEiwlIDb1glb",
+        "Bc2WdgZJTofgx2xYnRllU6V1grh",
+        "RcKlddLwyoBcbFxn9sMlbMMTgAx",
+        "Yz8nd3CUDobHTnxgqMklGlnTgye"
+      ],
+      "property": {
+        "column_size": 4,
+        "column_width": [
+          168,
+          168,
+          168,
+          168
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 3,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 1
+      }
+    }
+  },
+  {
+    "block_id": "K4s1dv3UQoXOPhxOEiwlIDb1glb",
+    "block_type": 32,
+    "children": [
+      "XZFydew9QolEPJxnDIalAwXngyd"
+    ],
+    "parent_id": "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+    "table_cell": {}
+  },
+  {
+    "block_id": "XZFydew9QolEPJxnDIalAwXngyd",
+    "block_type": 2,
+    "parent_id": "K4s1dv3UQoXOPhxOEiwlIDb1glb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI设计稿",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Bc2WdgZJTofgx2xYnRllU6V1grh",
+    "block_type": 32,
+    "children": [
+      "HulydglFdoYNJTxPWKIlatUHgsg"
+    ],
+    "parent_id": "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+    "table_cell": {}
+  },
+  {
+    "block_id": "HulydglFdoYNJTxPWKIlatUHgsg",
+    "block_type": 2,
+    "parent_id": "Bc2WdgZJTofgx2xYnRllU6V1grh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/pmwCeG2HcNaEBnUmt5kK46/1.36.0?node-id=47024-5154&t=u0wh4n4ObZtqSwAk-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RcKlddLwyoBcbFxn9sMlbMMTgAx",
+    "block_type": 32,
+    "children": [
+      "FWxTd55ZyoXH6Hx1s5Ele8GQgMe"
+    ],
+    "parent_id": "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+    "table_cell": {}
+  },
+  {
+    "block_id": "FWxTd55ZyoXH6Hx1s5Ele8GQgMe",
+    "block_type": 2,
+    "parent_id": "RcKlddLwyoBcbFxn9sMlbMMTgAx",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Yz8nd3CUDobHTnxgqMklGlnTgye",
+    "block_type": 32,
+    "children": [
+      "UpgDdq238ouHdaxkdMBlVnTjgFg"
+    ],
+    "parent_id": "AMBVdkdePoFAbRxuvwAlEm4Zgyh",
+    "table_cell": {}
+  },
+  {
+    "block_id": "UpgDdq238ouHdaxkdMBlVnTjgFg",
+    "block_type": 2,
+    "parent_id": "Yz8nd3CUDobHTnxgqMklGlnTgye",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QWK8dpaL6oOiewxSyGelOo1qgIf",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "E8hldpYItojP63xpN41lX6MZgAh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求清单",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "block_type": 31,
+    "children": [
+      "Ry2vd9wbJowdzPx6GZBlwVsAgGb",
+      "KSptdDIKLoWO18xHSqvl7mpagXc",
+      "MRIodYurSoXmBexm8twlcJqRgXc",
+      "LvT0dJ2XtoQY1VxUYXMlivUSgDf",
+      "UHIidwNTBoC9RMxsLxKlUNJRguh",
+      "GJ0rdSzIEoCDyWxfWvEldUPGgnb",
+      "NOj8dEQyWoPJU1xnuoClrfc0glf",
+      "E2a6demaSouVb4xbIvBlZhdvgbc",
+      "MA7RdujEdoB7kOxnl6Ul6BmkgOc",
+      "KO4UdE9cWoa0hNxnnc4lI8aAgxe",
+      "LebIdm8inoZzTcxRw7El5W9Lgoc",
+      "UACxdzWe3oVjYKxZGevlS2Ewghv"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "table": {
+      "cells": [
+        "Ry2vd9wbJowdzPx6GZBlwVsAgGb",
+        "KSptdDIKLoWO18xHSqvl7mpagXc",
+        "MRIodYurSoXmBexm8twlcJqRgXc",
+        "LvT0dJ2XtoQY1VxUYXMlivUSgDf",
+        "UHIidwNTBoC9RMxsLxKlUNJRguh",
+        "GJ0rdSzIEoCDyWxfWvEldUPGgnb",
+        "NOj8dEQyWoPJU1xnuoClrfc0glf",
+        "E2a6demaSouVb4xbIvBlZhdvgbc",
+        "MA7RdujEdoB7kOxnl6Ul6BmkgOc",
+        "KO4UdE9cWoa0hNxnnc4lI8aAgxe",
+        "LebIdm8inoZzTcxRw7El5W9Lgoc",
+        "UACxdzWe3oVjYKxZGevlS2Ewghv"
+      ],
+      "property": {
+        "column_size": 2,
+        "column_width": [
+          100,
+          511
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 6
+      }
+    }
+  },
+  {
+    "block_id": "Ry2vd9wbJowdzPx6GZBlwVsAgGb",
+    "block_type": 32,
+    "children": [
+      "D4pcdT4EToV9iwx2oB2lS77vgYe"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "D4pcdT4EToV9iwx2oB2lS77vgYe",
+    "block_type": 2,
+    "parent_id": "Ry2vd9wbJowdzPx6GZBlwVsAgGb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KSptdDIKLoWO18xHSqvl7mpagXc",
+    "block_type": 32,
+    "children": [
+      "SYqtdmjNwoLznQxcgVvlBmlggih"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "SYqtdmjNwoLznQxcgVvlBmlggih",
+    "block_type": 2,
+    "parent_id": "KSptdDIKLoWO18xHSqvl7mpagXc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MRIodYurSoXmBexm8twlcJqRgXc",
+    "block_type": 32,
+    "children": [
+      "IDamd51ksoPsv4xT1rnlnnl7gxg"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IDamd51ksoPsv4xT1rnlnnl7gxg",
+    "block_type": 2,
+    "parent_id": "MRIodYurSoXmBexm8twlcJqRgXc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LvT0dJ2XtoQY1VxUYXMlivUSgDf",
+    "block_type": 32,
+    "children": [
+      "HTMgdBUeJotVg6xU1M6l0zAygbc"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "HTMgdBUeJotVg6xU1M6l0zAygbc",
+    "block_type": 2,
+    "parent_id": "LvT0dJ2XtoQY1VxUYXMlivUSgDf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式资源页面改版，新增资源列表页面，不再展示之前的路径离线状态",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UHIidwNTBoC9RMxsLxKlUNJRguh",
+    "block_type": 32,
+    "children": [
+      "RHe0dz6Brobh2JxqByslNLdsgVh"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "RHe0dz6Brobh2JxqByslNLdsgVh",
+    "block_type": 2,
+    "parent_id": "UHIidwNTBoC9RMxsLxKlUNJRguh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GJ0rdSzIEoCDyWxfWvEldUPGgnb",
+    "block_type": 32,
+    "children": [
+      "WtI6dKQPHoRUkbxY4hulIgtOgnb"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "WtI6dKQPHoRUkbxY4hulIgtOgnb",
+    "block_type": 2,
+    "parent_id": "GJ0rdSzIEoCDyWxfWvEldUPGgnb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "更多资源中，歌曲和磨耳朵页面，右上角新增离线下载功能，可以下载资源，并且在设置中删除管理",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NOj8dEQyWoPJU1xnuoClrfc0glf",
+    "block_type": 32,
+    "children": [
+      "FWeldv5Q3oblDMxZtgClCcgVgGe"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "FWeldv5Q3oblDMxZtgClCcgVgGe",
+    "block_type": 2,
+    "parent_id": "NOj8dEQyWoPJU1xnuoClrfc0glf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "E2a6demaSouVb4xbIvBlZhdvgbc",
+    "block_type": 32,
+    "children": [
+      "Ku1IdFQslorqpWxA57slWhnzgSc"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Ku1IdFQslorqpWxA57slWhnzgSc",
+    "block_type": 2,
+    "parent_id": "E2a6demaSouVb4xbIvBlZhdvgbc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线页面中新增有网络连接弹窗提示",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MA7RdujEdoB7kOxnl6Ul6BmkgOc",
+    "block_type": 32,
+    "children": [
+      "LPiSdqN9Bo1KZkxWWQ7lQR3ggqb"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LPiSdqN9Bo1KZkxWWQ7lQR3ggqb",
+    "block_type": 2,
+    "parent_id": "MA7RdujEdoB7kOxnl6Ul6BmkgOc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "4",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KO4UdE9cWoa0hNxnnc4lI8aAgxe",
+    "block_type": 32,
+    "children": [
+      "LO4mdc87JoE8vsxM5whlw9Tygud"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "LO4mdc87JoE8vsxM5whlw9Tygud",
+    "block_type": 2,
+    "parent_id": "KO4UdE9cWoa0hNxnnc4lI8aAgxe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "模版和模版资源的特殊处理规则",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LebIdm8inoZzTcxRw7El5W9Lgoc",
+    "block_type": 32,
+    "children": [
+      "XfiqdM46MoFMrZxwqivlxtQhgth"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "XfiqdM46MoFMrZxwqivlxtQhgth",
+    "block_type": 2,
+    "parent_id": "LebIdm8inoZzTcxRw7El5W9Lgoc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "5（评审后补充）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UACxdzWe3oVjYKxZGevlS2Ewghv",
+    "block_type": 32,
+    "children": [
+      "KOjod54efogMOPx00J7l4Iidgeg"
+    ],
+    "parent_id": "Dhz5dxAIKoUriHxMIABldrvxgJf",
+    "table_cell": {}
+  },
+  {
+    "block_id": "KOjod54efogMOPx00J7l4Iidgeg",
+    "block_type": 2,
+    "parent_id": "UACxdzWe3oVjYKxZGevlS2Ewghv",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "弱网情况 APP 内进 H5 页面，现在好像没有提示。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EiVudbyZhoUUT8xT9kqlY2Roglh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QhlxdP450o3ecxxtDcmlFUYPgpl",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题描述：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LEPEdGqXloWl3IxsUPjlk4sUgfc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题 1：giggles不足点击购买服饰，没有响应",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Gg67dumLPon5nExVTBYlQvbBgEe",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题2 :  新包首次进入奖励中心需要6s",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OYtFdymEuoUkoqxDIT3lwxcbgVg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题3：打开排行榜较慢，影响体验（学完课程自动触发7s）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MxqYd1rdzoul7VxNrRzl1WBqgkS",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题4：进入闪卡模块图片加载较慢，无兜底图。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Qf7Hdd67do0eKkxYsk7lQdYbgLe",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题5：安装应用首次打开睡前时光，需要 7S",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BocDdefcDoAyTqxYp0glmucNggj",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题6：进入专题课页面较慢，并且无页面兜底展示",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IHtNdTx9CoMF78xi38KlSl5Zgdg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "问题7：安装应用首次打开 AI tutor ，需要 12S",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "G0nydQHIToON3QxKFuYlmnlwgCb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://admin-ga.toolsapple.net/task/workspaces/giggle-academy/projects/cmmwxrg9i00005h8j4nwl8n2t/issues/cmr1havdw00bj6x0o25jkf9sd",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XXaZdlinLoA4KjxEiUmlutn2gPf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "解决方案：H5在页面中把用户网络状况呈现出来",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Lkhido3lto2m4lxtjAVlLsM2gpM",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CETmdkNwQo8jzqxSYvklCFttgEc",
+    "block_type": 43,
+    "board": {
+      "token": "WeGjw7ow4hJ9SLbVnFalAtprg4e"
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "GkrEdfa8UoehXfx0YiblDFmZgvf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DN92dWeCboF4CCx3Am7lWvsfg8e",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1离线模式主页面",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "C4nzdl7AZoZ8YWxN6Q0lba0cgBc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "课程（所有内容）中突然断网，不出离线弹窗引导，等用户退出课程进入首页后再出现弹窗。",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Je9vdANTnoSam3xPi61lZwetgVb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线弹窗弹出的时机，只能在首页中",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WbaZdPboWorDzvx2miVl8kRggOh",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.1进入离线模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "LnHzdSRjKoTvM5x6PgHlAOwVgPc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JFEwdJqwAoUbdUxWkCNlHyF3g7f",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 726,
+      "scale": 0.27197802197802196,
+      "token": "EJtzb99xhoVyeCxsqXalLv7qgog",
+      "width": 1456
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "Jpi7dvBL6o0ahYxCMn0lJX91gud",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.2离线模式使用路径",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "QIs2dDIw5oERQXxcAXTlj88Jg4c",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式，根据不同的资源区分tab展示：课程、歌曲、磨耳朵，其他的资源也可以先展示出来，有资源才展示离线tab。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "S9oEdyzjooCmyTxtWNrl51YPgdb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击直接进入课程，体验课程，完课后直接退出。不记录完课状态，不发放奖励，不播放路径中的结算动画",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F2p0dCSzxorn9mx8FbRlAcCEgfe",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、课程预制到课程包，15节课。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YoYldyo1loARa0x8ODWlEqFLgub",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、离线缓存：用户在联网状态下学过的课程，可以缓存到本地，让用户在离线状态下也可以学习。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Yq24dPLdUoapl7xkGNxlQZougcf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3、内容范围：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "游戏课（普通和模版课程）、歌曲、",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "故事书（flutter）、闪卡（JUN）磨耳朵（flutter）、",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QxEodpPRYodsY7xdmrkl77Wjghc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "暂时不支持：自然拼读、绘画、挑战课",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OvxYdjLTdoeTEexKvEvlZbLYg0g",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "4、排序规则：课程根据路径排序、其他类型根据联网模式的排序规则一致",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VHMJd43vZoBGEJxDoPElrvySgwd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 736,
+      "scale": 0.34293193717277487,
+      "token": "RhOYben29oaw0HxSteElmhW1gjK",
+      "width": 1528
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "Rhybdm5hcoAQvNx67igl11kYgvd",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1.3退出离线模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "FgBKdIwUqoiZNXxy4KVlKys4guf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "当用户在离线模式主页面，连接网络后，弹窗提示用户切换到联网模式。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Rf7jdmizGocmEzxnSy4l25MhgTf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "弹窗只出现在离线的主页，内容实用中不出弹窗。",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CtwTdgYXDor7IDxMZgYlrbSUgBh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NspkdDVjAoL2Y7x2icXlt3x7gic",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 654,
+      "scale": 0.4032258064516129,
+      "token": "ZWgkbRGoxoz0GTxbR2alwAtmgMf",
+      "width": 1364
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "QSiKdhrHHog0LxxSa58lKmVDgZe",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2歌曲（Unity）磨耳朵（Flutter）新增离线下载功能",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "SgGSdt5Cmoqi2QxQhVOlksHygXb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.1下载入口页面",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MsOkdnPV9o3Y0exN73jlYloEgLh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "功能上线后，用户首次访问页面，出现新手引导一次【离线下载】",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Kyd3dp829omrC7x4XuqlQ5YogQg",
+    "block_type": 2,
+    "comment_ids": [
+      "7667482229567672028"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击下载的时候，做登录校验，",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7667482229567672028"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JDERdgOT3o2A54xQYJZlJ5RQgAd",
+    "block_type": 2,
+    "comment_ids": [
+      "7667482229567672028"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "若未登录，调起【登录页面】",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7667482229567672028"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QBqVdM5WPoivtrxOQLKljrK5gMY",
+    "block_type": 2,
+    "comment_ids": [
+      "7667482229567672028"
+    ],
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "若已登录，则进入离线访问模式",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7667482229567672028"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": true,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DGrbdCBmNoC1mTxsJP2l9WfFg6f",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RRoXdQ9yxoi38zxu17Ul6uxtg4n",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "加一个离线状态的功能说明，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MmOadfuZioHLZMxi6JclcQRHgdh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、下载后随时实地又可以听。2、每次听都不花流量。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SfSidf7rMoY0uVxnHO9lFFE2gWb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "菜单栏可以新增一个主动触发离线模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LpFKdr8BioPB43xd5qPllJwCgTb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "测试看看，有多少用户愿意主动探索离线下载功能？",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FxGBdD0l8oNjFBxf0SRliJTbgvb",
+    "block_type": 24,
+    "children": [
+      "XuRjdOCIIodaoMxTBfZlwDEzgah",
+      "AjEGdOxOuotX7hxk73UlaEA4gxg"
+    ],
+    "grid": {
+      "column_size": 2
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "XuRjdOCIIodaoMxTBfZlwDEzgah",
+    "block_type": 25,
+    "children": [
+      "NtcbdxEh3oKzdKxjjsClcoXEggh"
+    ],
+    "grid_column": {
+      "width_ratio": 50
+    },
+    "parent_id": "FxGBdD0l8oNjFBxf0SRliJTbgvb"
+  },
+  {
+    "block_id": "NtcbdxEh3oKzdKxjjsClcoXEggh",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 596,
+      "scale": 0.6426056338028169,
+      "token": "GXFybkKIaouCb9xXOxOlMZfrgfW",
+      "width": 1136
+    },
+    "parent_id": "XuRjdOCIIodaoMxTBfZlwDEzgah"
+  },
+  {
+    "block_id": "AjEGdOxOuotX7hxk73UlaEA4gxg",
+    "block_type": 25,
+    "children": [
+      "SUVBdFdJuo195kxIHWnlpKm0g1g"
+    ],
+    "grid_column": {
+      "width_ratio": 49
+    },
+    "parent_id": "FxGBdD0l8oNjFBxf0SRliJTbgvb"
+  },
+  {
+    "block_id": "SUVBdFdJuo195kxIHWnlpKm0g1g",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 608,
+      "scale": 0.6460176991150443,
+      "token": "I3K7bVSXjoqDtYx28uqlIMUrgyh",
+      "width": 1130
+    },
+    "parent_id": "AjEGdOxOuotX7hxk73UlaEA4gxg"
+  },
+  {
+    "block_id": "GPBZdTBGzoA2Eoxx4yElBWqSgfe",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 630,
+      "scale": 0.3188908145580589,
+      "token": "TqHKb7clfo70xcxWFVQlzXr9g7g",
+      "width": 1154
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "BvN8dAJKdoZsynx0HSOlu5pKgVd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.2下载模式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Mrt5dFa5Oo7q5QxPm5NlcH2pgct",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击下载 icon 进入下载模式后，每个资源下均有下载的 icon。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F9TmdDKK0omEu9xqchVlqsRYgzd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "下载模式为临时模式，退出当前列表后，再次访问会重置为列表模式。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GPsTdvTA6ozsQPxZvuqlIyM6g2W",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "K4GXdgkKho7zn3xfFqblR4oqg6c",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击下载 icon：进入到单个资源的下载流程中，一旦开始下载不支持暂停；",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "A3GodR534oHIjJxPnIglTU37gUb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击下载完成的 icon：TTS会提示该资源已经下载",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "YUZqdsU0Co6Kr2xJ6I5lGskcgRf",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1024,
+      "scale": 1,
+      "token": "RZezbVs1RorMHgxZsEJlfPGMgJb",
+      "width": 1384
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "HA0Ndv25ToqfgPxwl61lvYDAgxc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "BdNTdzCE6o9PGxxaOM0lJ7dfgOb",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "XO4adY3r0oM4Ppx4QFiliiLVg1e",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WixhdahrwoLYd1xpEUEldZKngob",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "F75FdBp7eoGCplx82E7ls6Spg9f",
+    "block_type": 7,
+    "heading5": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "3离线资源管理",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "FZcJdG9x1oRdESxhBbml0kmWgRg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "模版课程 (课程资源[会共用]+单词资源【必须】",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Lk2ZdAfpFouXVdxPgvWlTwYyghQ",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "使用层面，分开展示",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "D2pTd5gt8oIC4FxswoMlw9QTgRf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "资源层面，同一个Color下的课程合在一个包中（Color1、color2、color3）",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W1OUd40n1onyKNx0qxElphqKgGg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Tccsd3wiyocIyJxa69llkOFJgjg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "模版资源（闪卡）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Lvm4dvpLVoSqWIxx8Qsl7H8ygsg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "使用层面，分开展示",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "P0Zpdtgb2o2z6dxAVQZlkKjFgfd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "资源层面，只提供单词包的删除功能，模版资源不删除。",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Vz3nd5LjFotHvdx9vJhlZaXbgmX",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YBN6dCveJoQtgzx2StJl2Kn5gad",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "页面说明：根据不同的资源区分tab展示：课程、歌曲、磨耳朵，其他的资源也可以先展示出来，有资源才展示。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Fwyvd7tUXoOdidxdqqyl7o3fgOd",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击课程进入课程子页面，根据Level排序，连续展示。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GPFwd4QkzofwAex5oFil4U56gsh",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HOq4dTWxGomPYqxlTLplM85fgDh",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1242,
+      "scale": 1,
+      "token": "C0Jhb0XB8ozhaPxGWR0laubXgyd",
+      "width": 1850
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "Ki1ydd02kodAp1xG7a2laSQagZu",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RM8ZdDJJyovbOVx9ZrqlTQhAgff",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据埋点",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "L4IxdGzTgovskNxbnOUlbVONgab",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "离线模式下用户触发的埋点事件，等用户连接网络后依然会上报埋点，时间同步确认，以用户实际发生的时间上报。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NJgTds7GFoYDnHxY6HGl0dLOgZg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "APP被杀掉后，埋点会丢失。（需要测试注意）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "mention_user": {
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "user_id": "ou_72b33ef816016a370abb4476fd287834"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PWNhdZeJNomB35xDboKlKxVygJf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WPLOdibxioRO6lx0gqgl2QuLgOh",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 736,
+      "scale": 0.34293193717277487,
+      "token": "Wd0GbefepoBGczx7gselA2Ktg8e",
+      "width": 1528
+    },
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g"
+  },
+  {
+    "block_id": "ZbcEdxT8OofuHmxinC8lVvwuguc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Oja7dCi2VoCkHFxoTrFlo9Vygus",
+    "block_type": 30,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "sheet": {
+      "token": "We9Bswx9chfumTtDwbqlu7svgxd_F9csHm"
+    }
+  },
+  {
+    "block_id": "B1BodN86goVzklxeh7alCvohggg",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SfTUdtdVwociLfxVAWElv62Pgcf",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OxubdzVhAog8Atx3v7YlldN9gAc",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "已有埋点参考，研发不调整，产品参考",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Z6YNdXqJtozHpQxotPRlXmteg1b",
+    "block_type": 30,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "sheet": {
+      "token": "We9Bswx9chfumTtDwbqlu7svgxd_58sclD"
+    }
+  },
+  {
+    "block_id": "IhQqdo3F9oFN2wxecjTlDjuqgI9",
+    "block_type": 2,
+    "parent_id": "Jzp2dr7sJowTXsxc2JHloJhqg5g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]
