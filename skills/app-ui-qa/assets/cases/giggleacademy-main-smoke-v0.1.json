@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "name": "giggleacademy-main-smoke-v0.1",
-  "description": "Giggle Academy 主流程冒烟用例。主流程使用固定账号与 Lv1 -> unit5-当前全类型专用路径；范围包含启动、新用户、登录、设置、指定课程、四套单元复习、故事书入口、闪卡模块、搜索课程，以及最后切换旧测试账号完成升级 Quiz。",
-  "status": "updated_from_test_manager_2026-08-19_fixed-account-and-path",
+  "description": "Giggle Academy 主流程冒烟用例。主流程使用固定账号与 Lv1 -> unit5-当前全类型专用路径；范围包含启动、新用户、登录、设置、指定课程、四套单元复习、故事书阅读/领读/问答模式、闪卡模块、搜索课程，以及最后切换旧测试账号完成升级 Quiz。",
+  "status": "updated_from_test_manager_2026-09-02_s16-story-modes",
   "source": {
     "type": "mindmap-image",
     "path": "/Users/areli/Downloads/whiteboard_exported_image.png",
@@ -48,7 +48,7 @@
       "label": "unit5-当前全类型",
       "resetRule": "Whenever a listed course cannot be found, rerun all of S05 before searching again."
     },
-    "storybookSampling": "random-visible-book-and-level",
+    "storybookSampling": "S16 Read uses any visible book; Guide searches ipad for Max的iPad; Quiz searches quiz for Max的魔法助人帽; Recording is skipped as an automation limitation.",
     "autoEnterNextCourseRecovery": {
       "appliesTo": "any course completion, including beginner course",
       "onlyAfterCourseCompletion": true,
@@ -158,7 +158,7 @@
       "奖励中心",
       "S07 字母体操 1",
       "S12 路径闪卡课程",
-      "S16 Read / Guide / Quiz 自动化（故事书改版期间跳过，人工已覆盖）"
+      "S16 录音模式（当前自动化无法完成真实录音行为）"
     ],
     "separatedCases": [
       "安卓渠道包冒烟：assets/cases/giggleacademy-android-channel-smoke-v0.1.md",
@@ -182,6 +182,8 @@
     "完课后如进入排行榜 / 学习之星，点击继续 / 下一步回到主界面后再继续后续用例。",
     "课程完成后的继续 / 下一步 / 右箭头点击前必须重新截图确认目标按钮仍可见；如果已经自动回到主页则跳过点击。",
     "非当前用例目标的引导弹窗优先尝试点击安全空白区域关闭，并记录截图和处理方式。",
+    "S16 必须覆盖阅读、领读和问答三种模式；录音模式仅标记为跳过 / 自动化能力限制，不影响其它模式执行。",
+    "故事书结算页约 5 秒后自动续播；若截图错过结算页，只要前序页面已完成且能正常进入下一本故事书，也可作为完成证据并在报告说明。",
     "日志只用于辅助判断，报告中不得暴露密码、token、完整 child_id、IP、音频 URL 等敏感字段。",
     "Android 冒烟前允许清除 App 数据覆盖首次安装和新用户流程；iOS 必须通过卸载旧 App、TestFlight 重装并保持未启动来获得首次状态。"
   ],
@@ -1500,15 +1502,283 @@
       }
     },
     {
-      "id": "s16-01-skip-redesigned-story-modes",
+      "id": "s16-01-open-any-book-for-read",
+      "type": "action",
+      "title": "阅读模式：进入任意故事书",
+      "objective": "从绘本故事首页进入任意一本可见故事书的封面或模式选择页。",
+      "action": "在绘本故事首页点击任意一本可见故事书，并记录所选书名。",
+      "expected": "进入故事书封面或模式选择页。",
+      "riskSignals": [
+        "故事书不可点击",
+        "封面或模式选择页未打开",
+        "进入后黑屏或白屏"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-01",
+        "bookSelection": "any-visible-book"
+      }
+    },
+    {
+      "id": "s16-02-start-read-mode",
+      "type": "action",
+      "title": "阅读模式：开始播放",
+      "objective": "确认阅读模式可从封面页正常启动。",
+      "action": "在封面页点击“阅读”按钮；如果已经默认选中仍要确认该状态，然后点击播放按钮。",
+      "expected": "正常进入阅读模式并开始播放。",
+      "riskSignals": [
+        "阅读按钮缺失或不可选",
+        "播放按钮无响应",
+        "播放页加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-02",
+        "mode": "read"
+      }
+    },
+    {
+      "id": "s16-03-open-read-menu",
+      "type": "action",
+      "title": "阅读模式：展开播放菜单",
+      "objective": "确认播放页右侧功能菜单可正常展开。",
+      "action": "点击播放界面右侧三个点图标。",
+      "expected": "菜单栏正常展开，功能按钮完整可见。",
+      "riskSignals": [
+        "三个点图标缺失",
+        "点击后菜单未展开",
+        "菜单按钮缺失或遮挡"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-03",
+        "reopenMenuWhenCollapsed": true
+      }
+    },
+    {
+      "id": "s16-04-read-translation",
+      "type": "action",
+      "title": "阅读模式：翻译",
+      "objective": "验证翻译按钮可展示当前页面的翻译文字。",
+      "action": "在播放菜单中点击翻译按钮；如果菜单已收起，先重新点击右侧三个点。",
+      "expected": "界面下方出现翻译后的文字，页面布局无明显异常。",
+      "riskSignals": [
+        "翻译按钮无响应",
+        "翻译文字未出现",
+        "翻译区域空白或遮挡内容"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-04",
+        "evidence": "before-and-after"
+      }
+    },
+    {
+      "id": "s16-05-read-manual-auto-toggle",
+      "type": "action",
+      "title": "阅读模式：手动 / 自动切换",
+      "objective": "验证播放方式可在自动播放和手动播放之间切换。",
+      "action": "在播放菜单中点击手动 / 自动按钮，并观察按钮状态或播放表现。",
+      "expected": "播放方式正常切换，界面能反映当前手动或自动状态。",
+      "riskSignals": [
+        "切换按钮无响应",
+        "状态显示与实际播放方式不一致",
+        "切换后播放卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-05",
+        "modes": [
+          "manual",
+          "auto"
+        ]
+      }
+    },
+    {
+      "id": "s16-06-enter-giggle-cast",
+      "type": "action",
+      "title": "阅读模式：进入 Giggle Cast",
+      "objective": "验证故事书可切换到 Giggle Cast 音频播放器模式。",
+      "action": "在播放菜单中点击 Giggle Cast 按钮。",
+      "expected": "正常进入音频播放器模式，播放器内容可见且无黑屏或白屏。",
+      "riskSignals": [
+        "Giggle Cast 按钮无响应",
+        "音频播放器未打开",
+        "播放器黑屏或内容缺失"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-06"
+      }
+    },
+    {
+      "id": "s16-07-exit-giggle-cast",
+      "type": "action",
+      "title": "阅读模式：退出 Giggle Cast",
+      "objective": "验证音频播放器可安全返回故事书播放模式。",
+      "action": "点击音频播放器左上角 X。",
+      "expected": "返回原故事书播放模式，播放页面可继续操作。",
+      "riskSignals": [
+        "左上角 X 缺失或无响应",
+        "返回后不是原故事书",
+        "返回后播放页面卡死"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-07"
+      }
+    },
+    {
+      "id": "s16-08-favorite-book",
+      "type": "action",
+      "title": "阅读模式：收藏",
+      "objective": "验证故事书收藏状态可正常设置。",
+      "action": "点击爱心按钮。",
+      "expected": "爱心变红，表示收藏成功。",
+      "riskSignals": [
+        "爱心按钮无响应",
+        "点击后颜色或状态未变化",
+        "收藏操作导致页面异常"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-08",
+        "expectedState": "red-heart",
+        "doNotToggleOff": true
+      }
+    },
+    {
+      "id": "s16-09-open-story-share",
+      "type": "action",
+      "title": "阅读模式：唤起分享组件",
+      "objective": "验证故事书分享组件可正常唤起。",
+      "action": "点击分享按钮并稍作等待；不选择联系人、平台或发送目标。",
+      "expected": "正常弹出故事书分享组件，组件内容显示正常。",
+      "riskSignals": [
+        "分享按钮无响应",
+        "分享组件未弹出",
+        "分享组件空白或错位"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-09",
+        "realSharingForbidden": true
+      }
+    },
+    {
+      "id": "s16-10-exit-story-share",
+      "type": "action",
+      "title": "阅读模式：退出分享组件",
+      "objective": "验证分享组件可安全退出且不会误发内容。",
+      "action": "点击分享组件左上角返回按钮。",
+      "expected": "安全返回故事书播放界面，没有执行真实分享。",
+      "riskSignals": [
+        "返回按钮缺失或无响应",
+        "误进入联系人或平台选择",
+        "无法回到故事书播放界面"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-10",
+        "realSharingForbidden": true
+      }
+    },
+    {
+      "id": "s16-11-complete-read-book",
+      "type": "action",
+      "title": "阅读模式：完成播放",
+      "objective": "通过右侧翻页按钮完成整本故事书。",
+      "action": "持续点击故事书播放界面右侧翻页按钮，逐页完成故事书；每次点击前用新截图确认仍在可翻页页面。",
+      "expected": "所有页面可正常播放并最终离开最后一页。",
+      "riskSignals": [
+        "页面无法翻动",
+        "翻页后内容空白或错乱",
+        "进入结算或续播后仍误点旧坐标"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-11",
+        "staleCoordinateGuard": true
+      }
+    },
+    {
+      "id": "s16-12-read-settlement-autoplay",
+      "type": "checkpoint",
+      "title": "阅读模式：结算与续播",
+      "objective": "确认阅读模式完成后进入结算并自动续播下一本书。",
+      "action": "完成最后一页后观察结算页和约 5 秒倒计时，等待自动进入下一本故事书。",
+      "expected": "能进入结算页并续播下一本故事书；若截图错过结算页，前序完成且正常进入下一本书也算通过。",
+      "riskSignals": [
+        "完成后未进入结算也未续播",
+        "倒计时结束后卡死",
+        "下一本故事书加载失败"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-12",
+        "settlementCountdownSeconds": 5,
+        "nextBookEntryMaySubstituteForMissedSettlementScreenshot": true
+      }
+    },
+    {
+      "id": "s16-13-skip-recording-mode",
       "type": "manual",
-      "title": "故事书三种模式改版期间跳过",
-      "objective": "记录 Read、Guide、Quiz 三种模式在改版期间由人工覆盖、自动化暂时跳过。",
-      "action": "不进入故事书或点击 Read / Guide / Quiz；在报告中标记“跳过 / 人工已覆盖”。",
-      "expected": "本用例不计为失败或阻塞，待功能稳定后重新补充自动化。",
+      "title": "录音模式：自动化跳过",
+      "objective": "明确记录当前自动化路线无法完成真实录音行为。",
+      "action": "不启动录音流程；在报告中记录“跳过 / 自动化能力限制：当前自动化无法完成真实录音行为”。",
+      "expected": "该项不计为失败或阻塞，不影响阅读、领读和问答模式继续执行。",
       "riskSignals": [
         "报告未标记跳过原因",
-        "误进入模式造成用例外操作"
+        "用语音自动跳过替代真实录音验证",
+        "因录音模式跳过而漏跑其它模式"
       ],
       "severity": "normal",
       "platforms": [
@@ -1516,14 +1786,258 @@
         "ios"
       ],
       "data": {
-        "caseId": "S16-01",
-        "executionStatus": "skipped-manual-covered",
-        "temporary": true,
-        "futureCoverage": {
-          "read": "any book",
-          "guide": "fixed book through search",
-          "quiz": "fixed book through search"
-        }
+        "caseId": "S16-13",
+        "executionStatus": "skipped-automation-limitation",
+        "limitation": "real-recording-behavior-not-automatable"
+      }
+    },
+    {
+      "id": "s16-14-return-book-home-for-guide",
+      "type": "action",
+      "title": "领读模式：返回首页",
+      "objective": "从阅读模式续播书返回绘本故事首页，为固定书籍搜索恢复前置。",
+      "action": "从当前续播故事书逐层点击左上角返回按钮，回到绘本故事首页。",
+      "expected": "绘本故事首页正常显示，右上角搜索入口可见。",
+      "riskSignals": [
+        "无法退出续播故事书",
+        "返回后不是绘本故事首页",
+        "误退出整个 App 主路径"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-14"
+      }
+    },
+    {
+      "id": "s16-15-search-ipad-book",
+      "type": "action",
+      "title": "领读模式：搜索固定书籍",
+      "objective": "通过固定关键词定位领读模式书籍《Max的iPad》。",
+      "action": "点击绘本故事首页右上角搜索入口，搜索 ipad。",
+      "expected": "搜索结果中出现《Max的iPad》。",
+      "riskSignals": [
+        "搜索入口不可用",
+        "输入 ipad 后无结果",
+        "结果中缺少《Max的iPad》"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-15",
+        "query": "ipad",
+        "expectedBook": "Max的iPad"
+      }
+    },
+    {
+      "id": "s16-16-open-max-ipad",
+      "type": "action",
+      "title": "领读模式：进入《Max的iPad》",
+      "objective": "确认搜索结果可进入指定领读故事书。",
+      "action": "在搜索结果中点击《Max的iPad》。",
+      "expected": "进入《Max的iPad》封面或模式选择页，书名匹配。",
+      "riskSignals": [
+        "指定结果不可点击",
+        "进入了其它近似书籍",
+        "封面或模式选择页加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-16",
+        "book": "Max的iPad"
+      }
+    },
+    {
+      "id": "s16-17-start-guide-mode",
+      "type": "action",
+      "title": "领读模式：开始播放",
+      "objective": "确认《Max的iPad》可从封面页启动领读模式。",
+      "action": "在封面页点击“引导”按钮，再点击播放按钮。",
+      "expected": "正常进入领读模式并正确播放。",
+      "riskSignals": [
+        "引导按钮缺失或无响应",
+        "播放按钮无响应",
+        "领读页面加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-17",
+        "mode": "guide",
+        "coverButtonLabel": "引导"
+      }
+    },
+    {
+      "id": "s16-18-complete-guide-book",
+      "type": "action",
+      "title": "领读模式：完成播放",
+      "objective": "确认领读模式页面能播放并通过翻页完成。",
+      "action": "检查首个播放页面正常后，持续点击右侧翻页按钮快速完成全书；每次点击前确认页面仍可翻页。",
+      "expected": "页面可逐页推进，最后一页完成后进入结算流程。",
+      "riskSignals": [
+        "首个领读页面未正常播放",
+        "页面无法翻动",
+        "最后一页无法完成"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-18",
+        "staleCoordinateGuard": true
+      }
+    },
+    {
+      "id": "s16-19-guide-settlement-autoplay",
+      "type": "checkpoint",
+      "title": "领读模式：结算与续播",
+      "objective": "确认领读模式完成后进入结算并续播下一本书。",
+      "action": "等待结算页约 5 秒倒计时并观察下一本故事书续播。",
+      "expected": "能进入结算页并正常续播下一本故事书；直接看到下一本书也可作为通过证据。",
+      "riskSignals": [
+        "完成后未进入结算也未续播",
+        "倒计时结束后卡死",
+        "下一本故事书加载失败"
+      ],
+      "severity": "major",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-19",
+        "settlementCountdownSeconds": 5,
+        "nextBookEntryMaySubstituteForMissedSettlementScreenshot": true
+      }
+    },
+    {
+      "id": "s16-20-search-quiz-book",
+      "type": "action",
+      "title": "问答模式：搜索固定书籍",
+      "objective": "返回绘本故事首页并通过固定关键词定位问答模式书籍。",
+      "action": "从当前续播书返回绘本故事首页，点击右上角搜索入口并搜索 quiz。",
+      "expected": "搜索结果中出现《Max的魔法助人帽》。",
+      "riskSignals": [
+        "无法返回绘本故事首页",
+        "输入 quiz 后无结果",
+        "结果中缺少《Max的魔法助人帽》"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-20",
+        "query": "quiz",
+        "expectedBook": "Max的魔法助人帽"
+      }
+    },
+    {
+      "id": "s16-21-open-max-magic-helper-hat",
+      "type": "action",
+      "title": "问答模式：进入《Max的魔法助人帽》",
+      "objective": "确认搜索结果可进入指定问答故事书。",
+      "action": "在搜索结果中点击《Max的魔法助人帽》。",
+      "expected": "进入《Max的魔法助人帽》封面或模式选择页，书名匹配。",
+      "riskSignals": [
+        "指定结果不可点击",
+        "进入了其它近似书籍",
+        "封面或模式选择页加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-21",
+        "book": "Max的魔法助人帽"
+      }
+    },
+    {
+      "id": "s16-22-start-quiz-mode",
+      "type": "action",
+      "title": "问答模式：开始播放",
+      "objective": "确认《Max的魔法助人帽》可从封面页启动问答模式。",
+      "action": "在封面页点击“测试”按钮，再点击播放按钮。",
+      "expected": "正常进入问答模式并开始播放。",
+      "riskSignals": [
+        "测试按钮缺失或无响应",
+        "播放按钮无响应",
+        "问答页面加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-22",
+        "mode": "quiz",
+        "coverButtonLabel": "测试"
+      }
+    },
+    {
+      "id": "s16-23-complete-quiz-book",
+      "type": "action",
+      "title": "问答模式：完成所有题目与页面",
+      "objective": "完成播放过程中出现的全部问答题并推进至最后一页。",
+      "action": "按页面内容完成全部问答题，并用右侧翻页按钮继续，直至最后一页；每道题和每次继续前都使用新截图确认状态。",
+      "expected": "每道问答题可选择答案并继续，所有页面正常完成。",
+      "riskSignals": [
+        "问答题无法作答",
+        "作答后流程不继续",
+        "页面无法翻动",
+        "使用旧坐标造成误触"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-23",
+        "captureEveryQuestion": true,
+        "staleCoordinateGuard": true
+      }
+    },
+    {
+      "id": "s16-24-quiz-settlement-autoplay",
+      "type": "checkpoint",
+      "title": "问答模式：结算与续播",
+      "objective": "确认问答模式完成后进入结算并续播下一本书。",
+      "action": "完成最后一页后观察结算页和约 5 秒倒计时，等待自动进入下一本故事书。",
+      "expected": "成功进入结算页并续播下一本故事书；若错过结算页截图，正常进入下一本书也算通过。",
+      "riskSignals": [
+        "完成后未进入结算也未续播",
+        "倒计时结束后卡死",
+        "下一本故事书加载失败"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S16-24",
+        "settlementCountdownSeconds": 5,
+        "nextBookEntryMaySubstituteForMissedSettlementScreenshot": true
       }
     },
     {
@@ -1572,8 +2086,8 @@
       "id": "s17-03-open-book-mode-selection-from-search",
       "type": "action",
       "title": "从搜索结果进入书籍",
-      "objective": "验证搜索结果可进入改版后的书籍详情或模式选择页。",
-      "action": "点击任意一本故事书，只观察书籍详情或 Read / Guide / Quiz 模式选择页。",
+      "objective": "验证搜索结果可进入书籍详情或模式选择页。",
+      "action": "点击任意一本故事书，只观察书籍详情或模式选择页；三种播放模式已在 S16 覆盖，本步不重复播放。",
       "expected": "正常进入书籍详情或模式选择页。",
       "riskSignals": [
         "搜索结果不可点击",
@@ -1587,8 +2101,7 @@
       ],
       "data": {
         "caseId": "S17-03",
-        "doNotSelectReadingMode": true,
-        "s16AutomationSkipped": true
+        "playbackCoverageAlreadyCompletedInS16": true
       }
     },
     {
@@ -2336,7 +2849,7 @@
     "S07 字母体操 1 和 S12 路径闪卡课程已从本版移除。",
     "S09 固定进入《正常故事书》，S10 固定进入涂色游戏: a，S11 固定进入字母描红：l。",
     "S13 必须完成单元复习 1 至 4 四个模板，每次进入时随机选择一个可见载具。",
-    "S16 在故事书改版期间标记为跳过 / 人工已覆盖；功能稳定后重新补充 Read、Guide、Quiz 三种模式用例。",
+    "S16 自动化覆盖阅读、领读和问答三种模式；录音模式因自动化无法完成真实录音行为，标记为跳过 / 自动化能力限制。领读固定搜索 ipad 进入《Max的iPad》，问答固定搜索 quiz 进入《Max的魔法助人帽》。",
     "闪卡模块和搜索课程纳入核心主流程冒烟；安卓渠道包与新功能探索性测试不并入核心主流程。",
     "分享只验证组件唤起、海报显示和安全退出，不选择联系人或平台，不执行发送或发布。",
     "S14 保留原编号但在 S19 后最后执行；切换之前的测试账号和任意可升级 kid 后完成升级 Quiz。",

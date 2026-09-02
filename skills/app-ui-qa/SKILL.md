@@ -1,6 +1,6 @@
 ---
 name: app-ui-qa
-description: Case-first mobile UI smoke and new-feature exploratory testing for hybrid Android/iOS apps. Use when Codex needs to prepare, convert, execute, recover, or report main smoke, Android channel-package smoke, or user-supplied feature cases from XMind, Excel, Markdown, images, or authenticated URLs through Android adb-only or iOS iPhone Mirroring plus PyAutoGUI, with screenshots, logs, environment checks, risk findings, and self-contained HTML QA reports.
+description: Case-first mobile UI smoke and new-feature exploratory testing for hybrid Android/iOS apps. Use when Codex needs to prepare, convert, execute, recover, report, or publish main smoke, Android channel-package smoke, or user-supplied feature cases from XMind, Excel, Markdown, images, or authenticated URLs through Android adb-only or iOS iPhone Mirroring plus PyAutoGUI, with screenshots, logs, environment checks, risk findings, self-contained HTML QA reports, and authenticated QA Web upload through each member's signed-in Chrome session.
 ---
 
 # App UI QA
@@ -39,14 +39,15 @@ Do not operate the App from `SKILL.md` alone.
 7. Capture evidence before and after every key click, swipe, drag, input, page entry, completion state, recovery action, and final state.
 8. Record pass, block, confirmed failure, possible risk, suggestion, and route-limitation results immediately while the screen evidence is fresh.
 9. Generate or update a self-contained HTML report. Inline local screenshots as WebP data URIs when conversion is available; never leave upload-time image dependencies.
-10. For new-feature testing, update `assets/feature-executions/INDEX.md` and remind the user to review and commit the converted execution document to Git. Do not merge it into main smoke without a separate review.
+10. Publish the verified `report.html` to QA Web when the current task explicitly requests upload. Use the QA member's own signed-in Chrome session at `https://qa-platform.giggletools.com/ui/reports`; do not export or reuse browser cookies, Cloudflare Access tokens, or another person's identity. If upload was not requested, ask before creating the external report record. Follow `references/reporting.md` for the authenticated upload and verification path.
+11. For new-feature testing, update `assets/feature-executions/INDEX.md` and remind the user to review and commit the converted execution document to Git. Do not merge it into main smoke without a separate review.
 
 ## Read References As Needed
 
 - Setup and route selection: `references/environment.md`
 - Case cleanup and JSON/checklist shape: `references/test-case-format.md`
 - Android adb-only and iOS iPhone Mirroring operating rules: `references/execution-routes.md`
-- Report structure and status taxonomy: `references/reporting.md`
+- Report structure, status taxonomy, and authenticated QA Web upload: `references/reporting.md`
 
 ## Critical Execution Rules
 
@@ -64,7 +65,10 @@ Do not operate the App from `SKILL.md` alone.
 - In main smoke, treat S02 as a one-time entry path that normally appears only after install, reinstall, or cleared data. Do not restart merely to bypass the beginner course. If a genuine blocking state occurs, capture the screen and attempted actions, record expected/actual state, then restart once as recovery. If restart removes the one-time entry, do not infer S02 completion; record S02 as incomplete/blocked for that run and continue every later case that remains reachable. Reinstall or clear data again only when specifically retesting S02.
 - In Giggle Academy main smoke, use the fixed S03 account and kid defined by the active case. Do not override them with generic local account variables. Keep that account active through S19; only the final S14 module switches to the previous upgrade-Quiz account defined by its environment variables. Never repeat the fixed or environment-supplied password in the report.
 - If a listed main-smoke course cannot be found, rerun all of S05 to reset to `Lv1 -> unit5-当前全类型` before searching again. Follow document order rather than numeric module order: S14 intentionally runs last after S19.
-- Treat an active-case row explicitly marked `跳过 / 人工已覆盖` as skipped evidence, not a failure or an invitation to run its old flow. For the current main smoke, do not enter S16 Read, Guide, or Quiz modes until the case is revised.
+- Treat an active-case row explicitly marked `跳过 / 自动化能力限制` or `跳过 / 人工已覆盖` as skipped evidence, not a product failure or an invitation to invent a replacement flow. In the current main smoke, S16 actively covers 阅读、领读和问答三种模式；只跳过需要真实录音行为的录音模式。
+- For S16 阅读模式, verify the expanded playback menu, translation text, manual/auto toggle, Giggle Cast round trip, favorite state, and share-component round trip before completing the book. Do not select a share target or send anything.
+- For S16 领读 and 问答 modes, use the exact books and search keywords defined by the active case. A settlement screenshot may be missed during the five-second auto-play countdown; visible entry into the next book is sufficient completion evidence when the preceding pages were completed.
+- Upload only the final verified standalone `report.html`, never the evidence directory or a report with local/external image dependencies. Use the current QA member's own Cloudflare Access session in signed-in Chrome so the platform records the correct uploader. Never copy browser cookies, access JWTs, or passwords into shell variables, source files, reports, or prompts.
 - In Android channel package smoke, follow the channel case's explicit skip/exit/restart steps. Do not import the main-smoke S02 completion requirement into that independent scope.
 - Android must use adb-only unless the user explicitly requests a separate exploration. Use `adb -s <serial>` for every command and bind screenshots, foreground checks, input, and Logcat to that serial.
 - Prefer a real Android device for release smoke when emulator timing is slow or flaky.

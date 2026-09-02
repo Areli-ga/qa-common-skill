@@ -58,6 +58,37 @@ The default renderer must fail when a referenced local image is missing or when 
 - Enable gzip or Brotli for HTML responses. Base64 increases the stored HTML size, while transport compression recovers much of that overhead.
 - Set an upload-size limit based on real reports. The renderer prints source image bytes, embedded image bytes, and final standalone HTML size after every build.
 
+## Authenticated QA Web Upload
+
+QA Web is protected by Cloudflare Access. Each QA member must upload through their own identity so the report list records the correct uploader. The preferred route is the site's upload form in the user's signed-in Chrome session; do not export browser cookies, copy access JWTs, reuse another member's session, or place credentials in local environment files.
+
+1. Finish the run and render the final standalone `report.html`.
+2. Confirm the renderer completed without missing images or external image dependencies. Keep `report.md`, screenshots, and logs local.
+3. Open `https://qa-platform.giggletools.com/ui/reports` in the QA member's signed-in Chrome session.
+4. If Cloudflare Access redirects to login, pause and ask the QA member to sign in with their own account in that Chrome window. Continue only after the report page shows that member's identity.
+5. If the current task did not explicitly request upload, ask before creating the external report record. When upload is authorized, click `上传报告`, enter a clear build/run title, select `Android` or `iOS`, and choose only the final `report.html`.
+6. Before clicking the final `上传` button, verify the title, platform, selected filename, and that the file is the standalone renderer output. Do not upload `report.md`, screenshot folders, logs, credentials, or intermediate HTML.
+7. After upload, verify a new list row shows the matching title, platform, current QA member under `上传人`, and the current upload time. Open the report and confirm the first page plus at least one embedded screenshot renders; record the report URL when available.
+8. If authentication expires or upload fails, keep the local artifacts, report the upload as blocked separately from the App smoke result, and do not rerun the device test.
+
+The backend contract is:
+
+```http
+POST https://qa-platform.giggletools.com/api/ui_reports
+Content-Type: application/json
+```
+
+```json
+{
+  "title": "报告标题",
+  "platform": "android",
+  "run_ref": "可选，≤128 字符",
+  "html": "报告 HTML 的完整文本"
+}
+```
+
+`platform` is `android` or `ios`. `run_ref` is optional and must not exceed 128 characters. The current web form exposes title, platform, and HTML file selection; it may omit `run_ref`. Direct unauthenticated requests are redirected to Cloudflare Access. Prefer the browser form because it uses the QA member's authenticated session and preserves uploader attribution. Use the raw API only when the platform owner provides a documented per-user authentication method; never work around Cloudflare Access by extracting cookies or tokens from Chrome.
+
 ## Evidence Policy
 
 - The report must show the full operation path, not only failed or risky steps.
@@ -104,6 +135,8 @@ For a new-feature exploratory report, also include:
 - `带风险通过`: main path works, but route limits, timing instability, logs, or UX signals need review.
 - `阻塞`: required path cannot continue, app crashes, login blocks, or data/account state prevents execution.
 - `自动化阻塞 / 需人工复核`: app may be usable, but the selected automation route cannot reliably complete the control.
+- `跳过 / 自动化能力限制`: the active case explicitly excludes a behavior the selected route cannot perform, such as real recording. It is neither a product failure nor a reason to skip independent later cases.
+- `跳过 / 人工已覆盖`: the active case explicitly delegates this coverage to a recorded manual result. Do not run an obsolete automated path in its place.
 - `未执行`: the step was not operated.
 - `不适用`: out of current case scope or intentionally removed.
 - `建议`: a product, UX, observability, or testability improvement; not a test failure.
