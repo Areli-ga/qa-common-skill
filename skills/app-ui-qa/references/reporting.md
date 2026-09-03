@@ -6,6 +6,7 @@ Visual automation runs are manual-evidence runs. The report must be based on the
 
 - Required artifacts and standalone rendering
 - QA Web upload contract
+- Crash evidence and embedded logs
 - Evidence policy and final report structure
 - Status meaning and risk taxonomy
 - Review checklist
@@ -17,7 +18,7 @@ Keep these files together in a run directory for source evidence and audit:
 - `report.md`: editable/source report.
 - `report.html`: self-contained browser-readable report. It must remain complete when copied or uploaded without `screenshots/`.
 - `screenshots/`: original evidence screenshots.
-- Optional `logs/`: ADB/Logcat or other local diagnostic snippets.
+- `logs/`: ADB/Logcat or other local diagnostic files. Optional for runs without diagnostics; required when a crash occurs.
 
 Render HTML from Markdown:
 
@@ -26,6 +27,14 @@ node scripts/render-manual-report.mjs runs/smoke/report.md runs/smoke/report.htm
 ```
 
 The renderer must inline every local screenshot as a `data:` URI. It prefers WebP at quality 76 and a maximum width of 1280 pixels, then falls back to the original PNG/JPEG/GIF/SVG bytes when no WebP converter is available. Both paths produce one portable HTML file.
+
+To embed a reviewed plain-text log, put this directive on its own line in `report.md`:
+
+```html
+<qa-log src="logs/android-crash-report.log" title="Android 崩溃日志"></qa-log>
+```
+
+The renderer reads the complete local text file and writes it into a collapsed, scrollable log block in `report.html`. The uploaded HTML remains self-contained and requires no JavaScript or external `.log` file. Keep the original raw log separately under `logs/`; the referenced report copy must be reviewed and redacted before rendering.
 
 Install the optional `sharp` dependency once on a QA runner to guarantee the preferred WebP path:
 
@@ -46,7 +55,7 @@ node scripts/render-manual-report.mjs report.md report.html \
 
 Use `--no-inline-images` only for local renderer debugging. Do not upload that output to QA Web.
 
-The default renderer must fail when a referenced local image is missing or when an `http:` / `https:` image remains. Treat this as a report build failure rather than publishing a partially broken report.
+The default renderer must fail when a referenced local image or `<qa-log>` file is missing, when an external image remains, or when a log directive points to an external URL or binary file. Treat this as a report build failure rather than publishing a partially broken report.
 
 ## QA Web Upload Contract
 
@@ -60,16 +69,16 @@ The default renderer must fail when a referenced local image is missing or when 
 
 ## Authenticated QA Web Upload
 
-QA Web is protected by Cloudflare Access. Each QA member must upload through their own identity so the report list records the correct uploader. The preferred route is the site's upload form in the user's signed-in Chrome session; do not export browser cookies, copy access JWTs, reuse another member's session, or place credentials in local environment files.
+QA Web is protected by Cloudflare Access. Every app-ui-qa run must finish by uploading its verified report, even when the user did not mention report generation or upload. Each QA member must upload through their own identity so the report list records the correct uploader. The preferred route is the site's upload form in the user's signed-in Chrome session; do not export browser cookies, copy access JWTs, reuse another member's session, or place credentials in local environment files.
 
 1. Finish the run and render the final standalone `report.html`.
 2. Confirm the renderer completed without missing images or external image dependencies. Keep `report.md`, screenshots, and logs local.
 3. Open `https://qa-platform.giggletools.com/ui/reports` in the QA member's signed-in Chrome session.
 4. If Cloudflare Access redirects to login, pause and ask the QA member to sign in with their own account in that Chrome window. Continue only after the report page shows that member's identity.
-5. If the current task did not explicitly request upload, ask before creating the external report record. When upload is authorized, click `上传报告`, enter a clear build/run title, select `Android` or `iOS`, and choose only the final `report.html`.
+5. Click `上传报告`, enter a clear build/run title, select `Android` or `iOS`, and choose only the final `report.html`. This upload is a mandatory part of the skill's requested workflow and must not be omitted because the original prompt was silent about reports.
 6. Before clicking the final `上传` button, verify the title, platform, selected filename, and that the file is the standalone renderer output. Do not upload `report.md`, screenshot folders, logs, credentials, or intermediate HTML.
 7. After upload, verify a new list row shows the matching title, platform, current QA member under `上传人`, and the current upload time. Open the report and confirm the first page plus at least one embedded screenshot renders; record the report URL when available.
-8. If authentication expires or upload fails, keep the local artifacts, report the upload as blocked separately from the App smoke result, and do not rerun the device test.
+8. If authentication expires or upload fails, keep the local artifacts, report upload finalization as blocked separately from the App smoke result, and do not rerun the device test. Resume upload after the QA member restores access; do not declare the run fully finalized until the uploaded row and report rendering are verified.
 
 The backend contract is:
 
@@ -89,11 +98,30 @@ Content-Type: application/json
 
 `platform` is `android` or `ios`. `run_ref` is optional and must not exceed 128 characters. The current web form exposes title, platform, and HTML file selection; it may omit `run_ref`. Direct unauthenticated requests are redirected to Cloudflare Access. Prefer the browser form because it uses the QA member's authenticated session and preserves uploader attribution. Use the raw API only when the platform owner provides a documented per-user authentication method; never work around Cloudflare Access by extracting cookies or tokens from Chrome.
 
+## Crash Evidence and Embedded Logs
+
+When an App crash is observed, record the case id, build, platform/device, local timestamp with timezone, last visible page, action immediately before the crash, crash UI/system prompt, restart result, and whether the failure reproduced. A crash is direct diagnostic evidence; do not downgrade it to an ordinary transient page block.
+
+For iOS:
+
+- Capture the crash state and any system prompt asking whether to share crash information with the developer.
+- Always select the share option so the developer-side crash log can be correlated later, then capture the selected or post-share state.
+- Record the exact local time, build, device, active case, and pre-crash action in the report because iPhone Mirroring does not directly retrieve the submitted crash payload.
+
+For Android:
+
+- Use the same `ANDROID_SERIAL` as the screenshots and actions.
+- Collect the crash Logcat buffer, a bounded main/system/crash context window, and `dumpsys activity exit-info` when supported immediately after the crash.
+- Keep complete raw output under `logs/`. Create a separate report-safe text file that preserves the crash stack and relevant context while redacting passwords, authorization headers, tokens, cookies, complete child ids, IP addresses, audio URLs, and unrelated personal data.
+- Reference the sanitized copy with `<qa-log>` so its complete text is embedded in the standalone HTML. The collapsed block keeps a large log readable, but it still increases HTML size; check the renderer's final byte count before upload.
+- Never clear Logcat after a crash before the evidence has been saved.
+
 ## Evidence Policy
 
 - The report must show the full operation path, not only failed or risky steps.
 - Save screenshots before and after every key click, swipe, drag, input, page entry, completion state, recovery action, and final state.
 - Always attach screenshots for blocked, failed, needs-review, and UX-risk steps.
+- For every crash, attach the pre-crash checkpoint when available, crash/system-prompt state, post-share state on iOS, relaunch result, and Android diagnostic log block when applicable.
 - Attach screenshots for key pass checkpoints such as login success, home, lesson entry, WebView load, story playback, completion, and returned home.
 - For log-only risks, quote a short log fragment and point to the saved log file.
 - For skipped voice/manual coverage, state why it was skipped and who should verify it.
@@ -117,7 +145,7 @@ Content-Type: application/json
 2. Overall conclusion: pass, blocked, pass with risks, or inconclusive.
 3. Case status table: one row per case id or module.
 4. Operation path screenshots: ordered evidence with short captions.
-5. Confirmed failures: severity, evidence, expected vs actual, reproducibility.
+5. Confirmed failures and crash diagnostics: severity, evidence, expected vs actual, reproducibility, timestamps, iOS share handling, and embedded Android logs.
 6. Possible risks: suspicious but unconfirmed anomalies, UX concerns, flaky timing, route limitations.
 7. Skipped coverage: voice, real-device-only items, destructive flows, unavailable account states.
 8. Follow-up recommendations: retest data, logs needed, owner suggestions, release impact.
@@ -154,6 +182,8 @@ For a new-feature exploratory report, also include:
 - Confirm every failed or blocked row has a screenshot.
 - Confirm the operation path is reproducible without reading chat history.
 - Confirm Android screenshots/logs are bound to the same serial.
+- Confirm every iOS crash-information prompt was shared with the developer and the action was recorded.
+- Confirm every Android crash has saved diagnostics and that only the reviewed/redacted log copy is embedded through `<qa-log>`.
 - Confirm iPhone Mirroring limitations are called out separately from product defects.
 - Confirm skipped voice/manual steps are acceptable for the current release gate.
-- Confirm `report.html` contains no local file paths or HTTP image dependencies and still shows all screenshots after the file is copied away from the run directory.
+- Confirm `report.html` contains no local file paths, HTTP image dependencies, or external log dependencies and still shows all screenshots and embedded log blocks after the file is copied away from the run directory.

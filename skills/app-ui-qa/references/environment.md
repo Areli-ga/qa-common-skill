@@ -106,6 +106,8 @@ adb -s "$ANDROID_SERIAL" logcat -d > logs/logcat.txt
 adb -s "$ANDROID_SERIAL" shell dumpsys window | rg 'mCurrentFocus|mFocusedApp'
 ```
 
+If the App crashes, immediately save `logcat -b crash`, a bounded `main/system/crash` context window, and `dumpsys activity exit-info` from this same serial as described in `references/execution-routes.md`. Do not clear Logcat before saving the crash evidence. Keep raw files local and embed only a reviewed, secret-redacted text copy in `report.html` through the renderer's `<qa-log>` directive.
+
 For Giggle Academy, the default package is `com.giggleacademy.app`. Use `monkey -p` unless the test owner provides a current entry Activity.
 
 Use `adb shell pm clear <package>` only when the case or test manager explicitly allows a clean-data run. Capture the before/after state and record that existing local data was removed.

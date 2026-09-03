@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "giggleacademy-main-smoke-v0.1",
   "description": "Giggle Academy 主流程冒烟用例。主流程使用固定账号与 Lv1 -> unit5-当前全类型专用路径；范围包含启动、新用户、登录、设置、指定课程、四套单元复习、故事书阅读/领读/问答模式、闪卡模块、搜索课程，以及最后切换旧测试账号完成升级 Quiz。",
-  "status": "updated_from_test_manager_2026-09-02_s16-story-modes",
+  "status": "updated_from_test_manager_2026-09-03_crash-logs-upload-and-s09-settlement",
   "source": {
     "type": "mindmap-image",
     "path": "/Users/areli/Downloads/whiteboard_exported_image.png",
@@ -167,6 +167,8 @@
   },
   "globalChecks": [
     "App 不应崩溃、卡死、黑屏、白屏、花屏或长时间 loading。",
+    "iOS 崩溃后如出现与开发者共享崩溃信息的系统提示，先截图并统一选择共享，再记录崩溃时间、build、用例 ID、崩溃前动作和操作后状态。",
+    "Android 崩溃后立即使用同一 ANDROID_SERIAL 保存 crash Logcat、有限长度 main/system/crash 上下文和 dumpsys activity exit-info；原始日志保留本地，脱敏副本通过 qa-log 内嵌最终 HTML。",
     "关键入口、按钮、标题、学习路径、故事书页面应可见且可操作。",
     "进入和退出 Unity / Flutter / H5 / 原生混合页面时要检查加载时长和画面异常。",
     "任何系统权限、隐私弹窗、通知弹窗、登录失效、网络异常、强制升级都要截图并记录处理方式。",
@@ -185,6 +187,7 @@
     "S16 必须覆盖阅读、领读和问答三种模式；录音模式仅标记为跳过 / 自动化能力限制，不影响其它模式执行。",
     "故事书结算页约 5 秒后自动续播；若截图错过结算页，只要前序页面已完成且能正常进入下一本故事书，也可作为完成证据并在报告说明。",
     "日志只用于辅助判断，报告中不得暴露密码、token、完整 child_id、IP、音频 URL 等敏感字段。",
+    "本轮结束后无论用户是否单独提到报告或上传，都必须生成独立 report.html，使用当前 QA 成员自己的 Chrome 登录态上传 QA Web，并检查列表记录和上传后的报告内容。",
     "Android 冒烟前允许清除 App 数据覆盖首次安装和新用户流程；iOS 必须通过卸载旧 App、TestFlight 重装并保持未启动来获得首次状态。"
   ],
   "steps": [
@@ -1033,15 +1036,16 @@
       }
     },
     {
-      "id": "s09-03-story-course-return",
-      "type": "action",
-      "title": "故事书阅读课程播放完成返回",
-      "objective": "验证播放完成后能回到主页。",
+      "id": "s09-03-story-course-settlement",
+      "type": "checkpoint",
+      "title": "故事书阅读课程播放完成进入结算页",
+      "objective": "验证自动播放完成后进入结算页并显示下一步按钮。",
       "action": "等待自动播放完成，不做手动翻页或加速操作。",
-      "expected": "播放完成后自动回到主页。",
+      "expected": "播放完成后进入结算页，可见“下一步”按钮。",
       "riskSignals": [
-        "播放完成不返回",
-        "回到主页后路径异常"
+        "播放完成后未进入结算页",
+        "结算页显示异常",
+        "下一步按钮缺失"
       ],
       "severity": "blocker",
       "platforms": [
@@ -1050,7 +1054,30 @@
       ],
       "data": {
         "caseId": "S09-03",
-        "executionGuard": "Do not use manual page-turn or acceleration controls in this path-level story course. The story may complete and return home while the automation waits; a late manual action can land on a home-path course entry and accidentally open the next lesson."
+        "executionGuard": "Do not use manual page-turn or acceleration controls in this path-level story course. After waiting, capture a fresh screenshot and confirm the settlement page and next button before any tap."
+      }
+    },
+    {
+      "id": "s09-04-story-course-next-to-home",
+      "type": "action",
+      "title": "故事书阅读课程结算页下一步返回",
+      "objective": "验证结算页需要手动点击下一步并能返回主界面学习路径。",
+      "action": "在结算页重新截图确认“下一步”按钮仍可见，再点击“下一步”。",
+      "expected": "返回主界面学习路径。",
+      "riskSignals": [
+        "下一步按钮无响应",
+        "点击后未返回主界面",
+        "返回后学习路径异常"
+      ],
+      "severity": "blocker",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "data": {
+        "caseId": "S09-04",
+        "requiresFreshScreenshotBeforeTap": true,
+        "manualNextRequired": true
       }
     },
     {
@@ -2850,6 +2877,7 @@
     "S09 固定进入《正常故事书》，S10 固定进入涂色游戏: a，S11 固定进入字母描红：l。",
     "S13 必须完成单元复习 1 至 4 四个模板，每次进入时随机选择一个可见载具。",
     "S16 自动化覆盖阅读、领读和问答三种模式；录音模式因自动化无法完成真实录音行为，标记为跳过 / 自动化能力限制。领读固定搜索 ipad 进入《Max的iPad》，问答固定搜索 quiz 进入《Max的魔法助人帽》。",
+    "S09《正常故事书》自动播放完成后进入结算页，必须在新截图确认后手动点击下一步返回主界面学习路径。",
     "闪卡模块和搜索课程纳入核心主流程冒烟；安卓渠道包与新功能探索性测试不并入核心主流程。",
     "分享只验证组件唤起、海报显示和安全退出，不选择联系人或平台，不执行发送或发布。",
     "S14 保留原编号但在 S19 后最后执行；切换之前的测试账号和任意可升级 kid 后完成升级 Quiz。",

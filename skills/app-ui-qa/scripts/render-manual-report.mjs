@@ -5,6 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { TextDecoder } from 'node:util';
 
 const cliArgs = process.argv.slice(2);
 const positionalArgs = [];
@@ -105,6 +106,14 @@ const imageStats = {
   embeddedBytes: 0,
 };
 const embeddedImageCache = new Map();
+const embeddedLogBlocks = [];
+const embeddedLogPaths = new Set();
+const logStats = {
+  blocks: 0,
+  uniqueFiles: 0,
+  sourceBytes: 0,
+  lines: 0,
+};
 let sharpLoader;
 
 async function loadSharp() {
@@ -320,6 +329,89 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
+function resolveLocalLog(source) {
+  if (!source) {
+    throw new Error('qa-log requires a non-empty src attribute');
+  }
+  if (source.startsWith('file://')) {
+    return fileURLToPath(source);
+  }
+  if (/^[a-z][a-z0-9+.-]*:/i.test(source)) {
+    throw new Error(
+      `External log is not allowed in a self-contained report: ${source}`,
+    );
+  }
+  const decoded = decodeURIComponent(source.split(/[?#]/, 1)[0]);
+  return path.resolve(inputDirectory, decoded);
+}
+
+function parseDirectiveAttributes(fragment) {
+  const attributes = new Map();
+  const attributePattern = /([a-z][a-z0-9-]*)\s*=\s*(["'])(.*?)\2/gi;
+  for (const match of fragment.matchAll(attributePattern)) {
+    attributes.set(match[1].toLowerCase(), match[3]);
+  }
+  return attributes;
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) {
+    return `${bytes} B`;
+  }
+  if (bytes < 1024 * 1024) {
+    return `${(bytes / 1024).toFixed(1)} KiB`;
+  }
+  return `${(bytes / 1024 / 1024).toFixed(2)} MiB`;
+}
+
+function renderEmbeddedLog(attributesFragment) {
+  const attributes = parseDirectiveAttributes(attributesFragment);
+  const source = attributes.get('src');
+  const localPath = resolveLocalLog(source);
+  const stat = fs.statSync(localPath, { throwIfNoEntry: false });
+  if (!stat?.isFile()) {
+    throw new Error(`Report log not found: ${source} -> ${localPath}`);
+  }
+
+  const buffer = fs.readFileSync(localPath);
+  if (buffer.includes(0)) {
+    throw new Error(`Report log must be a plain-text file: ${source}`);
+  }
+  let content;
+  try {
+    content = new TextDecoder('utf-8', { fatal: true }).decode(buffer);
+  } catch {
+    throw new Error(`Report log must be valid UTF-8 plain text: ${source}`);
+  }
+  const title = attributes.get('title') || path.basename(localPath);
+
+  if (!embeddedLogPaths.has(localPath)) {
+    embeddedLogPaths.add(localPath);
+    logStats.uniqueFiles += 1;
+    logStats.sourceBytes += buffer.length;
+    logStats.lines += content.length ? content.split(/\r?\n/).length : 0;
+  }
+  logStats.blocks += 1;
+
+  return `<details class="qa-log">
+  <summary>${escapeHtml(title)} <span>${formatBytes(buffer.length)}</span></summary>
+  <pre>${escapeHtml(content)}</pre>
+</details>`;
+}
+
+function embedLogDirectives(value) {
+  const directivePattern = /<qa-log\b([^>]*?)(?:\/\s*>|>\s*<\/qa-log\s*>)/gi;
+  const result = value.replace(directivePattern, (_match, attributesFragment) => {
+    const index = embeddedLogBlocks.length;
+    embeddedLogBlocks.push(renderEmbeddedLog(attributesFragment));
+    return `@@QA_LOG_${index}@@`;
+  });
+  if (/<\/?qa-log\b/i.test(result)) {
+    throw new Error('Malformed qa-log directive; use a closed or self-closing tag on its own line');
+  }
+  return result;
+}
+
 function inline(value) {
   const raw = [];
   let text = value.replace(/<img\b[^>]*>|<br\s*\/?>/gi, (match) => {
@@ -356,7 +448,15 @@ function renderTable(rows) {
   return `<table><thead><tr>${headerHtml}</tr></thead><tbody>${bodyHtml}</tbody></table>`;
 }
 
-const lines = markdown.split(/\r?\n/);
+let reportMarkdown;
+try {
+  reportMarkdown = embedLogDirectives(markdown);
+} catch (error) {
+  console.error(`Failed to build self-contained report: ${error.message}`);
+  process.exit(1);
+}
+
+const lines = reportMarkdown.split(/\r?\n/);
 const body = [];
 let tableRows = [];
 let listType = null;
@@ -377,6 +477,14 @@ function closeTable() {
 }
 
 for (const line of lines) {
+  const embeddedLog = /^@@QA_LOG_(\d+)@@$/.exec(line.trim());
+  if (embeddedLog) {
+    closeTable();
+    closeList();
+    body.push(embeddedLogBlocks[Number(embeddedLog[1])]);
+    continue;
+  }
+
   if (/^\s*\|.+\|\s*$/.test(line)) {
     closeList();
     tableRows.push(line);
@@ -507,6 +615,36 @@ const html = `<!doctype html>
       box-shadow: 0 6px 18px rgba(20, 30, 40, 0.12);
       vertical-align: top;
     }
+    .qa-log {
+      margin: 14px 0 22px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #f8fafc;
+    }
+    .qa-log summary {
+      cursor: pointer;
+      padding: 10px 12px;
+      color: var(--accent);
+      font-weight: 650;
+    }
+    .qa-log summary span {
+      margin-left: 8px;
+      color: var(--muted);
+      font-size: 0.9em;
+      font-weight: 400;
+    }
+    .qa-log pre {
+      max-height: 560px;
+      margin: 0;
+      overflow: auto;
+      border-top: 1px solid var(--line);
+      padding: 12px;
+      background: #111827;
+      color: #e5e7eb;
+      font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
     strong { font-weight: 700; }
     h2 + p strong, h3 strong { color: var(--risk); }
     @media print {
@@ -534,6 +672,13 @@ try {
 
 fs.writeFileSync(outputPath, finalHtml);
 console.log(outputPath);
+if (logStats.blocks > 0) {
+  const logMiB = (logStats.sourceBytes / 1024 / 1024).toFixed(2);
+  console.log(
+    `Embedded ${logStats.blocks} log block(s) from ${logStats.uniqueFiles} text file(s): `
+      + `${logStats.lines} line(s), ${logMiB} MiB source text.`,
+  );
+}
 if (options.inlineImages) {
   const sourceMiB = (imageStats.sourceBytes / 1024 / 1024).toFixed(2);
   const embeddedMiB = (imageStats.embeddedBytes / 1024 / 1024).toFixed(2);

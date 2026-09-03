@@ -71,6 +71,20 @@ adb -s "$ANDROID_SERIAL" shell dumpsys window | rg 'mCurrentFocus|mFocusedApp'
 adb -s "$ANDROID_SERIAL" logcat -d > logs/logcat.txt
 ```
 
+If the App crashes, collect diagnostics immediately before another launch changes the evidence:
+
+```bash
+crash_stamp=$(date +%Y%m%d-%H%M%S%z)
+adb -s "$ANDROID_SERIAL" logcat -b crash -d -v threadtime \
+  > "logs/android-crash-${crash_stamp}.log"
+adb -s "$ANDROID_SERIAL" logcat -b main -b system -b crash -d -v threadtime -t 2000 \
+  > "logs/android-crash-context-${crash_stamp}.log"
+adb -s "$ANDROID_SERIAL" shell dumpsys activity exit-info "$ANDROID_PACKAGE" \
+  > "logs/android-exit-info-${crash_stamp}.log"
+```
+
+Do not clear Logcat after a crash until these files are saved. Record the local timestamp, case id, action immediately before the crash, and relaunch result. Keep the complete raw files locally, then create a reviewed and secret-redacted plain-text copy for HTML embedding with `<qa-log>`; never embed an unreviewed raw log.
+
 Use `adb shell pm clear <package>` only when the case or test manager explicitly allows a clean-data run. Capture the before/after state and record that existing local data was removed.
 
 ## Android Known Pitfalls
@@ -91,10 +105,11 @@ Operate the real iPhone through the iPhone Mirroring Mac window using the local 
 5. Use TestFlight on the phone only to install, update, or select a build.
 6. Launch the App on the mirrored phone after fresh-install readiness is confirmed.
 7. On first launch, capture and allow every presented system permission prompt required by the case, including advertising tracking and network/local-network access.
-8. Start `scripts/ios-mirror-pyautogui-service.py`.
-9. Use service screenshots before and after every key operation.
-10. Use service `tap`, `drag`, `type`, and `key` actions for operation.
-11. Before any text input, switch the Mac input source to English/ABC and keep it there until the value has been visually verified. A Chinese input source can transform or duplicate PyAutoGUI keystrokes.
+8. If iOS reports an App crash and asks whether to share crash information with the developer, capture the prompt, always choose the share option, and capture the selected or post-share state. Record the exact local time, build, active case, and pre-crash action for developer-side log correlation.
+9. Start `scripts/ios-mirror-pyautogui-service.py`.
+10. Use service screenshots before and after every key operation.
+11. Use service `tap`, `drag`, `type`, and `key` actions for operation.
+12. Before any text input, switch the Mac input source to English/ABC and keep it there until the value has been visually verified. A Chinese input source can transform or duplicate PyAutoGUI keystrokes.
 
 Service startup:
 
@@ -122,6 +137,7 @@ curl -s -X POST http://127.0.0.1:17650/drag \
 
 - The app runtime is a real iPhone, but evidence and input are mediated by macOS iPhone Mirroring.
 - If audio, secure password entry, system privacy prompts, or mirror transport behavior cannot be captured faithfully, record it as a route limitation.
+- A visible iOS crash-information sharing prompt is not optional telemetry in this QA workflow: select the share option so developers can retrieve the crash diagnostic, and preserve before/after evidence.
 - If a WebView course passes only with manual click assistance, record the path as continued but mark that WebView input needs follow-up.
 - PyAutoGUI screenshots are fast region screenshots. Keep iPhone Mirroring frontmost and uncovered, otherwise the evidence image can include covering Mac windows.
 
@@ -207,14 +223,14 @@ When stopped by a limitation, report the actual state; do not invent success. Tr
 When the visible state blocks the active case:
 
 1. Capture the current screen before any recovery action.
-2. Record the active case id, expected state, actual state, elapsed time, attempted in-page actions, and whether the issue looks like an App state, data/account state, network state, or automation-route limitation.
+2. Record the active case id, expected state, actual state, elapsed time, attempted in-page actions, and whether the issue looks like an App state, data/account state, network state, automation-route limitation, or crash. For a crash, capture platform-specific diagnostics before relaunch.
 3. Try the recovery path already defined by the active case, such as closing a guide, completing both layers of a permission flow, returning to the main path, or re-entering through the learning center.
 4. If the case remains blocked and restart is safe, force-close and relaunch the App once. Capture the close, relaunch, and recovered/final states.
 5. During the main-smoke one-time S02 path, do not restart merely to bypass the beginner course. A genuine blocked state may still use restart after the required evidence has been captured. If restart removes the one-time entry, mark S02 incomplete/blocked for that run; do not infer completion and do not terminate the whole smoke run.
 6. Re-establish the nearest known prerequisite and continue every later case that remains reachable. Mark only cases that depend on an unresolved prerequisite as `阻塞`.
 7. Reinstall or clear data again only when specifically retesting S02. On iOS, finish S03 and every later reachable case on the current installation first; then, with action-time confirmation, uninstall/reinstall through TestFlight and run S02 as supplemental coverage. Do not replay S02 at the expense of downstream coverage.
 8. For Android channel package smoke, follow the channel case's explicit exit/restart skip steps; the main-smoke S02 completion rule does not apply.
-9. Generate or update `report.html` even if the run remains partially blocked.
+9. Generate or update `report.html` even if the run remains partially blocked, embed the reviewed crash log when applicable, and complete the mandatory QA Web upload finalization.
 
 Do not label the package defective from one transient blocked state alone. Require a reproducible/persistent expected-path failure, crash, or corroborating diagnostic evidence.
 
