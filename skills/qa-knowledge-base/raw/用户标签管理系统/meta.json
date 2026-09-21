@@ -1,0 +1,85 @@
+{
+  "title": "用户标签管理系统",
+  "doc_id": "PgMidF8jAo7zl3xixTYlgSLLg9b",
+  "wiki_token": "Wmc1wi7qXioTb5kCyP8l4jjLgsg",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Wmc1wi7qXioTb5kCyP8l4jjLgsg",
+  "fetched_at": "2026-09-20T22:44:04.824386+08:00",
+  "version": "V1.39.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 3765,
+  "blocks": 619,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 75144,
+      "dims": [
+        2559,
+        1002
+      ],
+      "readable": "ok",
+      "read_scale": 0.742,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 339311,
+        "md5": "c53c246ec239733310eb5d7335d6eba7",
+        "dims": [
+          2559,
+          1002
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 40560,
+      "dims": [
+        2550,
+        758
+      ],
+      "readable": "ok",
+      "read_scale": 0.745,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 178853,
+        "md5": "09f7b97cf4b8b7ef7cd27000a91dbf9c",
+        "dims": [
+          2550,
+          758
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 41988,
+      "dims": [
+        2559,
+        621
+      ],
+      "readable": "ok",
+      "read_scale": 0.742,
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 186625,
+        "md5": "d111cca00bd37c6c10d28752e36a03cf",
+        "dims": [
+          2559,
+          621
+        ]
+      }
+    }
+  ],
+  "image_count": 3,
+  "tables": 11,
+  "embedded_sheets": 0,
+  "embedded_bitables": 0,
+  "embedded_tables_file": null
+}

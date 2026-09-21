@@ -3,17 +3,12 @@
   "doc_id": "DkdvdMJBMoNmVbxuxDjljCATgSe",
   "wiki_token": "PDj9wI2YnicplskHJAllKDf1gPM",
   "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/PDj9wI2YnicplskHJAllKDf1gPM",
-  "fetched_at": "2026-08-24T13:37:54.737675+08:00",
-  "version": "1.38.0",
-  "version_source": "extract-consistent",
-  "version_candidates": [
-    {
-      "source": "figma链接",
-      "version": "1.38.0"
-    }
-  ],
-  "raw_content_chars": 2565,
-  "blocks": 255,
+  "fetched_at": "2026-09-08T11:26:47.316574+08:00",
+  "version": "V1.38.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 4404,
+  "blocks": 542,
   "images": [
     {
       "index": 1,
@@ -23,6 +18,8 @@
         2536,
         1234
       ],
+      "readable": "ok",
+      "read_scale": 0.749,
       "read_file": "images/img-01.read.png",
       "archived_as": "webp-q80",
       "original": {
@@ -43,6 +40,8 @@
         2646,
         586
       ],
+      "readable": "ok",
+      "read_scale": 0.718,
       "read_file": "images/img-02.read.png",
       "archived_as": "webp-q80",
       "original": {
@@ -63,6 +62,8 @@
         2594,
         536
       ],
+      "readable": "ok",
+      "read_scale": 0.732,
       "read_file": "images/img-03.read.png",
       "archived_as": "webp-q80",
       "original": {
@@ -78,15 +79,60 @@
     {
       "index": 4,
       "file": "images/img-04.webp",
+      "bytes": 40926,
+      "dims": [
+        1888,
+        902
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 953277,
+        "md5": "5bf3e563c861b0154377afc7c0dfbd44",
+        "dims": [
+          1888,
+          902
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 86738,
+      "dims": [
+        1988,
+        1484
+      ],
+      "readable": "ok",
+      "read_scale": 0.956,
+      "read_file": "images/img-05.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 961949,
+        "md5": "c66b0cc24b9b52bbcc50a5f9a39f7a00",
+        "dims": [
+          1988,
+          1484
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "images/img-06.webp",
       "bytes": 89080,
       "dims": [
         2824,
         950
       ],
-      "read_file": "images/img-04.read.png",
+      "readable": "ok",
+      "read_scale": 0.673,
+      "read_file": "images/img-06.read.png",
       "archived_as": "webp-q80",
       "original": {
-        "file": "img-04.png",
+        "file": "img-06.png",
         "bytes": 1198362,
         "md5": "1d25b1a690ed4e6a69c53450ca5092af",
         "dims": [
@@ -96,16 +142,18 @@
       }
     },
     {
-      "index": 5,
-      "file": "images/img-05.webp",
+      "index": 7,
+      "file": "images/img-07.webp",
       "bytes": 26234,
       "dims": [
         1324,
         602
       ],
+      "readable": "ok",
+      "read_scale": 1.0,
       "archived_as": "webp-q80",
       "original": {
-        "file": "img-05.png",
+        "file": "img-07.png",
         "bytes": 83063,
         "md5": "85682de4eedd38da6fe6dcddf6cc3ba7",
         "dims": [
@@ -115,17 +163,19 @@
       }
     },
     {
-      "index": 6,
-      "file": "images/img-06.webp",
+      "index": 8,
+      "file": "images/img-08.webp",
       "bytes": 68556,
       "dims": [
         1206,
         2622
       ],
-      "read_file": "images/img-06.read.png",
+      "readable": "ok",
+      "read_scale": 0.725,
+      "read_file": "images/img-08.read.png",
       "archived_as": "webp-q80",
       "original": {
-        "file": "img-06.png",
+        "file": "img-08.png",
         "bytes": 1095518,
         "md5": "6176822451282ac2b18f952d39076bec",
         "dims": [
@@ -135,6 +185,9 @@
       }
     }
   ],
-  "image_count": 6,
-  "tables": 2
+  "image_count": 8,
+  "tables": 3,
+  "embedded_sheets": 5,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
 }

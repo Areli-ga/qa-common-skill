@@ -1,0 +1,522 @@
+{
+  "fetched_at": "2026-09-08T11:26:47.314664+08:00",
+  "sheets": [
+    {
+      "token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf_ZiOFFr",
+      "spreadsheet_token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf",
+      "sheet_id": "ZiOFFr",
+      "title": "ZiOFFr",
+      "row_count": 6,
+      "column_count": 2,
+      "range": "ZiOFFr!A1:B6",
+      "values": [
+        [
+          "名词",
+          "说明"
+        ],
+        [
+          "电话机",
+          "完成第二单元后掉落的奖励道具，点击领取奖励解锁来电功能"
+        ],
+        [
+          "被动接听",
+          "IP 主动给孩子打来电话，孩子接听"
+        ],
+        [
+          "主动拨打",
+          "孩子在通讯录中主动拨打 IP 号码"
+        ],
+        [
+          "语音信箱",
+          "孩子多日未上线期间积累的未播放来电内容，登录后按时序播放"
+        ],
+        [
+          "通讯录",
+          "电话机页面中展示可拨打的 IP 号码列表"
+        ]
+      ],
+      "block_id": "VCXxdrQ6loRawpxj35sl7sfAgZe"
+    },
+    {
+      "token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf_Xfhiqd",
+      "spreadsheet_token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf",
+      "sheet_id": "Xfhiqd",
+      "title": "Xfhiqd",
+      "row_count": 8,
+      "column_count": 4,
+      "range": "Xfhiqd!A1:D8",
+      "values": [
+        [
+          "模块",
+          "功能",
+          "优先级",
+          "说明"
+        ],
+        [
+          "电话机",
+          "领取电话机与首次引导",
+          "P0",
+          "完成第二单元后触发"
+        ],
+        [
+          "通话",
+          "我们来电，孩子被动接听（首次+日常）",
+          "P0",
+          "核心验证功能"
+        ],
+        [
+          "通话",
+          "主动拨打通讯录",
+          "P0",
+          "核心验证功能"
+        ],
+        [
+          "通话",
+          "语音信箱",
+          "P1",
+          "依赖多日未登录场景"
+        ],
+        [
+          "通话",
+          "来电频率/终止判断逻辑",
+          "P1",
+          "待补充具体阈值规则"
+        ],
+        [
+          "内容",
+          "本地化通话脚本，以及内容播放机制",
+          "P0",
+          "依赖内容/配音团队产出"
+        ],
+        [
+          "通知",
+          "push消息提醒",
+          "P1",
+          null
+        ]
+      ],
+      "block_id": "MiBFd4WaHoEjTUxEuZal038Sg6d"
+    },
+    {
+      "token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf_gTVnl7",
+      "spreadsheet_token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf",
+      "sheet_id": "gTVnl7",
+      "title": "gTVnl7",
+      "row_count": 27,
+      "column_count": 10,
+      "range": "gTVnl7!A1:J27",
+      "values": [
+        [
+          "埋点模块",
+          "事件名",
+          "事件显示名",
+          "事件定义",
+          "触发位置",
+          "事件分端",
+          "属性类型",
+          "属性显示名",
+          "属性值",
+          "备注"
+        ],
+        [
+          "路径",
+          "calls_reward_receive",
+          "电话机奖励领取",
+          "支撑渗透率分析：评估完成U2的用户中真正拿到电话机道具的比例",
+          "完成第二单元后，路径中掉落电话机奖励时",
+          "Unity",
+          "Event",
+          "unit_id",
+          "数字",
+          null
+        ],
+        [
+          "路径",
+          "calls_reward_click",
+          "电话机奖励点击",
+          null,
+          null,
+          "Unity",
+          "Event",
+          "type",
+          "不可领取/可以领取",
+          null
+        ],
+        [
+          "路径",
+          "calls_reward_expose",
+          "电话机在路径中曝光",
+          "滑动地图看到了电话机，曝光一次就上报，重复不上报",
+          null,
+          "Unity",
+          "Event",
+          null,
+          null,
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_page_view",
+          "电话机页面浏览",
+          "支撑各入口渗透率对比：路径掉落/奖励中心/push 三个来源分别带来多少访问",
+          "进入电话机页面时",
+          "H5",
+          "Event",
+          "entry_source",
+          "path/reward_center/push",
+          null
+        ],
+        [
+          "IP打电话",
+          null,
+          "电话机页面浏览",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "is_first_visit",
+          "true/false",
+          "判断新手引导是否首次触发"
+        ],
+        [
+          "IP打电话",
+          "calls_page_leave",
+          "电话机页面浏览",
+          "衡量页面停留时长，辅助判断UI是否清晰、拨号是否顺畅",
+          "用户退出电话机页面时",
+          null,
+          null,
+          "stay_duration_ms",
+          "数字（毫秒）",
+          "进入电话机页面到退出电话机页面，中间停留时长。"
+        ],
+        [
+          "IP打电话",
+          "calls_guide_complete",
+          "新手引导完成",
+          "评估新手引导对拨号行为的教育效果",
+          "首次进入电话机页新手引导播放结束时",
+          "H5",
+          "Event",
+          null,
+          null,
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_contact_click",
+          "通讯录联系人点击",
+          "支撑 IP 角色偏好分析：哪个角色最常被点击查看",
+          "点击通讯录中某个 IP 号码时",
+          "H5",
+          "Event",
+          "ip_role",
+          "Max/熊猫图书管理员/大象消防员/熊/猫/狐狸/狗",
+          "枚举需与最终上线IP列表核对"
+        ],
+        [
+          "IP打电话",
+          "calls_dial_click",
+          "主动拨号",
+          "支撑「主动拨打」这一核心兴趣度信号的统计",
+          "用户拨完号码点击拨打键时",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          "IP打电话",
+          null,
+          "主动拨号",
+          "点击拨号键，输出的是否是正确还是错误的电话号码",
+          "同上",
+          "H5",
+          "Event",
+          "is_correct",
+          "true/false",
+          "是否是正确的号码"
+        ],
+        [
+          "IP打电话",
+          "calls_incoming_show",
+          "来电展示（系统主动来电）",
+          "支撑三大来电场景分布分析，评估各场景打扰程度和触达效果",
+          "电话机页停留20秒未拨打 / 首页停留5秒或完成单元后 / 家园停留5秒 触发来电时/push",
+          "H5， unity",
+          "Event",
+          "scene",
+          "calls_page/home_idle/home_finish_unit/house/push",
+          "参考应用内来电和push来电。"
+        ],
+        [
+          "IP打电话",
+          null,
+          "来电展示（系统主动来电）",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_answer_click",
+          "接听",
+          "核心互动指标：区分主动拨打 vs 被动接听的接通率",
+          "点击接听按钮时",
+          "H5",
+          "Event",
+          "scene",
+          "calls_page/home_idle/home_finish_unit/house/push",
+          "参考应用内来电和push来电。"
+        ],
+        [
+          "IP打电话",
+          null,
+          "接听",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_decline_click",
+          "拒接/中途挂断",
+          "支撑退订风险监控：连续拒接次数是「取消订阅」触发条件之一",
+          "来电时点击拒接，或通话中途退出（未播放完90%）时",
+          "H5",
+          "Event",
+          "stage",
+          "decline_before_answer/hangup_during_call",
+          null
+        ],
+        [
+          "IP打电话",
+          null,
+          "拒接/中途挂断",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_finish",
+          "通话完整结束",
+          "支撑完播率、内容消耗速度分析（判断首期20-30条音频多久刷完）",
+          "通话音频播放达到90%时长，或用户主动退出通话时",
+          "H5",
+          "Event",
+          "script_id",
+          "字符串",
+          "后端保存的"
+        ],
+        [
+          "IP打电话",
+          null,
+          "通话完整结束",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "is_completed",
+          "true/false",
+          "≥90%播放时长为true"
+        ],
+        [
+          "IP打电话",
+          "voicemail_view",
+          "语音信箱查看",
+          "有未读语音曝光时",
+          "进入语音信箱页面时",
+          "H5",
+          "Event",
+          "unread_count",
+          "数字",
+          "有多少条未读语音"
+        ],
+        [
+          "IP打电话",
+          "voicemail_play",
+          "语音信箱内容播放",
+          "评估被动内容（信箱留言）的二次消费率",
+          "点击播放信箱中某条语音时",
+          "H5",
+          "Event",
+          "content_id",
+          "字符串",
+          null
+        ],
+        [
+          "IP打电话",
+          null,
+          "语音信箱内容播放",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_unsubscribe_trigger",
+          "触发取消电话订阅话术",
+          "核心风险指标：衡量机制打扰感是否过强，触发率过高需要调整来电频率策略",
+          "满足「连续两次拒接/中途挂断」或「未接语音信箱>7条未消费」任一条件，系统推送取消订阅话术时",
+          "后端",
+          "Event",
+          "trigger_reason",
+          "consecutive_decline/voicemail_backlog",
+          "两个条件是\"或\"关系，建议分开统计各自触发占比"
+        ],
+        [
+          "IP打电话",
+          "calls_resubscribe_click",
+          "重新订阅",
+          "衡量用户对\"取消订阅提示\"的挽回反应，反向验证机制是否被误伤",
+          "用户在取消订阅话术播放后按1时",
+          "H5",
+          "Event",
+          "—",
+          "—",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_push_send",
+          "电话提醒push下发",
+          "支撑push触达率/点击率漏斗分析",
+          "每晚20点，判断用户当日未接通电话后下发push时",
+          "后端",
+          "Event",
+          "push_ip",
+          "字符串",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_push_click",
+          "电话提醒push点击",
+          "同上",
+          "用户点击push跳转到接听页时",
+          "H5",
+          "Event",
+          "push_ip",
+          "字符串",
+          "与calls_push_send的push_id关联计算点击率"
+        ],
+        [
+          "IP打电话（二期）",
+          "calls_ai_reply_trigger",
+          "AI回复触发",
+          "评估AI接入后的响应及时率，为是否放量AI提供依据",
+          "孩子回答后，AI在5秒内完成回复时",
+          "H5",
+          "Event",
+          "is_timeout",
+          "true/false",
+          "超时未回复=true，此时播放兜底音频"
+        ]
+      ],
+      "block_id": "MfQbdGtqYoHFACxEI6mlCbGdgSf"
+    },
+    {
+      "token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf_DGgder",
+      "spreadsheet_token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf",
+      "sheet_id": "DGgder",
+      "title": "DGgder",
+      "row_count": 3,
+      "column_count": 3,
+      "range": "DGgder!A1:C3",
+      "values": [
+        [
+          "阶段",
+          "待验证假设",
+          "判断依据（观测指标，非目标值）"
+        ],
+        [
+          "Step 1",
+          "孩子对\"IP打电话\"交互形式感兴趣",
+          "接听率、接听后当天二次使用打电话功能的比例、主动拨号次数/人"
+        ],
+        [
+          "Step 2",
+          "\"虚拟角色主动来电\"能提升长线留存",
+          "装扮电话机用户 vs 未装扮用户的次日/7日/30日留存对比（[待确认] 是否具备AB分组能力，见待确认项清单）"
+        ]
+      ],
+      "block_id": "DQNDdpWRKoVRDnxGnRKlpfwogfh"
+    },
+    {
+      "token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf_O0hOQQ",
+      "spreadsheet_token": "MT0Wsc75GhqR3ut6HLhlm2bkgrf",
+      "sheet_id": "O0hOQQ",
+      "title": "O0hOQQ",
+      "row_count": 9,
+      "column_count": 3,
+      "range": "O0hOQQ!A1:C9",
+      "values": [
+        [
+          "功能",
+          "验收条件",
+          "优先级"
+        ],
+        [
+          "电话机掉落",
+          "完成第二单元后，路径中出现电话机奖励，可正常领取",
+          "P0"
+        ],
+        [
+          "首次来电引导",
+          "首次进入电话机页面，停留3秒无操作后必定触发来电",
+          "P0"
+        ],
+        [
+          "装扮联动",
+          "电话机装扮后，日常触发条件生效；未装扮时不触发被动来电，仍可主动拨号",
+          "P0"
+        ],
+        [
+          "日常来电触发",
+          "满足任一触发条件（停留>5s/完成单元/未完成单元返回地图停留2s）时正确触发，同天不重复触发（若采纳\"取最先满足\"方案）",
+          "P0"
+        ],
+        [
+          "主动拨号",
+          "通讯录可正常展示IP号码，拨号后铃响3秒接通",
+          "P0"
+        ],
+        [
+          "语音信箱",
+          "多日未登录后，积压内容按时序播放",
+          "P1"
+        ],
+        [
+          "来电频率控制",
+          "连续3天未接听/连续2次拒接后，暂停推送",
+          "P1"
+        ],
+        [
+          "埋点验收",
+          "5.2中列出的事件均正确上报，属性值符合定义",
+          "P0"
+        ]
+      ],
+      "block_id": "IE0BdsGbsocFpQxviA9lwCyXgrf"
+    }
+  ],
+  "bitables": []
+}

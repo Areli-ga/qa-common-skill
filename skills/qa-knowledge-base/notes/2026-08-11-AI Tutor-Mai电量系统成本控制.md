@@ -2,7 +2,7 @@
 标题: Mai 的电量系统🔋（成本控制）
 模块: AI Tutor / 电量系统
 版本: V1.36.0
-related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-08-11-AI Tutor-小Mai新内容更新引导.md, 2026-08-11-AI Tutor-小Mai模型切换配置.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-08-11-AI Tutor-小Mai新内容更新引导.md, 2026-08-11-AI Tutor-小Mai模型切换配置.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md, 2026-09-08-奖励中心-拓展空间提升购买率.md, 2026-09-20-AI Tutor-多图故事接入NPC体系.md, 2026-09-20-AI Tutor-小麦接入课程路径MaiNode.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/KtrPwhWChiY26bkdcZzlTWKpgse
 日期: 2026-08-11
 ---

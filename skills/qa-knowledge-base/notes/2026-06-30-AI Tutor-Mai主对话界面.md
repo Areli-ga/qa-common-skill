@@ -2,7 +2,7 @@
 标题: Mai - 加入主对话界面，提供点击互动
 模块: AI Tutor / Mai主对话
 版本: V1.32.0
-related: [2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-08-11-AI Tutor-Mai电量系统成本控制.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-08-11-AI Tutor-小Mai新内容更新引导.md, 2026-08-11-AI Tutor-小Mai模型切换配置.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md]
+related: [2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-07-13-AI Tutor-Mai引导交互优化.md, 2026-08-11-AI Tutor-Mai电量系统成本控制.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-08-11-AI Tutor-小Mai新内容更新引导.md, 2026-08-11-AI Tutor-小Mai模型切换配置.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md, 2026-09-20-AI Tutor-多图故事接入NPC体系.md, 2026-09-20-AI Tutor-小麦接入课程路径MaiNode.md, 2026-09-20-AI Tutor-消息列表与消息气泡.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HvVTwuYwaiexYIkUMbolXFqSgC8
 日期: 2026-06-30
 ---

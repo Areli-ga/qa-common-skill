@@ -1,0 +1,262 @@
+{
+  "fetched_at": "2026-09-20T17:40:00.038724+08:00",
+  "sheets": [
+    {
+      "token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd_bWX1F9",
+      "spreadsheet_token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd",
+      "sheet_id": "bWX1F9",
+      "title": "bWX1F9",
+      "row_count": 7,
+      "column_count": 2,
+      "range": "bWX1F9!A1:B7",
+      "values": [
+        [
+          "优先级",
+          "事项"
+        ],
+        [
+          "P0",
+          "内容全部对接AI，通过Prompt生成内容"
+        ],
+        [
+          "P0",
+          "主动打电话、被动打电话场景 内容结构区分"
+        ],
+        [
+          "P0",
+          "来电场景触发器，判断时机，优先级规则等"
+        ],
+        [
+          "P0",
+          "来电内容库，话题枚举"
+        ],
+        [
+          "P1",
+          "降频改造：前 2 天连打 → 之后事件触发 + N 天兜底"
+        ],
+        [
+          "P2",
+          "对话内容留档（Max 说的 + 孩子回的转写 + 主/被动标识 + 脚本 ID）"
+        ]
+      ],
+      "block_id": "AV3xdZqCDoc2upx3fEallRGHgpc"
+    },
+    {
+      "token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd_ndDfoe",
+      "spreadsheet_token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd",
+      "sheet_id": "ndDfoe",
+      "title": "ndDfoe",
+      "row_count": 6,
+      "column_count": 10,
+      "range": "ndDfoe!A1:J6",
+      "values": [
+        [
+          "IP打电话",
+          "calls_incoming_show",
+          "来电展示（系统主动来电）",
+          "支撑三大来电场景分布分析，评估各场景打扰程度和触达效果",
+          "电话机页停留20秒未拨打 / 首页停留5秒或完成单元后 / 家园停留5秒 触发来电时/push",
+          "H5， unity",
+          "Event",
+          "scene",
+          "calls_page/home_idle/home_finish_unit/house/push",
+          "参考应用内来电和push来电。"
+        ],
+        [
+          "IP打电话",
+          null,
+          "来电展示（系统主动来电）",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "type",
+          "weekend_plan/\ncomeback_greeting/\nleaderboard/\nstreak_congrats/first_day/second_day",
+          "来电场景，首日、次日，以及其他运营场景参数上报"
+        ],
+        [
+          "IP打电话",
+          "calls_answer_click",
+          "接听",
+          "核心互动指标：区分主动拨打 vs 被动接听的接通率",
+          "点击接听按钮时",
+          "H5",
+          "Event",
+          "scene",
+          "calls_page/home_idle/home_finish_unit/house/push",
+          "参考应用内来电和push来电。"
+        ],
+        [
+          "IP打电话",
+          null,
+          "接听",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "type",
+          "weekend_plan/\ncomeback_greeting/\nleaderboard/\nstreak_congrats/first_day/secord_day",
+          "来电场景，首日、次日，以及其他运营场景参数上报"
+        ]
+      ],
+      "block_id": "Hwl2dwwqRo0Yo6xq5edlfzaZgxc"
+    },
+    {
+      "token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd_cIGPeH",
+      "spreadsheet_token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd",
+      "sheet_id": "cIGPeH",
+      "title": "cIGPeH",
+      "row_count": 7,
+      "column_count": 10,
+      "range": "cIGPeH!A1:J7",
+      "values": [
+        [
+          "IP打电话",
+          "calls_decline_click",
+          "拒接/中途挂断",
+          "支撑退订风险监控：连续拒接次数是「取消订阅」触发条件之一",
+          "来电时点击拒接，或通话中途退出（未播放完90%）时",
+          "H5",
+          "Event",
+          "stage",
+          "decline_before_answer/hangup_during_call",
+          null
+        ],
+        [
+          "IP打电话",
+          null,
+          "拒接/中途挂断",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "ip_role",
+          "同上枚举",
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "source",
+          "dial/answer",
+          "主动拨打/系统来电"
+        ],
+        [
+          "IP打电话",
+          "calls_finish",
+          "通话完整结束",
+          "支撑完播率、内容消耗速度分析（判断首期20-30条音频多久刷完）",
+          "通话音频播放达到90%时长，或用户主动退出通话时",
+          "H5",
+          "Event",
+          "script_id",
+          "字符串",
+          "后端保存的"
+        ],
+        [
+          "IP打电话",
+          null,
+          "通话完整结束",
+          "同上",
+          "同上",
+          "H5",
+          "Event",
+          "is_completed",
+          "true/false",
+          "≥90%播放时长为true"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "source",
+          "dial/answer",
+          "主动拨打/系统来代呢"
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "AI_turn",
+          null,
+          "对话轮次"
+        ]
+      ],
+      "block_id": "RYapd08wTo0rJ3x2mZPlE0IPgnf"
+    },
+    {
+      "token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd_or1mnk",
+      "spreadsheet_token": "LhSKsbB5IhUWnZtjBqIl7uIkgUd",
+      "sheet_id": "or1mnk",
+      "title": "or1mnk",
+      "row_count": 2,
+      "column_count": 10,
+      "range": "or1mnk!A1:J2",
+      "values": [
+        [
+          "IP打电话",
+          "calls_push_send",
+          "电话提醒push下发",
+          "支撑push触达率/点击率漏斗分析",
+          "每晚20点，判断用户当日未接通电话后下发push时",
+          "后端",
+          "Event",
+          "push_ip",
+          "字符串",
+          null
+        ],
+        [
+          "IP打电话",
+          "calls_push_click",
+          "电话提醒push点击",
+          "同上",
+          "用户点击push跳转到接听页时",
+          "H5",
+          "Event",
+          "push_ip",
+          "字符串",
+          "与calls_push_send的push_id关联计算点击率"
+        ]
+      ],
+      "block_id": "P1tIdf4w3on3D1xauGklZQfKgKh"
+    }
+  ],
+  "bitables": []
+}

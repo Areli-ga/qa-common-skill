@@ -1,0 +1,297 @@
+{
+  "title": "P1 功能广场入口",
+  "doc_id": "YRBZdsXwholvVkxl0bYlycIDgTc",
+  "wiki_token": "Bfgjw5biVisNSrkxA46lXyaugEe",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Bfgjw5biVisNSrkxA46lXyaugEe",
+  "fetched_at": "2026-09-20T17:27:40.909682+08:00",
+  "version": "V1.39.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 2208,
+  "blocks": 165,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 30356,
+      "dims": [
+        1724,
+        474
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 159668,
+        "md5": "7c4f0d6e1d87bbc2711bcb2cd8e99971",
+        "dims": [
+          1724,
+          474
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 40368,
+      "dims": [
+        1970,
+        492
+      ],
+      "readable": "ok",
+      "read_scale": 0.964,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 209765,
+        "md5": "e0bc60fe11039bed1948567105120677",
+        "dims": [
+          1970,
+          492
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 110322,
+      "dims": [
+        1666,
+        766
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 1849772,
+        "md5": "2ff2ecdd4a5fbfd74da0671af5f5de14",
+        "dims": [
+          1666,
+          766
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 102020,
+      "dims": [
+        1458,
+        1060
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 955856,
+        "md5": "5f36aa2e055796d664a6c2dcf1243f4e",
+        "dims": [
+          1458,
+          1060
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 6344,
+      "dims": [
+        968,
+        166
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 25223,
+        "md5": "a4bc55f1fb4bc539191de779b388c021",
+        "dims": [
+          968,
+          166
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "images/img-06.webp",
+      "bytes": 93324,
+      "dims": [
+        2344,
+        1540
+      ],
+      "readable": "ok",
+      "read_scale": 0.811,
+      "read_file": "images/img-06.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-06.png",
+        "bytes": 352829,
+        "md5": "dec77029d2fd16c8656210347a14d69a",
+        "dims": [
+          2344,
+          1540
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "file": "images/img-07.webp",
+      "bytes": 88870,
+      "dims": [
+        2344,
+        1490
+      ],
+      "readable": "ok",
+      "read_scale": 0.811,
+      "read_file": "images/img-07.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-07.png",
+        "bytes": 361978,
+        "md5": "7743abb3ba0f575a7b9ae0ff965c64bc",
+        "dims": [
+          2344,
+          1490
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "file": "images/img-08.webp",
+      "bytes": 16982,
+      "dims": [
+        706,
+        370
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-08.png",
+        "bytes": 257741,
+        "md5": "e698bfc6206b49764c93060414bf34b5",
+        "dims": [
+          706,
+          370
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "file": "images/img-09.webp",
+      "bytes": 61158,
+      "dims": [
+        2116,
+        840
+      ],
+      "readable": "ok",
+      "read_scale": 0.898,
+      "read_file": "images/img-09.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-09.png",
+        "bytes": 336484,
+        "md5": "854cc9282754f31f62186e6c7c4b3bc4",
+        "dims": [
+          2116,
+          840
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "file": "images/img-10.webp",
+      "bytes": 47628,
+      "dims": [
+        1320,
+        766
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-10.png",
+        "bytes": 1083145,
+        "md5": "e3f99d8d4eebd19a0add24b4598d461b",
+        "dims": [
+          1320,
+          766
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "file": "images/img-11.webp",
+      "bytes": 125456,
+      "dims": [
+        2900,
+        1670
+      ],
+      "readable": "ok",
+      "read_scale": 0.655,
+      "read_file": "images/img-11.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-11.png",
+        "bytes": 528148,
+        "md5": "611776c98ee3f700458bdad49d7cdedf",
+        "dims": [
+          2900,
+          1670
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "file": "images/img-12.webp",
+      "bytes": 51504,
+      "dims": [
+        1172,
+        788
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-12.png",
+        "bytes": 632753,
+        "md5": "b37c18e2000acb061c3eaf88fdecbe69",
+        "dims": [
+          1172,
+          788
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "file": "images/img-13.webp",
+      "bytes": 26876,
+      "dims": [
+        1276,
+        790
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-13.png",
+        "bytes": 602386,
+        "md5": "c513b35f2dc31a5bd5d448311e6ab2fa",
+        "dims": [
+          1276,
+          790
+        ]
+      }
+    }
+  ],
+  "image_count": 13,
+  "tables": 0,
+  "embedded_sheets": 11,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

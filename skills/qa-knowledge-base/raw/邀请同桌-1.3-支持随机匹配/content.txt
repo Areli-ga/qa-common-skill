@@ -1,0 +1,119 @@
+邀请同桌 1.3 支持随机匹配
+需求背景
+用户通过随机匹配能直接找到一个同桌，解决用户邀请卡点。
+
+
+需求目的
+提升用户的邀请成功率
+提升功能留存进而提升大盘留存。
+
+UI链接
+https://www.figma.com/design/ILqThciQTufJKCFPmIuDVH/1.38.0?node-id=52021-35&t=ysueQj0jUVzJO8K5-1
+需求详情
+
+
+
+原型
+
+说明
+
+image.png
+
+
+用户没有同桌时,进入"同桌"功能看到的默认状态。标题"Invite a studybuddy to study together!" + 绿色 slogan 飘带。
+三个入口：
+Random Match(主按钮,本期新增)
+Invite a Friend(主按钮,复用现有邀请链路——生成配对码/分享链接给指定好友)
+Already have a code? Join a Friend(按钮下方小字链接,输入对方给的配对码直接加入)
+
+image.png
+
+
+
+点击 Random Match,系统直接展示 1 位候选人,不展示列表。
+候选池规则，满足需求的人可以进入候选池子
+未配对状态
+年龄段相近(±2岁)
+排除自己 / 排除已在 添加在Pending 里的人
+推荐顺序(优先级从高到低)
+当前在线优先，是否能增加这个监听心跳
+可以有方案支持✅ 
+近期活跃(比如24小时内登录过)
+最后随机排序
+卡片内容:Avatar 形象 + 昵称 + 1 个匹配标签(命中维度A显示"🏆 Lv.X · Same level",命中维度B显示"🇵🇭 国家名") + "View Home"。
+不是相同等级展示：Same Country，Different Country
+支持手势向左滑动。
+操作:Not This One(换下一位,候选池内循环,不重复推已经跳过的人直到池子耗尽一轮)/ Team Up(进入二次确认)。
+pending用户超过99人后，展示99+
+
+image.png
+
+
+发起申请
+点击 Team Up 先弹"Send a team-up request to <name>?",Cancel / Send Request。
+Cancel 关闭页面。
+Send Request 发起申请，同时这条申请放入 pending 列表。
+等待对方确认
+发起申请后不支持撤回——用户只能等对方响应(同意/拒绝)或超时,没有主动取消的入口。
+此状态下用户可以退出去继续给下一个人发申请,支持同时有多条等待中的请求。（最多只能发起 10 个人）
+
+image.png
+
+
+
+Pending 列表
+匹配页面右上角"⏳ Pending"入口，进入后展开所有申请列表；
+列表展示信息：
+每行:头像 + 昵称 + 匹配标签 + 状态
+状态：Waiting （已发起都是等待状态）、Declined 、待接受、已组队（文案待定）。
+待接受：可以选择接受或者拒绝。
+点击【接受】，如果对方已经组队成功，toast提示：你来晚了，用户已经和其他人组队。
+组队成功后，pending列表不展示；退出组队再次匹配，可以看到历史pending记录。
+按申请时间倒序排列（近的靠前）。
+
+image.png
+
+
+
+受邀方收到邀请
+用户正在同桌页时，其他用户向你发起 Team Up 时弹出:"<name> wants to be your studybuddy!" + 等级标签 + 国家标签(两个都展示) + Decline / Accept。
+Accept → 进入组队成功模式，弹出组队成功和选择服装的弹窗。
+Decline → 关闭弹窗,留在同桌首页。
+用户在app内，回到首页，可以收到站内信的提示：
+同时下发Push文案：[name]想和你组队学习，一起学习更多奖励哦！
+Title：🎉 New Studybuddy Request!
+Describe：[name] wants to be your studybuddy — tap to accept and start earning rewards together!
+点击后进入pending的列表页。
+push文案每12小时最多通知一条
+
+发起方状态
+再次进入同桌页面，刷新受邀方状态，并反馈给发起方。
+组队成功：展示组队成功的弹窗
+image.png
+
+申请超时、申请被拒绝：无提示，需要进入pending页查看。（不打击用户积极性）
+
+
+
+组队成功后的流程不调整
+
+
+数据埋点
+
+
+
+
+
+以下可不看
+
+
+
+
+
+
+竞品
+
+ 
+
+
+

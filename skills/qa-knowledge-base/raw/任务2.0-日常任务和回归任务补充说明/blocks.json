@@ -1,0 +1,417 @@
+[
+  {
+    "block_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7",
+    "block_type": 1,
+    "children": [
+      "NHTTdxyxToX7Edx7Btilp8CTgvg",
+      "Qqf2dc7TMonOsVx1Ek3l2l9ngEd",
+      "Jpt2dzBFAoFTEyxrvpMlp0QDgke",
+      "QMKcdTD2UoypgexX6Uwly0sTgyd",
+      "WPhXdSxW9oVJzLxZG0oln8mkgMb",
+      "T9dSdG0pYo5qt4xXXwdlNEDVgfm",
+      "D2qodsXqjoFmvExQ0CFl7ci6gLh",
+      "ARhEdw0K7o9jncxAc1plyqrggQy",
+      "Gziqdwk0wolcASxY3qzlQEsbg4b",
+      "A68bdrCQpotR1jx7bLbltBcFghc"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "任务2.0 日常任务和回归任务补充说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "NHTTdxyxToX7Edx7Btilp8CTgvg",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "路径说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "Qqf2dc7TMonOsVx1Ek3l2l9ngEd",
+    "block_type": 43,
+    "board": {
+      "token": "Des1whdRch4o65blUgRlk7gagah"
+    },
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "Jpt2dzBFAoFTEyxrvpMlp0QDgke",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "老用户卸载APP、或更新app到新版本后，启动app不再走新人onboarding流程，参考上述流程。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "QMKcdTD2UoypgexX6Uwly0sTgyd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "老用户定义：此版本安装包以前已经注册过的游客id\n正式id：原本的游客id已经变成正式id，所以设备会新生成一个游客id，需要走【选年龄】+【定计划】流程\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "产品流程：退出登录后，再回到欢迎页，新游客id走【选年龄】+【定计划】流程",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "WPhXdSxW9oVJzLxZG0oln8mkgMb",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "基于生命周期不同的情况列举：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "children": [
+      "W1AndWAPno8JFBxfEzRlANVTg9c",
+      "EbBZddAefoYWzQxsKQJl7QRHgt4",
+      "Zyxidr7kjojB1rx6hQelT9Szg9e",
+      "FztGdFUuloUQ0PxAP8xloYsOg2e"
+    ],
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "W1AndWAPno8JFBxfEzRlANVTg9c",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册5天以上但不是【14天以上未活跃】：命中日常任务",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "WPhXdSxW9oVJzLxZG0oln8mkgMb"
+  },
+  {
+    "block_id": "EbBZddAefoYWzQxsKQJl7QRHgt4",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "14天以上未活跃的老用户：命中回归任务",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "WPhXdSxW9oVJzLxZG0oln8mkgMb"
+  },
+  {
+    "block_id": "Zyxidr7kjojB1rx6hQelT9Szg9e",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册时间小于5天：命中新人任务，没有弹窗，直接进入首页路径",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "WPhXdSxW9oVJzLxZG0oln8mkgMb"
+  },
+  {
+    "block_id": "FztGdFUuloUQ0PxAP8xloYsOg2e",
+    "block_type": 2,
+    "parent_id": "WPhXdSxW9oVJzLxZG0oln8mkgMb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "但是以上任务都在AB测，以上任务的对照组：直接进入首页",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T9dSdG0pYo5qt4xXXwdlNEDVgfm",
+    "block_type": 2,
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "D2qodsXqjoFmvExQ0CFl7ci6gLh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "埋点修改",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7"
+  },
+  {
+    "block_id": "ARhEdw0K7o9jncxAc1plyqrggQy",
+    "block_type": 2,
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游客id重新安装app单独加一个事件上报，用于产品观测数据。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Gziqdwk0wolcASxY3qzlQEsbg4b",
+    "block_type": 2,
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Jack: 暂时写了",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "guest_account_restore",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " 这个事件, 需要调整再跟我说",
+            "text_element_style": {
+              "background_color": 3,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "A68bdrCQpotR1jx7bLbltBcFghc",
+    "block_type": 2,
+    "parent_id": "L9QFdtNmsorNpaxzfuMlPo1bgy7",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

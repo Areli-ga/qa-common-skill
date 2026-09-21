@@ -1,0 +1,304 @@
+{
+  "fetched_at": "2026-09-08T16:27:43.118561+08:00",
+  "sheets": [
+    {
+      "token": "GLwJsnflJhG03wtrmk0lRhVQgyf_8gIX7Y",
+      "spreadsheet_token": "GLwJsnflJhG03wtrmk0lRhVQgyf",
+      "sheet_id": "8gIX7Y",
+      "title": "8gIX7Y",
+      "row_count": 8,
+      "column_count": 3,
+      "range": "8gIX7Y!A1:C8",
+      "values": [
+        [
+          "序号",
+          "段位",
+          "英文"
+        ],
+        [
+          1,
+          "训练生",
+          "Cadet"
+        ],
+        [
+          2,
+          "宇航员",
+          "Astronaut"
+        ],
+        [
+          3,
+          "领航员",
+          "Navigator"
+        ],
+        [
+          4,
+          "舱长",
+          "Captain"
+        ],
+        [
+          5,
+          "指挥官",
+          "Commander"
+        ],
+        [
+          6,
+          "将军",
+          "Admiral"
+        ],
+        [
+          7,
+          "星际传奇",
+          "Star Legend"
+        ]
+      ],
+      "block_id": "SMGedJwEMoU5WNxwCfDljc9Dgrg"
+    },
+    {
+      "token": "GLwJsnflJhG03wtrmk0lRhVQgyf_lOxIiA",
+      "spreadsheet_token": "GLwJsnflJhG03wtrmk0lRhVQgyf",
+      "sheet_id": "lOxIiA",
+      "title": "lOxIiA",
+      "row_count": 18,
+      "column_count": 20,
+      "range": "lOxIiA!A1:T18",
+      "values": [
+        [
+          "埋点模块",
+          "新增/删除日期",
+          "事件名",
+          "事件显示名",
+          "事件定义",
+          "触发位置",
+          "事件分端\n（客户端/H5/后端）",
+          "属性类型\n（Client/User/Event/Common）",
+          "属性显示名",
+          "属性值",
+          "备注"
+        ],
+        [
+          "排行榜首页",
+          "2026/6/12",
+          "app_leaderboard_entrance_click",
+          "用户点击首页右上「排行榜」图标",
+          null,
+          "点击图标时触发",
+          "客户端",
+          "Event",
+          "lastweekstatus",
+          "是/否",
+          "上周是否参赛"
+        ],
+        [
+          "参课结束 - 排行榜",
+          "2026/6/12",
+          "app_overtake_animation_show",
+          "完课后排名上升、动效渲染时上报",
+          null,
+          "当日第几次触发",
+          "客户端",
+          "Event",
+          "show_time",
+          "1,2,3,4",
+          "今日第几次触发"
+        ],
+        [
+          null,
+          "2026/6/30",
+          null,
+          null,
+          "新增参数",
+          "排名第状态",
+          null,
+          "Event",
+          "rank_status",
+          "第1名，2～10名，11～20名，21～30名",
+          null
+        ],
+        [
+          "参课结束 - 排行榜",
+          "2026/6/12",
+          "app_overtake_animation_continue_click",
+          "用户点击超越动效后的 Continue 按钮",
+          null,
+          "点击图标时触发",
+          "客户端",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "排行榜",
+          "2026/6/12",
+          "app_leaderboard_show",
+          "学习之星排行榜页面展示",
+          null,
+          "进入页面时触发",
+          "客户端",
+          "Event",
+          "page_status",
+          "已学完一节课/未学完一节课",
+          null
+        ],
+        [
+          null,
+          "2026/8/25新增参数",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "user_tier",
+          "Cadet / Astronaut / Navigator / Captain / Commander / Admiral / Star Legend",
+          "新增参数：用户当前段位"
+        ],
+        [
+          "排行榜",
+          "2026/8/25新增参数",
+          "app_leaderboarduser_click",
+          "点击他人头像，查看他人卡片",
+          null,
+          "点击图标时触发",
+          "客户端",
+          "Event",
+          "viewed_user_tier",
+          "Cadet / Astronaut / Navigator / Captain / Commander / Admiral / Star Legend",
+          "新增参数：被查看用户的段位"
+        ],
+        [
+          "排行榜",
+          "2026/6/12",
+          "app_leaderboard_like_click",
+          "在个人卡片内点击点赞按钮",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "排行榜",
+          "2026/6/12",
+          "app_leaderboard_settlement_show",
+          "用户上周战报展示",
+          null,
+          "展示页面时触发",
+          "客户端",
+          "Event",
+          "tier_changed",
+          "true / false",
+          "新增参数：本周是否晋升"
+        ],
+        [
+          "排行榜",
+          "2026/8/25新增参数",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "current_tier",
+          "Cadet / Astronaut / Navigator / Captain / Commander / Admiral / Star Legend",
+          "新增参数：用户当前段位（无论是否晋升都上报）"
+        ],
+        [
+          "排行榜",
+          "2026/6/12",
+          "app_leaderboard_settlement_click",
+          "用户上周战报点击",
+          null,
+          "点击图标时触发",
+          "客户端",
+          "Event",
+          "buttom_name",
+          "next/返回首页",
+          null
+        ],
+        [
+          "服务端 · 分组",
+          "2026/6/12",
+          "leaderboard_group_locked",
+          "服务端封组完成时上报（满 20 真人 / 24h 超时）",
+          null,
+          "封组原因（real_users_full / timeout_24h）、首位真人到封组耗时（ms）",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "排行榜 ",
+          "2026/6/30",
+          "leaderboard_push_optin_show",
+          "Push 引导弹窗曝光",
+          "用户在排行榜页点击退出上报",
+          "排行榜页 → 退出按钮拦截",
+          "客户端",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "排行榜",
+          "2026/6/30",
+          "leaderboard_push_optin_click",
+          "Push 引导弹窗点击",
+          "用户点击主或次按钮时上报",
+          "Push 引导弹窗",
+          "客户端",
+          "Event",
+          "button_name",
+          "allow / later",
+          "用户点击的按钮"
+        ],
+        [
+          "段位晋升",
+          "2026/8/25",
+          "app_tier_celebration_show",
+          "晋升庆祝页曝光",
+          "点击Claim Rewards后弹出的晋升庆祝全屏页",
+          "晋升庆祝页",
+          "客户端",
+          "Event",
+          "new_tier",
+          "Cadet / Astronaut / Navigator / Captain / Commander / Admiral / Star Legend",
+          "晋升后段位"
+        ],
+        [
+          "段位晋升",
+          "2026/8/26",
+          null,
+          null,
+          null,
+          null,
+          "客户端",
+          "Event",
+          "promotion_count",
+          "int 1-6",
+          "该用户第几次晋升"
+        ],
+        [
+          "段位晋升",
+          "2026/8/25",
+          "app_tier_celebration_click",
+          "晋升庆祝页点击",
+          "用户点击晋升庆祝页Continue",
+          "晋升庆祝页",
+          "客户端",
+          "Event",
+          "new_tier",
+          "Cadet / Astronaut / Navigator / Captain / Commander / Admiral / Star Legend",
+          "晋升后段位"
+        ]
+      ],
+      "block_id": "LFCGdmDy4ox7nNxydJ4lEu9eged"
+    }
+  ],
+  "bitables": []
+}

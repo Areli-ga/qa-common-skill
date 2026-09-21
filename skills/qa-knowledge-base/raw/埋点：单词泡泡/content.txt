@@ -1,0 +1,130 @@
+埋点：单词泡泡
+
+产品埋点：
+
+
+事件名称
+
+触发时机
+
+参数
+
+完成情况
+
+测试情况
+
+app_game_play
+
+单局正式开始时上报
+
+game_name：bubble_word（泡泡单词）
+difficulty：easy；medium；hard
+
+
+
+
+
+app_game_complete
+
+完成游戏时上报
+
+game_name：bubble_word（泡泡单词）
+difficulty：easy；medium；hard
+final_score
+duration
+bubble_rush_count（一共发生了多少次泡泡潮）
+
+
+
+
+
+app_submit_question
+
+每一组泡泡产生结果时上报（答对 / 点错 / 漏掉）
+
+knowledge_point（考察的知识点，正确选项文本）
+answer_result（用户回答结果）：correct（正确）；wrong（错误）；miss（未作答）
+
+
+
+
+
+$pageview
+
+进入游戏难度选择页面
+
+$title（页面标题）：bubble_word
+
+
+
+
+
+app_share_click
+
+用户点击分享按钮
+
+share_scene：bubble_word（泡泡记单词）
+
+
+
+
+
+app_share_completed
+
+用户完成分享操作
+
+share_scene：bubble_word（泡泡记单词）
+
+
+
+
+
+测试埋点
+问题：
+埋点app_game_complete：多轮泡泡，但是 bubble_rush_count":0  都是0
+埋点：Pageview： $title":"Giggle AI 学习伙伴"
+缺少：app_share_click
+缺少：app_share_completed
+
+
+记录：
+app_game_play
+easy
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"easy","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=easy&gameCode=WORD_BUBBLE&chargeRequestId=c6807016-5c33-4384-8253-11cb4a0bf070","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_play","time":1789614757515,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789614757540}}
+medium
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"medium","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=medium&gameCode=WORD_BUBBLE&chargeRequestId=2a389e5e-00a5-4841-b38e-7a5f706946aa","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_play","time":1789614914916,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789614914946}}
+hard
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"hard","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=hard&gameCode=WORD_BUBBLE&chargeRequestId=6841f1d1-ed44-4471-81a6-19ec77737512","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_play","time":1789614940131,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789614940148}}
+app_game_complete
+easy
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"easy","final_score":10,"max_combo":2,"duration":28165,"bubble_rush_count":0,"$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=easy&gameCode=WORD_BUBBLE&chargeRequestId=7542cb3e-6250-4c96-8577-07b80dfa82e5","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_complete","time":1789616548305,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789616548588}}
+medium
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"medium","final_score":30,"max_combo":2,"duration":23125,"bubble_rush_count":0,"$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=medium&gameCode=WORD_BUBBLE&chargeRequestId=cb194a53-2344-43fb-9b9d-64fd0aaf09e7","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_complete","time":1789616820752,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789616820935}}
+hard
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","scene":"游戏大厅","difficulty":"hard","final_score":0,"max_combo":0,"duration":32938,"bubble_rush_count":0,"$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=hard&gameCode=WORD_BUBBLE&chargeRequestId=c18e70cf-a8e5-472e-b0ce-ed4fecdd1079","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_game_complete","time":1789616903151,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789616903369}}
+app_submit_question
+未作答
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","knowledge_point":"ox","answer_result":"miss","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=easy&gameCode=WORD_BUBBLE&chargeRequestId=49ce9033-b17b-49f7-a158-a9840eff036e","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_submit_question","time":1789617009760,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789617009853}}
+正确
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","knowledge_point":"the pear","answer_result":"correct","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=easy&gameCode=WORD_BUBBLE&chargeRequestId=49ce9033-b17b-49f7-a158-a9840eff036e","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_submit_question","time":1789617061158,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789617062599}}
+错误
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"game_name":"泡泡单词","knowledge_point":"zebra","answer_result":"wrong","$is_first_day":false,"$url":"https://www.qakjukl.net/ai-tutor/#/games/bubble-word?difficulty=easy&gameCode=WORD_BUBBLE&chargeRequestId=49ce9033-b17b-49f7-a158-a9840eff036e","$title":"Giggle AI 学习伙伴","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"app_submit_question","time":1789617098252,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789617098281}}
+
+Pageview
+
+{"mode":"DEBUG_AND_TRACK","result":"invalid","type":"WARING_AND_PASS","reason":"F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制;F0:关联/绑定异常, ['$identity_login_id':'p_1#$identity_login_id+793626175292997']不满足数量限制","code":400,"record":{"identities":{"$identity_cookie_id":"1a0ad471db1361-0bca9f6dea3a4b-49344146-285120-1a0ad471db2250","$identity_android_id":"a82a23af9380a465","$identity_login_id":"793626175292997","$identity_anonymous_id":"a82a23af9380a465"},"distinct_id":"793626175292997","lib":{"$lib":"js","$lib_method":"code","$lib_version":"1.27.11","$app_version":"1.39.0"},"properties":{"$timezone_offset":-480,"$screen_height":2376,"$screen_width":1080,"$viewport_height":360,"$viewport_width":792,"$lib":"js","$lib_version":"1.27.11","$latest_traffic_source_type":"直接流量","$latest_search_keyword":"未取到值_直接打开","$latest_referrer":"","is_offline":false,"$referrer":"https://www.qakjukl.net/ai-tutor/#/game-arcade","$url":"https://www.qakjukl.net/ai-tutor/#/game-arcade/intro/bubble-word","$url_path":"/ai-tutor/","$title":"Giggle AI 学习伙伴","$is_first_day":false,"$is_first_time":false,"$referrer_host":"www.qakjukl.net","$url_host":"www.qakjukl.net","$os":"HarmonyOS","$os_version":"4.0.0","$manufacturer":"HUAWEI","$model":"OCE-AN10","$brand":"HUAWEI","$app_version":"1.39.0","$app_id":"com.giggleacademy.app","$app_name":"Giggle Academy","$wifi":true,"$network_type":"WIFI","app_version":"1.39.0","app_build":1803,"platform":"Android","channel":"website","timezone":"Asia/Shanghai","api_level":31,"soc_model":"kirin","screen_dpi":480,"screen_density":3,"device_type":"Phone","userId":"793626175292997","kidId":"793626175346245","kidName":"咯咯学员","appBaseUrl":"https://creator.qakjukl.net/api/","appLanguage":"zh","greyScaleMode":"","linemode":"online","learn_language":"english","adjust_network":"Organic","adjust_campaign":"","adjust_adgroup":"","adjust_creative":"","adjust_tracker_name":"Organic","$device_id":"a82a23af9380a465"},"anonymous_id":"a82a23af9380a465","type":"track","event":"$pageview","time":1789617190348,"_hybrid_h5":true,"login_id":"793626175292997","_flush_time":1789617190755}}
+app_share_click
+
+
+app_share_completed
+
+

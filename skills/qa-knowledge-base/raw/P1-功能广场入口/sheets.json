@@ -1,0 +1,470 @@
+{
+  "fetched_at": "2026-09-20T17:27:40.907974+08:00",
+  "sheets": [
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_ignx3G",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "ignx3G",
+      "title": "ignx3G",
+      "row_count": 12,
+      "column_count": 3,
+      "range": "ignx3G!A1:C12",
+      "values": [
+        [
+          "编号",
+          "功能",
+          "优先级"
+        ],
+        [
+          3,
+          "地图世界场景【Giggle World】",
+          "P0"
+        ],
+        [
+          3.1,
+          "广场入口与房间分配",
+          "P0"
+        ],
+        [
+          3.2,
+          "Avatar 展示",
+          "P0"
+        ],
+        [
+          3.3,
+          "Avatar在广场中移动",
+          "P2"
+        ],
+        [
+          3.4,
+          "好友卡片与跳转（串门 / PK ）",
+          "P1"
+        ],
+        [
+          3.5,
+          "表情动作道具商店",
+          "P1"
+        ],
+        [
+          3.6,
+          "动作使用与消耗",
+          "P1"
+        ],
+        [
+          3.7,
+          "PK 发起与等待",
+          "P1"
+        ],
+        [
+          3.8,
+          "家长开关",
+          "P2"
+        ],
+        [
+          3.9,
+          "昵称对他人展示，匿名化处理",
+          "P1"
+        ],
+        [
+          null,
+          "家园访问记录，对接用户真实的访问数据记录。",
+          null
+        ]
+      ],
+      "block_id": "FZWcd2IwEoWHHZxdbl8laH7vg5d"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_G85Pj6",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "G85Pj6",
+      "title": "G85Pj6",
+      "row_count": 5,
+      "column_count": 2,
+      "range": "G85Pj6!A1:B5",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "谁出现在广场中",
+          "进入Giggle World 以及子功能的用户，包括家园中，游戏大厅，广场，但是在非游戏中，才出现在广场。一旦进入游戏或者PK中，则从广场中移除，退出可以继续进入广场。"
+        ],
+        [
+          "他人 Avatar",
+          "复用现有 Avatar 渲染；含当前穿戴服装与配饰；不展示家园内容"
+        ],
+        [
+          "昵称",
+          "Avatar 下方，单行，超长省略；只展示昵称"
+        ],
+        [
+          "自己的 Avatar",
+          "有标识区分"
+        ]
+      ],
+      "block_id": "FHgudKhuaoLlkCxCI3KllRWjgXg"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_XdDAYr",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "XdDAYr",
+      "title": "XdDAYr",
+      "row_count": 10,
+      "column_count": 2,
+      "range": "XdDAYr!A1:B10",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "Avatar 大图",
+          "展示当前完整装扮"
+        ],
+        [
+          "昵称",
+          "对外他人展示，采用匿名化处理规则"
+        ],
+        [
+          "国家信息",
+          "展示国旗"
+        ],
+        [
+          "Level",
+          "只展示主线课程 Level 数字"
+        ],
+        [
+          "排名",
+          "取排行榜的上榜信息，若无上信息则省略"
+        ],
+        [
+          "点赞",
+          "和排行榜的点赞数据源一致"
+        ],
+        [
+          "「PK」",
+          "主按钮【限免标签】"
+        ],
+        [
+          "访问家园",
+          "点击跳转到好友家园"
+        ],
+        [
+          "关闭",
+          "点卡片外区域关闭"
+        ]
+      ],
+      "block_id": "NhuDdTxFToffg3xMjsKlSblzgL2"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_Etfqox",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "Etfqox",
+      "title": "Etfqox",
+      "row_count": 3,
+      "column_count": 2,
+      "range": "Etfqox!A1:B3",
+      "values": [
+        [
+          "入口",
+          "位置"
+        ],
+        [
+          "商城「表情商店」Tab",
+          "商城主页新增 Tab"
+        ],
+        [
+          "广场底部动作栏末位「+」",
+          "点击进入商店"
+        ]
+      ],
+      "block_id": "YRb5dRZg6ozVJJx6PvkleKtFgng"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_qihBOh",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "qihBOh",
+      "title": "qihBOh",
+      "row_count": 4,
+      "column_count": 2,
+      "range": "qihBOh!A1:B4",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "动作卡片",
+          "动作预览动画（循环播放）+ 名称 + 价格+ 次数（如 x10）"
+        ],
+        [
+          "已购动作",
+          "展示剩余次数角标"
+        ],
+        [
+          "免费动作",
+          "标记「免费」，无需购买，直接可用"
+        ]
+      ],
+      "block_id": "L04Od0C4jooHSIxbZZnlZTwNgZg"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_uz9YXn",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "uz9YXn",
+      "title": "uz9YXn",
+      "row_count": 9,
+      "column_count": 6,
+      "range": "uz9YXn!A1:F9",
+      "values": [
+        [
+          "#",
+          "动作",
+          "分级",
+          "价格（Giggles）",
+          "次数",
+          "场景"
+        ],
+        [
+          1,
+          "挥手",
+          "免费",
+          0,
+          "无限",
+          "广场 + 家园"
+        ],
+        [
+          2,
+          "鼓掌",
+          "免费",
+          0,
+          "无限",
+          "广场 + 家园"
+        ],
+        [
+          3,
+          "跳跃欢呼",
+          "购买",
+          30,
+          10,
+          "广场 + 家园"
+        ],
+        [
+          4,
+          "转圈",
+          "购买",
+          30,
+          10,
+          "广场 + 家园"
+        ],
+        [
+          5,
+          "比心",
+          "购买",
+          60,
+          10,
+          "广场 + 家园"
+        ],
+        [
+          6,
+          "空翻",
+          "购买",
+          120,
+          10,
+          "广场 + 家园"
+        ],
+        [
+          7,
+          "机械舞",
+          "购买",
+          300,
+          10,
+          "广场 + 家园"
+        ],
+        [
+          8,
+          "撒花特效",
+          "购买",
+          300,
+          10,
+          "广场 + 家园"
+        ]
+      ],
+      "block_id": "Q2qHdfBUgo7jkyxt8Oolov3ygfc"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_qW9ZJQ",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "qW9ZJQ",
+      "title": "qW9ZJQ",
+      "row_count": 6,
+      "column_count": 2,
+      "range": "qW9ZJQ!A1:B6",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "动作栏",
+          "广场底部横向可滑动；每项 = 动作图标 + 剩余次数角标；"
+        ],
+        [
+          "使用",
+          "单击即用，无二次确认"
+        ],
+        [
+          "次数为 0",
+          "展示动作价格标签；点击 → 原地弹购买浮层（不跳商店）"
+        ],
+        [
+          "播放表现",
+          "Avatar 播放动画"
+        ],
+        [
+          "家园内使用",
+          "家园场景内同样有动作栏（收起态，点击展开）"
+        ]
+      ],
+      "block_id": "Cy4XdSG3KoUWDsxKVasloiA8gsg"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_6hAGoO",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "6hAGoO",
+      "title": "6hAGoO",
+      "row_count": 5,
+      "column_count": 2,
+      "range": "6hAGoO!A1:B5",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "入口",
+          "好友卡片「PK」按钮 / 排行榜个人卡片「PK」按钮"
+        ],
+        [
+          "等待中",
+          "浮层展示对方 Avatar + 5s 倒计时环 + 「取消」"
+        ],
+        [
+          "成功",
+          "直接进入 PK 场景"
+        ],
+        [
+          "失败",
+          "图形化「现在不方便」+ 建议，可一键系统匹配一个假用户开始对战）"
+        ]
+      ],
+      "block_id": "TgOQdUyZuov5njxOZqul2HUWggf"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_fQvyZX",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "fQvyZX",
+      "title": "fQvyZX",
+      "row_count": 3,
+      "column_count": 2,
+      "range": "fQvyZX!A1:B3",
+      "values": [
+        [
+          "元素",
+          "规格"
+        ],
+        [
+          "邀请弹窗",
+          "对方 Avatar + 昵称 + 「接受 / 拒绝」+ 5s 倒计时；有音效"
+        ],
+        [
+          "弹窗出现的场景页面",
+          "在【Giggles World】功能页面中，排除游戏中。"
+        ]
+      ],
+      "block_id": "Dhx3dVuOPoITmrxxbivlM8pTgVd"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_yl0RYh",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "yl0RYh",
+      "title": "yl0RYh",
+      "row_count": 8,
+      "column_count": 2,
+      "range": "yl0RYh!A1:B8",
+      "values": [
+        [
+          "规则",
+          "值"
+        ],
+        [
+          "邀请有效期",
+          "7秒"
+        ],
+        [
+          "同一发起方对同一对象的邀请冷却",
+          "60s（防骚扰）"
+        ],
+        [
+          "单用户当日被邀请上限",
+          "5次，包括成功与失败"
+        ],
+        [
+          "单用户同时进行中的邀请",
+          "1 个"
+        ],
+        [
+          "多人同时发起给同一人",
+          "只推送第一个；后续发起者收到\"对方正在被邀请\""
+        ],
+        [
+          "多人同时被 waiting_pk 用户接受",
+          "先到先得，第一个 accept 成立，其余收到\"来晚了\""
+        ],
+        [
+          "学习中",
+          "不可被发起，不弹窗"
+        ]
+      ],
+      "block_id": "P3Eadtc81ofJWzxbdzJlHQ4lg9c"
+    },
+    {
+      "token": "KFeas4oAmhAFzbt9FEXlCsofgeT_5YasVD",
+      "spreadsheet_token": "KFeas4oAmhAFzbt9FEXlCsofgeT",
+      "sheet_id": "5YasVD",
+      "title": "5YasVD",
+      "row_count": 6,
+      "column_count": 2,
+      "range": "5YasVD!A1:B6",
+      "values": [
+        [
+          "分支",
+          "处理"
+        ],
+        [
+          "对方在邀请到达前离线",
+          "邀请失效，发起方收到\"对方离开了\""
+        ],
+        [
+          "双方同时向对方发起",
+          "服务端按接收时间取先者，后者自动转为 accept"
+        ],
+        [
+          "PK 场景加载失败",
+          "双方回退到广场，邀请标记 failed，不消耗被邀次数"
+        ],
+        [
+          "接受后对方掉线",
+          "按现有竞技场断线规则处理"
+        ],
+        [
+          "邀请弹窗出现时用户正在使用动作",
+          "动作照常播放，弹窗叠加在上层"
+        ]
+      ],
+      "block_id": "VvugdiKFwoz7KRxz5ddlW9Ptgqf"
+    }
+  ],
+  "bitables": []
+}

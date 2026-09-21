@@ -2,7 +2,7 @@
 标题: Mai 的引导交互优化
 模块: AI Tutor / Mai主对话
 版本: V1.34.0
-related: [2026-06-30-AI Tutor-Mai主对话界面.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-09-20-AI Tutor-消息列表与消息气泡.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/KiNvwgdvwinfvukocmBlEJ2LgKg
 日期: 2026-07-13
 ---

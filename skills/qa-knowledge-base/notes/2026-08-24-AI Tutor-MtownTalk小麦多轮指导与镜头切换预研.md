@@ -2,7 +2,7 @@
 标题: M Town Talk / M 小镇口语对话课功能优化
 模块: AI Tutor / 场景内口语对话课
 版本: V1.37.0
-related: [2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-08-11-AI Tutor-MtownTalk支持bbox点击.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md]
+related: [2026-07-13-AI Tutor-Mai场景内口语对话课.md, 2026-08-11-AI Tutor-MtownTalk支持bbox点击.md, 2026-08-11-AI Tutor-Mtowntalk场景对话课流程优化.md, 2026-09-20-AI Tutor-多图故事接入NPC体系.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/GmELwKVdfiNpJvkQt2Ylj4Qpgcu
 日期: 2026-08-24
 ---

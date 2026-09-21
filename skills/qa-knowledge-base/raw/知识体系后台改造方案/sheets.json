@@ -1,0 +1,252 @@
+{
+  "fetched_at": "2026-09-20T18:18:10.059540+08:00",
+  "sheets": [
+    {
+      "token": "T9RUsd3erhmdlYts2EzlbAmZgch_f2yX6G",
+      "spreadsheet_token": "T9RUsd3erhmdlYts2EzlbAmZgch",
+      "sheet_id": "f2yX6G",
+      "title": "f2yX6G",
+      "row_count": 9,
+      "column_count": 5,
+      "range": "f2yX6G!A1:E9",
+      "values": [
+        [
+          "后台模块",
+          "用途",
+          "单词怎么来的",
+          "用在哪里",
+          "备注"
+        ],
+        [
+          "课程路径 - 主课程",
+          null,
+          "从学习资产列表选择",
+          "1. 每节课结束的报告",
+          null
+        ],
+        [
+          "课程路径 - 游戏列表",
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "MiniPlan-复习游戏",
+          "Miniplan的定制化后台",
+          "纯自由文本 dog, cat, bird, fish",
+          "无",
+          null
+        ],
+        [
+          "闪卡配置 · 单词",
+          "app端闪卡学习的定制化后台",
+          "批量管理上传的csv",
+          "闪卡学习的单词",
+          null
+        ],
+        [
+          "课程单词",
+          "无实际作用，单词库管理图片与发音",
+          "独立单词表",
+          "gamelist\n课程游戏中的单词",
+          "需要刷数据"
+        ],
+        [
+          "题库管理 ",
+          "级别上升测试定制化后台",
+          null,
+          "无",
+          null
+        ],
+        [
+          "绘本",
+          "绘本模块",
+          "暂未关联单词",
+          null,
+          "可以考虑关联核心单词，或者每句话输入时支持引用单词"
+        ],
+        [
+          "学习资产列表",
+          "最接近知识库的定位，但是目前存咋",
+          "CSV",
+          "课程路径、单词库",
+          null
+        ]
+      ],
+      "block_id": "AF4zdfzJioUEqXxdZ2alj9jugqh"
+    },
+    {
+      "token": "T9RUsd3erhmdlYts2EzlbAmZgch_FSlSZw",
+      "spreadsheet_token": "T9RUsd3erhmdlYts2EzlbAmZgch",
+      "sheet_id": "FSlSZw",
+      "title": "FSlSZw",
+      "row_count": 9,
+      "column_count": 7,
+      "range": "FSlSZw!A1:G9",
+      "values": [
+        [
+          "#",
+          "tab",
+          "列 1",
+          "列 2",
+          "列 3",
+          "列 4",
+          "列 5"
+        ],
+        [
+          1,
+          "关联课程",
+          "引用形态",
+          "课程名称",
+          "关联时间",
+          "—",
+          "—"
+        ],
+        [
+          2,
+          "关联MiniPlan",
+          "引用形态",
+          "复习游戏名称",
+          "所属 MiniPlan",
+          "关联时间",
+          "—"
+        ],
+        [
+          3,
+          "关联闪卡",
+          "引用形态",
+          "闪卡集名称",
+          "所属分组",
+          "卡片类型",
+          "卡片数 · 关联时间"
+        ],
+        [
+          4,
+          "关联绘本",
+          "引用形态",
+          "绘本名称",
+          "所属系列",
+          "阅读级别",
+          "页数 · 关联时间"
+        ],
+        [
+          5,
+          "关联课程游戏",
+          "引用形态",
+          "游戏名称",
+          "游戏模块",
+          "难度",
+          "关联时间"
+        ],
+        [
+          6,
+          "关联Quiz",
+          "引用形态",
+          "试卷 / 测验名称",
+          "所属题库",
+          "题型",
+          "题数 · 关联时间"
+        ],
+        [
+          7,
+          "关联M town对话课",
+          "引用形态",
+          "对话课名称",
+          "对话场景",
+          "轮次",
+          "关联时间"
+        ],
+        [
+          8,
+          "关联家园家具",
+          "引用形态",
+          "家具名称",
+          "所属房间",
+          "解锁方式",
+          "关联时间"
+        ]
+      ],
+      "block_id": "OrkUdExxyoJlGExoSwulWKfAgjk"
+    },
+    {
+      "token": "T9RUsd3erhmdlYts2EzlbAmZgch_tmqMD6",
+      "spreadsheet_token": "T9RUsd3erhmdlYts2EzlbAmZgch",
+      "sheet_id": "tmqMD6",
+      "title": "tmqMD6",
+      "row_count": 6,
+      "column_count": 3,
+      "range": "tmqMD6!A1:C6",
+      "values": [
+        [
+          "#",
+          "字段",
+          "说明"
+        ],
+        [
+          1,
+          "文本名",
+          "文本"
+        ],
+        [
+          2,
+          "key标识",
+          "animals / main / L1。等宽字体展示，不可改 —— 改 key 等于换一个标签"
+        ],
+        [
+          3,
+          "知识点数量",
+          "实时统计，不落库"
+        ],
+        [
+          4,
+          "删除",
+          "删除时，有知识点的标签不可以删除"
+        ],
+        [
+          5,
+          "编辑",
+          null
+        ]
+      ],
+      "block_id": "SNjCdGN18ol401xAcBLlHYVrgYf"
+    },
+    {
+      "token": "T9RUsd3erhmdlYts2EzlbAmZgch_eZDI2f",
+      "spreadsheet_token": "T9RUsd3erhmdlYts2EzlbAmZgch",
+      "sheet_id": "eZDI2f",
+      "title": "eZDI2f",
+      "row_count": 6,
+      "column_count": 2,
+      "range": "eZDI2f!A1:B6",
+      "values": [
+        [
+          "区",
+          "内容"
+        ],
+        [
+          "左侧",
+          "与学习资产列表页同一套分组选择器（§1.2）：分组方式下拉（主题 / 级别 / 剑桥体系）+ 全部知识点 + 扁平值列表带计数。不是另一棵树"
+        ],
+        [
+          "右上",
+          "七个筛选：知识点 / ID · 引用形态·词性 · 状态 · 主题 · 级别 · 体系 + 重置\n引用形态默认选中原形，可以切换"
+        ],
+        [
+          "中间",
+          "「已选（N）」chip 区，每枚 chip 是 #ID 形态 ×"
+        ],
+        [
+          "右下",
+          "候选表：✓ / ID / 知识点 / 引用形态 / 图片 / 词性 / 主题 / 级别"
+        ],
+        [
+          "底部",
+          "共 N 个知识点（当前分组）· M 个指定了非原形 + 取消 / 确认（N）"
+        ]
+      ],
+      "block_id": "RF4ydyG6ioDNmqxud5SlHTqBgab"
+    }
+  ],
+  "bitables": []
+}

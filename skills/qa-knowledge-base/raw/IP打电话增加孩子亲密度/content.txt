@@ -1,4 +1,10 @@
 IP打电话增加孩子亲密度
+
+
+Prompt提示工具：http://127.0.0.1:8777/
+
+音频相关的文件
+音频配置格式
 一、需求背景
 目前孩子与 Max 角色的互动主要发生在课程内的情景化教学中。让 IP 角色在课程之外，以"打电话"这一儿童熟悉且有情感联结的形式主动/被动地与孩子互动，从而：
 增加孩子对 IP 角色的情感依赖（亲密度）
@@ -30,7 +36,7 @@ https://www.figma.com/design/ILqThciQTufJKCFPmIuDVH/1.38.0?node-id=52021-53&t=h8
 完成第二单元后，路径中可以获得电话机奖励
 点击进入打电话页面，首次进入会有新手引导动画，教孩子如何拨打电话。
 通讯录，孩子可以根据不同的IP数字，给不同的IP拨打电话
-在页面中停留20秒未拨打电话，我们发起来电，孩子点击接听按钮，可以接听电话
+在页面中停留20秒未拨打电话，系统发起来电，孩子点击接听按钮，可以接听电话
 首次退出电话机页面，电话飞入奖励中心，路径中的电话消失。
 电话放入奖励中心固定的家具位置
 image.png
@@ -45,6 +51,7 @@ image.png
 
 
 以下三个场景中，一天只来电一次，若用户当天拨通（主动打给我们或者系统主动来电）电话后，就系统不再给用户拨打。
+应用内来电
 3.1、在电话机页面中接听
 若用户主动拨出了电话，则直接给对应的IP拨通电话，根据【电话内容消费逻辑】部分取对应的预知音频。
 若用户进入电话机页面， 20 秒或一段时间未主动拨出电话，则我们主动来电。
@@ -66,30 +73,84 @@ image.png
 根据用户的接听行为，判断是否还要给用户继续来电，条件为或的关系。
 连续两次拒绝通话或者中途挂断电话（未完成音频播放的90%）。
 未接来电语音通讯录中有超过7条未消费
-满足以上其中一个条件，推送最后【去掉电话订阅】内容后，则不再APP中主动给用户来电，也不再发送电话push通知。
+满足以上其中一个条件，推送最后【取消电话订阅】内容后，则不再APP中主动给用户来电，也不再发送电话push通知。
 
-【去掉电话订阅】Max语音来电
-内容脚本：你一直不接听我的电话，我是不是很打扰到了你，我知道了，以后不再给你来电了，如果你想我继续来电，就按1。
-若用户按1，则当日回复来电。
+
+【取消电话订阅】Max语音来电
+内容脚本：
+CN
+Hi，我是Max。
+你一直不接听我的电话，
+我是不是打扰到你了？
+我知道了，以后不再给你来电了。
+如果你想我继续来电，就按1。
+
+
+EN
+Hi, it's Max.
+I called you many times.
+Maybe you are busy. That's okay!
+I will stop calling now.
+Want me to call again? Press 1!
+Bye-bye!
+
+IN
+Halo, ini Max.
+Aku sudah menelepon berkali-kali.
+Mungkin kamu sibuk. Tidak apa-apa!
+Aku berhenti menelepon dulu.
+Mau aku telepon lagi? Tekan 1!
+Sampai jumpa!
+去掉订阅之后，APP推送和应用来电逻辑取消，然后孩子可以在家园中使主动发起电话。
+
+若用户按1，则播放语音@cdarren
+CN
+太好了！谢谢你按1！
+我会继续给你打电话的。
+下次电话铃响，记得接哦。
+拜拜～
+
+EN
+Yay! Thank you for pressing 1!
+I will keep calling you.
+Listen to my ring next time!
+Bye-bye!
+
+IN
+Asyik! Terima kasih sudah menekan 1!
+Aku akan menelepon kamu lagi.
+Dengarkan bunyi teleponku ya!
+Sampai jumpa!
+
+
+
+【取消电话订阅】不会因为用户听过，就从留言箱中消失，直到该用户按1，继续解锁来电才消失。
+当通话为【取消电话订阅】时，用户接听则停留在电话机页面中。
+image.png
+
 
 如何定义电话是否被接听完整？
 固定音频时长，播放音频的90%时长，则算播放完成。否则算是中途挂断
 
 语音信箱
 若用户没有接听到来电，或者中途退出没有接听完，把原本给用户主动打电话的内容，根据来电时序放在语音箱中。
+语音信息消费信息的逻辑和排序的规则。
 image.png
+
+语音信箱只展示问题的音频，回复音频不播放
+image.png
+
+
+
 
 
 push消息推送
 每天晚上8点根据用户当日是否有接通电话，判断若无，则推送push提醒，点击push，可以直接在首页中接听对应的来电。
 
-来电的push消息音，是否可以根据该场景定制push推送声音？
-可以用户类似电话一样的叮叮叮的声音
+来电的push消息音，可以用户类似电话一样的叮叮叮的声音
 
 根据不同的IP来电，取对应的文案
 
-
-来电语音ID
 
 IP
 
@@ -97,49 +158,137 @@ IP
 
 副标题
 
+Max
+
+🐰Max is calling!☎️
+
+Tap to Answer Now
+
+Panda Librarian
+
+🐼 Panda Librarian is calling!☎️
+
+Tap to Answer Now
+
+Elephant Firefighter
+
+Elephant Firefighter is calling!☎️
+
+Tap to Answer Now
+
+Bear Shop Owner
+
+Bear Shop Owner is calling!☎️
+
+Tap to Answer Now
+
+Cat Waiter
+
+Cat Waiter is calling!☎️
+
+Tap to Answer Now
+
+Dr. Fox
+
+Dr. Fox is calling!☎️
+
+Tap to Answer Now
+
+Officer Dog
+
+Officer Dog is calling!☎️
+
+Tap to Answer Now
+
+取消订阅push（Max）
+@Boris
+
+Max will stop calling
+
+Still want his calls? Come and tell him!
+
+
+通讯录
+
+
+头像图片
+
+IP
+
+电话号码
+
+npcId
+
 
 
 Max
 
-🐰Max 来电啦！☎️
+61
 
-点击接听
+max
 
 
 
 熊猫图书管理员
 
-🐼 来电啦！☎️
+28
 
-点击立即接听
+lulu
 
 
 
 大象消防员
 
+64
+
+ollie
 
 
 
+熊(马来熊/Sun bear)
+
+37
+
+bearkeeper
 
 
 
+猫 餐厅服务员
+
+42
+
+waiter
 
 
 
+狐狸 儿科医生
+
+36
+
+doctor
 
 
 
+狗 警察
+
+15
+
+shopkeeper
 
 电话内容消费逻辑
+
+音频配置格式
 大概第一期会配置20-30个音频样子
-每一天接通不同的IP对话
+每一天接通不同的IP对话，和用户是否来APP，或者是否接听没有关系
 IP下的对话全部消费一次后，再循环IP下剩下未被消费的内容
 若全部内容都被消费后，这重新循环
 
 
-内容ID
+脚本播放序号
 
 IP
+
+音频序号
 
 中文音频
 
@@ -151,6 +300,8 @@ IP
 
 Max
 
+1
+
 
 
 
@@ -159,7 +310,9 @@ Max
 
 2
 
-Max
+Panda Librarian
+
+1
 
 
 
@@ -169,8 +322,153 @@ Max
 
 3
 
+Elephant Firefighter
+
+1
+
+
+
+
+
+
+
+4
+
+Bear Shop Owner
+
+1
+
+
+
+
+
+
+
+5
+
+Cat Waiter
+
+1
+
+
+
+
+
+
+
+6
+
+Dr. Fox
+
+1
+
+
+
+
+
+
+
+7
+
+Officer Dog
+
+1
+
+
+
+
+
+
+
+8
+
 Max
 
+2
+
+
+
+
+
+
+
+9
+
+Panda Librarian
+
+2
+
+
+
+
+
+
+
+10
+
+Elephant Firefighter
+
+2
+
+
+
+
+
+
+
+11
+
+Bear Shop Owner
+
+2
+
+
+
+
+
+
+
+12
+
+Cat Waiter
+
+2
+
+
+
+
+
+
+
+13
+
+Dr. Fox
+
+2
+
+
+
+
+
+
+
+14
+
+Officer Dog
+
+1
+
+
+
+
+
+
+
+15
+
+Max
+
+3
 
 
 
@@ -179,17 +477,10 @@ Max
 
 
 
-Lily
+
+依次类推，若某一个IP脚本已消耗完，则根据顺序取下一个IP脚本，全部使用完，在没有配置新脚本之前，根据此顺序循环播放
 
 
-
-
-
-
-
-
-
-LiLy
 
 
 
@@ -226,12 +517,10 @@ image.png
 Wiki - NPC 设定文档
 
 
-
 数据埋点
 目标：验证孩子对与IP打电话功能的兴趣度
 接听电话后，当天还想继续使用打电话功能，后续主动使用打电话的次数
 每天来等待IP给孩子打电话的留存
-
 
 
 

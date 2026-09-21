@@ -2,7 +2,7 @@
 标题: Top Learners排行榜玩法
 模块: 排行榜 / Top Learners学习之星
 版本: V1.33.0
-related: [2026-06-30-排行榜-排行榜规则说明.md]
+related: [2026-06-30-排行榜-排行榜规则说明.md, 2026-09-08-排行榜-Top-Learners段位系统.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/WkLLwgikOicTFBkL2aflYWuHgAc
 日期: 2026-06-30
 ---

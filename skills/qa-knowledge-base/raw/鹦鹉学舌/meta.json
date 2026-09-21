@@ -1,0 +1,61 @@
+{
+  "title": "鹦鹉学舌",
+  "doc_id": "B1Qed322SouOrfxNTqXlQIkbgCg",
+  "wiki_token": "MTZ9wEvTaiAieSkU1mvlNksBgPf",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/MTZ9wEvTaiAieSkU1mvlNksBgPf",
+  "fetched_at": "2026-09-08T17:19:26.177410+08:00",
+  "version": "V1.38.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 8444,
+  "blocks": 706,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 28172,
+      "dims": [
+        1193,
+        554
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 159291,
+        "md5": "2a6b864ce6b7bea281a19a6c579d9e26",
+        "dims": [
+          1193,
+          554
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 33016,
+      "dims": [
+        1331,
+        618
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 127984,
+        "md5": "e7147580950b1b7af6da9e8bd180ba92",
+        "dims": [
+          1331,
+          618
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 14,
+  "embedded_sheets": 0,
+  "embedded_bitables": 0,
+  "embedded_tables_file": null
+}

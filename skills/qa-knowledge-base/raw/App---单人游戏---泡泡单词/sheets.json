@@ -1,0 +1,67 @@
+{
+  "fetched_at": "2026-09-20T17:11:32.639797+08:00",
+  "sheets": [
+    {
+      "token": "VaRbst1hFhmXtJt2xaZl2TiugXe_v5DRGi",
+      "spreadsheet_token": "VaRbst1hFhmXtJt2xaZl2TiugXe",
+      "sheet_id": "v5DRGi",
+      "title": "v5DRGi",
+      "row_count": 10,
+      "column_count": 5,
+      "range": "v5DRGi!A1:E10",
+      "values": [
+        [
+          "事件名称",
+          "触发时机",
+          "参数",
+          "完成情况",
+          "测试情况"
+        ],
+        [
+          "app_game_play",
+          "单局正式开始时上报",
+          "game_name：中文枚举「泡泡单词」；scene：「游戏大厅」/「主路径」（按入口区分）；difficulty：easy／medium／hard",
+          "已完成",
+          "CDP 本地实测通过：{\"game_name\":\"泡泡单词\",\"scene\":\"游戏大厅\",\"difficulty\":\"easy\"}"
+        ],
+        [
+          "app_game_complete",
+          "完成游戏时上报",
+          "game_name／scene／difficulty（同上）；final_score：本局最终得分；max_combo：最大连击；duration：本局用时（ms）；bubble_rush_count：本局泡泡潮触发次数",
+          "已完成",
+          "CDP 本地实测通过（强制触发一次泡泡潮后验证）：{\"final_score\":0,\"max_combo\":0,\"duration\":30838,\"bubble_rush_count\":1}"
+        ],
+        [
+          "app_submit_question",
+          "每一组泡泡产生结果时上报（答对/点错/漏掉）",
+          "game_name：中文枚举「泡泡单词」；knowledge_point：考察的知识点，正确选项文本；answer_result：correct／wrong／miss",
+          "已完成",
+          "CDP 本地实测通过（含 miss 抓包）"
+        ],
+        [
+          "旧：$pageview → 新：arena_game_intro_view",
+          "旧：进入游戏难度选择页面 → 新：进入游戏详情/难度选择页时（一页一次）",
+          "旧：$title：bubble_word → 新：game_name：中文枚举「泡泡单词」",
+          "已完成，9款游戏共用（原 $pageview 为 SDK 自动采集，$title 恒为全局标题不可按游戏区分，故替换）",
+          "CDP 本地实测通过：{\"game_name\":\"泡泡单词\"}"
+        ],
+        [
+          "旧：app_share_click → 新：arena_share_open",
+          "用户点击分享按钮、原生分享面板拉起成功后上报",
+          "game_name：中文枚举「泡泡单词」",
+          "已完成（事件名与原方案不同，功能已随介绍页分享入口上线，9款游戏共用）",
+          "真机（HarmonyOS）抓包已验证；本地浏览器因无真实原生桥不触发，属预期"
+        ],
+        [
+          "旧：app_share_completed → 新：arena_share_channel_click",
+          "用户在原生分享面板选择具体渠道后上报",
+          "game_name：中文枚举「泡泡单词」；share_channel：原生渠道原文透传（wechat_friend／whatsapp／copy_link…，不做枚举收敛）",
+          "已完成（同上）",
+          "真机抓包已验证（微信/链接/WhatsApp 三渠道）"
+        ]
+      ],
+      "block_id": "OKEhdJMQ9oQz0vxqEo0l1ypYg2f"
+    }
+  ],
+  "bitables": []
+}

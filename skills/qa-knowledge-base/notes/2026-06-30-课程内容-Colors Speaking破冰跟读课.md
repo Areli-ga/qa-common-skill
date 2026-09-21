@@ -2,7 +2,7 @@
 标题: 新课程-Colors1-2 Speaking
 模块: 课程内容 / Speaking跟读课
 版本: V1.31.0
-related: []
+related: [2026-09-08-课程内容-Hello课跟读统一与开口引导.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/SQ7SwQTlziBKpXkVekTlryeTgng
 日期: 2026-06-30
 ---

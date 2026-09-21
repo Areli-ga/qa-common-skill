@@ -1,0 +1,915 @@
+[
+  {
+    "block_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "block_type": 1,
+    "children": [
+      "S1UTdxgnioHWfaxVHlzlH2Zvg6f",
+      "DNkPdxJWao5DtNx700NlBRLsgxo",
+      "Do9edO74jopPXVx3ZtilF90qghb",
+      "CIcld3uRhouVgkxeRIDlLycag3e",
+      "T76idXLrLoGgV0xosDslovlVghg",
+      "K84Ad4IAcoWRgLxVFRmlexuAgyc",
+      "NGLrd8qE8oxjRExEpJZlbgY3guN",
+      "MRngdlJ06o5IiFxsFBcl37LcghG",
+      "YS4UdVAvmojJ55xNnbxl0rycgwk",
+      "OJ8LdLQQtoTch9xcgPNlxFCXgAN",
+      "NaRFdJrj0ooFJqxCvhyl5nwVg3e",
+      "F27Md17ovoZJthxHUbilGxmmgWX",
+      "KisrdTVOKoRLA8xY7FWlRS1OgNg",
+      "HoZOdQGPBoT6iBxTbjnldt32gdg",
+      "FBXid43uMonz8RxqooMlpe8Mgwd",
+      "Ply8d1qoaoeRi1xde2HlNH29gMf",
+      "FknYdOJW2oWaLqxS7qvl0x5Qggb",
+      "OCHJdKsQzoHg1DxSZbilZbYtgte",
+      "TAZTdenH3okEo6xt3A6l8XApgWg",
+      "D41kd81hLoWY4vxeZsylaXUcg3c",
+      "WJe7dkiqroQszXxgkkUl2mjLgXd",
+      "VcjNd9rabov1M0xnFaWlRL5rgGb",
+      "JflfdXYwIoyPaGxxerllYBwYgGh",
+      "Ot72dirggoHaBIxMqcQl1wqDgrc",
+      "FjWjduezPoB2PJxPrEflTodSgEd",
+      "YXT7dgMu2o1QL2xKpFtlBugPgod",
+      "Q2WVdnpSvoBB1gxcPr8l8BcFgHb",
+      "QuYPdpJUwo5x3AxUaFRlFDFkgag",
+      "RaE7dMtw1oifT0x5VFqlFGzwgjf"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单元结算新增跟读句式样式",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "S1UTdxgnioHWfaxVHlzlH2Zvg6f",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 592,
+      "scale": 1,
+      "token": "OPzQbbzgSoAO4oxM2N4lsXUagrb",
+      "width": 1246
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "DNkPdxJWao5DtNx700NlBRLsgxo",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Do9edO74jopPXVx3ZtilF90qghb",
+    "block_type": 999,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "undefined": {}
+  },
+  {
+    "block_id": "CIcld3uRhouVgkxeRIDlLycag3e",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "句式和单词混排，优先展示句式，再展示单词。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "T76idXLrLoGgV0xosDslovlVghg",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "有空位就排在后面。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "K84Ad4IAcoWRgLxVFRmlexuAgyc",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NGLrd8qE8oxjRExEpJZlbgY3guN",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据指标展示，以下数据指标为0为空，则隐藏",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MRngdlJ06o5IiFxsFBcl37LcghG",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "学习句式",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "YS4UdVAvmojJ55xNnbxl0rycgwk",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "学习单词",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "OJ8LdLQQtoTch9xcgPNlxFCXgAN",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "开口次数",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "NaRFdJrj0ooFJqxCvhyl5nwVg3e",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "互动次数",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "children": [
+      "JPledMeOEomtTtxEitDlhcpzgyc",
+      "LJK9dDdino7dWDxPQWmlKeqAgmd"
+    ],
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "JPledMeOEomtTtxEitDlhcpzgyc",
+    "block_type": 2,
+    "parent_id": "NaRFdJrj0ooFJqxCvhyl5nwVg3e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LJK9dDdino7dWDxPQWmlKeqAgmd",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1758,
+      "scale": 0.1217564870259481,
+      "token": "Fg1ybOpOBo5KDvxEOkMlTKXJghc",
+      "width": 2004
+    },
+    "parent_id": "NaRFdJrj0ooFJqxCvhyl5nwVg3e"
+  },
+  {
+    "block_id": "F27Md17ovoZJthxHUbilGxmmgWX",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "关键词key word",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KisrdTVOKoRLA8xY7FWlRS1OgNg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "若该单元有配置关键词，则展示，否则缺省",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "HoZOdQGPBoT6iBxTbjnldt32gdg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "该关键词音频，展示得分最高的一次",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "FBXid43uMonz8RxqooMlpe8Mgwd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "关键词的发音次数",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "Ply8d1qoaoeRi1xde2HlNH29gMf",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FknYdOJW2oWaLqxS7qvl0x5Qggb",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "课程音频来源：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OCHJdKsQzoHg1DxSZbilZbYtgte",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "课程内跟读",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "children": [
+      "XYoRdWJKjoPZbRxHKC6laSPog7g",
+      "RHxyd2Fvco8Xqax5jIJlT6V1g1c"
+    ],
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "XYoRdWJKjoPZbRxHKC6laSPog7g",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "OCHJdKsQzoHg1DxSZbilZbYtgte"
+  },
+  {
+    "block_id": "RHxyd2Fvco8Xqax5jIJlT6V1g1c",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "短句,短句在前端页面的展示卡片样式会有区分",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "OCHJdKsQzoHg1DxSZbilZbYtgte"
+  },
+  {
+    "block_id": "TAZTdenH3okEo6xt3A6l8XApgWg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "跟读挑战课",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "children": [
+      "Y7tPd8FdEo0q9NxvfBTlO49Tg9g",
+      "EcuvdkuMroJhX8xzj1tlY3azgjg"
+    ],
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "Y7tPd8FdEo0q9NxvfBTlO49Tg9g",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "单词",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "TAZTdenH3okEo6xt3A6l8XApgWg"
+  },
+  {
+    "block_id": "EcuvdkuMroJhX8xzj1tlY3azgjg",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "短句,短句在前端页面的展示卡片样式会有区分",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "TAZTdenH3okEo6xt3A6l8XApgWg"
+  },
+  {
+    "block_id": "D41kd81hLoWY4vxeZsylaXUcg3c",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WJe7dkiqroQszXxgkkUl2mjLgXd",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VcjNd9rabov1M0xnFaWlRL5rgGb",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "取单元的单词，unit_goal，和课程回顾的取值一样",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JflfdXYwIoyPaGxxerllYBwYgGh",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "语音识别要上传，统计到",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "level、单元id、用户、单词",
+            "text_element_style": {
+              "background_color": 6,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "纬度",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ot72dirggoHaBIxMqcQl1wqDgrc",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "如果有多次跟读，取用户单词跟读最高的音频。根据评分刷新存储新的最高分音频",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FjWjduezPoB2PJxPrEflTodSgEd",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YXT7dgMu2o1QL2xKpFtlBugPgod",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Q2WVdnpSvoBB1gxcPr8l8BcFgHb",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "课程节点设计文档",
+            "token": "WXEswTQYliql5lkTfQllfGVjgXd",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/WXEswTQYliql5lkTfQllfGVjgXd?from=from_copylink&sheet=3M4195"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QuYPdpJUwo5x3AxUaFRlFDFkgag",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1130,
+      "scale": 1,
+      "token": "GjaKbO0oYorlmmxMszhlJI11gMe",
+      "width": 1990
+    },
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc"
+  },
+  {
+    "block_id": "RaE7dMtw1oifT0x5VFqlFGzwgjf",
+    "block_type": 2,
+    "parent_id": "AHUPdf8dFo5iCmxIvTDlxhG2gzc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "title": "打电话二期优化功能",
+  "doc_id": "XXBId7l6ooxM4axtu8IlMjqUgne",
+  "wiki_token": "UluhwkaZ6iWEjBkpgULlMfQbgQh",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/UluhwkaZ6iWEjBkpgULlMfQbgQh",
+  "fetched_at": "2026-09-20T17:40:00.040039+08:00",
+  "version": "V1.39.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 6657,
+  "blocks": 533,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 62476,
+      "dims": [
+        2622,
+        1206
+      ],
+      "readable": "ok",
+      "read_scale": 0.725,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 562291,
+        "md5": "1decb72f5ca3b41595529560e610522e",
+        "dims": [
+          2622,
+          1206
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 61718,
+      "dims": [
+        1360,
+        870
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 165030,
+        "md5": "f4a99f459ab00d002309e9084ac0a4e7",
+        "dims": [
+          1360,
+          870
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 7,
+  "embedded_sheets": 4,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

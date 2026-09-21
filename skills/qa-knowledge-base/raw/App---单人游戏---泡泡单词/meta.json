@@ -1,0 +1,41 @@
+{
+  "title": "App - 单人游戏 - 泡泡单词",
+  "doc_id": "L6EPdO24KogTSrxQ60zlnnjqgCg",
+  "wiki_token": "YaTgw8VYsiytDmkndBQlnJ8BgZc",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/YaTgw8VYsiytDmkndBQlnJ8BgZc",
+  "fetched_at": "2026-09-20T17:11:32.641242+08:00",
+  "version": "V1.39.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 2524,
+  "blocks": 341,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 197348,
+      "dims": [
+        3840,
+        1384
+      ],
+      "readable": "ok",
+      "read_scale": 0.495,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 730421,
+        "md5": "9f6ce484aecef90b43dd4920f33657cd",
+        "dims": [
+          3840,
+          1384
+        ]
+      }
+    }
+  ],
+  "image_count": 1,
+  "tables": 9,
+  "embedded_sheets": 1,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}
