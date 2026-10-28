@@ -2,6 +2,8 @@
 
 `testcases.md` → `scripts/md_to_mindmap.py` → `mindmap.puml` → 随飞书文档以代码块发布 → 用户复制粘进飞书画板 PlantUML，渲染成思维导图。零依赖、零 API。
 
+同一次运行还会在 `.puml` 旁边写出 `mindmap.xmind`：由生成好的 PlantUML 节点逐行转成 XMind 8 格式（zip 内含 `content.xml` / `META-INF/manifest.xml` / `styles.xml` / `meta.xml`，与团队 opentest 导出格式一致），结构与 `.puml` 一一对应，用 XMind 桌面版直接打开；只存本地，不进飞书。
+
 > **跑脚本，别手抄**：`python3 scripts/md_to_mindmap.py <交付目录>/testcases.md <交付目录>/mindmap.puml`（默认 full；只要主结构加 `--compact`）。AI 逐行手抄会重复/断行/报错。本文件只说明脚本背后的规则，不是手抄模板。
 > 导图**默认必产**：飞书发布会裁掉两块用例正文、改由导图承载，没有 `mindmap.puml` 发布脚本会拒绝发布。
 

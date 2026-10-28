@@ -9,6 +9,7 @@ md_to_mindmap.py — 把 testcases.md 确定性转成飞书画板 PlantUML 思�
 
 用法:
     python3 scripts/md_to_mindmap.py <testcases.md> [输出.puml] [--compact]
+同时在 .puml 旁边写出同名 .xmind(XMind 8 格式,结构与 .puml 一致,供本地 XMind 打开)。
 
 约定:testcases.md 的用例行格式为
     [P0-01] 操作或条件｜期望：结果
@@ -17,6 +18,10 @@ md_to_mindmap.py — 把 testcases.md 确定性转成飞书画板 PlantUML 思�
 """
 import re
 import sys
+import time
+import uuid
+import zipfile
+import xml.etree.ElementTree as ET
 
 BUSINESS_CASE_SECTION = "用例设计（按端 / 页面 / 功能组织）"
 APP_CASE_SECTION = "APP 常驻维度补充"
@@ -303,6 +308,58 @@ def emit_tree(out, level, tree, compact):
         emit_tree(out, level + 1, child, compact)
 
 
+XMIND_NS = "urn:xmind:xmap:xmlns:content:2.0"
+
+
+def write_xmind(puml_lines, xmind_path):
+    """把 PlantUML mindmap 节点逐行转成 XMind 8 格式(与 opentest generate_xmind.py 同结构),结构与 .puml 一一对应。"""
+    ET.register_namespace("", XMIND_NS)
+
+    def topic(parent, title):
+        el = ET.SubElement(parent, f"{{{XMIND_NS}}}topic", id=uuid.uuid4().hex)
+        ET.SubElement(el, f"{{{XMIND_NS}}}title").text = title
+        return el
+
+    nodes = [(len(l) - len(l.lstrip("*")), l.lstrip("*").strip()) for l in puml_lines if l.startswith("*")]
+    root_title = nodes[0][1] if nodes else "测试用例"
+    xmap = ET.Element(f"{{{XMIND_NS}}}xmap-content", version="2.0")
+    sheet = ET.SubElement(xmap, f"{{{XMIND_NS}}}sheet", id=uuid.uuid4().hex, theme="plain")
+    ET.SubElement(sheet, f"{{{XMIND_NS}}}title").text = root_title
+    stack = [(1, topic(sheet, root_title))]
+    for level, title in nodes[1:]:
+        while stack[-1][0] >= level:
+            stack.pop()
+        parent = stack[-1][1]
+        topics = parent.find(f"{{{XMIND_NS}}}children/{{{XMIND_NS}}}topics")
+        if topics is None:
+            children = ET.SubElement(parent, f"{{{XMIND_NS}}}children")
+            topics = ET.SubElement(children, f"{{{XMIND_NS}}}topics", type="attached")
+        stack.append((level, topic(topics, title)))
+
+    now = int(time.time() * 1000)
+    manifest = ('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
+                '<manifest xmlns="urn:xmind:xmap:xmlns:manifest:1.0">\n'
+                '    <file-entry full-path="content.xml" media-type="text/xml"/>\n'
+                '    <file-entry full-path="META-INF/" media-type=""/>\n'
+                '    <file-entry full-path="META-INF/manifest.xml" media-type="text/xml"/>\n'
+                '    <file-entry full-path="styles.xml" media-type="text/xml"/>\n'
+                '    <file-entry full-path="meta.xml" media-type="text/xml"/>\n'
+                '</manifest>')
+    styles = ('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
+              '<xmap-styles xmlns="urn:xmind:xmap:xmlns:style:2.0" version="2.0">\n</xmap-styles>')
+    meta = ('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n'
+            '<meta xmlns="urn:xmind:xmap:xmlns:meta:2.0" version="2.0">\n'
+            f'    <Author>\n        <Name>qa-testcase-design</Name>\n    </Author>\n'
+            f'    <Create>{now}</Create>\n    <Modified>{now}</Modified>\n</meta>')
+    content = b'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n' + ET.tostring(xmap, encoding="utf-8")
+    with zipfile.ZipFile(xmind_path, "w", zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr("META-INF/manifest.xml", manifest)
+        zf.writestr("content.xml", content)
+        zf.writestr("styles.xml", styles)
+        zf.writestr("meta.xml", meta)
+    print(f"[md_to_mindmap] 写出 {xmind_path}(XMind 8 格式, {len(nodes)} 节点, 与 .puml 同结构)")
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     compact = "--compact" in sys.argv[1:]
@@ -311,6 +368,7 @@ def main():
         sys.exit(1)
     src = args[0]
     out_path = args[1] if len(args) > 1 else src.rsplit(".", 1)[0].replace("testcases", "mindmap") + ".puml"
+    xmind_path = out_path.rsplit(".", 1)[0] + ".xmind"
 
     text = open(src, encoding="utf-8").read()
     existing = extract_existing_mindmap(text)
@@ -320,6 +378,7 @@ def main():
         nodes = len([l for l in existing.splitlines() if l.startswith("*")])
         depth = max((len(l) - len(l.lstrip("*")) for l in existing.splitlines() if l.startswith("*")), default=0)
         print(f"[md_to_mindmap] 提取已有 PlantUML {out_path}({nodes} 节点, 最深 {depth} 层)")
+        write_xmind(existing.splitlines(), xmind_path)
         print("[md_to_mindmap] 交付提示:清空飞书画板编辑框 → 从【已发布飞书文档的思维导图代码块】或本地 .puml 全选复制 → 只粘一次(勿从对话复制,长行会折断)")
         return
 
@@ -365,6 +424,7 @@ def main():
     depth = max((len(l) - len(l.lstrip("*")) for l in out if l.startswith("*")), default=0)
     mode = "compact" if compact else "full"
     print(f"[md_to_mindmap] 写出 {out_path}({mode}, {nodes} 节点, 最深 {depth} 层)")
+    write_xmind(out, xmind_path)
     print("[md_to_mindmap] 交付提示:清空飞书画板编辑框 → 从【已发布飞书文档的思维导图代码块】或本地 .puml 全选复制 → 只粘一次(勿从对话复制,长行会折断)")
 
 

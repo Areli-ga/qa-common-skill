@@ -17,7 +17,7 @@ flowchart TD
     G --> H
     H --> I["步6 立场与防漏<br/>authoring-core.md 一次装载 · 风险判断 · 逐维过闸<br/>code-risk-*.md 按端命中才读"]
     I --> J["步7 出例<br/>先树后例 · 原子用例 · 覆盖自检表 → testcases.md"]
-    J --> L["步8 校验<br/>md_to_mindmap.py → mindmap.puml<br/>validate_output.py --dir 交付目录"]
+    J --> L["步8 校验<br/>md_to_mindmap.py → mindmap.puml + mindmap.xmind<br/>validate_output.py --dir 交付目录"]
     L --> M["步8 发布【飞书·写】<br/>publish_to_lark_doc.py：新建 docx + 呈现层裁剪 + 回写 meta.json"]
     M --> N["交付：飞书 docx 链接 + 本地目录<br/>导图代码块可直接粘进飞书画板"]
 ```
@@ -108,7 +108,7 @@ qa-knowledge-base 是自带 `SKILL.md` 的独立 skill，和 `qa-testcase-design
 > 设计测试用例：<链接>。本次只改原生+后端，重点关注反馈回复推送链路。
 
 **产出**：
-- 本地交付目录 `/tmp/qa-testcase-design-<短名>-<YYYYMMDD-HHMM>/`（macOS 上 /tmp 即 /private/tmp；含时分，避免同日覆盖）：`testcases.md` · `history-hits.md` · `images-notes.md` · `mindmap.puml` · `source/`
+- 本地交付目录 `/tmp/qa-testcase-design-<短名>-<YYYYMMDD-HHMM>/`（macOS 上 /tmp 即 /private/tmp；含时分，避免同日覆盖）：`testcases.md` · `history-hits.md` · `images-notes.md` · `mindmap.puml` · `mindmap.xmind`（本地 XMind 版导图） · `source/`
 - 新建飞书 docx（默认 Drive 目录）：需求理解 → 风险判断 → 思维导图代码块 → 风险与待确认 → 覆盖自检表；**复制文档里的 PlantUML 代码块直接粘进飞书画板即得导图**
 
 **可选控制**：

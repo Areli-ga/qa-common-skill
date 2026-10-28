@@ -314,3 +314,10 @@ qa-testcase-design/
 - **脚本**：`validate_output.py` 新增按端分组闸（端范围同时含 Admin/后台 和 App/Android/iOS/Unity/客户端 时，第 3 块每个 `###` 须以 Admin / App / 服务端 / H5 / Web 开头且至少 2 个）和命名闸（第 3、4 块分组标题含表号、图号、R 编号或「示例」即 FAIL）；第 3 块标题集中为 `BUSINESS_SECTION` 常量。`md_to_mindmap.py` 标题层级从 `#{3,9}` 放开为 `#{3,}`。
 - **样例**：`example-testcases.md` 加入合成的 Admin「闪卡跟读题编辑页 / 音素打分开关」（R13，新增 P1-28、P1-29，跨端用例 P1-30 挂在 App 闪卡跟读题的「前置：Admin 关闭 rad 题的音素打分」下），第 3 块改为 Admin / App 两端，App 下按 闪卡跟读题 / 学习路径跟读题 / Unity 单词回顾页 → 功能区 → 状态逐层细化，最深 7 层；覆盖表业务维度改为端 + 页面。
 - **兼容影响**：旧标题「用例设计（按业务功能 / 需求类目组织）」的交付目录重新校验会报 missing section。
+
+## 11.17 更新记录（2026-10-28 · 导图同步输出 XMind）
+
+- **背景**：用户要求思维导图同时在本地输出一份 XMind 文件。
+- **实现**：`md_to_mindmap.py` 写完 `mindmap.puml` 后，把同一份 PlantUML 节点逐行转成 `mindmap.xmind`（与 `.puml` 同目录同名）；手写 PlantUML 块的提取路径同样生成。格式照团队 opentest `generate_xmind.py` 的 XMind 8 结构（`content.xml` + `META-INF/manifest.xml` + `styles.xml` + `meta.xml`），只用标准库。XMind 只存本地，不发布到飞书，validate 不新增闸门。
+- **规范**：SKILL 步 8 与最终回复、output-files 交付目录表、mindmap-plantuml、PIPELINE 同步登记 `mindmap.xmind`。
+- **验证**：样例交付目录生成 134 节点 XMind，解析 content.xml 后层级与标题和 `.puml` 逐节点一致，最深 7 层；10 层的深树样例同样一致；手写 PlantUML 提取路径也能生成；所有 XML 可解析、zip 校验无损坏；样例 `validate --dir` 仍 PASS。未在 XMind 桌面版里实际打开验证。

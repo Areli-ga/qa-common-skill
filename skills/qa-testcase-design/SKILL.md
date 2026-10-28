@@ -71,12 +71,12 @@ python3 scripts/publish_to_lark_doc.py $D [--target "<用户指定目录>"]
 ```
 - 校验 FAIL 先按 `output-files.md` 修法表回修文件；WARN 逐条处理（数值遗漏补用例或写进待确认）。
 - 因 `阻断` 级待确认 FAIL 时，把这些 Q 项问用户；**不得自行改成已确认，也不得降级为记录**。
-- 导图由脚本确定性生成，**不手抄 PlantUML**；用户只要主结构时加 `--compact`。
+- 导图由脚本确定性生成，**不手抄 PlantUML**；用户只要主结构时加 `--compact`。同一条命令会在 `mindmap.puml` 旁边写出结构相同的 `mindmap.xmind`（XMind 8 格式，只存本地、不发飞书）。
 - 发布失败：报告 `stage / code / msg`、本地目录与下一步；append 中断用 `--resume` 续传（脚本会拦截无意识重发），**不要声称完成，也不要等用户提醒才处理**。
 
 ## 最终回复
 
-给出：飞书文档链接、本地交付目录、用例数（P0/P1/P2）、Top 待确认项。导图使用提示：**打开飞书文档复制「用例设计思维导图（PlantUML）」代码块 → 清空飞书画板 PlantUML 编辑框 → 只粘一次**；不要从对话复制（长行会折断）。末尾提示：执行中发现的新缺陷/回归点，可后续单独 ingest 回 qa-knowledge-base。
+给出：飞书文档链接、本地交付目录、本地 XMind 文件路径（`$D/mindmap.xmind`）、用例数（P0/P1/P2）、Top 待确认项。导图使用提示：**打开飞书文档复制「用例设计思维导图（PlantUML）」代码块 → 清空飞书画板 PlantUML 编辑框 → 只粘一次**；不要从对话复制（长行会折断）。末尾提示：执行中发现的新缺陷/回归点，可后续单独 ingest 回 qa-knowledge-base。
 
 ## 交付前自检（validate 管不到的部分）
 

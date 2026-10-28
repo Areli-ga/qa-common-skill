@@ -19,6 +19,7 @@
 | `history-hits.md` | 每次必产 | 历史检索证据；qa-knowledge-base 不可达时也要产出，写一行判定为 `未读` 的数据行并说明原因（格式见 `history-kb-contract.md`） |
 | `testcases.md` | 每次必产 | 6 块结构化用例正文（规则：`authoring-core.md` §C），完整用例与 ID 的唯一源 |
 | `mindmap.puml` | 每次必产（发布依赖） | `md_to_mindmap.py` 从 `testcases.md` 确定性生成；仅「只本地输出且明确不要导图」时可省 |
+| `mindmap.xmind` | 随 `mindmap.puml` 同步生成 | 同一条 `md_to_mindmap.py` 命令写出，节点结构与 `.puml` 完全一致；XMind 8 格式，XMind 桌面版可直接打开；只存本地，不发飞书 |
 | `publish_state.json` | 发布中断时自动生成 | 发布断点；成功后自动删除 |
 
 ## 校验命令（交付前必须 PASS）
