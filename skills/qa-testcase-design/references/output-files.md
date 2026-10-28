@@ -2,63 +2,74 @@
 
 ## 交付目录
 
-每次真实执行都建一个独立交付目录，避免多次生成互相覆盖。推荐命名：
+每次执行第一步就建独立交付目录，后续所有产物落这里：
 
 ```text
-<系统临时目录>/qa-testcase-design-<需求短名>-<YYYYMMDD-HHMM>/
+/tmp/qa-testcase-design-<需求短名>-<YYYYMMDD-HHMM>/
 ```
 
-系统临时目录按平台取：macOS 为 `/private/tmp`，Linux 为 `/tmp`（即 Python `tempfile.gettempdir()` 的结果，勿硬编码 macOS 路径）。用户指定目录时用用户目录。不要写入 qa-knowledge-base 知识库本体。
+`/tmp` 在 macOS 上即 `/private/tmp`、Linux 上即 `/tmp`，两端通用，不要写 `tempfile.gettempdir()`（macOS 上它返回 `/var/folders/...`）。名字含时分，避免同日多次生成互相覆盖。用户指定目录时用用户目录。不要写入 qa-knowledge-base 知识库本体。系统临时目录重启可能被清空，交付以飞书文档为长期留档。
 
-## 必产文件
+## 交付目录结构
 
 | 文件 | 何时生成 | 说明 |
 |---|---|---|
-| `testcases.md` | 每次必产 | 7 块结构化用例正文，供 QA 评审和执行；包含 `showcase（提测准入）`，用例主体按业务功能/需求类目组织 |
-| `history-hits.md` | 每次已读 qa-knowledge-base 时必产 | 历史检索证据；qa-knowledge-base 不可达时也写明未读原因 |
-| `mindmap.puml` | 用户需要飞书思维导图时生成 | 由 `scripts/md_to_mindmap.py` 从 `testcases.md` 转换 |
-| `images-notes.md` | **有图片就必产**（并行读图代理或主线串行读图都要落盘） | 逐图转录（文案/字段/数值/状态/流程/异常）；主线合流验收后作为出例依据之一，关键图仍需主线复核原图。**图少或串行读图也不省略这份留档** |
+| `source/` | 飞书链接输入时必产 | `read_doc.py` 产物：`content.txt / tables.md / tables.json / blocks.json / images/ / meta.json` |
+| `images-notes.md` | **有图片就必产** | 逐图转录（每图一节 `【图NN｜文件名】`）；分片读图时为 `images-notes-<分片>.md`，主线合并为 `images-notes.md` |
+| `history-hits.md` | 每次必产 | 历史检索证据；qa-knowledge-base 不可达时也要产出，写一行判定为 `未读` 的数据行并说明原因（格式见 `history-kb-contract.md`） |
+| `testcases.md` | 每次必产 | 6 块结构化用例正文（规则：`authoring-core.md` §C），完整用例与 ID 的唯一源 |
+| `mindmap.puml` | 每次必产（发布依赖） | `md_to_mindmap.py` 从 `testcases.md` 确定性生成；仅「只本地输出且明确不要导图」时可省 |
+| `publish_state.json` | 发布中断时自动生成 | 发布断点；成功后自动删除 |
 
-如果飞书链接读取产出 `content.txt / tables.md / tables.json / blocks.json / images/ / meta.json`，这些读取产物放在同一交付目录的 `source/` 下。
+## 校验命令（交付前必须 PASS）
 
-## 飞书文档发布
-
-除非用户明确要求只要本地文件，最终交付还要新建飞书 docx，并把本地交付内容写入用户当次指定目录；没有当次指定目录时，写入默认飞书 Drive 文件夹。**发布成功到该目录才算本轮结束**。默认目录和失败处理只以 `references/lark-output.md` 为准。
-
-发布脚本默认会先复用 `validate_output.py` 做结构校验；校验失败会中止发布，避免把坏结构写进飞书。因此本地校验通过后**直接发布**（`--target` 缺省即默认 Drive 文件夹，见 `lark-output.md`；`--dry-run` 只在排查渲染异常时用）：
+一条命令校验整个交付目录（自动发现上表文件）：
 
 ```bash
-python3 scripts/publish_to_lark_doc.py <交付目录>
+python3 scripts/md_to_mindmap.py <交付目录>/testcases.md <交付目录>/mindmap.puml
+python3 scripts/validate_output.py --dir <交付目录>
 ```
 
-发布成功后在最终回复里同时给出飞书文档链接和本地交付目录；发布失败时报告飞书 `code/msg`、本地交付目录和建议动作，但不能把本地文件视为最终完成。
+`--dir` 会依次检查：`testcases.md` 结构与粒度、`history-hits.md` 证据与四类检索词、`mindmap.puml` 结构、`source/tables.md` 数值对账（WARN）、`images-notes.md` 是否覆盖 `content.txt` 全部【图NN】占位。只校验单个文件时仍可用 `validate_output.py testcases.md [--history …] [--mindmap …] [--tables …]`。
 
-`--skip-validate` 只用于手动恢复旧归档，不用于正常交付。
+WARN 不阻断发布，但每条都要处理：数值对账遗漏 → 补用例或写进「风险与待确认」；期望过长/分号串联 → 拆原子用例。
 
-## 校验命令
+## 飞书发布
 
-交付前必须先跑结构校验：
+除非用户明确要求只本地输出，校验 PASS 后直接发布（发布脚本会以同样规则再校验一次，`--dry-run` 只在排查渲染异常时用）：
 
 ```bash
-python3 scripts/validate_output.py testcases.md --history history-hits.md
+python3 scripts/publish_to_lark_doc.py <交付目录> [--target "<用户指定目录>"]
 ```
 
-如果生成了思维导图，再跑：
-
-```bash
-python3 scripts/md_to_mindmap.py testcases.md mindmap.puml
-python3 scripts/validate_output.py testcases.md --history history-hits.md --mindmap mindmap.puml
-```
-
-校验通过后再交付文件路径和飞书复制提示。
+**发布成功并拿到飞书文档链接才算完成**；最终回复同时给出飞书链接和本地交付目录。发布失败时报告 `code/msg`、本地交付目录和建议动作，不能把本地文件视为完成。默认目录、呈现规则、续传与失败处理见 `lark-output.md`。`--skip-validate` 只用于手动恢复旧归档。
 
 ## 校验失败时
 
-- 先修 `testcases.md` 或 `history-hits.md`，不要让用户手动修格式。
-- 用例 ID 不一致时，以 `testcases.md` 的叶子 ID 为准，同步修覆盖自检表和 `history-hits.md`。
-- `case id missing from coverage table` 表示用例没有进入覆盖自检表；补到最贴近的业务维度或 APP 常驻维度。
-- `coverage table missing APP permanent dimension` 表示常驻维度缺失；无关时补 `N/A`，不要删除。
-- `showcase should contain 1-5 cases` 表示把完整回归集放进了提测准入；只保留核心演示路径。
-- `pending case ... must be referenced in 风险与待确认` 表示待确认用例没有 Q 项落点；补风险表，不要把待确认原因塞进叶子。
-- `history-hits.md` 保留/待确认行没有编入位置时，补落到用例、Q 项、风险判断或覆盖自检表；说不清影响的命中改为丢弃。
-- mindmap 中出现 `风险与待确认`、`history-hits`、`历史回归`、`qa-knowledge-base` 等正文/附录信息时，说明正文结构放错了；风险确认和附录不要进思维导图。
+先修文件，不要让用户手动修格式。
+
+| 报错 | 修法 |
+|---|---|
+| `missing section` | 六块标题逐字对齐 authoring-core §C 骨架 |
+| `no executable case lines found` | 用例行放进 ` ```text ` 块，行首直接 `[P0-01]` |
+| `case id missing from coverage table` | 把该 ID 补进最贴近的业务维度或 APP 常驻维度 |
+| `coverage table missing APP permanent dimension` | 补该常驻维度行，无关写 `N/A` + 理由 |
+| `showcase 块已取消` | 删掉 `## showcase（提测准入）` 块，其中用例移入用例设计对应分组（期望改成单断言），覆盖表删除 showcase 行 |
+| `pending case … must be referenced in 风险与待确认` | 补 Q 项并在影响列写该 ID |
+| `风险与待确认 …级别` | 表头改为 `编号 \| 级别 \| 问题 \| 影响`，级别填 `阻断 / 已确认 / 记录` |
+| `风险与待确认 Qn 为阻断级` | 停下把这些 Q 问用户；答复后改 `已确认` 并在问题列写「用户确认：…」，不得自行改级别 |
+| `组下 N 条用例但无 #### 细分` | 按分解树拆：数值逐项、分支逐行、结局逐个成节点 |
+| `期望 … 字` / `期望用「；」串联` | 拆成多条原子用例 |
+| `第一层 ### 须按端分` | 第 3 块先分 `### Admin`、`### App`（需要直接调接口才加 `### 服务端`），原分组下移一层到对应端下；跨端用例挂在看结果的一端，另一端操作写成 `前置：…` 节点 |
+| `用了 PRD 表号/图号/规则编号/示例` | 分组改用页面、控件、数据或状态命名（如「表 4 示例路径」→「第 15 单元复习 / 单元目标（只读）」）；规则对应关系只写在业务规则追溯表 |
+| `叶子不再写前置/步骤` | 共用前置写成上一层树标题（如 `##### 前置：N=5`），步骤压成一句操作，叶子只留 `操作｜期望：结果` |
+| `missing ｜期望：` | 每条用例补 `｜期望：<一个可判定结果>` |
+| `history … 编入位置` | 保留/待确认行补落点（用例 ID / Q 项 / 风险判断 / 覆盖自检表）；说不清影响就改判丢弃 |
+| `history missing query group` | 补该类检索词行；PRD 确无对应信息时判定写 `未命中` 并说明 |
+| `images-notes … 未覆盖` | 每张图单独一节、行首写 `【图NN｜文件名】`；略读图也要一节写原因，不能在一行里列多个图号 |
+| `业务规则追溯 …` | 第 1 块末尾补 `### 业务规则追溯` 表（`编号 \| 规则 \| 来源 \| 落点`）；落点为空 → 补用例或在第 5 块加 Q 项后写 Q 编号；引用了不存在的 ID / Q → 改成真实编号 |
+| `history row has N columns` | 每个数据行写满 5 列，空值写 `-` |
+| `history missing query group`（声明了未读） | 未读要写成判定列为 `未读` 的数据行，表外备注不算 |
+| mindmap 附录 / 占位节点 | 正文结构放错了：附录内容不进导图；「其他业务场景」= 用例没挂树也没进自检表 |
+
+用例 ID 不一致时，以 `testcases.md` 叶子 ID 为准，同步修覆盖自检表和 `history-hits.md`。

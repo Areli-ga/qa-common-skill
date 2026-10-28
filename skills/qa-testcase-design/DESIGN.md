@@ -4,7 +4,7 @@
 
 日期：2026-07-01（2026-07-04 更新：7 块骨架重构 + 代码风险库按端拆分 + 飞书 Drive 发布）
 状态：**v2 已实现**（四支柱：逐维防漏 + 风险立场 + 测试设计方法 + 只读检索 qa-knowledge-base 历史编译）。正文按业务功能组织、P0/P1/P2 降为用例 ID 属性；思维导图经 md_to_mindmap.py 确定性生成；代码扫描风险库按端范围按需读取。
-本文件是 skill 的设计存档，与 `SKILL.md` / `references/case-schema.md` / `scripts/validate_output.py` 的实现保持一致。
+本文件是 skill 的设计存档（为什么这样设计 + 更新记录）。**当前行为以 `SKILL.md`（流程）+ `references/authoring-core.md`（唯一规则源）+ `scripts/validate_output.py`（闸门）为准**；§11 更新记录里提到的旧文件名/旧步号是当时口径，不代表现状。
 
 ---
 
@@ -71,32 +71,30 @@
 ```
 
 - **进**：飞书链接（`read_doc.py` 读，含图）或粘贴文本 + 可选改动点/端范围。
-- **存**：skill 自身只存规则与模板——`SKILL.md`（工作流/边界）、`references/case-schema.md`（7 块结构/优先级/自检表/映射）、`references/coverage-dimensions.md`（高层覆盖清单）、`references/code-risk-*.md`（后端/Unity/原生/H5 代码扫描风险库，按端范围按需读取）。
+- **存**：skill 自身只存规则与模板——`SKILL.md`（工作流/边界）、`references/authoring-core.md`（覆盖维度 + 测试设计方法 + 7 块结构/优先级/自检表，唯一规则源）、`references/code-risk-*.md`（后端/Unity/原生/H5 代码扫描风险库，按端范围按需读取）。
 - **取**：独立交付目录中的格式无关中间产物 + 覆盖自检表 + 历史检索证据；校验失败时先修文件，再交下游出格式。
 
 ---
 
-## 5. 工作流（v2 · 8 步，见 SKILL.md）
+## 5. 工作流（1-8 步，详见 SKILL.md）
 
-1. **进** — 收需求 + 可选改动点/端范围。
-2. **保真读取** — `scripts/read_doc.py`（blocks + 抽取 `tables.md/json` + 下载全部图 + sips 缩放）；Claude 逐张读图（≤6 全读；>6 优先关键图并登记未读）。图没下全默认中止，接受部分读取才加 `--allow-partial`。
-3. **对齐** — 复述需求理解 + 列待确认，不编造。**务必读 `tables.md`**（分支表→状态迁移、数值表→边界值、多条件表→判定表，是用例金矿）。**仅当待确认影响 P0 主链路 / 接口·配置·AB 发版口径 / 测试环境前置**时停下问用户；普通缺口写入「风险与待确认」块并继续。
-3.5. **历史编译** — 按 `references/history-kb-contract.md` 只读检索 qa-knowledge-base：按最小检索词组召回，记录 `history-hits.md`，对保留/待确认命中深读 notes，把历史需求逻辑/旧边界/相邻入口/回归线索编入用例；不把 qa-knowledge-base 当事实源覆盖 PRD，冲突进入待确认。
-4. **立场** — 判断"本次最该测什么"+ 理由，驱动用例优先级（`priority=P0/P1/P2`）与 showcase 排序，不一碗水端平。
-5. **防漏** — 读覆盖清单逐维过闸，每维 已覆盖 / N/A / 待确认，禁止默默跳过；按端范围读对应 `references/code-risk-*.md`（涉及的端才读、不涉及标 N/A）补代码级测试点。
-6. **出例** — 先按 `references/test-design-methods.md` 的「特征→方法」决策表给每个功能点/维度挑测试设计方法（等价类/边界值/判定表/状态迁移/场景法/正交/错误推测），再按 7 块骨架输出：正文用例按业务功能/需求类目/状态机组织，P0/P1/P2 只作为用例 ID 属性和执行优先级、不做一级目录；方法只在覆盖自检表说明里短标；缺口汇总进「风险与待确认」块。
-7. **自检交付** — 出覆盖自检表；按 `references/output-files.md` 建交付目录，用例正文写入 `testcases.md`，历史检索证据写入 `history-hits.md`，并用 `scripts/validate_output.py` 校验。用户需要思维导图时另产 `mindmap.puml`，再带 mindmap 参数复验。PlantUML 默认完整评审图：按业务/功能维度 + APP 常驻维度组织，并挂前置/操作步骤/预期结果；只要主结构时用 `--compact`。落成文件、提示先清空编辑框再粘一次。默认发布到飞书 Drive 文件夹；提示执行后新缺陷建议回流 qa-knowledge-base（本 skill 不自动做）。
-
----
+1. **进** — 收需求，建交付目录。
+2. **保真读取** — `read_doc.py`：正文 + `tables.md/json` + 全部图片 + 缩放副本；图没下全默认中止。
+3. **并行装载** — 读图代理（→ `images-notes.md`）与历史代理（→ `history-hits.md`）同时派出，只读。
+4. **对齐** — 主线复述需求 + 待确认，务必读 `tables.md`；仅影响 P0/发版口径/环境前置时才停下问。
+5. **合流验收** — 图占位全覆盖、P0 关键图主线亲读、检索词组核对；不过则主线串行补做。
+6. **立场与防漏** — 读一次 `authoring-core.md`：风险判断驱动 P0 与 showcase；逐维过闸；按端读风险库。
+7. **出例** — 先树后例、原子用例、方法先选后写；输出 7 块骨架 + 覆盖自检表。
+8. **校验与发布** — `md_to_mindmap.py` → `validate_output.py --dir` → `publish_to_lark_doc.py`；拿到飞书链接才算完成。
 
 ## 6. 质量支柱
 
-- **v2 四支柱**：①**逐维覆盖闸门**（覆盖清单必逐项过，不默默跳过）②**风险立场**（先答"这次最该测什么"，驱动用例优先级 `priority=P0/P1/P2` 与 showcase；优先级只是 ID 属性，不做正文一级目录）③**测试设计方法**（每个功能点/维度按 `references/test-design-methods.md` 的「特征→方法」决策表挂等价类/边界值/判定表/状态迁移/场景法/正交/错误推测，把"测哪些面"升级为"面 × 方法"）④**历史编译**（出例前只读检索 qa-knowledge-base，按最小检索词组召回、深读 notes、沉淀 `history-hits.md`，把历史逻辑/旧边界/相邻入口/回归线索编入；基于已沉淀需求知识现算，不是历史 bug 库）。
+- **v2 四支柱**：①**逐维覆盖闸门**（覆盖清单必逐项过，不默默跳过）②**风险立场**（先答"这次最该测什么"，驱动用例优先级 `priority=P0/P1/P2` 与 showcase；优先级只是 ID 属性，不做正文一级目录）③**测试设计方法**（每个功能点/维度按 `references/authoring-core.md` §B 的「特征→方法」决策表挂等价类/边界值/判定表/状态迁移/场景法/正交/错误推测，把"测哪些面"升级为"面 × 方法"）④**历史编译**（出例前只读检索 qa-knowledge-base，按最小检索词组召回、深读 notes、沉淀 `history-hits.md`，把历史逻辑/旧边界/相邻入口/回归线索编入；基于已沉淀需求知识现算，不是历史 bug 库）。
 - **代码风险库（2026-07 增强）**：从后端/Unity/原生/H5 代码扫描沉淀的端侧风险，拆为 `references/code-risk-*.md`，按端范围**按需读取**，把产品特有的代码级失败模式编入用例；不涉及的端标 N/A，不全量灌入。
 
 ---
 
-## 7. 用例中间产物结构（见 case-schema.md）
+## 7. 用例中间产物结构（规则见 authoring-core.md §C）
 
 - **7 块骨架**：需求理解 / 风险判断 / **showcase（提测准入）** / **用例设计（按业务功能 / 需求类目组织）** / **APP 常驻维度补充** / 风险与待确认 / 覆盖自检表。P0/P1/P2 不作为正文一级目录，只体现在用例 ID（`priority=P0/P1/P2`）、覆盖自检表和执行优先级。
 - **稳定 ID 格式**（无「来源/待确认」字段）：
@@ -123,33 +121,31 @@
 
 ```text
 qa-testcase-design/
-  SKILL.md
+  SKILL.md                  # 1-8 步总控流程 + 边界 + 完成门槛
   DESIGN.md                 # 本文件
+  PIPELINE.md               # 团队版链路说明
   PLAN-archived.md          # 初版实施计划,仅存档
   references/
-    case-schema.md          # 7 块结构 / 优先级 / 自检表 / 思维导图映射边界
-    coverage-dimensions.md  # 高层覆盖维度清单 + 代码风险库索引
-    code-risk-backend.md    # 后端代码风险库(按需读取)
-    code-risk-unity.md      # Unity 代码风险库(按需读取)
-    code-risk-native.md     # 原生 Android/iOS 代码风险库(按需读取)
-    code-risk-h5.md         # H5/WebView 代码风险库(按需读取)
-    example-testcases.md    # 标准 7 块正文样例(可过 validate_output.py)
-    example-mindmap-rich.puml # 富 PlantUML 层级样例
-    example-output.md       # 兼容索引(指向 example-testcases.md,防旧引用断链)
-    history-kb-contract.md  # 历史知识只读契约(只读 qa-knowledge-base,不写入;含 history-hits.md 证据链)
-    output-files.md         # 交付目录 / 必产文件 / validate_output.py 校验规则
-    test-design-methods.md  # 测试设计方法 + 特征→方法决策表
-    mindmap-plantuml.md     # 飞书思维导图输出(业务功能一级,隐藏ID,含"必须落文件"铁律)
-    lark-output.md          # 飞书发布规则(默认发布/默认 Drive 文件夹/新建不覆盖/失败处理)
+    authoring-core.md       # 唯一规则源:覆盖维度 + 测试设计方法 + 7 块结构/优先级/自检表
+    code-risk-*.md          # 后端/Unity/原生/H5 代码风险库(按端命中才读)
+    history-kb-contract.md  # qa-knowledge-base 只读契约(四类检索词/深读/证据)
+    output-files.md         # 交付目录结构 / 校验命令 / 失败修法
+    lark-output.md          # 飞书发布规则(默认目录/呈现裁剪/续传/失败处理)
+    mindmap-plantuml.md     # 导图结构来源 / 校验拦截 / 粘贴铁律
+    example-testcases.md    # 标准 7 块样例(先树后例 + 原子用例,可过 validate)
+    example-mindmap-rich.puml # 手写 PlantUML 块富层级样例
+    coverage-dimensions.md / case-schema.md / test-design-methods.md / example-output.md  # 存根(已并入或索引)
   scripts/
-    read_doc.py             # 只读飞书(正文+表+图)
-    md_to_mindmap.py        # testcases.md → 业务功能 .puml(读「用例设计」块标题层级,隐藏ID,默认full/--compact)
-    validate_output.py      # 校验 testcases/history-hits/mindmap 的结构与 ID 引用
-    publish_to_lark_doc.py  # 默认:校验通过后新建飞书 docx 发布;凭证与 read_doc.py 同源(self-contained,不依赖 gateway)
+    read_doc.py             # 只读飞书(正文+表+图),--resume/--quiet
+    md_to_mindmap.py        # testcases.md → .puml(结构完全来自分解树)
+    validate_output.py      # 交付硬校验,--dir 一次校验整个交付目录
+    publish_to_lark_doc.py  # 校验通过后新建飞书 docx 发布,--resume/--fresh
+    lark_common.py          # 凭证/HTTP 共享库
+    kb.py                   # 定位 qa-knowledge-base 并转发 search.py
 ```
 
 **复用（不重造）**：
-- 覆盖清单：`references/coverage-dimensions.md`（本 skill 自持，不依赖旧思维导图 skill）。
+- 覆盖清单：`references/authoring-core.md` §A（本 skill 自持，不依赖旧思维导图 skill）。
 - 读图内核：对齐 qa-knowledge-base `fetch.py`。
 - 历史知识（v2）：按 `references/history-kb-contract.md` 只读调用 `qa-knowledge-base` skill 与 qa-knowledge-base 知识库本体；按最小检索词组召回、深读 notes，并输出 `history-hits.md`。
 - 出飞书思维导图：本 skill 生成 PlantUML `.puml` 文件，用户粘进飞书画板（不 API 写飞书）。默认完整评审图，按需 `--compact`。**铁律：必须落成文件让用户从文件复制 + 粘前先清空编辑框**——聊天里长行会被折行搞坏、编辑框残留会重复，都会导致飞书解析报错（实测踩坑）。Excel/XMind 交后续。
@@ -241,3 +237,80 @@ qa-testcase-design/
 - 飞书发布只新建交付 docx，不覆盖历史文档、不修改原 PRD、不承诺 API 直接生成飞书画板原生思维导图；不做用例管理、执行报告、缺陷跟踪；不做自动化脚本生成。
 - 不把 opentest / git-branch-diff-qa-doc 的职责纳入本 skill。
 - 不做非 Giggle 场景的通用测试平台。
+
+## 11.8 更新记录（2026-10-28 · 规则收敛与闸门补强）
+
+- **背景**：两个多月迭代后规则文本自相矛盾（authoring-core 声明「冲突以原文件为准」而原文件缺 7-08 的原子规则；样例违反原子规则；导图必产与否、飞书内容、查历史时机多处说法不一），模型按文本执行导致行为不稳。改前全量备份在 `Workspace/qa-skill-backups/qa-testcase-design-20261028-before-opt/`。
+- **单一规则源**：`authoring-core.md` 成为唯一权威，吸收原三件缺失内容（拆解检查单「要问的问题」、低质量反例、复杂交互拆解表、自检表状态判定、后端摆放）；`coverage-dimensions.md` / `case-schema.md` / `test-design-methods.md` 降为存根。
+- **SKILL.md 精简**：18.4KB → 7.4KB，工作流统一为 1-8 整数步，按步骤给出「读什么」对照表；踩坑经过迁入本文件。
+- **样例原子化**：`example-testcases.md` 30 → 44 例，边界三点各一例、多断言全部拆开，首行改为需求名。
+- **文档对齐**：`mindmap-plantuml.md` 重写为「结构完全来自分解树」；`lark-output.md` 飞书内容改为与呈现裁剪一致的 7 段；`history-kb-contract.md` 时机统一为步 3 并行、检索词组加类型前缀；`output-files.md` 交付目录统一 `/tmp/…`（`tempfile.gettempdir()` 在 macOS 返回 `/var/folders`，原表述错误）、导图改为默认必产。
+- **validate_output.py**：新增 `--dir` 整目录校验（发布脚本复用同一函数）、分号原子闸、四类检索词闸、读图覆盖闸、风险表未知 ID 闸、P0 占比与首行标题 WARN；数值对账去掉领域词并只对账用例与风险表；ID 支持三位；常驻维度改精确匹配；删除旧 P0/P1/P2 骨架兼容。
+- **脚本清理**：`read_doc.py --quiet` 不回显全文；`md_to_mindmap.py` 删旧骨架分支、业务维度不再被关键词劫持、showcase 不受覆盖表行序影响；`publish_to_lark_doc.py` 续传增加内容指纹校验、交付清单含 `images-notes.md`、删除死代码。
+- **验证**：样例 PASS；构造负用例逐项命中新闸；导图 211 节点 6 层无占位；publish `--dry-run` 通过；离线模拟 append 中断 → 续传成功、发布内容变化 → 拒绝续传。
+
+## 11.9 更新记录（2026-10-28 · 触发收敛）
+
+- **description 改写**：去掉尾句流程摘要「产出结构化用例并发布为飞书文档」（description 只写触发条件，避免模型照描述执行而不读正文）；「PlantUML 思维导图」改为「用例思维导图」；补三条分流：只录入/检索历史需求 → `qa-knowledge-base`，OpenTest 变更流程 → `opentest-*`，按 Git 分支差异出 QA 文档 → `git-branch-diff-qa-doc`。
+- **移除抢触发的旧 skill**：已弃用的 `writing-lark-test-mindmaps`（description 与本 skill 高度重叠）已由用户手动移出 `~/.codex/skills`；本 skill 运行时不依赖它（仅 `PLAN-archived.md` 历史提及）。
+
+## 11.10 更新记录（2026-10-28 · 质量闸补强）
+
+- **背景**：现有闸门只查「写得对不对」，查不出「测得全不全」——PRD 有 3 条规则只写了 2 条的用例照样 PASS；另有 3 个漏洞可被构造输入绕过；飞书文档裁掉用例正文后，导图里看不出优先级。
+- **需求追溯闸（新增）**：第 1 块「需求理解」末尾加 `### 业务规则追溯` 表（`编号 | 规则 | 来源 | 落点`）。SKILL 步 4 拆规则写表、步 5 补图里的规则、步 7 回填落点。validate 检查：表存在且非空、编号 `R\d{2,3}` 唯一、规则与来源非空、落点至少一个已存在的用例 ID 或第 6 块已定义的 Q 编号、引用不存在的 ID / Q 也 FAIL。局限：拆规则阶段漏掉的规则拦不住，靠「来源」列给评审对照 PRD 兜底。
+- **漏洞修复**：①历史闸「未读」只认表格判定列以 `未读` 开头且无保留/待确认/丢弃行，表外备注不算；声明未读但本机能定位知识库 → WARN；②读图闸只认行首 `【图NN` 节标题，一行列多个图号不再算覆盖；③原子闸子句分隔加入「，且 / ，并且 / ，而且 / ，同时 / ，并」；④history 数据行不是 5 列直接 FAIL（原先静默跳过）。
+- **导图带优先级**：`md_to_mindmap.py` 用例节点写成 `P0｜用例标题`（full / compact 都带），完整 ID 仍隐藏。
+- **发布**：追溯表「落点」列的用例 ID 发布时改写为维度名（复用风险表影响列的改写函数，参数化列名），Q 编号保留；新增该表固定列宽 `[52, 420, 160, 191]`。
+- **样例**：`example-testcases.md` 补 12 条规则的追溯表。
+- **验证**：样例 PASS，导图 44 个用例节点全部带前缀，validate_mindmap PASS；负用例逐项 FAIL（缺追溯表 / 落点为空 / 不存在 ID 与未定义 Q / R 重复 / 来源为空 / 「，且」串 3 断言 / 备注写未读 / history 4 列行 / 一行列多个图号）；规范未读行 PASS 并出 WARN；`publish_to_lark_doc.py --dry-run` 通过，追溯表落点列改写为维度名、Q 保留、列宽生效。改前备份在会话 scratchpad，未真发飞书。
+
+## 11.11 更新记录（2026-10-28 · 真实 PRD 试跑修复）
+
+- **背景**：用「复习单元动态词池」PRD 试跑时暴露两个脚本问题：数值对账 6 条 WARN 全是误报；PRD 里两张 SVG 图（飞书把截图包成 SVG，内嵌 base64 PNG）`read_doc.py` 报尺寸 0x0，读图代理只能手动解码。
+- **数值对账去误报**（`validate_output.py collect_value_phrases`）：①先去掉表格里的 URL（Figma 链接的 `id=67437` 不再被当数值）；②两侧都是数字的「+」只去掉加号（「1 + 1」不再拆出「+1」，「2+3 个」仍抽出「3个」）；③跳过飞书 PRD 模板的文档信息行（产品文档 / 产品Owner / 需求背景 / 产品目标 / 主要特性 / 修订记录），背景里的「70%」不再对账。
+- **SVG 读图**（`read_doc.py`）：新增 `extract_svg_raster` 取 SVG 里最大的内嵌位图另存 `img-NN.embed.<ext>`，尺寸与超大图缩放都以位图为准，图片清单的「读」路径指向它；纯矢量 SVG 在日志和图片清单标 ⚠️，meta.json 记 `note`。新增 `image_entry` 合并首次下载与 `--resume` 两处相同的条目构造；`--resume` 识别已下载原图时排除 `.embed.` 文件。
+- **验证**：试跑 tables.md 抽取结果从 11 个短语降为 4 个，交付目录 validate PASS 且无 WARN；构造表格确认「+50」「3星」仍会 WARN、链接 / 需求背景 / 「6 + 2」不再 WARN；样例 PASS。真实 PRD 重新 `read_doc.py`（首次 + `--resume`）两种路径下图 02、03 都输出 `img-NN.embed.read.png`，尺寸 2600x2164 / 2344x2670，已目视确认可读；构造纯矢量 SVG 出 ⚠️ 提示。改前脚本备份在会话 scratchpad。
+
+## 11.12 更新记录（2026-10-28 · 必须修 3 项）
+
+- **背景**：全景梳理发现 3 个会直接出错或违背意图的问题：飞书单表 490 块上限（试跑 58 条规则的追溯表已占 473 块，dry-run 查不出）；「冲突影响 P0 / 配置口径时停下问用户」只是提示词，试跑时没执行；发布默认放开租户内可编辑。
+- **大表自动拆分**（`publish_to_lark_doc.py`）：新增 `split_table_rows`，按 `1 + 2 × 列数 × 行数 ≤ 490` 把超限表按行切成多张相邻表、每张重复表头（4 列表每张最多 60 行数据），在 `markdown_to_renderables` 收表时调用；`--dry-run` 输出 `max_table_blocks`，单行都放不下导致超限时退出 1，与真发布同一判据；`append_renderables` 原有超限报错保留作最后防线。
+- **阻断级待确认闸**：第 6 块表头改为 `编号 | 级别 | 问题 | 影响`，级别 `阻断 / 已确认 / 记录`。`validate_output.py` 新增 `validate_risk_levels`：缺级别列、级别非法、存在阻断行、已确认行无「用户确认：」均 FAIL。规范同步：authoring-core §C 第 6 块定义与硬规则第 9 条；SKILL 步 4 分级并立即停下问、步 5 汇总代理产出里的阻断冲突、步 8 禁止自行改级别；history-kb-contract 停下问用户的三种情况对应阻断级；output-files 修法表两行；lark-output 发布态说明；example-testcases 风险表补级别列（全部为记录）。发布新增该表列宽 `[52, 60, 448, 263]`。
+- **发布默认权限**：`--permission` 默认值从 `tenant_editable` 改为 `tenant_readable`，需要可编辑时显式传参；lark-output 同步。
+- **兼容影响**：旧交付目录（风险表无级别列）重新校验或发布会 FAIL，需补级别列；旧的 `publish_state.json` 因内容指纹变化不能续传。
+- **验证**：样例 PASS；阻断闸负用例 4 项逐项 FAIL（缺级别列 / 级别非法 / 阻断行 / 已确认无答复），规范已确认行 PASS；试跑目录副本风险表标 Q16 阻断时 `publish --dry-run` 在 validate_delivery 阶段拒绝；追溯表扩到 130 条后 dry-run 显示切成 61/61/11 行三片、`max_table_blocks=489`、列宽逐片生效；构造 300 列宽表 dry-run 报 `dry_run_table_limit` 退出 1；`--permission` 默认值核对为 `tenant_readable`。未真发飞书，改前整目录备份在会话 scratchpad。
+
+## 11.13 更新记录（2026-10-28 · 取消 showcase 块）
+
+- **背景**：用户反馈 showcase（提测准入）目前用不上，要求从输出去掉。showcase 用例只写在第 3 块、不在用例设计里重复，只隐藏导图节点会让这些用例从飞书交付里消失，所以整块取消。
+- **骨架 7 块 → 6 块**：需求理解 → 风险判断 → 用例设计 → APP 常驻维度补充 → 风险与待确认 → 覆盖自检表。规范里的块号整体顺移（原第 4-7 块 → 第 3-6 块）；风险判断改为只决定 P0 排序；覆盖自检表必含维度去掉 showcase；历史线索落点、导图一级节点、发布裁剪块（三块 → 两块）同步去掉 showcase。涉及 SKILL / authoring-core / history-kb-contract / output-files / lark-output / mindmap-plantuml / PIPELINE。
+- **脚本**：`validate_output.py` 去掉 showcase 必需块、1-5 条检查与覆盖表 showcase 维度检查，新增旧骨架拦截（出现 showcase 块即 FAIL 并给修法）；`md_to_mindmap.py` 去掉 showcase 置顶与相关分支，一级节点从第一个业务维度开始；`publish_to_lark_doc.py` 发布裁剪只跳过用例设计、APP 常驻两块，思维导图占第 3 号。
+- **样例**：`example-testcases.md` 删 showcase 块，P0-01 改写为「闪卡正确跟读后 Unity 回顾可播放本次录音」挂到 Unity 单词回顾 / 已跟读词，P0-02 改写为「失败两次后点击下一步跳到下一个词」挂到失败递进 / 跳过，均为单断言、ID 不变；`example-mindmap-rich.puml` 删 showcase 分支。
+- **兼容影响**：含 showcase 块的旧交付目录重新校验或发布会 FAIL，需按修法把用例移入用例设计。
+- **验证**：样例 PASS；导图 210 节点、一级节点为 4 个业务维度 + 6 个常驻维度、无 showcase，P0-01/02 出现在对应分组，validate_mindmap 无错误；改前样例被拦下并给出取消提示；样例交付目录 dry-run 发布顺序为 需求理解 → 风险判断 → 用例设计思维导图 → 风险与待确认 → 覆盖自检表，编号 1-5 连续。改前整目录备份在会话 scratchpad。
+
+## 11.14 更新记录（2026-10-28 · 飞书文档只留风险视角）
+
+- **背景**：用户反馈飞书文档里的历史命中摘要（检索词组、命中取舍表、历史线索、冲突汇总）和交付文件清单增加阅读成本，只需要知道哪些有风险。
+- **发布**：`publish_to_lark_doc.py` 不再发布 `history-hits.md` 和交付文件清单，飞书文档固定为 需求理解 → 风险判断 → 用例设计思维导图 → 风险与待确认 → 覆盖自检表；删除随之不用的 `history_for_publish` 与历史表列宽分支。`history-hits.md` 仍在本地生成并受 validate 校验，`--dry-run` 的 `files` 字段仍列本地文件。
+- **规范**：有风险的历史线索（与 PRD 冲突、口径差异、可能被影响的旧逻辑）必须落成「风险与待确认」Q 项，问题列以「历史：」开头（authoring-core §C 第 5 块、history-kb-contract 合并规则）；lark-output 发布态说明同步。
+- **验证**：样例交付目录 dry-run 只剩 5 个二级标题、3 张表（追溯 / 风险 / 覆盖），无历史与文件清单；大表拆分仍为 61/61/11；样例 validate PASS。改动中曾误删紧邻的 `split_table_rows`，已从改前备份原样恢复并逐段 diff 核对。
+
+## 11.15 更新记录（2026-10-28 · 用例改为「操作 → 结果」短链）
+
+- **背景**：同事认为导图里每条用例挂「前置 / 操作步骤 / 预期结果」三个长句节点太啰嗦，希望沿用团队手写导图（跟读挑战课）的写法：一条用例就是一条路径，中间节点是操作或条件，叶子是短结果，同一操作的多个结果并列；无编号、无优先级。用户确认一级结构（业务维度 + 6 个常驻维度）保持不变。
+- **叶子格式**：`[P1-03] 操作或条件｜期望：结果` 两段短句。共用前置写成分解树标题（如 `##### 前置：配置目标词数 N=5`），不再写进叶子；同一操作多个结果拆成多条、操作文字一致。本地仍保留 ID 与 P0/P1/P2，追溯闸、阻断闸、覆盖自检表不变。
+- **validate**：叶子必须含 `｜期望：`，出现 `｜前置：/｜步骤：` 即 FAIL；期望 >80 字 FAIL、>50 字 WARN，操作 >40 字 WARN；子句串联规则不变。
+- **导图**：`md_to_mindmap.py` 用例输出为「操作节点 → 结果叶子」，同一树位置操作文字相同的用例合并为一个操作节点；去掉 11.10 加的 `P0｜` 优先级前缀；`--compact` 只出操作节点。
+- **规范**：authoring-core（硬规则 4、6，先树后例补前置节点与同操作多结果，叶子格式，导图映射）、SKILL 步 7 与自检、history-kb-contract、mindmap-plantuml、lark-output、output-files 修法表、PIPELINE 同步。
+- **样例**：`example-testcases.md` 44 条全部改写为短链；原「出现失败反馈且不解锁跳过」「解锁下一步且不自动跳词」两条复合断言各拆出一条（新增 P0-14、P1-27，并入覆盖表），用来示范同操作多结果合并。
+- **兼容影响**：旧格式（含前置 / 步骤）的交付目录重新校验会 FAIL。待确认节点标黄未做，需先在飞书画板实测 PlantUML 颜色是否保留。
+- **验证**：样例 PASS 且无 WARN；导图节点 210 → 122，无优先级前缀和前置 / 步骤 / 期望子节点，validate_mindmap 无错误，「读错一次」「点击下一步按钮」各合并为一个操作节点挂两个结果；构造 `##### 前置：N=5` 下 3 条同操作用例，导图为 前置 → 进入课程 → 3 个结果叶子；负用例：叶子带前置 FAIL、缺期望 FAIL、期望 85 字 FAIL、60 字 WARN、操作 45 字 WARN；样例交付目录 dry-run 通过。改前整目录备份在会话 scratchpad。
+
+## 11.16 更新记录（2026-10-28 · 分解树按端分、不限层数、测试者视角命名）
+
+- **背景**：用户用「复习单元动态词池」试跑后反馈三点：①需求同时有 Admin 和 App，用例却按 PRD 章节平铺（词池计算 / 每局抽词 / Admin 单元设置…），没先按端分；②树只到三级标题，没有按链路继续细化；③分组用了「表 4 示例路径」「排除规则」「开局现算」这类 PRD 术语，叶子也没写在哪个页面看，不看 PRD 读不懂。根因是 authoring-core 只示范 `###/####/#####`、第一层写「业务功能 / 需求类目」，且没有命名约束。
+- **规范**：第 3 块标题改为「用例设计（按端 / 页面 / 功能组织）」；先树后例改为第一层按端分（Admin / App / 按需 服务端、H5、Web；单端时直接按页面/模块），往下按 页面 → 功能区 → 条件/状态 → 操作 → 结果 逐层细化、不设层数上限；跨端用例挂在看结果的一端、另一端操作写成前置节点，同一计算只在最直接可见的一端验；节点只用页面名、控件/字段名、真实数据，禁用 PRD 章节名、表号/图号、规则编号、概念词；可读标准为从根读到叶子是一句完整测试步骤。覆盖自检表业务维度改为「端 + 页面/模块」。6 个常驻维度仍是一级节点。涉及 authoring-core（含硬规则 10、11）、SKILL 步 7 与自检、mindmap-plantuml、output-files 修法表、history-kb-contract、lark-output、PIPELINE。
+- **脚本**：`validate_output.py` 新增按端分组闸（端范围同时含 Admin/后台 和 App/Android/iOS/Unity/客户端 时，第 3 块每个 `###` 须以 Admin / App / 服务端 / H5 / Web 开头且至少 2 个）和命名闸（第 3、4 块分组标题含表号、图号、R 编号或「示例」即 FAIL）；第 3 块标题集中为 `BUSINESS_SECTION` 常量。`md_to_mindmap.py` 标题层级从 `#{3,9}` 放开为 `#{3,}`。
+- **样例**：`example-testcases.md` 加入合成的 Admin「闪卡跟读题编辑页 / 音素打分开关」（R13，新增 P1-28、P1-29，跨端用例 P1-30 挂在 App 闪卡跟读题的「前置：Admin 关闭 rad 题的音素打分」下），第 3 块改为 Admin / App 两端，App 下按 闪卡跟读题 / 学习路径跟读题 / Unity 单词回顾页 → 功能区 → 状态逐层细化，最深 7 层；覆盖表业务维度改为端 + 页面。
+- **兼容影响**：旧标题「用例设计（按业务功能 / 需求类目组织）」的交付目录重新校验会报 missing section。

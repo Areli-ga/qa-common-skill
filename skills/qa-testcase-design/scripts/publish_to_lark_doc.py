@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -171,10 +172,10 @@ def parse_table_cells(line: str) -> list[str]:
     return [cell.strip().replace("\x00", "|") for cell in parts]
 
 
-# 发布呈现层裁剪:飞书文档定位评审 + 看图,这三块正文由思维导图承载。
-# 本地 testcases.md 始终保留完整 7 块;此处只影响飞书展示。
-SKIP_PUBLISH_SECTIONS = ("showcase（提测准入）", "用例设计（", "APP 常驻维度补充")
-_CASE_ID = re.compile(r"P[0-2]-\d{2}")
+# 发布呈现层裁剪:飞书文档定位评审 + 看图,这两块正文由思维导图承载。
+# 本地 testcases.md 始终保留完整 6 块;此处只影响飞书展示。
+SKIP_PUBLISH_SECTIONS = ("用例设计（", "APP 常驻维度补充")
+_CASE_ID = re.compile(r"P[0-2]-\d{2,3}")
 _HEADING2 = re.compile(r"^##\s+(?:\d+\.\s*)?(.+?)\s*$")
 
 
@@ -194,7 +195,7 @@ def compress_coverage_row(line: str) -> str:
     return "| " + " | ".join(cells) + " |"
 
 
-_ID_LIST = re.compile(r"P[0-2]-\d{2}(?:\s*[、,，/和]\s*P[0-2]-\d{2})*")
+_ID_LIST = re.compile(r"P[0-2]-\d{2,3}(?:\s*[、,，/和]\s*P[0-2]-\d{2,3})*")
 
 
 def build_case_dimension_map(markdown: str) -> dict:
@@ -216,17 +217,18 @@ def build_case_dimension_map(markdown: str) -> dict:
     return id2dim
 
 
-def rewrite_risk_impact_row(line: str, id2dim: dict, impact_col):
+def rewrite_risk_impact_row(line: str, id2dim: dict, impact_col, column: str = "影响"):
     """风险与待确认表发布态(2026-07-08 修复):「影响」列的用例编号改写为所属维度名——
     飞书文档里正文用例块已裁剪、思维导图又隐藏 ID,编号在文档内是死引用(用户实评反馈)。
     与覆盖表「ID 列→用例数」同一呈现原则;完整 ID 仍以本地 testcases.md 为准。
-    返回 (改写后的行, 影响列下标);表头行用于定位「影响」列。"""
+    返回 (改写后的行, 影响列下标);表头行用于定位「影响」列。
+    需求理解的「业务规则追溯」表「落点」列同理改写(column="落点"),Q 编号原样保留。"""
     if _TABLE_SEP.match(line):
         return line, impact_col
     cells = parse_table_cells(line)
     header = [re.sub(r"\s+", "", c) for c in cells]
     if header and header[0] in {"编号", "ID"}:
-        return line, (header.index("影响") if "影响" in header else None)
+        return line, (header.index(column) if column in header else None)
     if impact_col is None or impact_col >= len(cells):
         return line, impact_col
 
@@ -243,7 +245,7 @@ def rewrite_risk_impact_row(line: str, id2dim: dict, impact_col):
 
 
 def split_testcases_for_publish(markdown: str, reserve_mindmap_number: bool):
-    """发布呈现裁剪:跳过过程用例块、压缩覆盖表 ID 列、风险表影响列 ID 改写为维度、
+    """发布呈现裁剪:跳过过程用例块、压缩覆盖表 ID 列、风险表影响列与规则追溯表落点列 ID 改写为维度、
     剩余块顺序重编号。首个被跳过块的位置由思维导图占位。
     """
     before: list[str] = []
@@ -252,7 +254,9 @@ def split_testcases_for_publish(markdown: str, reserve_mindmap_number: bool):
     skip = False
     in_cov = False
     in_risk = False
+    in_req = False
     risk_impact_col = None
+    trace_landing_col = None
     id2dim = build_case_dimension_map(markdown)
     num = 0
     mindmap_no: int | None = None
@@ -269,10 +273,12 @@ def split_testcases_for_publish(markdown: str, reserve_mindmap_number: bool):
                 skip = True
                 in_cov = False
                 in_risk = False
+                in_req = False
                 continue
             skip = False
             in_cov = "覆盖自检表" in head
             in_risk = "风险与待确认" in head
+            in_req = "需求理解" in head
             num += 1
             target.append(f"## {num}. {head}")
             continue
@@ -282,6 +288,8 @@ def split_testcases_for_publish(markdown: str, reserve_mindmap_number: bool):
             line = compress_coverage_row(line)
         if in_risk and _TABLE_ROW.match(line):
             line, risk_impact_col = rewrite_risk_impact_row(line, id2dim, risk_impact_col)
+        if in_req and _TABLE_ROW.match(line):
+            line, trace_landing_col = rewrite_risk_impact_row(line, id2dim, trace_landing_col, column="落点")
         target.append(line)
     return "\n".join(before), "\n".join(after), mindmap_no
 
@@ -294,8 +302,8 @@ def normalized_header(rows: list[list[str]]) -> list[str]:
 
 def infer_column_width(rows: list[list[str]]) -> list[int] | None:
     """按 QA 交付里的固定表格类型设置飞书列宽。
-    宽度来自 2026-07-06 用户手动调好的飞书文档表格;覆盖表新版保留 ID,因此给
-    「对应用例」列比旧「用例数」更宽。
+    宽度来自 2026-07-06 用户手动调好的飞书文档表格。覆盖表发布态会把「对应用例」压成
+    「用例数」(见 compress_coverage_row),「对应用例」宽度只在 --skip 裁剪等兜底场景生效。
     """
     header = normalized_header(rows)
     column_size = max((len(r) for r in rows), default=0)
@@ -312,11 +320,17 @@ def infer_column_width(rows: list[list[str]]) -> list[int] | None:
     ):
         return [52, 412, 259, 100]
 
+    if column_size == 4 and header[:4] == ["编号", "级别", "问题", "影响"]:
+        return [52, 60, 448, 263]
+
     if column_size == 3 and header[:3] in (
         ["ID", "问题", "影响"],
         ["编号", "问题", "影响"],
     ):
         return [60, 500, 263]
+
+    if column_size == 4 and header[:4] == ["编号", "规则", "来源", "落点"]:
+        return [52, 420, 160, 191]
 
     if column_size == 4 and header[:2] == ["维度", "状态"] and header[3:4] in (["说明"], ["备注"]):
         if header[2] in {"对应用例", "覆盖用例"}:
@@ -324,28 +338,14 @@ def infer_column_width(rows: list[list[str]]) -> list[int] | None:
         if header[2] == "用例数":
             return [107, 100, 100, 516]
 
-    if (
-        column_size == 5
-        and header[0:3] == ["检索词组", "命中笔记", "判定"]
-        and header[3].startswith("理由")
-        and header[4] == "编入位置"
-    ):
-        return [100, 215, 63, 347, 100]
-
-    if (
-        column_size == 4
-        and header[0:3] == ["检索词组", "命中笔记", "判定"]
-        and header[3].startswith("理由")
-    ):
-        return [130, 250, 60, 393]
-
     return None
 
 
 def build_table_descendant(rows: list[list[str]]) -> dict:
     """把 markdown 表格行渲成飞书 descendant 接口 payload:
     table(31) → table_cell(32) → text(2) 三层,用临时 block_id 串父子关系。
-    不传 merge_info(只读,传了会报错)。空单元格用空 elements。
+    不传 merge_info(只读,传了会报错)。空单元格必须带一个空 text_run(官方 FAQ「如何插入带内容的表格」写法);
+    传空 elements 会报 1770001 invalid param(2026-10-26 实测)。
     """
     row_size = len(rows)
     column_size = max((len(r) for r in rows), default=1)
@@ -375,29 +375,20 @@ def build_table_descendant(rows: list[list[str]]) -> dict:
             descendants.append({
                 "block_id": text_id,
                 "block_type": 2,
-                "text": {"elements": text_elements(content) if content else []},
+                "text": {"elements": text_elements(content)},
             })
     return {"index": -1, "children_id": ["tbl"], "descendants": descendants}
 
 
-def history_for_publish(markdown: str) -> str:
-    """发布呈现:history-hits 表格砍掉「编入位置」列(飞书里用例块已裁、ID 是死引用),
-    并去掉自带 h1 标题(与 append 的「历史命中摘要」h2 重复);**保持表格形式**。
-    命中笔记本就一行一条(不重复);理由多点如何分行由 history-hits.md 原文决定,此处不改。
-    本地 history-hits.md 不变。"""
-    out = []
-    for line in markdown.splitlines():
-        s = line.strip()
-        if s.startswith("# "):  # 去掉一级标题,标题由 build 的 h2 统一提供
-            continue
-        if _TABLE_ROW.match(s):
-            cells = parse_table_cells(s)
-            if len(cells) >= 5:  # 砍掉第 5 列(编入位置);表头/分隔/数据行同样处理
-                cells = cells[:4]
-            out.append("| " + " | ".join(cells) + " |")
-        else:
-            out.append(line)
-    return "\n".join(out)
+def split_table_rows(rows: list[list[str]]) -> list[list[list[str]]]:
+    """单表 descendant 块数 = 1 + 2 × 列数 × 行数,超过 MAX_DESCENDANTS 飞书拒收。
+    超限时按行切成多片,每片重复表头;单行都放不下时原样返回,交 dry-run / append 的上限检查报错。"""
+    column_size = max((len(r) for r in rows), default=1)
+    max_rows = (MAX_DESCENDANTS - 1) // (2 * column_size)
+    if len(rows) <= max_rows or max_rows < 2:
+        return [rows]
+    header, body, per = rows[0], rows[1:], max_rows - 1
+    return [[header] + body[i:i + per] for i in range(0, len(body), per)]
 
 
 def markdown_to_renderables(markdown: str) -> list[dict]:
@@ -437,7 +428,7 @@ def markdown_to_renderables(markdown: str) -> list[dict]:
             while i < n and _TABLE_ROW.match(lines[i].rstrip()) and not _TABLE_SEP.match(lines[i]):
                 rows.append(parse_table_cells(lines[i].rstrip()))
                 i += 1
-            renderables.append({"__table__": rows})
+            renderables.extend({"__table__": part} for part in split_table_rows(rows))
             continue
 
         if not line.strip():
@@ -467,7 +458,7 @@ def read_text_if_exists(path: Path) -> str:
 
 
 def delivery_file_list(delivery_dir: Path) -> list[str]:
-    names = ["testcases.md", "history-hits.md", "mindmap.puml"]
+    names = ["testcases.md", "history-hits.md", "mindmap.puml", "images-notes.md"]
     existing = [name for name in names if (delivery_dir / name).exists()]
     source_meta = delivery_dir / "source" / "meta.json"
     if source_meta.exists():
@@ -476,32 +467,20 @@ def delivery_file_list(delivery_dir: Path) -> list[str]:
 
 
 def validate_delivery_or_raise(delivery_dir: Path) -> None:
-    """发布前强制复用交付校验器,避免把坏结构写进飞书文档。"""
-    testcases = delivery_dir / "testcases.md"
-    errors: list[str] = []
-    cases: dict[str, str] = {}
-    if not testcases.exists():
-        errors.append(f"missing testcases file: {testcases}")
-    else:
-        _, _, cases, case_errors = validate_output.validate_testcases(testcases)
-        errors.extend(case_errors)
-
-    history = delivery_dir / "history-hits.md"
-    if history.exists():
-        errors.extend(validate_output.validate_history(history, cases))
-
-    mindmap = delivery_dir / "mindmap.puml"
-    if not mindmap.exists():
-        errors.append(
-            "缺少 mindmap.puml：飞书发布会裁掉 showcase/用例设计/APP 常驻三块正文、改由思维导图承载用例，"
-            "无导图会发出不含任何用例的空文档。请先运行 scripts/md_to_mindmap.py 生成 mindmap.puml。"
-        )
-    else:
-        errors.extend(validate_output.validate_mindmap(mindmap))
-
+    """发布前强制复用交付校验器(与 `validate_output.py --dir` 同一函数、同一规则),
+    避免把坏结构写进飞书文档。WARN 只打印不阻断。"""
+    errors, warnings = validate_output.validate_delivery(delivery_dir, require_mindmap=True)
+    for warning in warnings:
+        print(f"[publish] WARN - {warning}", file=sys.stderr)
     if errors:
         detail = "\n".join(f"- {error}" for error in errors)
         raise RuntimeError(f"delivery validation failed before publish:\n{detail}")
+
+
+def renderables_fingerprint(renderables: list[dict]) -> str:
+    """交付内容指纹:续传前比对,内容变了(哪怕块数相同)也拒绝续传,防止写错文档。"""
+    raw = json.dumps(renderables, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()[:16]
 
 
 def build_delivery_renderables(delivery_dir: Path) -> list[dict]:
@@ -514,7 +493,7 @@ def build_delivery_renderables(delivery_dir: Path) -> list[dict]:
         # 最终防线:发布固定裁掉三块用例正文、由思维导图承载,无导图会发出不含任何用例的空文档。
         # 覆盖 --skip-validate 绕过校验的路径,任何情况下都不发空用例文档。
         raise RuntimeError(
-            "缺少 mindmap.puml：发布会裁掉 showcase/用例设计/APP 常驻三块正文并由思维导图承载用例，"
+            "缺少 mindmap.puml：发布会裁掉用例设计/APP 常驻两块正文并由思维导图承载用例，"
             "无导图将发出不含任何用例的空文档。请先运行 scripts/md_to_mindmap.py 生成 mindmap.puml。"
         )
     before_md, after_md, mindmap_no = split_testcases_for_publish(
@@ -532,14 +511,7 @@ def build_delivery_renderables(delivery_dir: Path) -> list[dict]:
     if after_md.strip():
         renderables.extend(markdown_to_renderables(after_md))
 
-    history = delivery_dir / "history-hits.md"
-    if history.exists():
-        renderables.append(make_block("heading2", "历史命中摘要"))
-        renderables.extend(markdown_to_renderables(history_for_publish(history.read_text(encoding="utf-8"))))
-
-    renderables.append(make_block("heading2", "交付文件清单"))
-    for name in delivery_file_list(delivery_dir):
-        renderables.append(make_block("bullet", name))
+    # history-hits.md 与交付文件清单只留本地:历史风险已作为「历史：」Q 项进风险与待确认
     return renderables
 
 
@@ -790,6 +762,7 @@ def publish(delivery_dir: Path, target: PublishTarget, title: str, permission: s
     lark_request = import_lark_request()
 
     wiki_node = None
+    fingerprint = renderables_fingerprint(renderables)
     if resume_state:
         # 续传:复用上次已建文档与进度,不再 create;交付内容或目标变了则拒绝续传(会写错文档)
         if resume_state.get("renderable_count") != len(renderables):
@@ -797,6 +770,13 @@ def publish(delivery_dir: Path, target: PublishTarget, title: str, permission: s
                 "resume_check",
                 f"本地交付块数已变化({resume_state.get('renderable_count')} → {len(renderables)}),"
                 f"不能续传;请删除 {PUBLISH_STATE_FILENAME}(并手动删除半成品文档)后整篇重发",
+                resume_state.get("document_id"), resume_state.get("document_url", ""),
+            )
+        if resume_state.get("renderable_hash") and resume_state["renderable_hash"] != fingerprint:
+            raise PublishError(
+                "resume_check",
+                f"本地交付内容已变化(指纹 {resume_state['renderable_hash']} → {fingerprint}),不能续传;"
+                f"请手动删除半成品文档后加 --fresh 整篇重发",
                 resume_state.get("document_id"), resume_state.get("document_url", ""),
             )
         if resume_state.get("target_source") and resume_state["target_source"] != target.source:
@@ -836,6 +816,7 @@ def publish(delivery_dir: Path, target: PublishTarget, title: str, permission: s
             "target_source": target.source,
             "permission": permission,
             "renderable_count": len(renderables),
+            "renderable_hash": fingerprint,
             "next_index": 0,
             "wiki_space_id": wiki_node.get("space_id") if wiki_node else None,
             "wiki_node_token": wiki_node.get("node_token") if wiki_node else None,
@@ -862,7 +843,6 @@ def publish(delivery_dir: Path, target: PublishTarget, title: str, permission: s
         raise PublishError("set_permission", str(exc), doc_id, doc_url) from exc
 
     mounted_node = None
-    mount_error = None
     if wiki_node:
         try:
             mounted_node = mount_doc_to_wiki(lark_request, wiki_node["space_id"], wiki_node["node_token"], doc_id)
@@ -881,8 +861,7 @@ def publish(delivery_dir: Path, target: PublishTarget, title: str, permission: s
             "source": target.source,
         },
         "wiki_node": mounted_node,
-        "mount_status": "mounted" if mounted_node else ("failed" if mount_error else "not_requested"),
-        "mount_error": mount_error,
+        "mount_status": "mounted" if mounted_node else "not_requested",
         "link_share_entity": None if permission == "skip" else permission,
     }
     clear_publish_state(delivery_dir)  # 发布完整成功,清除断点状态
@@ -901,7 +880,7 @@ def main() -> int:
     parser.add_argument("--title", help="Document title; default inferred from source/meta.json or testcases.md.")
     parser.add_argument(
         "--permission",
-        default="tenant_editable",
+        default="tenant_readable",
         choices=["tenant_editable", "tenant_readable", "closed", "skip"],
         help="Link sharing permission after creation. Use skip to avoid changing permissions.",
     )
@@ -973,6 +952,13 @@ def main() -> int:
 
     if args.dry_run:
         tables = [r["__table__"] for r in renderables if "__table__" in r]
+        max_table_blocks = max((len(build_table_descendant(t)["descendants"]) for t in tables), default=0)
+        if max_table_blocks > MAX_DESCENDANTS:
+            print(json.dumps({
+                "status": "failed", "stage": "dry_run_table_limit",
+                "message": f"最大表格 {max_table_blocks} 块 > 飞书单次上限 {MAX_DESCENDANTS},真发布会在 append 阶段失败",
+            }, ensure_ascii=False, indent=2))
+            return 1
         print(json.dumps(
             {
                 "delivery_dir": str(delivery_dir),
@@ -981,6 +967,7 @@ def main() -> int:
                 "block_count": sum(1 for r in renderables if "__table__" not in r),
                 "table_count": len(tables),
                 "table_shapes": [f"{len(t)}x{max((len(r) for r in t), default=1)}" for t in tables],
+                "max_table_blocks": max_table_blocks,
                 "files": delivery_file_list(delivery_dir),
             },
             ensure_ascii=False,

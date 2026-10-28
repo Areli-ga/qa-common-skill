@@ -7,7 +7,10 @@ read_doc.py — 只读飞书文档(正文 + 表格行列 + 下载全部图片),�
 但**只读**:输出到临时目录、不写 qa-knowledge-base、不做版本判定/入库。保证"读历史文档"与 qa-knowledge-base 同一套读法。
 
 用法:
-    python3 scripts/read_doc.py "<飞书链接或token>" [输出目录] [--out 输出目录] [--allow-partial] [--resume]
+    python3 scripts/read_doc.py "<飞书链接或token>" [输出目录] [--out 输出目录] [--allow-partial] [--resume] [--quiet]
+
+    --quiet(2026-10-28):不在终端回显全文 RAW CONTENT,只打印摘要与文件路径——正文已落盘 content.txt,
+    主线/子代理按需读文件即可,避免同一份正文在上下文里出现两次。
 
     输出目录可用位置参数或 --out 指定,二者等价(同时给时 --out 优先);未知 --xxx 参数直接报错退出,
     不会被当成目录名静默吞掉(2026-07-06 曾因此把产物写进字面名为 --out 的目录)。
@@ -17,10 +20,11 @@ read_doc.py — 只读飞书文档(正文 + 表格行列 + 下载全部图片),�
     图片一律先写 .part 再原子改名,中断不会留下半截文件被误当完成。不带 --resume 行为与从前一致(全新读取)。
 
 凭证:优先环境变量 LARK_APP_ID / LARK_APP_SECRET / LARK_DOMAIN;没有则从公司 config 服务拉取(需 VPN)。
-产出:<out>/{content.txt, blocks.json, tables.md, tables.json, meta.json, images/};并打印正文 + 表格 + 图片清单供 Claude 读图。
+产出:<out>/{content.txt, blocks.json, tables.md, tables.json, meta.json, images/};并打印读取摘要 + 图片清单(默认附全文,--quiet 不附)。
 """
 import os
 import re
+import base64
 import sys
 import json
 import time
@@ -205,6 +209,43 @@ def downscale_for_read(path, max_px=MAX_READ_PX):
         _NO_SCALER_WARNED = True
         log(f"  ⚠️ 本机无 sips 也无 PIL:超大图(>{max_px}px)不生成 .read 缩放副本,读图工具可能拒读原图 —— 建议安装 Pillow 或在 macOS 上运行")
     return None, (w, h)
+
+
+_SVG_RASTER_RE = re.compile(rb'href\s*=\s*["\']data:image/(png|jpe?g|gif|webp);base64,([A-Za-z0-9+/=\s]+)["\']', re.I)
+
+
+def extract_svg_raster(path):
+    """飞书常把截图包成 SVG(内嵌 base64 位图),读图工具读不了 SVG:取最大的内嵌位图另存 img-NN.embed.<ext>。
+    纯矢量 SVG 没有内嵌位图,返回 None。"""
+    with open(path, "rb") as f:
+        data = f.read()
+    best = max(_SVG_RASTER_RE.finditer(data), key=lambda m: len(m.group(2)), default=None)
+    if not best:
+        return None
+    ext = best.group(1).decode().lower().replace("jpeg", "jpg")
+    out = os.path.splitext(path)[0] + ".embed." + ext
+    with open(out, "wb") as f:
+        f.write(base64.b64decode(re.sub(rb"\s+", b"", best.group(2))))
+    return out
+
+
+def image_entry(i, fn, path):
+    """单张图的 meta 条目;SVG 先抽内嵌位图,读图文件与尺寸都以位图为准。"""
+    target, note = path, None
+    if "svg" in fn.lower():
+        raster = extract_svg_raster(path)
+        if raster:
+            target = raster
+        else:
+            note = "矢量 SVG,无内嵌位图,读图工具无法读取 —— 需人工看原文档"
+            log(f"  ⚠️ 图{i:02d} {note}")
+    read_name, dims = downscale_for_read(target)
+    entry = {"index": i, "file": f"images/{fn}", "dims": list(dims)}
+    if read_name or target != path:
+        entry["read_file"] = f"images/{read_name or os.path.basename(target)}"
+    if note:
+        entry["note"] = note
+    return entry
 
 
 TEXT_FIELDS = (
@@ -484,13 +525,15 @@ def _fetch_blocks(domain, doc_id, auth, out):
 
 
 def main():
-    usage = ('用法: python3 scripts/read_doc.py "<飞书链接或token>" [输出目录] [--out 输出目录] [--allow-partial] [--resume]\n'
+    usage = ('用法: python3 scripts/read_doc.py "<飞书链接或token>" [输出目录] [--out 输出目录] [--allow-partial] [--resume] [--quiet]\n'
              '  提示: 建议贴完整 /wiki/ 或 /docx/ URL; 裸 token 默认按 wiki 解析, docx 裸 token 会被误判为 wiki 而失败\n'
-             '  --resume: 中断后续跑同一输出目录,复用已落盘正文/blocks/图片,只补缺')
+             '  --resume: 中断后续跑同一输出目录,复用已落盘正文/blocks/图片,只补缺\n'
+             '  --quiet: 不回显全文,正文请读 content.txt')
     args = sys.argv[1:]
     allow_partial = "--allow-partial" in args
     resume = "--resume" in args
-    args = [a for a in args if a not in ("--allow-partial", "--resume")]
+    quiet = "--quiet" in args
+    args = [a for a in args if a not in ("--allow-partial", "--resume", "--quiet")]
     out_dir = None
     if "--out" in args:
         i = args.index("--out")
@@ -619,14 +662,10 @@ def main():
         # --resume: 该序号图片已完整落盘(非 .part、非 .read 副本)则直接复用,不重新下载
         if resume:
             done = [f for f in os.listdir(imgdir)
-                    if f.startswith(f"img-{i:02d}.") and ".read." not in f and not f.endswith(".part")]
+                    if f.startswith(f"img-{i:02d}.") and ".read." not in f and ".embed." not in f
+                    and not f.endswith(".part")]
             if done:
-                path = os.path.join(imgdir, done[0])
-                read_name, dims = downscale_for_read(path)
-                entry = {"index": i, "file": f"images/{done[0]}", "dims": list(dims)}
-                if read_name:
-                    entry["read_file"] = f"images/{read_name}"
-                img_meta.append(entry)
+                img_meta.append(image_entry(i, done[0], os.path.join(imgdir, done[0])))
                 log(f"  图{i:02d} --resume 复用已下载 {done[0]}")
                 continue
         tk = (b.get("image") or {}).get("token")
@@ -664,11 +703,7 @@ def main():
         with open(tmp_path, "wb") as f:
             f.write(body)
         os.replace(tmp_path, path)
-        read_name, dims = downscale_for_read(path)
-        entry = {"index": i, "file": f"images/{fn}", "dims": list(dims)}
-        if read_name:
-            entry["read_file"] = f"images/{read_name}"
-        img_meta.append(entry)
+        img_meta.append(image_entry(i, fn, path))
 
     log(f"图片下载完成 {len(img_meta)}/{len(imgs)} 张")
 
@@ -711,8 +746,13 @@ def main():
         for m in img_meta:
             rf = m.get("read_file", m["file"])
             print(f"  图{m['index']:02d} {m['dims'][0]}x{m['dims'][1]}  读: {os.path.join(out, rf)}")
-    print("\n==== RAW CONTENT(全文)====")
-    print(content)
+            if m.get("note"):
+                print(f"    ⚠️ {m['note']}")
+    if quiet:
+        print(f"\n正文 : {os.path.join(out, 'content.txt')}({len(content)} 字符,--quiet 未回显)")
+    else:
+        print("\n==== RAW CONTENT(全文)====")
+        print(content)
 
 
 def write_meta(out, title, doc_id, token, content, blocks, img_meta, expected_images, tables, failures):

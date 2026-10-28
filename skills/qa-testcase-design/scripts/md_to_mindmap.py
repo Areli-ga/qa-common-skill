@@ -4,37 +4,28 @@
 md_to_mindmap.py — 把 testcases.md 确定性转成飞书画板 PlantUML 思维导图(.puml)。
 
 为什么用脚本:确定性转换、不靠 AI 手抄,根治"转写出错/节点重复/长行断行"那类坑。
-默认输出完整评审图:业务/覆盖维度 → 子模块 → 用例 → 前置/操作步骤/预期结果。
-风险与待确认、需求理解、P0/P1/P2 优先级属性不进入思维导图。
+默认输出完整评审图:第 3 块「用例设计」分解树 + 第 4 块常驻维度 → 用例「操作 → 结果」短链。
+风险与待确认、需求理解不进入思维导图;P0/P1/P2 与用例 ID 都不进导图。
 
 用法:
     python3 scripts/md_to_mindmap.py <testcases.md> [输出.puml] [--compact]
 
 约定:testcases.md 的用例行格式为
-    [P0-01] 用例标题｜前置：...｜步骤：...｜期望：...
-新结构优先读取 `用例设计（按业务功能 / 需求类目组织）` 内的 `###/####/...` 标题层级；用例放在 ```text``` 围栏里。
+    [P0-01] 操作或条件｜期望：结果
+新结构优先读取 `用例设计（按端 / 页面 / 功能组织）` 内的 `###/####/...` 标题层级；用例放在 ```text``` 围栏里。
 如果 testcases.md 已包含 ```plantuml 的 @startmindmap 块,脚本会原样提取该块。
 """
 import re
 import sys
 
-BUSINESS_CASE_SECTION = "用例设计（按业务功能 / 需求类目组织）"
+BUSINESS_CASE_SECTION = "用例设计（按端 / 页面 / 功能组织）"
 APP_CASE_SECTION = "APP 常驻维度补充"
-CASE_SECTIONS = [
-    "showcase（提测准入）",
-    BUSINESS_CASE_SECTION,
-    APP_CASE_SECTION,
-    "P0 主流程",
-    "P1 重要场景",
-    "P2 边界/兼容",
-    "跨端联动",
-    "后端 / 配置 / AB / 埋点",
-]
+CASE_SECTIONS = [BUSINESS_CASE_SECTION, APP_CASE_SECTION]
 PERMANENT_CATEGORIES = ["边界/兼容", "跨端联动", "后端/配置", "AB", "埋点", "多语言兼容"]
 EXCLUDED_DIMENSIONS = {"需求理解", "风险判断", "风险与待确认", "覆盖自检表", "历史回归"}
-CASE_ID_RE = re.compile(r"\b(?:P[0-2]|S)-\d{2}\b")
-CASE_LINE_RE = re.compile(r"^\[((?:P[0-2]|S)-\d{2})\]\s*(.+)$")
-CASE_ID_PREFIX_RE = re.compile(r"^\[(?:P[0-2]|S)-\d{2}\]\s*")
+CASE_ID_RE = re.compile(r"\bP[0-2]-\d{2,3}\b")
+CASE_LINE_RE = re.compile(r"^\[(P[0-2]-\d{2,3})\]\s*(.+)$")
+CASE_ID_PREFIX_RE = re.compile(r"^\[P[0-2]-\d{2,3}\]\s*")
 
 PERMANENT_KEYWORDS = {
     "边界/兼容": ["边界", "兼容", "低端", "弱网", "设备", "性能", "前后台", "降级", "超长", "异常", "图片/表格保真", "Android", "iOS"],
@@ -47,7 +38,7 @@ PERMANENT_KEYWORDS = {
 
 # 2026-07-08 清空:此前按关键词推断中间层的规则表,一半是「跟读组件改版」需求的领域词
 # (战斗数值/反馈分支/结算),对其他需求是跨需求污染;且推断层"命中才有、不命中直挂"导致
-# 树深忽深忽浅。先树后例契约生效后,结构一律来自 testcases.md 的 ###/####/##### 分解树,
+# 树深忽深忽浅。先树后例契约生效后,结构一律来自 testcases.md 的 ###/####/…分解树(不限层数),
 # 不再由脚本编造中间层。保留空表与 infer_submodule 兜底逻辑,便于以后按需回加通用规则。
 SUBMODULE_RULES = {}
 
@@ -106,16 +97,8 @@ def parse_case_line(line, section_name, path=None):
     case_id, raw_title = match.groups()
     detail = {}
     for field in fields[1:]:
-        if field.startswith("前置："):
-            detail["前置"] = field.removeprefix("前置：")
-        elif field.startswith("步骤："):
-            detail["操作步骤"] = field.removeprefix("步骤：")
-        elif field.startswith("操作步骤："):
-            detail["操作步骤"] = field.removeprefix("操作步骤：")
-        elif field.startswith("期望："):
-            detail["预期结果"] = field.removeprefix("期望：")
-        elif field.startswith("预期结果："):
-            detail["预期结果"] = field.removeprefix("预期结果：")
+        if field.startswith("期望："):
+            detail["期望"] = field.removeprefix("期望：")
     return {
         "id": case_id,
         "title": mindmap_case_title(raw_title),
@@ -132,7 +115,7 @@ def extract_section_cases(section, section_name):
     in_block = False
     for raw_line in section.splitlines():
         line = raw_line.rstrip()
-        heading = re.match(r"^(#{3,9})\s+(.+?)\s*$", line)
+        heading = re.match(r"^(#{3,})\s+(.+?)\s*$", line)
         if heading and not in_block:
             depth = len(heading.group(1)) - 2
             # 只剥「1. 」「2.3 」这类编号前缀(数字后必须跟 . 、或空格);
@@ -165,15 +148,18 @@ def extract_cases(sections):
     return cases, section_cases
 
 
-def category_for_dimension(dimension):
+def category_for_dimension(dimension, lenient=False):
+    """维度名 → 导图一级分类。默认只做精确匹配(业务维度原样保留,避免「Unity 单词回顾」
+    被关键词 Unity 劫持进「跨端联动」);lenient=True 仅用于第 4 块 ### 标题的宽松归类。"""
     dim = clean(dimension)
     if dim in EXCLUDED_DIMENSIONS:
         return None
-    if dim == "showcase（提测准入）":
-        return dim
-    # 先做全量精确匹配,再做关键词扫描——否则「多语言兼容」会被排在前面的
-    # 「边界/兼容」的关键词"兼容"劫持,导致多语言分类被清空(2026-07-08 实测踩坑)
-    if dim in PERMANENT_KEYWORDS:
+    # 先全量精确匹配,再关键词扫描——否则「多语言兼容」会被「边界/兼容」的"兼容"劫持
+    compact = re.sub(r"\s+", "", dim)
+    for category in PERMANENT_CATEGORIES:
+        if compact == category.replace(" ", ""):
+            return category
+    if not lenient:
         return dim
     for category, keywords in PERMANENT_KEYWORDS.items():
         if any(keyword in dim for keyword in keywords):
@@ -185,8 +171,6 @@ def infer_submodule(category, dimension, case):
     """无 #### 子级时推断中间层;推断不出返回 None,用例直挂分类节点。
     (2026-07-08 修复:此前兜底返回「功能点」占位层——纯排版噪声,每个单层分组都多长一层
     无信息节点。结构应来自 testcases.md 的 ###/#### 分解树,不靠这里编造。)"""
-    if category == "showcase（提测准入）":
-        return None
     title = case["title"]
     for submodule, keywords in SUBMODULE_RULES.get(category, []):
         if any(keyword in title for keyword in keywords):
@@ -198,7 +182,7 @@ def infer_submodule(category, dimension, case):
 
 def fallback_category_for_case(case, section_name):
     title = clean(case["title"])
-    inferred = category_for_dimension(title)
+    inferred = category_for_dimension(title, lenient=True)
     if inferred in PERMANENT_CATEGORIES:
         return inferred, inferred
 
@@ -212,12 +196,6 @@ def fallback_category_for_case(case, section_name):
         if any(keyword in title for keyword in keywords):
             return category, category
 
-    if section_name == "P2 边界/兼容":
-        return "边界/兼容", "边界/兼容"
-    if section_name == "跨端联动":
-        return "跨端联动", "跨端联动"
-    if section_name == "后端 / 配置 / AB / 埋点":
-        return "后端/配置", "后端/配置"
     return "其他业务场景", "其他业务场景"
 
 
@@ -255,23 +233,16 @@ def build_category_mapping(sections, cases, section_cases):
             if case.get("path") and case["section"] == BUSINESS_CASE_SECTION:
                 append_unique(mapping, case["path"][0], case["path"][0], [case_id], case["path"][1:])
             elif case.get("path") and case["section"] == APP_CASE_SECTION:
-                category_from_path = category_for_dimension(case["path"][0]) or case["path"][0]
+                category_from_path = category_for_dimension(case["path"][0], lenient=True) or case["path"][0]
                 append_unique(mapping, category_from_path, category_from_path, [case_id], case["path"][1:])
             else:
                 append_unique(mapping, category, dimension, [case_id])
             assigned.add(case_id)
 
-    for case_id in section_cases.get("showcase（提测准入）", []):
-        append_unique(mapping, "showcase（提测准入）", "showcase（提测准入）", [case_id])
-
     assigned = {case_id for groups in mapping.values() for item in groups for case_id in item["case_ids"]}
     for section_name, case_ids in section_cases.items():
         for case_id in case_ids:
             if case_id in assigned:
-                continue
-            if section_name == "showcase（提测准入）":
-                category, dimension = "showcase（提测准入）", "showcase（提测准入）"
-                append_unique(mapping, category, dimension, [case_id])
                 continue
             if cases[case_id].get("path") and section_name == BUSINESS_CASE_SECTION:
                 path = cases[case_id]["path"]
@@ -279,7 +250,7 @@ def build_category_mapping(sections, cases, section_cases):
                 continue
             if cases[case_id].get("path") and section_name == APP_CASE_SECTION:
                 path = cases[case_id]["path"]
-                category = category_for_dimension(path[0]) or path[0]
+                category = category_for_dimension(path[0], lenient=True) or path[0]
                 append_unique(mapping, category, category, [case_id], path[1:])
                 continue
             else:
@@ -290,8 +261,6 @@ def build_category_mapping(sections, cases, section_cases):
 
 def ordered_categories(mapping):
     order = []
-    if "showcase（提测准入）" in mapping:
-        order.append("showcase（提测准入）")
     for category in mapping:
         if category not in order and category not in PERMANENT_CATEGORIES:
             order.append(category)
@@ -301,16 +270,20 @@ def ordered_categories(mapping):
     return order
 
 
-def emit_case(out, level, case, compact):
-    stars = "*" * level
-    out.append(f"{stars} {clean(case['title'])}")
-    if compact:
-        return
-    detail_stars = "*" * (level + 1)
-    for key in ["前置", "操作步骤", "预期结果"]:
-        value = clean(case["detail"].get(key, ""))
-        if value:
-            out.append(f"{detail_stars} {key}：{value}")
+def emit_cases(out, level, cases, compact):
+    """用例写成「操作 → 结果」短链(对齐团队手写导图):同一位置操作文字相同的用例合并为一个
+    操作节点,结果并列挂叶子;不带优先级与 ID。compact 只出操作节点。"""
+    actions = {}
+    for case in cases:
+        actions.setdefault(clean(case["title"]), []).append(case)
+    for action, group in actions.items():
+        out.append(f"{'*' * level} {action}")
+        if compact:
+            continue
+        for case in group:
+            result = clean(case["detail"].get("期望", ""))
+            if result:
+                out.append(f"{'*' * (level + 1)} {result}")
 
 
 def add_to_tree(tree, path, case):
@@ -324,8 +297,7 @@ def add_to_tree(tree, path, case):
 
 
 def emit_tree(out, level, tree, compact):
-    for case in tree.get("__cases__", []):
-        emit_case(out, level, case, compact)
+    emit_cases(out, level, tree.get("__cases__", []), compact)
     for name, child in tree.get("__children__", {}).items():
         out.append(f"{'*' * level} {clean(name)}")
         emit_tree(out, level + 1, child, compact)
@@ -364,11 +336,6 @@ def main():
         groups = mapping.get(category, [])
         if not groups:
             out.append("*** 无")
-            continue
-        if category == "showcase（提测准入）":
-            for group in groups:
-                for case_id in group["case_ids"]:
-                    emit_case(out, 3, cases[case_id], compact)
             continue
         tree = {}
         for group in groups:
