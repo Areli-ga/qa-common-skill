@@ -1,0 +1,63 @@
+{
+  "title": "知识库支持数学学科",
+  "doc_id": "SVq7diyyEoCFIXxicBUlM7flgLc",
+  "wiki_token": "Sr4UwzLecijxZgkIKKclQhg8g0t",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Sr4UwzLecijxZgkIKKclQhg8g0t",
+  "fetched_at": "2026-10-26T14:12:57.564345+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1613,
+  "blocks": 126,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 116704,
+      "dims": [
+        2940,
+        1602
+      ],
+      "readable": "ok",
+      "read_scale": 0.646,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 444243,
+        "md5": "f4bba43adf321b3fd9ee5b61c8cb3ebc",
+        "dims": [
+          2940,
+          1602
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 97714,
+      "dims": [
+        2940,
+        1602
+      ],
+      "readable": "ok",
+      "read_scale": 0.646,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 329332,
+        "md5": "57c4f062b9e7e49837b2a3e2e4b0f542",
+        "dims": [
+          2940,
+          1602
+        ]
+      }
+    }
+  ],
+  "image_count": 2,
+  "tables": 2,
+  "embedded_sheets": 1,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

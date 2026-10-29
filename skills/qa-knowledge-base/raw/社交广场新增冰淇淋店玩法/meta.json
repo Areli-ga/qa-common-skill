@@ -1,0 +1,107 @@
+{
+  "title": "社交广场新增冰淇淋店玩法",
+  "doc_id": "UB5Bdpxu7oriWjxvTZ5lqQybgCh",
+  "wiki_token": "CTP5wHcHpiA457kR0TWlKJfkg8b",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/CTP5wHcHpiA457kR0TWlKJfkg8b",
+  "fetched_at": "2026-10-26T10:51:05.660344+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 7440,
+  "blocks": 90,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 66042,
+      "dims": [
+        2126,
+        586
+      ],
+      "readable": "ok",
+      "read_scale": 0.894,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 938710,
+        "md5": "7010492358f5341300d8273288ece9c8",
+        "dims": [
+          2126,
+          586
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 100974,
+      "dims": [
+        2462,
+        938
+      ],
+      "readable": "ok",
+      "read_scale": 0.772,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 480946,
+        "md5": "368fe51211f88ff63259ba5377b6d65f",
+        "dims": [
+          2462,
+          938
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 82272,
+      "dims": [
+        2270,
+        858
+      ],
+      "readable": "ok",
+      "read_scale": 0.837,
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 636882,
+        "md5": "8bad98c1e4587a2dd674332e826a0817",
+        "dims": [
+          2270,
+          858
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 85432,
+      "dims": [
+        2440,
+        644
+      ],
+      "readable": "ok",
+      "read_scale": 0.779,
+      "read_file": "images/img-04.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 920686,
+        "md5": "2ef7e44883e6c2a03fee2cc70272225d",
+        "dims": [
+          2440,
+          644
+        ]
+      }
+    }
+  ],
+  "image_count": 4,
+  "tables": 0,
+  "embedded_sheets": 8,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

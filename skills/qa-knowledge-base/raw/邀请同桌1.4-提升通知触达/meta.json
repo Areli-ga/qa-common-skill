@@ -1,0 +1,212 @@
+{
+  "title": "邀请同桌1.4 提升通知触达",
+  "doc_id": "Qiv9dJFCJohK6CxI01ilBCkog6g",
+  "wiki_token": "MH4dwPJGGinVK0kKg4klR6AOgMg",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/MH4dwPJGGinVK0kKg4klR6AOgMg",
+  "fetched_at": "2026-10-26T11:19:28.152113+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1549,
+  "blocks": 98,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 42178,
+      "dims": [
+        2650,
+        482
+      ],
+      "readable": "ok",
+      "read_scale": 0.717,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 140800,
+        "md5": "ce6c7668f3130685b8aa2e06a5e5a53b",
+        "dims": [
+          2650,
+          482
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 80646,
+      "dims": [
+        2664,
+        1500
+      ],
+      "readable": "ok",
+      "read_scale": 0.713,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 271624,
+        "md5": "958e8368518bf1d87954a01c7063436f",
+        "dims": [
+          2664,
+          1500
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 476466,
+      "dims": [
+        9816,
+        4555
+      ],
+      "readable": "marginal",
+      "read_scale": 0.194,
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 2738855,
+        "md5": "8cbb8ec5b232d68d39d2175029b63484",
+        "dims": [
+          9816,
+          4555
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 39966,
+      "dims": [
+        1498,
+        834
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 318333,
+        "md5": "261bb38588ea91cbdea51e4b4eb0c0f4",
+        "dims": [
+          1498,
+          834
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 36370,
+      "dims": [
+        1700,
+        958
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 248799,
+        "md5": "0a4a3db4332532869667469760c81188",
+        "dims": [
+          1700,
+          958
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "images/img-06.webp",
+      "bytes": 117806,
+      "dims": [
+        5792,
+        750
+      ],
+      "readable": "ok",
+      "read_scale": 0.328,
+      "read_file": "images/img-06.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-06.png",
+        "bytes": 601192,
+        "md5": "b298aa63a06eed8189ce21c5618fa095",
+        "dims": [
+          5792,
+          750
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "file": "images/img-07.webp",
+      "bytes": 32962,
+      "dims": [
+        1582,
+        730
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-07.png",
+        "bytes": 258910,
+        "md5": "7b2a16a2aade539fde959963223ea821",
+        "dims": [
+          1582,
+          730
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "file": "images/img-08.webp",
+      "bytes": 49542,
+      "dims": [
+        1624,
+        750
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-08.png",
+        "bytes": 304171,
+        "md5": "057df1366c85f598202a4d2ca6012199",
+        "dims": [
+          1624,
+          750
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "file": "images/img-09.webp",
+      "bytes": 50766,
+      "dims": [
+        1624,
+        750
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-09.png",
+        "bytes": 307668,
+        "md5": "d0bbb6b9365d2622034cf763e63ef48b",
+        "dims": [
+          1624,
+          750
+        ]
+      }
+    }
+  ],
+  "image_count": 9,
+  "tables": 2,
+  "embedded_sheets": 2,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

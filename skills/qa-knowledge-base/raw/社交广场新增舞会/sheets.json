@@ -1,0 +1,447 @@
+{
+  "fetched_at": "2026-10-26T10:38:34.619357+08:00",
+  "sheets": [
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_NYsh0z",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "NYsh0z",
+      "title": "NYsh0z",
+      "row_count": 3,
+      "column_count": 2,
+      "range": "NYsh0z!A1:B3",
+      "values": [
+        [
+          "层级",
+          "目标"
+        ],
+        [
+          "功能层（主）",
+          "广场单次停留时长与回访率提升"
+        ],
+        [
+          "全局（次级）",
+          "APP 留存"
+        ]
+      ],
+      "block_id": "AyrhdwRiKo0Sjsx6Y3flZrQig0f"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_cp1KWy",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "cp1KWy",
+      "title": "cp1KWy",
+      "row_count": 9,
+      "column_count": 2,
+      "range": "cp1KWy!A1:B9",
+      "values": [
+        [
+          "项",
+          "规则"
+        ],
+        [
+          "出题",
+          "Max 做动作 + 语音报动词（如 \"jump\"）"
+        ],
+        [
+          "答题",
+          "动作播完后选项面板亮起，3 秒内点选动词"
+        ],
+        [
+          "简单模式",
+          "每回合 1 个动作"
+        ],
+        [
+          "困难模式",
+          "每回合 2-3 个连续动作，顺序也必须一致"
+        ],
+        [
+          "答对",
+          "角色做出同款动作，连击 +1"
+        ],
+        [
+          "答错",
+          "播\"尴尬踩脚\"动作，连击清零"
+        ],
+        [
+          "超时未答",
+          "本回合跳过，播 idle 动画（视觉上就是\"别人都在跳，你站着\"）"
+        ],
+        [
+          "难度选择",
+          "先只上简单模式"
+        ]
+      ],
+      "block_id": "Sb7udBWgMozwnQxJj0el429igjf"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_wrjGJG",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "wrjGJG",
+      "title": "wrjGJG",
+      "row_count": 6,
+      "column_count": 3,
+      "range": "wrjGJG!A1:C6",
+      "values": [
+        [
+          "事件／来源",
+          "本次实施内容",
+          "必要属性与边界"
+        ],
+        [
+          "plaza_enter\n已有广场进入｜H5",
+          "沿用真正进入广场、首屏可见后的进入事件；增加本次访问标识。",
+          "plaza_visit_id（String，必填）。进入舞会、结算回广场、界面重绘和后台恢复不产生新的广场访问。"
+        ],
+        [
+          "plaza_exit\n已有广场退出｜H5",
+          "真正离开广场时补充前台时长；原有字段和历史触发语义保留，不重复造一个退出事件。",
+          "plaza_visit_id（String）、stay_duration_ms（Number，毫秒），均必填。只在真实离开上报本次访问最终时长；不把切后台或进入舞会当作离开。历史stay_duration不改名、不改单位。"
+        ],
+        [
+          "$WebClick\n普通点击｜H5",
+          "复用 $element_name：dance_stage=舞台入口；dance_solo=单人选择；dance_multi=多人选择；dance_confirm=结算确认；country_flag=国旗。",
+          "已有相同控件映射优先沿用；上述为缺少映射时的约定。只记录真实有效点击，禁用或请求处理中连点不重复报。自动采集和手动补报只能选一个出口。邀请接受已含场次业务对象，按下表业务事件统计，不再用普通点击作漏斗。"
+        ],
+        [
+          "$pageview\n页面浏览｜H5",
+          "国家介绍沿用广场／排行榜既有页面标题和页面浏览；不为国旗Toast另建事件。",
+          "页面与国旗实际渲染可见后纳入国家介绍使用率分母；若旗在后续弹层才出现，先补齐该可见场景的既有页面浏览，不能拿未展示国旗的访问当分母。不采国家名、昵称。"
+        ],
+        [
+          "已有APP活跃事件\n沿用原来源",
+          "APP次日、第7日留存使用现有APP活跃及孩子身份口径。",
+          "不新增“舞会留存”事件；孩子切换必须沿用统一身份出口，不以家长账号或设备替代孩子。"
+        ]
+      ],
+      "block_id": "VAnEdxciuolGROxvzlBl1AyRgBe"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_dav75H",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "dav75H",
+      "title": "dav75H",
+      "row_count": 4,
+      "column_count": 4,
+      "range": "dav75H!A1:D4",
+      "values": [
+        [
+          "事件名／显示名",
+          "主分类／二级分类／来源",
+          "回答的问题",
+          "属性（详细类型见第4节）"
+        ],
+        [
+          "plaza_dance_invite\n广场舞会邀请",
+          "休闲娱乐／社交广场／H5",
+          "统计邀请触达、接受、入场及开场转化，区分满员、过期和错误阻碍。",
+          "dance_id\nplaza_visit_id\ninvite_state\nfail_reason"
+        ],
+        [
+          "plaza_dance_session\n广场舞会过程",
+          "休闲娱乐／社交广场／H5",
+          "统计主动发起/主动加入/受邀加入人数，以及开场、完成、再玩、真人同场和游玩时长。",
+          "dance_id\nplaza_visit_id\nplay_mode\nentry_source\ndance_state\nwait_duration_ms\nplay_duration_ms"
+        ],
+        [
+          "plaza_dance_answer\n广场舞会单题结果",
+          "休闲娱乐／社交广场／H5",
+          "统计整体及各动作词的正确率、超时率，包含中途退出前已判定题目。",
+          "dance_id\nround_index\naction_id\nanswer_result"
+        ]
+      ],
+      "block_id": "FbY6dVXV9oJgidxApU5lSQRAgAf"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_zbopH4",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "zbopH4",
+      "title": "zbopH4",
+      "row_count": 10,
+      "column_count": 4,
+      "range": "zbopH4!A1:D10",
+      "values": [
+        [
+          "事件",
+          "状态／结果",
+          "什么时候报",
+          "什么时候不报"
+        ],
+        [
+          "plaza_dance_invite",
+          "invite_state=shown",
+          "接收者的有效舞会邀请弹窗首次真实可见。",
+          "消息到达但未展示、已失效未展示、重绘不报。"
+        ],
+        [
+          "plaza_dance_invite",
+          "invite_state=accepted",
+          "接收者点击接受，且开始处理一次有效入场请求。",
+          "禁用按钮、同一请求处理中连点不报。"
+        ],
+        [
+          "plaza_dance_invite",
+          "invite_state=failed",
+          "接受后得到明确满员、过期或错误结果；传fail_reason。",
+          "未接受、拒绝或弹窗自然消失不算失败；成功入场不报failed。"
+        ],
+        [
+          "plaza_dance_session",
+          "dance_state=joined",
+          "创建或加入成功得到确认，H5进入该场准备区；同时确定play_mode、entry_source。",
+          "点击模式或发送请求不等于成功；入场失败不报。"
+        ],
+        [
+          "plaza_dance_session",
+          "dance_state=started",
+          "首题已经展示且选项可操作，孩子真正能够开始作答。",
+          "准备区、背景预热舞蹈、单纯播放开场动画不报。"
+        ],
+        [
+          "plaza_dance_session",
+          "dance_state=completed",
+          "配置要求的最后一题判定完成时，记录本场终态和游玩时长。",
+          "不等孩子点结算确认；重开结算页、点确认、正常返回广场不再报exited。"
+        ],
+        [
+          "plaza_dance_session",
+          "dance_state=exited",
+          "已joined、尚未completed，孩子明确主动退出本场。",
+          "临时切后台、重连过程和正常结算返回不报。"
+        ],
+        [
+          "plaza_dance_session",
+          "dance_state=failed",
+          "已joined、尚未completed，明确不可恢复的错误终止本场。",
+          "短暂断线恢复不报；进程被杀无法上报时，不伪造failed。"
+        ],
+        [
+          "plaza_dance_answer",
+          "answer_result=correct / wrong / timeout",
+          "本题首次锁定判定时。timeout只用于选项可答后满3秒仍未作答；记录真实action_id、round_index。",
+          "中断未判定的题不报；NPC、Max和历史数据补位角色不报；重复点击或重复回调不重复报。"
+        ]
+      ],
+      "block_id": "X7cvdyw6ooNmB0xQtiqlICSJgid"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_HNx2Ev",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "HNx2Ev",
+      "title": "HNx2Ev",
+      "row_count": 14,
+      "column_count": 4,
+      "range": "HNx2Ev!A1:D14",
+      "values": [
+        [
+          "属性／中文名",
+          "类型",
+          "必填范围",
+          "取值与定义"
+        ],
+        [
+          "dance_id\n舞会场次ID",
+          "String",
+          "所属事件必填",
+          "同一场舞会的邀请和所有参与者使用同一真实场次ID；单人场也有ID，重新开场生成新ID。重连不换ID。"
+        ],
+        [
+          "plaza_visit_id\n广场访问ID",
+          "String",
+          "plaza_enter、plaza_exit、邀请、舞会过程",
+          "H5每次真正进入广场生成；进入舞会、返回广场、切后台再回来不换ID，真正离开后再进才换。"
+        ],
+        [
+          "invite_state\n邀请状态",
+          "String",
+          "所属事件必填",
+          "shown=弹窗实际可见；accepted=接受并发起入场请求；failed=接受后确认无法入场。"
+        ],
+        [
+          "fail_reason\n失败原因",
+          "String",
+          "仅invite_state=failed",
+          "仅邀请failed必填：full=满员；expired=舞会已开场或邀请失效；error=网络或其他错误。未点接受不报failed。"
+        ],
+        [
+          "play_mode\n舞会模式",
+          "String",
+          "所属事件必填",
+          "solo=单人；multiplayer=多人。多人使用历史数据补位后仍为multiplayer。"
+        ],
+        [
+          "entry_source\n参与来源",
+          "String",
+          "所属事件必填",
+          "create=主动创建本场；self_join=从舞台主动加入已有场；invite=通过邀请弹窗加入。入场成功后固定不变；单人仅create。"
+        ],
+        [
+          "dance_state\n舞会状态",
+          "String",
+          "所属事件必填",
+          "joined=入场成功；started=首题可答；completed=最后一题判定完成；exited=主动提前退出；failed=明确异常终止。"
+        ],
+        [
+          "wait_duration_ms\n准备等待时长",
+          "Number｜毫秒",
+          "仅dance_state=started",
+          "仅started必填，毫秒。入场成功到准备倒计时结束、正式首题领舞开始的前台累计时间，不含首题演示/语音。用于检验5秒准备规则；未能开场不填0冒充。"
+        ],
+        [
+          "play_duration_ms\n舞会前台游玩时长",
+          "Number｜毫秒",
+          "仅completed/exited/failed",
+          "仅completed/exited/failed必填，毫秒。从started起累计前台实际游玩时间，到完成或提前终止；未started即退出为0。切后台、准备等待、结算停留不计。"
+        ],
+        [
+          "round_index\n题目序号",
+          "Number",
+          "所属事件必填",
+          "本场从1递增的题目序号；重连、界面重绘保持原序号。"
+        ],
+        [
+          "action_id\n动作ID",
+          "String",
+          "所属事件必填",
+          "复用现有动作库ID，记录本题正确答案对应的动作，不是孩子误选的动作；通过动作配置关联jump/clap等词，不重复传动作名。"
+        ],
+        [
+          "answer_result\n答题结果",
+          "String",
+          "所属事件必填",
+          "correct=答对；wrong=答错；timeout=答题面板可答后满3秒未答。中断未判定不伪造timeout。"
+        ],
+        [
+          "stay_duration_ms\n广场前台停留时长",
+          "Number｜毫秒",
+          "plaza_exit",
+          "plaza_exit扩展字段：本次访问从进入到真正离开累计的前台可见毫秒数，包含舞会和等待、排除后台。保留历史stay_duration及其口径不变。"
+        ]
+      ],
+      "block_id": "GggidC57RoLZC4xlvkhla68GgZf"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_BWLFIS",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "BWLFIS",
+      "title": "BWLFIS",
+      "row_count": 11,
+      "column_count": 3,
+      "range": "BWLFIS!A1:C11",
+      "values": [
+        [
+          "指标",
+          "数据来源",
+          "统计口径"
+        ],
+        [
+          "广场单次停留／舞会用时",
+          "plaza_enter、plaza_exit；舞会终态",
+          "有效退出样本的stay_duration_ms总和÷完整访问数，同时看中位数。舞会前台用时为该访问各场终态play_duration_ms之和；完整记录下，广场其他用时=总停留−舞会用时。等待和结算停留归其他用时。有效时长覆盖率=有效退出访问数÷进入访问数；时长缺失不计0。"
+        ],
+        [
+          "广场回访／APP留存",
+          "plaza_enter；已有APP活跃",
+          "以某日可体验舞会版本的广场进入孩子为一组；次日、随后7日内广场回访分别去重。APP留存分别看次日、第7日活跃，均只统计已走完整观察窗口的人群。"
+        ],
+        [
+          "舞会参与率",
+          "plaza_enter；session.started",
+          "当天started孩子数÷当天可体验版本广场进入孩子数；按play_mode分组，总计去重。首次/再次由孩子历史started记录推导。"
+        ],
+        [
+          "邀请转化",
+          "invite.shown→accepted；session.joined→started",
+          "按孩子×dance_id关联，joined/started仅取entry_source=invite。每步去重；最终转化为同一邀请链路started份数÷shown份数。failed按fail_reason拆解。"
+        ],
+        [
+          "开场／完成／再玩",
+          "session各状态＋plaza_visit_id",
+          "开场率=started人次÷joined人次；完成率=completed人次÷started人次。再玩率=同次访问完成后又started的孩子访问数÷完成过的孩子访问数。每人次为孩子×dance_id，不按事件条数硬计。"
+        ],
+        [
+          "主动发起／主动加入／受邀加入人数",
+          "session.joined及started＋entry_source",
+          "分别按create/self_join/invite计算成功参与操作的孩子数（joined）和实际开场孩子数（started）。单人/多人分开；同一人可能跨来源，三类UV不能相加当总人数。"
+        ],
+        [
+          "主动者还是受邀者",
+          "多人session.started",
+          "按自然周分互斥人群：仅主动=create或self_join且无invite；仅受邀=invite且无前两类；两种都有。各类人数÷多人参与去重人数，合计100%。首次多人started来源看首次入口；后续再看是否转为主动，不永久给孩子贴标签。"
+        ],
+        [
+          "真人同场率",
+          "多人session.started＋dance_id＋公共孩子身份",
+          "按dance_id聚合实际started的不同真实孩子；≥2人的场数÷全部多人已开场场数。无需额外真人数量字段；只有一个真人加历史补位不算真人同场。"
+        ],
+        [
+          "正确率／超时率",
+          "plaza_dance_answer",
+          "correct题数／timeout题数分别除以全部已判定题数；按action_id可看动作词差异。保留提前退出前已判定题目；不含未判定题。不是学习掌握率。"
+        ],
+        [
+          "国家介绍使用率",
+          "country_flag普通点击；对应页面浏览",
+          "在国旗可见页面中，点击国旗孩子数÷页面孩子数；广场、排行榜分开，以同一版本/日期/孩子口径关联。不新增音频播放或国家维度。"
+        ]
+      ],
+      "block_id": "MbhMdpsw0o0uHnx4JTClXTZ8gxk"
+    },
+    {
+      "token": "KBOFsMiyshiIQLtppFClep8Ig3d_OBh67n",
+      "spreadsheet_token": "KBOFsMiyshiIQLtppFClep8Ig3d",
+      "sheet_id": "OBh67n",
+      "title": "OBh67n",
+      "row_count": 11,
+      "column_count": 2,
+      "range": "OBh67n!A1:B11",
+      "values": [
+        [
+          "场景",
+          "预期结果"
+        ],
+        [
+          "单人正常完成",
+          "create＋solo；joined→started→completed；每题一次answer；点结算确认不多报终态。"
+        ],
+        [
+          "主动发起与自动加入",
+          "发起者create；从舞台点多人被合并入已有场的孩子self_join；二者dance_id相同。"
+        ],
+        [
+          "收到邀请并成功开场",
+          "shown→accepted→joined→started，后两项entry_source=invite，同一孩子/场次可串联。"
+        ],
+        [
+          "邀请未接受／满员或过期",
+          "未接受只有shown；接受后失败有accepted、failed及原因，没有joined。随后自开新场为新ID＋create。"
+        ],
+        [
+          "真人＋历史补位",
+          "仅真实孩子上报。同场2个真实started可算真人同场；1个真人加4个补位仍不算。"
+        ],
+        [
+          "答错／超时／中断",
+          "wrong与timeout分开；3秒从选项真正可答开始；中断未判定不补题，已判定结果保留。"
+        ],
+        [
+          "等待退出／游戏中退出／异常",
+          "等待退出有joined和exited，无started，play_duration_ms=0；游戏中退出有started和exited；明确异常failed。终态只报一个。"
+        ],
+        [
+          "切后台／重连／正常回广场",
+          "后台不累计时长；重连不重报开始、不换ID；正常结算回广场不报plaza_exit、plaza_enter或新的访问ID。"
+        ],
+        [
+          "重复回调／进程被杀",
+          "重复状态和题目均去重；进程被杀缺退出不伪造时长或终态，报表按缺失规则处理。"
+        ],
+        [
+          "身份／类型／预置采集",
+          "同一孩子跨邀请与舞会身份一致；String ID、Number毫秒；不把duration_ms改类型；$WebClick自动与手动不重复。"
+        ]
+      ],
+      "block_id": "M2Cfdacjfoo9Iox7pKglZjoVgoh"
+    }
+  ],
+  "bitables": []
+}

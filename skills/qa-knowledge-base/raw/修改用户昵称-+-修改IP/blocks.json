@@ -1,0 +1,3863 @@
+[
+  {
+    "block_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "block_type": 1,
+    "children": [
+      "NWSQdrmigob9MlxJkAalG1cugbb",
+      "GkrEdrh4Bo8reOxHr12lsE5hgKe",
+      "Ueoed5JS0o0d4Zx1ScYl2hzYgbf",
+      "RRMBdFyCnoBR6Rxxgv1lRIVsgig",
+      "AzSzdWicaoFU9txnSbXlR5FSgNh",
+      "Si8BdhCmpoEoXrx13hilrUAOgre",
+      "LS1hdFgnfo8k39x7W8wlN8Bmg4e",
+      "Sa7Zd6NEJof17TxHD4Bl1WDzgdc",
+      "IGs9dRQmAojioCxads8lH51pg7f",
+      "PlUwdnkF2oRKtuxMDUGl4PuugLc",
+      "EgmZddcgyoKC4ExwNqRl9IRMgGd",
+      "Ox2WdNMPQoHlD3xFakYlhHfcgdn",
+      "DC1vdciCoo9uUSxj9m3lMDnjgEH",
+      "CrGEdjiRooDiyWxBaW6lKECgg9f",
+      "Vjq8dUbTboRujqxZRwClHSfHgie",
+      "PBFtdSJE1o3wtexhJh8lVuZJgWe",
+      "KFaYdQIUrolVKZxL9sbldZfqg2g",
+      "AmuwdwoVto8tcAxoPgxlGXtZgth",
+      "LLmRdbp71o8zQhxAmoXlBdBRgvf",
+      "Gkr3dyMPhonGc8xkAmZlfUEOgQc",
+      "SYc8dKqtiomP1yx7l7mlWj43gde",
+      "KeRXd9w2WoUmKGxcIbil5r2Jgth",
+      "Longdti2uoV4ajxOO46llr6Sgid",
+      "QfymdPnmcoCpgxxjQHjl9KW1ghc",
+      "Jz5GdVFZloeXMXxWE2blEW7NgCe",
+      "RGPsdy6Q3o2tHSxpqIjlvJergFf",
+      "IchtdDugjolqY0xW4IHlFPSdgXh",
+      "BeOjdgFy1o919TxEFHBlrlsmgld",
+      "CqdudSEzJoDQA5xr259lXDl3grH",
+      "MGoZdw3cEoLZQDxbGEulH3i3gNe",
+      "EOqfdmpTNoSMeoxkeIRlcQmmgbh",
+      "VH4td7gtHoglbmxmaGClir7hgPM",
+      "FzModIe88oAOqVx4UFjlyyO5gOd",
+      "InUJdvad4ogxEgxtc4pl3hizgYg",
+      "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+      "NoeadeDUeoeAiKxLDoulqmqLgRh",
+      "Cj9cd27nPo8noSxnaCElp1nTgXc",
+      "JbyYd8TwfodGYmx0L9Nl7vcOgwb",
+      "JCxBdXYyfo0xuCxvrbOl1Ky7gHc",
+      "DfY0d4vgGovxDCxVdPJldsiMg3e",
+      "PGVPde8hIorVqGx0jJllqFEYgAh",
+      "Raoid2HXoo6PI2xxzIUl6qgkgTe",
+      "GI7ldzdXuoKnCexMFwwlDNPcg6d",
+      "IrtgdbvKco2M2zxkwdzlA83zg2b",
+      "E9aed4yMwoNxZxxk9A9l5A0bgPd",
+      "OvgZdiGSaoBnlqxWQpZlRCaAgid",
+      "MtnFdQSXHojvZPx2TsalbOQngxd",
+      "KDAEdLEOEoor49xTwuFlU9epgVf",
+      "YpNpd0wowoPYvGxtvAclObuYguc",
+      "L3HWdc4tsoZhiBxbAGulp6Eqgw6",
+      "A2nmdfZ1lou7Opx3HOVle4tvgLf",
+      "NZVAdupY1oX0A9xoA29lsEmwgPd",
+      "HFDNdA8yOoZq32xfgjylHKC1guf",
+      "CoPudgnmAoHmzVxkbQflN4R8gPb",
+      "QtfvdajniolmDXxCWRGllXHbg2X",
+      "T7tNdUGZgo8EQlxlfc9lFebmgFg",
+      "FGWjddCukom2BTx95VHlMoPegGc",
+      "I33idyaN4o1spixDZJZliJOZgHd",
+      "Ycc5dbz7Tob69xxhqWrlRx6cg4f"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "修改用户昵称",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": " + 修改IP",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "NWSQdrmigob9MlxJkAalG1cugbb",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "GkrEdrh4Bo8reOxHr12lsE5hgKe",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI 链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Ueoed5JS0o0d4Zx1ScYl2hzYgbf",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/fimlAsby1Zrn7xwKirxZdp/1.41.0?node-id=63045-46654&t=FYu6FcQ5jPMARcGT-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RRMBdFyCnoBR6Rxxgv1lRIVsgig",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AzSzdWicaoFU9txnSbXlR5FSgNh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "广场修改昵称",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Si8BdhCmpoEoXrx13hilrUAOgre",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "在广场中点击查看自己的名片，新增修改昵称功能",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LS1hdFgnfo8k39x7W8wlN8Bmg4e",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "修改后实时更新，用户昵称",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "在 APP 内所有地方生效。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Sa7Zd6NEJof17TxHD4Bl1WDzgdc",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1032,
+      "scale": 1,
+      "token": "CCRubYWrqoHtZaxZRfClVyvlggY",
+      "width": 2648
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "IGs9dRQmAojioCxads8lH51pg7f",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PlUwdnkF2oRKtuxMDUGl4PuugLc",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "修改国家信息",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "EgmZddcgyoKC4ExwNqRl9IRMgGd",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "线上逻辑：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ox2WdNMPQoHlD3xFakYlhHfcgdn",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册的时候，有一个根据IP的默认国家，不会变化（路径判断）",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DC1vdciCoo9uUSxj9m3lMDnjgEH",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "登录国家，每次登录的时候会实时更新。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CrGEdjiRooDiyWxBaW6lKECgg9f",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Vjq8dUbTboRujqxZRwClHSfHgie",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.1 修改信息面板",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "PBFtdSJE1o3wtexhJh8lVuZJgWe",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 750,
+      "scale": 1,
+      "token": "MBUXbFduHogP9DxKUoYlYgjCgFi",
+      "width": 10520
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "KFaYdQIUrolVKZxL9sbldZfqg2g",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "交互说明",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "AmuwdwoVto8tcAxoPgxlGXtZgth",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Parents Area → Account，Family members ({n}) 里点击孩子卡片的「Edit」，进入 Edit your child's profile。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "LLmRdbp71o8zQhxAmoXlBdBRgvf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击 Child's name，拉起系统键盘；键盘上方输入条右侧 ✓ 确认。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Gkr3dyMPhonGc8xkAmZlfUEOgQc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击 Child's birthday，右侧弹出生日面板，滚动选择月、年，点「Save」回填；点 × 关闭不改。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "3"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "SYc8dKqtiomP1yx7l7mlWj43gde",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击国家/地区，右侧弹出 Select Country / Region 面板。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "4"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "KeRXd9w2WoUmKGxcIbil5r2Jgth",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击右上蓝色按钮，保存全部修改。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "5"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Longdti2uoV4ajxOO46llr6Sgid",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "保存成功，回到 Parents Area，顶部 toast：Profile updated successfully",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "6"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "QfymdPnmcoCpgxxjQHjl9KW1ghc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "保存失败，停留在编辑页，保留已填内容，顶部 toast：Data saving failed, please try again later.",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "7"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Jz5GdVFZloeXMXxWE2blEW7NgCe",
+    "block_type": 13,
+    "children": [
+      "XqOVdfb4BoeAGwxCIGyleMOwgzc"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击左上返回，放弃修改，回到 Parents Area。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "8"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "XqOVdfb4BoeAGwxCIGyleMOwgzc",
+    "block_type": 2,
+    "parent_id": "Jz5GdVFZloeXMXxWE2blEW7NgCe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RGPsdy6Q3o2tHSxpqIjlvJergFf",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.2 数据说明",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "IchtdDugjolqY0xW4IHlFPSdgXh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Child's birthday：年 + 月，格式 YYYY.MM，举例 2022.02。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "BeOjdgFy1o919TxEFHBlrlsmgld",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注：目前线上都是设置的年龄，所以计算出对应的年份，月份选择 - ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CqdudSEzJoDQA5xr259lXDl3grH",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "国家/地区：国旗 + 国家英文名。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "MGoZdw3cEoLZQDxbGEulH3i3gNe",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "完整的取值规则见下2.3",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EOqfdmpTNoSMeoxkeIRlcQmmgbh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "缺省状态",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "VH4td7gtHoglbmxmaGClir7hgPM",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "孩子没有国家（注册 IP 未判定出国家）：国家/地区展示占位 Select，其余照常。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FzModIe88oAOqVx4UFjlyyO5gOd",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "InUJdvad4ogxEgxtc4pl3hizgYg",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.3 国家取值规则 ",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "block_type": 31,
+    "children": [
+      "GdUBdC3M1ozv8OxggQilZvJogz1",
+      "KGOzd5GW1oT5Hdx5FGTlmdQUgff",
+      "SN8jdLKKto0DJqxUkB3lRBbNggg",
+      "WaMWdjPQjok2A3xRlxqlahdugxh",
+      "ToRydxDi1o24xLxkcjCleawFgcf",
+      "HTkIdzcz6oZt6sxd3Rzlhh9Ogge",
+      "IsTzdehmNobsNOx3qFulkiDtg7g",
+      "AaHGd3HQEoqjdtxVyahlJs6bg6g",
+      "K7AydqK3So01Iyxgv7ilQMtighb",
+      "Sp1OdhsdFoGVx6xdvhSlJNWIgif",
+      "TbYxdtHuZo9lRnxx5Kil8xlBgFg",
+      "FTw4d3mqYoPxD1xcJFdlxP4Agjg",
+      "GUuWdgUQjobqNdxFpggl0ZVvgre",
+      "FbNrdVrkGoomi3xlEYylXp96gSf",
+      "QQPldQUlhoXHTYxTLzAliF0ug4e"
+    ],
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "table": {
+      "cells": [
+        "GdUBdC3M1ozv8OxggQilZvJogz1",
+        "KGOzd5GW1oT5Hdx5FGTlmdQUgff",
+        "SN8jdLKKto0DJqxUkB3lRBbNggg",
+        "WaMWdjPQjok2A3xRlxqlahdugxh",
+        "ToRydxDi1o24xLxkcjCleawFgcf",
+        "HTkIdzcz6oZt6sxd3Rzlhh9Ogge",
+        "IsTzdehmNobsNOx3qFulkiDtg7g",
+        "AaHGd3HQEoqjdtxVyahlJs6bg6g",
+        "K7AydqK3So01Iyxgv7ilQMtighb",
+        "Sp1OdhsdFoGVx6xdvhSlJNWIgif",
+        "TbYxdtHuZo9lRnxx5Kil8xlBgFg",
+        "FTw4d3mqYoPxD1xcJFdlxP4Agjg",
+        "GUuWdgUQjobqNdxFpggl0ZVvgre",
+        "FbNrdVrkGoomi3xlEYylXp96gSf",
+        "QQPldQUlhoXHTYxTLzAliF0ug4e"
+      ],
+      "property": {
+        "column_size": 5,
+        "column_width": [
+          100,
+          160,
+          268,
+          268,
+          222
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 3
+      }
+    }
+  },
+  {
+    "block_id": "GdUBdC3M1ozv8OxggQilZvJogz1",
+    "block_type": 32,
+    "children": [
+      "IdYidhcvgoe8VTxiIDnlya0mgMc"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IdYidhcvgoe8VTxiIDnlya0mgMc",
+    "block_type": 2,
+    "parent_id": "GdUBdC3M1ozv8OxggQilZvJogz1",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "字段",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KGOzd5GW1oT5Hdx5FGTlmdQUgff",
+    "block_type": 32,
+    "children": [
+      "L7JudMhrsoV9HCxcnvblcfpFgIl"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "L7JudMhrsoV9HCxcnvblcfpFgIl",
+    "block_type": 2,
+    "parent_id": "KGOzd5GW1oT5Hdx5FGTlmdQUgff",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "来源",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SN8jdLKKto0DJqxUkB3lRBbNggg",
+    "block_type": 32,
+    "children": [
+      "D46CdRhrXo0SKOxIRuKl4uslg8f"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "D46CdRhrXo0SKOxIRuKl4uslg8f",
+    "block_type": 2,
+    "parent_id": "SN8jdLKKto0DJqxUkB3lRBbNggg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "线上何时更新",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WaMWdjPQjok2A3xRlxqlahdugxh",
+    "block_type": 32,
+    "children": [
+      "BS8XdedzjofFDnxFS1sli6e6gVh"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BS8XdedzjofFDnxFS1sli6e6gVh",
+    "block_type": 2,
+    "parent_id": "WaMWdjPQjok2A3xRlxqlahdugxh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "本期修改",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ToRydxDi1o24xLxkcjCleawFgcf",
+    "block_type": 32,
+    "children": [
+      "YaB5dXBDAolYXCx25RolIQl7g0p"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "YaB5dXBDAolYXCx25RolIQl7g0p",
+    "block_type": 2,
+    "parent_id": "ToRydxDi1o24xLxkcjCleawFgcf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "用途",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 2,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HTkIdzcz6oZt6sxd3Rzlhh9Ogge",
+    "block_type": 32,
+    "children": [
+      "R0qzdJzc7oDJ2yxLNIHlBxHggLg"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "R0qzdJzc7oDJ2yxLNIHlBxHggLg",
+    "block_type": 2,
+    "parent_id": "HTkIdzcz6oZt6sxd3Rzlhh9Ogge",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册国家",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IsTzdehmNobsNOx3qFulkiDtg7g",
+    "block_type": 32,
+    "children": [
+      "UMz8d3OUYoO7Szxu6r0lykQWgCb"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "UMz8d3OUYoO7Szxu6r0lykQWgCb",
+    "block_type": 2,
+    "parent_id": "IsTzdehmNobsNOx3qFulkiDtg7g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "注册时的 IP",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AaHGd3HQEoqjdtxVyahlJs6bg6g",
+    "block_type": 32,
+    "children": [
+      "PqMGdWyQsoyU5fxlrtYltpgCgHh"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "PqMGdWyQsoyU5fxlrtYltpgCgHh",
+    "block_type": 2,
+    "parent_id": "AaHGd3HQEoqjdtxVyahlJs6bg6g",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不再更新",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "K7AydqK3So01Iyxgv7ilQMtighb",
+    "block_type": 32,
+    "children": [
+      "P5Jxd1qoAo2irnxpHuUltVArg7g"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "P5Jxd1qoAo2irnxpHuUltVArg7g",
+    "block_type": 2,
+    "parent_id": "K7AydqK3So01Iyxgv7ilQMtighb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "不变",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Sp1OdhsdFoGVx6xdvhSlJNWIgif",
+    "block_type": 32,
+    "children": [
+      "MHyMd2RR3oXGwexNMpclzyGygLe"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "MHyMd2RR3oXGwexNMpclzyGygLe",
+    "block_type": 2,
+    "parent_id": "Sp1OdhsdFoGVx6xdvhSlJNWIgif",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "统计新增、渠道归因",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TbYxdtHuZo9lRnxx5Kil8xlBgFg",
+    "block_type": 32,
+    "children": [
+      "Is4dddBPzo8ypfx8Qvwl4CrDgne",
+      "H5jOdmTyKoiUYnxilvwlFRI4gBf"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Is4dddBPzo8ypfx8Qvwl4CrDgne",
+    "block_type": 2,
+    "parent_id": "TbYxdtHuZo9lRnxx5Kil8xlBgFg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "登录国家",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "H5jOdmTyKoiUYnxilvwlFRI4gBf",
+    "block_type": 2,
+    "parent_id": "TbYxdtHuZo9lRnxx5Kil8xlBgFg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FTw4d3mqYoPxD1xcJFdlxP4Agjg",
+    "block_type": 32,
+    "children": [
+      "IsHpdUsEIoJn2cxcG4TlAnjCgBd",
+      "UMkVdm7smo3P0uxGujAlTLOIgte"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IsHpdUsEIoJn2cxcG4TlAnjCgBd",
+    "block_type": 2,
+    "parent_id": "FTw4d3mqYoPxD1xcJFdlxP4Agjg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每次登录时服务端记录的 IP 国家",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "UMkVdm7smo3P0uxGujAlTLOIgte",
+    "block_type": 2,
+    "parent_id": "FTw4d3mqYoPxD1xcJFdlxP4Agjg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GUuWdgUQjobqNdxFpggl0ZVvgre",
+    "block_type": 32,
+    "children": [
+      "FP6LdPOJ2o1UcIxSFFWlTRWHghc",
+      "ARDzd6b7roh34mxTFWvlK79lgzg"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "FP6LdPOJ2o1UcIxSFFWlTRWHghc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "每次输账号密码登录时更新",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "GUuWdgUQjobqNdxFpggl0ZVvgre"
+  },
+  {
+    "block_id": "ARDzd6b7roh34mxTFWvlK79lgzg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "游客就维持了注册IP",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "GUuWdgUQjobqNdxFpggl0ZVvgre"
+  },
+  {
+    "block_id": "FbNrdVrkGoomi3xlEYylXp96gSf",
+    "block_type": 32,
+    "children": [
+      "IVAhdhU6hoY02kxkbealqU4Lgnc",
+      "T1cgdIB1GosDihxUnaZlWgDdgcf",
+      "UWASdbDXWoVzMRx4FxelCshSgfY",
+      "ImN6dD4HRoGDz6xqNqGlYanfgih"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IVAhdhU6hoY02kxkbealqU4Lgnc",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "登录国家：新增来源标记 country_source = auto / manual。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "FbNrdVrkGoomi3xlEYylXp96gSf"
+  },
+  {
+    "block_id": "T1cgdIB1GosDihxUnaZlWgDdgcf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "自动（source = auto）：登录国家每 1 个月按 IP 更新一次，与上个月的国家对比，有变化则修改，无变化保留。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "FbNrdVrkGoomi3xlEYylXp96gSf"
+  },
+  {
+    "block_id": "UWASdbDXWoVzMRx4FxelCshSgfY",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "手动（source = manual）：家长在编辑资料里修改国家后，登录国家 = 家长选的国家，source 置为 manual；之后自动更新一律跳过，登录拿到什么国家都不覆盖。家长可再次手动修改。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "4"
+      }
+    },
+    "parent_id": "FbNrdVrkGoomi3xlEYylXp96gSf"
+  },
+  {
+    "block_id": "ImN6dD4HRoGDz6xqNqGlYanfgih",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "社交广场、排行榜的国旗和国家名读登录国家；",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "登录国家为空读注册国家；",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "都为空不展示国旗。",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "5"
+      }
+    },
+    "parent_id": "FbNrdVrkGoomi3xlEYylXp96gSf"
+  },
+  {
+    "block_id": "QQPldQUlhoXHTYxTLzAliF0ug4e",
+    "block_type": 32,
+    "children": [
+      "UcUbdpiNIoTLxPxkaHNl9EHpgPf",
+      "AyYDdXxWroAxZUxcJeAlNYqQg8c"
+    ],
+    "parent_id": "HQiqdc3PcoU1l1xIAlrlYgnDgce",
+    "table_cell": {}
+  },
+  {
+    "block_id": "UcUbdpiNIoTLxPxkaHNl9EHpgPf",
+    "block_type": 2,
+    "parent_id": "QQPldQUlhoXHTYxTLzAliF0ug4e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "风控、活跃地区统计、活动地区",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AyYDdXxWroAxZUxcJeAlNYqQg8c",
+    "block_type": 2,
+    "parent_id": "QQPldQUlhoXHTYxTLzAliF0ug4e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NoeadeDUeoeAiKxLDoulqmqLgRh",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "历史数据处理：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Cj9cd27nPo8noSxnaCElp1nTgXc",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "老用户 source 全部初始化为 auto，登录国家沿用当前值，不刷数据。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JbyYd8TwfodGYmx0L9Nl7vcOgwb",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "历史老用户定位在日本问题会修改；\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "VPN 挂起导致定位在日本的情况不处理。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JCxBdXYyfo0xuCxvrbOl1Ky7gHc",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DfY0d4vgGovxDCxVdPJldsiMg3e",
+    "block_type": 6,
+    "heading4": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.4 线上国家的更改",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "PGVPde8hIorVqGx0jJllqFEYgAh",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1602,
+      "scale": 1,
+      "token": "KaYbbwilzotZTbxtqDDlbZ3RgWg",
+      "width": 2940
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "Raoid2HXoo6PI2xxzIUl6qgkgTe",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 1602,
+      "scale": 1,
+      "token": "PydabpJRGorfD0xfj31lvvtzglb",
+      "width": 2940
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "GI7ldzdXuoKnCexMFwwlDNPcg6d",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "目前的Banner曝光、AB测等使用地区限制的地方，",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "优先用当前登录的country，兜底用的注册国家",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IrtgdbvKco2M2zxkwdzlA83zg2b",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "开发可以统一看一下。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "E9aed4yMwoNxZxxk9A9l5A0bgPd",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "OvgZdiGSaoBnlqxWQpZlRCaAgid",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "目前后台是默认选择的登录地区。",
+            "text_element_style": {
+              "background_color": 9,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "讨论是否有必要在后台选择地区的时候，支持选择注册地区和登录地区",
+            "text_element_style": {
+              "background_color": 9,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MtnFdQSXHojvZPx2TsalbOQngxd",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "目前线上国家的使用场景梳理。",
+            "text_element_style": {
+              "background_color": 9,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KDAEdLEOEoor49xTwuFlU9epgVf",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "YpNpd0wowoPYvGxtvAclObuYguc",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2.2 手动选择地区面板",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "L3HWdc4tsoZhiBxbAGulp6Eqgw6",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 2690,
+      "scale": 1,
+      "token": "Ttisb6wIqoWhLrx4vhqldRJJgrd",
+      "width": 10520
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "A2nmdfZ1lou7Opx3HOVle4tvgLf",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "NZVAdupY1oX0A9xoA29lsEmwgPd",
+    "block_type": 31,
+    "children": [
+      "B88edYsLzoRWSrx4dT6l7A5jgFc",
+      "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+    ],
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "table": {
+      "cells": [
+        "B88edYsLzoRWSrx4dT6l7A5jgFc",
+        "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+      ],
+      "property": {
+        "column_size": 1,
+        "column_width": [
+          819
+        ],
+        "header_row": true,
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 2
+      }
+    }
+  },
+  {
+    "block_id": "B88edYsLzoRWSrx4dT6l7A5jgFc",
+    "block_type": 32,
+    "children": [
+      "WO9jdEluaoaYZIxHFQxlV1BDgFd"
+    ],
+    "parent_id": "NZVAdupY1oX0A9xoA29lsEmwgPd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "WO9jdEluaoaYZIxHFQxlV1BDgFd",
+    "block_type": 2,
+    "parent_id": "B88edYsLzoRWSrx4dT6l7A5jgFc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "block_type": 32,
+    "children": [
+      "OWqCdk6Z6oZFVlx73dOl1RwPgnS",
+      "Iw5WdcqihopGG9xjuuzlouHXg8e",
+      "QxkZdBuBzoXvX0xLketlwxIwgCb",
+      "MAfUdQaJBof80Lx1rVxljwiZgAf",
+      "U2u0dVwFEoeyZ8xd9HrlKpT3gEe",
+      "MXW4dM2ZZoEItTxv2fylNqvGggb",
+      "V3ZJdLlhdo4InBxPdtNlViVYgRe",
+      "UVsVdPhESoXqO2xh0cGlIpnkg5f",
+      "J70QdWdd4oaa1axkW9ulo0rmgLh",
+      "GGgJdgJR6oxJykxn5DElgTrNgNf",
+      "AQXZdFIVeoD7xjxH4KXlUxJggBo",
+      "Ijind8aO4oBFkNxjP3PlwbCGg3e",
+      "HA6WdNKjRoMHdpxzuwtlytmhgAd",
+      "GyzUd90QgoSc7QxHq80lUwuygnb",
+      "VgGPdwWxsoK2x9xjOcglPMC9gDd",
+      "ZpkYdGeFGoaDw4x645MlEZLagLb",
+      "MRXgdkQIVoWnmhxw9XnlkxdBged",
+      "A2ZSdu1Opok8Gox24VtlCNaogdh",
+      "XZOKdXLZFoAVS5x15KllleVWgXg",
+      "TvWkdQXhUoHAkXxV8Kel20FVgkd",
+      "Bo0pdmkCioUijqxvFKtlIipfg6f",
+      "G81fdvS9WoAydgxtYnzliY9ogfd",
+      "A6t3deUfrox5V4xOa3Tl3wOpglh",
+      "HEzadghpKoJUzixWzbolfTXUgEe",
+      "AEI2dBbRTollsKxsxy4lO3cqgZd",
+      "JqGgdwqyCoAfV2xe3jBlat4QgNg",
+      "DhkhdQHeAoUUXJx6gI7lrRkJgwf",
+      "HzMNd7aGKo6oY7xkTfRl9zQVgdf",
+      "PScydS8WxoZgdrxKB0vlRfjMgIb",
+      "FfvrdrMZxokKiLxeIEvlXO0mglh",
+      "P9RMdjomGoeuy9xOR4WlSUtog9t"
+    ],
+    "parent_id": "NZVAdupY1oX0A9xoA29lsEmwgPd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "OWqCdk6Z6oZFVlx73dOl1RwPgnS",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "交互说明",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Iw5WdcqihopGG9xjuuzlouHXg8e",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "面板从右侧弹出，点右上 × 关闭，不改当前值。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "QxkZdBuBzoXvX0xLketlwxIwgCb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击列表中任一国家，选中并关闭面板，编辑页回填该国家。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "MAfUdQaJBof80Lx1rVxljwiZgAf",
+    "block_type": 13,
+    "children": [
+      "XGzldiU9JooQSUxhztRlx5MBg5b",
+      "Gv46dHRAto7o8fxd44blWR3Ugpd"
+    ],
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击「Click to get location」：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "XGzldiU9JooQSUxhztRlx5MBg5b",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首次：先弹 Let's find your country，点「Allow location」拉起系统定位授权，点 × 关闭。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MAfUdQaJBof80Lx1rVxljwiZgAf"
+  },
+  {
+    "block_id": "Gv46dHRAto7o8fxd44blWR3Ugpd",
+    "block_type": 12,
+    "bullet": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "已授权：直接开始定位。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "MAfUdQaJBof80Lx1rVxljwiZgAf"
+  },
+  {
+    "block_id": "U2u0dVwFEoeyZ8xd9HrlKpT3gEe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位中：Location 区展示 Getting location...",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "MXW4dM2ZZoEItTxv2fylNqvGggb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位成功：Location 区展示定位到的国家 + 刷新图标；点击该行选中，行高亮并打 ✓。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "V3ZJdLlhdo4InBxPdtNlViVYgRe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "点击刷新图标，重新定位。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "UVsVdPhESoXqO2xh0cGlIpnkg5f",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "系统定位权限为拒绝：弹 Turn on location，「Not now」关闭弹窗，「Open settings」跳系统设置。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "J70QdWdd4oaa1axkW9ulo0rmgLh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位失败：Location 区展示 Location failed + 刷新图标，点击刷新重试。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "GGgJdgJR6oxJykxn5DElgTrNgNf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位结果只是一个选项，家长可以再手动选其他国家。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "AQXZdFIVeoD7xjxH4KXlUxJggBo",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ijind8aO4oBFkNxjP3PlwbCGg3e",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据说明",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HA6WdNKjRoMHdpxzuwtlytmhgAd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Location：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "GyzUd90QgoSc7QxHq80lUwuygnb",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "按钮：Click to get location",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "VgGPdwWxsoK2x9xjOcglPMC9gDd",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位只取国家，不取城市。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZpkYdGeFGoaDw4x645MlEZLagLb",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Popular Regions：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "MRXgdkQIVoWnmhxw9XnlkxdBged",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "印尼、越南、中国、泰国，固定顺序置顶。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "A2ZSdu1Opok8Gox24VtlCNaogdh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "全部国家：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "XZOKdXLZFoAVS5x15KllleVWgXg",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Popular Regions 下方，按国家英文名首字母 A–Z 排序，带字母分组标题。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TvWkdQXhUoHAkXxV8Kel20FVgkd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "保存国家后，更新用户的登录国家。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "Bo0pdmkCioUijqxvFKtlIipfg6f",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "G81fdvS9WoAydgxtYnzliY9ogfd",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "缺省状态",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "A6t3deUfrox5V4xOa3Tl3wOpglh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位引导弹窗：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "HEzadghpKoJUzixWzbolfTXUgEe",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "标题：Let's find your country",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AEI2dBbRTollsKxsxy4lO3cqgZd",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "按钮：Allow location",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JqGgdwqyCoAfV2xe3jBlat4QgNg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "权限拒绝弹窗：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "DhkhdQHeAoUUXJx6gI7lrRkJgwf",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "标题：Turn on location",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HzMNd7aGKo6oY7xkTfRl9zQVgdf",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "副标题：Some features need it to work",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "PScydS8WxoZgdrxKB0vlRfjMgIb",
+    "block_type": 2,
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "按钮：Not now / Open settings",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FfvrdrMZxokKiLxeIEvlXO0mglh",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "定位失败：Location failed",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "P9RMdjomGoeuy9xOR4WlSUtog9t",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "孩子没有国家（注册 IP 未判定出国家）：国家/地区展示占位 Select，其余照常。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "AYF1d32u2ofj3ux6DjGlyCcxgCg"
+  },
+  {
+    "block_id": "HFDNdA8yOoZq32xfgjylHKC1guf",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CoPudgnmAoHmzVxkbQflN4R8gPb",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "QtfvdajniolmDXxCWRGllXHbg2X",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "数据埋点",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe"
+  },
+  {
+    "block_id": "T7tNdUGZgo8EQlxlfc9lFebmgFg",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "1、统计有多少用户，点击编辑昵称，以及成功修改昵称",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FGWjddCukom2BTx95VHlMoPegGc",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "2、统计多少用户，在设置中修改国家信息。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "block_type": 31,
+    "children": [
+      "QvNSdDH9xoO2q5xrbu7l9HuXgsb",
+      "Mld6dzHnSoPbOoxoQhDl8H9Egcf",
+      "At3LdIbfgoPruvx9CLjlywKVgHe",
+      "MoD2dz3ySoTqtbxg97plpbSXgXe",
+      "CDsPdOvYKo6Y3Qxaj8YlUxBLgHh",
+      "IpkBdJT5Fo7yJCxPSvblMZO9gnc",
+      "MF6Ad04hBomoSAx87I3lfsZcgEg",
+      "ZLkRdl4aeoMnp6xmZdvlBv9sg9e",
+      "MnlidaOUgomb3Cx3TUcl4WOqgDb",
+      "RKMnd3M7zoz3srxGbU9lUyk9gTM",
+      "JLFidQutyok4MIxQz9glpr2tghg",
+      "HXx9d18GWoPCmGx9uDOlLvCrgQg"
+    ],
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "table": {
+      "cells": [
+        "QvNSdDH9xoO2q5xrbu7l9HuXgsb",
+        "Mld6dzHnSoPbOoxoQhDl8H9Egcf",
+        "At3LdIbfgoPruvx9CLjlywKVgHe",
+        "MoD2dz3ySoTqtbxg97plpbSXgXe",
+        "CDsPdOvYKo6Y3Qxaj8YlUxBLgHh",
+        "IpkBdJT5Fo7yJCxPSvblMZO9gnc",
+        "MF6Ad04hBomoSAx87I3lfsZcgEg",
+        "ZLkRdl4aeoMnp6xmZdvlBv9sg9e",
+        "MnlidaOUgomb3Cx3TUcl4WOqgDb",
+        "RKMnd3M7zoz3srxGbU9lUyk9gTM",
+        "JLFidQutyok4MIxQz9glpr2tghg",
+        "HXx9d18GWoPCmGx9uDOlLvCrgQg"
+      ],
+      "property": {
+        "column_size": 3,
+        "column_width": [
+          172,
+          203,
+          100
+        ],
+        "merge_info": [
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          },
+          {
+            "col_span": 1,
+            "row_span": 1
+          }
+        ],
+        "row_size": 4
+      }
+    }
+  },
+  {
+    "block_id": "QvNSdDH9xoO2q5xrbu7l9HuXgsb",
+    "block_type": 32,
+    "children": [
+      "Yz9id7l9Nom4jQxxTUklnpjVgvh"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Yz9id7l9Nom4jQxxTUklnpjVgvh",
+    "block_type": 2,
+    "parent_id": "QvNSdDH9xoO2q5xrbu7l9HuXgsb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "说明",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Mld6dzHnSoPbOoxoQhDl8H9Egcf",
+    "block_type": 32,
+    "children": [
+      "Uhx8dICJloogStx5ayXlocLZgj4"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "Uhx8dICJloogStx5ayXlocLZgj4",
+    "block_type": 2,
+    "parent_id": "Mld6dzHnSoPbOoxoQhDl8H9Egcf",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "事件",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "At3LdIbfgoPruvx9CLjlywKVgHe",
+    "block_type": 32,
+    "children": [
+      "DnSLdNhKZobQ1Wxrj6VluF4CgUS"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "DnSLdNhKZobQ1Wxrj6VluF4CgUS",
+    "block_type": 2,
+    "parent_id": "At3LdIbfgoPruvx9CLjlywKVgHe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "属性",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MoD2dz3ySoTqtbxg97plpbSXgXe",
+    "block_type": 32,
+    "children": [
+      "IT4gdiL3WoG7mrxPJnqlWX5hgmc"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "IT4gdiL3WoG7mrxPJnqlWX5hgmc",
+    "block_type": 2,
+    "parent_id": "MoD2dz3ySoTqtbxg97plpbSXgXe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "广场点击编辑昵称",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "CDsPdOvYKo6Y3Qxaj8YlUxBLgHh",
+    "block_type": 32,
+    "children": [
+      "P1DXdtrlFoovhHxaNRKlQLCvgnm"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "P1DXdtrlFoovhHxaNRKlQLCvgnm",
+    "block_type": 2,
+    "parent_id": "CDsPdOvYKo6Y3Qxaj8YlUxBLgHh",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "square_editname",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IpkBdJT5Fo7yJCxPSvblMZO9gnc",
+    "block_type": 32,
+    "children": [
+      "BOzdd6elSoC62NxmDMplok8Jgsh"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BOzdd6elSoC62NxmDMplok8Jgsh",
+    "block_type": 2,
+    "parent_id": "IpkBdJT5Fo7yJCxPSvblMZO9gnc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "/",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MF6Ad04hBomoSAx87I3lfsZcgEg",
+    "block_type": 32,
+    "children": [
+      "BkbXdxrSeord7ZxzDPalr6hZg3M"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BkbXdxrSeord7ZxzDPalr6hZg3M",
+    "block_type": 2,
+    "parent_id": "MF6Ad04hBomoSAx87I3lfsZcgEg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "广场修改昵称成功",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZLkRdl4aeoMnp6xmZdvlBv9sg9e",
+    "block_type": 32,
+    "children": [
+      "BXVNdYq3vozDQ7xQ8bclupd1gMc"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "BXVNdYq3vozDQ7xQ8bclupd1gMc",
+    "block_type": 2,
+    "parent_id": "ZLkRdl4aeoMnp6xmZdvlBv9sg9e",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "square_editname_suc",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "MnlidaOUgomb3Cx3TUcl4WOqgDb",
+    "block_type": 32,
+    "children": [
+      "NSwBdahAdo0NRCxvYLSlulYBg2z"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "NSwBdahAdo0NRCxvYLSlulYBg2z",
+    "block_type": 2,
+    "parent_id": "MnlidaOUgomb3Cx3TUcl4WOqgDb",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RKMnd3M7zoz3srxGbU9lUyk9gTM",
+    "block_type": 32,
+    "children": [
+      "CUGVdGVfYo1VSTxsxe8ll9aFgUi"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "CUGVdGVfYo1VSTxsxe8ll9aFgUi",
+    "block_type": 2,
+    "parent_id": "RKMnd3M7zoz3srxGbU9lUyk9gTM",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "修改国家信息成功",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "JLFidQutyok4MIxQz9glpr2tghg",
+    "block_type": 32,
+    "children": [
+      "JAQedXjfFoLwu8xgutHlv4OsgSc"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "JAQedXjfFoLwu8xgutHlv4OsgSc",
+    "block_type": 2,
+    "parent_id": "JLFidQutyok4MIxQz9glpr2tghg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "rewrite_country_suc",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HXx9d18GWoPCmGx9uDOlLvCrgQg",
+    "block_type": 32,
+    "children": [
+      "RsTPdL8Nio2femxHQi3lu6clgyg"
+    ],
+    "parent_id": "I33idyaN4o1spixDZJZliJOZgHd",
+    "table_cell": {}
+  },
+  {
+    "block_id": "RsTPdL8Nio2femxHQi3lu6clgyg",
+    "block_type": 2,
+    "parent_id": "HXx9d18GWoPCmGx9uDOlLvCrgQg",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Ycc5dbz7Tob69xxhqWrlRx6cg4f",
+    "block_type": 2,
+    "parent_id": "KjCmdXMVroyLf6xCJh9lg37UgGe",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

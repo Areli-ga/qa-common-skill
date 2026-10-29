@@ -1,0 +1,445 @@
+学习报告 2.0 — Leah
+需求背景
+在目前学习报告的基础上，以“家长能看到孩子阶段性收获”为目标进行迭代。
+头部核心：本周的 Highlight 表现 + 汇总学习数据；
+重点功能：词汇掌握 、口语录音、小麦、绘本、磨耳朵。
+
+需求目的
+让家长在短期内能通过数据和语音看到孩子的进步，同时，在私域作为召回用户的抓手。
+
+数据指标
+功能的留存、使用频次。
+看过学习报告用户的次周留存。
+
+
+UI链接
+https://www.figma.com/design/G5p1PQIWPdUFHRgh96MKZw/1.40.0?node-id=60117-3567&t=2KHTPCV6otrBtZbr-1
+需求详情
+完整 demo：
+ 
+Giggle_学习报告_全新设计_20260909.html
+
+
+报告入口
+
+
+原型
+
+说明
+
+image.png
+
+
+家长中心入口不变，点击后进入。
+
+
+image.png
+
+
+学习中心新增学习报告入口，点击后进入【横版总结页】。
+
+
+横版总结页
+
+
+
+模块
+
+说明
+
+image.png
+
+
+
+交互说明
+从外部入口点击【学习报告】，默认进这一页。
+【View Words】进当前Level 的单词书。
+点【View Full Report】进入完整报告，并且默认选中日报。
+页面左右滑动，可以查看本页面的全部数据，从左至右依次展示：人物形象、单词圆环、单词进度、拓展学习。
+数据字段说明
+级别单词卡片
+用户昵称：学习报告下展示此字段，从用户中心读取当前孩子最新的昵称。
+用户形象：读取用户当前的Avatar形象。
+用户级别：用户当前主路径的级别。
+单词进度圆环：
+圆环进度计算：当前Level已经点亮（达到Heard阶段）的词汇数/当前Level所有的词汇数
+圆环顶部文案：{n} words lit up！{m}words said independently
+n：当前Level达到Heard阶段的词汇数
+m：当前Level达到Said阶段的词汇数
+m和n为0时，不展示此文案。
+中间文案说明：
+数字：当前Level已经点亮（达到Heard阶段）的词汇数/当前Level所有的词汇数
+文案：Lv {X} words
+X：用户当前级别
+Word Progress：用户已学所有Level的词汇数据，从单词书读取用户Heard、Understood、Reapeat、Said各个阶段的词数，并分别展示。
+Extra Learning：
+Storybook：
+{x} books read，{y} books recorded
+x：今日阅读的绘本数量
+y：今日开口跟读的绘本数量
+Speaking：
+{z} chats with Mai
+和小Mai的对话次数 + Mtown的对话总次数。
+Listening：
+n：用户今天使用Giggle TV、Giggle Cast的时间
+<100 min，展示单位min
+>100min，展示 X h Y min。如：1小时20min
+m：用户今日听过的专辑数量
+如果以上3个模块没有数据，右侧展示文案No data yet
+
+课程未学主课程，拓展学习有数据：
+image.png
+
+无任何学习数据
+image.png
+
+
+缺省状态
+用户未学习主线课程，但是学习绘本、或视speaking、Listening内容
+左侧圆环和word Progress隐藏，展示缺省页。
+文案：Hi [Name], your report starts after Lesson 1.
+右侧展示Eatra Learning中学过的对应内容和数据。
+用户未学习任何内容，缺省页为固定一张静态图
+文案：Hi [Name], nothing here yet — Lesson 1 starts your report.
+
+
+日报
+页面说明
+
+
+原型
+
+说明
+
+image.png
+
+
+交互说明
+切换Daily/Weekly Tab，默认选中Daily，点击切换。
+分享：点击后分享当前选中的报告，生成学习报告小图。
+点击切换日期，点击展开日历选择器，选择日历。
+
+数据说明
+用户昵称：从用户中心读取当前孩子最新的昵称。
+日历选择
+高光时刻：【需本地化】
+按照以下顺序先后的优先级取优先级最高的一条展示，如未命中任何一条则不展示此模块。
+高光时刻完整图片和文案见下方高光时刻文案说明。
+Word Progress：【需本地化】
+截止目前，从单词书读取用户Heard、Understood、Reapeat、Said各个阶段的词数，并分别展示。
+Learning Progress：【需本地化】
+用户当前级别：截止报告生成当日的主路径的学习级别
+跨级别展示当前最新的首页等级
+课程进度：当前级别的已完成unit数量/当前级别的unit总数量
+课程进度示意：示意4个unit，展示最新完成的2个 + 1个进行中的 + 1个即将开始的。
+如果没有最新完成或没有即将开始的，展示另外2条。
+展示当前级别所有 unit，基于是否学习按照状态展示
+已完成：
+进行中：
+未开始：
+
+Extra Learning Progress：【需本地化】
+汇总数据：{a} books,{b}chats,{c}min Listening time
+a：用户当日的阅读和跟读绘本数量，需要去重
+b：和小Mai的对话次数 + Mtown的对话次数
+c：用户今天使用Giggle TV、Giggle Cast的时间
+<100 min，展示单位min
+>100min，展示 X h Y min。如：1小时20min
+Storybooks：
+（1）总结：{x} books read，{y} books recorded
+x：今日阅读的绘本数量
+y：今日开口跟读的绘本数量
+（2）展示今日的跟读绘本：左右可以滑动查看绘本列表，展示得分最高的三本绘本。
+（3）展示今日的阅读绘本：展示今日阅读的绘本列表，按时间倒序展示，最多3条。
+（4）如果阅读或者跟读的绘本为0，不展示对应的总结句子和模块。如果阅读和跟读的绘本都为0，不展示此模块。
+Speaking Practice
+（1）总结：{z}  English chats with Mai
+z：和小麦英文对话的开口次数（只记录英文） + 在M town的英文开口次数
+（2）句子展示：M town用户开口的英语句子，展示得分最高的3条
+pending：确认一下是否打分
+（3）如果用户没有在M town对话，只有小麦的对话，不展示句子，只展示固定文案。
+image.png
+
+Listening
+（1）总结：{n}minutes · {m}activities
+n：用户今天使用Giggle TV、Giggle Cast的时间
+<100 min，展示单位min
+>100min，展示 X h Y min。如：1小时20min
+m：用户今日听过的专辑数量
+Next theme
+Let's Explore {theme}
+（1）展示推荐学习的unit的主题名
+（2）展示核心单词
+
+
+image.png
+
+
+切换日历
+点击后，展开切换日历的组件，用户可以选择日期查看日报。
+今日之后的日历不可点击。
+日历的起点是第一条学习学习记录产生的日期。
+老用户的日历起点：从上线的时刻开始
+
+
+image.png
+
+
+本周和本日无任何学习数据时样式一样；
+头部和周选择器保留。
+正文展示缺省图 + No learning data for this day.
+正文展示缺省图 + No learning data for this week.
+高光时刻文案
+按优先级从高到低展示，数字越小优先级越高。
+通用兜底（无高光时）
+
+{Name} showed up for English today. · 今天又学英语了
+Week {n} with Giggle. Still going! · 跟 Giggle 学的第 {n} 周
+
+
+优先级
+
+条件
+
+标题（两行）
+
+详情条内容
+
+播放键
+
+示意图
+
+1
+
+今日新增 Said ≥ 1
+
+
+Said
+{n} words solo!
+
+
+🗣 今日新增 Said 的词，最多 3 个，多出显示 +{k} more
+
+有。播孩子说这几个词的录音，顺序播；点单个词只播那个
+
+image.png
+
+
+2
+
+今日新增 Heard（点亮）≥ 1
+
+Lit up
+{n} core words!
+
+
+🗣 今日新增点亮的词，最多 3 个，多出 +{k} more
+
+有。播标准发音（点亮 = Heard，没有孩子录音）
+
+image.png
+
+
+3
+
+今日完成跟读绘本 ≥ 1
+
+
+Finished
+reading {n} books!
+
+
+📖 第一本封面 + 书名；n > 1 时书名后接 +{n-1} more
+
+有。播该本孩子的跟读录音
+
+image.png
+
+
+4
+
+今日完成 Unit ≥ 1
+
+
+Completed
+{n} units!
+
+🏅 Unit 名，最多 2个，多出 +{k} more
+
+无
+
+image.png
+
+
+5
+
+今日完课 ≥ 1
+
+
+Completed
+{n} lessons!
+
+🐰 课程名，最多 3 个，多出 +{k} more
+
+无
+
+image.png
+
+周报
+
+
+原型
+
+说明
+
+image.png
+
+
+交互说明
+切换 Weekly Tab 进入周报，默认展示本周（进行中）。
+分享：点击后分享当前选中的周报，生成学习报告小图，同日报。
+点击<和>，可以切换至上周/下周的周报。
+最早一周和最晚一周时，对应的更早一周和更晚一周按钮置灰。
+数据说明 
+用户昵称：同日报。 
+周期：周一 00:00 — 下周一 00:00，用孩子账号所属地区的时区。
+本周进行中，每次打开重算；周一 00:00 冻结为上周周报。 
+周报独立按本周事件聚合，不是 7 天日报相加——绘本、专辑要跨天去重。
+本周进展（周报头部，替代日报的高光时刻） 
+标题按以下优先级取一条：
+ （1）本周首次完成 Unit ≥ 1：Completed {n} units this week 
+（2）无新完成 Unit：Learning "{unit}"   
+{unit}：正在学习的unit名称
+阶段台阶：由当前级别映射三段（L1–L2 / L3–L5 / L6 起），当前阶段高亮。
+台阶不可点。
+课程进度：当前级别学到的unit数/当前级别总unit数
+Unit 示意规则同日报：最新完成 2 + 进行中 1 + 即将开始 1。
+Word Progress 
+截止本周末（进行中则截止现在），从单词书读取 Heard、Understood、Repeat、Said 各阶段词数，同日报。 每项下方展示较上周变化： 
+（1）有变化：+{d} 
+（2）持平和无上周数据：不展示变化数据。
+上周值取上周周报冻结后的数字。
+Weekly Progress
+汇总
+{d} / 7 days   {n} books   {c}min Listening time
+d：本周有任一学习行为（主课、绘本、Speaking、Listening）的自然日数，按报告时区切日 
+n：用户本周的阅读和跟读绘本数量，需要去重
+c：用户本周使用Giggle TV、Giggle Cast的时间
+<100 min，展示单位min
+>100min，展示 X h Y min。如：1小时20min
+Storybooks： 
+（1）总结：{x} books read, {y} books recorded 
+x：本周阅读的绘本数量，去重 y：本周开口跟读的绘本数量，去重 
+（2）展示本周跟读绘本：左右滑动，展示得分最高的 3 本。同一本多次跟读取最高分那次。 
+（3）展示本周阅读绘本：按最近阅读时间倒序，最多 3 条。同一本既阅读又跟读只出现在跟读列表。 
+（4）阅读或跟读为 0 不展示对应总结句和模块，两者都为 0 不展示 Storybooks。
+Speaking Practice： 
+（1）总结：{z} chats with Mai z：本周和小麦英文对话的开口次数（只记录英文）+ M town 开口次数 
+（2）句子展示：本周 M town 开口的英语句子，得分最高 3 条 只有小麦对话没有 M town，不展示句子，只展示固定文案，同日报。
+Listening： 
+（1）总结：{n} minutes · {m} activities 
+n：本周使用 Giggle TV、Giggle Cast 的时间，展示规则同上 
+m：本周听过的专辑数量，去重 三个模块都无数据不展示 Extra Learning Progress。
+Next Week's Theme 
+Let's Explore {theme} 
+（1）展示推荐学习的 unit 主题名 
+（2）展示推荐unit 的核心单词下一个 unit；
+（3）已到当前级别最后一个 unit 时取下一级别第一个；
+（4）无可取则不展示此模块。
+
+通用组件的说明
+
+
+原型
+
+说明
+
+image.png
+
+
+进入单词库
+在日报和周报点击【Explore My Words】进入此界面。
+默认选中Heard，点击Tab后可以切换不同状态。
+展示用户所有单词库中不同状态的词。
+按获得单词达成该状态的时间升序。
+
+
+image.png
+
+
+点击Record绘本查看
+点击跟读绘本，展示绘本卡片弹窗，展示绘本封面、绘本名、作者名、跟读得星和播放按钮，点击按钮进行播放。
+用户未上传语音等不展示播放按钮和得星。
+
+image.png
+
+
+
+点击课程进度
+点击课程进度中的unit，可以查看每个unit的完成状态。
+已完成：展示unit卡片、unit名称、Level 和unit、已完成状态、任务勋章
+学习中：展示unit卡片、unit名称、Level 和unit、学习中状态、unit进度
+未开始：展示unit卡片、unit名称、Level 和unit、学习中状态、unit进度
+
+image.png
+
+
+报告分享
+页面右上角支持分享，顶部固定吸顶。
+点击后，分享当前选中页面的信息。
+分享小卡片信息如左图所示
+分享渠道：复用目前。
+扫描卡片的二维码，可以查看用户的完整学习报告。展示报告名称和时间（注意：不可以切换时间，只可以查看分享当日、当周），其他数据不变。
+分享文案参考以下文档，基于不同高光时刻，从里面随机取一条
+支持用户刷新切换
+分享文案
+
+站外访问学习报告链接H5——暂时不做
+
+
+原型
+
+说明
+
+image.png
+
+
+
+学习报告的H5支持单独发，用户访问链接后，进入登录页面，登录后可以在网页查看报告。
+浏览器有登录token可以直接访问。
+
+旧版学习报告升级到新版
+
+
+原型
+
+说明
+
+image.png
+
+
+升级后，进入新学习报告。老用户如果同时满足以下2个条件的用户，进入学习报告看到此弹窗：
+此版本发布前注册uid（游客+正式）
+uid有超过1个unit的学习记录。
+点击Got it，关闭弹窗，滑到底部有【查看旧版学习报告】
+用户滑到新学习报告的底部，能看到一行小字【View Old Report】，点击后进入旧版学习报告页面。
+每个kid推一次。
+
+历史数据处理规则
+累计类数据老用户完整：单词书需求需要统一刷数据。
+1. Word Progress 四阶段、点亮数、课程进度、累计绘本数读各模块的当前值，与上线时间无关。
+基于老用户完成的级别，直接判断已完成的 unit 之前所有的单词状态。
+首次进新版横版总结页即有完整数据。
+2. 横版总结页：绘本数据read和record每日量需要刷数据。
+小麦数据：@cris 确认后辛苦帮我补充一下
+Giggle TV和Giggle song：@cris 确认后辛苦帮我补充一下
+周期类数据只从上线日开始：日报、周报、高光时刻、Extra Learning Progress 只对新版上线日及之后的日期生成。日历和周选择器的起点 = max(第一条学习记录日期, 新版上线日)。
+上线后第一周无「较上周」：Word Progress 不展示对比增加数据。
+image.png
+
+数据埋点
+学习报告埋点
+
+
+分享文案
+

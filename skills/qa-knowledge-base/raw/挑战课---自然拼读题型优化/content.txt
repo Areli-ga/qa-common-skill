@@ -1,0 +1,700 @@
+挑战课 - 自然拼读题型优化
+基本信息
+
+
+产品文档
+
+挑战课 - 自然拼读题型优化
+
+产品 Owner
+
+Aaron
+
+优先级
+
+高
+
+版本
+
+v1.40.0
+
+文档日期
+
+2026-09-10
+需求背景
+自然拼读题型模板通过题干信息让孩子知道这道题要他做什么，比如 Which letter makes the /t/ sound?。
+挑战课的答题模板没有题干信息，只有线索。 孩子进到题目里，听到的只有一段线索音频（一个音素、或一个单词），画面上是三个选项，起始音或者结尾音这样的考察题与图片配对就没有区别了。
+我们需要做的事情：
+在 App 端允许把题干语音和线索语音拼接起来播放，让孩子先听见"要做什么"，再听见"线索是什么"。
+挑战课模板里增加【配对题】、【判断题】和【跟读题】
+产品目标
+在自然拼读的挑战课答题里，让孩子先听懂这道题要他做什么，再开始作答。
+挑战课模板里增加【配对题】、【判断题】和【跟读题】
+题干模板
+
+
+教学技能
+
+多语言Key
+命名规则：quiz_<question_type>_<teaching_skill>
+
+是否需要题干与线索语音拼接
+
+题干文本（英文）
+
+题干文本（中文）
+
+题干文本（印尼语）
+
+线索语音
+
+图例
+
+
+Letter Recognition
+
+
+quiz_single_choice_letter_recognition
+
+否
+
+Find the letter.
+
+找到这个字母。
+
+Temukan hurufnya.
+
+字母音:"mmm"
+
+image.png
+
+
+Letter–Sound Awareness
+
+quiz_single_choice_letter_sound_awareness
+
+否
+
+Tap the letter that makes the sound.
+
+点击发出这个声音的字母。
+
+Ketuk huruf yang menghasilkan bunyi ini.
+
+音素：/m/
+
+image.png
+
+
+Beginning Sounds
+
+
+quiz_single_choice_beginning_sounds
+
+是
+
+Tap the picture that starts with the sound.
+
+点击以这个声音开头的图片。
+
+Ketuk gambar yang dimulai dengan bunyi ini.
+
+音素：/m/
+
+image.png
+
+
+
+
+quiz_true_false_beginning_sounds
+
+
+是
+
+Do they start with the same sound?
+
+它们是以相同的声音开头吗？
+
+Apakah mereka dimulai dengan bunyi yang sama?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Word–Picture Association
+
+quiz_single_choice_word_picture_association
+
+否
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频
+
+image.png
+
+
+Matching & Sorting Skills
+
+quiz_sorting_matching_and_sorting_skills
+
+否
+
+Sort the pictures.
+
+给图片分类。
+
+Kelompokkan gambar-gambar tersebut.
+
+无
+
+image.png
+
+
+Color Recognition
+
+quiz_single_choice_color_recognition
+
+否
+
+Tap the color.
+
+点击这个颜色。
+
+Ketuk warnanya.
+
+目标单词音频
+
+image.png
+
+
+Rhyming and Word Families
+
+quiz_single_choice_rhyming_and_word_families
+
+是
+
+What word rhymes with this word?
+
+哪个选项和这个单词押韵？
+
+Kata apa yang berima dengan kata ini?
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_true_false_rhyming_and_word_families
+
+是
+
+Do they rhyme？
+
+它们押韵吗？
+
+Apakah kata-kata ini berima?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Syllables and Aural Patterns
+
+quiz_single_choice_syllables_and_aural_patterns
+
+
+是
+
+How many syllables？
+
+数一数，有多少个音节？
+
+Ada berapa suku kata?
+
+目标单词音频
+
+image.png
+
+
+Upper and Lower Case letters
+
+
+quiz_single_choice_lowercase_letters
+
+是
+
+Tap the lowercase letter.
+
+点击小写字母。
+
+Ketuk huruf kecil.
+
+音素：/m/
+
+image.png
+
+
+
+
+quiz_single_choice_capital_letters
+
+是
+
+Tap the capital letter.
+
+点击大写字母。
+
+Ketuk huruf besar.
+
+音素：/m/
+
+image.png
+
+
+Initial and Ending Sounds
+
+
+quiz_single_choice_initial_sounds
+
+
+是
+
+Tap the sound you hear first.
+
+点击你听到的第一个声音。
+
+Ketuk bunyi pertama yang kamu dengar.
+
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_single_choice_ending_sounds
+
+是
+
+Tap the sound you hear last.
+
+点击你听到的最后一个声音。
+
+Ketuk bunyi terakhir yang kamu dengar.
+
+目标单词音频
+
+image.png
+
+
+Blending and Segmenting of CVC words
+
+
+quiz_single_choice_cvc_blending_and_segmenting
+
+
+是
+
+Listen and tap the word.
+
+听一听，然后点击这个单词。
+
+Dengarkan dan ketuk kata yang benar.
+
+/s/ … /a/ … /t/
+
+image.png
+
+
+
+
+quiz_single_choice_cvc_blending
+
+是
+
+Tap the missing letter.
+
+点击单词中缺失的字母。
+
+Ketuk huruf yang hilang.
+
+目标单词音频
+提示文本：__at（缺少字母的单词）
+
+image.png
+
+
+Reading and Spelling of CVC words
+
+quiz_single_choice_cvc_reading_and_spelling
+
+否
+
+Tap the word you hear.
+
+点击你听到的单词。
+
+Ketuk kata yang kamu dengar.
+
+目标单词音频
+
+image.png
+
+
+
+
+quiz_repeat_cvc_reading_and_spelling
+
+否
+
+Repeat this word.
+
+跟读这个单词。
+
+Ulangi kata ini.
+
+目标单词音频
+
+image.png
+
+
+Visual Discrimination
+
+
+quiz_single_choice_visual_discrimination
+
+否
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频
+
+image.png
+
+
+Auditory Discrimination
+
+
+quiz_single_choice_auditory_discrimination
+
+否
+
+Tap the picture you hear.
+
+听一听，点击对应的图片。
+
+Dengarkan dan ketuk kata yang kamu dengar.
+
+ 目标单词音频
+
+image.png
+
+
+
+
+quiz_true_false_auditory_discrimination
+
+是
+
+Do these words rhyme?
+
+这些单词押韵吗？
+
+Apakah kata-kata ini berima?
+
+单词 A 音频 + 单词 B 音频
+
+image.png
+
+
+Letter Formation
+
+quiz_single_choice_letter_formation
+
+
+
+Choose the correct letter shape.
+
+选择正确的字母形状。
+
+Pilih bentuk huruf yang benar.
+
+音素：/m/
+
+暂时没有该题型模板
+
+Concepts of Print
+
+quiz_matching_concepts_of_print
+
+否
+
+
+Match the capital and lowercase letters.
+
+匹配大写字母和小写字母。
+
+Cocokkan huruf besar dan huruf kecil.
+
+无
+
+image.png
+
+
+Prepositional Language
+
+quiz_single_choice_prepositional_language
+
+否
+
+Tap the picture.
+
+点击图片。
+
+Ketuk gambarnya.
+
+目标单词音频（例如：under）
+
+image.png
+
+资源列表
+
+
+UI设计
+
+https://www.figma.com/design/G5p1PQIWPdUFHRgh96MKZw/1.40.0?node-id=60295-1124&p=f&t=u1hv2w3SiGstSTtL-0
+需求范围
+
+
+序号
+
+模块
+
+说明
+
+1
+
+Admin - 题目编辑 
+
+新增「语音拼接」开关：开启后 App 端按「题干语音 → 停顿 → 线索语音」顺序播放
+【线索】关联多个单词
+
+2
+
+Admin - 题目编辑 ›【预览】
+
+编辑器的预览区要能试听拼接后的完整效果
+
+4
+
+App - 挑战课答题
+
+进入题目自动播放拼接序列音频
+提供重听按钮，重播完整序列（题干 + 线索）
+
+5
+
+App - 新增题型
+
+挑战课模板里增加【配对题】、【判断题】、【跟读题】
+
+6
+
+Admin - Quiz包详情
+
+题目列表及题目搜索新增【题目ID】字段
+
+7
+
+Admin - 手动创建新增的题型
+
+Admin支持手动创建【配对题】、【判断题】、【跟读题】
+产品原型 - Admin - 新增【语音拼接】开关
+image.png
+
+功能说明
+
+
+元素
+
+规则 / 逻辑
+
+【语音拼接】功能开关
+
+默认【关闭】状态
+【开启】状态：App 端按「题干语音 → 停顿 → 线索语音 1 →（停顿 → 线索语音 N）」顺序播放
+【关闭】状态：根据【线索】类型配置确定是否需要播放线索音频，与现状一致
+
+拼接语音 - 试听
+
+播放完整拼接后的语音
+【线索类型 × 语音拼接】的播放结果
+
+
+线索类型
+
+语音拼接状态：开启
+
+语音拼接状态：关闭
+
+无
+
+题干语音
+
+无任何语音
+
+文字
+
+题干语音
+
+无任何语音
+
+图片
+
+题干语音
+
+无任何语音
+
+音频
+
+题干语音 → 停顿 → 线索音频
+
+线索音频
+
+文字 + 音频
+
+题干语音 → 停顿 → 线索音频
+
+线索音频
+
+图片 + 音频
+
+题干语音 → 停顿 → 线索音频
+
+线索音频
+产品原型 - Admin - 新增【配对题】手动配置
+image.png
+
+功能说明
+
+
+元素
+
+规则 / 逻辑
+
+题干
+
+配置题干文本
+
+知识点
+
+从【学习资源】中选择一个知识点，记录这道题实际考察的知识点
+
+配对组数
+
+支持配置2-3组
+
+每组结构
+
+左项 ↔ 右项，两者互为正确答案
+
+配对内容类型
+
+支持全部选项为【文本】或【图片】
+
+添加
+
+「+ 添加一组」在列表末尾追加一组空行；最多3组
+
+删除
+
+每行末尾垃圾桶。剩 2 组时禁止删除并提示「配对题至少保留 2 组」
+
+排序
+
+App端支持随机排序（左边选项为第一排，随机排序；右边选项为第二排，随机排序）
+产品原型 - Admin - 新增【判断题】手动配置
+image.png
+
+功能说明
+
+
+元素
+
+规则 / 逻辑
+
+题干
+
+配置题干文本
+
+知识点
+
+从【学习资源】中选择一个知识点，记录这道题实际考察的知识点
+
+线索模块
+
+与其他题型结构一致
+配置的多条线索可以按照配置顺序在App端进行展示
+
+正确答案
+
+取值：是（Yes）/ 否（No），二选一
+默认值：无默认值，初始为未选中状态
+校验：未选择时禁止保存，提示「请选择正确答案」
+产品原型 - Admin - 新增【跟读题】手动配置
+image.png
+
+功能说明
+
+
+元素
+
+规则 / 逻辑
+
+题干
+
+配置题干文本
+
+知识点
+
+从【学习资源】中选择一个知识点，记录这道题实际考察的知识点
+
+跟读目标
+
+从单词库里选取一个知识点作为跟读内容
+
+正确答案
+
+取值：是（Yes）/ 否（No），二选一
+默认值：无默认值，初始为未选中状态
+校验：未选择时禁止保存，提示「请选择正确答案」
+产品原型 - App - 新增【配对题】【跟读题】【判断题】
+https://www.figma.com/design/G5p1PQIWPdUFHRgh96MKZw/1.40.0?node-id=60295-1124&p=f&t=u1hv2w3SiGstSTtL-0
+ 题目 Key 下拉新增 other
+
+
+项
+
+规则
+
+枚举值
+
+other
+
+排序
+
+固定排在下拉列表最末

@@ -1,0 +1,109 @@
+{
+  "fetched_at": "2026-10-26T11:18:42.815852+08:00",
+  "sheets": [
+    {
+      "token": "A0drsDR7uhdeaetDKTNlnUndgQf_RkuARp",
+      "spreadsheet_token": "A0drsDR7uhdeaetDKTNlnUndgQf",
+      "sheet_id": "RkuARp",
+      "title": "RkuARp",
+      "row_count": 9,
+      "column_count": 4,
+      "range": "RkuARp!A1:D9",
+      "values": [
+        [
+          "游戏",
+          "base",
+          "rate（/天）",
+          "10/22 展示值（D=61）"
+        ],
+        [
+          "Word Battle",
+          "5,200",
+          185,
+          "16.5k"
+        ],
+        [
+          "Name Matching",
+          "5,100",
+          180,
+          "16.1k"
+        ],
+        [
+          "抢答游戏（英文名待补）",
+          "5,000",
+          178,
+          "15.9k"
+        ],
+        [
+          "Word Fishing",
+          "4,900",
+          172,
+          "15.4k"
+        ],
+        [
+          "Memory Master",
+          "4,800",
+          170,
+          "15.2k"
+        ],
+        [
+          "Listen & Run",
+          "4,700",
+          166,
+          "14.8k"
+        ],
+        [
+          "Word Space",
+          "4,600",
+          163,
+          "14.5k"
+        ],
+        [
+          "单词PK无尽模式（英文名待补）",
+          "4,500",
+          160,
+          "14.3k"
+        ]
+      ],
+      "block_id": "SHmcdcJSMoPZjxxjxNvl08JXgeh"
+    },
+    {
+      "token": "A0drsDR7uhdeaetDKTNlnUndgQf_9ailWh",
+      "spreadsheet_token": "A0drsDR7uhdeaetDKTNlnUndgQf",
+      "sheet_id": "9ailWh",
+      "title": "9ailWh",
+      "row_count": 5,
+      "column_count": 3,
+      "range": "9ailWh!A1:C5",
+      "values": [
+        [
+          "区间",
+          "显示规则",
+          "举例"
+        ],
+        [
+          "< 1,000",
+          "整数",
+          842
+        ],
+        [
+          "1,000 – 99,999",
+          "一位小数 + k",
+          "3.2k / 13.9k"
+        ],
+        [
+          "≥ 100,000",
+          "整数 + k",
+          "128k"
+        ],
+        [
+          "≥ 999,000",
+          "封顶",
+          "999k"
+        ]
+      ],
+      "block_id": "Mo3ldhtILoSRPVx4Vmtllv8bgcz"
+    }
+  ],
+  "bitables": []
+}

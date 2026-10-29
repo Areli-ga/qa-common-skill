@@ -2,7 +2,7 @@
 标题: 小Mai的新用户入场破冰仪式
 模块: AI Tutor / 新用户破冰仪式
 版本: V1.35.0
-related: [2026-08-24-AI Tutor-新用户唤醒仪式优化.md]
+related: [2026-08-24-AI Tutor-新用户唤醒仪式优化.md, 2026-10-08-AI Tutor-小麦新用户破冰与麦克风引导优化.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/XuO0wi0EEixAgUk0OghlIjnyg7d
 日期: 2026-08-11
 ---

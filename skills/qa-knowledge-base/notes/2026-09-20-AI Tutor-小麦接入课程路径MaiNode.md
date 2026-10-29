@@ -2,7 +2,7 @@
 标题: 小麦接入课程路径
 模块: AI Tutor / 课程路径Mai Node
 版本: V1.39.0
-related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-08-11-AI Tutor-Mai电量系统成本控制.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md, 2026-09-08-反馈与社区-WA链接展示形式优化.md, 2026-09-20-AI Tutor-多图故事接入NPC体系.md, 2026-09-20-IP打电话-打电话二期场景库与降频.md]
+related: [2026-06-30-AI Tutor-Mai主对话界面.md, 2026-08-11-AI Tutor-Mai电量系统成本控制.md, 2026-08-24-AI Tutor-新用户唤醒仪式优化.md, 2026-09-08-反馈与社区-WA链接展示形式优化.md, 2026-09-20-AI Tutor-多图故事接入NPC体系.md, 2026-09-20-IP打电话-打电话二期场景库与降频.md, 2026-10-08-AI Tutor-课程路径与多图故事小麦课优化.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/QXCQwLQoHiyJcgkV6WVlFUUpgSc
 日期: 2026-09-20
 ---

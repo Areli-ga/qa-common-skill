@@ -1,0 +1,167 @@
+社交广场新增冰淇淋店玩法
+一、背景
+问题：广场 V1.39 已上线，"看到真人在场"的感受成立，但可玩性与互动性不足——用户进来没有事情做。
+本期要解决的：给广场一个常驻的、不用等人的、带轻教学属性的集体活动，让广场从"看一眼就走"变成"值得回来"。
+二、产品目标
+拓展广场的玩法的同时，在场景中学英语，寓教于乐。
+
+
+三、功能描述
+社交广场新增冰淇淋车入口
+image.png
+
+冰淇淋店两个场景
+(1) 打工（产出 Giggles）
+限时 1 分钟，顾客依次点单（如 "Can I have one mint in cup?"）
+选对配料/容器 → 顾客开心获得冰淇淋 → 金币入账 → 下一位
+奖励：服务正确 N 位 = 单价 × N Giggles。
+每日上限：2 次/天 
+image.png
+
+制作冰激凌新手引导，首次进入游戏（店长模式）播放新手引导流程
+
+顾客表情反馈
+10秒内顺利获得正确的冰淇淋，开心
+10秒内未获得冰淇淋，轻微着急
+获得错误口味冰淇淋，沮丧
+
+当天上线两次后，继续玩，要告诉孩子明天再来，并且首页打工按钮置灰，第三局的时候，隐藏再来一次按钮。在首页点击打工，
+中文tts"今天的 Giggles 赚满啦，你真棒！明天再来赚更多吧！"
+英文tts：“You earned lots of Giggles today. Great job! Come back tomorrow for more!”
+
+点单游戏随机出顾客购买需求
+顾客点单需求文案表达
+点单顾客形象，随机取广场的用户形象模拟顾客点单
+
+(2) 买冰淇淋（消耗 Giggles）
+定价 10Giggles
+性质：一次性 action，不是永久道具
+效果：在广场播放 10-20 秒吃冰淇淋动画
+image.png
+
+
+冰淇淋有多种口味，但每次进入游戏只会随机出 4 种。
+点单的时候，用户的口味需要和当前已有的口味做匹配，因为用户选的口味有可能不在这次随机给出的 4 种口味里面。
+赠送给好友流程
+1、购买成功后，新增【赠送给好友】按钮，点击后回到广场中，引导用户选择广场中的好友，赠送冰淇淋
+
+好友接受冰淇淋流程
+好友在社交广场中，可以看到一个冰淇淋动画
+
+image.png
+
+
+
+plaza-icecream-demo.zip
+
+
+数据埋点
+埋点按 1.41.0 规范的处理方式见《冰淇淋店埋点处理方式（1.41.0）》https://wsgh3q8mwfpp.sg.larksuite.com/docx/ExXwd5a7zob6LnxiOwMl0YkIgGh ，以该文为准。
+冰淇淋店埋点｜研发测试执行表｜精简版｜2026-10-14
+依据：GiggleAcademy 埋点规范及第十节附件 prd-tracking SKILL.md。本节替代此前埋点补充；原需求正文不变。以下为待实施定义，未创建或发布到生产环境。
+1. 本次保留什么
+复用 2 类 H5 预置事件，新增 5 个业务事件、共 16 项事件属性配置（12 个不同属性名）。研发按下面逐表接入，测试按第 8 节验收。前端及广场动画均为 H5；金币与赠送成功由后端负责。
+目标是看冰淇淋店是否有人玩、是否完成打工、是否购买和使用，以及广场停留与回访是否改善。删除逐顾客订单事件、配方/口味/容器/球数、教学步骤、动画结束状态与中断原因；这些细项暂不对应本次主要决策。保留正确完成订单数作为玩法产出，不据此宣称英语学习效果。
+公共身份、设备、版本等由统一出口附加。复用既有 session_id、play_duration_ms、correct_count、fail_reason、reward_giggles、giggles_cost 的类型；不修改全局字典显示名或类型。条件必填字段只在指定阶段传，其他阶段省略，不传 null 或空字符串。
+2. 普通页面与点击：直接复用 H5 预置事件
+
+沿用预置事件既有分类与属性类型，只补以上页面/控件映射。Canvas 控件如无法自动采集，由 H5 统一出口补报同一预置事件；自动与手动采集二选一，同一动作只报一次。点击 Send it 只表示赠送意图。
+3. 冰淇淋打工：plaza_icecream_work
+
+每局 started 一次；completed 与 exited 二选一、各局最多一个结束结果。异常断进程可能缺少结束事件，应单列“无结束记录”，不能直接算主动退出。每日额度不足不产生打工局；不额外增加 blocked、guide 等枚举。
+4. 冰淇淋购买：plaza_icecream_purchase
+
+同一 purchase_id 的 attempted 最多一次；failed/pending 各阶段最多一次。pending 后若查明失败可补 failed；若最终成功，以后端扣款流水确认。余额不足也保留 attempted → failed，保证尝试人数的分母完整。
+5. 冰淇淋金币结算：plaza_icecream_trade
+
+奖励逐单发放或局末汇总均按真实账本流水报增量，用 session_id 汇总；不再复制订单级过程字段。若研发确认已有语义、关联ID、金额均完整的统一金币流水，优先复用并替代本事件，不双报。当前已核对的表情购买事件和泛奖励事件不足以直接替代。
+6. 冰淇淋赠送成功：plaza_icecream_gift
+
+不采集目标好友ID、gift_id或赠送失败原因。一次性冰淇淋可直接用 purchase_id 贯穿赠送与动画；当前需求没有“接受／拒绝”按钮，不新增对应事件。
+7. 冰淇淋实际使用：plaza_icecream_effect
+
+只记录实际起播，不记录完成、中断、重播和播放时长。同一 purchase_id 只计一次实际使用，自用与赠送互斥；消息重复送达不能重复上报。
+8. 测试验收表
+
+9. 指标口径与实施前待定项
+人数统一按公共孩子身份去重。参与：店首页 UV、打工 started UV、购买 attempted UV；打工完成率按 completed 局数／started 局数，正确订单数只取每局唯一结束事件。购买成功按 trade_type=purchase 的 purchase_id 去重；余额不足人数按 failed + insufficient_balance 去重。赠送数按 gift 的 purchase_id 去重；好友实际触达以相同 purchase_id 的 gift 来源动画为准，未起播只标“尚未观测到”，不直接认定失败。
+广场停留与回访复用 plaza_enter/plaza_exit 及已有统一会话口径；按是否使用冰淇淋店分组观察，不能仅凭分组差异推断因果。
+实施前产品需统一原文与示意图中的购买价格、每日额度展示、奖励单价、动画时长，以及赠送取消/好友离线/权益失效的业务处理。埋点使用真实结果与金额，不据这些待定项擅自新增失败枚举。上报出口必须为后端带出赠送者、为动画带出实际使用者的公共身份。
+10. 同步注册 JSON
+以下与表格一致，仅包含 5 个自定义事件；预置事件不重复注册。required=false 的字段仍须执行 description 中的条件必填规则。business_intent 与 enum 保留供实施核对；若 Admin 提示忽略这两项，仍以表格约定实现。
+
+[
+  {
+    "event_name": "plaza_icecream_work",
+    "display_name": "冰淇淋打工",
+    "category": "休闲娱乐",
+    "sub_category": "社交广场",
+    "source": "H5",
+    "trigger_timing": "打工页正式计时开始、计时结束结算或主动离开本局时上报；教学和额度拦截不上报，异常关进程不伪造退出。",
+    "business_intent": "统计参与人数、完成率、提前退出率、打工时长和正确完成订单数。",
+    "properties": [
+      {"name": "session_id", "display_name": "打工局ID", "type": "String", "required": true, "description": "每局一个唯一ID；开始与结束一致，再来一局换新ID。复用现有属性。"},
+      {"name": "work_stage", "display_name": "打工阶段", "type": "String", "required": true, "description": "started=正式计时开始；completed=计时结束且成绩结算完成；exited=计时结束前主动离开。", "enum": ["started", "completed", "exited"]},
+      {"name": "play_duration_ms", "display_name": "本局游玩时长", "type": "Number", "required": false, "description": "仅 completed/exited 必填，从正式计时开始到本局结束的实际游玩毫秒数；started 不传。复用现有 Number 属性。"},
+      {"name": "correct_count", "display_name": "正确完成订单数", "type": "Number", "required": false, "description": "仅 completed/exited 必填，本局成功交付的模拟顾客订单数，整数≥0，同一订单只计一次；started 不传。复用现有属性。"}
+    ]
+  },
+  {
+    "event_name": "plaza_icecream_purchase",
+    "display_name": "冰淇淋购买",
+    "category": "休闲娱乐",
+    "sub_category": "社交广场",
+    "source": "H5",
+    "trigger_timing": "购买页有效提交时先上报 attempted；明确拒绝报 failed，超时未确认报 pending；未提交和无效连点不上报，成功以金币流水为准。",
+    "business_intent": "统计购买尝试人数、余额不足人数，并结合实际扣款判断购买转化。",
+    "properties": [
+      {"name": "purchase_id", "display_name": "购买ID", "type": "String", "required": true, "description": "H5 在有效提交时生成唯一ID，早于余额校验；传给后端，贯穿购买、扣款、赠送、动画。传输重试复用，新的购买意图换ID。"},
+      {"name": "purchase_stage", "display_name": "购买阶段", "type": "String", "required": true, "description": "attempted=有效提交、余额校验前；failed=本地或服务端明确拒绝；pending=请求超时且结果未确认。成功只查后端 purchase 流水。", "enum": ["attempted", "failed", "pending"]},
+      {"name": "fail_reason", "display_name": "失败原因", "type": "String", "required": false, "description": "仅 failed 必填：insufficient_balance=余额不足；other=其他明确失败。attempted/pending 不传，不上传接口原文。复用现有属性。", "enum": ["insufficient_balance", "other"]}
+    ]
+  },
+  {
+    "event_name": "plaza_icecream_trade",
+    "display_name": "冰淇淋金币结算",
+    "category": "激励",
+    "sub_category": "Giggles奖励",
+    "source": "后端",
+    "trigger_timing": "金币账本中冰淇淋奖励入账或购买扣款事务成功提交后上报；失败、待处理和重复回调不上报。",
+    "business_intent": "统计真实金币产出、消耗与购买成功数，避免把点击或前端提示当作到账。",
+    "properties": [
+      {"name": "trade_id", "display_name": "金币流水ID", "type": "String", "required": true, "description": "账本唯一流水ID；同一流水只报一次。"},
+      {"name": "trade_type", "display_name": "金币业务类型", "type": "String", "required": true, "description": "work_reward=打工奖励入账；purchase=购买扣款成功。", "enum": ["work_reward", "purchase"]},
+      {"name": "session_id", "display_name": "打工局ID", "type": "String", "required": false, "description": "仅 work_reward 必填，与打工事件同一局ID；purchase 不传。复用现有属性。"},
+      {"name": "purchase_id", "display_name": "购买ID", "type": "String", "required": false, "description": "仅 purchase 必填，与 H5 购买ID一致；work_reward 不传。"},
+      {"name": "reward_giggles", "display_name": "实际奖励金币", "type": "Number", "required": false, "description": "仅 work_reward 必填，本条账本流水实际入账增量，>0；不传累计余额。复用现有属性。"},
+      {"name": "giggles_cost", "display_name": "实际消耗金币", "type": "Number", "required": false, "description": "仅 purchase 必填，本条流水实际扣款金额，>0；不写死页面示意价格。复用现有属性。"}
+    ]
+  },
+  {
+    "event_name": "plaza_icecream_gift",
+    "display_name": "冰淇淋赠送成功",
+    "category": "休闲娱乐",
+    "sub_category": "社交广场",
+    "source": "后端",
+    "trigger_timing": "赠送请求处理后，一次性权益已归属目标好友且事务成功提交时上报；取消选人、失败、重试回调不上报。",
+    "business_intent": "统计真正赠送的冰淇淋数量，并与好友实际播放动画关联。",
+    "properties": [
+      {"name": "purchase_id", "display_name": "购买ID", "type": "String", "required": true, "description": "被赠送冰淇淋对应的购买ID；同一购买只能成功赠送一次。上报主体为赠送者。"}
+    ]
+  },
+  {
+    "event_name": "plaza_icecream_effect",
+    "display_name": "冰淇淋实际使用",
+    "category": "休闲娱乐",
+    "sub_category": "社交广场",
+    "source": "H5",
+    "trigger_timing": "社交广场自己吃或收到赠送的冰淇淋动画首次实际起播时上报；点击、发送播放指令、通知、旁观和重播不上报。",
+    "business_intent": "统计买后自用与赠送后实际触达；不把发送通知当作好友已看到。",
+    "properties": [
+      {"name": "purchase_id", "display_name": "购买ID", "type": "String", "required": true, "description": "动画对应冰淇淋的购买ID；由业务链路传递到播放端，不重新生成。"},
+      {"name": "effect_source", "display_name": "使用来源", "type": "String", "required": true, "description": "self_purchase=购买者自己吃；gift=收到好友赠送。上报主体是实际使用者；旁观者不报。", "enum": ["self_purchase", "gift"]}
+    ]
+  }
+]
+—— 本次埋点执行表结束 ——
+

@@ -1,0 +1,233 @@
+{
+  "fetched_at": "2026-10-26T11:19:28.150845+08:00",
+  "sheets": [
+    {
+      "token": "VWLCs9fquhnfpmtE7X5lEixmgyd_Mf6aNe",
+      "spreadsheet_token": "VWLCs9fquhnfpmtE7X5lEixmgyd",
+      "sheet_id": "Mf6aNe",
+      "title": "Mf6aNe",
+      "row_count": 7,
+      "column_count": 3,
+      "range": "Mf6aNe!A1:C7",
+      "values": [
+        [
+          "分层",
+          "定义",
+          "权重"
+        ],
+        [
+          "实时在线",
+          "~1分钟内心跳",
+          10
+        ],
+        [
+          "高频活跃",
+          "近30分钟内访问过同桌",
+          6
+        ],
+        [
+          "中频活跃",
+          "近6小时内使用过App(不限同桌)",
+          3
+        ],
+        [
+          "低频活跃",
+          "近24小时内使用过App(不限同桌)",
+          1
+        ],
+        [
+          "长尾活跃",
+          "24小时~3天内使用过App(不限同桌)",
+          0.3
+        ],
+        [
+          "不活跃",
+          "超过3天未使用App(不限同桌)",
+          0.05
+        ]
+      ],
+      "block_id": "M7FndRQOvoD1ntxB8IJltoEdggV"
+    },
+    {
+      "token": "VWLCs9fquhnfpmtE7X5lEixmgyd_HnWFSl",
+      "spreadsheet_token": "VWLCs9fquhnfpmtE7X5lEixmgyd",
+      "sheet_id": "HnWFSl",
+      "title": "HnWFSl",
+      "row_count": 12,
+      "column_count": 12,
+      "range": "HnWFSl!A1:L12",
+      "values": [
+        [
+          "埋点模块",
+          "新增/删除日期",
+          "事件名",
+          "事件显示名",
+          "事件定义",
+          "触发位置",
+          "事件分端",
+          "属性类型",
+          "属性显示名",
+          "属性值",
+          "备注",
+          "1.41.0 新平台（Giggle Analytics，App ≥ 1.41.0；旧 App 仍报左侧旧事件）"
+        ],
+        [
+          "同桌-随机匹配",
+          "2026/9/15",
+          "studybuddy_candidate_show",
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "match_activity_tier",
+          "realtime_online / high_frequency / medium_frequency / low_frequency / long_tail / inactive",
+          "现有事件新增属性,不是新建事件;支撑活跃度加权排序(权重10/6/3/1/0.3/0.05)上线后的分层转化效果分析",
+          "曝光 $element_view：deskmate_match / candidate_card，带 match_activity_tier（另带 candidate_kid_id、match_tag）"
+        ],
+        [
+          "同桌-发起页",
+          "2026/9/15",
+          "studybuddy_pending_view",
+          null,
+          null,
+          "发起页右上角 Requests 入口(合并发出+收到邀请)",
+          null,
+          null,
+          null,
+          null,
+          "事件与属性未变,仅触发位置从组队申请列表页迁移到发起页右上角合并入口",
+          "页面浏览 $screen：deskmate_pending"
+        ],
+        [
+          "同桌-发起页",
+          "2026/9/15",
+          "studybuddy_push_prompt_show",
+          "同桌push引导弹窗曝光",
+          "用户发起组队邀请达3次以上后点击发起页左上角返回按钮,弹窗展示的那一刻上报",
+          "发起页",
+          "客户端",
+          "Event",
+          null,
+          null,
+          "必须;支撑push授权引导弹窗的曝光量",
+          "页面浏览 $screen：deskmate_push_guide（带 trigger_invite_count）"
+        ],
+        [
+          "同桌-发起页",
+          "2026/9/15",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "trigger_invite_count",
+          "数值(触发时用户累计已发起的组队邀请次数)",
+          null,
+          "trigger_invite_count 实际口径：后端暂不下发累计值，取「后端快照 / 本机累计 / 本机当天发起次数」三者最大值；换设备、重装后会偏小，不是精确累计"
+        ],
+        [
+          "同桌-发起页",
+          "2026/9/15",
+          "studybuddy_push_prompt_click",
+          "同桌push引导弹窗点击",
+          "用户点击弹窗上 Not Now / Allow 按钮时上报",
+          "发起页",
+          "客户端",
+          "Event",
+          "prompt_action",
+          "not_now / allow",
+          "必须;核心指标分母(引导转化率=allow/曝光)",
+          "点击 $element_click：deskmate_push_guide / allow、not_now"
+        ],
+        [
+          "同桌-已配对首页",
+          "2026/9/15",
+          "studybuddy_paired_home_show",
+          "已配对首页曝光",
+          "用户进入已配对同桌首页(Avatar+学习月历+宝箱)渲染完成时上报",
+          "已配对同桌首页",
+          "客户端",
+          "Event",
+          null,
+          null,
+          "必须;页面 PV/UV 基线",
+          "页面浏览 $screen：deskmate_progress"
+        ],
+        [
+          "同桌-已配对首页",
+          "2026/9/15",
+          "studybuddy_partner_home_click",
+          "点击查看对方家园",
+          "用户在已配对首页点击 View Home 进入对方家园时上报",
+          "已配对同桌首页",
+          "客户端",
+          "Event",
+          "partner_online_status",
+          "online / offline",
+          "可选;分析在线状态展示对访问行为的影响",
+          "点击 $element_click：deskmate_progress / view_home，带 partner_online_status（点同桌人物另记 mate_avatar，不带在线状态）"
+        ],
+        [
+          "同桌-已配对首页",
+          "2026/9/15",
+          "studybuddy_chest_show",
+          "学习宝箱状态曝光",
+          "已配对首页宝箱区域渲染完成时上报",
+          "已配对同桌首页",
+          "客户端",
+          "Event",
+          "chest_status",
+          "locked / claimable / multiple_claimable",
+          "必须",
+          "并入页面浏览 deskmate_progress 的属性：chest_status"
+        ],
+        [
+          "同桌-已配对首页",
+          "2026/9/15",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "chest_pending_count",
+          "数值(可领取宝箱数量,multiple_claimable时大于1)",
+          null,
+          "并入页面浏览 deskmate_progress 的属性：chest_pending_count"
+        ],
+        [
+          "同桌-已配对首页",
+          "2026/9/15",
+          "studybuddy_chest_claim",
+          "点击领取学习宝箱",
+          "用户点击领取宝箱按钮且接口返回后上报",
+          "已配对同桌首页",
+          "客户端",
+          "Event",
+          "claim_result",
+          "success / fail",
+          "必须;核心指标分母",
+          "事件 deskmate_chest_claim_complete，operation_result=success / fail（点领取按钮另记点击 open_chest，两者不相加）"
+        ],
+        [
+          "同桌",
+          "新增入口属性",
+          "studybuddy_home_show",
+          null,
+          null,
+          null,
+          null,
+          "Event",
+          "entry_source",
+          "function_plaza /social_hall/home_page",
+          "现有事件新增属性,支撑1.4 AB测(对照组=功能广场入口/实验组=社交大厅入口)分组效果分析;若已有全局AB分组超级属性自动带出此属性可省略,待确认",
+          "并入页面浏览 deskmate_home / deskmate_progress 的属性 deskmate_source_type：function_plaza（Unity 功能广场）、home_page（Unity 首页左下角）、social_hall（家园社交 = Giggle World 地图入口，H5 已接）。H5 从未有 studybuddy_home_show 事件。⚠️ function_plaza / home_page 需 Unity 在链接带 ?from=function_plaza / ?from=home_page，带参前记 native_entry；home_page 还需原生先在规范枚举补上"
+        ]
+      ],
+      "block_id": "QxRVde6rxoIrCtxEM8IlhO9wgwh"
+    }
+  ],
+  "bitables": []
+}

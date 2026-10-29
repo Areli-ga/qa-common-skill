@@ -1,0 +1,67 @@
+{
+  "fetched_at": "2026-10-26T14:12:57.563242+08:00",
+  "sheets": [
+    {
+      "token": "FCgIsDb5lh8vYCtvdL6lxirLgwA_hzW7xq",
+      "spreadsheet_token": "FCgIsDb5lh8vYCtvdL6lxirLgwA",
+      "sheet_id": "hzW7xq",
+      "title": "hzW7xq",
+      "row_count": 7,
+      "column_count": 5,
+      "range": "hzW7xq!A1:E7",
+      "values": [
+        [
+          "#",
+          "字段",
+          "必填",
+          "控件",
+          "取值 / 说明"
+        ],
+        [
+          1,
+          "知识点 (EN)",
+          "✅",
+          "文本，≤100",
+          "three / circle / more / in。数学学科内唯一"
+        ],
+        [
+          2,
+          "翻译",
+          "—",
+          "只读",
+          "本地化系统维护，此处不可填"
+        ],
+        [
+          3,
+          "知识点类型",
+          "✅",
+          "下拉单选",
+          "数字 / 图形 / 方位 / 比较 / 属性 / 运算 / 句子（见 §2）"
+        ],
+        [
+          4,
+          "数值",
+          "类型=数字时 ✅",
+          "整数",
+          "three→3、zero→0。非数字类型不展示"
+        ],
+        [
+          5,
+          "体系 - 级别",
+          "✅",
+          "级联",
+          "体系＝数学主线；级别＝Foundations / Level 1 / Level 2…\n\n级别先写个Level 1～2"
+        ],
+        [
+          6,
+          "素材",
+          "部分必填",
+          null,
+          "图片、音频上架必备"
+        ]
+      ],
+      "block_id": "CDJqd7cW1og87Sx3L1FljBcEgIw"
+    }
+  ],
+  "bitables": []
+}

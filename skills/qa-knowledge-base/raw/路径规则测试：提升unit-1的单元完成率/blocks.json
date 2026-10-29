@@ -1,0 +1,1275 @@
+[
+  {
+    "block_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "block_type": 1,
+    "children": [
+      "EpvydcFyloWQqqxk1cAlprisgUh",
+      "UKE2dAwnGon9qQxxEz0ldQMMgCe",
+      "LYGUdf9zAologLxyqFAlrDUOgcf",
+      "Kg1xd9nwwoQtGdxY1mMlAX2Ugmb",
+      "KF2Dd72XTot1KxxwSEKlhC7FgQd",
+      "AIv2dZg8qo1spXxM3YTlvkarghd",
+      "MXMBd8wyRoguWQxAFPOlDv6ggjh",
+      "X8VQd4CL9oOlvrxd9Kkllmgaghg",
+      "X01AdJsi2ohF1GxjBdzlA9aDgEg",
+      "ZN3Cdpw93oBbbwxkI7Ol9mitgDd",
+      "YqzydrWHEoDsWCxGdwRlHy5cgnh",
+      "AeU6dhDhCoOuLUxhSSalj6URgnf",
+      "WER1dFiBbo9JLaxoZ4xlOmESg7c",
+      "RQsqdP0HEoAbH3xPW3VlUDNngme",
+      "P05RdeWaDoqta6xGBXaloiymg16",
+      "FnNmdLrp2oGGKSxbCWGlcFXmgGd",
+      "WXpQd6QJKogn6Ox4SKOlw8omgng",
+      "QCGNdgjgcoyAnYx9hf5lD9uHg8d",
+      "DUO4dE5qfosUjhxfWbAl38G1gLg",
+      "HkQJdQSPeoV0S0xR7XalD77Dgjc",
+      "LN8AdmuB1ohEs6xMNOMlfO9JgXp",
+      "DuUJd7TeXodxmGxNBrxlqmy3gAh",
+      "Jbfid5no3orntBxEbxFlTlKygDf",
+      "Rjykdt17ZoevNLxJVomlYarjguc",
+      "Wu80dyyhjoyZnFxTi1QlNhX1gFh",
+      "SaE1d4bFzo5kprx3Jq9lmTp1gcc",
+      "DQiHdJrlJoy2jdxSfdFlSoHdgWh",
+      "IaTTdl1AeogulixYk56lmn9pgFh",
+      "KEKedIQsBoOsckx5ogcl0lIPgOd",
+      "CRBIdDOuJoLDLIxbSM2lK9swgpf",
+      "U68idETMVoucjHxYIyYlEUXLg8e",
+      "KYNkdizDVodHR5xTIBMlR1JdgVc",
+      "GJrLdshHSo0h1KxPAdMlDcvMg1U",
+      "ZBftd4mcpoA3H3xYTZqlxHIhgsb",
+      "EjlYdypUboTfXExQ1QmlAbjPgxg",
+      "TLE9dL4Zuogh4xxNqhNl2kPjgQd",
+      "TyM9dkkhWoZupCxNgnol8dIVgrb",
+      "VcrqdWI5MoM66txSPajlO8xXgjg",
+      "B6o8d2AQWoEsiWxh95TlwLecgcc",
+      "Q7ajd8FGNosiNqxa8rClQbwGgmh",
+      "ICwvdB74WosYq3xHixelgLZlgrg",
+      "LNt6dufvFoXDOYxvBX2l08tiguh",
+      "I3SSduZd3o9Hntx7Fz4lMWmTgT2",
+      "R44ldXS7HoILjRxKxMblh0Q0ggf",
+      "W3HXd5jFqohH5ux6zM6l1OQ9gtb",
+      "FSapd5sbroBKISxqau5lXmUUgad"
+    ],
+    "page": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "路径规则测试：提升unit 1的单元完成率",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1
+      }
+    },
+    "parent_id": ""
+  },
+  {
+    "block_id": "EpvydcFyloWQqqxk1cAlprisgUh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求背景",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "UKE2dAwnGon9qQxxEz0ldQMMgCe",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "Unit之间的衔接率高，unit内部流失大：",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "新用户每天约 9,644 人开始 U1，只有 4,150 人学完（43%）。学完一个 unit 的孩子几乎都会马上开始下一个（U2–U8 衔接率 91%–103%），流失发生在 unit 内部的约 4 节课之间。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "1"
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "LYGUdf9zAologLxyqFAlrDUOgcf",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "是否学完Unit 1核心影响次留",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "Kg1xd9nwwoQtGdxY1mMlAX2Ugmb",
+    "block_type": 27,
+    "image": {
+      "align": 2,
+      "height": 613,
+      "scale": 1,
+      "token": "TeFbbOiukoETyxxUI2slDIVggUd",
+      "width": 1280
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "KF2Dd72XTot1KxxwSEKlhC7FgQd",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首日学完 U1 的新用户，D1 留存 49.7%，没学完的只有 25.5%，接近翻倍。之后每多学完一个 unit，D1 只再涨 2–6 个百分点。\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "注：我只拉了5个unit，最后肯定是越多unit增长越少",
+            "text_element_style": {
+              "background_color": 14,
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AIv2dZg8qo1spXxM3YTlvkarghd",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "首日学完Unit 1和学完Unit 5，七日留存差异不到3个百分点",
+            "text_element_style": {
+              "bold": true,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "D7 的差距小：没学完 U1 是 5.3%，至少学完 U5 也只有 12.1%。所有人群从 D1 到 D7 都流失了 75% 以上，首日学得再深也挡不住后面几天的流失。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "auto"
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "MXMBd8wyRoguWQxAFPOlDv6ggjh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "mention_doc": {
+            "obj_type": 16,
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            },
+            "title": "【需求分析】Unit 参课、完课与首日分人群留存",
+            "token": "HGrIwjp9HiDrEnk3VZilLTxxgsh",
+            "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/HGrIwjp9HiDrEnk3VZilLTxxgsh"
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "X8VQd4CL9oOlvrxd9Kkllmgaghg",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "X01AdJsi2ohF1GxjBdzlA9aDgEg",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZN3Cdpw93oBbbwxkI7Ol9mitgDd",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求目的",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "YqzydrWHEoDsWCxGdwRlHy5cgnh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "通过减少Unit 1的流失，达到提升次日留存的目的。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "AeU6dhDhCoOuLUxhSSalj6URgnf",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "同时测试隐藏课程是否能推进完课深度。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WER1dFiBbo9JLaxoZ4xlOmESg7c",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "RQsqdP0HEoAbH3xPW3VlUDNngme",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "UI 链接",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "P05RdeWaDoqta6xGBXaloiymg16",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "https://www.figma.com/design/fimlAsby1Zrn7xwKirxZdp/1.41.0?node-id=63704-184822&t=FYu6FcQ5jPMARcGT-1",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FnNmdLrp2oGGKSxbCWGlcFXmgGd",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "WXpQd6QJKogn6Ox4SKOlw8omgng",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "AB测",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "QCGNdgjgcoyAnYx9hf5lD9uHg8d",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "AB_key:learnpath_unitdepth",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DUO4dE5qfosUjhxfWbAl38G1gLg",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对照组：",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "HkQJdQSPeoV0S0xR7XalD77Dgjc",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "实验组：unit过渡动画",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "LN8AdmuB1ohEs6xMNOMlfO9JgXp",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "仅针对新用户，在后台配置",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DuUJd7TeXodxmGxNBrxlqmy3gAh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Jbfid5no3orntBxEbxFlTlKygDf",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "核心数据",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "Rjykdt17ZoevNLxJVomlYarjguc",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "对比对照组和实验组。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Wu80dyyhjoyZnFxTi1QlNhX1gFh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "新用户：次日留存、unit 1的完课率\n",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        },
+        {
+          "text_run": {
+            "content": "老用户：unit分布占比",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "SaE1d4bFzo5kprx3Jq9lmTp1gcc",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "DQiHdJrlJoy2jdxSfdFlSoHdgWh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "IaTTdl1AeogulixYk56lmn9pgFh",
+    "block_type": 4,
+    "heading2": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "需求详情",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "KEKedIQsBoOsckx5ogcl0lIPgOd",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "动效修改为unit进度",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "CRBIdDOuJoLDLIxbSM2lK9swgpf",
+    "block_type": 43,
+    "board": {
+      "token": "Om8ZwSIEFhGX9hbiAz6lRiCGgPg"
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "U68idETMVoucjHxYIyYlEUXLg8e",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "降低影响：第一个unit中，排行榜进入前5名也不展示弹窗。",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "KYNkdizDVodHR5xTIBMlR1JdgVc",
+    "block_type": 2,
+    "comment_ids": [
+      "7688920620670652137"
+    ],
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "课程之间衔接完全不回首页是否可能？",
+            "text_element_style": {
+              "bold": false,
+              "comment_ids": [
+                "7688920620670652137"
+              ],
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "GJrLdshHSo0h1KxPAdMlDcvMg1U",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ZBftd4mcpoA3H3xYTZqlxHIhgsb",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "EjlYdypUboTfXExQ1QmlAbjPgxg",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TLE9dL4Zuogh4xxNqhNl2kPjgQd",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "TyM9dkkhWoZupCxNgnol8dIVgrb",
+    "block_type": 5,
+    "heading3": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "冷启动APP定位到推荐学习课程",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "VcrqdWI5MoM66txSPajlO8xXgjg",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": " 1. 启动 app，定位到推荐用户学习的课程",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "B6o8d2AQWoEsiWxh95TlwLecgcc",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "可能是有 bug，可以先确认一下以前启动定位的逻辑",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "Q7ajd8FGNosiNqxa8rClQbwGgmh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "ICwvdB74WosYq3xHixelgLZlgrg",
+    "block_type": 13,
+    "ordered": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "从中间unit进入是否会继续推荐前序unit",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false,
+        "sequence": "2"
+      }
+    },
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc"
+  },
+  {
+    "block_id": "LNt6dufvFoXDOYxvBX2l08tiguh",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "举例：从 3 进入，学完推荐 4,4 学完回到 1，再到 2",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "I3SSduZd3o9Hntx7Fz4lMWmTgT2",
+    "block_type": 33,
+    "children": [
+      "D7aqdK4kWoDXNLxULSllPM8fghd"
+    ],
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "view": {
+      "view_type": 2
+    }
+  },
+  {
+    "block_id": "D7aqdK4kWoDXNLxULSllPM8fghd",
+    "block_type": 23,
+    "file": {
+      "name": "ScreenRecording_09-23-2026 23-41-00_1.MP4",
+      "token": "N6v1bsoGlof0DExgIYsldRxUgfc"
+    },
+    "parent_id": "I3SSduZd3o9Hntx7Fz4lMWmTgT2"
+  },
+  {
+    "block_id": "R44ldXS7HoILjRxKxMblh0Q0ggf",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "W3HXd5jFqohH5ux6zM6l1OQ9gtb",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  },
+  {
+    "block_id": "FSapd5sbroBKISxqau5lXmUUgad",
+    "block_type": 2,
+    "parent_id": "Szi5dCXXqohexix39GAlf42xgAc",
+    "text": {
+      "elements": [
+        {
+          "text_run": {
+            "content": "",
+            "text_element_style": {
+              "bold": false,
+              "inline_code": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false
+            }
+          }
+        }
+      ],
+      "style": {
+        "align": 1,
+        "folded": false
+      }
+    }
+  }
+]

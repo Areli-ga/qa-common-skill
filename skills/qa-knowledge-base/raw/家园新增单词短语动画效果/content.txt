@@ -1,0 +1,127 @@
+家园新增单词短语动画效果
+一、打电话功能对于老用户，新增领取场景
+image.png
+
+ABkey：reward_get_calls
+对于灰度到的老用户，（已经完成了前两个单元了）
+家园中引入电话机，新增一个礼物打开的弹窗，点击可以领取电话机，首次获得在家园中有新手引导，关闭后电话机放在家园的位置。
+image.png
+
+
+
+
+
+二、好友串门支持访问新空间
+1、包括目前新增的厨房、浴室，未来新增空间也可以支持访问
+2、自己的Avatar在家园以及好友访问家园，可以支持在家园中点击移动行走，并且识别物品避开落地的物品。
+  
+好友访问默认去到起居室。好友进入其他空间，主人跟着进入其他空间
+拍照相机，出现在其他空间，可以拍多次，发送一张。
+
+
+
+三、家园新增单词短语动画效果
+image.png
+
+
+
+暖暖厨房-Demo.zip
+image.png
+
+
+
+
+星空浴室-Demo.zip
+
+
+Screen Recording 2026-09-17 at 14.39.44.mov
+
+
+1．随机出现以下单词和短语
+以马桶为例：
+
+例如播放 “Flush the toilet” 时，在说到 flush 附近开始冲水。冲水声适当降低，避免盖住人声。
+家园单词
+
+
+
+四、家具单词发音对接知识库
+
+关联知识库中的单词id（对接后端wei）
+H5取知识库中配置的音频
+优先取知识体系关联的单词，若没有关联则兜底取原配置朗读词，若没有兜底配置就不播放音频。
+根据名称中的单词，先自动关联，并且把关联的单词展示在列表中，产品检查后，人工审核点击上架，如果有问题，可以修改。（或者是导出excel人工筛选出知识库中的单词和id）
+存量的单词洗数据，新单词创建接口
+两个单词的逻辑确认
+句式先不配置
+image.png
+
+
+image.png
+
+
+新增关联的知识库单词、id的展示，在列表中。
+
+
+数据埋点
+家园功能埋点补充｜研发测试执行表｜2026-10-14
+依据：GiggleAcademy 埋点规范及第十节 prd-tracking SKILL.md；结合本需求与所引用的家园单词表，并已只读核对 production 事件、属性及相关取值。用户已确认本次四项观察目标，电话弹窗、串门、发音和动画均由 H5 实现。本节为待实施方案，未向生产环境注册或上报。
+1. 范围与精简原则
+新增 2 个业务事件，共 7 项事件属性配置（5 个不同属性名）；电话领取与空间切换复用已有事件。只看领取转化、新空间使用、单词/短语实际播放、知识库音频使用覆盖。普通页面用 $pageview，普通点击用 $WebClick；不为走路、避障、动画每一帧、后台人工审核等新增埋点。
+公共孩子身份、设备、版本、实验分组沿用统一出口。不得重复定义 user_id/kid_id 或 AB 分组。现有属性名称和类型保留；新增属性为 audio_outcome、audio_source。历史空间编码和 is_visitor 的字符串类型不改写，避免拆分历史数据。
+2. 电话领取：复用已有事件
+以下三个事件只补本次“老用户家园礼物”场景，来源 H5；旧场景、既有必填字段和注册分类保持不变。本需求业务归属为休闲娱乐／家园，不批量修改旧事件元数据。
+
+3. 好友新空间：页面浏览与空间切换
+
+4. 家园家具发音结果：reward_furniture_audio
+
+优先级严格按需求：有关联的知识库音频先取知识库；未关联时取原配置；均无则 missing。已起播后被打断不补报 failed；正常播放完成不再上报第二次。用户重新主动点读可形成新一次播放；预加载和后台重试不单独计数。未开始前取消不算播放失败。
+以一条实际音频为粒度；若最终多词方案播放多条音频，各条记录自己的词条ID，不把多个ID拼进一个 String。短语/句式本期不接知识库时走原配置，不强填 word_id。content_type 由配置决定，例如 body wash 仍可为一个 word 词条。
+5. 家园家具动画起播：reward_furniture_animation
+
+音频和动画分别在各自真实起播时记录：动画延后到 flush 等关键词才出现时，不能在音频开始处提前报动画。两事件可用于各自 UV/PV，不增加关联ID，也不承诺逐次音画配对或同步率分析。循环动画一次触发只报一次。
+6. 四项指标怎么计算
+
+7. 测试验收表
+
+实施前边界：文档中“两词逻辑”和句式知识库配置尚未定稿，本方案不替产品定义播放顺序或新增句式ID；沿用最终发布配置。新增事件的属性及类型已对照当前字典；历史事件仅扩展本需求场景，不重命名、不删除原字段。
+8. 新增事件注册 JSON
+仅以下两个事件需要新建。电话三事件补 entry_source=home_gift；空间切换与页面浏览补 is_visitor，均在既有定义中维护，不作为同名新事件导入。条件必填见 description；business_intent 与 enum 即使被 Admin 忽略，也须保留为研发依据。
+
+[
+  {
+    "event_name": "reward_furniture_audio",
+    "display_name": "家园家具发音结果",
+    "category": "休闲娱乐",
+    "sub_category": "家园",
+    "source": "H5",
+    "trigger_timing": "家园点读选定单词或短语后，音频首次实际起播、确认无音频或起播前失败时上报一次；未触发点读、取消及重复回调不上报。",
+    "business_intent": "统计单词与短语实际播放、知识库音频使用占比，以及无音频和起播失败情况。",
+    "properties": [
+      {"name": "item_code", "display_name": "家具配置编码", "type": "String", "required": true, "description": "复用现有 String 属性，传被点读家具的真实配置编码；不传名称、摆放实例ID或坐标。"},
+      {"name": "content_type", "display_name": "朗读内容类型", "type": "String", "required": true, "description": "复用现有 String 属性，新增本业务取值 word=词条，phrase=短语或句式。按配置类型判断，不按空格数量判断。", "enum": ["word", "phrase"]},
+      {"name": "audio_outcome", "display_name": "音频处理结果", "type": "String", "required": true, "description": "played=播放器确认实际起播；missing=按需求优先级查找后没有可播放音频；failed=有音频但首次起播前加载/播放失败。每个被选定的音频只报一个结果。", "enum": ["played", "missing", "failed"]},
+      {"name": "audio_source", "display_name": "音频来源", "type": "String", "required": false, "description": "played/failed 必填：knowledge_base=知识库音频，legacy=原配置音频；missing 不传。来源按实际选用的资源记录，失败不擅自增加需求未约定的回退策略。", "enum": ["knowledge_base", "legacy"]},
+      {"name": "word_id", "display_name": "知识库词条ID", "type": "String", "required": false, "description": "复用现有 String 属性；使用知识库词条音频时必填其真实ID。原配置音频和未配置知识库ID的短语不传；禁止填家具编码、词面或拼接多个ID。"}
+    ]
+  },
+  {
+    "event_name": "reward_furniture_animation",
+    "display_name": "家园家具动画起播",
+    "category": "休闲娱乐",
+    "sub_category": "家园",
+    "source": "H5",
+    "trigger_timing": "家具点读触发对应动画，在第一帧实际显示时上报一次；仅点击、发送播放指令、环境动画、循环帧和重复回调不上报。",
+    "business_intent": "统计单词/短语对应动画的真实触达人数与次数，以及被使用的家具。",
+    "properties": [
+      {"name": "item_code", "display_name": "家具配置编码", "type": "String", "required": true, "description": "复用现有 String 属性，传实际播放动画的家具配置编码。"},
+      {"name": "content_type", "display_name": "朗读内容类型", "type": "String", "required": true, "description": "word=词条，phrase=短语或句式；与触发本动画的点读内容类型一致。", "enum": ["word", "phrase"]}
+    ]
+  }
+]
+—— 本次家园埋点补充结束 ——
+点
+
+
+

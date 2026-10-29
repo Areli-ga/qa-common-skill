@@ -1,0 +1,146 @@
+{
+  "title": "屏幕时间控制优化",
+  "doc_id": "IhyBdUCifo3RfqxGkyLlcVEAgth",
+  "wiki_token": "OO6PweYk9i4tc9kr6xnlyrqcgQe",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/OO6PweYk9i4tc9kr6xnlyrqcgQe",
+  "fetched_at": "2026-10-08T15:19:23.880380+08:00",
+  "version": "V1.40.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1489,
+  "blocks": 192,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 30040,
+      "dims": [
+        2622,
+        1206
+      ],
+      "readable": "ok",
+      "read_scale": 0.725,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 219032,
+        "md5": "82a1736570fde19b54f945cbff09b394",
+        "dims": [
+          2622,
+          1206
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 42566,
+      "dims": [
+        1206,
+        944
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.jpeg",
+        "bytes": 133145,
+        "md5": "8033f1ffa9e2167eceb353e91891ac80",
+        "dims": [
+          1206,
+          944
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 23868,
+      "dims": [
+        967,
+        547
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 95578,
+        "md5": "9d49057673baa346ed26cd8f2ce377a9",
+        "dims": [
+          967,
+          547
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 32762,
+      "dims": [
+        1251,
+        572
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 98143,
+        "md5": "9a7d65a1f1c34c68d526026095e47ec5",
+        "dims": [
+          1251,
+          572
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 11226,
+      "dims": [
+        969,
+        549
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 49430,
+        "md5": "06c60fb676a78d293421ac8f0dc4cf6a",
+        "dims": [
+          969,
+          549
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "images/img-06.webp",
+      "bytes": 17780,
+      "dims": [
+        1211,
+        553
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-06.png",
+        "bytes": 131148,
+        "md5": "e31b4025b84e381397a4afa18b1f4f21",
+        "dims": [
+          1211,
+          553
+        ]
+      }
+    }
+  ],
+  "image_count": 6,
+  "tables": 6,
+  "embedded_sheets": 0,
+  "embedded_bitables": 0,
+  "embedded_tables_file": null
+}

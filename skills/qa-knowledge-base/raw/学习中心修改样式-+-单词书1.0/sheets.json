@@ -1,0 +1,80 @@
+{
+  "fetched_at": "2026-10-08T15:16:58.517700+08:00",
+  "sheets": [
+    {
+      "token": "ZZFos7QhMh2dlYtwiwZlEw1PgTd_NbxMe4",
+      "spreadsheet_token": "ZZFos7QhMh2dlYtwiwZlEw1PgTd",
+      "sheet_id": "NbxMe4",
+      "title": "NbxMe4",
+      "row_count": 5,
+      "column_count": 3,
+      "range": "NbxMe4!A1:C5",
+      "values": [
+        [
+          "阶段",
+          "英文",
+          "定义"
+        ],
+        [
+          "听过",
+          "Heard",
+          "定义：该词标准音频在作为新词呈现且完整播放 1 次\n本期：课程中听到这个单词，完成该unit的任意一节课，认为单词听过。\n\n后续：闪卡、小麦Mtown、绘本、家园、miniplan"
+        ],
+        [
+          "听懂",
+          "Understood",
+          "听到这个单词后，课程quiz中，能选出对应的图片，理解它的意思。\n本期：quiz答对更新状态\n\n后续：闪卡、小麦Mtown、绘本、家园、miniplan"
+        ],
+        [
+          "会跟读",
+          "Repeat",
+          "听过发音示范后，能跟着正确读出这个单词。\n本期：跟读课完成后，更新repeat状态跟读鼓励模式与知识点统计 \n\n需记入统计的场景：跟读题哪些地方有待确认、鹦鹉学舌、Mtown、跟读绘本\n每个单词需单独记开口次数、正确次数（大于80分）"
+        ],
+        [
+          "自己说",
+          "Said",
+          "跟读3次后，点亮said的阶段\n\n跟读场景包含：主路径 + 鹦鹉学舌"
+        ]
+      ],
+      "block_id": "TnyFdCHKOo3RH8xpHXFloxlxgZe"
+    },
+    {
+      "token": "ZZFos7QhMh2dlYtwiwZlEw1PgTd_kHyjNq",
+      "spreadsheet_token": "ZZFos7QhMh2dlYtwiwZlEw1PgTd",
+      "sheet_id": "kHyjNq",
+      "title": "kHyjNq",
+      "row_count": 5,
+      "column_count": 3,
+      "range": "kHyjNq!A1:C5",
+      "values": [
+        [
+          "入口",
+          "说明",
+          "图片示意"
+        ],
+        [
+          "学习中心「Wordbook」",
+          "点击后进入单级别单词视图",
+          "https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/v2/cover/FDG0bKMCloixVexDRmPlGf5tgSg/?height=1280&mount_node_token=ZZFos7QhMh2dlYtwiwZlEw1PgTd&mount_point=sheet_image&policy=equal&width=1280"
+        ],
+        [
+          "聚合入口「单词书」（替换 Language Sense 的 Flash card 位）",
+          "替换掉language sense的flash card入口，将flashcard修改到复习工具。\nflash card内的单词库入口去掉。\n点击入口进入贴纸书书架。",
+          "https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/v2/cover/FlonbRAqEo4e6WxNubQlpF8TgoT/?height=1280&mount_node_token=ZZFos7QhMh2dlYtwiwZlEw1PgTd&mount_point=sheet_image&policy=equal&width=1280"
+        ],
+        [
+          "单元结算页右上角标",
+          "进入单册 · 级别视图，定位本 Level",
+          "https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/v2/cover/ZLIpbbiH9oSLWOxRKSxlIHhdggc/?height=1280&mount_node_token=ZZFos7QhMh2dlYtwiwZlEw1PgTd&mount_point=sheet_image&policy=equal&width=1280"
+        ],
+        [
+          "单册右上「书架」",
+          "进入整体书架",
+          "https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/v2/cover/DI1qbF71Co3V57x1TYblggd9gkf/?height=1280&mount_node_token=ZZFos7QhMh2dlYtwiwZlEw1PgTd&mount_point=sheet_image&policy=equal&width=1280"
+        ]
+      ],
+      "block_id": "IvPBdM9gKo3HNHxbpSZlH5t4gds"
+    }
+  ],
+  "bitables": []
+}

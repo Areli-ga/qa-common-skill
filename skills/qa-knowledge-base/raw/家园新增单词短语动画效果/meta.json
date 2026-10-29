@@ -1,0 +1,150 @@
+{
+  "title": "家园新增单词短语动画效果",
+  "doc_id": "VqPYdrmKmollw8xGhFTlJEZWgQQ",
+  "wiki_token": "DBgEw2k9CiO944kieKFlsEiwg2g",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/DBgEw2k9CiO944kieKFlsEiwg2g",
+  "fetched_at": "2026-10-26T11:11:56.592243+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 4111,
+  "blocks": 90,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 89092,
+      "dims": [
+        3136,
+        762
+      ],
+      "readable": "ok",
+      "read_scale": 0.606,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 261775,
+        "md5": "b340f3387aeabe328aac69127f61d16a",
+        "dims": [
+          3136,
+          762
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 51912,
+      "dims": [
+        1466,
+        886
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 279650,
+        "md5": "5d14e4b0c65a6a67a29e616425eb63b3",
+        "dims": [
+          1466,
+          886
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 59710,
+      "dims": [
+        2728,
+        1274
+      ],
+      "readable": "ok",
+      "read_scale": 0.696,
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 269560,
+        "md5": "29471c9df8699d88438a8063d6c51179",
+        "dims": [
+          2728,
+          1274
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 65814,
+      "dims": [
+        2734,
+        1322
+      ],
+      "readable": "ok",
+      "read_scale": 0.695,
+      "read_file": "images/img-04.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 404748,
+        "md5": "cafa3bc0b2148e760478e6a16dfb5b47",
+        "dims": [
+          2734,
+          1322
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 73058,
+      "dims": [
+        2932,
+        1608
+      ],
+      "readable": "ok",
+      "read_scale": 0.648,
+      "read_file": "images/img-05.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 375179,
+        "md5": "38ad79ac2e5c5a51b13641c86cd4d426",
+        "dims": [
+          2932,
+          1608
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "file": "images/img-06.webp",
+      "bytes": 109242,
+      "dims": [
+        3838,
+        1792
+      ],
+      "readable": "ok",
+      "read_scale": 0.495,
+      "read_file": "images/img-06.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-06.png",
+        "bytes": 485376,
+        "md5": "386977242da151889d43b46729852a24",
+        "dims": [
+          3838,
+          1792
+        ]
+      }
+    }
+  ],
+  "image_count": 6,
+  "tables": 0,
+  "embedded_sheets": 7,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

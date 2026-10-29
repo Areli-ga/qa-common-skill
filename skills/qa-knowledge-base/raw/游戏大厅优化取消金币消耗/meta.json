@@ -1,0 +1,85 @@
+{
+  "title": "游戏大厅优化取消金币消耗",
+  "doc_id": "IF9CdUjZioiDifxI49clla8Vgzh",
+  "wiki_token": "WkcBw4c30iOvnykizS7lDdUzgnh",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/WkcBw4c30iOvnykizS7lDdUzgnh",
+  "fetched_at": "2026-10-26T11:18:42.817173+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 1466,
+  "blocks": 83,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 161330,
+      "dims": [
+        2664,
+        1500
+      ],
+      "readable": "ok",
+      "read_scale": 0.713,
+      "read_file": "images/img-01.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 2128010,
+        "md5": "ea3b4564e9762351e7c8b6a4e722d555",
+        "dims": [
+          2664,
+          1500
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 58652,
+      "dims": [
+        3058,
+        1458
+      ],
+      "readable": "ok",
+      "read_scale": 0.621,
+      "read_file": "images/img-02.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 1317739,
+        "md5": "fe00afcacbd5292b76e77e935baa2b85",
+        "dims": [
+          3058,
+          1458
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 291716,
+      "dims": [
+        9912,
+        1340
+      ],
+      "readable": "marginal",
+      "read_scale": 0.192,
+      "read_file": "images/img-03.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 4526348,
+        "md5": "c4ee5a9bb0e3ab723a6b840895ed13ad",
+        "dims": [
+          9912,
+          1340
+        ]
+      }
+    }
+  ],
+  "image_count": 3,
+  "tables": 1,
+  "embedded_sheets": 2,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

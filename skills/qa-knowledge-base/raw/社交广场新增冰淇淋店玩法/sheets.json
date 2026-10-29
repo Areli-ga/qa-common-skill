@@ -1,0 +1,302 @@
+{
+  "fetched_at": "2026-10-26T10:51:05.659064+08:00",
+  "sheets": [
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_EiF8kp",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "EiF8kp",
+      "title": "EiF8kp",
+      "row_count": 3,
+      "column_count": 2,
+      "range": "EiF8kp!A1:B3",
+      "values": [
+        [
+          "层级",
+          "目标"
+        ],
+        [
+          "功能层（主）",
+          "广场单次停留时长与回访率提升"
+        ],
+        [
+          "全局（次级）",
+          "APP 留存"
+        ]
+      ],
+      "block_id": "VDtPd11Ceobuuyx4r2HlcsGUgmc"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_bdDU2l",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "bdDU2l",
+      "title": "bdDU2l",
+      "row_count": 3,
+      "column_count": 2,
+      "range": "bdDU2l!A1:B3",
+      "values": [
+        [
+          "复用事件",
+          "触发时机与必要属性"
+        ],
+        [
+          "$pageview\n页面浏览｜H5",
+          "首屏真实可见时上报一次，H5 路由返回再次进入可报；重渲染、刷新数据不重复报。\n$title：冰淇淋店首页／冰淇淋店打工／冰淇淋店购买。"
+        ],
+        [
+          "$WebClick\n普通点击｜H5",
+          "真实点击时上报一次。$element_name：\n冰淇淋车入口：icecream_entry\nBuy：icecream_buy\nBe shopkeeper：icecream_work\nTake it：icecream_take\nSend it：icecream_send\n本次只要求这 5 个关键控件，不为口味选择、垃圾桶、返回等逐项新增属性值。"
+        ]
+      ],
+      "block_id": "J3Ojdga79oM8ASxLNgRlN5Gpghc"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_jXNeAF",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "jXNeAF",
+      "title": "jXNeAF",
+      "row_count": 8,
+      "column_count": 2,
+      "range": "jXNeAF!A1:B8",
+      "values": [
+        [
+          "字段",
+          "实施与验收说明"
+        ],
+        [
+          "事件定义",
+          "plaza_icecream_work\n冰淇淋打工｜来源：H5\n主分类：休闲娱乐｜二级分类：社交广场"
+        ],
+        [
+          "触发时机",
+          "打工页正式计时开始、计时结束结算或主动离开本局时上报；教学和额度拦截不上报，异常关进程不伪造退出。"
+        ],
+        [
+          "统计用途",
+          "统计参与人数、完成率、提前退出率、打工时长和正确完成订单数。"
+        ],
+        [
+          "session_id\n打工局ID\nString｜必填",
+          "每局一个唯一ID；开始与结束一致，再来一局换新ID。复用现有属性。"
+        ],
+        [
+          "work_stage\n打工阶段\nString｜必填",
+          "started=正式计时开始；completed=计时结束且成绩结算完成；exited=计时结束前主动离开。"
+        ],
+        [
+          "play_duration_ms\n本局游玩时长\nNumber｜条件必填",
+          "仅 completed/exited 必填，从正式计时开始到本局结束的实际游玩毫秒数；started 不传。复用现有 Number 属性。"
+        ],
+        [
+          "correct_count\n正确完成订单数\nNumber｜条件必填",
+          "仅 completed/exited 必填，本局成功交付的模拟顾客订单数，整数≥0，同一订单只计一次；started 不传。复用现有属性。"
+        ]
+      ],
+      "block_id": "UgbSdOFUxotlm5xUylKlfN7lgCe"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_Nxy87F",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "Nxy87F",
+      "title": "Nxy87F",
+      "row_count": 7,
+      "column_count": 2,
+      "range": "Nxy87F!A1:B7",
+      "values": [
+        [
+          "字段",
+          "实施与验收说明"
+        ],
+        [
+          "事件定义",
+          "plaza_icecream_purchase\n冰淇淋购买｜来源：H5\n主分类：休闲娱乐｜二级分类：社交广场"
+        ],
+        [
+          "触发时机",
+          "购买页有效提交时先上报 attempted；明确拒绝报 failed，超时未确认报 pending；未提交和无效连点不上报，成功以金币流水为准。"
+        ],
+        [
+          "统计用途",
+          "统计购买尝试人数、余额不足人数，并结合实际扣款判断购买转化。"
+        ],
+        [
+          "purchase_id\n购买ID\nString｜必填",
+          "H5 在有效提交时生成唯一ID，早于余额校验；传给后端，贯穿购买、扣款、赠送、动画。传输重试复用，新的购买意图换ID。"
+        ],
+        [
+          "purchase_stage\n购买阶段\nString｜必填",
+          "attempted=有效提交、余额校验前；failed=本地或服务端明确拒绝；pending=请求超时且结果未确认。成功只查后端 purchase 流水。"
+        ],
+        [
+          "fail_reason\n失败原因\nString｜条件必填",
+          "仅 failed 必填：insufficient_balance=余额不足；other=其他明确失败。attempted/pending 不传，不上传接口原文。复用现有属性。"
+        ]
+      ],
+      "block_id": "TqQTdxzvBoZnQ2xCrRxl07CDgid"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_WjlDJ3",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "WjlDJ3",
+      "title": "WjlDJ3",
+      "row_count": 10,
+      "column_count": 2,
+      "range": "WjlDJ3!A1:B10",
+      "values": [
+        [
+          "字段",
+          "实施与验收说明"
+        ],
+        [
+          "事件定义",
+          "plaza_icecream_trade\n冰淇淋金币结算｜来源：后端\n主分类：激励｜二级分类：Giggles奖励"
+        ],
+        [
+          "触发时机",
+          "金币账本中冰淇淋奖励入账或购买扣款事务成功提交后上报；失败、待处理和重复回调不上报。"
+        ],
+        [
+          "统计用途",
+          "统计真实金币产出、消耗与购买成功数，避免把点击或前端提示当作到账。"
+        ],
+        [
+          "trade_id\n金币流水ID\nString｜必填",
+          "账本唯一流水ID；同一流水只报一次。"
+        ],
+        [
+          "trade_type\n金币业务类型\nString｜必填",
+          "work_reward=打工奖励入账；purchase=购买扣款成功。"
+        ],
+        [
+          "session_id\n打工局ID\nString｜条件必填",
+          "仅 work_reward 必填，与打工事件同一局ID；purchase 不传。复用现有属性。"
+        ],
+        [
+          "purchase_id\n购买ID\nString｜条件必填",
+          "仅 purchase 必填，与 H5 购买ID一致；work_reward 不传。"
+        ],
+        [
+          "reward_giggles\n实际奖励金币\nNumber｜条件必填",
+          "仅 work_reward 必填，本条账本流水实际入账增量，>0；不传累计余额。复用现有属性。"
+        ],
+        [
+          "giggles_cost\n实际消耗金币\nNumber｜条件必填",
+          "仅 purchase 必填，本条流水实际扣款金额，>0；不写死页面示意价格。复用现有属性。"
+        ]
+      ],
+      "block_id": "Z34tduqIbo4WvQxauuclQpLSgte"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_RWXiOf",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "RWXiOf",
+      "title": "RWXiOf",
+      "row_count": 5,
+      "column_count": 2,
+      "range": "RWXiOf!A1:B5",
+      "values": [
+        [
+          "字段",
+          "实施与验收说明"
+        ],
+        [
+          "事件定义",
+          "plaza_icecream_gift\n冰淇淋赠送成功｜来源：后端\n主分类：休闲娱乐｜二级分类：社交广场"
+        ],
+        [
+          "触发时机",
+          "赠送请求处理后，一次性权益已归属目标好友且事务成功提交时上报；取消选人、失败、重试回调不上报。"
+        ],
+        [
+          "统计用途",
+          "统计真正赠送的冰淇淋数量，并与好友实际播放动画关联。"
+        ],
+        [
+          "purchase_id\n购买ID\nString｜必填",
+          "被赠送冰淇淋对应的购买ID；同一购买只能成功赠送一次。上报主体为赠送者。"
+        ]
+      ],
+      "block_id": "YR6JdO7ghoWk5dxQ7amlbv0pgYg"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_VSCH5x",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "VSCH5x",
+      "title": "VSCH5x",
+      "row_count": 6,
+      "column_count": 2,
+      "range": "VSCH5x!A1:B6",
+      "values": [
+        [
+          "字段",
+          "实施与验收说明"
+        ],
+        [
+          "事件定义",
+          "plaza_icecream_effect\n冰淇淋实际使用｜来源：H5\n主分类：休闲娱乐｜二级分类：社交广场"
+        ],
+        [
+          "触发时机",
+          "社交广场自己吃或收到赠送的冰淇淋动画首次实际起播时上报；点击、发送播放指令、通知、旁观和重播不上报。"
+        ],
+        [
+          "统计用途",
+          "统计买后自用与赠送后实际触达；不把发送通知当作好友已看到。"
+        ],
+        [
+          "purchase_id\n购买ID\nString｜必填",
+          "动画对应冰淇淋的购买ID；由业务链路传递到播放端，不重新生成。"
+        ],
+        [
+          "effect_source\n使用来源\nString｜必填",
+          "self_purchase=购买者自己吃；gift=收到好友赠送。上报主体是实际使用者；旁观者不报。"
+        ]
+      ],
+      "block_id": "JrLmd10rooLQi7x1qUBlMmKKgBb"
+    },
+    {
+      "token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf_wuY6rP",
+      "spreadsheet_token": "Dhk1sVjO7h3NKJtw7ohluxTwgVf",
+      "sheet_id": "wuY6rP",
+      "title": "wuY6rP",
+      "row_count": 8,
+      "column_count": 2,
+      "range": "wuY6rP!A1:B8",
+      "values": [
+        [
+          "操作场景",
+          "应看到的事件与属性"
+        ],
+        [
+          "进入店铺并点 Buy",
+          "首页 $pageview 1 次；$WebClick 的 icecream_buy 1 次；购买页可见再报页面浏览；没有购买业务事件。"
+        ],
+        [
+          "完整玩一局／提前离开",
+          "work：started 1 次，加 completed 或 exited 1 次；同一个 session_id。仅结束事件携带 Number 型时长与正确数。教学、额度拦截不创建打工局。"
+        ],
+        [
+          "有效购买但余额不足",
+          "purchase：同一 purchase_id 的 attempted 1 次，failed 1 次，fail_reason=insufficient_balance；不得有成功扣款、赠送或动画事件。"
+        ],
+        [
+          "购买成功并自己吃",
+          "purchase attempted；后端 trade_type=purchase 流水 1 次并带真实 giggles_cost；动画起播报 effect_source=self_purchase 1 次；不报 gift。"
+        ],
+        [
+          "购买成功并赠送",
+          "购买扣款后，后端赠送事务提交报 gift 1 次；好友端真正起播再报 effect_source=gift 1 次；两个事件 purchase_id 一致。取消选人或仅收到通知不报对应成功/起播事件。"
+        ],
+        [
+          "超时、重试、重复回调",
+          "超时未确认报 pending，不当作失败或成功；重试沿用购买ID。扣款按 trade_id 去重，赠送与实际使用按 purchase_id 去重。"
+        ],
+        [
+          "打工奖励",
+          "每笔成功入账的 work_reward 流水带 session_id 与 reward_giggles；奖励字段和消费字段按类型互斥，数值与账本一致。"
+        ]
+      ],
+      "block_id": "D3W6dvU2goQTSQxMa5ElFC6yg3c"
+    }
+  ],
+  "bitables": []
+}

@@ -1,0 +1,168 @@
+修改用户昵称 + 修改IP
+需求背景
+UI 链接
+https://www.figma.com/design/fimlAsby1Zrn7xwKirxZdp/1.41.0?node-id=63045-46654&t=FYu6FcQ5jPMARcGT-1
+
+广场修改昵称
+在广场中点击查看自己的名片，新增修改昵称功能
+修改后实时更新，用户昵称在 APP 内所有地方生效。
+image.png
+
+
+修改国家信息
+线上逻辑：
+注册的时候，有一个根据IP的默认国家，不会变化（路径判断）
+登录国家，每次登录的时候会实时更新。
+
+2.1 修改信息面板
+image.png
+
+交互说明
+Parents Area → Account，Family members ({n}) 里点击孩子卡片的「Edit」，进入 Edit your child's profile。
+点击 Child's name，拉起系统键盘；键盘上方输入条右侧 ✓ 确认。
+点击 Child's birthday，右侧弹出生日面板，滚动选择月、年，点「Save」回填；点 × 关闭不改。
+点击国家/地区，右侧弹出 Select Country / Region 面板。
+点击右上蓝色按钮，保存全部修改。
+保存成功，回到 Parents Area，顶部 toast：Profile updated successfully
+保存失败，停留在编辑页，保留已填内容，顶部 toast：Data saving failed, please try again later.
+点击左上返回，放弃修改，回到 Parents Area。
+
+2.2 数据说明
+Child's birthday：年 + 月，格式 YYYY.MM，举例 2022.02。
+注：目前线上都是设置的年龄，所以计算出对应的年份，月份选择 - 
+国家/地区：国旗 + 国家英文名。
+完整的取值规则见下2.3
+缺省状态
+孩子没有国家（注册 IP 未判定出国家）：国家/地区展示占位 Select，其余照常。
+
+2.3 国家取值规则 
+
+
+字段
+
+来源
+
+线上何时更新
+
+本期修改
+
+用途
+
+注册国家
+
+注册时的 IP
+
+不再更新
+
+不变
+
+统计新增、渠道归因
+
+登录国家
+
+
+每次登录时服务端记录的 IP 国家
+
+
+每次输账号密码登录时更新
+游客就维持了注册IP
+
+登录国家：新增来源标记 country_source = auto / manual。
+自动（source = auto）：登录国家每 1 个月按 IP 更新一次，与上个月的国家对比，有变化则修改，无变化保留。
+手动（source = manual）：家长在编辑资料里修改国家后，登录国家 = 家长选的国家，source 置为 manual；之后自动更新一律跳过，登录拿到什么国家都不覆盖。家长可再次手动修改。
+社交广场、排行榜的国旗和国家名读登录国家；
+登录国家为空读注册国家；
+都为空不展示国旗。
+
+风控、活跃地区统计、活动地区
+
+历史数据处理：
+老用户 source 全部初始化为 auto，登录国家沿用当前值，不刷数据。
+历史老用户定位在日本问题会修改；
+VPN 挂起导致定位在日本的情况不处理。
+
+2.4 线上国家的更改
+image.png
+
+image.png
+
+目前的Banner曝光、AB测等使用地区限制的地方，优先用当前登录的country，兜底用的注册国家
+开发可以统一看一下。
+
+
+目前后台是默认选择的登录地区。
+讨论是否有必要在后台选择地区的时候，支持选择注册地区和登录地区
+目前线上国家的使用场景梳理。
+
+2.2 手动选择地区面板
+image.png
+
+
+
+
+说明
+
+交互说明
+面板从右侧弹出，点右上 × 关闭，不改当前值。
+点击列表中任一国家，选中并关闭面板，编辑页回填该国家。
+点击「Click to get location」：
+首次：先弹 Let's find your country，点「Allow location」拉起系统定位授权，点 × 关闭。
+已授权：直接开始定位。
+定位中：Location 区展示 Getting location...
+定位成功：Location 区展示定位到的国家 + 刷新图标；点击该行选中，行高亮并打 ✓。
+点击刷新图标，重新定位。
+系统定位权限为拒绝：弹 Turn on location，「Not now」关闭弹窗，「Open settings」跳系统设置。
+定位失败：Location 区展示 Location failed + 刷新图标，点击刷新重试。
+定位结果只是一个选项，家长可以再手动选其他国家。
+
+数据说明
+Location：
+按钮：Click to get location
+定位只取国家，不取城市。
+Popular Regions：
+印尼、越南、中国、泰国，固定顺序置顶。
+全部国家：
+Popular Regions 下方，按国家英文名首字母 A–Z 排序，带字母分组标题。
+保存国家后，更新用户的登录国家。
+
+缺省状态
+定位引导弹窗：
+标题：Let's find your country
+按钮：Allow location
+权限拒绝弹窗：
+标题：Turn on location
+副标题：Some features need it to work
+按钮：Not now / Open settings
+定位失败：Location failed
+孩子没有国家（注册 IP 未判定出国家）：国家/地区展示占位 Select，其余照常。
+
+
+数据埋点
+1、统计有多少用户，点击编辑昵称，以及成功修改昵称
+2、统计多少用户，在设置中修改国家信息。
+
+
+说明
+
+事件
+
+属性
+
+广场点击编辑昵称
+
+square_editname
+
+/
+
+广场修改昵称成功
+
+square_editname_suc
+
+
+
+修改国家信息成功
+
+rewrite_country_suc
+
+
+

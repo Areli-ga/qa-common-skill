@@ -1,0 +1,125 @@
+{
+  "title": "社交广场新增舞会",
+  "doc_id": "F4hMdHq1zor9anxuRuBlVEXHgFg",
+  "wiki_token": "IPtJw7a9jizjUbkOtjJl5ld7gMf",
+  "url": "https://wsgh3q8mwfpp.sg.larksuite.com/wiki/IPtJw7a9jizjUbkOtjJl5ld7gMf",
+  "fetched_at": "2026-10-26T10:38:34.621200+08:00",
+  "version": "V1.41.0",
+  "version_source": "user",
+  "version_candidates": [],
+  "raw_content_chars": 8312,
+  "blocks": 134,
+  "images": [
+    {
+      "index": 1,
+      "file": "images/img-01.webp",
+      "bytes": 88906,
+      "dims": [
+        1390,
+        1414
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-01.png",
+        "bytes": 807132,
+        "md5": "de106c376aefe1c520a328afab6abaa5",
+        "dims": [
+          1390,
+          1414
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "file": "images/img-02.webp",
+      "bytes": 92780,
+      "dims": [
+        1448,
+        730
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-02.png",
+        "bytes": 1571967,
+        "md5": "6e2c5f04574d7e77cbf447230d6efdfd",
+        "dims": [
+          1448,
+          730
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "file": "images/img-03.webp",
+      "bytes": 68948,
+      "dims": [
+        1890,
+        914
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-03.png",
+        "bytes": 782088,
+        "md5": "7a14859d6902fb675b128960e3c681ed",
+        "dims": [
+          1890,
+          914
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "file": "images/img-04.webp",
+      "bytes": 95252,
+      "dims": [
+        1414,
+        1496
+      ],
+      "readable": "ok",
+      "read_scale": 1.0,
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-04.png",
+        "bytes": 851143,
+        "md5": "db2d3c9818af42135805e86547ccf680",
+        "dims": [
+          1414,
+          1496
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "file": "images/img-05.webp",
+      "bytes": 39456,
+      "dims": [
+        2176,
+        1060
+      ],
+      "readable": "ok",
+      "read_scale": 0.873,
+      "read_file": "images/img-05.read.png",
+      "archived_as": "webp-q80",
+      "original": {
+        "file": "img-05.png",
+        "bytes": 191117,
+        "md5": "846e9bc6db62b388ec0e32407c6090a8",
+        "dims": [
+          2176,
+          1060
+        ]
+      }
+    }
+  ],
+  "image_count": 5,
+  "tables": 0,
+  "embedded_sheets": 8,
+  "embedded_bitables": 0,
+  "embedded_tables_file": "sheets.json"
+}

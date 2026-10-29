@@ -2,7 +2,7 @@
 标题: P1 功能广场入口（Giggle World 社交广场）
 模块: 奖励中心 / Giggle World与社交广场
 版本: V1.39.0
-related: [2026-08-11-奖励中心-家园好友串门社交测试.md]
+related: [2026-08-11-奖励中心-家园好友串门社交测试.md, 2026-10-26-奖励中心-社交广场新增冰淇淋店玩法.md, 2026-10-26-奖励中心-社交广场新增舞会.md]
 原链接: https://wsgh3q8mwfpp.sg.larksuite.com/wiki/Bfgjw5biVisNSrkxA46lXyaugEe
 日期: 2026-09-20
 ---

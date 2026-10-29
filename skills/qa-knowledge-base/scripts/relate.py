@@ -85,7 +85,12 @@ STOP_IDS = {
     # 产品名词的驼峰写法(WhatsApp / TikTok / FlashCard / GiggleCast)会被驼峰规则收进来,
     # 但它们只说明"这篇提到了某产品",不指向具体功能,实测各自连起 6–8 篇。
     # 命名规则识别不了(它们不是字段),只能列名单;好在产品名词是有限集,不会像字段名那样无限增长。
-    "whatsapp", "tiktok", "flashcard", "gigglecast", "paramvalue",
+    "whatsapp", "tiktok", "flashcard", "gigglecast", "paramvalue", "giggleacademy",
+    # 孩子身份公参的驼峰写法(kidId):kid_id 已被 PARAM_FIELD 剔除,驼峰版本没有下划线,规则接不住
+    "kidid",
+    # `_mode` 不进 PARAM_FIELD:实测 gigglecast_loop_mode 是真实功能配置(Giggle TV ✕ 故事书 的真关联),
+    # 只把无功能前缀的通用模式字段单列
+    "play_mode",
 }
 
 
@@ -93,7 +98,11 @@ STOP_IDS = {
 # 用命名规则剔除,而不是往 STOP_IDS 里一个个手加 —— 手工黑名单已经失守三次
 # (level_number → image_count → block_type,每次都是新文档带进来的新字段名)。
 # 实测:102 篇里被这条规则剔掉的 df≥2 标识符共 19 个,人工复核**全部**是通用参数字段,零误伤。
-PARAM_FIELD = re.compile(r"_(id|name|type|count|number|code|key|token|url|time|date|status|index|version)$")
+# 2026-10-26 再次失守:埋点结果 / 来源 / 时长字段(answer_result / entry_source / fail_reason / duration_ms /
+# stay_duration_ms / word_state …)把舞会篇连上 16 篇无关需求;补 result|source|reason|state|duration|ms,
+# 137 篇里新断开的 30 对人工复核全部是误连。
+PARAM_FIELD = re.compile(r"_(id|name|type|count|number|code|key|token|url|time|date|status|index|version"
+                         r"|result|source|reason|state|duration|ms)$")
 BOOL_FIELD = re.compile(r"^(is|has|need|can)_")
 
 
